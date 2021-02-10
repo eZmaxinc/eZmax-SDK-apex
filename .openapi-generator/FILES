@@ -309,6 +309,14 @@ force-app/main/default/classes/OASFranchisereferalincomeRequestCompTest.cls
 force-app/main/default/classes/OASFranchisereferalincomeRequestCompTest.cls-meta.xml
 force-app/main/default/classes/OASFranchisereferalincomeRequestTest.cls
 force-app/main/default/classes/OASFranchisereferalincomeRequestTest.cls-meta.xml
+force-app/main/default/classes/OASGlobalCustomerApi.cls
+force-app/main/default/classes/OASGlobalCustomerApi.cls-meta.xml
+force-app/main/default/classes/OASGlobalCustomerApiTest.cls
+force-app/main/default/classes/OASGlobalCustomerApiTest.cls-meta.xml
+force-app/main/default/classes/OASGlobalCustomerGetEndpointV1Respon.cls
+force-app/main/default/classes/OASGlobalCustomerGetEndpointV1Respon.cls-meta.xml
+force-app/main/default/classes/OASGlobalCustomerGetEndpointV1ResponTest.cls
+force-app/main/default/classes/OASGlobalCustomerGetEndpointV1ResponTest.cls-meta.xml
 force-app/main/default/classes/OASModuleUserApi.cls
 force-app/main/default/classes/OASModuleUserApi.cls-meta.xml
 force-app/main/default/classes/OASModuleUserApiTest.cls

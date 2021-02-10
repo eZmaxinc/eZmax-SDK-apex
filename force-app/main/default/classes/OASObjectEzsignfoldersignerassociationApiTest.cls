@@ -107,6 +107,33 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignfoldersignerassociation\&#39;s children IDs
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfoldersignerassociationGetChildrenV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfoldersignerassociationID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfoldersignerassociationApi api;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfoldersignerassociationApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+        api.ezsignfoldersignerassociationGetChildrenV1(params);
+    }
+
+    /**
      * Retrieve a Login Url to allow In-Person signing
      *
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.\n\nThe signer Login type must be configured as In-Person.
@@ -139,33 +166,6 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
         expectedResponse = OASEzsignfoldersignerassociationGetI.getExample();
         response = (OASEzsignfoldersignerassociationGetI) api.ezsignfoldersignerassociationGetInPersonLoginUrlV1(params);
         System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Ezsignfoldersignerassociation\&#39;s children IDs
-     *
-     * 
-     */
-    @isTest
-    private static void ezsignfoldersignerassociationGetObjectGetChildrenV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignfoldersignerassociationID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsignfoldersignerassociationApi api;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsignfoldersignerassociationApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-        api.ezsignfoldersignerassociationGetObjectGetChildrenV1(params);
     }
 
     /**

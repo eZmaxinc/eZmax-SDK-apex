@@ -112,7 +112,7 @@ private class OASObjectEzsignfolderApiTest {
      * 
      */
     @isTest
-    private static void ezsignfolderGetObjectGetChildrenV1Test() {
+    private static void ezsignfolderGetChildrenV1Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -130,7 +130,7 @@ private class OASObjectEzsignfolderApiTest {
         api = new OASObjectEzsignfolderApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
 
-        api.ezsignfolderGetObjectGetChildrenV1(params);
+        api.ezsignfolderGetChildrenV1(params);
     }
 
     /**

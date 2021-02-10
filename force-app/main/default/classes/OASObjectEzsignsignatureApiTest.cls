@@ -112,7 +112,7 @@ private class OASObjectEzsignsignatureApiTest {
      * 
      */
     @isTest
-    private static void ezsignsignatureGetObjectGetChildrenV1Test() {
+    private static void ezsignsignatureGetChildrenV1Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -130,7 +130,7 @@ private class OASObjectEzsignsignatureApiTest {
         api = new OASObjectEzsignsignatureApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
 
-        api.ezsignsignatureGetObjectGetChildrenV1(params);
+        api.ezsignsignatureGetChildrenV1(params);
     }
 
     /**

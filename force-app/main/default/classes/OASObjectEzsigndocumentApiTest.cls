@@ -143,6 +143,33 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s children IDs
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigndocumentGetChildrenV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+        api.ezsigndocumentGetChildrenV1(params);
+    }
+
+    /**
      * Retrieve a URL to download documents.
      *
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
@@ -176,33 +203,6 @@ private class OASObjectEzsigndocumentApiTest {
         expectedResponse = OASEzsigndocumentGetDownloadUrlV1Res.getExample();
         response = (OASEzsigndocumentGetDownloadUrlV1Res) api.ezsigndocumentGetDownloadUrlV1(params);
         System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Ezsigndocument\&#39;s children IDs
-     *
-     * 
-     */
-    @isTest
-    private static void ezsigndocumentGetObjectGetChildrenV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsigndocumentID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsigndocumentApi api;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsigndocumentApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-        api.ezsigndocumentGetObjectGetChildrenV1(params);
     }
 
     /**

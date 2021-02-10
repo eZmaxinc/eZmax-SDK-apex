@@ -11,41 +11,32 @@
  */
 
 /**
- * Definition of objSQLQuery Object
+ * Response for the /1/customer/{pksCustomerCode}/endpoint API Request
  */
-public class OASCommonResponseObjSQLQuery {
+public class OASGlobalCustomerGetEndpointV1Respon {
     /**
-     * The SQL Query
-     * @return sQuery
+     * The endpoint\'s URL
+     * @return sEndpointURL
      */
-    public String sQuery { get; set; }
+    public String sEndpointURL { get; set; }
 
-    /**
-     * Execution time of the SQL Query in seconds
-     * @return fDuration
-     */
-    public Double fDuration { get; set; }
-
-    public static OASCommonResponseObjSQLQuery getExample() {
-        OASCommonResponseObjSQLQuery commonResponseObjSQLQuery = new OASCommonResponseObjSQLQuery();
-          commonResponseObjSQLQuery.sQuery = '';
-          commonResponseObjSQLQuery.fDuration = 1.3579;
-        return commonResponseObjSQLQuery;
+    public static OASGlobalCustomerGetEndpointV1Respon getExample() {
+        OASGlobalCustomerGetEndpointV1Respon globalCustomerGetEndpointV1Response = new OASGlobalCustomerGetEndpointV1Respon();
+          globalCustomerGetEndpointV1Response.sEndpointURL = '';
+        return globalCustomerGetEndpointV1Response;
     }
 
     public Boolean equals(Object obj) {
-        if (obj instanceof OASCommonResponseObjSQLQuery) {           
-            OASCommonResponseObjSQLQuery commonResponseObjSQLQuery = (OASCommonResponseObjSQLQuery) obj;
-            return this.sQuery == commonResponseObjSQLQuery.sQuery
-                && this.fDuration == commonResponseObjSQLQuery.fDuration;
+        if (obj instanceof OASGlobalCustomerGetEndpointV1Respon) {           
+            OASGlobalCustomerGetEndpointV1Respon globalCustomerGetEndpointV1Response = (OASGlobalCustomerGetEndpointV1Respon) obj;
+            return this.sEndpointURL == globalCustomerGetEndpointV1Response.sEndpointURL;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sQuery == null ? 0 : System.hashCode(sQuery));
-        hashCode = (17 * hashCode) + (fDuration == null ? 0 : System.hashCode(fDuration));
+        hashCode = (17 * hashCode) + (sEndpointURL == null ? 0 : System.hashCode(sEndpointURL));
         return hashCode;
     }
 }

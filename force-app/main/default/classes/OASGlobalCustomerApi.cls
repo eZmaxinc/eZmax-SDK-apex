@@ -10,14 +10,14 @@
  * Do not edit the class manually.
  */
 
-public class OASObjectActivesessionApi {
+public class OASGlobalCustomerApi {
     OASClient client;
 
-    public OASObjectActivesessionApi(OASClient client) {
+    public OASGlobalCustomerApi(OASClient client) {
         this.client = client;
     }
 
-    public OASObjectActivesessionApi() {
+    public OASGlobalCustomerApi() {
         this.client = new OASClient();
     }
 
@@ -26,24 +26,33 @@ public class OASObjectActivesessionApi {
     }
 
     /**
-     * Get Current Activesession
-     * Retrieve the details about the current activesession
-     * @return OASActivesessionGetCurrentV1Response
+     * Get customer endpoint
+     * Retrieve the customer\&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer\&#39;s data is stored.
+     * @param pksCustomerCode The customer code assigned to your account (required)
+     * @param sInfrastructureproductCode The infrastructure product Code\n\nIf undefined, &quot;appcluster01&quot; is assumed (optional)
+     * @return OASGlobalCustomerGetEndpointV1Respon
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASActivesessionGetCurrentV1Response activesessionGetCurrentV1() {
+    public OASGlobalCustomerGetEndpointV1Respon globalCustomerGetEndpointV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pksCustomerCode'), 'pksCustomerCode');
         List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('sInfrastructureproductCode', (String) params.get('sInfrastructureproductCode')));
+
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASActivesessionGetCurrentV1Response) client.invoke(
-            'GET', '/1/object/activesession/getCurrent', '',
+        return (OASGlobalCustomerGetEndpointV1Respon) client.invoke(
+            'GET', '/1/customer/{pksCustomerCode}/endpoint', '',
             query, form,
-            new Map<String, Object>(),
+            new Map<String, Object>{
+                'pksCustomerCode' => (String) params.get('pksCustomerCode')
+            },
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String> { 'Authorization' },
-            OASActivesessionGetCurrentV1Response.class
+            OASGlobalCustomerGetEndpointV1Respon.class
         );
     }
 }
