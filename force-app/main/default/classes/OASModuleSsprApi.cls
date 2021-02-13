@@ -10,14 +10,14 @@
  * Do not edit the class manually.
  */
 
-public class OASObjectActivesessionApi {
+public class OASModuleSsprApi {
     OASClient client;
 
-    public OASObjectActivesessionApi(OASClient client) {
+    public OASModuleSsprApi(OASClient client) {
         this.client = client;
     }
 
-    public OASObjectActivesessionApi() {
+    public OASModuleSsprApi() {
         this.client = new OASClient();
     }
 
@@ -26,24 +26,23 @@ public class OASObjectActivesessionApi {
     }
 
     /**
-     * Get Current Activesession
-     * Retrieve the details about the current activesession
-     * @return OASActivesessionGetCurrentV1Response
+     * Remind of forgotten username(s)
+     * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASActivesessionGetCurrentV1Response activesessionGetCurrentV1() {
+    public void ssprRemindUsernamesV1() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASActivesessionGetCurrentV1Response) client.invoke(
-            'GET', '/1/object/activesession/getCurrent', '',
+        client.invoke(
+            'POST', '/1/module/sspr/remindUsernames', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String> { 'Authorization' },
-            OASActivesessionGetCurrentV1Response.class
+            null
         );
     }
 }
