@@ -71,42 +71,6 @@ private class OASObjectEzsignsignatureApiTest {
     }
 
     /**
-     * Modify an existing Ezsignsignature
-     *
-     * 
-     */
-    @isTest
-    private static void ezsignsignatureEditObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignsignatureID' => '',
-            'oaSEzsignsignatureEditObjectV1Reques' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsignsignatureApi api;
-        OASEzsignsignatureEditObjectV1Respon response;
-        OASEzsignsignatureEditObjectV1Respon expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsignsignatureApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsignsignatureEditObjectV1Respon.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsignsignatureEditObjectV1Respon.getExample();
-        response = (OASEzsignsignatureEditObjectV1Respon) api.ezsignsignatureEditObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Retrieve an existing Ezsignsignature\&#39;s children IDs
      *
      * 

@@ -71,42 +71,6 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
-     * Modify an existing Ezsignfolder
-     *
-     * 
-     */
-    @isTest
-    private static void ezsignfolderEditObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignfolderID' => '',
-            'oaSEzsignfolderEditObjectV1Request' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsignfolderApi api;
-        OASEzsignfolderEditObjectV1Response response;
-        OASEzsignfolderEditObjectV1Response expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsignfolderApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsignfolderEditObjectV1Response.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsignfolderEditObjectV1Response.getExample();
-        response = (OASEzsignfolderEditObjectV1Response) api.ezsignfolderEditObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Retrieve an existing Ezsignfolder\&#39;s children IDs
      *
      * 

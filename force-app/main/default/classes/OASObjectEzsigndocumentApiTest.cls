@@ -107,42 +107,6 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
-     * Modify an existing Ezsigndocument
-     *
-     * 
-     */
-    @isTest
-    private static void ezsigndocumentEditObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsigndocumentID' => '',
-            'oaSEzsigndocumentEditObjectV1Request' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsigndocumentApi api;
-        OASEzsigndocumentEditObjectV1Respons response;
-        OASEzsigndocumentEditObjectV1Respons expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsigndocumentApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsigndocumentEditObjectV1Respons.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsigndocumentEditObjectV1Respons.getExample();
-        response = (OASEzsigndocumentEditObjectV1Respons) api.ezsigndocumentEditObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Retrieve an existing Ezsigndocument\&#39;s children IDs
      *
      * 
