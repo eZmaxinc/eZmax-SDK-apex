@@ -26,21 +26,116 @@ public class OASModuleSsprApi {
     }
 
     /**
-     * Remind of forgotten username(s)
-     * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
+     * Reset Password Request
+     * This endpoint sends an email with a link to reset the user\&#39;s password.\n\nsEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser\n\nsUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     * @param oaSSsprResetPasswordRequestV1Request  (required)
      * @throws OAS.ApiException if fails to make API call
      */
-    public void ssprRemindUsernamesV1() {
+    public void ssprResetPasswordRequestV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSSsprResetPasswordRequestV1Request'), 'oaSSsprResetPasswordRequestV1Request');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         client.invoke(
-            'POST', '/1/module/sspr/remindUsernames', '',
+            'POST', '/1/module/sspr/resetPasswordRequest/',
+            (OASSsprResetPasswordRequestV1Request) params.get('oaSSsprResetPasswordRequestV1Request'),
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
-            new List<String>(),
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            null
+        );
+    }
+    /**
+     * Reset Password
+     * This endpoint resets the user\&#39;s password.\n\nsEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser\n\nsUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     * @param oaSSsprResetPasswordV1Request  (required)
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public void ssprResetPasswordV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSSsprResetPasswordV1Request'), 'oaSSsprResetPasswordV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        client.invoke(
+            'POST', '/1/module/sspr/resetPassword',
+            (OASSsprResetPasswordV1Request) params.get('oaSSsprResetPasswordV1Request'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            null
+        );
+    }
+    /**
+     * Send username(s)
+     * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
+     * @param oaSSsprSendUsernamesV1Request  (required)
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public void ssprSendUsernamesV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSSsprSendUsernamesV1Request'), 'oaSSsprSendUsernamesV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        client.invoke(
+            'POST', '/1/module/sspr/sendUsernames',
+            (OASSsprSendUsernamesV1Request) params.get('oaSSsprSendUsernamesV1Request'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            null
+        );
+    }
+    /**
+     * Unlock Account Request
+     * This endpoint sends an email with a link to unlock the user account.\n\nsEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser\n\nsUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     * @param oaSSsprUnlockAccountRequestV1Request  (required)
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public void ssprUnlockAccountRequestV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSSsprUnlockAccountRequestV1Request'), 'oaSSsprUnlockAccountRequestV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        client.invoke(
+            'POST', '/1/module/sspr/unlockAccountRequest',
+            (OASSsprUnlockAccountRequestV1Request) params.get('oaSSsprUnlockAccountRequestV1Request'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            null
+        );
+    }
+    /**
+     * Unlock Account
+     * This endpoint unlocks the user account.\n\nsEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser\n\nsUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     * @param oaSSsprUnlockAccountV1Request  (required)
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public void ssprUnlockAccountV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSSsprUnlockAccountV1Request'), 'oaSSsprUnlockAccountV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        client.invoke(
+            'POST', '/1/module/sspr/unlockAccount',
+            (OASSsprUnlockAccountV1Request) params.get('oaSSsprUnlockAccountV1Request'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
             new List<String> { 'Authorization' },
             null
         );

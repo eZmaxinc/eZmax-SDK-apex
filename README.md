@@ -67,7 +67,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OASGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](OASGlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*OASModuleSsprApi* | [**ssprRemindUsernamesV1**](OASModuleSsprApi.md#ssprRemindUsernamesV1) | **POST** /1/module/sspr/remindUsernames | Remind of forgotten username(s)
+*OASModuleSsprApi* | [**ssprResetPasswordRequestV1**](OASModuleSsprApi.md#ssprResetPasswordRequestV1) | **POST** /1/module/sspr/resetPasswordRequest/ | Reset Password Request
+*OASModuleSsprApi* | [**ssprResetPasswordV1**](OASModuleSsprApi.md#ssprResetPasswordV1) | **POST** /1/module/sspr/resetPassword | Reset Password
+*OASModuleSsprApi* | [**ssprSendUsernamesV1**](OASModuleSsprApi.md#ssprSendUsernamesV1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
+*OASModuleSsprApi* | [**ssprUnlockAccountRequestV1**](OASModuleSsprApi.md#ssprUnlockAccountRequestV1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
+*OASModuleSsprApi* | [**ssprUnlockAccountV1**](OASModuleSsprApi.md#ssprUnlockAccountV1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
 *OASModuleUserApi* | [**userCreateEzsignuserV1**](OASModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *OASObjectActivesessionApi* | [**activesessionGetCurrentV1**](OASObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *OASObjectApikeyApi* | [**apikeyCreateObjectV1**](OASObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey
@@ -165,12 +169,18 @@ Class | Method | HTTP request | Description
  - [OASFieldEEzsignfolderStep](OASFieldEEzsignfolderStep.md)
  - [OASFieldEPhoneType](OASFieldEPhoneType.md)
  - [OASFieldEUserType](OASFieldEUserType.md)
+ - [OASFieldEUserTypeSSPR](OASFieldEUserTypeSSPR.md)
  - [OASFranchisereferalincomeCreateObjec](OASFranchisereferalincomeCreateObjec.md)
  - [OASFranchisereferalincomeRequest](OASFranchisereferalincomeRequest.md)
  - [OASFranchisereferalincomeRequestComp](OASFranchisereferalincomeRequestComp.md)
  - [OASGlobalCustomerGetEndpointV1Respon](OASGlobalCustomerGetEndpointV1Respon.md)
  - [OASMultilingualApikeyDescription](OASMultilingualApikeyDescription.md)
  - [OASPhoneRequest](OASPhoneRequest.md)
+ - [OASSsprResetPasswordRequestV1Request](OASSsprResetPasswordRequestV1Request.md)
+ - [OASSsprResetPasswordV1Request](OASSsprResetPasswordV1Request.md)
+ - [OASSsprSendUsernamesV1Request](OASSsprSendUsernamesV1Request.md)
+ - [OASSsprUnlockAccountRequestV1Request](OASSsprUnlockAccountRequestV1Request.md)
+ - [OASSsprUnlockAccountV1Request](OASSsprUnlockAccountV1Request.md)
  - [OASUNUSEDEzsigndocumentEditObjectV1R](OASUNUSEDEzsigndocumentEditObjectV1R.md)
  - [OASUNUSEDEzsignfolderEditObjectV1Req](OASUNUSEDEzsignfolderEditObjectV1Req.md)
  - [OASUNUSEDEzsignfolderEditObjectV1Res](OASUNUSEDEzsignfolderEditObjectV1Res.md)
