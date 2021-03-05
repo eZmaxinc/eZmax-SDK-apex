@@ -11,9 +11,9 @@
  */
 
 /**
- * Request for the /1/module/sspr/unlockAccount API Request
+ * Request for the /1/module/sspr/validateToken API Request
  */
-public class OASSsprUnlockAccountV1Request {
+public class OASSsprValidateTokenV1Request {
     /**
      * The customer code assigned to your account
      * @return pksCustomerCode
@@ -52,26 +52,26 @@ public class OASSsprUnlockAccountV1Request {
      */
     public String binUserSSPRtoken { get; set; }
 
-    public static OASSsprUnlockAccountV1Request getExample() {
-        OASSsprUnlockAccountV1Request ssprUnlockAccountV1Request = new OASSsprUnlockAccountV1Request();
-          ssprUnlockAccountV1Request.pksCustomerCode = 'demo';
-          ssprUnlockAccountV1Request.fkiLanguageID = 2;
-          ssprUnlockAccountV1Request.eUserTypeSSPR = OASFieldEUserTypeSSPR.getExample();
-          ssprUnlockAccountV1Request.sEmailAddress = 'example@domain.com';
-          ssprUnlockAccountV1Request.sUserLoginname = 'JohnDoe';
-          ssprUnlockAccountV1Request.binUserSSPRtoken = '012345678901234567890123456789ab';
-        return ssprUnlockAccountV1Request;
+    public static OASSsprValidateTokenV1Request getExample() {
+        OASSsprValidateTokenV1Request ssprValidateTokenV1Request = new OASSsprValidateTokenV1Request();
+          ssprValidateTokenV1Request.pksCustomerCode = 'demo';
+          ssprValidateTokenV1Request.fkiLanguageID = 2;
+          ssprValidateTokenV1Request.eUserTypeSSPR = OASFieldEUserTypeSSPR.getExample();
+          ssprValidateTokenV1Request.sEmailAddress = 'example@domain.com';
+          ssprValidateTokenV1Request.sUserLoginname = 'JohnDoe';
+          ssprValidateTokenV1Request.binUserSSPRtoken = '012345678901234567890123456789ab';
+        return ssprValidateTokenV1Request;
     }
 
     public Boolean equals(Object obj) {
-        if (obj instanceof OASSsprUnlockAccountV1Request) {           
-            OASSsprUnlockAccountV1Request ssprUnlockAccountV1Request = (OASSsprUnlockAccountV1Request) obj;
-            return this.pksCustomerCode == ssprUnlockAccountV1Request.pksCustomerCode
-                && this.fkiLanguageID == ssprUnlockAccountV1Request.fkiLanguageID
-                && this.eUserTypeSSPR == ssprUnlockAccountV1Request.eUserTypeSSPR
-                && this.sEmailAddress == ssprUnlockAccountV1Request.sEmailAddress
-                && this.sUserLoginname == ssprUnlockAccountV1Request.sUserLoginname
-                && this.binUserSSPRtoken == ssprUnlockAccountV1Request.binUserSSPRtoken;
+        if (obj instanceof OASSsprValidateTokenV1Request) {           
+            OASSsprValidateTokenV1Request ssprValidateTokenV1Request = (OASSsprValidateTokenV1Request) obj;
+            return this.pksCustomerCode == ssprValidateTokenV1Request.pksCustomerCode
+                && this.fkiLanguageID == ssprValidateTokenV1Request.fkiLanguageID
+                && this.eUserTypeSSPR == ssprValidateTokenV1Request.eUserTypeSSPR
+                && this.sEmailAddress == ssprValidateTokenV1Request.sEmailAddress
+                && this.sUserLoginname == ssprValidateTokenV1Request.sUserLoginname
+                && this.binUserSSPRtoken == ssprValidateTokenV1Request.binUserSSPRtoken;
         }
         return false;
     }

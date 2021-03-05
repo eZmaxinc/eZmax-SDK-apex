@@ -371,6 +371,10 @@ force-app/main/default/classes/OASSsprUnlockAccountV1Request.cls
 force-app/main/default/classes/OASSsprUnlockAccountV1Request.cls-meta.xml
 force-app/main/default/classes/OASSsprUnlockAccountV1RequestTest.cls
 force-app/main/default/classes/OASSsprUnlockAccountV1RequestTest.cls-meta.xml
+force-app/main/default/classes/OASSsprValidateTokenV1Request.cls
+force-app/main/default/classes/OASSsprValidateTokenV1Request.cls-meta.xml
+force-app/main/default/classes/OASSsprValidateTokenV1RequestTest.cls
+force-app/main/default/classes/OASSsprValidateTokenV1RequestTest.cls-meta.xml
 force-app/main/default/classes/OASTest.cls
 force-app/main/default/classes/OASTest.cls-meta.xml
 force-app/main/default/classes/OASUNUSEDEzsigndocumentEditObjectV1R.cls

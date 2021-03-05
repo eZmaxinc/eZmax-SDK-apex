@@ -134,4 +134,31 @@ private class OASModuleSsprApiTest {
 
         api.ssprUnlockAccountV1(params);
     }
+
+    /**
+     * Validate Token
+     *
+     * This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.\n\nsEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser\n\nsUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     */
+    @isTest
+    private static void ssprValidateTokenV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'oaSSsprValidateTokenV1Request' => ''
+        };
+
+        OASClient client;
+        OASModuleSsprApi api;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASModuleSsprApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+        api.ssprValidateTokenV1(params);
+    }
 }

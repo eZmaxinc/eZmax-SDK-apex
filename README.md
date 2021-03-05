@@ -72,6 +72,7 @@ Class | Method | HTTP request | Description
 *OASModuleSsprApi* | [**ssprSendUsernamesV1**](OASModuleSsprApi.md#ssprSendUsernamesV1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
 *OASModuleSsprApi* | [**ssprUnlockAccountRequestV1**](OASModuleSsprApi.md#ssprUnlockAccountRequestV1) | **POST** /1/module/sspr/unlockAccountRequest | Unlock Account Request
 *OASModuleSsprApi* | [**ssprUnlockAccountV1**](OASModuleSsprApi.md#ssprUnlockAccountV1) | **POST** /1/module/sspr/unlockAccount | Unlock Account
+*OASModuleSsprApi* | [**ssprValidateTokenV1**](OASModuleSsprApi.md#ssprValidateTokenV1) | **POST** /1/module/sspr/validateToken | Validate Token
 *OASModuleUserApi* | [**userCreateEzsignuserV1**](OASModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *OASObjectActivesessionApi* | [**activesessionGetCurrentV1**](OASObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *OASObjectApikeyApi* | [**apikeyCreateObjectV1**](OASObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey
@@ -181,6 +182,7 @@ Class | Method | HTTP request | Description
  - [OASSsprSendUsernamesV1Request](OASSsprSendUsernamesV1Request.md)
  - [OASSsprUnlockAccountRequestV1Request](OASSsprUnlockAccountRequestV1Request.md)
  - [OASSsprUnlockAccountV1Request](OASSsprUnlockAccountV1Request.md)
+ - [OASSsprValidateTokenV1Request](OASSsprValidateTokenV1Request.md)
  - [OASUNUSEDEzsigndocumentEditObjectV1R](OASUNUSEDEzsigndocumentEditObjectV1R.md)
  - [OASUNUSEDEzsignfolderEditObjectV1Req](OASUNUSEDEzsignfolderEditObjectV1Req.md)
  - [OASUNUSEDEzsignfolderEditObjectV1Res](OASUNUSEDEzsignfolderEditObjectV1Res.md)
