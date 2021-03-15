@@ -138,7 +138,7 @@ private class OASModuleSsprApiTest {
     /**
      * Validate Token
      *
-     * This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.\n\nsEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser\n\nsUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     * This endpoint validates if a Token is valid and not expired.\n\nsEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser\n\nsUserLoginname must be set if eUserTypeSSPR &#x3D; Native
      */
     @isTest
     private static void ssprValidateTokenV1Test() {
