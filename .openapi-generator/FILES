@@ -39,6 +39,14 @@ force-app/main/default/classes/OASAttemptResponse.cls
 force-app/main/default/classes/OASAttemptResponse.cls-meta.xml
 force-app/main/default/classes/OASAttemptResponseTest.cls
 force-app/main/default/classes/OASAttemptResponseTest.cls-meta.xml
+force-app/main/default/classes/OASAuthenticateAuthenticateV2Request.cls
+force-app/main/default/classes/OASAuthenticateAuthenticateV2Request.cls-meta.xml
+force-app/main/default/classes/OASAuthenticateAuthenticateV2RequestTest.cls
+force-app/main/default/classes/OASAuthenticateAuthenticateV2RequestTest.cls-meta.xml
+force-app/main/default/classes/OASAuthenticateAuthenticateV2Respons.cls
+force-app/main/default/classes/OASAuthenticateAuthenticateV2Respons.cls-meta.xml
+force-app/main/default/classes/OASAuthenticateAuthenticateV2ResponsTest.cls
+force-app/main/default/classes/OASAuthenticateAuthenticateV2ResponsTest.cls-meta.xml
 force-app/main/default/classes/OASClient.cls
 force-app/main/default/classes/OASClient.cls-meta.xml
 force-app/main/default/classes/OASCommonAudit.cls
@@ -293,6 +301,10 @@ force-app/main/default/classes/OASGlobalCustomerGetEndpointV1Respon.cls
 force-app/main/default/classes/OASGlobalCustomerGetEndpointV1Respon.cls-meta.xml
 force-app/main/default/classes/OASGlobalCustomerGetEndpointV1ResponTest.cls
 force-app/main/default/classes/OASGlobalCustomerGetEndpointV1ResponTest.cls-meta.xml
+force-app/main/default/classes/OASModuleAuthenticateApi.cls
+force-app/main/default/classes/OASModuleAuthenticateApi.cls-meta.xml
+force-app/main/default/classes/OASModuleAuthenticateApiTest.cls
+force-app/main/default/classes/OASModuleAuthenticateApiTest.cls-meta.xml
 force-app/main/default/classes/OASModuleSsprApi.cls
 force-app/main/default/classes/OASModuleSsprApi.cls-meta.xml
 force-app/main/default/classes/OASModuleSsprApiTest.cls
