@@ -171,6 +171,7 @@ Class | Method | HTTP request | Description
  - [OASFieldEEzsigndocumentStep](OASFieldEEzsigndocumentStep.md)
  - [OASFieldEEzsignfolderSendreminderfre](OASFieldEEzsignfolderSendreminderfre.md)
  - [OASFieldEEzsignfolderStep](OASFieldEEzsignfolderStep.md)
+ - [OASFieldEEzsignsignatureType](OASFieldEEzsignsignatureType.md)
  - [OASFieldEPhoneType](OASFieldEPhoneType.md)
  - [OASFieldEUserType](OASFieldEUserType.md)
  - [OASFieldEUserTypeSSPR](OASFieldEUserTypeSSPR.md)

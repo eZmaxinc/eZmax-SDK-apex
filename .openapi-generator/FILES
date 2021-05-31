@@ -269,6 +269,10 @@ force-app/main/default/classes/OASFieldEEzsignfolderStep.cls
 force-app/main/default/classes/OASFieldEEzsignfolderStep.cls-meta.xml
 force-app/main/default/classes/OASFieldEEzsignfolderStepTest.cls
 force-app/main/default/classes/OASFieldEEzsignfolderStepTest.cls-meta.xml
+force-app/main/default/classes/OASFieldEEzsignsignatureType.cls
+force-app/main/default/classes/OASFieldEEzsignsignatureType.cls-meta.xml
+force-app/main/default/classes/OASFieldEEzsignsignatureTypeTest.cls
+force-app/main/default/classes/OASFieldEEzsignsignatureTypeTest.cls-meta.xml
 force-app/main/default/classes/OASFieldEPhoneType.cls
 force-app/main/default/classes/OASFieldEPhoneType.cls-meta.xml
 force-app/main/default/classes/OASFieldEPhoneTypeTest.cls
