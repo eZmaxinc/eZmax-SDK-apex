@@ -6,6 +6,8 @@ private class OASFieldEEzsigndocumentStepTest {
             OASFieldEEzsigndocumentStep.UNSENT,
             OASFieldEEzsigndocumentStep.UNSIGNED,
             OASFieldEEzsigndocumentStep.PARTIALLYSIGNED,
+            OASFieldEEzsigndocumentStep.DECLINEDTOSIGN,
+            OASFieldEEzsigndocumentStep.PREMATURELYENDED,
             OASFieldEEzsigndocumentStep.COMPLETED
         };
         Set<OASFieldEEzsigndocumentStep> actual  = new Set<OASFieldEEzsigndocumentStep>(OASFieldEEzsigndocumentStep.values());
