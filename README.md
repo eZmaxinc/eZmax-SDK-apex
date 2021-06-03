@@ -67,7 +67,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OASGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](OASGlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*OASModuleAuthenticateApi* | [**authenticateAuthenticateV2**](OASModuleAuthenticateApi.md#authenticateAuthenticateV2) | **POST** /2/module/authenticate/authenticate/ezsignuser/{eSessionType} | Authenticate a user
+*OASModuleAuthenticateApi* | [**authenticateAuthenticateV2**](OASModuleAuthenticateApi.md#authenticateAuthenticateV2) | **POST** /2/module/authenticate/authenticate/{eSessionType} | Authenticate a user
 *OASModuleSsprApi* | [**ssprResetPasswordRequestV1**](OASModuleSsprApi.md#ssprResetPasswordRequestV1) | **POST** /1/module/sspr/resetPasswordRequest | Reset Password Request
 *OASModuleSsprApi* | [**ssprResetPasswordV1**](OASModuleSsprApi.md#ssprResetPasswordV1) | **POST** /1/module/sspr/resetPassword | Reset Password
 *OASModuleSsprApi* | [**ssprSendUsernamesV1**](OASModuleSsprApi.md#ssprSendUsernamesV1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
