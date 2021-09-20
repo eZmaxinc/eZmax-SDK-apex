@@ -109,7 +109,7 @@ private class OASObjectEzsigndocumentApiTest {
     /**
      * Retrieve an existing Ezsigndocument\&#39;s children IDs
      *
-     * 
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
      */
     @isTest
     private static void ezsigndocumentGetChildrenV1Test() {
@@ -170,9 +170,38 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s Form Data
+     *
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     */
+    @isTest
+    private static void ezsigndocumentGetFormDataV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        Blob response;
+        Blob expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+        api.ezsigndocumentGetFormDataV1(params);
+    }
+
+    /**
      * Retrieve an existing Ezsigndocument
      *
-     * 
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
      */
     @isTest
     private static void ezsigndocumentGetObjectV1Test() {
@@ -201,6 +230,42 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentGetObjectV1Response.getExample();
         response = (OASEzsigndocumentGetObjectV1Response) api.ezsigndocumentGetObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve positions X,Y of given words from a Ezsigndocument
+     *
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     */
+    @isTest
+    private static void ezsigndocumentGetWordsPositionsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'oaSEzsigndocumentGetWordsPositionsV1' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetWordsPositionsV1 response;
+        OASEzsigndocumentGetWordsPositionsV1 expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetWordsPositionsV1.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetWordsPositionsV1.getExample();
+        response = (OASEzsigndocumentGetWordsPositionsV1) api.ezsigndocumentGetWordsPositionsV1(params);
         System.assertEquals(expectedResponse, response);
     }
 }

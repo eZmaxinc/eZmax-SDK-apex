@@ -73,7 +73,7 @@ private class OASObjectEzsignsignatureApiTest {
     /**
      * Retrieve an existing Ezsignsignature\&#39;s children IDs
      *
-     * 
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
      */
     @isTest
     private static void ezsignsignatureGetChildrenV1Test() {
@@ -100,7 +100,7 @@ private class OASObjectEzsignsignatureApiTest {
     /**
      * Retrieve an existing Ezsignsignature
      *
-     * 
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
      */
     @isTest
     private static void ezsignsignatureGetObjectV1Test() {

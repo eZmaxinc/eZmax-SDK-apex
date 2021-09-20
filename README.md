@@ -82,7 +82,9 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetChildrenV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument\&#39;s children IDs
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetDownloadUrlV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
+*OASObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument\&#39;s Form Data
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
+*OASObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *OASObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetChildrenV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder\&#39;s children IDs
@@ -109,6 +111,7 @@ Class | Method | HTTP request | Description
  - [OASAddressRequest](OASAddressRequest.md)
  - [OASApikeyCreateObjectV1Request](OASApikeyCreateObjectV1Request.md)
  - [OASApikeyCreateObjectV1Response](OASApikeyCreateObjectV1Response.md)
+ - [OASApikeyCreateObjectV1ResponseAllOf](OASApikeyCreateObjectV1ResponseAllOf.md)
  - [OASApikeyCreateObjectV1ResponseMPayl](OASApikeyCreateObjectV1ResponseMPayl.md)
  - [OASApikeyRequest](OASApikeyRequest.md)
  - [OASApikeyRequestCompound](OASApikeyRequestCompound.md)
@@ -118,6 +121,7 @@ Class | Method | HTTP request | Description
  - [OASAuthenticateAuthenticateV2Respons](OASAuthenticateAuthenticateV2Respons.md)
  - [OASCommonAudit](OASCommonAudit.md)
  - [OASCommonGetAutocompleteV1Response](OASCommonGetAutocompleteV1Response.md)
+ - [OASCommonGetAutocompleteV1ResponseAl](OASCommonGetAutocompleteV1ResponseAl.md)
  - [OASCommonGetAutocompleteV1ResponseMP](OASCommonGetAutocompleteV1ResponseMP.md)
  - [OASCommonResponse](OASCommonResponse.md)
  - [OASCommonResponseError](OASCommonResponseError.md)
@@ -137,6 +141,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigndocumentDeleteObjectV1Respo](OASEzsigndocumentDeleteObjectV1Respo.md)
  - [OASEzsigndocumentGetDownloadUrlV1Res](OASEzsigndocumentGetDownloadUrlV1Res.md)
  - [OASEzsigndocumentGetObjectV1Response](OASEzsigndocumentGetObjectV1Response.md)
+ - [OASEzsigndocumentGetWordsPositionsV1](OASEzsigndocumentGetWordsPositionsV1.md)
  - [OASEzsigndocumentRequest](OASEzsigndocumentRequest.md)
  - [OASEzsigndocumentRequestCompound](OASEzsigndocumentRequestCompound.md)
  - [OASEzsigndocumentResponse](OASEzsigndocumentResponse.md)
@@ -146,11 +151,12 @@ Class | Method | HTTP request | Description
  - [OASEzsignfolderCreateObjectV1Respons](OASEzsignfolderCreateObjectV1Respons.md)
  - [OASEzsignfolderDeleteObjectV1Respons](OASEzsignfolderDeleteObjectV1Respons.md)
  - [OASEzsignfolderGetObjectV1Response](OASEzsignfolderGetObjectV1Response.md)
+ - [OASEzsignfolderGetObjectV1ResponseAl](OASEzsignfolderGetObjectV1ResponseAl.md)
  - [OASEzsignfolderGetObjectV1ResponseMP](OASEzsignfolderGetObjectV1ResponseMP.md)
  - [OASEzsignfolderRequest](OASEzsignfolderRequest.md)
  - [OASEzsignfolderRequestCompound](OASEzsignfolderRequestCompound.md)
+ - [OASEzsignfolderRequestCompoundAllOf](OASEzsignfolderRequestCompoundAllOf.md)
  - [OASEzsignfolderResponse](OASEzsignfolderResponse.md)
- - [OASEzsignfolderResponseAllOf](OASEzsignfolderResponseAllOf.md)
  - [OASEzsignfolderResponseCompound](OASEzsignfolderResponseCompound.md)
  - [OASEzsignfolderSendV1Request](OASEzsignfolderSendV1Request.md)
  - [OASEzsignfolderSendV1Response](OASEzsignfolderSendV1Response.md)
@@ -167,6 +173,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignatureRequestCompound](OASEzsignsignatureRequestCompound.md)
  - [OASEzsignsignerRequest](OASEzsignsignerRequest.md)
  - [OASEzsignsignerRequestCompound](OASEzsignsignerRequestCompound.md)
+ - [OASEzsignsignerRequestCompoundAllOf](OASEzsignsignerRequestCompoundAllOf.md)
  - [OASEzsignsignerRequestCompoundContac](OASEzsignsignerRequestCompoundContac.md)
  - [OASFieldEEzsigndocumentStep](OASFieldEEzsigndocumentStep.md)
  - [OASFieldEEzsignfolderSendreminderfre](OASFieldEEzsignfolderSendreminderfre.md)
@@ -194,9 +201,9 @@ Class | Method | HTTP request | Description
  - [OASUNUSEDEzsignsignatureEditObjectV1](OASUNUSEDEzsignsignatureEditObjectV1.md)
  - [OASUserCreateEzsignuserV1Request](OASUserCreateEzsignuserV1Request.md)
  - [OASUserCreateEzsignuserV1Response](OASUserCreateEzsignuserV1Response.md)
+ - [OASUserCreateEzsignuserV1ResponseAll](OASUserCreateEzsignuserV1ResponseAll.md)
  - [OASUserCreateEzsignuserV1ResponseMPa](OASUserCreateEzsignuserV1ResponseMPa.md)
  - [OASUserResponse](OASUserResponse.md)
- - [OASUserResponseAllOf](OASUserResponseAllOf.md)
  - [OASWebhookEzsignDocumentCompleted](OASWebhookEzsignDocumentCompleted.md)
  - [OASWebhookEzsignDocumentCompletedAll](OASWebhookEzsignDocumentCompletedAll.md)
  - [OASWebhookEzsignFolderCompleted](OASWebhookEzsignFolderCompleted.md)
@@ -205,6 +212,7 @@ Class | Method | HTTP request | Description
  - [OASWebhookUserUserCreated](OASWebhookUserUserCreated.md)
  - [OASWebhookUserUserCreatedAllOf](OASWebhookUserUserCreatedAllOf.md)
  - [OASWebsiteRequest](OASWebsiteRequest.md)
+ - [OASWordPositionResponse](OASWordPositionResponse.md)
 
 
 ## Documentation for Authorization

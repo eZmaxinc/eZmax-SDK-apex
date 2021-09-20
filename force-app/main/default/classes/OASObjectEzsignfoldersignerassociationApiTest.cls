@@ -73,7 +73,7 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation\&#39;s children IDs
      *
-     * 
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
      */
     @isTest
     private static void ezsignfoldersignerassociationGetChildrenV1Test() {
@@ -135,7 +135,7 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation
      *
-     * 
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
      */
     @isTest
     private static void ezsignfoldersignerassociationGetObjectV1Test() {
