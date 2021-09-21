@@ -21,7 +21,7 @@ public class OASEzsignsignatureRequest {
     public Integer fkiEzsignfoldersignerassociationID { get; set; }
 
     /**
-     * The page number in the document where to apply the signature
+     * The page number in the Ezsigndocument
      * @return iEzsignpagePagenumber
      */
     public Integer iEzsignpagePagenumber { get; set; }
@@ -51,7 +51,7 @@ public class OASEzsignsignatureRequest {
     public OASFieldEEzsignsignatureType eEzsignsignatureType { get; set; }
 
     /**
-     * The unique ID of the Ezsigntemplate
+     * The unique ID of the Ezsigndocument
      * @return fkiEzsigndocumentID
      */
     public Integer fkiEzsigndocumentID { get; set; }

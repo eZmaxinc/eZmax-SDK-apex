@@ -41,7 +41,7 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
     public String sEzsigndocumentName { get; set; }
 
     /**
-     * The unique ID of the Ezsigntemplate
+     * The unique ID of the Ezsigndocument
      * @return pkiEzsigndocumentID
      */
     public Integer pkiEzsigndocumentID { get; set; }

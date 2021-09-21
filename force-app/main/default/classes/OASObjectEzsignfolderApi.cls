@@ -52,7 +52,7 @@ public class OASObjectEzsignfolderApi {
     /**
      * Delete an existing Ezsignfolder
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @return OASEzsignfolderDeleteObjectV1Respons
      * @throws OAS.ApiException if fails to make API call
      */
@@ -77,7 +77,7 @@ public class OASObjectEzsignfolderApi {
     /**
      * Retrieve an existing Ezsignfolder\&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @throws OAS.ApiException if fails to make API call
      */
     public void ezsignfolderGetChildrenV1(Map<String, Object> params) {
@@ -99,9 +99,34 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
+     * Retrieve an existing Ezsignfolder\&#39;s forms data
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * @param pkiEzsignfolderID  (required)
+     * @return Blob
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public Blob ezsignfolderGetFormsDataV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (Blob) client.invoke(
+            'GET', '/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/zip', 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            Blob.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignfolder
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @return OASEzsignfolderGetObjectV1Response
      * @throws OAS.ApiException if fails to make API call
      */
@@ -126,7 +151,7 @@ public class OASObjectEzsignfolderApi {
     /**
      * Send the Ezsignfolder to the signatories for signature
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param oaSEzsignfolderSendV1Request  (required)
      * @return OASEzsignfolderSendV1Response
      * @throws OAS.ApiException if fails to make API call

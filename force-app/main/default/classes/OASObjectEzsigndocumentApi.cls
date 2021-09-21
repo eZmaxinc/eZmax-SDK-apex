@@ -28,7 +28,7 @@ public class OASObjectEzsigndocumentApi {
     /**
      * Apply an Ezsign Template to the Ezsigndocument.
      * This endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
-     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param pkiEzsigndocumentID  (required)
      * @param oaSEzsigndocumentApplyEzsigntemplate  (required)
      * @return OASEzsigndocumentApplyEzsigntemplate
      * @throws OAS.ApiException if fails to make API call
@@ -80,7 +80,7 @@ public class OASObjectEzsigndocumentApi {
     /**
      * Delete an existing Ezsigndocument
      * 
-     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param pkiEzsigndocumentID  (required)
      * @return OASEzsigndocumentDeleteObjectV1Respo
      * @throws OAS.ApiException if fails to make API call
      */
@@ -105,7 +105,7 @@ public class OASObjectEzsigndocumentApi {
     /**
      * Retrieve an existing Ezsigndocument\&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param pkiEzsigndocumentID  (required)
      * @throws OAS.ApiException if fails to make API call
      */
     public void ezsigndocumentGetChildrenV1(Map<String, Object> params) {
@@ -129,7 +129,7 @@ public class OASObjectEzsigndocumentApi {
     /**
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param pkiEzsigndocumentID  (required)
      * @param eDocumentType The type of document to retrieve.\n\n1. **Initial** Is the initial document before any signature were applied.\n2. **Signed** Is the final document once all signatures were applied.\n3. **Proofdocument** Is the evidence report.\n4. **Proof** Is the complete evidence archive including all of the above and more.\n (required)
      * @return OASEzsigndocumentGetDownloadUrlV1Res
      * @throws OAS.ApiException if fails to make API call
@@ -155,9 +155,34 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignpages
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetEzsignpagesV1Res
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetEzsignpagesV1Res ezsigndocumentGetEzsignpagesV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetEzsignpagesV1Res) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetEzsignpagesV1Res.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsigndocument\&#39;s Form Data
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param pkiEzsigndocumentID  (required)
      * @return Blob
      * @throws OAS.ApiException if fails to make API call
      */
@@ -182,7 +207,7 @@ public class OASObjectEzsigndocumentApi {
     /**
      * Retrieve an existing Ezsigndocument
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param pkiEzsigndocumentID  (required)
      * @return OASEzsigndocumentGetObjectV1Response
      * @throws OAS.ApiException if fails to make API call
      */
@@ -207,7 +232,7 @@ public class OASObjectEzsigndocumentApi {
     /**
      * Retrieve positions X,Y of given words from a Ezsigndocument
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param pkiEzsigndocumentID  (required)
      * @param oaSEzsigndocumentGetWordsPositionsV1  (required)
      * @return OASEzsigndocumentGetWordsPositionsV1
      * @throws OAS.ApiException if fails to make API call

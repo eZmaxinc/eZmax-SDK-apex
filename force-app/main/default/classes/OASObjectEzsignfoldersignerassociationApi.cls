@@ -52,7 +52,7 @@ public class OASObjectEzsignfoldersignerassociationApi {
     /**
      * Delete an existing Ezsignfoldersignerassociation
      * 
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return OASEzsignfoldersignerassociationDele
      * @throws OAS.ApiException if fails to make API call
      */
@@ -77,7 +77,7 @@ public class OASObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation\&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @throws OAS.ApiException if fails to make API call
      */
     public void ezsignfoldersignerassociationGetChildrenV1(Map<String, Object> params) {
@@ -101,7 +101,7 @@ public class OASObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve a Login Url to allow In-Person signing
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.\n\nThe signer Login type must be configured as In-Person.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return OASEzsignfoldersignerassociationGetI
      * @throws OAS.ApiException if fails to make API call
      */
@@ -126,7 +126,7 @@ public class OASObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return OASEzsignfoldersignerassociationGetO
      * @throws OAS.ApiException if fails to make API call
      */

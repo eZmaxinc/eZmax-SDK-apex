@@ -170,6 +170,41 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignpages
+     *
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     */
+    @isTest
+    private static void ezsigndocumentGetEzsignpagesV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetEzsignpagesV1Res response;
+        OASEzsigndocumentGetEzsignpagesV1Res expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetEzsignpagesV1Res.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetEzsignpagesV1Res.getExample();
+        response = (OASEzsigndocumentGetEzsignpagesV1Res) api.ezsigndocumentGetEzsignpagesV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsigndocument\&#39;s Form Data
      *
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

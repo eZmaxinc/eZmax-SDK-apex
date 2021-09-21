@@ -98,6 +98,35 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignfolder\&#39;s forms data
+     *
+     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     */
+    @isTest
+    private static void ezsignfolderGetFormsDataV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        Blob response;
+        Blob expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+        api.ezsignfolderGetFormsDataV1(params);
+    }
+
+    /**
      * Retrieve an existing Ezsignfolder
      *
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

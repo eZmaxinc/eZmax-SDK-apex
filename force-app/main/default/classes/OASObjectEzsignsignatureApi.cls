@@ -52,7 +52,7 @@ public class OASObjectEzsignsignatureApi {
     /**
      * Delete an existing Ezsignsignature
      * 
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @return OASEzsignsignatureDeleteObjectV1Resp
      * @throws OAS.ApiException if fails to make API call
      */
@@ -77,7 +77,7 @@ public class OASObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature\&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @throws OAS.ApiException if fails to make API call
      */
     public void ezsignsignatureGetChildrenV1(Map<String, Object> params) {
@@ -101,7 +101,7 @@ public class OASObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @return OASEzsignsignatureGetObjectV1Respons
      * @throws OAS.ApiException if fails to make API call
      */

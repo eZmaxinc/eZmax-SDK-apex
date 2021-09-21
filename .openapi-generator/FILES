@@ -137,6 +137,10 @@ force-app/main/default/classes/OASEzsigndocumentGetDownloadUrlV1Res.cls
 force-app/main/default/classes/OASEzsigndocumentGetDownloadUrlV1Res.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentGetDownloadUrlV1ResTest.cls
 force-app/main/default/classes/OASEzsigndocumentGetDownloadUrlV1ResTest.cls-meta.xml
+force-app/main/default/classes/OASEzsigndocumentGetEzsignpagesV1Res.cls
+force-app/main/default/classes/OASEzsigndocumentGetEzsignpagesV1Res.cls-meta.xml
+force-app/main/default/classes/OASEzsigndocumentGetEzsignpagesV1ResTest.cls
+force-app/main/default/classes/OASEzsigndocumentGetEzsignpagesV1ResTest.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentGetObjectV1Response.cls
 force-app/main/default/classes/OASEzsigndocumentGetObjectV1Response.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentGetObjectV1ResponseTest.cls
@@ -155,10 +159,6 @@ force-app/main/default/classes/OASEzsigndocumentRequestTest.cls
 force-app/main/default/classes/OASEzsigndocumentRequestTest.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentResponse.cls
 force-app/main/default/classes/OASEzsigndocumentResponse.cls-meta.xml
-force-app/main/default/classes/OASEzsigndocumentResponseAllOf.cls
-force-app/main/default/classes/OASEzsigndocumentResponseAllOf.cls-meta.xml
-force-app/main/default/classes/OASEzsigndocumentResponseAllOfTest.cls
-force-app/main/default/classes/OASEzsigndocumentResponseAllOfTest.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentResponseCompound.cls
 force-app/main/default/classes/OASEzsigndocumentResponseCompound.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentResponseCompoundTest.cls
@@ -237,6 +237,10 @@ force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequTest.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignpageResponse.cls
+force-app/main/default/classes/OASEzsignpageResponse.cls-meta.xml
+force-app/main/default/classes/OASEzsignpageResponseTest.cls
+force-app/main/default/classes/OASEzsignpageResponseTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureCreateObjectV1Requ.cls
 force-app/main/default/classes/OASEzsignsignatureCreateObjectV1Requ.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureCreateObjectV1RequTest.cls

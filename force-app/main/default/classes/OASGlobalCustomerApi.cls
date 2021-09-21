@@ -28,7 +28,7 @@ public class OASGlobalCustomerApi {
     /**
      * Get customer endpoint
      * Retrieve the customer\&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer\&#39;s data is stored.
-     * @param pksCustomerCode The customer code assigned to your account (required)
+     * @param pksCustomerCode  (required)
      * @param sInfrastructureproductCode The infrastructure product Code\n\nIf undefined, &quot;appcluster01&quot; is assumed (optional)
      * @return OASGlobalCustomerGetEndpointV1Respon
      * @throws OAS.ApiException if fails to make API call

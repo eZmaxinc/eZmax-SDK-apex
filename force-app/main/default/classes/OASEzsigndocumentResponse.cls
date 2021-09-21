@@ -13,7 +13,7 @@
 /**
  * An Ezsigndocument Object
  */
-public class OASEzsigndocumentResponse implements OASEzsigndocumentResponseAllOf {
+public class OASEzsigndocumentResponse {
     /**
      * The unique ID of the Ezsignfolder
      * @return fkiEzsignfolderID
@@ -41,7 +41,7 @@ public class OASEzsigndocumentResponse implements OASEzsigndocumentResponseAllOf
     public String sEzsigndocumentName { get; set; }
 
     /**
-     * The unique ID of the Ezsigntemplate
+     * The unique ID of the Ezsigndocument
      * @return pkiEzsigndocumentID
      */
     public Integer pkiEzsigndocumentID { get; set; }
