@@ -3,7 +3,7 @@ private class OASObjectEzsigndocumentApiTest {
     /**
      * Apply an Ezsign Template to the Ezsigndocument.
      *
-     * This endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
+     * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital &quot;E&quot; to normalize the nomenclature.\n\nThis endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
      */
     @isTest
     private static void ezsigndocumentApplyEzsigntemplateV1Test() {
@@ -33,6 +33,42 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentApplyEzsigntemplate.getExample();
         response = (OASEzsigndocumentApplyEzsigntemplate) api.ezsigndocumentApplyEzsigntemplateV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Apply an Ezsign Template to the Ezsigndocument.
+     *
+     * This endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
+     */
+    @isTest
+    private static void ezsigndocumentApplyEzsigntemplateV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'oaSEzsigndocumentApplyEzsigntemplate' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentApplyEzsigntemplate response;
+        OASEzsigndocumentApplyEzsigntemplate expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentApplyEzsigntemplate.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentApplyEzsigntemplate.getExample();
+        response = (OASEzsigndocumentApplyEzsigntemplate) api.ezsigndocumentApplyEzsigntemplateV2(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -172,7 +208,7 @@ private class OASObjectEzsigndocumentApiTest {
     /**
      * Retrieve an existing Ezsigndocument\&#39;s Ezsignpages
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
     private static void ezsigndocumentGetEzsignpagesV1Test() {
@@ -222,15 +258,21 @@ private class OASObjectEzsigndocumentApiTest {
 
         OASClient client;
         OASObjectEzsigndocumentApi api;
-        Blob response;
-        Blob expectedResponse;
+        OASEzsigndocumentGetFormDataV1Respon response;
+        OASEzsigndocumentGetFormDataV1Respon expectedResponse;
         String js = '';
 
         client = new OASClient();
         api = new OASObjectEzsigndocumentApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
 
-        api.ezsigndocumentGetFormDataV1(params);
+
+        js = JSON.serialize(OASEzsigndocumentGetFormDataV1Respon.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetFormDataV1Respon.getExample();
+        response = (OASEzsigndocumentGetFormDataV1Respon) api.ezsigndocumentGetFormDataV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

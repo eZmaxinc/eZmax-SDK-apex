@@ -115,15 +115,21 @@ private class OASObjectEzsignfolderApiTest {
 
         OASClient client;
         OASObjectEzsignfolderApi api;
-        Blob response;
-        Blob expectedResponse;
+        OASEzsignfolderGetFormsDataV1Respons response;
+        OASEzsignfolderGetFormsDataV1Respons expectedResponse;
         String js = '';
 
         client = new OASClient();
         api = new OASObjectEzsignfolderApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
 
-        api.ezsignfolderGetFormsDataV1(params);
+
+        js = JSON.serialize(OASEzsignfolderGetFormsDataV1Respons.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetFormsDataV1Respons.getExample();
+        response = (OASEzsignfolderGetFormsDataV1Respons) api.ezsignfolderGetFormsDataV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

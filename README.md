@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 *OASObjectActivesessionApi* | [**activesessionGetCurrentV1**](OASObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *OASObjectApikeyApi* | [**apikeyCreateObjectV1**](OASObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
+*OASObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](OASObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetChildrenV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument\&#39;s children IDs
@@ -136,6 +137,10 @@ Class | Method | HTTP request | Description
  - [OASContactRequestCompoundAllOf](OASContactRequestCompoundAllOf.md)
  - [OASContactinformationsRequest](OASContactinformationsRequest.md)
  - [OASContactinformationsRequestCompoun](OASContactinformationsRequestCompoun.md)
+ - [OASCustomFormDataDocumentResponse](OASCustomFormDataDocumentResponse.md)
+ - [OASCustomFormDataFolderResponse](OASCustomFormDataFolderResponse.md)
+ - [OASCustomFormDataSignerResponse](OASCustomFormDataSignerResponse.md)
+ - [OASCustomWordPositionResponse](OASCustomWordPositionResponse.md)
  - [OASEmailRequest](OASEmailRequest.md)
  - [OASEzsigndocumentApplyEzsigntemplate](OASEzsigndocumentApplyEzsigntemplate.md)
  - [OASEzsigndocumentCreateObjectV1Reque](OASEzsigndocumentCreateObjectV1Reque.md)
@@ -143,6 +148,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigndocumentDeleteObjectV1Respo](OASEzsigndocumentDeleteObjectV1Respo.md)
  - [OASEzsigndocumentGetDownloadUrlV1Res](OASEzsigndocumentGetDownloadUrlV1Res.md)
  - [OASEzsigndocumentGetEzsignpagesV1Res](OASEzsigndocumentGetEzsignpagesV1Res.md)
+ - [OASEzsigndocumentGetFormDataV1Respon](OASEzsigndocumentGetFormDataV1Respon.md)
  - [OASEzsigndocumentGetObjectV1Response](OASEzsigndocumentGetObjectV1Response.md)
  - [OASEzsigndocumentGetWordsPositionsV1](OASEzsigndocumentGetWordsPositionsV1.md)
  - [OASEzsigndocumentRequest](OASEzsigndocumentRequest.md)
@@ -152,6 +158,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignfolderCreateObjectV1Request](OASEzsignfolderCreateObjectV1Request.md)
  - [OASEzsignfolderCreateObjectV1Respons](OASEzsignfolderCreateObjectV1Respons.md)
  - [OASEzsignfolderDeleteObjectV1Respons](OASEzsignfolderDeleteObjectV1Respons.md)
+ - [OASEzsignfolderGetFormsDataV1Respons](OASEzsignfolderGetFormsDataV1Respons.md)
  - [OASEzsignfolderGetObjectV1Response](OASEzsignfolderGetObjectV1Response.md)
  - [OASEzsignfolderGetObjectV1ResponseAl](OASEzsignfolderGetObjectV1ResponseAl.md)
  - [OASEzsignfolderGetObjectV1ResponseMP](OASEzsignfolderGetObjectV1ResponseMP.md)
@@ -167,6 +174,10 @@ Class | Method | HTTP request | Description
  - [OASEzsignfoldersignerassociationGetI](OASEzsignfoldersignerassociationGetI.md)
  - [OASEzsignfoldersignerassociationGetO](OASEzsignfoldersignerassociationGetO.md)
  - [OASEzsignfoldersignerassociationRequ](OASEzsignfoldersignerassociationRequ.md)
+ - [OASEzsignformfieldResponse](OASEzsignformfieldResponse.md)
+ - [OASEzsignformfieldResponseCompound](OASEzsignformfieldResponseCompound.md)
+ - [OASEzsignformfieldgroupResponse](OASEzsignformfieldgroupResponse.md)
+ - [OASEzsignformfieldgroupResponseCompo](OASEzsignformfieldgroupResponseCompo.md)
  - [OASEzsignpageResponse](OASEzsignpageResponse.md)
  - [OASEzsignsignatureCreateObjectV1Requ](OASEzsignsignatureCreateObjectV1Requ.md)
  - [OASEzsignsignatureCreateObjectV1Resp](OASEzsignsignatureCreateObjectV1Resp.md)
@@ -215,7 +226,6 @@ Class | Method | HTTP request | Description
  - [OASWebhookUserUserCreated](OASWebhookUserUserCreated.md)
  - [OASWebhookUserUserCreatedAllOf](OASWebhookUserUserCreatedAllOf.md)
  - [OASWebsiteRequest](OASWebsiteRequest.md)
- - [OASWordPositionResponse](OASWordPositionResponse.md)
 
 
 ## Documentation for Authorization
