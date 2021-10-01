@@ -39,7 +39,7 @@ public class OASCustomFormDataSignerResponse implements OAS.MappedProperties {
     public String sContactLastname { get; set; }
 
     /**
-     * This array contains the labels or each Form fields in the form but WITHOUT the values
+     * Get aObjEzsignformfieldgroupCompound
      * @return aObjEzsignformfieldgroupCompound
      */
     public List<OASEzsignformfieldgroupResponseCompo> aObjEzsignformfieldgroupCompound { get; set; }
