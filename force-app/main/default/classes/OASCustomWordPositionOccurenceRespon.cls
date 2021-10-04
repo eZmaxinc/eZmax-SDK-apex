@@ -13,7 +13,7 @@
 /**
  * A Word Position Object
  */
-public class OASCustomWordPositionResponse {
+public class OASCustomWordPositionOccurenceRespon {
     /**
      * The page where the word occurence was found
      * minimum: 1
@@ -35,20 +35,20 @@ public class OASCustomWordPositionResponse {
      */
     public Integer iY { get; set; }
 
-    public static OASCustomWordPositionResponse getExample() {
-        OASCustomWordPositionResponse customWordPositionResponse = new OASCustomWordPositionResponse();
-          customWordPositionResponse.iPage = 0;
-          customWordPositionResponse.iX = 0;
-          customWordPositionResponse.iY = 0;
-        return customWordPositionResponse;
+    public static OASCustomWordPositionOccurenceRespon getExample() {
+        OASCustomWordPositionOccurenceRespon customWordPositionOccurenceResponse = new OASCustomWordPositionOccurenceRespon();
+          customWordPositionOccurenceResponse.iPage = 0;
+          customWordPositionOccurenceResponse.iX = 0;
+          customWordPositionOccurenceResponse.iY = 0;
+        return customWordPositionOccurenceResponse;
     }
 
     public Boolean equals(Object obj) {
-        if (obj instanceof OASCustomWordPositionResponse) {           
-            OASCustomWordPositionResponse customWordPositionResponse = (OASCustomWordPositionResponse) obj;
-            return this.iPage == customWordPositionResponse.iPage
-                && this.iX == customWordPositionResponse.iX
-                && this.iY == customWordPositionResponse.iY;
+        if (obj instanceof OASCustomWordPositionOccurenceRespon) {           
+            OASCustomWordPositionOccurenceRespon customWordPositionOccurenceResponse = (OASCustomWordPositionOccurenceRespon) obj;
+            return this.iPage == customWordPositionOccurenceResponse.iPage
+                && this.iX == customWordPositionOccurenceResponse.iX
+                && this.iY == customWordPositionOccurenceResponse.iY;
         }
         return false;
     }

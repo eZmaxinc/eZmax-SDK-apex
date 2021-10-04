@@ -15,14 +15,18 @@
  */
 public class OASEzsigndocumentGetWordsPositionsV1 {
     /**
-     * Get mPayload
+     * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
      * @return mPayload
      */
-    public OASEzsigndocumentGetWordsPositionsV1 mPayload { get; set; }
+    public List<OASCustomWordPositionWordResponse> mPayload { get; set; }
+
+    public OASEzsigndocumentGetWordsPositionsV1() {
+        mPayload = new List<OASCustomWordPositionWordResponse>();
+    }
 
     public static OASEzsigndocumentGetWordsPositionsV1 getExample() {
         OASEzsigndocumentGetWordsPositionsV1 ezsigndocumentGetWordsPositionsV1ResponseAllOf = new OASEzsigndocumentGetWordsPositionsV1();
-          ezsigndocumentGetWordsPositionsV1ResponseAllOf.mPayload = OASEzsigndocumentGetWordsPositionsV1.getExample();
+          ezsigndocumentGetWordsPositionsV1ResponseAllOf.mPayload = new List<OASCustomWordPositionWordResponse>{OASCustomWordPositionWordResponse.getExample()};
         return ezsigndocumentGetWordsPositionsV1ResponseAllOf;
     }
 

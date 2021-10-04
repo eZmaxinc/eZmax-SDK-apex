@@ -68,4 +68,10 @@ private class OASEzsigndocumentGetWordsPositionsV1Test {
         System.assertEquals(ezsigndocumentGetWordsPositionsV1ResponseAllOf1.hashCode(), ezsigndocumentGetWordsPositionsV1ResponseAllOf2.hashCode());
         System.assertEquals(ezsigndocumentGetWordsPositionsV1ResponseAllOf3.hashCode(), ezsigndocumentGetWordsPositionsV1ResponseAllOf4.hashCode());
     }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASEzsigndocumentGetWordsPositionsV1 ezsigndocumentGetWordsPositionsV1ResponseAllOf = new OASEzsigndocumentGetWordsPositionsV1();
+        System.assertEquals(new List<OASCustomWordPositionWordResponse>(), ezsigndocumentGetWordsPositionsV1ResponseAllOf.mPayload);
+    }
 }
