@@ -13,7 +13,7 @@
 /**
  * A Word Position Object
  */
-public class OASCustomWordPositionWordResponse {
+public class OASCustomWordPositionWordResponse implements OAS.MappedProperties {
     /**
      * The searched word
      * @return sWord
@@ -22,18 +22,26 @@ public class OASCustomWordPositionWordResponse {
 
     /**
      * The found occurences for the seached word
-     * @return objWordPositionOccurence
+     * @return aObjWordPositionOccurence
      */
-    public List<OASCustomWordPositionOccurenceRespon> objWordPositionOccurence { get; set; }
+    public List<OASCustomWordPositionOccurenceRespon> aObjWordPositionOccurence { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objWordPositionOccurence' => 'aObjWordPositionOccurence'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
 
     public OASCustomWordPositionWordResponse() {
-        objWordPositionOccurence = new List<OASCustomWordPositionOccurenceRespon>();
+        aObjWordPositionOccurence = new List<OASCustomWordPositionOccurenceRespon>();
     }
 
     public static OASCustomWordPositionWordResponse getExample() {
         OASCustomWordPositionWordResponse customWordPositionWordResponse = new OASCustomWordPositionWordResponse();
           customWordPositionWordResponse.sWord = '';
-          customWordPositionWordResponse.objWordPositionOccurence = new List<OASCustomWordPositionOccurenceRespon>{OASCustomWordPositionOccurenceRespon.getExample()};
+          customWordPositionWordResponse.aObjWordPositionOccurence = new List<OASCustomWordPositionOccurenceRespon>{OASCustomWordPositionOccurenceRespon.getExample()};
         return customWordPositionWordResponse;
     }
 
@@ -41,7 +49,7 @@ public class OASCustomWordPositionWordResponse {
         if (obj instanceof OASCustomWordPositionWordResponse) {           
             OASCustomWordPositionWordResponse customWordPositionWordResponse = (OASCustomWordPositionWordResponse) obj;
             return this.sWord == customWordPositionWordResponse.sWord
-                && this.objWordPositionOccurence == customWordPositionWordResponse.objWordPositionOccurence;
+                && this.aObjWordPositionOccurence == customWordPositionWordResponse.aObjWordPositionOccurence;
         }
         return false;
     }
@@ -49,7 +57,7 @@ public class OASCustomWordPositionWordResponse {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (sWord == null ? 0 : System.hashCode(sWord));
-        hashCode = (17 * hashCode) + (objWordPositionOccurence == null ? 0 : System.hashCode(objWordPositionOccurence));
+        hashCode = (17 * hashCode) + (aObjWordPositionOccurence == null ? 0 : System.hashCode(aObjWordPositionOccurence));
         return hashCode;
     }
 }

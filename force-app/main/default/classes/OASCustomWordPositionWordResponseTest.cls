@@ -70,9 +70,16 @@ private class OASCustomWordPositionWordResponseTest {
     }
 
     @isTest
+    private static void maintainRenamedProperties() {
+        OASCustomWordPositionWordResponse customWordPositionWordResponse = new OASCustomWordPositionWordResponse();
+        Map<String, String> x-property-mappings = customWordPositionWordResponse.getx-property-mappings();
+        System.assertEquals('aObjWordPositionOccurence', x-property-mappings.get('a_objWordPositionOccurence'));
+    }
+
+    @isTest
     private static void defaultValuesPopulated() {
         OASCustomWordPositionWordResponse customWordPositionWordResponse = new OASCustomWordPositionWordResponse();
-        System.assertEquals(new List<OASCustomWordPositionOccurenceRespon>(), customWordPositionWordResponse.objWordPositionOccurence);
+        System.assertEquals(new List<OASCustomWordPositionOccurenceRespon>(), customWordPositionWordResponse.aObjWordPositionOccurence);
         System.assertEquals(null, customWordPositionWordResponse.sWord);
     }
 }
