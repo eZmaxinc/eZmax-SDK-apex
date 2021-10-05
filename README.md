@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetChildrenV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetChildrenV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation\&#39;s children IDs
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetInPersonLoginUrlV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+*OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureGetChildrenV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature\&#39;s children IDs
@@ -126,6 +127,7 @@ Class | Method | HTTP request | Description
  - [OASCommonGetAutocompleteV1Response](OASCommonGetAutocompleteV1Response.md)
  - [OASCommonGetAutocompleteV1ResponseAl](OASCommonGetAutocompleteV1ResponseAl.md)
  - [OASCommonGetAutocompleteV1ResponseMP](OASCommonGetAutocompleteV1ResponseMP.md)
+ - [OASCommonGetListV1ResponseMPayload](OASCommonGetListV1ResponseMPayload.md)
  - [OASCommonResponse](OASCommonResponse.md)
  - [OASCommonResponseError](OASCommonResponseError.md)
  - [OASCommonResponseObjDebug](OASCommonResponseObjDebug.md)
@@ -175,6 +177,8 @@ Class | Method | HTTP request | Description
  - [OASEzsignfoldersignerassociationGetI](OASEzsignfoldersignerassociationGetI.md)
  - [OASEzsignfoldersignerassociationGetO](OASEzsignfoldersignerassociationGetO.md)
  - [OASEzsignfoldersignerassociationRequ](OASEzsignfoldersignerassociationRequ.md)
+ - [OASEzsignfoldertypeGetListV1Response](OASEzsignfoldertypeGetListV1Response.md)
+ - [OASEzsignfoldertypeListElement](OASEzsignfoldertypeListElement.md)
  - [OASEzsignformfieldResponse](OASEzsignformfieldResponse.md)
  - [OASEzsignformfieldResponseCompound](OASEzsignformfieldResponseCompound.md)
  - [OASEzsignformfieldgroupResponse](OASEzsignformfieldgroupResponse.md)

@@ -15,7 +15,7 @@
  */
 public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResponse {
     /**
-     * The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can be queried by the API and is also visible in the admin interface.\r\n\r\nThere are two types of Ezsignfoldertype. **User** and **Shared**. **User** can only be seen by the user who created the folder or its assistants. Access to **Shared** folders are configurable for access and email delivery. You should typically choose a **Shared** type here.
+     * The unique ID of the Ezsignfoldertype.
      * @return fkiEzsignfoldertypeID
      */
     public Integer fkiEzsignfoldertypeID { get; set; }

@@ -69,6 +69,10 @@ force-app/main/default/classes/OASCommonGetAutocompleteV1ResponseMPTest.cls
 force-app/main/default/classes/OASCommonGetAutocompleteV1ResponseMPTest.cls-meta.xml
 force-app/main/default/classes/OASCommonGetAutocompleteV1ResponseTest.cls
 force-app/main/default/classes/OASCommonGetAutocompleteV1ResponseTest.cls-meta.xml
+force-app/main/default/classes/OASCommonGetListV1ResponseMPayload.cls
+force-app/main/default/classes/OASCommonGetListV1ResponseMPayload.cls-meta.xml
+force-app/main/default/classes/OASCommonGetListV1ResponseMPayloadTest.cls
+force-app/main/default/classes/OASCommonGetListV1ResponseMPayloadTest.cls-meta.xml
 force-app/main/default/classes/OASCommonResponse.cls
 force-app/main/default/classes/OASCommonResponse.cls-meta.xml
 force-app/main/default/classes/OASCommonResponseError.cls
@@ -265,6 +269,14 @@ force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequTest.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldertypeGetListV1Response.cls
+force-app/main/default/classes/OASEzsignfoldertypeGetListV1Response.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldertypeGetListV1ResponseTest.cls
+force-app/main/default/classes/OASEzsignfoldertypeGetListV1ResponseTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldertypeListElement.cls
+force-app/main/default/classes/OASEzsignfoldertypeListElement.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldertypeListElementTest.cls
+force-app/main/default/classes/OASEzsignfoldertypeListElementTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignformfieldResponse.cls
 force-app/main/default/classes/OASEzsignformfieldResponse.cls-meta.xml
 force-app/main/default/classes/OASEzsignformfieldResponseCompound.cls
@@ -409,6 +421,10 @@ force-app/main/default/classes/OASObjectEzsignfoldersignerassociationApi.cls
 force-app/main/default/classes/OASObjectEzsignfoldersignerassociationApi.cls-meta.xml
 force-app/main/default/classes/OASObjectEzsignfoldersignerassociationApiTest.cls
 force-app/main/default/classes/OASObjectEzsignfoldersignerassociationApiTest.cls-meta.xml
+force-app/main/default/classes/OASObjectEzsignfoldertypeApi.cls
+force-app/main/default/classes/OASObjectEzsignfoldertypeApi.cls-meta.xml
+force-app/main/default/classes/OASObjectEzsignfoldertypeApiTest.cls
+force-app/main/default/classes/OASObjectEzsignfoldertypeApiTest.cls-meta.xml
 force-app/main/default/classes/OASObjectEzsignsignatureApi.cls
 force-app/main/default/classes/OASObjectEzsignsignatureApi.cls-meta.xml
 force-app/main/default/classes/OASObjectEzsignsignatureApiTest.cls
