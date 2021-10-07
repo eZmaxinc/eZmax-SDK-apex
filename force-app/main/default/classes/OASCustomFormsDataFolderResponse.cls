@@ -11,9 +11,9 @@
  */
 
 /**
- * A form Data Folder Object
+ * A forms Data Folder Object
  */
-public class OASCustomFormDataFolderResponse implements OAS.MappedProperties {
+public class OASCustomFormsDataFolderResponse implements OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignfolder
      * @return pkiEzsignfolderID
@@ -40,24 +40,24 @@ public class OASCustomFormDataFolderResponse implements OAS.MappedProperties {
         return propertyMappings;
     }
 
-    public OASCustomFormDataFolderResponse() {
+    public OASCustomFormsDataFolderResponse() {
         aObjFormDataDocument = new List<OASCustomFormDataDocumentResponse>();
     }
 
-    public static OASCustomFormDataFolderResponse getExample() {
-        OASCustomFormDataFolderResponse customFormDataFolderResponse = new OASCustomFormDataFolderResponse();
-          customFormDataFolderResponse.pkiEzsignfolderID = 33;
-          customFormDataFolderResponse.sEzsignfolderDescription = 'Test eZsign Folder';
-          customFormDataFolderResponse.aObjFormDataDocument = new List<OASCustomFormDataDocumentResponse>{OASCustomFormDataDocumentResponse.getExample()};
-        return customFormDataFolderResponse;
+    public static OASCustomFormsDataFolderResponse getExample() {
+        OASCustomFormsDataFolderResponse customFormsDataFolderResponse = new OASCustomFormsDataFolderResponse();
+          customFormsDataFolderResponse.pkiEzsignfolderID = 33;
+          customFormsDataFolderResponse.sEzsignfolderDescription = 'Test eZsign Folder';
+          customFormsDataFolderResponse.aObjFormDataDocument = new List<OASCustomFormDataDocumentResponse>{OASCustomFormDataDocumentResponse.getExample()};
+        return customFormsDataFolderResponse;
     }
 
     public Boolean equals(Object obj) {
-        if (obj instanceof OASCustomFormDataFolderResponse) {           
-            OASCustomFormDataFolderResponse customFormDataFolderResponse = (OASCustomFormDataFolderResponse) obj;
-            return this.pkiEzsignfolderID == customFormDataFolderResponse.pkiEzsignfolderID
-                && this.sEzsignfolderDescription == customFormDataFolderResponse.sEzsignfolderDescription
-                && this.aObjFormDataDocument == customFormDataFolderResponse.aObjFormDataDocument;
+        if (obj instanceof OASCustomFormsDataFolderResponse) {           
+            OASCustomFormsDataFolderResponse customFormsDataFolderResponse = (OASCustomFormsDataFolderResponse) obj;
+            return this.pkiEzsignfolderID == customFormsDataFolderResponse.pkiEzsignfolderID
+                && this.sEzsignfolderDescription == customFormsDataFolderResponse.sEzsignfolderDescription
+                && this.aObjFormDataDocument == customFormsDataFolderResponse.aObjFormDataDocument;
         }
         return false;
     }
