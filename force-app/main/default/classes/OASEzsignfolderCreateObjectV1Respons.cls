@@ -11,44 +11,32 @@
  */
 
 /**
- * Payload for the /1/object/ezsignfolder/createObject API Request
+ * OASEzsignfolderCreateObjectV1Respons
  */
-public class OASEzsignfolderCreateObjectV1Respons implements OAS.MappedProperties {
+public class OASEzsignfolderCreateObjectV1Respons {
     /**
-     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
-     * @return aPkiEzsignfolderID
+     * Get mPayload
+     * @return mPayload
      */
-    public List<Integer> aPkiEzsignfolderID { get; set; }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_pkiEzsignfolderID' => 'aPkiEzsignfolderID'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    public OASEzsignfolderCreateObjectV1Respons() {
-        aPkiEzsignfolderID = new List<Integer>();
-    }
+    public OASEzsignfolderCreateObjectV1Respons mPayload { get; set; }
 
     public static OASEzsignfolderCreateObjectV1Respons getExample() {
-        OASEzsignfolderCreateObjectV1Respons ezsignfolderCreateObjectV1ResponseMPayload = new OASEzsignfolderCreateObjectV1Respons();
-          ezsignfolderCreateObjectV1ResponseMPayload.aPkiEzsignfolderID = new List<Integer>{0};
-        return ezsignfolderCreateObjectV1ResponseMPayload;
+        OASEzsignfolderCreateObjectV1Respons ezsignfolderCreateObjectV1ResponseAllOf = new OASEzsignfolderCreateObjectV1Respons();
+          ezsignfolderCreateObjectV1ResponseAllOf.mPayload = OASEzsignfolderCreateObjectV1Respons.getExample();
+        return ezsignfolderCreateObjectV1ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderCreateObjectV1Respons) {           
-            OASEzsignfolderCreateObjectV1Respons ezsignfolderCreateObjectV1ResponseMPayload = (OASEzsignfolderCreateObjectV1Respons) obj;
-            return this.aPkiEzsignfolderID == ezsignfolderCreateObjectV1ResponseMPayload.aPkiEzsignfolderID;
+            OASEzsignfolderCreateObjectV1Respons ezsignfolderCreateObjectV1ResponseAllOf = (OASEzsignfolderCreateObjectV1Respons) obj;
+            return this.mPayload == ezsignfolderCreateObjectV1ResponseAllOf.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aPkiEzsignfolderID == null ? 0 : System.hashCode(aPkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }
