@@ -13,42 +13,30 @@
 /**
  * OASEzsignfoldertypeGetListV1Response
  */
-public class OASEzsignfoldertypeGetListV1Response implements OAS.MappedProperties {
+public class OASEzsignfoldertypeGetListV1Response {
     /**
-     * Get aObjEzsignfoldertype
-     * @return aObjEzsignfoldertype
+     * Get mPayload
+     * @return mPayload
      */
-    public List<OASEzsignfoldertypeListElement> aObjEzsignfoldertype { get; set; }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objEzsignfoldertype' => 'aObjEzsignfoldertype'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    public OASEzsignfoldertypeGetListV1Response() {
-        aObjEzsignfoldertype = new List<OASEzsignfoldertypeListElement>();
-    }
+    public OASEzsignfoldertypeGetListV1Response mPayload { get; set; }
 
     public static OASEzsignfoldertypeGetListV1Response getExample() {
-        OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseMPayloadAllOf = new OASEzsignfoldertypeGetListV1Response();
-          ezsignfoldertypeGetListV1ResponseMPayloadAllOf.aObjEzsignfoldertype = new List<OASEzsignfoldertypeListElement>{OASEzsignfoldertypeListElement.getExample()};
-        return ezsignfoldertypeGetListV1ResponseMPayloadAllOf;
+        OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseAllOf = new OASEzsignfoldertypeGetListV1Response();
+          ezsignfoldertypeGetListV1ResponseAllOf.mPayload = OASEzsignfoldertypeGetListV1Response.getExample();
+        return ezsignfoldertypeGetListV1ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldertypeGetListV1Response) {           
-            OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseMPayloadAllOf = (OASEzsignfoldertypeGetListV1Response) obj;
-            return this.aObjEzsignfoldertype == ezsignfoldertypeGetListV1ResponseMPayloadAllOf.aObjEzsignfoldertype;
+            OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseAllOf = (OASEzsignfoldertypeGetListV1Response) obj;
+            return this.mPayload == ezsignfoldertypeGetListV1ResponseAllOf.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aObjEzsignfoldertype == null ? 0 : System.hashCode(aObjEzsignfoldertype));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

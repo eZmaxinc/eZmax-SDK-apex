@@ -73,13 +73,13 @@ private class OASCommonResponseObjDebugPayloadTest {
     private static void maintainRenamedProperties() {
         OASCommonResponseObjDebugPayload commonResponseObjDebugPayload = new OASCommonResponseObjDebugPayload();
         Map<String, String> x-property-mappings = commonResponseObjDebugPayload.getx-property-mappings();
-        System.assertEquals('aRequiredPermissions', x-property-mappings.get('a_RequiredPermissions'));
+        System.assertEquals('aRequiredPermission', x-property-mappings.get('a_RequiredPermission'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         OASCommonResponseObjDebugPayload commonResponseObjDebugPayload = new OASCommonResponseObjDebugPayload();
-        System.assertEquals(new List<Integer>(), commonResponseObjDebugPayload.aRequiredPermissions);
+        System.assertEquals(new List<Integer>(), commonResponseObjDebugPayload.aRequiredPermission);
         System.assertEquals(null, commonResponseObjDebugPayload.iVersionMin);
         System.assertEquals(null, commonResponseObjDebugPayload.iVersionMax);
     }

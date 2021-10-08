@@ -21,15 +21,29 @@ public class OASEzsignfoldertypeListElement {
     public Integer pkiEzsignfoldertypeID { get; set; }
 
     /**
+     * Get eEzsignfoldertypePrivacylevel
+     * @return eEzsignfoldertypePrivacylevel
+     */
+    public OASFieldEEzsignfoldertypePrivacyleve eEzsignfoldertypePrivacylevel { get; set; }
+
+    /**
      * The name of the Ezsignfoldertype in the language of the requester
      * @return sEzsignfoldertypeNameX
      */
     public String sEzsignfoldertypeNameX { get; set; }
 
+    /**
+     * Whether the Ezsignfoldertype is active or not
+     * @return bEzsignfoldertypeIsactive
+     */
+    public Boolean bEzsignfoldertypeIsactive { get; set; }
+
     public static OASEzsignfoldertypeListElement getExample() {
         OASEzsignfoldertypeListElement ezsignfoldertypeListElement = new OASEzsignfoldertypeListElement();
           ezsignfoldertypeListElement.pkiEzsignfoldertypeID = 5;
+          ezsignfoldertypeListElement.eEzsignfoldertypePrivacylevel = OASFieldEEzsignfoldertypePrivacyleve.getExample();
           ezsignfoldertypeListElement.sEzsignfoldertypeNameX = 'Default';
+          ezsignfoldertypeListElement.bEzsignfoldertypeIsactive = true;
         return ezsignfoldertypeListElement;
     }
 
@@ -37,7 +51,9 @@ public class OASEzsignfoldertypeListElement {
         if (obj instanceof OASEzsignfoldertypeListElement) {           
             OASEzsignfoldertypeListElement ezsignfoldertypeListElement = (OASEzsignfoldertypeListElement) obj;
             return this.pkiEzsignfoldertypeID == ezsignfoldertypeListElement.pkiEzsignfoldertypeID
-                && this.sEzsignfoldertypeNameX == ezsignfoldertypeListElement.sEzsignfoldertypeNameX;
+                && this.eEzsignfoldertypePrivacylevel == ezsignfoldertypeListElement.eEzsignfoldertypePrivacylevel
+                && this.sEzsignfoldertypeNameX == ezsignfoldertypeListElement.sEzsignfoldertypeNameX
+                && this.bEzsignfoldertypeIsactive == ezsignfoldertypeListElement.bEzsignfoldertypeIsactive;
         }
         return false;
     }
@@ -45,7 +61,9 @@ public class OASEzsignfoldertypeListElement {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiEzsignfoldertypeID == null ? 0 : System.hashCode(pkiEzsignfoldertypeID));
+        hashCode = (17 * hashCode) + (eEzsignfoldertypePrivacylevel == null ? 0 : System.hashCode(eEzsignfoldertypePrivacylevel));
         hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
+        hashCode = (17 * hashCode) + (bEzsignfoldertypeIsactive == null ? 0 : System.hashCode(bEzsignfoldertypeIsactive));
         return hashCode;
     }
 }

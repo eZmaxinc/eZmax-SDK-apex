@@ -28,12 +28,12 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
 
     /**
      * An array of permissions required to access this function.\n\nIf the value "0" is present in the array, anyone can call this function.\n\nYou must have one of the permission to access the function. You don\'t need to have all of them.
-     * @return aRequiredPermissions
+     * @return aRequiredPermission
      */
-    public List<Integer> aRequiredPermissions { get; set; }
+    public List<Integer> aRequiredPermission { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_RequiredPermissions' => 'aRequiredPermissions'
+        'a_RequiredPermission' => 'aRequiredPermission'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -41,14 +41,14 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
     }
 
     public OASCommonResponseObjDebugPayload() {
-        aRequiredPermissions = new List<Integer>();
+        aRequiredPermission = new List<Integer>();
     }
 
     public static OASCommonResponseObjDebugPayload getExample() {
         OASCommonResponseObjDebugPayload commonResponseObjDebugPayload = new OASCommonResponseObjDebugPayload();
-          commonResponseObjDebugPayload.iVersionMin = 0;
-          commonResponseObjDebugPayload.iVersionMax = 0;
-          commonResponseObjDebugPayload.aRequiredPermissions = new List<Integer>{0};
+          commonResponseObjDebugPayload.iVersionMin = 1;
+          commonResponseObjDebugPayload.iVersionMax = 2;
+          commonResponseObjDebugPayload.aRequiredPermission = new List<Integer>{117};
         return commonResponseObjDebugPayload;
     }
 
@@ -57,7 +57,7 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
             OASCommonResponseObjDebugPayload commonResponseObjDebugPayload = (OASCommonResponseObjDebugPayload) obj;
             return this.iVersionMin == commonResponseObjDebugPayload.iVersionMin
                 && this.iVersionMax == commonResponseObjDebugPayload.iVersionMax
-                && this.aRequiredPermissions == commonResponseObjDebugPayload.aRequiredPermissions;
+                && this.aRequiredPermission == commonResponseObjDebugPayload.aRequiredPermission;
         }
         return false;
     }
@@ -66,7 +66,7 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (iVersionMin == null ? 0 : System.hashCode(iVersionMin));
         hashCode = (17 * hashCode) + (iVersionMax == null ? 0 : System.hashCode(iVersionMax));
-        hashCode = (17 * hashCode) + (aRequiredPermissions == null ? 0 : System.hashCode(aRequiredPermissions));
+        hashCode = (17 * hashCode) + (aRequiredPermission == null ? 0 : System.hashCode(aRequiredPermission));
         return hashCode;
     }
 }

@@ -13,7 +13,7 @@ private class OASObjectEzsignfoldertypeApiTest {
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'eOrderBy' => sEzsignfoldertypeNameX,
+            'eOrderBy' => pkiEzsignfoldertypeID_ASC,
             'iRowMax' => '',
             'iRowOffset' => '',
             'acceptLanguage' => '',
