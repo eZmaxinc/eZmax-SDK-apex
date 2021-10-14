@@ -243,7 +243,7 @@ private class OASObjectEzsigndocumentApiTest {
     /**
      * Retrieve an existing Ezsigndocument\&#39;s Form Data
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
     private static void ezsigndocumentGetFormDataV1Test() {
@@ -313,7 +313,7 @@ private class OASObjectEzsigndocumentApiTest {
     /**
      * Retrieve positions X,Y of given words from a Ezsigndocument
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
     private static void ezsigndocumentGetWordsPositionsV1Test() {

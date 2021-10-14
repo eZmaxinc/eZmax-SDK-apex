@@ -29,7 +29,7 @@ public class OASObjectFranchisebrokerApi {
      * Retrieve Franchisebrokers and IDs
      * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchisebrokers to return (required)
-     * @param sQuery Allow to filter on the option value (optional)
+     * @param sQuery Allow to filter the returned results (optional)
      * @return OASCommonGetAutocompleteV1Response
      * @throws OAS.ApiException if fails to make API call
      */

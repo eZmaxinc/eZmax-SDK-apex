@@ -72,6 +72,6 @@ private class OASCommonGetAutocompleteV1ResponseAlTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASCommonGetAutocompleteV1ResponseAl commonGetAutocompleteV1ResponseAllOf = new OASCommonGetAutocompleteV1ResponseAl();
-        System.assertEquals(new List<OASCommonGetAutocompleteV1ResponseMP>(), commonGetAutocompleteV1ResponseAllOf.mPayload);
+        System.assertEquals(new List<OASCustomAutocompleteElementResponse>(), commonGetAutocompleteV1ResponseAllOf.mPayload);
     }
 }

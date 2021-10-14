@@ -100,7 +100,7 @@ private class OASObjectEzsignfolderApiTest {
     /**
      * Retrieve an existing Ezsignfolder\&#39;s forms data
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
     private static void ezsignfolderGetFormsDataV1Test() {
@@ -129,6 +129,45 @@ private class OASObjectEzsignfolderApiTest {
         res.setBody(js);
         expectedResponse = OASEzsignfolderGetFormsDataV1Respons.getExample();
         response = (OASEzsignfolderGetFormsDataV1Respons) api.ezsignfolderGetFormsDataV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve Ezsignfolder list
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderGetListV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'eOrderBy' => pkiEzsignfolderID_ASC,
+            'iRowMax' => '',
+            'iRowOffset' => '',
+            'acceptLanguage' => '',
+            'sFilter' => 'null'
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetListV1Response response;
+        OASEzsignfolderGetListV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetListV1Response.getExample();
+        response = (OASEzsignfolderGetListV1Response) api.ezsignfolderGetListV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

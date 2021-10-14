@@ -15,10 +15,10 @@
  */
 public class OASCommonGetAutocompleteV1Response implements OASCommonGetAutocompleteV1ResponseAl, OASCommonResponse {
     /**
-     * Get mPayload
+     * Generic Autocomplete Response
      * @return mPayload
      */
-    public List<OASCommonGetAutocompleteV1ResponseMP> mPayload { get; set; }
+    public List<OASCustomAutocompleteElementResponse> mPayload { get; set; }
 
     /**
      * Get objDebugPayload
@@ -33,12 +33,12 @@ public class OASCommonGetAutocompleteV1Response implements OASCommonGetAutocompl
     public OASCommonResponseObjDebug objDebug { get; set; }
 
     public OASCommonGetAutocompleteV1Response() {
-        mPayload = new List<OASCommonGetAutocompleteV1ResponseMP>();
+        mPayload = new List<OASCustomAutocompleteElementResponse>();
     }
 
     public static OASCommonGetAutocompleteV1Response getExample() {
         OASCommonGetAutocompleteV1Response commonGetAutocompleteV1Response = new OASCommonGetAutocompleteV1Response();
-          commonGetAutocompleteV1Response.mPayload = new List<OASCommonGetAutocompleteV1ResponseMP>{OASCommonGetAutocompleteV1ResponseMP.getExample()};
+          commonGetAutocompleteV1Response.mPayload = new List<OASCustomAutocompleteElementResponse>{OASCustomAutocompleteElementResponse.getExample()};
           commonGetAutocompleteV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           commonGetAutocompleteV1Response.objDebug = OASCommonResponseObjDebug.getExample();
         return commonGetAutocompleteV1Response;

@@ -15,18 +15,18 @@
  */
 public class OASCommonGetAutocompleteV1ResponseAl {
     /**
-     * Get mPayload
+     * Generic Autocomplete Response
      * @return mPayload
      */
-    public List<OASCommonGetAutocompleteV1ResponseMP> mPayload { get; set; }
+    public List<OASCustomAutocompleteElementResponse> mPayload { get; set; }
 
     public OASCommonGetAutocompleteV1ResponseAl() {
-        mPayload = new List<OASCommonGetAutocompleteV1ResponseMP>();
+        mPayload = new List<OASCustomAutocompleteElementResponse>();
     }
 
     public static OASCommonGetAutocompleteV1ResponseAl getExample() {
         OASCommonGetAutocompleteV1ResponseAl commonGetAutocompleteV1ResponseAllOf = new OASCommonGetAutocompleteV1ResponseAl();
-          commonGetAutocompleteV1ResponseAllOf.mPayload = new List<OASCommonGetAutocompleteV1ResponseMP>{OASCommonGetAutocompleteV1ResponseMP.getExample()};
+          commonGetAutocompleteV1ResponseAllOf.mPayload = new List<OASCustomAutocompleteElementResponse>{OASCustomAutocompleteElementResponse.getExample()};
         return commonGetAutocompleteV1ResponseAllOf;
     }
 

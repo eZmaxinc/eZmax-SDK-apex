@@ -209,7 +209,7 @@ public class OASObjectEzsigndocumentApi {
     }
     /**
      * Retrieve an existing Ezsigndocument\&#39;s Form Data
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @return OASEzsigndocumentGetFormDataV1Respon
      * @throws OAS.ApiException if fails to make API call
@@ -259,7 +259,7 @@ public class OASObjectEzsigndocumentApi {
     }
     /**
      * Retrieve positions X,Y of given words from a Ezsigndocument
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @param oaSEzsigndocumentGetWordsPositionsV1  (required)
      * @return OASEzsigndocumentGetWordsPositionsV1
