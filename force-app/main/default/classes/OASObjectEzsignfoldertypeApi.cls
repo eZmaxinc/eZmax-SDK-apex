@@ -44,7 +44,7 @@ public class OASObjectEzsignfoldertypeApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (OASCommonGetAutocompleteV1Response) client.invoke(
-            'GET', '/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/', '',
+            'GET', '/1/object/ezsignfoldertype/getAutocomplete/{sSelector}', '',
             query, form,
             new Map<String, Object>{
                 'sSelector' => (String) params.get('sSelector')

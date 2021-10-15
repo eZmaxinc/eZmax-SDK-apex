@@ -21,15 +21,85 @@ public class OASEzsignfolderListElement {
     public Integer pkiEzsignfolderID { get; set; }
 
     /**
+     * The unique ID of the Ezsignfoldertype.
+     * @return fkiEzsignfoldertypeID
+     */
+    public Integer fkiEzsignfoldertypeID { get; set; }
+
+    /**
+     * The name of the Ezsignfoldertype in the language of the requester
+     * @return sEzsignfoldertypeNameX
+     */
+    public String sEzsignfoldertypeNameX { get; set; }
+
+    /**
      * The description of the Ezsign Folder
      * @return sEzsignfolderDescription
      */
     public String sEzsignfolderDescription { get; set; }
 
+    /**
+     * Get eEzsignfolderStep
+     * @return eEzsignfolderStep
+     */
+    public OASFieldEEzsignfolderStep eEzsignfolderStep { get; set; }
+
+    /**
+     * The date and time at which the object was created
+     * @return dtCreatedDate
+     */
+    public String dtCreatedDate { get; set; }
+
+    /**
+     * Get dtEzsignfolderSentdate
+     * @return dtEzsignfolderSentdate
+     */
+    public OASOneOfstringnull dtEzsignfolderSentdate { get; set; }
+
+    /**
+     * The date at which no more signature will be accepted on the folder
+     * @return dtDueDate
+     */
+    public OASOneOfstringnull dtDueDate { get; set; }
+
+    /**
+     * The total number of Ezsigndocument in the folder
+     * @return iTotalDocument
+     */
+    public Integer iTotalDocument { get; set; }
+
+    /**
+     * The total number of Ezsigndocument in the folder that were saved in the edm system
+     * @return iTotalDocumentEdm
+     */
+    public Integer iTotalDocumentEdm { get; set; }
+
+    /**
+     * The total number of signature blocks in all Ezsigndocuments in the folder
+     * @return iTotalSignature
+     */
+    public Integer iTotalSignature { get; set; }
+
+    /**
+     * The total number of already signed signature blocks in all Ezsigndocuments in the folder
+     * @return iTotalSignatureSigned
+     */
+    public Integer iTotalSignatureSigned { get; set; }
+
     public static OASEzsignfolderListElement getExample() {
         OASEzsignfolderListElement ezsignfolderListElement = new OASEzsignfolderListElement();
           ezsignfolderListElement.pkiEzsignfolderID = 33;
+          ezsignfolderListElement.fkiEzsignfoldertypeID = 5;
+          ezsignfolderListElement.sEzsignfoldertypeNameX = 'Default';
           ezsignfolderListElement.sEzsignfolderDescription = 'Test eZsign Folder';
+          ezsignfolderListElement.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();
+          ezsignfolderListElement.dtCreatedDate = '2020-12-31 23:59:59';
+          ezsignfolderListElement.dtEzsignfolderSentdate = OASOneOfstringnull.getExample();
+          ezsignfolderListElement.dtDueDate = OASOneOfstringnull.getExample();
+          ezsignfolderListElement.iTotalDocument = 0;
+          ezsignfolderListElement.iTotalDocumentEdm = 0;
+          ezsignfolderListElement.iTotalSignature = 0;
+          ezsignfolderListElement.iTotalSignatureSigned = 0;
         return ezsignfolderListElement;
     }
 
@@ -37,7 +107,17 @@ public class OASEzsignfolderListElement {
         if (obj instanceof OASEzsignfolderListElement) {           
             OASEzsignfolderListElement ezsignfolderListElement = (OASEzsignfolderListElement) obj;
             return this.pkiEzsignfolderID == ezsignfolderListElement.pkiEzsignfolderID
-                && this.sEzsignfolderDescription == ezsignfolderListElement.sEzsignfolderDescription;
+                && this.fkiEzsignfoldertypeID == ezsignfolderListElement.fkiEzsignfoldertypeID
+                && this.sEzsignfoldertypeNameX == ezsignfolderListElement.sEzsignfoldertypeNameX
+                && this.sEzsignfolderDescription == ezsignfolderListElement.sEzsignfolderDescription
+                && this.eEzsignfolderStep == ezsignfolderListElement.eEzsignfolderStep
+                && this.dtCreatedDate == ezsignfolderListElement.dtCreatedDate
+                && this.dtEzsignfolderSentdate == ezsignfolderListElement.dtEzsignfolderSentdate
+                && this.dtDueDate == ezsignfolderListElement.dtDueDate
+                && this.iTotalDocument == ezsignfolderListElement.iTotalDocument
+                && this.iTotalDocumentEdm == ezsignfolderListElement.iTotalDocumentEdm
+                && this.iTotalSignature == ezsignfolderListElement.iTotalSignature
+                && this.iTotalSignatureSigned == ezsignfolderListElement.iTotalSignatureSigned;
         }
         return false;
     }
@@ -45,7 +125,17 @@ public class OASEzsignfolderListElement {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiEzsignfolderID == null ? 0 : System.hashCode(pkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
+        hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
         hashCode = (17 * hashCode) + (sEzsignfolderDescription == null ? 0 : System.hashCode(sEzsignfolderDescription));
+        hashCode = (17 * hashCode) + (eEzsignfolderStep == null ? 0 : System.hashCode(eEzsignfolderStep));
+        hashCode = (17 * hashCode) + (dtCreatedDate == null ? 0 : System.hashCode(dtCreatedDate));
+        hashCode = (17 * hashCode) + (dtEzsignfolderSentdate == null ? 0 : System.hashCode(dtEzsignfolderSentdate));
+        hashCode = (17 * hashCode) + (dtDueDate == null ? 0 : System.hashCode(dtDueDate));
+        hashCode = (17 * hashCode) + (iTotalDocument == null ? 0 : System.hashCode(iTotalDocument));
+        hashCode = (17 * hashCode) + (iTotalDocumentEdm == null ? 0 : System.hashCode(iTotalDocumentEdm));
+        hashCode = (17 * hashCode) + (iTotalSignature == null ? 0 : System.hashCode(iTotalSignature));
+        hashCode = (17 * hashCode) + (iTotalSignatureSigned == null ? 0 : System.hashCode(iTotalSignatureSigned));
         return hashCode;
     }
 }

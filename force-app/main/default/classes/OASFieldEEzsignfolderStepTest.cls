@@ -7,7 +7,6 @@ private class OASFieldEEzsignfolderStepTest {
             OASFieldEEzsignfolderStep.SENT,
             OASFieldEEzsignfolderStep.PARTIALLYSIGNED,
             OASFieldEEzsignfolderStep.EXPIRED,
-            OASFieldEEzsignfolderStep.SIGNED,
             OASFieldEEzsignfolderStep.COMPLETED,
             OASFieldEEzsignfolderStep.ARCHIVED
         };

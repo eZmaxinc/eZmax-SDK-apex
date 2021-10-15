@@ -18,7 +18,6 @@ public enum OASFieldEEzsignfolderStep {
     SENT,
     PARTIALLYSIGNED,
     EXPIRED,
-    SIGNED,
     COMPLETED,
     ARCHIVED
 }
