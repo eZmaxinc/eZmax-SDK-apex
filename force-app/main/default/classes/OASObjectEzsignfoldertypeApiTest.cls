@@ -14,8 +14,8 @@ private class OASObjectEzsignfoldertypeApiTest {
 
         Map<String, Object> params = new Map<String, Object>{
             'sSelector' => Active,
-            'acceptLanguage' => '',
-            'sQuery' => 'null'
+            'sQuery' => 'null',
+            'acceptLanguage' => ''
         };
 
         OASClient client;

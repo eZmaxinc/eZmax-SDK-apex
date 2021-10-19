@@ -54,13 +54,13 @@ public class OASEzsignfolderListElement {
      * Get dtEzsignfolderSentdate
      * @return dtEzsignfolderSentdate
      */
-    public OASOneOfstringnull dtEzsignfolderSentdate { get; set; }
+    public OASOneOfstringobject dtEzsignfolderSentdate { get; set; }
 
     /**
      * The date at which no more signature will be accepted on the folder
      * @return dtDueDate
      */
-    public OASOneOfstringnull dtDueDate { get; set; }
+    public OASOneOfstringobject dtDueDate { get; set; }
 
     /**
      * The total number of Ezsigndocument in the folder
@@ -94,8 +94,8 @@ public class OASEzsignfolderListElement {
           ezsignfolderListElement.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderListElement.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();
           ezsignfolderListElement.dtCreatedDate = '2020-12-31 23:59:59';
-          ezsignfolderListElement.dtEzsignfolderSentdate = OASOneOfstringnull.getExample();
-          ezsignfolderListElement.dtDueDate = OASOneOfstringnull.getExample();
+          ezsignfolderListElement.dtEzsignfolderSentdate = OASOneOfstringobject.getExample();
+          ezsignfolderListElement.dtDueDate = OASOneOfstringobject.getExample();
           ezsignfolderListElement.iTotalDocument = 0;
           ezsignfolderListElement.iTotalDocumentEdm = 0;
           ezsignfolderListElement.iTotalSignature = 0;

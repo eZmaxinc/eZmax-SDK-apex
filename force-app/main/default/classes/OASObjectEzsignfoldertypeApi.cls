@@ -29,8 +29,8 @@ public class OASObjectEzsignfoldertypeApi {
      * Retrieve Ezsignfoldertypes and IDs
      * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignfoldertypes to return (required)
-     * @param acceptLanguage  (optional)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @return OASCommonGetAutocompleteV1Response
      * @throws OAS.ApiException if fails to make API call
      */
