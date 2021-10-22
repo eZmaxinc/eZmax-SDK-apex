@@ -11,32 +11,41 @@
  */
 
 /**
- * OASListSaveListpresentationV1Respons
+ * Response for the POST /1/module/list/listpresentation/{sListName} API Request
  */
-public class OASListSaveListpresentationV1Respons {
+public class OASListSaveListpresentationV1Respons implements OASCommonResponse {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objDebugPayload
+     * @return objDebugPayload
      */
-    public OASListSaveListpresentationV1Respons mPayload { get; set; }
+    public OASCommonResponseObjDebugPayload objDebugPayload { get; set; }
+
+    /**
+     * Get objDebug
+     * @return objDebug
+     */
+    public OASCommonResponseObjDebug objDebug { get; set; }
 
     public static OASListSaveListpresentationV1Respons getExample() {
-        OASListSaveListpresentationV1Respons listSaveListpresentationV1ResponseAllOf = new OASListSaveListpresentationV1Respons();
-          listSaveListpresentationV1ResponseAllOf.mPayload = OASListSaveListpresentationV1Respons.getExample();
-        return listSaveListpresentationV1ResponseAllOf;
+        OASListSaveListpresentationV1Respons listSaveListpresentationV1Response = new OASListSaveListpresentationV1Respons();
+          listSaveListpresentationV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
+          listSaveListpresentationV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+        return listSaveListpresentationV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASListSaveListpresentationV1Respons) {           
-            OASListSaveListpresentationV1Respons listSaveListpresentationV1ResponseAllOf = (OASListSaveListpresentationV1Respons) obj;
-            return this.mPayload == listSaveListpresentationV1ResponseAllOf.mPayload;
+            OASListSaveListpresentationV1Respons listSaveListpresentationV1Response = (OASListSaveListpresentationV1Respons) obj;
+            return this.objDebugPayload == listSaveListpresentationV1Response.objDebugPayload
+                && this.objDebug == listSaveListpresentationV1Response.objDebug;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
+        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
         return hashCode;
     }
 }

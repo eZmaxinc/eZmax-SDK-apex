@@ -26,6 +26,31 @@ public class OASModuleListApi {
     }
 
     /**
+     * Get all Listpresentation for a specific list
+     * Retrive previously saved Listpresentation
+     * @param sListName The list Name (required)
+     * @return OASListGetListpresentationV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASListGetListpresentationV1Response listGetListpresentationV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('sListName'), 'sListName');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASListGetListpresentationV1Response) client.invoke(
+            'GET', '/1/module/list/listpresentation/{sListName}', '',
+            query, form,
+            new Map<String, Object>{
+                'sListName' => (String) params.get('sListName')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASListGetListpresentationV1Response.class
+        );
+    }
+    /**
      * Save all Listpresentation for a specific list
      * Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
      * @param sListName The list Name (required)
@@ -33,7 +58,7 @@ public class OASModuleListApi {
      * @return OASListSaveListpresentationV1Respons
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASListSaveListpresentationV1Respons listListpresentationV1(Map<String, Object> params) {
+    public OASListSaveListpresentationV1Respons listSaveListpresentationV1(Map<String, Object> params) {
         client.assertNotNull(params.get('sListName'), 'sListName');
         client.assertNotNull(params.get('oaSListSaveListpresentationV1Request'), 'oaSListSaveListpresentationV1Request');
         List<OAS.Param> query = new List<OAS.Param>();

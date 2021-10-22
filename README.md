@@ -68,7 +68,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OASGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](OASGlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *OASModuleAuthenticateApi* | [**authenticateAuthenticateV2**](OASModuleAuthenticateApi.md#authenticateAuthenticateV2) | **POST** /2/module/authenticate/authenticate/{eSessionType} | Authenticate a user
-*OASModuleListApi* | [**listListpresentationV1**](OASModuleListApi.md#listListpresentationV1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
+*OASModuleListApi* | [**listGetListpresentationV1**](OASModuleListApi.md#listGetListpresentationV1) | **GET** /1/module/list/listpresentation/{sListName} | Get all Listpresentation for a specific list
+*OASModuleListApi* | [**listSaveListpresentationV1**](OASModuleListApi.md#listSaveListpresentationV1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
 *OASModuleSsprApi* | [**ssprResetPasswordRequestV1**](OASModuleSsprApi.md#ssprResetPasswordRequestV1) | **POST** /1/module/sspr/resetPasswordRequest | Reset Password Request
 *OASModuleSsprApi* | [**ssprResetPasswordV1**](OASModuleSsprApi.md#ssprResetPasswordV1) | **POST** /1/module/sspr/resetPassword | Reset Password
 *OASModuleSsprApi* | [**ssprSendUsernamesV1**](OASModuleSsprApi.md#ssprSendUsernamesV1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
@@ -219,6 +220,7 @@ Class | Method | HTTP request | Description
  - [OASFranchisereferalincomeRequestComp](OASFranchisereferalincomeRequestComp.md)
  - [OASGlobalCustomerGetEndpointV1Respon](OASGlobalCustomerGetEndpointV1Respon.md)
  - [OASHeaderAcceptLanguage](OASHeaderAcceptLanguage.md)
+ - [OASListGetListpresentationV1Response](OASListGetListpresentationV1Response.md)
  - [OASListSaveListpresentationV1Request](OASListSaveListpresentationV1Request.md)
  - [OASListSaveListpresentationV1Respons](OASListSaveListpresentationV1Respons.md)
  - [OASListpresentationRequest](OASListpresentationRequest.md)
