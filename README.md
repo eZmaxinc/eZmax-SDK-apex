@@ -68,6 +68,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OASGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](OASGlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *OASModuleAuthenticateApi* | [**authenticateAuthenticateV2**](OASModuleAuthenticateApi.md#authenticateAuthenticateV2) | **POST** /2/module/authenticate/authenticate/{eSessionType} | Authenticate a user
+*OASModuleListApi* | [**listListpresentationV1**](OASModuleListApi.md#listListpresentationV1) | **POST** /1/module/list/listpresentation/{sListName} | Save all Listpresentation for a specific list
 *OASModuleSsprApi* | [**ssprResetPasswordRequestV1**](OASModuleSsprApi.md#ssprResetPasswordRequestV1) | **POST** /1/module/sspr/resetPasswordRequest | Reset Password Request
 *OASModuleSsprApi* | [**ssprResetPasswordV1**](OASModuleSsprApi.md#ssprResetPasswordV1) | **POST** /1/module/sspr/resetPassword | Reset Password
 *OASModuleSsprApi* | [**ssprSendUsernamesV1**](OASModuleSsprApi.md#ssprSendUsernamesV1) | **POST** /1/module/sspr/sendUsernames | Send username(s)
@@ -94,6 +95,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetListV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderSendV1**](OASObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
+*OASObjectEzsignfolderApi* | [**ezsignfolderUnsendV1**](OASObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationCreateObjectV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationCreateObjectV1) | **POST** /1/object/ezsignfoldersignerassociation | Create a new Ezsignfoldersignerassociation
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationDeleteObjectV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationDeleteObjectV1) | **DELETE** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Delete an existing Ezsignfoldersignerassociation
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetChildrenV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetChildrenV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren | Retrieve an existing Ezsignfoldersignerassociation\&#39;s children IDs
@@ -181,6 +183,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignfolderResponseCompound](OASEzsignfolderResponseCompound.md)
  - [OASEzsignfolderSendV1Request](OASEzsignfolderSendV1Request.md)
  - [OASEzsignfolderSendV1Response](OASEzsignfolderSendV1Response.md)
+ - [OASEzsignfolderUnsendV1Response](OASEzsignfolderUnsendV1Response.md)
  - [OASEzsignfoldersignerassociationCrea](OASEzsignfoldersignerassociationCrea.md)
  - [OASEzsignfoldersignerassociationDele](OASEzsignfoldersignerassociationDele.md)
  - [OASEzsignfoldersignerassociationGetI](OASEzsignfoldersignerassociationGetI.md)
@@ -216,6 +219,9 @@ Class | Method | HTTP request | Description
  - [OASFranchisereferalincomeRequestComp](OASFranchisereferalincomeRequestComp.md)
  - [OASGlobalCustomerGetEndpointV1Respon](OASGlobalCustomerGetEndpointV1Respon.md)
  - [OASHeaderAcceptLanguage](OASHeaderAcceptLanguage.md)
+ - [OASListSaveListpresentationV1Request](OASListSaveListpresentationV1Request.md)
+ - [OASListSaveListpresentationV1Respons](OASListSaveListpresentationV1Respons.md)
+ - [OASListpresentationRequest](OASListpresentationRequest.md)
  - [OASMultilingualApikeyDescription](OASMultilingualApikeyDescription.md)
  - [OASPhoneRequest](OASPhoneRequest.md)
  - [OASSsprResetPasswordRequestV1Request](OASSsprResetPasswordRequestV1Request.md)

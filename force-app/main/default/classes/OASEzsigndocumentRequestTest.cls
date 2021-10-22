@@ -68,4 +68,17 @@ private class OASEzsigndocumentRequestTest {
         System.assertEquals(ezsigndocumentRequest1.hashCode(), ezsigndocumentRequest2.hashCode());
         System.assertEquals(ezsigndocumentRequest3.hashCode(), ezsigndocumentRequest4.hashCode());
     }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASEzsigndocumentRequest ezsigndocumentRequest = new OASEzsigndocumentRequest();
+        System.assertEquals('', ezsigndocumentRequest.sEzsigndocumentPassword);
+        System.assertEquals(null, ezsigndocumentRequest.eEzsigndocumentSource);
+        System.assertEquals(null, ezsigndocumentRequest.eEzsigndocumentFormat);
+        System.assertEquals(null, ezsigndocumentRequest.sEzsigndocumentBase64);
+        System.assertEquals(null, ezsigndocumentRequest.fkiEzsignfolderID);
+        System.assertEquals(null, ezsigndocumentRequest.dtEzsigndocumentDuedate);
+        System.assertEquals(null, ezsigndocumentRequest.fkiLanguageID);
+        System.assertEquals(null, ezsigndocumentRequest.sEzsigndocumentName);
+    }
 }
