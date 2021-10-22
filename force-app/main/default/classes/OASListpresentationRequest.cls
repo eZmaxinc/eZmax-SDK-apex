@@ -50,6 +50,12 @@ public class OASListpresentationRequest implements OAS.MappedProperties {
      */
     public Integer iListpresentationRowOffset { get; set; }
 
+    /**
+     * Set to true if the user chose this Listpresentation as the default one. A single element should be set to true
+     * @return bListpresentationDefault
+     */
+    public Boolean bListpresentationDefault { get; set; }
+
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_sColumnName' => 'aSColumnName'
     };
@@ -65,11 +71,12 @@ public class OASListpresentationRequest implements OAS.MappedProperties {
     public static OASListpresentationRequest getExample() {
         OASListpresentationRequest listpresentationRequest = new OASListpresentationRequest();
           listpresentationRequest.sListpresentationDescription = '';
-          listpresentationRequest.sListpresentationFilter = 'bField1 eq true and iField2 gte 0 and iField2 lte 1000 and sField3 eq \'Other\' and eField4 eq \'Paid\' and sField5 like \'%needle%\'';
+          listpresentationRequest.sListpresentationFilter = 'bField1 eq true and iField2 gte 0 and iField2 lte 1000 and sField3 eq \'Other\' and eField4 eq \'Paid\' and sField5 like \'%needle%\' and iField6 in \'1,2,3\'';
           listpresentationRequest.sListpresentationOrderby = '';
           listpresentationRequest.aSColumnName = new List<String>{''};
           listpresentationRequest.iListpresentationRowMax = 100;
           listpresentationRequest.iListpresentationRowOffset = 0;
+          listpresentationRequest.bListpresentationDefault = true;
         return listpresentationRequest;
     }
 
@@ -81,7 +88,8 @@ public class OASListpresentationRequest implements OAS.MappedProperties {
                 && this.sListpresentationOrderby == listpresentationRequest.sListpresentationOrderby
                 && this.aSColumnName == listpresentationRequest.aSColumnName
                 && this.iListpresentationRowMax == listpresentationRequest.iListpresentationRowMax
-                && this.iListpresentationRowOffset == listpresentationRequest.iListpresentationRowOffset;
+                && this.iListpresentationRowOffset == listpresentationRequest.iListpresentationRowOffset
+                && this.bListpresentationDefault == listpresentationRequest.bListpresentationDefault;
         }
         return false;
     }
@@ -94,6 +102,7 @@ public class OASListpresentationRequest implements OAS.MappedProperties {
         hashCode = (17 * hashCode) + (aSColumnName == null ? 0 : System.hashCode(aSColumnName));
         hashCode = (17 * hashCode) + (iListpresentationRowMax == null ? 0 : System.hashCode(iListpresentationRowMax));
         hashCode = (17 * hashCode) + (iListpresentationRowOffset == null ? 0 : System.hashCode(iListpresentationRowOffset));
+        hashCode = (17 * hashCode) + (bListpresentationDefault == null ? 0 : System.hashCode(bListpresentationDefault));
         return hashCode;
     }
 }

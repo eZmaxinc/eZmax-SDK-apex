@@ -85,5 +85,6 @@ private class OASListpresentationRequestTest {
         System.assertEquals(null, listpresentationRequest.sListpresentationOrderby);
         System.assertEquals(null, listpresentationRequest.iListpresentationRowMax);
         System.assertEquals(null, listpresentationRequest.iListpresentationRowOffset);
+        System.assertEquals(null, listpresentationRequest.bListpresentationDefault);
     }
 }
