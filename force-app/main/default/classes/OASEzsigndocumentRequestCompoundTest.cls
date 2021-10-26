@@ -72,10 +72,12 @@ private class OASEzsigndocumentRequestCompoundTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASEzsigndocumentRequestCompound ezsigndocumentRequestCompound = new OASEzsigndocumentRequestCompound();
+        System.assertEquals(true, ezsigndocumentRequestCompound.bEzsigndocumentForcerepair);
         System.assertEquals('', ezsigndocumentRequestCompound.sEzsigndocumentPassword);
         System.assertEquals(null, ezsigndocumentRequestCompound.eEzsigndocumentSource);
         System.assertEquals(null, ezsigndocumentRequestCompound.eEzsigndocumentFormat);
         System.assertEquals(null, ezsigndocumentRequestCompound.sEzsigndocumentBase64);
+        System.assertEquals(null, ezsigndocumentRequestCompound.sEzsigndocumentUrl);
         System.assertEquals(null, ezsigndocumentRequestCompound.fkiEzsignfolderID);
         System.assertEquals(null, ezsigndocumentRequestCompound.dtEzsigndocumentDuedate);
         System.assertEquals(null, ezsigndocumentRequestCompound.fkiLanguageID);
