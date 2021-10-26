@@ -134,6 +134,7 @@ Class | Method | HTTP request | Description
  - [OASCommonGetListV1ResponseMPayload](OASCommonGetListV1ResponseMPayload.md)
  - [OASCommonResponse](OASCommonResponse.md)
  - [OASCommonResponseError](OASCommonResponseError.md)
+ - [OASCommonResponseErrorSTemporaryFile](OASCommonResponseErrorSTemporaryFile.md)
  - [OASCommonResponseFilter](OASCommonResponseFilter.md)
  - [OASCommonResponseGetList](OASCommonResponseGetList.md)
  - [OASCommonResponseObjDebug](OASCommonResponseObjDebug.md)

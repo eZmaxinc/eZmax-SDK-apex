@@ -73,6 +73,10 @@ force-app/main/default/classes/OASCommonResponse.cls
 force-app/main/default/classes/OASCommonResponse.cls-meta.xml
 force-app/main/default/classes/OASCommonResponseError.cls
 force-app/main/default/classes/OASCommonResponseError.cls-meta.xml
+force-app/main/default/classes/OASCommonResponseErrorSTemporaryFile.cls
+force-app/main/default/classes/OASCommonResponseErrorSTemporaryFile.cls-meta.xml
+force-app/main/default/classes/OASCommonResponseErrorSTemporaryFileTest.cls
+force-app/main/default/classes/OASCommonResponseErrorSTemporaryFileTest.cls-meta.xml
 force-app/main/default/classes/OASCommonResponseErrorTest.cls
 force-app/main/default/classes/OASCommonResponseErrorTest.cls-meta.xml
 force-app/main/default/classes/OASCommonResponseFilter.cls
