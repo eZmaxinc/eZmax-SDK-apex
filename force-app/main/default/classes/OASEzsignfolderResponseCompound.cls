@@ -29,7 +29,7 @@ public class OASEzsignfolderResponseCompound implements OASEzsignfolderResponse 
     public Integer fkiEzsigntsarequirementID { get; set; }
 
     /**
-     * The description of the Ezsign Folder
+     * The description of the Ezsignfolder
      * @return sEzsignfolderDescription
      */
     public String sEzsignfolderDescription { get; set; }

@@ -21,7 +21,7 @@ public class OASCustomFormsDataFolderResponse implements OAS.MappedProperties {
     public Integer pkiEzsignfolderID { get; set; }
 
     /**
-     * The description of the Ezsign Folder
+     * The description of the Ezsignfolder
      * @return sEzsignfolderDescription
      */
     public String sEzsignfolderDescription { get; set; }

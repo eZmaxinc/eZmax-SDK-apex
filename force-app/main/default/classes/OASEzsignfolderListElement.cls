@@ -39,7 +39,7 @@ public class OASEzsignfolderListElement {
     public String sEzsignfoldertypeNameX { get; set; }
 
     /**
-     * The description of the Ezsign Folder
+     * The description of the Ezsignfolder
      * @return sEzsignfolderDescription
      */
     public String sEzsignfolderDescription { get; set; }
@@ -70,27 +70,27 @@ public class OASEzsignfolderListElement {
 
     /**
      * The total number of Ezsigndocument in the folder
-     * @return iTotalDocument
+     * @return iEzsigndocument
      */
-    public Integer iTotalDocument { get; set; }
+    public Integer iEzsigndocument { get; set; }
 
     /**
      * The total number of Ezsigndocument in the folder that were saved in the edm system
-     * @return iTotalDocumentEdm
+     * @return iEzsigndocumentEdm
      */
-    public Integer iTotalDocumentEdm { get; set; }
+    public Integer iEzsigndocumentEdm { get; set; }
 
     /**
      * The total number of signature blocks in all Ezsigndocuments in the folder
-     * @return iTotalSignature
+     * @return iEzsignsignature
      */
-    public Integer iTotalSignature { get; set; }
+    public Integer iEzsignsignature { get; set; }
 
     /**
      * The total number of already signed signature blocks in all Ezsigndocuments in the folder
-     * @return iTotalSignatureSigned
+     * @return iEzsignsignatureSigned
      */
-    public Integer iTotalSignatureSigned { get; set; }
+    public Integer iEzsignsignatureSigned { get; set; }
 
     public static OASEzsignfolderListElement getExample() {
         OASEzsignfolderListElement ezsignfolderListElement = new OASEzsignfolderListElement();
@@ -103,10 +103,10 @@ public class OASEzsignfolderListElement {
           ezsignfolderListElement.dtCreatedDate = '2020-12-31 23:59:59';
           ezsignfolderListElement.dtEzsignfolderSentdate = OASOneOfstringobject.getExample();
           ezsignfolderListElement.dtDueDate = OASOneOfstringobject.getExample();
-          ezsignfolderListElement.iTotalDocument = 0;
-          ezsignfolderListElement.iTotalDocumentEdm = 0;
-          ezsignfolderListElement.iTotalSignature = 0;
-          ezsignfolderListElement.iTotalSignatureSigned = 0;
+          ezsignfolderListElement.iEzsigndocument = 0;
+          ezsignfolderListElement.iEzsigndocumentEdm = 0;
+          ezsignfolderListElement.iEzsignsignature = 0;
+          ezsignfolderListElement.iEzsignsignatureSigned = 0;
         return ezsignfolderListElement;
     }
 
@@ -122,10 +122,10 @@ public class OASEzsignfolderListElement {
                 && this.dtCreatedDate == ezsignfolderListElement.dtCreatedDate
                 && this.dtEzsignfolderSentdate == ezsignfolderListElement.dtEzsignfolderSentdate
                 && this.dtDueDate == ezsignfolderListElement.dtDueDate
-                && this.iTotalDocument == ezsignfolderListElement.iTotalDocument
-                && this.iTotalDocumentEdm == ezsignfolderListElement.iTotalDocumentEdm
-                && this.iTotalSignature == ezsignfolderListElement.iTotalSignature
-                && this.iTotalSignatureSigned == ezsignfolderListElement.iTotalSignatureSigned;
+                && this.iEzsigndocument == ezsignfolderListElement.iEzsigndocument
+                && this.iEzsigndocumentEdm == ezsignfolderListElement.iEzsigndocumentEdm
+                && this.iEzsignsignature == ezsignfolderListElement.iEzsignsignature
+                && this.iEzsignsignatureSigned == ezsignfolderListElement.iEzsignsignatureSigned;
         }
         return false;
     }
@@ -141,10 +141,10 @@ public class OASEzsignfolderListElement {
         hashCode = (17 * hashCode) + (dtCreatedDate == null ? 0 : System.hashCode(dtCreatedDate));
         hashCode = (17 * hashCode) + (dtEzsignfolderSentdate == null ? 0 : System.hashCode(dtEzsignfolderSentdate));
         hashCode = (17 * hashCode) + (dtDueDate == null ? 0 : System.hashCode(dtDueDate));
-        hashCode = (17 * hashCode) + (iTotalDocument == null ? 0 : System.hashCode(iTotalDocument));
-        hashCode = (17 * hashCode) + (iTotalDocumentEdm == null ? 0 : System.hashCode(iTotalDocumentEdm));
-        hashCode = (17 * hashCode) + (iTotalSignature == null ? 0 : System.hashCode(iTotalSignature));
-        hashCode = (17 * hashCode) + (iTotalSignatureSigned == null ? 0 : System.hashCode(iTotalSignatureSigned));
+        hashCode = (17 * hashCode) + (iEzsigndocument == null ? 0 : System.hashCode(iEzsigndocument));
+        hashCode = (17 * hashCode) + (iEzsigndocumentEdm == null ? 0 : System.hashCode(iEzsigndocumentEdm));
+        hashCode = (17 * hashCode) + (iEzsignsignature == null ? 0 : System.hashCode(iEzsignsignature));
+        hashCode = (17 * hashCode) + (iEzsignsignatureSigned == null ? 0 : System.hashCode(iEzsignsignatureSigned));
         return hashCode;
     }
 }
