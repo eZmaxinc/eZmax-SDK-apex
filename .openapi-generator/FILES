@@ -389,6 +389,14 @@ force-app/main/default/classes/OASEzsignsignerRequestCompoundTest.cls
 force-app/main/default/classes/OASEzsignsignerRequestCompoundTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignerRequestTest.cls
 force-app/main/default/classes/OASEzsignsignerRequestTest.cls-meta.xml
+force-app/main/default/classes/OASEzsigntemplatepackageGetListV1Res.cls
+force-app/main/default/classes/OASEzsigntemplatepackageGetListV1Res.cls-meta.xml
+force-app/main/default/classes/OASEzsigntemplatepackageGetListV1ResTest.cls
+force-app/main/default/classes/OASEzsigntemplatepackageGetListV1ResTest.cls-meta.xml
+force-app/main/default/classes/OASEzsigntemplatepackageListElement.cls
+force-app/main/default/classes/OASEzsigntemplatepackageListElement.cls-meta.xml
+force-app/main/default/classes/OASEzsigntemplatepackageListElementTest.cls
+force-app/main/default/classes/OASEzsigntemplatepackageListElementTest.cls-meta.xml
 force-app/main/default/classes/OASFieldEEzsigndocumentStep.cls
 force-app/main/default/classes/OASFieldEEzsigndocumentStep.cls-meta.xml
 force-app/main/default/classes/OASFieldEEzsigndocumentStepTest.cls
@@ -409,6 +417,10 @@ force-app/main/default/classes/OASFieldEEzsignsignatureType.cls
 force-app/main/default/classes/OASFieldEEzsignsignatureType.cls-meta.xml
 force-app/main/default/classes/OASFieldEEzsignsignatureTypeTest.cls
 force-app/main/default/classes/OASFieldEEzsignsignatureTypeTest.cls-meta.xml
+force-app/main/default/classes/OASFieldEEzsigntemplatepackageType.cls
+force-app/main/default/classes/OASFieldEEzsigntemplatepackageType.cls-meta.xml
+force-app/main/default/classes/OASFieldEEzsigntemplatepackageTypeTest.cls
+force-app/main/default/classes/OASFieldEEzsigntemplatepackageTypeTest.cls-meta.xml
 force-app/main/default/classes/OASFieldEPhoneType.cls
 force-app/main/default/classes/OASFieldEPhoneType.cls-meta.xml
 force-app/main/default/classes/OASFieldEPhoneTypeTest.cls
@@ -513,6 +525,10 @@ force-app/main/default/classes/OASObjectEzsignsignatureApi.cls
 force-app/main/default/classes/OASObjectEzsignsignatureApi.cls-meta.xml
 force-app/main/default/classes/OASObjectEzsignsignatureApiTest.cls
 force-app/main/default/classes/OASObjectEzsignsignatureApiTest.cls-meta.xml
+force-app/main/default/classes/OASObjectEzsigntemplatepackageApi.cls
+force-app/main/default/classes/OASObjectEzsigntemplatepackageApi.cls-meta.xml
+force-app/main/default/classes/OASObjectEzsigntemplatepackageApiTest.cls
+force-app/main/default/classes/OASObjectEzsigntemplatepackageApiTest.cls-meta.xml
 force-app/main/default/classes/OASObjectFranchisebrokerApi.cls
 force-app/main/default/classes/OASObjectFranchisebrokerApi.cls-meta.xml
 force-app/main/default/classes/OASObjectFranchisebrokerApiTest.cls
