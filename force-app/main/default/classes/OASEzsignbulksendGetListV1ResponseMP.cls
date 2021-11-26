@@ -15,13 +15,13 @@
  */
 public class OASEzsignbulksendGetListV1ResponseMP implements OAS.MappedProperties {
     /**
-     * Get aObjEzsignfolder
-     * @return aObjEzsignfolder
+     * Get aObjEzsignbulksend
+     * @return aObjEzsignbulksend
      */
-    public List<OASEzsignbulksendListElement> aObjEzsignfolder { get; set; }
+    public List<OASEzsignbulksendListElement> aObjEzsignbulksend { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objEzsignfolder' => 'aObjEzsignfolder'
+        'a_objEzsignbulksend' => 'aObjEzsignbulksend'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -29,26 +29,26 @@ public class OASEzsignbulksendGetListV1ResponseMP implements OAS.MappedPropertie
     }
 
     public OASEzsignbulksendGetListV1ResponseMP() {
-        aObjEzsignfolder = new List<OASEzsignbulksendListElement>();
+        aObjEzsignbulksend = new List<OASEzsignbulksendListElement>();
     }
 
     public static OASEzsignbulksendGetListV1ResponseMP getExample() {
         OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayloadAllOf = new OASEzsignbulksendGetListV1ResponseMP();
-          ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignfolder = new List<OASEzsignbulksendListElement>{OASEzsignbulksendListElement.getExample()};
+          ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend = new List<OASEzsignbulksendListElement>{OASEzsignbulksendListElement.getExample()};
         return ezsignbulksendGetListV1ResponseMPayloadAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendGetListV1ResponseMP) {           
             OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayloadAllOf = (OASEzsignbulksendGetListV1ResponseMP) obj;
-            return this.aObjEzsignfolder == ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignfolder;
+            return this.aObjEzsignbulksend == ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aObjEzsignfolder == null ? 0 : System.hashCode(aObjEzsignfolder));
+        hashCode = (17 * hashCode) + (aObjEzsignbulksend == null ? 0 : System.hashCode(aObjEzsignbulksend));
         return hashCode;
     }
 }

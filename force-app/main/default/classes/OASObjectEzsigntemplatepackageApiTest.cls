@@ -3,7 +3,7 @@ private class OASObjectEzsigntemplatepackageApiTest {
     /**
      * Retrieve Ezsigntemplatepackage list
      *
-     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| ezsigntemplatepackage | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
      */
     @isTest
     private static void ezsigntemplatepackageGetListV1Test() {

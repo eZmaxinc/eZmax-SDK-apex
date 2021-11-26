@@ -73,12 +73,12 @@ private class OASEzsignbulksendGetListV1ResponseMPTest {
     private static void maintainRenamedProperties() {
         OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayloadAllOf = new OASEzsignbulksendGetListV1ResponseMP();
         Map<String, String> x-property-mappings = ezsignbulksendGetListV1ResponseMPayloadAllOf.getx-property-mappings();
-        System.assertEquals('aObjEzsignfolder', x-property-mappings.get('a_objEzsignfolder'));
+        System.assertEquals('aObjEzsignbulksend', x-property-mappings.get('a_objEzsignbulksend'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayloadAllOf = new OASEzsignbulksendGetListV1ResponseMP();
-        System.assertEquals(new List<OASEzsignbulksendListElement>(), ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignfolder);
+        System.assertEquals(new List<OASEzsignbulksendListElement>(), ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend);
     }
 }
