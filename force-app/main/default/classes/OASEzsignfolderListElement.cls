@@ -57,16 +57,16 @@ public class OASEzsignfolderListElement {
     public String dtCreatedDate { get; set; }
 
     /**
-     * Get dtEzsignfolderSentdate
+     * The date and time at which the Ezsign folder was sent the last time.
      * @return dtEzsignfolderSentdate
      */
-    public OASOneOfstringobject dtEzsignfolderSentdate { get; set; }
+    public String dtEzsignfolderSentdate { get; set; }
 
     /**
-     * The date at which no more signature will be accepted on the folder
+     * Represent a Date Time.\nThe timezone is the one configured in the User\'s profile.
      * @return dtDueDate
      */
-    public OASOneOfstringobject dtDueDate { get; set; }
+    public String dtDueDate { get; set; }
 
     /**
      * The total number of Ezsigndocument in the folder
@@ -101,8 +101,8 @@ public class OASEzsignfolderListElement {
           ezsignfolderListElement.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderListElement.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();
           ezsignfolderListElement.dtCreatedDate = '2020-12-31 23:59:59';
-          ezsignfolderListElement.dtEzsignfolderSentdate = OASOneOfstringobject.getExample();
-          ezsignfolderListElement.dtDueDate = OASOneOfstringobject.getExample();
+          ezsignfolderListElement.dtEzsignfolderSentdate = '2020-12-31 23:59:59';
+          ezsignfolderListElement.dtDueDate = '2020-12-31 23:59:59';
           ezsignfolderListElement.iEzsigndocument = 0;
           ezsignfolderListElement.iEzsigndocumentEdm = 0;
           ezsignfolderListElement.iEzsignsignature = 0;

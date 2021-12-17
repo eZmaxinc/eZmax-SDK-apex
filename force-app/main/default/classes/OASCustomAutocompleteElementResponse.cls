@@ -30,13 +30,13 @@ public class OASCustomAutocompleteElementResponse {
      * The Unique ID of the element
      * @return mValue
      */
-    public OASOneOfintegerstring mValue { get; set; }
+    public String mValue { get; set; }
 
     public static OASCustomAutocompleteElementResponse getExample() {
         OASCustomAutocompleteElementResponse customAutocompleteElementResponse = new OASCustomAutocompleteElementResponse();
           customAutocompleteElementResponse.sCategory = '';
           customAutocompleteElementResponse.sLabel = '';
-          customAutocompleteElementResponse.mValue = OASOneOfintegerstring.getExample();
+          customAutocompleteElementResponse.mValue = '';
         return customAutocompleteElementResponse;
     }
 

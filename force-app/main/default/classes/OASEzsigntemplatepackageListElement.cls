@@ -21,22 +21,22 @@ public class OASEzsigntemplatepackageListElement {
     public Integer pkiEzsigntemplatepackageID { get; set; }
 
     /**
-     * Get fkiDepartmentID
+     * The unique ID of the Department.
      * @return fkiDepartmentID
      */
-    public OASOneOfintegerobject fkiDepartmentID { get; set; }
+    public Integer fkiDepartmentID { get; set; }
 
     /**
-     * Get fkiTeamID
+     * The unique ID of the Team
      * @return fkiTeamID
      */
-    public OASOneOfintegerobject fkiTeamID { get; set; }
+    public Integer fkiTeamID { get; set; }
 
     /**
-     * Get fkiEzsignfoldertypeID
+     * The unique ID of the Ezsignfoldertype.
      * @return fkiEzsignfoldertypeID
      */
-    public OASOneOfintegerobject fkiEzsignfoldertypeID { get; set; }
+    public Integer fkiEzsignfoldertypeID { get; set; }
 
     /**
      * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
@@ -73,9 +73,9 @@ public class OASEzsigntemplatepackageListElement {
     public static OASEzsigntemplatepackageListElement getExample() {
         OASEzsigntemplatepackageListElement ezsigntemplatepackageListElement = new OASEzsigntemplatepackageListElement();
           ezsigntemplatepackageListElement.pkiEzsigntemplatepackageID = 99;
-          ezsigntemplatepackageListElement.fkiDepartmentID = OASOneOfintegerobject.getExample();
-          ezsigntemplatepackageListElement.fkiTeamID = OASOneOfintegerobject.getExample();
-          ezsigntemplatepackageListElement.fkiEzsignfoldertypeID = OASOneOfintegerobject.getExample();
+          ezsigntemplatepackageListElement.fkiDepartmentID = 1;
+          ezsigntemplatepackageListElement.fkiTeamID = 1;
+          ezsigntemplatepackageListElement.fkiEzsignfoldertypeID = 5;
           ezsigntemplatepackageListElement.fkiLanguageID = 2;
           ezsigntemplatepackageListElement.eEzsigntemplatepackageType = OASFieldEEzsigntemplatepackageType.getExample();
           ezsigntemplatepackageListElement.sEzsigntemplatepackageDescription = 'Package for new clients';
