@@ -71,33 +71,6 @@ private class OASObjectEzsignsignatureApiTest {
     }
 
     /**
-     * Retrieve an existing Ezsignsignature\&#39;s children IDs
-     *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     */
-    @isTest
-    private static void ezsignsignatureGetChildrenV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignsignatureID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsignsignatureApi api;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsignsignatureApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-        api.ezsignsignatureGetChildrenV1(params);
-    }
-
-    /**
      * Retrieve an existing Ezsignsignature
      *
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.

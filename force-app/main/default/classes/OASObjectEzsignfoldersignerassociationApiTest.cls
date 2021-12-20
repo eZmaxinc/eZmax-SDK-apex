@@ -71,33 +71,6 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
     }
 
     /**
-     * Retrieve an existing Ezsignfoldersignerassociation\&#39;s children IDs
-     *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     */
-    @isTest
-    private static void ezsignfoldersignerassociationGetChildrenV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignfoldersignerassociationID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsignfoldersignerassociationApi api;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsignfoldersignerassociationApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-        api.ezsignfoldersignerassociationGetChildrenV1(params);
-    }
-
-    /**
      * Retrieve a Login Url to allow In-Person signing
      *
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.\n\nThe signer Login type must be configured as In-Person.
@@ -135,7 +108,7 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
     private static void ezsignfoldersignerassociationGetObjectV1Test() {

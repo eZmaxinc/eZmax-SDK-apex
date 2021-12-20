@@ -71,12 +71,12 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
-     * Retrieve an existing Ezsignfolder\&#39;s children IDs
+     * Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
-    private static void ezsignfolderGetChildrenV1Test() {
+    private static void ezsignfolderGetEzsigndocumentsV1Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -88,13 +88,21 @@ private class OASObjectEzsignfolderApiTest {
 
         OASClient client;
         OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetEzsigndocumentsV1R response;
+        OASEzsignfolderGetEzsigndocumentsV1R expectedResponse;
         String js = '';
 
         client = new OASClient();
         api = new OASObjectEzsignfolderApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
 
-        api.ezsignfolderGetChildrenV1(params);
+
+        js = JSON.serialize(OASEzsignfolderGetEzsigndocumentsV1R.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetEzsigndocumentsV1R.getExample();
+        response = (OASEzsignfolderGetEzsigndocumentsV1R) api.ezsignfolderGetEzsigndocumentsV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -174,7 +182,7 @@ private class OASObjectEzsignfolderApiTest {
     /**
      * Retrieve an existing Ezsignfolder
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
     private static void ezsignfolderGetObjectV1Test() {

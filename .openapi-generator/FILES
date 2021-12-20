@@ -237,6 +237,10 @@ force-app/main/default/classes/OASEzsignfolderDeleteObjectV1Respons.cls
 force-app/main/default/classes/OASEzsignfolderDeleteObjectV1Respons.cls-meta.xml
 force-app/main/default/classes/OASEzsignfolderDeleteObjectV1ResponsTest.cls
 force-app/main/default/classes/OASEzsignfolderDeleteObjectV1ResponsTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignfolderGetEzsigndocumentsV1R.cls
+force-app/main/default/classes/OASEzsignfolderGetEzsigndocumentsV1R.cls-meta.xml
+force-app/main/default/classes/OASEzsignfolderGetEzsigndocumentsV1RTest.cls
+force-app/main/default/classes/OASEzsignfolderGetEzsigndocumentsV1RTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignfolderGetFormsDataV1Respons.cls
 force-app/main/default/classes/OASEzsignfolderGetFormsDataV1Respons.cls-meta.xml
 force-app/main/default/classes/OASEzsignfolderGetFormsDataV1ResponsTest.cls
@@ -321,6 +325,10 @@ force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequTest.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldersignerassociationResp.cls
+force-app/main/default/classes/OASEzsignfoldersignerassociationResp.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldersignerassociationRespTest.cls
+force-app/main/default/classes/OASEzsignfoldersignerassociationRespTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldertypeGetListV1Response.cls
 force-app/main/default/classes/OASEzsignfoldertypeGetListV1Response.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldertypeGetListV1ResponseTest.cls
