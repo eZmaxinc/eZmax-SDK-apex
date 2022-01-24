@@ -13,7 +13,37 @@
 /**
  * An Ezsigndocument Object and children to create a complete structure
  */
-public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentResponse {
+public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentResponse, OAS.MappedProperties {
+    /**
+     * The total number of steps in the form filling phase
+     * @return iEzsigndocumentStepformtotal
+     */
+    public Integer iEzsigndocumentStepformtotal { get; set; }
+
+    /**
+     * The current step in the form filling phase
+     * @return iEzsigndocumentStepformcurrent
+     */
+    public Integer iEzsigndocumentStepformcurrent { get; set; }
+
+    /**
+     * The total number of steps in the signature filling phase
+     * @return iEzsigndocumentStepsignaturetotal
+     */
+    public Integer iEzsigndocumentStepsignaturetotal { get; set; }
+
+    /**
+     * The current step in the signature phase
+     * @return iEzsigndocumentStepsignatureCurrent
+     */
+    public Integer iEzsigndocumentStepsignatureCurrent { get; set; }
+
+    /**
+     * Get aObjEzsignfoldersignerassociationstatus
+     * @return aObjEzsignfoldersignerassociationstatus
+     */
+    public List<OASCustomEzsignfoldersignerassociati> aObjEzsignfoldersignerassociationstatus { get; set; }
+
     /**
      * The unique ID of the Ezsignfolder
      * @return fkiEzsignfolderID
@@ -106,8 +136,25 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
      */
     public OASCommonAudit objAudit { get; set; }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignfoldersignerassociationstatus' => 'aObjEzsignfoldersignerassociationstatus'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentResponseCompound() {
+        aObjEzsignfoldersignerassociationstatus = new List<OASCustomEzsignfoldersignerassociati>();
+    }
+
     public static OASEzsigndocumentResponseCompound getExample() {
         OASEzsigndocumentResponseCompound ezsigndocumentResponseCompound = new OASEzsigndocumentResponseCompound();
+          ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal = 2;
+          ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent = 1;
+          ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal = 2;
+          ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent = 0;
+          ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus = new List<OASCustomEzsignfoldersignerassociati>{OASCustomEzsignfoldersignerassociati.getExample()};
           ezsigndocumentResponseCompound.fkiEzsignfolderID = 33;
           ezsigndocumentResponseCompound.dtEzsigndocumentDuedate = '2020-12-31 23:59:59';
           ezsigndocumentResponseCompound.fkiLanguageID = 2;
@@ -129,7 +176,12 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentResponseCompound) {           
             OASEzsigndocumentResponseCompound ezsigndocumentResponseCompound = (OASEzsigndocumentResponseCompound) obj;
-            return this.fkiEzsignfolderID == ezsigndocumentResponseCompound.fkiEzsignfolderID
+            return this.iEzsigndocumentStepformtotal == ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal
+                && this.iEzsigndocumentStepformcurrent == ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent
+                && this.iEzsigndocumentStepsignaturetotal == ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal
+                && this.iEzsigndocumentStepsignatureCurrent == ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent
+                && this.aObjEzsignfoldersignerassociationstatus == ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus
+                && this.fkiEzsignfolderID == ezsigndocumentResponseCompound.fkiEzsignfolderID
                 && this.dtEzsigndocumentDuedate == ezsigndocumentResponseCompound.dtEzsigndocumentDuedate
                 && this.fkiLanguageID == ezsigndocumentResponseCompound.fkiLanguageID
                 && this.sEzsigndocumentName == ezsigndocumentResponseCompound.sEzsigndocumentName
@@ -150,6 +202,11 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iEzsigndocumentStepformtotal == null ? 0 : System.hashCode(iEzsigndocumentStepformtotal));
+        hashCode = (17 * hashCode) + (iEzsigndocumentStepformcurrent == null ? 0 : System.hashCode(iEzsigndocumentStepformcurrent));
+        hashCode = (17 * hashCode) + (iEzsigndocumentStepsignaturetotal == null ? 0 : System.hashCode(iEzsigndocumentStepsignaturetotal));
+        hashCode = (17 * hashCode) + (iEzsigndocumentStepsignatureCurrent == null ? 0 : System.hashCode(iEzsigndocumentStepsignatureCurrent));
+        hashCode = (17 * hashCode) + (aObjEzsignfoldersignerassociationstatus == null ? 0 : System.hashCode(aObjEzsignfoldersignerassociationstatus));
         hashCode = (17 * hashCode) + (fkiEzsignfolderID == null ? 0 : System.hashCode(fkiEzsignfolderID));
         hashCode = (17 * hashCode) + (dtEzsigndocumentDuedate == null ? 0 : System.hashCode(dtEzsigndocumentDuedate));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));

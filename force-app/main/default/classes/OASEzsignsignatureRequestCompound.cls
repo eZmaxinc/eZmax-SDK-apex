@@ -39,7 +39,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public Integer iEzsignsignatureY { get; set; }
 
     /**
-     * The step when the Ezsignsigner will be invited to sign.
+     * The step when the Ezsignsigner will be invited to sign or fill form fields
      * @return iEzsignsignatureStep
      */
     public Integer iEzsignsignatureStep { get; set; }

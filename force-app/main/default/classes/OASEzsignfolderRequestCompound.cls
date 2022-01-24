@@ -13,13 +13,7 @@
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequestCompoundAllOf, OASEzsignfolderRequest, OAS.MappedProperties {
-    /**
-     * An array of signers that will be invited to sign the Ezsigndocuments
-     * @return aEzsignfoldersignerassociation
-     */
-    public List<OASEzsignfoldersignerassociationRequ> aEzsignfoldersignerassociation { get; set; }
-
+public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
     /**
      * The unique ID of the Ezsignfoldertype.
      * @return fkiEzsignfoldertypeID
@@ -52,21 +46,8 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequestCom
      */
     public OASFieldEEzsignfolderSendreminderfre eEzsignfolderSendreminderfrequency { get; set; }
 
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_Ezsignfoldersignerassociation' => 'aEzsignfoldersignerassociation'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    public OASEzsignfolderRequestCompound() {
-        aEzsignfoldersignerassociation = new List<OASEzsignfoldersignerassociationRequ>();
-    }
-
     public static OASEzsignfolderRequestCompound getExample() {
         OASEzsignfolderRequestCompound ezsignfolderRequestCompound = new OASEzsignfolderRequestCompound();
-          ezsignfolderRequestCompound.aEzsignfoldersignerassociation = new List<OASEzsignfoldersignerassociationRequ>{OASEzsignfoldersignerassociationRequ.getExample()};
           ezsignfolderRequestCompound.fkiEzsignfoldertypeID = 5;
           ezsignfolderRequestCompound.fkiEzsigntsarequirementID = 92;
           ezsignfolderRequestCompound.sEzsignfolderDescription = 'Test eZsign Folder';
@@ -78,8 +59,7 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequestCom
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderRequestCompound) {           
             OASEzsignfolderRequestCompound ezsignfolderRequestCompound = (OASEzsignfolderRequestCompound) obj;
-            return this.aEzsignfoldersignerassociation == ezsignfolderRequestCompound.aEzsignfoldersignerassociation
-                && this.fkiEzsignfoldertypeID == ezsignfolderRequestCompound.fkiEzsignfoldertypeID
+            return this.fkiEzsignfoldertypeID == ezsignfolderRequestCompound.fkiEzsignfoldertypeID
                 && this.fkiEzsigntsarequirementID == ezsignfolderRequestCompound.fkiEzsigntsarequirementID
                 && this.sEzsignfolderDescription == ezsignfolderRequestCompound.sEzsignfolderDescription
                 && this.tEzsignfolderNote == ezsignfolderRequestCompound.tEzsignfolderNote
@@ -90,7 +70,6 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequestCom
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aEzsignfoldersignerassociation == null ? 0 : System.hashCode(aEzsignfoldersignerassociation));
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
         hashCode = (17 * hashCode) + (fkiEzsigntsarequirementID == null ? 0 : System.hashCode(fkiEzsigntsarequirementID));
         hashCode = (17 * hashCode) + (sEzsignfolderDescription == null ? 0 : System.hashCode(sEzsignfolderDescription));

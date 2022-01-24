@@ -68,4 +68,36 @@ private class OASEzsigndocumentResponseCompoundTest {
         System.assertEquals(ezsigndocumentResponseCompound1.hashCode(), ezsigndocumentResponseCompound2.hashCode());
         System.assertEquals(ezsigndocumentResponseCompound3.hashCode(), ezsigndocumentResponseCompound4.hashCode());
     }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        OASEzsigndocumentResponseCompound ezsigndocumentResponseCompound = new OASEzsigndocumentResponseCompound();
+        Map<String, String> x-property-mappings = ezsigndocumentResponseCompound.getx-property-mappings();
+        System.assertEquals('aObjEzsignfoldersignerassociationstatus', x-property-mappings.get('a_objEzsignfoldersignerassociationstatus'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASEzsigndocumentResponseCompound ezsigndocumentResponseCompound = new OASEzsigndocumentResponseCompound();
+        System.assertEquals(new List<OASCustomEzsignfoldersignerassociati>(), ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent);
+        System.assertEquals(null, ezsigndocumentResponseCompound.fkiEzsignfolderID);
+        System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentDuedate);
+        System.assertEquals(null, ezsigndocumentResponseCompound.fkiLanguageID);
+        System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentName);
+        System.assertEquals(null, ezsigndocumentResponseCompound.pkiEzsigndocumentID);
+        System.assertEquals(null, ezsigndocumentResponseCompound.eEzsigndocumentStep);
+        System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentFirstsend);
+        System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentLastsend);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentOrder);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentPagetotal);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentSignaturesigned);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal);
+        System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5initial);
+        System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5signed);
+        System.assertEquals(null, ezsigndocumentResponseCompound.objAudit);
+    }
 }

@@ -13,7 +13,7 @@
 /**
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
-public class OASEzsignsignerRequestCompoundContac {
+public class OASEzsignsignerResponseCompoundConta {
     /**
      * The First name of the contact
      * @return sContactFirstname
@@ -52,26 +52,26 @@ public class OASEzsignsignerRequestCompoundContac {
      */
     public String sPhoneNumberCell { get; set; }
 
-    public static OASEzsignsignerRequestCompoundContac getExample() {
-        OASEzsignsignerRequestCompoundContac ezsignsignerRequestCompoundContact = new OASEzsignsignerRequestCompoundContac();
-          ezsignsignerRequestCompoundContact.sContactFirstname = 'John';
-          ezsignsignerRequestCompoundContact.sContactLastname = 'Doe';
-          ezsignsignerRequestCompoundContact.fkiLanguageID = 2;
-          ezsignsignerRequestCompoundContact.sEmailAddress = 'example@domain.com';
-          ezsignsignerRequestCompoundContact.sPhoneNumber = '';
-          ezsignsignerRequestCompoundContact.sPhoneNumberCell = '';
-        return ezsignsignerRequestCompoundContact;
+    public static OASEzsignsignerResponseCompoundConta getExample() {
+        OASEzsignsignerResponseCompoundConta ezsignsignerResponseCompoundContact = new OASEzsignsignerResponseCompoundConta();
+          ezsignsignerResponseCompoundContact.sContactFirstname = 'John';
+          ezsignsignerResponseCompoundContact.sContactLastname = 'Doe';
+          ezsignsignerResponseCompoundContact.fkiLanguageID = 2;
+          ezsignsignerResponseCompoundContact.sEmailAddress = 'example@domain.com';
+          ezsignsignerResponseCompoundContact.sPhoneNumber = '';
+          ezsignsignerResponseCompoundContact.sPhoneNumberCell = '';
+        return ezsignsignerResponseCompoundContact;
     }
 
     public Boolean equals(Object obj) {
-        if (obj instanceof OASEzsignsignerRequestCompoundContac) {           
-            OASEzsignsignerRequestCompoundContac ezsignsignerRequestCompoundContact = (OASEzsignsignerRequestCompoundContac) obj;
-            return this.sContactFirstname == ezsignsignerRequestCompoundContact.sContactFirstname
-                && this.sContactLastname == ezsignsignerRequestCompoundContact.sContactLastname
-                && this.fkiLanguageID == ezsignsignerRequestCompoundContact.fkiLanguageID
-                && this.sEmailAddress == ezsignsignerRequestCompoundContact.sEmailAddress
-                && this.sPhoneNumber == ezsignsignerRequestCompoundContact.sPhoneNumber
-                && this.sPhoneNumberCell == ezsignsignerRequestCompoundContact.sPhoneNumberCell;
+        if (obj instanceof OASEzsignsignerResponseCompoundConta) {           
+            OASEzsignsignerResponseCompoundConta ezsignsignerResponseCompoundContact = (OASEzsignsignerResponseCompoundConta) obj;
+            return this.sContactFirstname == ezsignsignerResponseCompoundContact.sContactFirstname
+                && this.sContactLastname == ezsignsignerResponseCompoundContact.sContactLastname
+                && this.fkiLanguageID == ezsignsignerResponseCompoundContact.fkiLanguageID
+                && this.sEmailAddress == ezsignsignerResponseCompoundContact.sEmailAddress
+                && this.sPhoneNumber == ezsignsignerResponseCompoundContact.sPhoneNumber
+                && this.sPhoneNumberCell == ezsignsignerResponseCompoundContact.sPhoneNumberCell;
         }
         return false;
     }

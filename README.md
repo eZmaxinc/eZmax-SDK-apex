@@ -92,6 +92,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
+*OASObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder\&#39;s Ezsignfoldersignerassociations
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder\&#39;s forms data
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetListV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -147,6 +148,8 @@ Class | Method | HTTP request | Description
  - [OASContactinformationsRequest](OASContactinformationsRequest.md)
  - [OASContactinformationsRequestCompoun](OASContactinformationsRequestCompoun.md)
  - [OASCustomAutocompleteElementResponse](OASCustomAutocompleteElementResponse.md)
+ - [OASCustomEzsignfoldersignerassociati](OASCustomEzsignfoldersignerassociati.md)
+ - [OASCustomEzsignsignaturestatusRespon](OASCustomEzsignsignaturestatusRespon.md)
  - [OASCustomFormDataDocumentResponse](OASCustomFormDataDocumentResponse.md)
  - [OASCustomFormDataSignerResponse](OASCustomFormDataSignerResponse.md)
  - [OASCustomFormsDataFolderResponse](OASCustomFormsDataFolderResponse.md)
@@ -174,6 +177,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignfolderCreateObjectV1Respons](OASEzsignfolderCreateObjectV1Respons.md)
  - [OASEzsignfolderDeleteObjectV1Respons](OASEzsignfolderDeleteObjectV1Respons.md)
  - [OASEzsignfolderGetEzsigndocumentsV1R](OASEzsignfolderGetEzsigndocumentsV1R.md)
+ - [OASEzsignfolderGetEzsignfoldersigner](OASEzsignfolderGetEzsignfoldersigner.md)
  - [OASEzsignfolderGetFormsDataV1Respons](OASEzsignfolderGetFormsDataV1Respons.md)
  - [OASEzsignfolderGetListV1Response](OASEzsignfolderGetListV1Response.md)
  - [OASEzsignfolderGetListV1ResponseAllO](OASEzsignfolderGetListV1ResponseAllO.md)
@@ -184,7 +188,6 @@ Class | Method | HTTP request | Description
  - [OASEzsignfolderListElement](OASEzsignfolderListElement.md)
  - [OASEzsignfolderRequest](OASEzsignfolderRequest.md)
  - [OASEzsignfolderRequestCompound](OASEzsignfolderRequestCompound.md)
- - [OASEzsignfolderRequestCompoundAllOf](OASEzsignfolderRequestCompoundAllOf.md)
  - [OASEzsignfolderResponse](OASEzsignfolderResponse.md)
  - [OASEzsignfolderResponseCompound](OASEzsignfolderResponseCompound.md)
  - [OASEzsignfolderSendV1Request](OASEzsignfolderSendV1Request.md)
@@ -213,6 +216,10 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignerRequestCompound](OASEzsignsignerRequestCompound.md)
  - [OASEzsignsignerRequestCompoundAllOf](OASEzsignsignerRequestCompoundAllOf.md)
  - [OASEzsignsignerRequestCompoundContac](OASEzsignsignerRequestCompoundContac.md)
+ - [OASEzsignsignerResponse](OASEzsignsignerResponse.md)
+ - [OASEzsignsignerResponseCompound](OASEzsignsignerResponseCompound.md)
+ - [OASEzsignsignerResponseCompoundAllOf](OASEzsignsignerResponseCompoundAllOf.md)
+ - [OASEzsignsignerResponseCompoundConta](OASEzsignsignerResponseCompoundConta.md)
  - [OASEzsigntemplatepackageGetListV1Res](OASEzsigntemplatepackageGetListV1Res.md)
  - [OASEzsigntemplatepackageListElement](OASEzsigntemplatepackageListElement.md)
  - [OASFieldEEzsigndocumentStep](OASFieldEEzsigndocumentStep.md)

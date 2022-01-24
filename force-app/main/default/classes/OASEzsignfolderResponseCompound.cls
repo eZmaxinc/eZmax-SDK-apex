@@ -89,6 +89,18 @@ public class OASEzsignfolderResponseCompound implements OASEzsignfolderResponse 
     public String dtEzsignfolderSentdate { get; set; }
 
     /**
+     * The scheduled date and time at which the Ezsignfolder should be archived.
+     * @return dtEzsignfolderScheduledarchive
+     */
+    public String dtEzsignfolderScheduledarchive { get; set; }
+
+    /**
+     * The scheduled date and time at which the Ezsignfolder should be Destroyed.
+     * @return dtEzsignfolderScheduleddestruction
+     */
+    public String dtEzsignfolderScheduleddestruction { get; set; }
+
+    /**
      * Get eEzsignfolderStep
      * @return eEzsignfolderStep
      */
@@ -120,6 +132,8 @@ public class OASEzsignfolderResponseCompound implements OASEzsignfolderResponse 
           ezsignfolderResponseCompound.eEzsignfolderSendreminderfrequency = OASFieldEEzsignfolderSendreminderfre.getExample();
           ezsignfolderResponseCompound.dtEzsignfolderDuedate = '2020-12-31 23:59:59';
           ezsignfolderResponseCompound.dtEzsignfolderSentdate = '2020-12-31 23:59:59';
+          ezsignfolderResponseCompound.dtEzsignfolderScheduledarchive = '2020-12-31 23:59:59';
+          ezsignfolderResponseCompound.dtEzsignfolderScheduleddestruction = '2020-12-31 23:59:59';
           ezsignfolderResponseCompound.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();
           ezsignfolderResponseCompound.dtEzsignfolderClose = '2020-12-31 23:59:59';
           ezsignfolderResponseCompound.objAudit = OASCommonAudit.getExample();
@@ -141,6 +155,8 @@ public class OASEzsignfolderResponseCompound implements OASEzsignfolderResponse 
                 && this.eEzsignfolderSendreminderfrequency == ezsignfolderResponseCompound.eEzsignfolderSendreminderfrequency
                 && this.dtEzsignfolderDuedate == ezsignfolderResponseCompound.dtEzsignfolderDuedate
                 && this.dtEzsignfolderSentdate == ezsignfolderResponseCompound.dtEzsignfolderSentdate
+                && this.dtEzsignfolderScheduledarchive == ezsignfolderResponseCompound.dtEzsignfolderScheduledarchive
+                && this.dtEzsignfolderScheduleddestruction == ezsignfolderResponseCompound.dtEzsignfolderScheduleddestruction
                 && this.eEzsignfolderStep == ezsignfolderResponseCompound.eEzsignfolderStep
                 && this.dtEzsignfolderClose == ezsignfolderResponseCompound.dtEzsignfolderClose
                 && this.objAudit == ezsignfolderResponseCompound.objAudit;
@@ -162,6 +178,8 @@ public class OASEzsignfolderResponseCompound implements OASEzsignfolderResponse 
         hashCode = (17 * hashCode) + (eEzsignfolderSendreminderfrequency == null ? 0 : System.hashCode(eEzsignfolderSendreminderfrequency));
         hashCode = (17 * hashCode) + (dtEzsignfolderDuedate == null ? 0 : System.hashCode(dtEzsignfolderDuedate));
         hashCode = (17 * hashCode) + (dtEzsignfolderSentdate == null ? 0 : System.hashCode(dtEzsignfolderSentdate));
+        hashCode = (17 * hashCode) + (dtEzsignfolderScheduledarchive == null ? 0 : System.hashCode(dtEzsignfolderScheduledarchive));
+        hashCode = (17 * hashCode) + (dtEzsignfolderScheduleddestruction == null ? 0 : System.hashCode(dtEzsignfolderScheduleddestruction));
         hashCode = (17 * hashCode) + (eEzsignfolderStep == null ? 0 : System.hashCode(eEzsignfolderStep));
         hashCode = (17 * hashCode) + (dtEzsignfolderClose == null ? 0 : System.hashCode(dtEzsignfolderClose));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));

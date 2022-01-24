@@ -100,6 +100,31 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
+     * Retrieve an existing Ezsignfolder\&#39;s Ezsignfoldersignerassociations
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @return OASEzsignfolderGetEzsignfoldersigner
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderGetEzsignfoldersigner ezsignfolderGetEzsignfoldersignerassociationsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderGetEzsignfoldersigner) client.invoke(
+            'GET', '/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignfolderGetEzsignfoldersigner.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s forms data
      * 
      * @param pkiEzsignfolderID  (required)

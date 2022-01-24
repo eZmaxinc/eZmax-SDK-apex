@@ -68,22 +68,4 @@ private class OASEzsignfolderRequestCompoundTest {
         System.assertEquals(ezsignfolderRequestCompound1.hashCode(), ezsignfolderRequestCompound2.hashCode());
         System.assertEquals(ezsignfolderRequestCompound3.hashCode(), ezsignfolderRequestCompound4.hashCode());
     }
-
-    @isTest
-    private static void maintainRenamedProperties() {
-        OASEzsignfolderRequestCompound ezsignfolderRequestCompound = new OASEzsignfolderRequestCompound();
-        Map<String, String> x-property-mappings = ezsignfolderRequestCompound.getx-property-mappings();
-        System.assertEquals('aEzsignfoldersignerassociation', x-property-mappings.get('a_Ezsignfoldersignerassociation'));
-    }
-
-    @isTest
-    private static void defaultValuesPopulated() {
-        OASEzsignfolderRequestCompound ezsignfolderRequestCompound = new OASEzsignfolderRequestCompound();
-        System.assertEquals(new List<OASEzsignfoldersignerassociationRequ>(), ezsignfolderRequestCompound.aEzsignfoldersignerassociation);
-        System.assertEquals(null, ezsignfolderRequestCompound.fkiEzsignfoldertypeID);
-        System.assertEquals(null, ezsignfolderRequestCompound.fkiEzsigntsarequirementID);
-        System.assertEquals(null, ezsignfolderRequestCompound.sEzsignfolderDescription);
-        System.assertEquals(null, ezsignfolderRequestCompound.tEzsignfolderNote);
-        System.assertEquals(null, ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency);
-    }
 }

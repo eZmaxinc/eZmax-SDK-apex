@@ -106,6 +106,41 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignfolder\&#39;s Ezsignfoldersignerassociations
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderGetEzsignfoldersignerassociationsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetEzsignfoldersigner response;
+        OASEzsignfolderGetEzsignfoldersigner expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderGetEzsignfoldersigner.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetEzsignfoldersigner.getExample();
+        response = (OASEzsignfolderGetEzsignfoldersigner) api.ezsignfolderGetEzsignfoldersignerassociationsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s forms data
      *
      * 
