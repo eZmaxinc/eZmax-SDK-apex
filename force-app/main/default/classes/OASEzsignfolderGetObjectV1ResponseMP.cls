@@ -13,7 +13,7 @@
 /**
  * Payload for the /1/object/ezsignfolder/getObject API Request
  */
-public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResponse {
+public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResponseCompound {
     /**
      * The unique ID of the Ezsignfolder
      * @return pkiEzsignfolderID
