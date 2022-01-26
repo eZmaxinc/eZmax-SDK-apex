@@ -68,4 +68,25 @@ private class OASEzsignsignatureRequestCompoundTest {
         System.assertEquals(ezsignsignatureRequestCompound1.hashCode(), ezsignsignatureRequestCompound2.hashCode());
         System.assertEquals(ezsignsignatureRequestCompound3.hashCode(), ezsignsignatureRequestCompound4.hashCode());
     }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = new OASEzsignsignatureRequestCompound();
+        Map<String, String> x-property-mappings = ezsignsignatureRequestCompound.getx-property-mappings();
+        System.assertEquals('aObjEzsignsignaturecustomdate', x-property-mappings.get('a_objEzsignsignaturecustomdate'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = new OASEzsignsignatureRequestCompound();
+        System.assertEquals(new List<OASEzsignsignaturecustomdateRequest>(), ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate);
+        System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
+        System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignpagePagenumber);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureX);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureY);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureStep);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureType);
+        System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsigndocumentID);
+    }
 }

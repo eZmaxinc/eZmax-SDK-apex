@@ -212,6 +212,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignatureGetObjectV1Respons](OASEzsignsignatureGetObjectV1Respons.md)
  - [OASEzsignsignatureRequest](OASEzsignsignatureRequest.md)
  - [OASEzsignsignatureRequestCompound](OASEzsignsignatureRequestCompound.md)
+ - [OASEzsignsignaturecustomdateRequest](OASEzsignsignaturecustomdateRequest.md)
  - [OASEzsignsignerRequest](OASEzsignsignerRequest.md)
  - [OASEzsignsignerRequestCompound](OASEzsignsignerRequestCompound.md)
  - [OASEzsignsignerRequestCompoundAllOf](OASEzsignsignerRequestCompoundAllOf.md)

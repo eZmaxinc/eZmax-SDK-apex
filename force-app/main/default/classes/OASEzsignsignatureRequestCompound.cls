@@ -13,7 +13,19 @@
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequest {
+public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequest, OAS.MappedProperties {
+    /**
+     * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is "Name" or "Handwritten")
+     * @return bEzsignsignatureCustomdate
+     */
+    public Boolean bEzsignsignatureCustomdate { get; set; }
+
+    /**
+     * An array of custom date blocks that will be filled at the time of signature.\n\nCan only be used if bEzsignsignatureCustomdate is true.\n\nUse an empty array if you don\'t want to have a date at all.
+     * @return aObjEzsignsignaturecustomdate
+     */
+    public List<OASEzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate { get; set; }
+
     /**
      * The unique ID of the Ezsignfoldersignerassociation
      * @return fkiEzsignfoldersignerassociationID
@@ -56,8 +68,22 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
      */
     public Integer fkiEzsigndocumentID { get; set; }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignsignatureRequestCompound() {
+        aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequest>();
+    }
+
     public static OASEzsignsignatureRequestCompound getExample() {
         OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = new OASEzsignsignatureRequestCompound();
+          ezsignsignatureRequestCompound.bEzsignsignatureCustomdate = true;
+          ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequest>{OASEzsignsignaturecustomdateRequest.getExample()};
           ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID = 20;
           ezsignsignatureRequestCompound.iEzsignpagePagenumber = 1;
           ezsignsignatureRequestCompound.iEzsignsignatureX = 200;
@@ -71,7 +97,9 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignatureRequestCompound) {           
             OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = (OASEzsignsignatureRequestCompound) obj;
-            return this.fkiEzsignfoldersignerassociationID == ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID
+            return this.bEzsignsignatureCustomdate == ezsignsignatureRequestCompound.bEzsignsignatureCustomdate
+                && this.aObjEzsignsignaturecustomdate == ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate
+                && this.fkiEzsignfoldersignerassociationID == ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID
                 && this.iEzsignpagePagenumber == ezsignsignatureRequestCompound.iEzsignpagePagenumber
                 && this.iEzsignsignatureX == ezsignsignatureRequestCompound.iEzsignsignatureX
                 && this.iEzsignsignatureY == ezsignsignatureRequestCompound.iEzsignsignatureY
@@ -84,6 +112,8 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
+        hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
         hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationID));
         hashCode = (17 * hashCode) + (iEzsignpagePagenumber == null ? 0 : System.hashCode(iEzsignpagePagenumber));
         hashCode = (17 * hashCode) + (iEzsignsignatureX == null ? 0 : System.hashCode(iEzsignsignatureX));

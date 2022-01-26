@@ -389,6 +389,10 @@ force-app/main/default/classes/OASEzsignsignatureRequestCompoundTest.cls
 force-app/main/default/classes/OASEzsignsignatureRequestCompoundTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureRequestTest.cls
 force-app/main/default/classes/OASEzsignsignatureRequestTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignaturecustomdateRequest.cls
+force-app/main/default/classes/OASEzsignsignaturecustomdateRequest.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignaturecustomdateRequestTest.cls
+force-app/main/default/classes/OASEzsignsignaturecustomdateRequestTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignerRequest.cls
 force-app/main/default/classes/OASEzsignsignerRequest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignerRequestCompound.cls
