@@ -45,7 +45,7 @@ public class OASPhoneRequest {
     public String sPhoneNumber { get; set; }
 
     /**
-     * The international phone number. (For phone numbers outside of North)\n\nDo not specify the "011" part of the phone number used to dial an international phone number from North America.\n\nFor example for this sample phone number "+442071838750", you would send "442071838750" without the "+" sign.
+     * A phone number in E.164 Format
      * @return sPhoneInternational
      */
     public String sPhoneInternational { get; set; }
@@ -63,7 +63,7 @@ public class OASPhoneRequest {
           phoneRequest.sPhoneRegion = '514';
           phoneRequest.sPhoneExchange = '990';
           phoneRequest.sPhoneNumber = '1516';
-          phoneRequest.sPhoneInternational = '442071838750';
+          phoneRequest.sPhoneInternational = '+5149901516';
           phoneRequest.sPhoneExtension = '123';
         return phoneRequest;
     }

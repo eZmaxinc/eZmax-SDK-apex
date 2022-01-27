@@ -15,6 +15,12 @@
  */
 public class OASEzsignsignerResponse {
     /**
+     * The unique ID of the Ezsignsigner
+     * @return pkiEzsignsignerID
+     */
+    public Integer pkiEzsignsignerID { get; set; }
+
+    /**
      * The unique ID of the Taxassignment.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|No tax|\n|2|GST|\n|3|HST (ON)|\n|4|HST (NB)|\n|5|HST (NS)|\n|6|HST (NL)|\n|7|HST (PE)|\n|8|GST + QST (QC)|\n|9|GST + QST (QC) Non-Recoverable|\n|10|GST + PST (BC)|\n|11|GST + PST (SK)|\n|12|GST + RST (MB)|\n|13|GST + PST (BC) Non-Recoverable|\n|14|GST + PST (SK) Non-Recoverable|\n|15|GST + RST (MB) Non-Recoverable|
      * minimum: 1
      * maximum: 15
@@ -29,54 +35,46 @@ public class OASEzsignsignerResponse {
     public Integer fkiSecretquestionID { get; set; }
 
     /**
-     * The method the Ezsignsigner will authenticate to the signing platform.\n\n1. **Password** means the Ezsignsigner will receive a secure link by email.\n2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.\n3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.\n4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.\n5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won\'t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
+     * The unique ID of the Userlogintype
+     * @return fkiUserlogintypeID
      */
-    public enum EEzsignsignerLogintypeEnum {
-        PASSWORD,
-        PASSWORDPHONE,
-        PASSWORDQUESTION,
-        INPERSONPHONE,
-        INPERSON
-    }
+    public Integer fkiUserlogintypeID { get; set; }
 
     /**
-     * The method the Ezsignsigner will authenticate to the signing platform.\n\n1. **Password** means the Ezsignsigner will receive a secure link by email.\n2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.\n3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.\n4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.\n5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won\'t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-     * @return eEzsignsignerLogintype
+     * The description of the Userlogintype in the language of the requester
+     * @return sUserlogintypeDescriptionX
      */
-    public EEzsignsignerLogintypeEnum eEzsignsignerLogintype { get; set; }
-
-    /**
-     * The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.
-     * @return sEzsignsignerSecretanswer
-     */
-    public String sEzsignsignerSecretanswer { get; set; }
+    public String sUserlogintypeDescriptionX { get; set; }
 
     public static OASEzsignsignerResponse getExample() {
         OASEzsignsignerResponse ezsignsignerResponse = new OASEzsignsignerResponse();
+          ezsignsignerResponse.pkiEzsignsignerID = 89;
           ezsignsignerResponse.fkiTaxassignmentID = 1;
           ezsignsignerResponse.fkiSecretquestionID = 7;
-          ezsignsignerResponse.eEzsignsignerLogintype = EEzsignsignerLogintypeEnum.PASSWORD;
-          ezsignsignerResponse.sEzsignsignerSecretanswer = '';
+          ezsignsignerResponse.fkiUserlogintypeID = 2;
+          ezsignsignerResponse.sUserlogintypeDescriptionX = 'Email and phone or SMS';
         return ezsignsignerResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignerResponse) {           
             OASEzsignsignerResponse ezsignsignerResponse = (OASEzsignsignerResponse) obj;
-            return this.fkiTaxassignmentID == ezsignsignerResponse.fkiTaxassignmentID
+            return this.pkiEzsignsignerID == ezsignsignerResponse.pkiEzsignsignerID
+                && this.fkiTaxassignmentID == ezsignsignerResponse.fkiTaxassignmentID
                 && this.fkiSecretquestionID == ezsignsignerResponse.fkiSecretquestionID
-                && this.eEzsignsignerLogintype == ezsignsignerResponse.eEzsignsignerLogintype
-                && this.sEzsignsignerSecretanswer == ezsignsignerResponse.sEzsignsignerSecretanswer;
+                && this.fkiUserlogintypeID == ezsignsignerResponse.fkiUserlogintypeID
+                && this.sUserlogintypeDescriptionX == ezsignsignerResponse.sUserlogintypeDescriptionX;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignsignerID == null ? 0 : System.hashCode(pkiEzsignsignerID));
         hashCode = (17 * hashCode) + (fkiTaxassignmentID == null ? 0 : System.hashCode(fkiTaxassignmentID));
         hashCode = (17 * hashCode) + (fkiSecretquestionID == null ? 0 : System.hashCode(fkiSecretquestionID));
-        hashCode = (17 * hashCode) + (eEzsignsignerLogintype == null ? 0 : System.hashCode(eEzsignsignerLogintype));
-        hashCode = (17 * hashCode) + (sEzsignsignerSecretanswer == null ? 0 : System.hashCode(sEzsignsignerSecretanswer));
+        hashCode = (17 * hashCode) + (fkiUserlogintypeID == null ? 0 : System.hashCode(fkiUserlogintypeID));
+        hashCode = (17 * hashCode) + (sUserlogintypeDescriptionX == null ? 0 : System.hashCode(sUserlogintypeDescriptionX));
         return hashCode;
     }
 }

@@ -41,16 +41,16 @@ public class OASEzsignsignerResponseCompoundConta {
     public String sEmailAddress { get; set; }
 
     /**
-     * The Phone number of the contact.\nUse format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.\nUse format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
-     * @return sPhoneNumber
+     * A phone number in E.164 Format
+     * @return sPhoneE164
      */
-    public String sPhoneNumber { get; set; }
+    public String sPhoneE164 { get; set; }
 
     /**
-     * The Cell Phone number of the contact.\nUse format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.\nUse format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
-     * @return sPhoneNumberCell
+     * A phone number in E.164 Format
+     * @return sPhoneE164Cell
      */
-    public String sPhoneNumberCell { get; set; }
+    public String sPhoneE164Cell { get; set; }
 
     public static OASEzsignsignerResponseCompoundConta getExample() {
         OASEzsignsignerResponseCompoundConta ezsignsignerResponseCompoundContact = new OASEzsignsignerResponseCompoundConta();
@@ -58,8 +58,8 @@ public class OASEzsignsignerResponseCompoundConta {
           ezsignsignerResponseCompoundContact.sContactLastname = 'Doe';
           ezsignsignerResponseCompoundContact.fkiLanguageID = 2;
           ezsignsignerResponseCompoundContact.sEmailAddress = 'example@domain.com';
-          ezsignsignerResponseCompoundContact.sPhoneNumber = '';
-          ezsignsignerResponseCompoundContact.sPhoneNumberCell = '';
+          ezsignsignerResponseCompoundContact.sPhoneE164 = '+5149901516';
+          ezsignsignerResponseCompoundContact.sPhoneE164Cell = '+5149901516';
         return ezsignsignerResponseCompoundContact;
     }
 
@@ -70,8 +70,8 @@ public class OASEzsignsignerResponseCompoundConta {
                 && this.sContactLastname == ezsignsignerResponseCompoundContact.sContactLastname
                 && this.fkiLanguageID == ezsignsignerResponseCompoundContact.fkiLanguageID
                 && this.sEmailAddress == ezsignsignerResponseCompoundContact.sEmailAddress
-                && this.sPhoneNumber == ezsignsignerResponseCompoundContact.sPhoneNumber
-                && this.sPhoneNumberCell == ezsignsignerResponseCompoundContact.sPhoneNumberCell;
+                && this.sPhoneE164 == ezsignsignerResponseCompoundContact.sPhoneE164
+                && this.sPhoneE164Cell == ezsignsignerResponseCompoundContact.sPhoneE164Cell;
         }
         return false;
     }
@@ -82,8 +82,8 @@ public class OASEzsignsignerResponseCompoundConta {
         hashCode = (17 * hashCode) + (sContactLastname == null ? 0 : System.hashCode(sContactLastname));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
-        hashCode = (17 * hashCode) + (sPhoneNumber == null ? 0 : System.hashCode(sPhoneNumber));
-        hashCode = (17 * hashCode) + (sPhoneNumberCell == null ? 0 : System.hashCode(sPhoneNumberCell));
+        hashCode = (17 * hashCode) + (sPhoneE164 == null ? 0 : System.hashCode(sPhoneE164));
+        hashCode = (17 * hashCode) + (sPhoneE164Cell == null ? 0 : System.hashCode(sPhoneE164Cell));
         return hashCode;
     }
 }
