@@ -685,5 +685,9 @@ force-app/main/default/classes/OASWebsiteRequest.cls
 force-app/main/default/classes/OASWebsiteRequest.cls-meta.xml
 force-app/main/default/classes/OASWebsiteRequestTest.cls
 force-app/main/default/classes/OASWebsiteRequestTest.cls-meta.xml
+force-app/main/default/classes/OASXxxx.cls
+force-app/main/default/classes/OASXxxx.cls-meta.xml
+force-app/main/default/classes/OASXxxxTest.cls
+force-app/main/default/classes/OASXxxxTest.cls-meta.xml
 force-app/main/default/namedCredentials/eZmax_API_Definition.namedCredential-meta.xml
 sfdx-project.json

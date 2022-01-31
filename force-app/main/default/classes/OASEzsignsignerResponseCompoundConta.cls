@@ -15,6 +15,12 @@
  */
 public class OASEzsignsignerResponseCompoundConta {
     /**
+     * The unique ID of the Contact
+     * @return pkiContactID
+     */
+    public Integer pkiContactID { get; set; }
+
+    /**
      * The First name of the contact
      * @return sContactFirstname
      */
@@ -54,6 +60,7 @@ public class OASEzsignsignerResponseCompoundConta {
 
     public static OASEzsignsignerResponseCompoundConta getExample() {
         OASEzsignsignerResponseCompoundConta ezsignsignerResponseCompoundContact = new OASEzsignsignerResponseCompoundConta();
+          ezsignsignerResponseCompoundContact.pkiContactID = 21;
           ezsignsignerResponseCompoundContact.sContactFirstname = 'John';
           ezsignsignerResponseCompoundContact.sContactLastname = 'Doe';
           ezsignsignerResponseCompoundContact.fkiLanguageID = 2;
@@ -66,7 +73,8 @@ public class OASEzsignsignerResponseCompoundConta {
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignerResponseCompoundConta) {           
             OASEzsignsignerResponseCompoundConta ezsignsignerResponseCompoundContact = (OASEzsignsignerResponseCompoundConta) obj;
-            return this.sContactFirstname == ezsignsignerResponseCompoundContact.sContactFirstname
+            return this.pkiContactID == ezsignsignerResponseCompoundContact.pkiContactID
+                && this.sContactFirstname == ezsignsignerResponseCompoundContact.sContactFirstname
                 && this.sContactLastname == ezsignsignerResponseCompoundContact.sContactLastname
                 && this.fkiLanguageID == ezsignsignerResponseCompoundContact.fkiLanguageID
                 && this.sEmailAddress == ezsignsignerResponseCompoundContact.sEmailAddress
@@ -78,6 +86,7 @@ public class OASEzsignsignerResponseCompoundConta {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiContactID == null ? 0 : System.hashCode(pkiContactID));
         hashCode = (17 * hashCode) + (sContactFirstname == null ? 0 : System.hashCode(sContactFirstname));
         hashCode = (17 * hashCode) + (sContactLastname == null ? 0 : System.hashCode(sContactLastname));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));

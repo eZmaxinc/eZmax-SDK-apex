@@ -267,6 +267,7 @@ Class | Method | HTTP request | Description
  - [OASWebhookUserUserCreated](OASWebhookUserUserCreated.md)
  - [OASWebhookUserUserCreatedAllOf](OASWebhookUserUserCreatedAllOf.md)
  - [OASWebsiteRequest](OASWebsiteRequest.md)
+ - [OASXxxx](OASXxxx.md)
 
 
 ## Documentation for Authorization
