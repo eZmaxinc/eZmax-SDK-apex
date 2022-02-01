@@ -13,7 +13,7 @@
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequest, OAS.MappedProperties {
+public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequestCompoundAll, OASEzsignsignatureRequest, OAS.MappedProperties {
     /**
      * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is "Name" or "Handwritten")
      * @return bEzsignsignatureCustomdate

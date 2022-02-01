@@ -229,6 +229,10 @@ force-app/main/default/classes/OASEzsigndocumentResponse.cls
 force-app/main/default/classes/OASEzsigndocumentResponse.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentResponseCompound.cls
 force-app/main/default/classes/OASEzsigndocumentResponseCompound.cls-meta.xml
+force-app/main/default/classes/OASEzsigndocumentResponseCompoundAll.cls
+force-app/main/default/classes/OASEzsigndocumentResponseCompoundAll.cls-meta.xml
+force-app/main/default/classes/OASEzsigndocumentResponseCompoundAllTest.cls
+force-app/main/default/classes/OASEzsigndocumentResponseCompoundAllTest.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentResponseCompoundTest.cls
 force-app/main/default/classes/OASEzsigndocumentResponseCompoundTest.cls-meta.xml
 force-app/main/default/classes/OASEzsigndocumentResponseTest.cls
@@ -385,6 +389,10 @@ force-app/main/default/classes/OASEzsignsignatureRequest.cls
 force-app/main/default/classes/OASEzsignsignatureRequest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureRequestCompound.cls
 force-app/main/default/classes/OASEzsignsignatureRequestCompound.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignatureRequestCompoundAll.cls
+force-app/main/default/classes/OASEzsignsignatureRequestCompoundAll.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignatureRequestCompoundAllTest.cls
+force-app/main/default/classes/OASEzsignsignatureRequestCompoundAllTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureRequestCompoundTest.cls
 force-app/main/default/classes/OASEzsignsignatureRequestCompoundTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureRequestTest.cls
@@ -433,6 +441,10 @@ force-app/main/default/classes/OASEzsigntemplatepackageListElement.cls
 force-app/main/default/classes/OASEzsigntemplatepackageListElement.cls-meta.xml
 force-app/main/default/classes/OASEzsigntemplatepackageListElementTest.cls
 force-app/main/default/classes/OASEzsigntemplatepackageListElementTest.cls-meta.xml
+force-app/main/default/classes/OASFieldEActivesessionWeekdaystart.cls
+force-app/main/default/classes/OASFieldEActivesessionWeekdaystart.cls-meta.xml
+force-app/main/default/classes/OASFieldEActivesessionWeekdaystartTest.cls
+force-app/main/default/classes/OASFieldEActivesessionWeekdaystartTest.cls-meta.xml
 force-app/main/default/classes/OASFieldEEzsigndocumentStep.cls
 force-app/main/default/classes/OASFieldEEzsigndocumentStep.cls-meta.xml
 force-app/main/default/classes/OASFieldEEzsigndocumentStepTest.cls

@@ -13,7 +13,7 @@
 /**
  * An Ezsigndocument Object and children to create a complete structure
  */
-public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentResponse, OAS.MappedProperties {
+public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentResponseCompoundAll, OASEzsigndocumentResponse, OAS.MappedProperties {
     /**
      * The total number of steps in the form filling phase
      * @return iEzsigndocumentStepformtotal

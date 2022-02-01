@@ -2,70 +2,70 @@
 private class OASEzsignfoldersignerassociationRespTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser1 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser2 = ezsignfoldersignerassociationResponseCompoundUser1;
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser3 = new OASEzsignfoldersignerassociationResp();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser4 = ezsignfoldersignerassociationResponseCompoundUser3;
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf1 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf2 = ezsignfoldersignerassociationResponseCompoundAllOf1;
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf3 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf4 = ezsignfoldersignerassociationResponseCompoundAllOf3;
 
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser1.equals(ezsignfoldersignerassociationResponseCompoundUser2));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser2.equals(ezsignfoldersignerassociationResponseCompoundUser1));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser1.equals(ezsignfoldersignerassociationResponseCompoundUser1));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser3.equals(ezsignfoldersignerassociationResponseCompoundUser4));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser4.equals(ezsignfoldersignerassociationResponseCompoundUser3));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser3.equals(ezsignfoldersignerassociationResponseCompoundUser3));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf1.equals(ezsignfoldersignerassociationResponseCompoundAllOf2));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf2.equals(ezsignfoldersignerassociationResponseCompoundAllOf1));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf1.equals(ezsignfoldersignerassociationResponseCompoundAllOf1));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf3.equals(ezsignfoldersignerassociationResponseCompoundAllOf4));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf4.equals(ezsignfoldersignerassociationResponseCompoundAllOf3));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf3.equals(ezsignfoldersignerassociationResponseCompoundAllOf3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser1 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser2 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser3 = new OASEzsignfoldersignerassociationResp();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser4 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf1 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf2 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf3 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf4 = new OASEzsignfoldersignerassociationResp();
 
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser1.equals(ezsignfoldersignerassociationResponseCompoundUser2));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser2.equals(ezsignfoldersignerassociationResponseCompoundUser1));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser3.equals(ezsignfoldersignerassociationResponseCompoundUser4));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser4.equals(ezsignfoldersignerassociationResponseCompoundUser3));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf1.equals(ezsignfoldersignerassociationResponseCompoundAllOf2));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf2.equals(ezsignfoldersignerassociationResponseCompoundAllOf1));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf3.equals(ezsignfoldersignerassociationResponseCompoundAllOf4));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf4.equals(ezsignfoldersignerassociationResponseCompoundAllOf3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser1 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser2 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf1 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf2 = new OASEzsignfoldersignerassociationResp();
 
-        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundUser1.equals('foo'));
-        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundUser2.equals('foo'));
+        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundAllOf1.equals('foo'));
+        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundAllOf2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser1 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser2 = new OASEzsignfoldersignerassociationResp();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser3;
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf1 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf2 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf3;
 
-        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundUser1.equals(ezsignfoldersignerassociationResponseCompoundUser3));
-        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundUser2.equals(ezsignfoldersignerassociationResponseCompoundUser3));
+        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundAllOf1.equals(ezsignfoldersignerassociationResponseCompoundAllOf3));
+        System.assertEquals(false, ezsignfoldersignerassociationResponseCompoundAllOf2.equals(ezsignfoldersignerassociationResponseCompoundAllOf3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser1 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser2 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf1 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf2 = new OASEzsignfoldersignerassociationResp();
 
-        System.assertEquals(ezsignfoldersignerassociationResponseCompoundUser1.hashCode(), ezsignfoldersignerassociationResponseCompoundUser1.hashCode());
-        System.assertEquals(ezsignfoldersignerassociationResponseCompoundUser2.hashCode(), ezsignfoldersignerassociationResponseCompoundUser2.hashCode());
+        System.assertEquals(ezsignfoldersignerassociationResponseCompoundAllOf1.hashCode(), ezsignfoldersignerassociationResponseCompoundAllOf1.hashCode());
+        System.assertEquals(ezsignfoldersignerassociationResponseCompoundAllOf2.hashCode(), ezsignfoldersignerassociationResponseCompoundAllOf2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser1 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser2 = OASEzsignfoldersignerassociationResp.getExample();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser3 = new OASEzsignfoldersignerassociationResp();
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser4 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf1 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf2 = OASEzsignfoldersignerassociationResp.getExample();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf3 = new OASEzsignfoldersignerassociationResp();
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf4 = new OASEzsignfoldersignerassociationResp();
 
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser1.equals(ezsignfoldersignerassociationResponseCompoundUser2));
-        System.assert(ezsignfoldersignerassociationResponseCompoundUser3.equals(ezsignfoldersignerassociationResponseCompoundUser4));
-        System.assertEquals(ezsignfoldersignerassociationResponseCompoundUser1.hashCode(), ezsignfoldersignerassociationResponseCompoundUser2.hashCode());
-        System.assertEquals(ezsignfoldersignerassociationResponseCompoundUser3.hashCode(), ezsignfoldersignerassociationResponseCompoundUser4.hashCode());
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf1.equals(ezsignfoldersignerassociationResponseCompoundAllOf2));
+        System.assert(ezsignfoldersignerassociationResponseCompoundAllOf3.equals(ezsignfoldersignerassociationResponseCompoundAllOf4));
+        System.assertEquals(ezsignfoldersignerassociationResponseCompoundAllOf1.hashCode(), ezsignfoldersignerassociationResponseCompoundAllOf2.hashCode());
+        System.assertEquals(ezsignfoldersignerassociationResponseCompoundAllOf3.hashCode(), ezsignfoldersignerassociationResponseCompoundAllOf4.hashCode());
     }
 }

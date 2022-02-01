@@ -11,70 +11,41 @@
  */
 
 /**
- * A Ezsignfoldersignerassociation-&gt;User Object and children to create a complete structure
+ * OASEzsignfoldersignerassociationResp
  */
 public class OASEzsignfoldersignerassociationResp {
     /**
-     * The unique ID of the User
-     * @return pkiUserID
+     * Get objUser
+     * @return objUser
      */
-    public Integer pkiUserID { get; set; }
+    public OASEzsignfoldersignerassociationResp objUser { get; set; }
 
     /**
-     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
-     * minimum: 1
-     * maximum: 2
-     * @return fkiLanguageID
+     * Get objEzsignsigner
+     * @return objEzsignsigner
      */
-    public Integer fkiLanguageID { get; set; }
-
-    /**
-     * The First name of the user
-     * @return sUserFirstname
-     */
-    public String sUserFirstname { get; set; }
-
-    /**
-     * The Last name of the user
-     * @return sUserLastname
-     */
-    public String sUserLastname { get; set; }
-
-    /**
-     * The email address.
-     * @return sEmailAddress
-     */
-    public String sEmailAddress { get; set; }
+    public OASEzsignsignerResponseCompound objEzsignsigner { get; set; }
 
     public static OASEzsignfoldersignerassociationResp getExample() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser = new OASEzsignfoldersignerassociationResp();
-          ezsignfoldersignerassociationResponseCompoundUser.pkiUserID = 70;
-          ezsignfoldersignerassociationResponseCompoundUser.fkiLanguageID = 2;
-          ezsignfoldersignerassociationResponseCompoundUser.sUserFirstname = 'John';
-          ezsignfoldersignerassociationResponseCompoundUser.sUserLastname = 'Doe';
-          ezsignfoldersignerassociationResponseCompoundUser.sEmailAddress = 'example@domain.com';
-        return ezsignfoldersignerassociationResponseCompoundUser;
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf = new OASEzsignfoldersignerassociationResp();
+          ezsignfoldersignerassociationResponseCompoundAllOf.objUser = OASEzsignfoldersignerassociationResp.getExample();
+          ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsigner = OASEzsignsignerResponseCompound.getExample();
+        return ezsignfoldersignerassociationResponseCompoundAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldersignerassociationResp) {           
-            OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser = (OASEzsignfoldersignerassociationResp) obj;
-            return this.pkiUserID == ezsignfoldersignerassociationResponseCompoundUser.pkiUserID
-                && this.fkiLanguageID == ezsignfoldersignerassociationResponseCompoundUser.fkiLanguageID
-                && this.sUserFirstname == ezsignfoldersignerassociationResponseCompoundUser.sUserFirstname
-                && this.sUserLastname == ezsignfoldersignerassociationResponseCompoundUser.sUserLastname
-                && this.sEmailAddress == ezsignfoldersignerassociationResponseCompoundUser.sEmailAddress;
+            OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf = (OASEzsignfoldersignerassociationResp) obj;
+            return this.objUser == ezsignfoldersignerassociationResponseCompoundAllOf.objUser
+                && this.objEzsignsigner == ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsigner;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (pkiUserID == null ? 0 : System.hashCode(pkiUserID));
-        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
-        hashCode = (17 * hashCode) + (sUserFirstname == null ? 0 : System.hashCode(sUserFirstname));
-        hashCode = (17 * hashCode) + (sUserLastname == null ? 0 : System.hashCode(sUserLastname));
-        hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
+        hashCode = (17 * hashCode) + (objUser == null ? 0 : System.hashCode(objUser));
+        hashCode = (17 * hashCode) + (objEzsignsigner == null ? 0 : System.hashCode(objEzsignsigner));
         return hashCode;
     }
 }
