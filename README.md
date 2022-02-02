@@ -117,6 +117,11 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [OASActivesessionGetCurrentV1Response](OASActivesessionGetCurrentV1Response.md)
+ - [OASActivesessionResponse](OASActivesessionResponse.md)
+ - [OASActivesessionResponseCompound](OASActivesessionResponseCompound.md)
+ - [OASActivesessionResponseCompoundAllO](OASActivesessionResponseCompoundAllO.md)
+ - [OASActivesessionResponseCompoundApik](OASActivesessionResponseCompoundApik.md)
+ - [OASActivesessionResponseCompoundUser](OASActivesessionResponseCompoundUser.md)
  - [OASAddressRequest](OASAddressRequest.md)
  - [OASApikeyCreateObjectV1Request](OASApikeyCreateObjectV1Request.md)
  - [OASApikeyCreateObjectV1Response](OASApikeyCreateObjectV1Response.md)
@@ -225,6 +230,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignerResponseCompoundConta](OASEzsignsignerResponseCompoundConta.md)
  - [OASEzsigntemplatepackageGetListV1Res](OASEzsigntemplatepackageGetListV1Res.md)
  - [OASEzsigntemplatepackageListElement](OASEzsigntemplatepackageListElement.md)
+ - [OASFieldEActivesessionSessiontype](OASFieldEActivesessionSessiontype.md)
  - [OASFieldEActivesessionWeekdaystart](OASFieldEActivesessionWeekdaystart.md)
  - [OASFieldEEzsigndocumentStep](OASFieldEEzsigndocumentStep.md)
  - [OASFieldEEzsignfolderSendreminderfre](OASFieldEEzsignfolderSendreminderfre.md)
@@ -270,7 +276,6 @@ Class | Method | HTTP request | Description
  - [OASWebhookUserUserCreated](OASWebhookUserUserCreated.md)
  - [OASWebhookUserUserCreatedAllOf](OASWebhookUserUserCreatedAllOf.md)
  - [OASWebsiteRequest](OASWebsiteRequest.md)
- - [OASXxxx](OASXxxx.md)
 
 
 ## Documentation for Authorization
