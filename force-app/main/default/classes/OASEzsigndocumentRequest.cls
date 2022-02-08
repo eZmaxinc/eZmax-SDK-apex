@@ -15,6 +15,12 @@
  */
 public class OASEzsigndocumentRequest {
     /**
+     * The unique ID of the Ezsigndocument
+     * @return pkiEzsigndocumentID
+     */
+    public Integer pkiEzsigndocumentID { get; set; }
+
+    /**
      * Indicates where to look for the document binary content.
      */
     public enum EEzsigndocumentSourceEnum {
@@ -98,6 +104,7 @@ public class OASEzsigndocumentRequest {
 
     public static OASEzsigndocumentRequest getExample() {
         OASEzsigndocumentRequest ezsigndocumentRequest = new OASEzsigndocumentRequest();
+          ezsigndocumentRequest.pkiEzsigndocumentID = 97;
           ezsigndocumentRequest.eEzsigndocumentSource = EEzsigndocumentSourceEnum.BASE64;
           ezsigndocumentRequest.eEzsigndocumentFormat = EEzsigndocumentFormatEnum.PDF;
           ezsigndocumentRequest.sEzsigndocumentBase64 = EncodingUtil.base64Decode('VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wZWQgb3ZlciB0aGUgbGF6eSBkb2cu');
@@ -114,7 +121,8 @@ public class OASEzsigndocumentRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentRequest) {           
             OASEzsigndocumentRequest ezsigndocumentRequest = (OASEzsigndocumentRequest) obj;
-            return this.eEzsigndocumentSource == ezsigndocumentRequest.eEzsigndocumentSource
+            return this.pkiEzsigndocumentID == ezsigndocumentRequest.pkiEzsigndocumentID
+                && this.eEzsigndocumentSource == ezsigndocumentRequest.eEzsigndocumentSource
                 && this.eEzsigndocumentFormat == ezsigndocumentRequest.eEzsigndocumentFormat
                 && this.sEzsigndocumentBase64 == ezsigndocumentRequest.sEzsigndocumentBase64
                 && this.sEzsigndocumentUrl == ezsigndocumentRequest.sEzsigndocumentUrl
@@ -130,6 +138,7 @@ public class OASEzsigndocumentRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsigndocumentID == null ? 0 : System.hashCode(pkiEzsigndocumentID));
         hashCode = (17 * hashCode) + (eEzsigndocumentSource == null ? 0 : System.hashCode(eEzsigndocumentSource));
         hashCode = (17 * hashCode) + (eEzsigndocumentFormat == null ? 0 : System.hashCode(eEzsigndocumentFormat));
         hashCode = (17 * hashCode) + (sEzsigndocumentBase64 == null ? 0 : System.hashCode(sEzsigndocumentBase64));

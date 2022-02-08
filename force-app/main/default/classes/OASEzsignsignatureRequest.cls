@@ -15,6 +15,12 @@
  */
 public class OASEzsignsignatureRequest {
     /**
+     * The unique ID of the Ezsignsignature
+     * @return pkiEzsignsignatureID
+     */
+    public Integer pkiEzsignsignatureID { get; set; }
+
+    /**
      * The unique ID of the Ezsignfoldersignerassociation
      * @return fkiEzsignfoldersignerassociationID
      */
@@ -58,6 +64,7 @@ public class OASEzsignsignatureRequest {
 
     public static OASEzsignsignatureRequest getExample() {
         OASEzsignsignatureRequest ezsignsignatureRequest = new OASEzsignsignatureRequest();
+          ezsignsignatureRequest.pkiEzsignsignatureID = 49;
           ezsignsignatureRequest.fkiEzsignfoldersignerassociationID = 20;
           ezsignsignatureRequest.iEzsignpagePagenumber = 1;
           ezsignsignatureRequest.iEzsignsignatureX = 200;
@@ -71,7 +78,8 @@ public class OASEzsignsignatureRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignatureRequest) {           
             OASEzsignsignatureRequest ezsignsignatureRequest = (OASEzsignsignatureRequest) obj;
-            return this.fkiEzsignfoldersignerassociationID == ezsignsignatureRequest.fkiEzsignfoldersignerassociationID
+            return this.pkiEzsignsignatureID == ezsignsignatureRequest.pkiEzsignsignatureID
+                && this.fkiEzsignfoldersignerassociationID == ezsignsignatureRequest.fkiEzsignfoldersignerassociationID
                 && this.iEzsignpagePagenumber == ezsignsignatureRequest.iEzsignpagePagenumber
                 && this.iEzsignsignatureX == ezsignsignatureRequest.iEzsignsignatureX
                 && this.iEzsignsignatureY == ezsignsignatureRequest.iEzsignsignatureY
@@ -84,6 +92,7 @@ public class OASEzsignsignatureRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignsignatureID == null ? 0 : System.hashCode(pkiEzsignsignatureID));
         hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationID));
         hashCode = (17 * hashCode) + (iEzsignpagePagenumber == null ? 0 : System.hashCode(iEzsignpagePagenumber));
         hashCode = (17 * hashCode) + (iEzsignsignatureX == null ? 0 : System.hashCode(iEzsignsignatureX));

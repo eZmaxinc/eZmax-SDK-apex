@@ -15,6 +15,12 @@
  */
 public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentRequest {
     /**
+     * The unique ID of the Ezsigndocument
+     * @return pkiEzsigndocumentID
+     */
+    public Integer pkiEzsigndocumentID { get; set; }
+
+    /**
      * Indicates where to look for the document binary content.
      */
     public enum EEzsigndocumentSourceEnum {
@@ -98,6 +104,7 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
 
     public static OASEzsigndocumentRequestCompound getExample() {
         OASEzsigndocumentRequestCompound ezsigndocumentRequestCompound = new OASEzsigndocumentRequestCompound();
+          ezsigndocumentRequestCompound.pkiEzsigndocumentID = 97;
           ezsigndocumentRequestCompound.eEzsigndocumentSource = EEzsigndocumentSourceEnum.BASE64;
           ezsigndocumentRequestCompound.eEzsigndocumentFormat = EEzsigndocumentFormatEnum.PDF;
           ezsigndocumentRequestCompound.sEzsigndocumentBase64 = EncodingUtil.base64Decode('VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wZWQgb3ZlciB0aGUgbGF6eSBkb2cu');
@@ -114,7 +121,8 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentRequestCompound) {           
             OASEzsigndocumentRequestCompound ezsigndocumentRequestCompound = (OASEzsigndocumentRequestCompound) obj;
-            return this.eEzsigndocumentSource == ezsigndocumentRequestCompound.eEzsigndocumentSource
+            return this.pkiEzsigndocumentID == ezsigndocumentRequestCompound.pkiEzsigndocumentID
+                && this.eEzsigndocumentSource == ezsigndocumentRequestCompound.eEzsigndocumentSource
                 && this.eEzsigndocumentFormat == ezsigndocumentRequestCompound.eEzsigndocumentFormat
                 && this.sEzsigndocumentBase64 == ezsigndocumentRequestCompound.sEzsigndocumentBase64
                 && this.sEzsigndocumentUrl == ezsigndocumentRequestCompound.sEzsigndocumentUrl
@@ -130,6 +138,7 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsigndocumentID == null ? 0 : System.hashCode(pkiEzsigndocumentID));
         hashCode = (17 * hashCode) + (eEzsigndocumentSource == null ? 0 : System.hashCode(eEzsigndocumentSource));
         hashCode = (17 * hashCode) + (eEzsigndocumentFormat == null ? 0 : System.hashCode(eEzsigndocumentFormat));
         hashCode = (17 * hashCode) + (sEzsigndocumentBase64 == null ? 0 : System.hashCode(sEzsigndocumentBase64));

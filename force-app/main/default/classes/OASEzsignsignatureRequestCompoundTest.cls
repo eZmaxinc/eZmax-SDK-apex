@@ -81,6 +81,7 @@ private class OASEzsignsignatureRequestCompoundTest {
         OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = new OASEzsignsignatureRequestCompound();
         System.assertEquals(new List<OASEzsignsignaturecustomdateRequest>(), ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate);
         System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
+        System.assertEquals(null, ezsignsignatureRequestCompound.pkiEzsignsignatureID);
         System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignpagePagenumber);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureX);

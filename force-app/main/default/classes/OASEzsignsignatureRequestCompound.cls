@@ -27,6 +27,12 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public List<OASEzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate { get; set; }
 
     /**
+     * The unique ID of the Ezsignsignature
+     * @return pkiEzsignsignatureID
+     */
+    public Integer pkiEzsignsignatureID { get; set; }
+
+    /**
      * The unique ID of the Ezsignfoldersignerassociation
      * @return fkiEzsignfoldersignerassociationID
      */
@@ -84,6 +90,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
         OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = new OASEzsignsignatureRequestCompound();
           ezsignsignatureRequestCompound.bEzsignsignatureCustomdate = true;
           ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequest>{OASEzsignsignaturecustomdateRequest.getExample()};
+          ezsignsignatureRequestCompound.pkiEzsignsignatureID = 49;
           ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID = 20;
           ezsignsignatureRequestCompound.iEzsignpagePagenumber = 1;
           ezsignsignatureRequestCompound.iEzsignsignatureX = 200;
@@ -99,6 +106,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
             OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = (OASEzsignsignatureRequestCompound) obj;
             return this.bEzsignsignatureCustomdate == ezsignsignatureRequestCompound.bEzsignsignatureCustomdate
                 && this.aObjEzsignsignaturecustomdate == ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate
+                && this.pkiEzsignsignatureID == ezsignsignatureRequestCompound.pkiEzsignsignatureID
                 && this.fkiEzsignfoldersignerassociationID == ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID
                 && this.iEzsignpagePagenumber == ezsignsignatureRequestCompound.iEzsignpagePagenumber
                 && this.iEzsignsignatureX == ezsignsignatureRequestCompound.iEzsignsignatureX
@@ -114,6 +122,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
         hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
+        hashCode = (17 * hashCode) + (pkiEzsignsignatureID == null ? 0 : System.hashCode(pkiEzsignsignatureID));
         hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationID));
         hashCode = (17 * hashCode) + (iEzsignpagePagenumber == null ? 0 : System.hashCode(iEzsignpagePagenumber));
         hashCode = (17 * hashCode) + (iEzsignsignatureX == null ? 0 : System.hashCode(iEzsignsignatureX));

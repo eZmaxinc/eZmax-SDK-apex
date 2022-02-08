@@ -75,6 +75,34 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
+     * Edit an Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param oaSEzsignfolderEditObjectV1Request  (required)
+     * @return OASEzsignfolderEditObjectV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        client.assertNotNull(params.get('oaSEzsignfolderEditObjectV1Request'), 'oaSEzsignfolderEditObjectV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderEditObjectV1Response) client.invoke(
+            'PUT', '/1/object/ezsignfolder/{pkiEzsignfolderID}',
+            (OASEzsignfolderEditObjectV1Request) params.get('oaSEzsignfolderEditObjectV1Request'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignfolderEditObjectV1Response.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
      * 
      * @param pkiEzsignfolderID  (required)

@@ -15,6 +15,12 @@
  */
 public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
     /**
+     * The unique ID of the Ezsignfolder
+     * @return pkiEzsignfolderID
+     */
+    public Integer pkiEzsignfolderID { get; set; }
+
+    /**
      * The unique ID of the Ezsignfoldertype.
      * @return fkiEzsignfoldertypeID
      */
@@ -48,6 +54,7 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
 
     public static OASEzsignfolderRequestCompound getExample() {
         OASEzsignfolderRequestCompound ezsignfolderRequestCompound = new OASEzsignfolderRequestCompound();
+          ezsignfolderRequestCompound.pkiEzsignfolderID = 33;
           ezsignfolderRequestCompound.fkiEzsignfoldertypeID = 5;
           ezsignfolderRequestCompound.fkiEzsigntsarequirementID = 92;
           ezsignfolderRequestCompound.sEzsignfolderDescription = 'Test eZsign Folder';
@@ -59,7 +66,8 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderRequestCompound) {           
             OASEzsignfolderRequestCompound ezsignfolderRequestCompound = (OASEzsignfolderRequestCompound) obj;
-            return this.fkiEzsignfoldertypeID == ezsignfolderRequestCompound.fkiEzsignfoldertypeID
+            return this.pkiEzsignfolderID == ezsignfolderRequestCompound.pkiEzsignfolderID
+                && this.fkiEzsignfoldertypeID == ezsignfolderRequestCompound.fkiEzsignfoldertypeID
                 && this.fkiEzsigntsarequirementID == ezsignfolderRequestCompound.fkiEzsigntsarequirementID
                 && this.sEzsignfolderDescription == ezsignfolderRequestCompound.sEzsignfolderDescription
                 && this.tEzsignfolderNote == ezsignfolderRequestCompound.tEzsignfolderNote
@@ -70,6 +78,7 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignfolderID == null ? 0 : System.hashCode(pkiEzsignfolderID));
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
         hashCode = (17 * hashCode) + (fkiEzsigntsarequirementID == null ? 0 : System.hashCode(fkiEzsigntsarequirementID));
         hashCode = (17 * hashCode) + (sEzsignfolderDescription == null ? 0 : System.hashCode(sEzsignfolderDescription));

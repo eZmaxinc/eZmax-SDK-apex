@@ -15,6 +15,12 @@
  */
 public class OASFranchisereferalincomeRequest {
     /**
+     * The unique ID of the Franchisereferalincome
+     * @return pkiFranchisereferalincomeID
+     */
+    public Integer pkiFranchisereferalincomeID { get; set; }
+
+    /**
      * The unique ID of the Franchisebroker
      * @return fkiFranchisebrokerID
      */
@@ -82,6 +88,7 @@ public class OASFranchisereferalincomeRequest {
 
     public static OASFranchisereferalincomeRequest getExample() {
         OASFranchisereferalincomeRequest franchisereferalincomeRequest = new OASFranchisereferalincomeRequest();
+          franchisereferalincomeRequest.pkiFranchisereferalincomeID = 35;
           franchisereferalincomeRequest.fkiFranchisebrokerID = 61;
           franchisereferalincomeRequest.fkiFranchisereferalincomeprogramID = 51;
           franchisereferalincomeRequest.fkiPeriodID = 21;
@@ -99,7 +106,8 @@ public class OASFranchisereferalincomeRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASFranchisereferalincomeRequest) {           
             OASFranchisereferalincomeRequest franchisereferalincomeRequest = (OASFranchisereferalincomeRequest) obj;
-            return this.fkiFranchisebrokerID == franchisereferalincomeRequest.fkiFranchisebrokerID
+            return this.pkiFranchisereferalincomeID == franchisereferalincomeRequest.pkiFranchisereferalincomeID
+                && this.fkiFranchisebrokerID == franchisereferalincomeRequest.fkiFranchisebrokerID
                 && this.fkiFranchisereferalincomeprogramID == franchisereferalincomeRequest.fkiFranchisereferalincomeprogramID
                 && this.fkiPeriodID == franchisereferalincomeRequest.fkiPeriodID
                 && this.dFranchisereferalincomeLoan == franchisereferalincomeRequest.dFranchisereferalincomeLoan
@@ -116,6 +124,7 @@ public class OASFranchisereferalincomeRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiFranchisereferalincomeID == null ? 0 : System.hashCode(pkiFranchisereferalincomeID));
         hashCode = (17 * hashCode) + (fkiFranchisebrokerID == null ? 0 : System.hashCode(fkiFranchisebrokerID));
         hashCode = (17 * hashCode) + (fkiFranchisereferalincomeprogramID == null ? 0 : System.hashCode(fkiFranchisereferalincomeprogramID));
         hashCode = (17 * hashCode) + (fkiPeriodID == null ? 0 : System.hashCode(fkiPeriodID));

@@ -15,6 +15,12 @@
  */
 public class OASEzsignfolderRequest {
     /**
+     * The unique ID of the Ezsignfolder
+     * @return pkiEzsignfolderID
+     */
+    public Integer pkiEzsignfolderID { get; set; }
+
+    /**
      * The unique ID of the Ezsignfoldertype.
      * @return fkiEzsignfoldertypeID
      */
@@ -48,6 +54,7 @@ public class OASEzsignfolderRequest {
 
     public static OASEzsignfolderRequest getExample() {
         OASEzsignfolderRequest ezsignfolderRequest = new OASEzsignfolderRequest();
+          ezsignfolderRequest.pkiEzsignfolderID = 33;
           ezsignfolderRequest.fkiEzsignfoldertypeID = 5;
           ezsignfolderRequest.fkiEzsigntsarequirementID = 92;
           ezsignfolderRequest.sEzsignfolderDescription = 'Test eZsign Folder';
@@ -59,7 +66,8 @@ public class OASEzsignfolderRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderRequest) {           
             OASEzsignfolderRequest ezsignfolderRequest = (OASEzsignfolderRequest) obj;
-            return this.fkiEzsignfoldertypeID == ezsignfolderRequest.fkiEzsignfoldertypeID
+            return this.pkiEzsignfolderID == ezsignfolderRequest.pkiEzsignfolderID
+                && this.fkiEzsignfoldertypeID == ezsignfolderRequest.fkiEzsignfoldertypeID
                 && this.fkiEzsigntsarequirementID == ezsignfolderRequest.fkiEzsigntsarequirementID
                 && this.sEzsignfolderDescription == ezsignfolderRequest.sEzsignfolderDescription
                 && this.tEzsignfolderNote == ezsignfolderRequest.tEzsignfolderNote
@@ -70,6 +78,7 @@ public class OASEzsignfolderRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignfolderID == null ? 0 : System.hashCode(pkiEzsignfolderID));
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
         hashCode = (17 * hashCode) + (fkiEzsigntsarequirementID == null ? 0 : System.hashCode(fkiEzsigntsarequirementID));
         hashCode = (17 * hashCode) + (sEzsignfolderDescription == null ? 0 : System.hashCode(sEzsignfolderDescription));

@@ -15,6 +15,12 @@
  */
 public class OASApikeyRequest {
     /**
+     * The unique ID of the Apikey
+     * @return pkiApikeyID
+     */
+    public Integer pkiApikeyID { get; set; }
+
+    /**
      * The unique ID of the User
      * @return fkiUserID
      */
@@ -28,6 +34,7 @@ public class OASApikeyRequest {
 
     public static OASApikeyRequest getExample() {
         OASApikeyRequest apikeyRequest = new OASApikeyRequest();
+          apikeyRequest.pkiApikeyID = 99;
           apikeyRequest.fkiUserID = 70;
           apikeyRequest.objApikeyDescription = OASMultilingualApikeyDescription.getExample();
         return apikeyRequest;
@@ -36,7 +43,8 @@ public class OASApikeyRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASApikeyRequest) {           
             OASApikeyRequest apikeyRequest = (OASApikeyRequest) obj;
-            return this.fkiUserID == apikeyRequest.fkiUserID
+            return this.pkiApikeyID == apikeyRequest.pkiApikeyID
+                && this.fkiUserID == apikeyRequest.fkiUserID
                 && this.objApikeyDescription == apikeyRequest.objApikeyDescription;
         }
         return false;
@@ -44,6 +52,7 @@ public class OASApikeyRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiApikeyID == null ? 0 : System.hashCode(pkiApikeyID));
         hashCode = (17 * hashCode) + (fkiUserID == null ? 0 : System.hashCode(fkiUserID));
         hashCode = (17 * hashCode) + (objApikeyDescription == null ? 0 : System.hashCode(objApikeyDescription));
         return hashCode;

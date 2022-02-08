@@ -74,6 +74,7 @@ private class OASEzsigndocumentRequestTest {
         OASEzsigndocumentRequest ezsigndocumentRequest = new OASEzsigndocumentRequest();
         System.assertEquals(true, ezsigndocumentRequest.bEzsigndocumentForcerepair);
         System.assertEquals('', ezsigndocumentRequest.sEzsigndocumentPassword);
+        System.assertEquals(null, ezsigndocumentRequest.pkiEzsigndocumentID);
         System.assertEquals(null, ezsigndocumentRequest.eEzsigndocumentSource);
         System.assertEquals(null, ezsigndocumentRequest.eEzsigndocumentFormat);
         System.assertEquals(null, ezsigndocumentRequest.sEzsigndocumentBase64);
