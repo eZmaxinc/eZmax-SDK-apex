@@ -318,4 +318,40 @@ private class OASObjectEzsigndocumentApiTest {
         response = (OASEzsigndocumentGetWordsPositionsV1) api.ezsigndocumentGetWordsPositionsV1(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Patch an existing Ezsigndocument
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigndocumentPatchObjectV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'oaSEzsigndocumentPatchObjectV1Reques' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentPatchObjectV1Respon response;
+        OASEzsigndocumentPatchObjectV1Respon expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentPatchObjectV1Respon.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentPatchObjectV1Respon.getExample();
+        response = (OASEzsigndocumentPatchObjectV1Respon) api.ezsigndocumentPatchObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }

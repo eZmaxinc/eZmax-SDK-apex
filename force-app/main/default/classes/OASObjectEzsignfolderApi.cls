@@ -75,7 +75,7 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
-     * Edit an Ezsignfolder
+     * Modify an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)
      * @param oaSEzsignfolderEditObjectV1Request  (required)

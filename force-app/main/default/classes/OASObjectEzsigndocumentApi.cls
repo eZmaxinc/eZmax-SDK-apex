@@ -261,4 +261,32 @@ public class OASObjectEzsigndocumentApi {
             OASEzsigndocumentGetWordsPositionsV1.class
         );
     }
+    /**
+     * Patch an existing Ezsigndocument
+     * 
+     * @param pkiEzsigndocumentID  (required)
+     * @param oaSEzsigndocumentPatchObjectV1Reques  (required)
+     * @return OASEzsigndocumentPatchObjectV1Respon
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentPatchObjectV1Respon ezsigndocumentPatchObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        client.assertNotNull(params.get('oaSEzsigndocumentPatchObjectV1Reques'), 'oaSEzsigndocumentPatchObjectV1Reques');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentPatchObjectV1Respon) client.invoke(
+            'PATCH', '/1/object/ezsigndocument/{pkiEzsigndocumentID}',
+            (OASEzsigndocumentPatchObjectV1Reques) params.get('oaSEzsigndocumentPatchObjectV1Reques'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentPatchObjectV1Respon.class
+        );
+    }
 }
