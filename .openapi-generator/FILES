@@ -421,6 +421,14 @@ force-app/main/default/classes/OASEzsignsignatureDeleteObjectV1Resp.cls
 force-app/main/default/classes/OASEzsignsignatureDeleteObjectV1Resp.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureDeleteObjectV1RespTest.cls
 force-app/main/default/classes/OASEzsignsignatureDeleteObjectV1RespTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1Reques.cls
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1Reques.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1RequesTest.cls
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1RequesTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1Respon.cls
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1Respon.cls-meta.xml
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1ResponTest.cls
+force-app/main/default/classes/OASEzsignsignatureEditObjectV1ResponTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureGetObjectV1Respons.cls
 force-app/main/default/classes/OASEzsignsignatureGetObjectV1Respons.cls-meta.xml
 force-app/main/default/classes/OASEzsignsignatureGetObjectV1ResponsTest.cls

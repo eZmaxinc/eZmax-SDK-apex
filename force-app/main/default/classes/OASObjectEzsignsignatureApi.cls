@@ -75,6 +75,34 @@ public class OASObjectEzsignsignatureApi {
         );
     }
     /**
+     * Edit an existing Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID  (required)
+     * @param oaSEzsignsignatureEditObjectV1Reques  (required)
+     * @return OASEzsignsignatureEditObjectV1Respon
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignsignatureEditObjectV1Respon ezsignsignatureEditObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignsignatureID'), 'pkiEzsignsignatureID');
+        client.assertNotNull(params.get('oaSEzsignsignatureEditObjectV1Reques'), 'oaSEzsignsignatureEditObjectV1Reques');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignsignatureEditObjectV1Respon) client.invoke(
+            'PUT', '/1/object/ezsignsignature/{pkiEzsignsignatureID}',
+            (OASEzsignsignatureEditObjectV1Reques) params.get('oaSEzsignsignatureEditObjectV1Reques'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignsignatureID' => (Integer) params.get('pkiEzsignsignatureID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignsignatureEditObjectV1Respon.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignsignature
      * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
      * @param pkiEzsignsignatureID  (required)
