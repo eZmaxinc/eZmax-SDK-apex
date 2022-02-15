@@ -15,6 +15,12 @@
  */
 public class OASEzsignsignaturecustomdateRequest {
     /**
+     * The unique ID of the Ezsignsignaturecustomdate
+     * @return pkiEzsignsignaturecustomdateID
+     */
+    public Integer pkiEzsignsignaturecustomdateID { get; set; }
+
+    /**
      * The X coordinate (Horizontal) where to put the custom date block on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the custom date block 2 inches from the left border of the page, you would use "200" for the X coordinate.
      * @return iEzsignsignaturecustomdateX
      */
@@ -34,6 +40,7 @@ public class OASEzsignsignaturecustomdateRequest {
 
     public static OASEzsignsignaturecustomdateRequest getExample() {
         OASEzsignsignaturecustomdateRequest ezsignsignaturecustomdateRequest = new OASEzsignsignaturecustomdateRequest();
+          ezsignsignaturecustomdateRequest.pkiEzsignsignaturecustomdateID = 27;
           ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX = 200;
           ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateY = 300;
           ezsignsignaturecustomdateRequest.sEzsignsignaturecustomdateFormat = 'Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}';
@@ -43,7 +50,8 @@ public class OASEzsignsignaturecustomdateRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignaturecustomdateRequest) {           
             OASEzsignsignaturecustomdateRequest ezsignsignaturecustomdateRequest = (OASEzsignsignaturecustomdateRequest) obj;
-            return this.iEzsignsignaturecustomdateX == ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX
+            return this.pkiEzsignsignaturecustomdateID == ezsignsignaturecustomdateRequest.pkiEzsignsignaturecustomdateID
+                && this.iEzsignsignaturecustomdateX == ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX
                 && this.iEzsignsignaturecustomdateY == ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateY
                 && this.sEzsignsignaturecustomdateFormat == ezsignsignaturecustomdateRequest.sEzsignsignaturecustomdateFormat;
         }
@@ -52,6 +60,7 @@ public class OASEzsignsignaturecustomdateRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignsignaturecustomdateID == null ? 0 : System.hashCode(pkiEzsignsignaturecustomdateID));
         hashCode = (17 * hashCode) + (iEzsignsignaturecustomdateX == null ? 0 : System.hashCode(iEzsignsignaturecustomdateX));
         hashCode = (17 * hashCode) + (iEzsignsignaturecustomdateY == null ? 0 : System.hashCode(iEzsignsignaturecustomdateY));
         hashCode = (17 * hashCode) + (sEzsignsignaturecustomdateFormat == null ? 0 : System.hashCode(sEzsignsignaturecustomdateFormat));
