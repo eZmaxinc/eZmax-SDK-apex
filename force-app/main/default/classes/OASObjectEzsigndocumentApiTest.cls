@@ -143,6 +143,42 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Edit multiple ezsignsignatures
+     *
+     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     */
+    @isTest
+    private static void ezsigndocumentEditEzsignsignaturesV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'oaSEzsignsignatureRequestCompound' => new List<OASEzsignsignatureRequestCompound>{OASEzsignsignatureRequestCompound.getExample()}
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentEditEzsignsignature response;
+        OASEzsigndocumentEditEzsignsignature expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentEditEzsignsignature.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentEditEzsignsignature.getExample();
+        response = (OASEzsigndocumentEditEzsignsignature) api.ezsigndocumentEditEzsignsignaturesV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve a URL to download documents.
      *
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.

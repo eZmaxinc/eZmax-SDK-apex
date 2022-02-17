@@ -71,7 +71,7 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
-     * Modify an existing Ezsignfolder
+     * Edit an existing Ezsignfolder
      *
      * 
      */

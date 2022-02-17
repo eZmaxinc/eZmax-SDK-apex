@@ -131,6 +131,34 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * Edit multiple ezsignsignatures
+     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param oaSEzsignsignatureRequestCompound  (required)
+     * @return OASEzsigndocumentEditEzsignsignature
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        client.assertNotNull(params.get('oaSEzsignsignatureRequestCompound'), 'oaSEzsignsignatureRequestCompound');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentEditEzsignsignature) client.invoke(
+            'PUT', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures',
+            (List<OASEzsignsignatureRequestCompound>) params.get('oaSEzsignsignatureRequestCompound'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentEditEzsignsignature.class
+        );
+    }
+    /**
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID  (required)
