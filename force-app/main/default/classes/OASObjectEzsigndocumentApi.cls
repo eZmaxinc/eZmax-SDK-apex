@@ -134,19 +134,19 @@ public class OASObjectEzsigndocumentApi {
      * Edit multiple ezsignsignatures
      * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
      * @param pkiEzsigndocumentID  (required)
-     * @param oaSEzsignsignatureRequestCompound  (required)
+     * @param oaSEzsigndocumentEditEzsignsignature  (required)
      * @return OASEzsigndocumentEditEzsignsignature
      * @throws OAS.ApiException if fails to make API call
      */
     public OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1(Map<String, Object> params) {
         client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
-        client.assertNotNull(params.get('oaSEzsignsignatureRequestCompound'), 'oaSEzsignsignatureRequestCompound');
+        client.assertNotNull(params.get('oaSEzsigndocumentEditEzsignsignature'), 'oaSEzsigndocumentEditEzsignsignature');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (OASEzsigndocumentEditEzsignsignature) client.invoke(
             'PUT', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures',
-            (List<OASEzsignsignatureRequestCompound>) params.get('oaSEzsignsignatureRequestCompound'),
+            (OASEzsigndocumentEditEzsignsignature) params.get('oaSEzsigndocumentEditEzsignsignature'),
             query, form,
             new Map<String, Object>{
                 'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')

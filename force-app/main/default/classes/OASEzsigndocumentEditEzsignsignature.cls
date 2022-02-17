@@ -11,41 +11,44 @@
  */
 
 /**
- * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
+ * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
  */
-public class OASEzsigndocumentEditEzsignsignature implements OASCommonResponse {
+public class OASEzsigndocumentEditEzsignsignature implements OAS.MappedProperties {
     /**
-     * Get objDebugPayload
-     * @return objDebugPayload
+     * Get aObjEzsignsignature
+     * @return aObjEzsignsignature
      */
-    public OASCommonResponseObjDebugPayload objDebugPayload { get; set; }
+    public List<OASEzsignsignatureRequestCompound> aObjEzsignsignature { get; set; }
 
-    /**
-     * Get objDebug
-     * @return objDebug
-     */
-    public OASCommonResponseObjDebug objDebug { get; set; }
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignsignature' => 'aObjEzsignsignature'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentEditEzsignsignature() {
+        aObjEzsignsignature = new List<OASEzsignsignatureRequestCompound>();
+    }
 
     public static OASEzsigndocumentEditEzsignsignature getExample() {
-        OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1Response = new OASEzsigndocumentEditEzsignsignature();
-          ezsigndocumentEditEzsignsignaturesV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
-          ezsigndocumentEditEzsignsignaturesV1Response.objDebug = OASCommonResponseObjDebug.getExample();
-        return ezsigndocumentEditEzsignsignaturesV1Response;
+        OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1Request = new OASEzsigndocumentEditEzsignsignature();
+          ezsigndocumentEditEzsignsignaturesV1Request.aObjEzsignsignature = new List<OASEzsignsignatureRequestCompound>{OASEzsignsignatureRequestCompound.getExample()};
+        return ezsigndocumentEditEzsignsignaturesV1Request;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentEditEzsignsignature) {           
-            OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1Response = (OASEzsigndocumentEditEzsignsignature) obj;
-            return this.objDebugPayload == ezsigndocumentEditEzsignsignaturesV1Response.objDebugPayload
-                && this.objDebug == ezsigndocumentEditEzsignsignaturesV1Response.objDebug;
+            OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1Request = (OASEzsigndocumentEditEzsignsignature) obj;
+            return this.aObjEzsignsignature == ezsigndocumentEditEzsignsignaturesV1Request.aObjEzsignsignature;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
-        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (aObjEzsignsignature == null ? 0 : System.hashCode(aObjEzsignsignature));
         return hashCode;
     }
 }

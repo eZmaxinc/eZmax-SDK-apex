@@ -156,7 +156,7 @@ private class OASObjectEzsigndocumentApiTest {
 
         Map<String, Object> params = new Map<String, Object>{
             'pkiEzsigndocumentID' => '',
-            'oaSEzsignsignatureRequestCompound' => new List<OASEzsignsignatureRequestCompound>{OASEzsignsignatureRequestCompound.getExample()}
+            'oaSEzsigndocumentEditEzsignsignature' => ''
         };
 
         OASClient client;
