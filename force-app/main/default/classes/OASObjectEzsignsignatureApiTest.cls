@@ -36,6 +36,41 @@ private class OASObjectEzsignsignatureApiTest {
     }
 
     /**
+     * Create a new Ezsignsignature
+     *
+     * The endpoint allows to create one or many elements at once.
+     */
+    @isTest
+    private static void ezsignsignatureCreateObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'oaSEzsignsignatureCreateObjectV2Requ' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignsignatureApi api;
+        OASEzsignsignatureCreateObjectV2Resp response;
+        OASEzsignsignatureCreateObjectV2Resp expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignsignatureApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignsignatureCreateObjectV2Resp.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignsignatureCreateObjectV2Resp.getExample();
+        response = (OASEzsignsignatureCreateObjectV2Resp) api.ezsignsignatureCreateObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Delete an existing Ezsignsignature
      *
      * 

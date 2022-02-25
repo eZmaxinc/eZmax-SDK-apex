@@ -50,6 +50,30 @@ public class OASObjectEzsignfoldersignerassociationApi {
         );
     }
     /**
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSEzsignfoldersignerassociationCrea  (required)
+     * @return OASEzsignfoldersignerassociationCrea
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSEzsignfoldersignerassociationCrea'), 'oaSEzsignfoldersignerassociationCrea');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfoldersignerassociationCrea) client.invoke(
+            'POST', '/2/object/ezsignfoldersignerassociation',
+            (OASEzsignfoldersignerassociationCrea) params.get('oaSEzsignfoldersignerassociationCrea'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignfoldersignerassociationCrea.class
+        );
+    }
+    /**
      * Delete an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)

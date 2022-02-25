@@ -49,4 +49,28 @@ public class OASObjectApikeyApi {
             OASApikeyCreateObjectV1Response.class
         );
     }
+    /**
+     * Create a new Apikey
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSApikeyCreateObjectV2Request  (required)
+     * @return OASApikeyCreateObjectV2Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASApikeyCreateObjectV2Response apikeyCreateObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSApikeyCreateObjectV2Request'), 'oaSApikeyCreateObjectV2Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASApikeyCreateObjectV2Response) client.invoke(
+            'POST', '/2/object/apikey',
+            (OASApikeyCreateObjectV2Request) params.get('oaSApikeyCreateObjectV2Request'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASApikeyCreateObjectV2Response.class
+        );
+    }
 }

@@ -108,6 +108,41 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Create a new Ezsigndocument
+     *
+     * The endpoint allows to create one or many elements at once.
+     */
+    @isTest
+    private static void ezsigndocumentCreateObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'oaSEzsigndocumentCreateObjectV2Reque' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentCreateObjectV2Respo response;
+        OASEzsigndocumentCreateObjectV2Respo expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentCreateObjectV2Respo.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentCreateObjectV2Respo.getExample();
+        response = (OASEzsigndocumentCreateObjectV2Respo) api.ezsigndocumentCreateObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Delete an existing Ezsigndocument
      *
      * 

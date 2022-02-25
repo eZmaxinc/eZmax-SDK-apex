@@ -106,6 +106,30 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * Create a new Ezsigndocument
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSEzsigndocumentCreateObjectV2Reque  (required)
+     * @return OASEzsigndocumentCreateObjectV2Respo
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentCreateObjectV2Respo ezsigndocumentCreateObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSEzsigndocumentCreateObjectV2Reque'), 'oaSEzsigndocumentCreateObjectV2Reque');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentCreateObjectV2Respo) client.invoke(
+            'POST', '/2/object/ezsigndocument',
+            (OASEzsigndocumentCreateObjectV2Reque) params.get('oaSEzsigndocumentCreateObjectV2Reque'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentCreateObjectV2Respo.class
+        );
+    }
+    /**
      * Delete an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID  (required)

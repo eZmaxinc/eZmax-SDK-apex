@@ -50,6 +50,30 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
+     * Create a new Ezsignfolder
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSEzsignfolderCreateObjectV2Request  (required)
+     * @return OASEzsignfolderCreateObjectV2Respons
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderCreateObjectV2Respons ezsignfolderCreateObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSEzsignfolderCreateObjectV2Request'), 'oaSEzsignfolderCreateObjectV2Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderCreateObjectV2Respons) client.invoke(
+            'POST', '/2/object/ezsignfolder',
+            (OASEzsignfolderCreateObjectV2Request) params.get('oaSEzsignfolderCreateObjectV2Request'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignfolderCreateObjectV2Respons.class
+        );
+    }
+    /**
      * Delete an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)

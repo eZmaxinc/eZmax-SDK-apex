@@ -50,6 +50,30 @@ public class OASObjectEzsignsignatureApi {
         );
     }
     /**
+     * Create a new Ezsignsignature
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSEzsignsignatureCreateObjectV2Requ  (required)
+     * @return OASEzsignsignatureCreateObjectV2Resp
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignsignatureCreateObjectV2Resp ezsignsignatureCreateObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSEzsignsignatureCreateObjectV2Requ'), 'oaSEzsignsignatureCreateObjectV2Requ');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignsignatureCreateObjectV2Resp) client.invoke(
+            'POST', '/2/object/ezsignsignature',
+            (OASEzsignsignatureCreateObjectV2Requ) params.get('oaSEzsignsignatureCreateObjectV2Requ'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignsignatureCreateObjectV2Resp.class
+        );
+    }
+    /**
      * Delete an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID  (required)

@@ -36,6 +36,41 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
     }
 
     /**
+     * Create a new Ezsignfoldersignerassociation
+     *
+     * The endpoint allows to create one or many elements at once.
+     */
+    @isTest
+    private static void ezsignfoldersignerassociationCreateObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'oaSEzsignfoldersignerassociationCrea' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfoldersignerassociationApi api;
+        OASEzsignfoldersignerassociationCrea response;
+        OASEzsignfoldersignerassociationCrea expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfoldersignerassociationApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfoldersignerassociationCrea.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfoldersignerassociationCrea.getExample();
+        response = (OASEzsignfoldersignerassociationCrea) api.ezsignfoldersignerassociationCreateObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Delete an existing Ezsignfoldersignerassociation
      *
      * 

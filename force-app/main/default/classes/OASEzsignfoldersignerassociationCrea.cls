@@ -21,15 +21,15 @@ public class OASEzsignfoldersignerassociationCrea {
     public OASEzsignfoldersignerassociationCrea mPayload { get; set; }
 
     public static OASEzsignfoldersignerassociationCrea getExample() {
-        OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV1ResponseAllOf = new OASEzsignfoldersignerassociationCrea();
-          ezsignfoldersignerassociationCreateObjectV1ResponseAllOf.mPayload = OASEzsignfoldersignerassociationCrea.getExample();
-        return ezsignfoldersignerassociationCreateObjectV1ResponseAllOf;
+        OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV2ResponseAllOf = new OASEzsignfoldersignerassociationCrea();
+          ezsignfoldersignerassociationCreateObjectV2ResponseAllOf.mPayload = OASEzsignfoldersignerassociationCrea.getExample();
+        return ezsignfoldersignerassociationCreateObjectV2ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldersignerassociationCrea) {           
-            OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV1ResponseAllOf = (OASEzsignfoldersignerassociationCrea) obj;
-            return this.mPayload == ezsignfoldersignerassociationCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV2ResponseAllOf = (OASEzsignfoldersignerassociationCrea) obj;
+            return this.mPayload == ezsignfoldersignerassociationCreateObjectV2ResponseAllOf.mPayload;
         }
         return false;
     }

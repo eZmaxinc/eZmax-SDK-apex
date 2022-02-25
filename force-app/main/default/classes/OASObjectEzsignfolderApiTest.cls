@@ -36,6 +36,41 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Create a new Ezsignfolder
+     *
+     * The endpoint allows to create one or many elements at once.
+     */
+    @isTest
+    private static void ezsignfolderCreateObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'oaSEzsignfolderCreateObjectV2Request' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderCreateObjectV2Respons response;
+        OASEzsignfolderCreateObjectV2Respons expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderCreateObjectV2Respons.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderCreateObjectV2Respons.getExample();
+        response = (OASEzsignfolderCreateObjectV2Respons) api.ezsignfolderCreateObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Delete an existing Ezsignfolder
      *
      * 

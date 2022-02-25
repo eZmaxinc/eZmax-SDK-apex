@@ -49,4 +49,28 @@ public class OASObjectFranchisereferalincomeApi {
             OASFranchisereferalincomeCreateObjec.class
         );
     }
+    /**
+     * Create a new Franchisereferalincome
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSFranchisereferalincomeCreateObjec  (required)
+     * @return OASFranchisereferalincomeCreateObjec
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSFranchisereferalincomeCreateObjec'), 'oaSFranchisereferalincomeCreateObjec');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASFranchisereferalincomeCreateObjec) client.invoke(
+            'POST', '/2/object/franchisereferalincome',
+            (OASFranchisereferalincomeCreateObjec) params.get('oaSFranchisereferalincomeCreateObjec'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASFranchisereferalincomeCreateObjec.class
+        );
+    }
 }
