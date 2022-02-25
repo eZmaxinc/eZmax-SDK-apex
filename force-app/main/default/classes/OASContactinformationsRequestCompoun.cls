@@ -15,25 +15,25 @@
  */
 public class OASContactinformationsRequestCompoun implements OAS.MappedProperties {
     /**
-     * Get aObjAddress
+     * 
      * @return aObjAddress
      */
     public List<OASAddressRequest> aObjAddress { get; set; }
 
     /**
-     * Get aObjPhone
+     * 
      * @return aObjPhone
      */
     public List<OASPhoneRequest> aObjPhone { get; set; }
 
     /**
-     * Get aObjEmail
+     * 
      * @return aObjEmail
      */
     public List<OASEmailRequest> aObjEmail { get; set; }
 
     /**
-     * Get aObjWebsite
+     * 
      * @return aObjWebsite
      */
     public List<OASWebsiteRequest> aObjWebsite { get; set; }

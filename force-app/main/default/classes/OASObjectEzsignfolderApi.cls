@@ -281,7 +281,7 @@ public class OASObjectEzsignfolderApi {
 
         return (OASEzsignfolderUnsendV1Response) client.invoke(
             'POST', '/1/object/ezsignfolder/{pkiEzsignfolderID}/unsend',
-            (String) params.get('body'),
+            (Object) params.get('body'),
             query, form,
             new Map<String, Object>{
                 'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')

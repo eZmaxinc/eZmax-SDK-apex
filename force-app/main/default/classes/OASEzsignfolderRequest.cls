@@ -41,7 +41,7 @@ public class OASEzsignfolderRequest {
     public String sEzsignfolderDescription { get; set; }
 
     /**
-     * Somes extra notes about the eZsign Folder
+     * Note about the Ezsignfolder
      * @return tEzsignfolderNote
      */
     public String tEzsignfolderNote { get; set; }
@@ -58,7 +58,7 @@ public class OASEzsignfolderRequest {
           ezsignfolderRequest.fkiEzsignfoldertypeID = 5;
           ezsignfolderRequest.fkiEzsigntsarequirementID = 92;
           ezsignfolderRequest.sEzsignfolderDescription = 'Test eZsign Folder';
-          ezsignfolderRequest.tEzsignfolderNote = 'An extra notes we can add to the ezsign folder';
+          ezsignfolderRequest.tEzsignfolderNote = 'This is a note';
           ezsignfolderRequest.eEzsignfolderSendreminderfrequency = OASFieldEEzsignfolderSendreminderfre.getExample();
         return ezsignfolderRequest;
     }

@@ -65,7 +65,7 @@ public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResp
     public String sEzsignfolderDescription { get; set; }
 
     /**
-     * Somes extra notes about the eZsign Folder
+     * Note about the Ezsignfolder
      * @return tEzsignfolderNote
      */
     public String tEzsignfolderNote { get; set; }
@@ -128,7 +128,7 @@ public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResp
           ezsignfolderGetObjectV1ResponseMPayload.fkiEzsigntsarequirementID = 92;
           ezsignfolderGetObjectV1ResponseMPayload.sEzsigntsarequirementDescriptionX = 'Default';
           ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderDescription = 'Test eZsign Folder';
-          ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderNote = 'An extra notes we can add to the ezsign folder';
+          ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderNote = 'This is a note';
           ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderSendreminderfrequency = OASFieldEEzsignfolderSendreminderfre.getExample();
           ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderDuedate = '2020-12-31 23:59:59';
           ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderSentdate = '2020-12-31 23:59:59';

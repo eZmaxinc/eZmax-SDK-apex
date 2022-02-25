@@ -179,6 +179,41 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * End prematurely
+     *
+     * End prematurely an Ezsigndocument when some signatures are still required
+     */
+    @isTest
+    private static void ezsigndocumentEndPrematurelyV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentEndPrematurelyV1Res response;
+        OASEzsigndocumentEndPrematurelyV1Res expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentEndPrematurelyV1Res.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentEndPrematurelyV1Res.getExample();
+        response = (OASEzsigndocumentEndPrematurelyV1Res) api.ezsigndocumentEndPrematurelyV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve a URL to download documents.
      *
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
@@ -287,7 +322,7 @@ private class OASObjectEzsigndocumentApiTest {
     /**
      * Retrieve an existing Ezsigndocument
      *
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      */
     @isTest
     private static void ezsigndocumentGetObjectV1Test() {
@@ -316,6 +351,41 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentGetObjectV1Response.getExample();
         response = (OASEzsigndocumentGetObjectV1Response) api.ezsigndocumentGetObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve the temporary proof
+     *
+     * Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn\&#39;t available until the Ezsigndocument is completed
+     */
+    @isTest
+    private static void ezsigndocumentGetTemporaryProofV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetTemporaryProofV1 response;
+        OASEzsigndocumentGetTemporaryProofV1 expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetTemporaryProofV1.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetTemporaryProofV1.getExample();
+        response = (OASEzsigndocumentGetTemporaryProofV1) api.ezsigndocumentGetTemporaryProofV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

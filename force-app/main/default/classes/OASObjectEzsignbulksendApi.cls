@@ -60,4 +60,29 @@ public class OASObjectEzsignbulksendApi {
             OASEzsignbulksendGetListV1Response.class
         );
     }
+    /**
+     * Retrieve an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @return OASEzsignbulksendGetObjectV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendGetObjectV1Response ezsignbulksendGetObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendGetObjectV1Response) client.invoke(
+            'GET', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendGetObjectV1Response.class
+        );
+    }
 }

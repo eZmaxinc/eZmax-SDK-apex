@@ -69,7 +69,7 @@ public class OASFranchisereferalincomeRequest {
     public String dtFranchisereferalincomeDisbursed { get; set; }
 
     /**
-     * A comment about the transaction
+     * Comment about the transaction
      * @return tFranchisereferalincomeComment
      */
     public String tFranchisereferalincomeComment { get; set; }
@@ -81,7 +81,7 @@ public class OASFranchisereferalincomeRequest {
     public Integer fkiFranchiseofficeID { get; set; }
 
     /**
-     * Get sFranchisereferalincomeRemoteid
+     * 
      * @return sFranchisereferalincomeRemoteid
      */
     public String sFranchisereferalincomeRemoteid { get; set; }

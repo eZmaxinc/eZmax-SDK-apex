@@ -15,7 +15,7 @@
  */
 public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedProperties {
     /**
-     * Get aObjEzsignformfield
+     * 
      * @return aObjEzsignformfield
      */
     public List<OASEzsignformfieldResponse> aObjEzsignformfield { get; set; }

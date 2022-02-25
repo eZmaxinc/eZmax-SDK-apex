@@ -15,7 +15,7 @@
  */
 public class OASEzsignfolderGetListV1ResponseMPay implements OAS.MappedProperties {
     /**
-     * Get aObjEzsignfolder
+     * 
      * @return aObjEzsignfolder
      */
     public List<OASEzsignfolderListElement> aObjEzsignfolder { get; set; }

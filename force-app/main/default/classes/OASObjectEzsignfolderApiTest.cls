@@ -335,7 +335,7 @@ private class OASObjectEzsignfolderApiTest {
 
         Map<String, Object> params = new Map<String, Object>{
             'pkiEzsignfolderID' => '',
-            'body' => 'null'
+            'body' => 
         };
 
         OASClient client;

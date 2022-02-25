@@ -15,7 +15,7 @@
  */
 public class OASApikeyCreateObjectV1ResponseMPayl implements OAS.MappedProperties {
     /**
-     * Get aObjApikey
+     * 
      * @return aObjApikey
      */
     public List<OASApikeyResponse> aObjApikey { get; set; }

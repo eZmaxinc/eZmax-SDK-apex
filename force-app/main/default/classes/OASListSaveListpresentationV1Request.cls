@@ -15,7 +15,7 @@
  */
 public class OASListSaveListpresentationV1Request implements OAS.MappedProperties {
     /**
-     * Get aObjListpresentation
+     * 
      * @return aObjListpresentation
      */
     public List<OASListpresentationRequest> aObjListpresentation { get; set; }

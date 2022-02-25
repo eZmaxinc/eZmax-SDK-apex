@@ -159,6 +159,31 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * End prematurely
+     * End prematurely an Ezsigndocument when some signatures are still required
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentEndPrematurelyV1Res
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentEndPrematurelyV1Res ezsigndocumentEndPrematurelyV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentEndPrematurelyV1Res) client.invoke(
+            'POST', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentEndPrematurelyV1Res.class
+        );
+    }
+    /**
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID  (required)
@@ -238,7 +263,7 @@ public class OASObjectEzsigndocumentApi {
     }
     /**
      * Retrieve an existing Ezsigndocument
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @return OASEzsigndocumentGetObjectV1Response
      * @throws OAS.ApiException if fails to make API call
@@ -259,6 +284,31 @@ public class OASObjectEzsigndocumentApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsigndocumentGetObjectV1Response.class
+        );
+    }
+    /**
+     * Retrieve the temporary proof
+     * Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn\&#39;t available until the Ezsigndocument is completed
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetTemporaryProofV1
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetTemporaryProofV1 ezsigndocumentGetTemporaryProofV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetTemporaryProofV1) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetTemporaryProofV1.class
         );
     }
     /**

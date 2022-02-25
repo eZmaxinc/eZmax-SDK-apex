@@ -15,7 +15,7 @@
  */
 public class OASEzsigntemplatepackageGetListV1Res implements OAS.MappedProperties {
     /**
-     * Get aObjEzsigntemplatepackage
+     * 
      * @return aObjEzsigntemplatepackage
      */
     public List<OASEzsigntemplatepackageListElement> aObjEzsigntemplatepackage { get; set; }
