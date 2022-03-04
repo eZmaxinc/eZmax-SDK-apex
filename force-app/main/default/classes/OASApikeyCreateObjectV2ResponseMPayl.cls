@@ -18,7 +18,7 @@ public class OASApikeyCreateObjectV2ResponseMPayl implements OAS.MappedPropertie
      * Get aObjApikey
      * @return aObjApikey
      */
-    public List<OASApikeyResponse> aObjApikey { get; set; }
+    public List<OASApikeyResponseCompound> aObjApikey { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objApikey' => 'aObjApikey'
@@ -29,12 +29,12 @@ public class OASApikeyCreateObjectV2ResponseMPayl implements OAS.MappedPropertie
     }
 
     public OASApikeyCreateObjectV2ResponseMPayl() {
-        aObjApikey = new List<OASApikeyResponse>();
+        aObjApikey = new List<OASApikeyResponseCompound>();
     }
 
     public static OASApikeyCreateObjectV2ResponseMPayl getExample() {
         OASApikeyCreateObjectV2ResponseMPayl apikeyCreateObjectV2ResponseMPayload = new OASApikeyCreateObjectV2ResponseMPayl();
-          apikeyCreateObjectV2ResponseMPayload.aObjApikey = new List<OASApikeyResponse>{OASApikeyResponse.getExample()};
+          apikeyCreateObjectV2ResponseMPayload.aObjApikey = new List<OASApikeyResponseCompound>{OASApikeyResponseCompound.getExample()};
         return apikeyCreateObjectV2ResponseMPayload;
     }
 

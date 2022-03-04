@@ -74,11 +74,15 @@ private class OASEzsignformfieldgroupResponseCompoTest {
         OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = new OASEzsignformfieldgroupResponseCompo();
         Map<String, String> x-property-mappings = ezsignformfieldgroupResponseCompoundAllOf.getx-property-mappings();
         System.assertEquals('aObjEzsignformfield', x-property-mappings.get('a_objEzsignformfield'));
+        System.assertEquals('aObjDropdownElement', x-property-mappings.get('a_objDropdownElement'));
+        System.assertEquals('aObjEzsignformfieldgroupsigner', x-property-mappings.get('a_objEzsignformfieldgroupsigner'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = new OASEzsignformfieldgroupResponseCompo();
-        System.assertEquals(new List<OASEzsignformfieldResponse>(), ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield);
+        System.assertEquals(new List<OASEzsignformfieldResponseCompound>(), ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield);
+        System.assertEquals(new List<OASCustomDropdownElementResponseComp>(), ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement);
+        System.assertEquals(null, ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner);
     }
 }

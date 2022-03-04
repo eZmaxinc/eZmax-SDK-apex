@@ -80,10 +80,6 @@ private class OASEzsigndocumentResponseCompoundTest {
     private static void defaultValuesPopulated() {
         OASEzsigndocumentResponseCompound ezsigndocumentResponseCompound = new OASEzsigndocumentResponseCompound();
         System.assertEquals(new List<OASCustomEzsignfoldersignerassociati>(), ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus);
-        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal);
-        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent);
-        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal);
-        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiEzsignfolderID);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentDuedate);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiLanguageID);
@@ -99,5 +95,9 @@ private class OASEzsigndocumentResponseCompoundTest {
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5initial);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5signed);
         System.assertEquals(null, ezsigndocumentResponseCompound.objAudit);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal);
+        System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent);
     }
 }

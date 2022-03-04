@@ -18,11 +18,11 @@ public class OASWebhookUserUserCreatedAllOf {
      * Get objUser
      * @return objUser
      */
-    public OASUserResponse objUser { get; set; }
+    public OASUserResponseCompound objUser { get; set; }
 
     public static OASWebhookUserUserCreatedAllOf getExample() {
         OASWebhookUserUserCreatedAllOf webhookUserUserCreatedAllOf = new OASWebhookUserUserCreatedAllOf();
-          webhookUserUserCreatedAllOf.objUser = OASUserResponse.getExample();
+          webhookUserUserCreatedAllOf.objUser = OASUserResponseCompound.getExample();
         return webhookUserUserCreatedAllOf;
     }
 

@@ -15,6 +15,12 @@
  */
 public class OASEzsignsignerRequest {
     /**
+     * The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n|-|-|-|\n|1|**Email Only**|The Ezsignsigner will receive a secure link by email|\n|2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|\n|3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|\n|4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won\'t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|\n|5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
+     * @return fkiUserlogintypeID
+     */
+    public Integer fkiUserlogintypeID { get; set; }
+
+    /**
      * The unique ID of the Taxassignment.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|No tax|\n|2|GST|\n|3|HST (ON)|\n|4|HST (NB)|\n|5|HST (NS)|\n|6|HST (NL)|\n|7|HST (PE)|\n|8|GST + QST (QC)|\n|9|GST + QST (QC) Non-Recoverable|\n|10|GST + PST (BC)|\n|11|GST + PST (SK)|\n|12|GST + RST (MB)|\n|13|GST + PST (BC) Non-Recoverable|\n|14|GST + PST (SK) Non-Recoverable|\n|15|GST + RST (MB) Non-Recoverable|
      * minimum: 1
      * maximum: 15
@@ -53,6 +59,7 @@ public class OASEzsignsignerRequest {
 
     public static OASEzsignsignerRequest getExample() {
         OASEzsignsignerRequest ezsignsignerRequest = new OASEzsignsignerRequest();
+          ezsignsignerRequest.fkiUserlogintypeID = 2;
           ezsignsignerRequest.fkiTaxassignmentID = 1;
           ezsignsignerRequest.fkiSecretquestionID = 7;
           ezsignsignerRequest.eEzsignsignerLogintype = EEzsignsignerLogintypeEnum.PASSWORD;
@@ -63,7 +70,8 @@ public class OASEzsignsignerRequest {
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignerRequest) {           
             OASEzsignsignerRequest ezsignsignerRequest = (OASEzsignsignerRequest) obj;
-            return this.fkiTaxassignmentID == ezsignsignerRequest.fkiTaxassignmentID
+            return this.fkiUserlogintypeID == ezsignsignerRequest.fkiUserlogintypeID
+                && this.fkiTaxassignmentID == ezsignsignerRequest.fkiTaxassignmentID
                 && this.fkiSecretquestionID == ezsignsignerRequest.fkiSecretquestionID
                 && this.eEzsignsignerLogintype == ezsignsignerRequest.eEzsignsignerLogintype
                 && this.sEzsignsignerSecretanswer == ezsignsignerRequest.sEzsignsignerSecretanswer;
@@ -73,6 +81,7 @@ public class OASEzsignsignerRequest {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (fkiUserlogintypeID == null ? 0 : System.hashCode(fkiUserlogintypeID));
         hashCode = (17 * hashCode) + (fkiTaxassignmentID == null ? 0 : System.hashCode(fkiTaxassignmentID));
         hashCode = (17 * hashCode) + (fkiSecretquestionID == null ? 0 : System.hashCode(fkiSecretquestionID));
         hashCode = (17 * hashCode) + (eEzsignsignerLogintype == null ? 0 : System.hashCode(eEzsignsignerLogintype));

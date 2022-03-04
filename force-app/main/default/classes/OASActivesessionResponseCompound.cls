@@ -13,37 +13,7 @@
 /**
  * Payload for the /1/object/activesession/getCurrent API Request
  */
-public class OASActivesessionResponseCompound implements OASActivesessionResponseCompoundAllO, OASActivesessionResponse, OAS.MappedProperties {
-    /**
-     * An array of permissions granted to the user or api key
-     * @return aPkiPermissionID
-     */
-    public List<Integer> aPkiPermissionID { get; set; }
-
-    /**
-     * Get objUserReal
-     * @return objUserReal
-     */
-    public OASActivesessionResponseCompoundUser objUserReal { get; set; }
-
-    /**
-     * Get objUserCloned
-     * @return objUserCloned
-     */
-    public OASActivesessionResponseCompoundUser objUserCloned { get; set; }
-
-    /**
-     * Get objApikey
-     * @return objApikey
-     */
-    public OASActivesessionResponseCompoundApik objApikey { get; set; }
-
-    /**
-     * An Array of Registered modules.\n\nThese are the modules that are Licensed to be used by the User or the API Key.
-     * @return aEModuleInternalname
-     */
-    public List<String> aEModuleInternalname { get; set; }
-
+public class OASActivesessionResponseCompound implements OASActivesessionResponse, OASActivesessionResponseCompoundAllO, OAS.MappedProperties {
     /**
      * Get eActivesessionSessiontype
      * @return eActivesessionSessiontype
@@ -88,6 +58,36 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
      */
     public String pksCustomerCode { get; set; }
 
+    /**
+     * An array of permissions granted to the user or api key
+     * @return aPkiPermissionID
+     */
+    public List<Integer> aPkiPermissionID { get; set; }
+
+    /**
+     * Get objUserReal
+     * @return objUserReal
+     */
+    public OASActivesessionResponseCompoundUser objUserReal { get; set; }
+
+    /**
+     * Get objUserCloned
+     * @return objUserCloned
+     */
+    public OASActivesessionResponseCompoundUser objUserCloned { get; set; }
+
+    /**
+     * Get objApikey
+     * @return objApikey
+     */
+    public OASActivesessionResponseCompoundApik objApikey { get; set; }
+
+    /**
+     * An Array of Registered modules.\n\nThese are the modules that are Licensed to be used by the User or the API Key.
+     * @return aEModuleInternalname
+     */
+    public List<String> aEModuleInternalname { get; set; }
+
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_pkiPermissionID' => 'aPkiPermissionID',
         'a_eModuleInternalname' => 'aEModuleInternalname'
@@ -113,11 +113,6 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
 
     public static OASActivesessionResponseCompound getExample() {
         OASActivesessionResponseCompound activesessionResponseCompound = new OASActivesessionResponseCompound();
-          activesessionResponseCompound.aPkiPermissionID = new List<Integer>{Integer.getExample()};
-          activesessionResponseCompound.objUserReal = OASActivesessionResponseCompoundUser.getExample();
-          activesessionResponseCompound.objUserCloned = OASActivesessionResponseCompoundUser.getExample();
-          activesessionResponseCompound.objApikey = OASActivesessionResponseCompoundApik.getExample();
-          activesessionResponseCompound.aEModuleInternalname = new List<String>{String.getExample()};
           activesessionResponseCompound.eActivesessionSessiontype = OASFieldEActivesessionSessiontype.getExample();
           activesessionResponseCompound.eActivesessionWeekdaystart = OASFieldEActivesessionWeekdaystart.getExample();
           activesessionResponseCompound.fkiLanguageID = 2;
@@ -125,35 +120,35 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
           activesessionResponseCompound.sDepartmentNameX = 'Head Office';
           activesessionResponseCompound.bActivesessionDebug = false;
           activesessionResponseCompound.pksCustomerCode = 'demo';
+          activesessionResponseCompound.aPkiPermissionID = new List<Integer>{Integer.getExample()};
+          activesessionResponseCompound.objUserReal = OASActivesessionResponseCompoundUser.getExample();
+          activesessionResponseCompound.objUserCloned = OASActivesessionResponseCompoundUser.getExample();
+          activesessionResponseCompound.objApikey = OASActivesessionResponseCompoundApik.getExample();
+          activesessionResponseCompound.aEModuleInternalname = new List<String>{String.getExample()};
         return activesessionResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASActivesessionResponseCompound) {           
             OASActivesessionResponseCompound activesessionResponseCompound = (OASActivesessionResponseCompound) obj;
-            return this.aPkiPermissionID == activesessionResponseCompound.aPkiPermissionID
-                && this.objUserReal == activesessionResponseCompound.objUserReal
-                && this.objUserCloned == activesessionResponseCompound.objUserCloned
-                && this.objApikey == activesessionResponseCompound.objApikey
-                && this.aEModuleInternalname == activesessionResponseCompound.aEModuleInternalname
-                && this.eActivesessionSessiontype == activesessionResponseCompound.eActivesessionSessiontype
+            return this.eActivesessionSessiontype == activesessionResponseCompound.eActivesessionSessiontype
                 && this.eActivesessionWeekdaystart == activesessionResponseCompound.eActivesessionWeekdaystart
                 && this.fkiLanguageID == activesessionResponseCompound.fkiLanguageID
                 && this.sCompanyNameX == activesessionResponseCompound.sCompanyNameX
                 && this.sDepartmentNameX == activesessionResponseCompound.sDepartmentNameX
                 && this.bActivesessionDebug == activesessionResponseCompound.bActivesessionDebug
-                && this.pksCustomerCode == activesessionResponseCompound.pksCustomerCode;
+                && this.pksCustomerCode == activesessionResponseCompound.pksCustomerCode
+                && this.aPkiPermissionID == activesessionResponseCompound.aPkiPermissionID
+                && this.objUserReal == activesessionResponseCompound.objUserReal
+                && this.objUserCloned == activesessionResponseCompound.objUserCloned
+                && this.objApikey == activesessionResponseCompound.objApikey
+                && this.aEModuleInternalname == activesessionResponseCompound.aEModuleInternalname;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aPkiPermissionID == null ? 0 : System.hashCode(aPkiPermissionID));
-        hashCode = (17 * hashCode) + (objUserReal == null ? 0 : System.hashCode(objUserReal));
-        hashCode = (17 * hashCode) + (objUserCloned == null ? 0 : System.hashCode(objUserCloned));
-        hashCode = (17 * hashCode) + (objApikey == null ? 0 : System.hashCode(objApikey));
-        hashCode = (17 * hashCode) + (aEModuleInternalname == null ? 0 : System.hashCode(aEModuleInternalname));
         hashCode = (17 * hashCode) + (eActivesessionSessiontype == null ? 0 : System.hashCode(eActivesessionSessiontype));
         hashCode = (17 * hashCode) + (eActivesessionWeekdaystart == null ? 0 : System.hashCode(eActivesessionWeekdaystart));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
@@ -161,6 +156,11 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
         hashCode = (17 * hashCode) + (sDepartmentNameX == null ? 0 : System.hashCode(sDepartmentNameX));
         hashCode = (17 * hashCode) + (bActivesessionDebug == null ? 0 : System.hashCode(bActivesessionDebug));
         hashCode = (17 * hashCode) + (pksCustomerCode == null ? 0 : System.hashCode(pksCustomerCode));
+        hashCode = (17 * hashCode) + (aPkiPermissionID == null ? 0 : System.hashCode(aPkiPermissionID));
+        hashCode = (17 * hashCode) + (objUserReal == null ? 0 : System.hashCode(objUserReal));
+        hashCode = (17 * hashCode) + (objUserCloned == null ? 0 : System.hashCode(objUserCloned));
+        hashCode = (17 * hashCode) + (objApikey == null ? 0 : System.hashCode(objApikey));
+        hashCode = (17 * hashCode) + (aEModuleInternalname == null ? 0 : System.hashCode(aEModuleInternalname));
         return hashCode;
     }
 }

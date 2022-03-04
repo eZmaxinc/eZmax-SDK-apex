@@ -155,8 +155,36 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
-     * Edit multiple ezsignsignatures
-     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     * Edit multiple Ezsignformfieldgroups
+     * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param oaSEzsigndocumentEditEzsignformfield  (required)
+     * @return OASEzsigndocumentEditEzsignformfield
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentEditEzsignformfield ezsigndocumentEditEzsignformfieldgroupsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        client.assertNotNull(params.get('oaSEzsigndocumentEditEzsignformfield'), 'oaSEzsigndocumentEditEzsignformfield');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentEditEzsignformfield) client.invoke(
+            'PUT', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups',
+            (OASEzsigndocumentEditEzsignformfield) params.get('oaSEzsigndocumentEditEzsignformfield'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentEditEzsignformfield.class
+        );
+    }
+    /**
+     * Edit multiple Ezsignsignatures
+     * Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
      * @param pkiEzsigndocumentID  (required)
      * @param oaSEzsigndocumentEditEzsignsignature  (required)
      * @return OASEzsigndocumentEditEzsignsignature
@@ -186,23 +214,26 @@ public class OASObjectEzsigndocumentApi {
      * End prematurely
      * End prematurely an Ezsigndocument when some signatures are still required
      * @param pkiEzsigndocumentID  (required)
+     * @param body  (required)
      * @return OASEzsigndocumentEndPrematurelyV1Res
      * @throws OAS.ApiException if fails to make API call
      */
     public OASEzsigndocumentEndPrematurelyV1Res ezsigndocumentEndPrematurelyV1(Map<String, Object> params) {
         client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        client.assertNotNull(params.get('body'), 'body');
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (OASEzsigndocumentEndPrematurelyV1Res) client.invoke(
-            'POST', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely', '',
+            'POST', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely',
+            (Object) params.get('body'),
             query, form,
             new Map<String, Object>{
                 'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
             },
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
-            new List<String>(),
+            new List<String>{ 'application/json' },
             new List<String> { 'Authorization' },
             OASEzsigndocumentEndPrematurelyV1Res.class
         );
@@ -236,6 +267,31 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignformfieldgroups
+     * 
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetEzsignformfieldg
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetEzsignformfieldg ezsigndocumentGetEzsignformfieldgroupsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetEzsignformfieldg) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetEzsignformfieldg.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsigndocument\&#39;s Ezsignpages
      * 
      * @param pkiEzsigndocumentID  (required)
@@ -258,6 +314,31 @@ public class OASObjectEzsigndocumentApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsigndocumentGetEzsignpagesV1Res.class
+        );
+    }
+    /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignsignatures
+     * 
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetEzsignsignatures
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetEzsignsignatures) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetEzsignsignatures.class
         );
     }
     /**

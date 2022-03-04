@@ -79,6 +79,6 @@ private class OASListSaveListpresentationV1RequestTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASListSaveListpresentationV1Request listSaveListpresentationV1Request = new OASListSaveListpresentationV1Request();
-        System.assertEquals(new List<OASListpresentationRequest>(), listSaveListpresentationV1Request.aObjListpresentation);
+        System.assertEquals(new List<OASListpresentationRequestCompound>(), listSaveListpresentationV1Request.aObjListpresentation);
     }
 }

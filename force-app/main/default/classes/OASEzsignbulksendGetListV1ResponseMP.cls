@@ -15,7 +15,7 @@
  */
 public class OASEzsignbulksendGetListV1ResponseMP implements OAS.MappedProperties {
     /**
-     * 
+     * Get aObjEzsignbulksend
      * @return aObjEzsignbulksend
      */
     public List<OASEzsignbulksendListElement> aObjEzsignbulksend { get; set; }

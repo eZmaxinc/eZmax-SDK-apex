@@ -24,7 +24,7 @@ public class OASEzsignsignatureRequestCompoundAll implements OAS.MappedPropertie
      * An array of custom date blocks that will be filled at the time of signature.\n\nCan only be used if bEzsignsignatureCustomdate is true.\n\nUse an empty array if you don\'t want to have a date at all.
      * @return aObjEzsignsignaturecustomdate
      */
-    public List<OASEzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate { get; set; }
+    public List<OASEzsignsignaturecustomdateRequestC> aObjEzsignsignaturecustomdate { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate'
@@ -35,13 +35,13 @@ public class OASEzsignsignatureRequestCompoundAll implements OAS.MappedPropertie
     }
 
     public OASEzsignsignatureRequestCompoundAll() {
-        aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequest>();
+        aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequestC>();
     }
 
     public static OASEzsignsignatureRequestCompoundAll getExample() {
         OASEzsignsignatureRequestCompoundAll ezsignsignatureRequestCompoundAllOf = new OASEzsignsignatureRequestCompoundAll();
           ezsignsignatureRequestCompoundAllOf.bEzsignsignatureCustomdate = true;
-          ezsignsignatureRequestCompoundAllOf.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequest>{OASEzsignsignaturecustomdateRequest.getExample()};
+          ezsignsignatureRequestCompoundAllOf.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequestC>{OASEzsignsignaturecustomdateRequestC.getExample()};
         return ezsignsignatureRequestCompoundAllOf;
     }
 

@@ -15,14 +15,14 @@
  */
 public class OASEzsignsignatureGetObjectV1Respons {
     /**
-     * Payload for the /1/object/ezsignsignature/getObject API Request
+     * Get mPayload
      * @return mPayload
      */
-    public Object mPayload { get; set; }
+    public OASEzsignsignatureGetObjectV1Respons mPayload { get; set; }
 
     public static OASEzsignsignatureGetObjectV1Respons getExample() {
         OASEzsignsignatureGetObjectV1Respons ezsignsignatureGetObjectV1ResponseAllOf = new OASEzsignsignatureGetObjectV1Respons();
-          ezsignsignatureGetObjectV1ResponseAllOf.mPayload = null;
+          ezsignsignatureGetObjectV1ResponseAllOf.mPayload = OASEzsignsignatureGetObjectV1Respons.getExample();
         return ezsignsignatureGetObjectV1ResponseAllOf;
     }
 

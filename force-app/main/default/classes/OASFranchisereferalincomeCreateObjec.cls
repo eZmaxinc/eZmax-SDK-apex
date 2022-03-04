@@ -21,15 +21,15 @@ public class OASFranchisereferalincomeCreateObjec {
     public OASFranchisereferalincomeCreateObjec mPayload { get; set; }
 
     public static OASFranchisereferalincomeCreateObjec getExample() {
-        OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV2ResponseAllOf = new OASFranchisereferalincomeCreateObjec();
-          franchisereferalincomeCreateObjectV2ResponseAllOf.mPayload = OASFranchisereferalincomeCreateObjec.getExample();
-        return franchisereferalincomeCreateObjectV2ResponseAllOf;
+        OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV1ResponseAllOf = new OASFranchisereferalincomeCreateObjec();
+          franchisereferalincomeCreateObjectV1ResponseAllOf.mPayload = OASFranchisereferalincomeCreateObjec.getExample();
+        return franchisereferalincomeCreateObjectV1ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASFranchisereferalincomeCreateObjec) {           
-            OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV2ResponseAllOf = (OASFranchisereferalincomeCreateObjec) obj;
-            return this.mPayload == franchisereferalincomeCreateObjectV2ResponseAllOf.mPayload;
+            OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV1ResponseAllOf = (OASFranchisereferalincomeCreateObjec) obj;
+            return this.mPayload == franchisereferalincomeCreateObjectV1ResponseAllOf.mPayload;
         }
         return false;
     }

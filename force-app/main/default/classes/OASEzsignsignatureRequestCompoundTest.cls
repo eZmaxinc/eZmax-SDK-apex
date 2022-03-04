@@ -79,8 +79,7 @@ private class OASEzsignsignatureRequestCompoundTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = new OASEzsignsignatureRequestCompound();
-        System.assertEquals(new List<OASEzsignsignaturecustomdateRequest>(), ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate);
-        System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
+        System.assertEquals(new List<OASEzsignsignaturecustomdateRequestC>(), ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate);
         System.assertEquals(null, ezsignsignatureRequestCompound.pkiEzsignsignatureID);
         System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignpagePagenumber);
@@ -89,5 +88,6 @@ private class OASEzsignsignatureRequestCompoundTest {
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureStep);
         System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureType);
         System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsigndocumentID);
+        System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
     }
 }

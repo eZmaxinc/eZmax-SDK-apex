@@ -39,13 +39,13 @@ public class OASCustomFormDataSignerResponse implements OAS.MappedProperties {
     public String sContactLastname { get; set; }
 
     /**
-     * 
-     * @return aObjEzsignformfieldgroupCompound
+     * Get aObjEzsignformfieldgroup
+     * @return aObjEzsignformfieldgroup
      */
-    public List<OASEzsignformfieldgroupResponseCompo> aObjEzsignformfieldgroupCompound { get; set; }
+    public List<OASCustomFormDataEzsignformfieldgrou> aObjEzsignformfieldgroup { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objEzsignformfieldgroupCompound' => 'aObjEzsignformfieldgroupCompound'
+        'a_objEzsignformfieldgroup' => 'aObjEzsignformfieldgroup'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -53,7 +53,7 @@ public class OASCustomFormDataSignerResponse implements OAS.MappedProperties {
     }
 
     public OASCustomFormDataSignerResponse() {
-        aObjEzsignformfieldgroupCompound = new List<OASEzsignformfieldgroupResponseCompo>();
+        aObjEzsignformfieldgroup = new List<OASCustomFormDataEzsignformfieldgrou>();
     }
 
     public static OASCustomFormDataSignerResponse getExample() {
@@ -62,7 +62,7 @@ public class OASCustomFormDataSignerResponse implements OAS.MappedProperties {
           customFormDataSignerResponse.fkiUserID = 70;
           customFormDataSignerResponse.sContactFirstname = 'John';
           customFormDataSignerResponse.sContactLastname = 'Doe';
-          customFormDataSignerResponse.aObjEzsignformfieldgroupCompound = new List<OASEzsignformfieldgroupResponseCompo>{OASEzsignformfieldgroupResponseCompo.getExample()};
+          customFormDataSignerResponse.aObjEzsignformfieldgroup = new List<OASCustomFormDataEzsignformfieldgrou>{OASCustomFormDataEzsignformfieldgrou.getExample()};
         return customFormDataSignerResponse;
     }
 
@@ -73,7 +73,7 @@ public class OASCustomFormDataSignerResponse implements OAS.MappedProperties {
                 && this.fkiUserID == customFormDataSignerResponse.fkiUserID
                 && this.sContactFirstname == customFormDataSignerResponse.sContactFirstname
                 && this.sContactLastname == customFormDataSignerResponse.sContactLastname
-                && this.aObjEzsignformfieldgroupCompound == customFormDataSignerResponse.aObjEzsignformfieldgroupCompound;
+                && this.aObjEzsignformfieldgroup == customFormDataSignerResponse.aObjEzsignformfieldgroup;
         }
         return false;
     }
@@ -84,7 +84,7 @@ public class OASCustomFormDataSignerResponse implements OAS.MappedProperties {
         hashCode = (17 * hashCode) + (fkiUserID == null ? 0 : System.hashCode(fkiUserID));
         hashCode = (17 * hashCode) + (sContactFirstname == null ? 0 : System.hashCode(sContactFirstname));
         hashCode = (17 * hashCode) + (sContactLastname == null ? 0 : System.hashCode(sContactLastname));
-        hashCode = (17 * hashCode) + (aObjEzsignformfieldgroupCompound == null ? 0 : System.hashCode(aObjEzsignformfieldgroupCompound));
+        hashCode = (17 * hashCode) + (aObjEzsignformfieldgroup == null ? 0 : System.hashCode(aObjEzsignformfieldgroup));
         return hashCode;
     }
 }

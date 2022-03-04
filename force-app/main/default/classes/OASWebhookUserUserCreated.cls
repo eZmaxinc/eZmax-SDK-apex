@@ -18,7 +18,7 @@ public class OASWebhookUserUserCreated implements OASWebhookUserUserCreatedAllOf
      * Get objUser
      * @return objUser
      */
-    public OASUserResponse objUser { get; set; }
+    public OASUserResponseCompound objUser { get; set; }
 
     /**
      * Get objWebhook
@@ -30,7 +30,7 @@ public class OASWebhookUserUserCreated implements OASWebhookUserUserCreatedAllOf
      * An array containing details of previous attempts that were made to deliver the message.\nThe array is empty if it\'s the first attempt.
      * @return aObjAttempt
      */
-    public List<OASAttemptResponse> aObjAttempt { get; set; }
+    public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objAttempt' => 'aObjAttempt'
@@ -41,14 +41,14 @@ public class OASWebhookUserUserCreated implements OASWebhookUserUserCreatedAllOf
     }
 
     public OASWebhookUserUserCreated() {
-        aObjAttempt = new List<OASAttemptResponse>();
+        aObjAttempt = new List<OASAttemptResponseCompound>();
     }
 
     public static OASWebhookUserUserCreated getExample() {
         OASWebhookUserUserCreated webhookUserUserCreated = new OASWebhookUserUserCreated();
-          webhookUserUserCreated.objUser = OASUserResponse.getExample();
+          webhookUserUserCreated.objUser = OASUserResponseCompound.getExample();
           webhookUserUserCreated.objWebhook = OASWebhookResponse.getExample();
-          webhookUserUserCreated.aObjAttempt = new List<OASAttemptResponse>{OASAttemptResponse.getExample()};
+          webhookUserUserCreated.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
         return webhookUserUserCreated;
     }
 

@@ -15,28 +15,28 @@
  */
 public class OASContactinformationsRequestCompoun implements OAS.MappedProperties {
     /**
-     * 
+     * Get aObjAddress
      * @return aObjAddress
      */
-    public List<OASAddressRequest> aObjAddress { get; set; }
+    public List<OASAddressRequestCompound> aObjAddress { get; set; }
 
     /**
-     * 
+     * Get aObjPhone
      * @return aObjPhone
      */
-    public List<OASPhoneRequest> aObjPhone { get; set; }
+    public List<OASPhoneRequestCompound> aObjPhone { get; set; }
 
     /**
-     * 
+     * Get aObjEmail
      * @return aObjEmail
      */
-    public List<OASEmailRequest> aObjEmail { get; set; }
+    public List<OASEmailRequestCompound> aObjEmail { get; set; }
 
     /**
-     * 
+     * Get aObjWebsite
      * @return aObjWebsite
      */
-    public List<OASWebsiteRequest> aObjWebsite { get; set; }
+    public List<OASWebsiteRequestCompound> aObjWebsite { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objAddress' => 'aObjAddress',
@@ -83,18 +83,18 @@ public class OASContactinformationsRequestCompoun implements OAS.MappedPropertie
     }
 
     public OASContactinformationsRequestCompoun() {
-        aObjAddress = new List<OASAddressRequest>();
-        aObjPhone = new List<OASPhoneRequest>();
-        aObjEmail = new List<OASEmailRequest>();
-        aObjWebsite = new List<OASWebsiteRequest>();
+        aObjAddress = new List<OASAddressRequestCompound>();
+        aObjPhone = new List<OASPhoneRequestCompound>();
+        aObjEmail = new List<OASEmailRequestCompound>();
+        aObjWebsite = new List<OASWebsiteRequestCompound>();
     }
 
     public static OASContactinformationsRequestCompoun getExample() {
         OASContactinformationsRequestCompoun contactinformationsRequestCompoundAllOf = new OASContactinformationsRequestCompoun();
-          contactinformationsRequestCompoundAllOf.aObjAddress = new List<OASAddressRequest>{OASAddressRequest.getExample()};
-          contactinformationsRequestCompoundAllOf.aObjPhone = new List<OASPhoneRequest>{OASPhoneRequest.getExample()};
-          contactinformationsRequestCompoundAllOf.aObjEmail = new List<OASEmailRequest>{OASEmailRequest.getExample()};
-          contactinformationsRequestCompoundAllOf.aObjWebsite = new List<OASWebsiteRequest>{OASWebsiteRequest.getExample()};
+          contactinformationsRequestCompoundAllOf.aObjAddress = new List<OASAddressRequestCompound>{OASAddressRequestCompound.getExample()};
+          contactinformationsRequestCompoundAllOf.aObjPhone = new List<OASPhoneRequestCompound>{OASPhoneRequestCompound.getExample()};
+          contactinformationsRequestCompoundAllOf.aObjEmail = new List<OASEmailRequestCompound>{OASEmailRequestCompound.getExample()};
+          contactinformationsRequestCompoundAllOf.aObjWebsite = new List<OASWebsiteRequestCompound>{OASWebsiteRequestCompound.getExample()};
         return contactinformationsRequestCompoundAllOf;
     }
 

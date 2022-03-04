@@ -39,7 +39,7 @@ public class OASCustomFormDataDocumentResponse implements OAS.MappedProperties {
     public String dtModifiedDate { get; set; }
 
     /**
-     * 
+     * Get aObjFormDataSigner
      * @return aObjFormDataSigner
      */
     public List<OASCustomFormDataSignerResponse> aObjFormDataSigner { get; set; }

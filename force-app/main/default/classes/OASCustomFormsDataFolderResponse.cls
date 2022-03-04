@@ -27,7 +27,7 @@ public class OASCustomFormsDataFolderResponse implements OAS.MappedProperties {
     public String sEzsignfolderDescription { get; set; }
 
     /**
-     * 
+     * Get aObjFormDataDocument
      * @return aObjFormDataDocument
      */
     public List<OASCustomFormDataDocumentResponse> aObjFormDataDocument { get; set; }

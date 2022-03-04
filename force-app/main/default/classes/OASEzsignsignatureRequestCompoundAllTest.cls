@@ -79,7 +79,7 @@ private class OASEzsignsignatureRequestCompoundAllTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASEzsignsignatureRequestCompoundAll ezsignsignatureRequestCompoundAllOf = new OASEzsignsignatureRequestCompoundAll();
-        System.assertEquals(new List<OASEzsignsignaturecustomdateRequest>(), ezsignsignatureRequestCompoundAllOf.aObjEzsignsignaturecustomdate);
+        System.assertEquals(new List<OASEzsignsignaturecustomdateRequestC>(), ezsignsignatureRequestCompoundAllOf.aObjEzsignsignaturecustomdate);
         System.assertEquals(null, ezsignsignatureRequestCompoundAllOf.bEzsignsignatureCustomdate);
     }
 }

@@ -21,7 +21,7 @@ public class OASFranchisereferalincomeRequestComp implements OAS.MappedPropertie
     public OASAddressRequest objAddress { get; set; }
 
     /**
-     * 
+     * Get aObjContact
      * @return aObjContact
      */
     public List<OASContactRequestCompound> aObjContact { get; set; }

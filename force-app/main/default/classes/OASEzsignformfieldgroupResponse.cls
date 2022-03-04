@@ -15,28 +15,154 @@
  */
 public class OASEzsignformfieldgroupResponse {
     /**
+     * The unique ID of the Ezsignformfieldgroup
+     * @return pkiEzsignformfieldgroupID
+     */
+    public Integer pkiEzsignformfieldgroupID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigndocument
+     * @return fkiEzsigndocumentID
+     */
+    public Integer fkiEzsigndocumentID { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupType
+     * @return eEzsignformfieldgroupType
+     */
+    public OASFieldEEzsignformfieldgroupType eEzsignformfieldgroupType { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupSignerrequirement
+     * @return eEzsignformfieldgroupSignerrequirement
+     */
+    public OASFieldEEzsignformfieldgroupSignerr eEzsignformfieldgroupSignerrequirement { get; set; }
+
+    /**
      * The Label for the Ezsignformfieldgroup
      * @return sEzsignformfieldgroupLabel
      */
     public String sEzsignformfieldgroupLabel { get; set; }
 
+    /**
+     * The step when the Ezsignsigner will be invited to fill the form fields
+     * @return iEzsignformfieldgroupStep
+     */
+    public Integer iEzsignformfieldgroupStep { get; set; }
+
+    /**
+     * The default value for the Ezsignformfieldgroup
+     * @return sEzsignformfieldgroupDefaultvalue
+     */
+    public String sEzsignformfieldgroupDefaultvalue { get; set; }
+
+    /**
+     * The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+     * @return iEzsignformfieldgroupFilledmin
+     */
+    public Integer iEzsignformfieldgroupFilledmin { get; set; }
+
+    /**
+     * The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+     * @return iEzsignformfieldgroupFilledmax
+     */
+    public Integer iEzsignformfieldgroupFilledmax { get; set; }
+
+    /**
+     * Whether the Ezsignformfieldgroup is read only or not.
+     * @return bEzsignformfieldgroupReadonly
+     */
+    public Boolean bEzsignformfieldgroupReadonly { get; set; }
+
+    /**
+     * The maximum length for the value in the Ezsignformfieldgroup\n\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+     * @return iEzsignformfieldgroupMaxlength
+     */
+    public Integer iEzsignformfieldgroupMaxlength { get; set; }
+
+    /**
+     * Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument.\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+     * @return bEzsignformfieldgroupEncrypted
+     */
+    public Boolean bEzsignformfieldgroupEncrypted { get; set; }
+
+    /**
+     * A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.\n\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+     * @return sEzsignformfieldgroupRegexp
+     */
+    public String sEzsignformfieldgroupRegexp { get; set; }
+
+    /**
+     * A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
+     * @return tEzsignformfieldgroupTooltip
+     */
+    public String tEzsignformfieldgroupTooltip { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupTooltipposition
+     * @return eEzsignformfieldgroupTooltipposition
+     */
+    public OASFieldEEzsignformfieldgroupTooltip eEzsignformfieldgroupTooltipposition { get; set; }
+
     public static OASEzsignformfieldgroupResponse getExample() {
         OASEzsignformfieldgroupResponse ezsignformfieldgroupResponse = new OASEzsignformfieldgroupResponse();
+          ezsignformfieldgroupResponse.pkiEzsignformfieldgroupID = 26;
+          ezsignformfieldgroupResponse.fkiEzsigndocumentID = 97;
+          ezsignformfieldgroupResponse.eEzsignformfieldgroupType = OASFieldEEzsignformfieldgroupType.getExample();
+          ezsignformfieldgroupResponse.eEzsignformfieldgroupSignerrequirement = OASFieldEEzsignformfieldgroupSignerr.getExample();
           ezsignformfieldgroupResponse.sEzsignformfieldgroupLabel = 'Allergies';
+          ezsignformfieldgroupResponse.iEzsignformfieldgroupStep = 1;
+          ezsignformfieldgroupResponse.sEzsignformfieldgroupDefaultvalue = 'Foo';
+          ezsignformfieldgroupResponse.iEzsignformfieldgroupFilledmin = 1;
+          ezsignformfieldgroupResponse.iEzsignformfieldgroupFilledmax = 2;
+          ezsignformfieldgroupResponse.bEzsignformfieldgroupReadonly = true;
+          ezsignformfieldgroupResponse.iEzsignformfieldgroupMaxlength = 75;
+          ezsignformfieldgroupResponse.bEzsignformfieldgroupEncrypted = true;
+          ezsignformfieldgroupResponse.sEzsignformfieldgroupRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
+          ezsignformfieldgroupResponse.tEzsignformfieldgroupTooltip = 'Please enter a valid email address';
+          ezsignformfieldgroupResponse.eEzsignformfieldgroupTooltipposition = OASFieldEEzsignformfieldgroupTooltip.getExample();
         return ezsignformfieldgroupResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignformfieldgroupResponse) {           
             OASEzsignformfieldgroupResponse ezsignformfieldgroupResponse = (OASEzsignformfieldgroupResponse) obj;
-            return this.sEzsignformfieldgroupLabel == ezsignformfieldgroupResponse.sEzsignformfieldgroupLabel;
+            return this.pkiEzsignformfieldgroupID == ezsignformfieldgroupResponse.pkiEzsignformfieldgroupID
+                && this.fkiEzsigndocumentID == ezsignformfieldgroupResponse.fkiEzsigndocumentID
+                && this.eEzsignformfieldgroupType == ezsignformfieldgroupResponse.eEzsignformfieldgroupType
+                && this.eEzsignformfieldgroupSignerrequirement == ezsignformfieldgroupResponse.eEzsignformfieldgroupSignerrequirement
+                && this.sEzsignformfieldgroupLabel == ezsignformfieldgroupResponse.sEzsignformfieldgroupLabel
+                && this.iEzsignformfieldgroupStep == ezsignformfieldgroupResponse.iEzsignformfieldgroupStep
+                && this.sEzsignformfieldgroupDefaultvalue == ezsignformfieldgroupResponse.sEzsignformfieldgroupDefaultvalue
+                && this.iEzsignformfieldgroupFilledmin == ezsignformfieldgroupResponse.iEzsignformfieldgroupFilledmin
+                && this.iEzsignformfieldgroupFilledmax == ezsignformfieldgroupResponse.iEzsignformfieldgroupFilledmax
+                && this.bEzsignformfieldgroupReadonly == ezsignformfieldgroupResponse.bEzsignformfieldgroupReadonly
+                && this.iEzsignformfieldgroupMaxlength == ezsignformfieldgroupResponse.iEzsignformfieldgroupMaxlength
+                && this.bEzsignformfieldgroupEncrypted == ezsignformfieldgroupResponse.bEzsignformfieldgroupEncrypted
+                && this.sEzsignformfieldgroupRegexp == ezsignformfieldgroupResponse.sEzsignformfieldgroupRegexp
+                && this.tEzsignformfieldgroupTooltip == ezsignformfieldgroupResponse.tEzsignformfieldgroupTooltip
+                && this.eEzsignformfieldgroupTooltipposition == ezsignformfieldgroupResponse.eEzsignformfieldgroupTooltipposition;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignformfieldgroupID == null ? 0 : System.hashCode(pkiEzsignformfieldgroupID));
+        hashCode = (17 * hashCode) + (fkiEzsigndocumentID == null ? 0 : System.hashCode(fkiEzsigndocumentID));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupType == null ? 0 : System.hashCode(eEzsignformfieldgroupType));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupSignerrequirement == null ? 0 : System.hashCode(eEzsignformfieldgroupSignerrequirement));
         hashCode = (17 * hashCode) + (sEzsignformfieldgroupLabel == null ? 0 : System.hashCode(sEzsignformfieldgroupLabel));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupStep == null ? 0 : System.hashCode(iEzsignformfieldgroupStep));
+        hashCode = (17 * hashCode) + (sEzsignformfieldgroupDefaultvalue == null ? 0 : System.hashCode(sEzsignformfieldgroupDefaultvalue));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupFilledmin == null ? 0 : System.hashCode(iEzsignformfieldgroupFilledmin));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupFilledmax == null ? 0 : System.hashCode(iEzsignformfieldgroupFilledmax));
+        hashCode = (17 * hashCode) + (bEzsignformfieldgroupReadonly == null ? 0 : System.hashCode(bEzsignformfieldgroupReadonly));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupMaxlength == null ? 0 : System.hashCode(iEzsignformfieldgroupMaxlength));
+        hashCode = (17 * hashCode) + (bEzsignformfieldgroupEncrypted == null ? 0 : System.hashCode(bEzsignformfieldgroupEncrypted));
+        hashCode = (17 * hashCode) + (sEzsignformfieldgroupRegexp == null ? 0 : System.hashCode(sEzsignformfieldgroupRegexp));
+        hashCode = (17 * hashCode) + (tEzsignformfieldgroupTooltip == null ? 0 : System.hashCode(tEzsignformfieldgroupTooltip));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupTooltipposition == null ? 0 : System.hashCode(eEzsignformfieldgroupTooltipposition));
         return hashCode;
     }
 }

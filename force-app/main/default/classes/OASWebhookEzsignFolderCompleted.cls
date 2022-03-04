@@ -30,7 +30,7 @@ public class OASWebhookEzsignFolderCompleted implements OASWebhookEzsignFolderCo
      * An array containing details of previous attempts that were made to deliver the message.\nThe array is empty if it\'s the first attempt.
      * @return aObjAttempt
      */
-    public List<OASAttemptResponse> aObjAttempt { get; set; }
+    public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objAttempt' => 'aObjAttempt'
@@ -41,14 +41,14 @@ public class OASWebhookEzsignFolderCompleted implements OASWebhookEzsignFolderCo
     }
 
     public OASWebhookEzsignFolderCompleted() {
-        aObjAttempt = new List<OASAttemptResponse>();
+        aObjAttempt = new List<OASAttemptResponseCompound>();
     }
 
     public static OASWebhookEzsignFolderCompleted getExample() {
         OASWebhookEzsignFolderCompleted webhookEzsignFolderCompleted = new OASWebhookEzsignFolderCompleted();
           webhookEzsignFolderCompleted.objEzsignfolder = OASEzsignfolderResponse.getExample();
           webhookEzsignFolderCompleted.objWebhook = OASWebhookResponse.getExample();
-          webhookEzsignFolderCompleted.aObjAttempt = new List<OASAttemptResponse>{OASAttemptResponse.getExample()};
+          webhookEzsignFolderCompleted.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
         return webhookEzsignFolderCompleted;
     }
 

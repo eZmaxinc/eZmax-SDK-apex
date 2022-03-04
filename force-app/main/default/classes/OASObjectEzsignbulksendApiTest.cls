@@ -1,6 +1,41 @@
 @isTest
 private class OASObjectEzsignbulksendApiTest {
     /**
+     * Retrieve an existing Ezsignbulksend\&#39;s Ezsignbulksendtransmissions
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignbulksendGetEzsignbulksendtransmissionsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignbulksendID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignbulksendApi api;
+        OASEzsignbulksendGetEzsignbulksendtr response;
+        OASEzsignbulksendGetEzsignbulksendtr expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignbulksendApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignbulksendGetEzsignbulksendtr.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksendGetEzsignbulksendtr.getExample();
+        response = (OASEzsignbulksendGetEzsignbulksendtr) api.ezsignbulksendGetEzsignbulksendtransmissionsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve Ezsignbulksend list
      *
      * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |

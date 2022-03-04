@@ -79,6 +79,6 @@ private class OASApikeyCreateObjectV1ResponseMPaylTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASApikeyCreateObjectV1ResponseMPayl apikeyCreateObjectV1ResponseMPayload = new OASApikeyCreateObjectV1ResponseMPayl();
-        System.assertEquals(new List<OASApikeyResponse>(), apikeyCreateObjectV1ResponseMPayload.aObjApikey);
+        System.assertEquals(new List<OASApikeyResponseCompound>(), apikeyCreateObjectV1ResponseMPayload.aObjApikey);
     }
 }

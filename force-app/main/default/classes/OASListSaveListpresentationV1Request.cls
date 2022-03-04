@@ -15,10 +15,10 @@
  */
 public class OASListSaveListpresentationV1Request implements OAS.MappedProperties {
     /**
-     * 
+     * Get aObjListpresentation
      * @return aObjListpresentation
      */
-    public List<OASListpresentationRequest> aObjListpresentation { get; set; }
+    public List<OASListpresentationRequestCompound> aObjListpresentation { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objListpresentation' => 'aObjListpresentation'
@@ -29,12 +29,12 @@ public class OASListSaveListpresentationV1Request implements OAS.MappedPropertie
     }
 
     public OASListSaveListpresentationV1Request() {
-        aObjListpresentation = new List<OASListpresentationRequest>();
+        aObjListpresentation = new List<OASListpresentationRequestCompound>();
     }
 
     public static OASListSaveListpresentationV1Request getExample() {
         OASListSaveListpresentationV1Request listSaveListpresentationV1Request = new OASListSaveListpresentationV1Request();
-          listSaveListpresentationV1Request.aObjListpresentation = new List<OASListpresentationRequest>{OASListpresentationRequest.getExample()};
+          listSaveListpresentationV1Request.aObjListpresentation = new List<OASListpresentationRequestCompound>{OASListpresentationRequestCompound.getExample()};
         return listSaveListpresentationV1Request;
     }
 

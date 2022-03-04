@@ -128,7 +128,7 @@ public class OASObjectEzsignsignatureApi {
     }
     /**
      * Retrieve an existing Ezsignsignature
-     * ## ⚠️EARLY ADOPTERS WARNING\n\n### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsignsignatureID  (required)
      * @return OASEzsignsignatureGetObjectV1Respons
      * @throws OAS.ApiException if fails to make API call

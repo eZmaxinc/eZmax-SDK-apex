@@ -11,41 +11,73 @@
  */
 
 /**
- * Response for the /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate API Request
+ * Request for the /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request
  */
-public class OASEzsigndocumentApplyEzsigntemplate implements OASCommonResponse {
+public class OASEzsigndocumentApplyEzsigntemplate implements OAS.MappedProperties {
     /**
-     * Get objDebugPayload
-     * @return objDebugPayload
+     * The unique ID of the Ezsigndocument
+     * @return fkiEzsigntemplateID
      */
-    public OASCommonResponseObjDebugPayload objDebugPayload { get; set; }
+    public Integer fkiEzsigntemplateID { get; set; }
 
     /**
-     * Get objDebug
-     * @return objDebug
+     * Get aSEzsigntemplatesigner
+     * @return aSEzsigntemplatesigner
      */
-    public OASCommonResponseObjDebug objDebug { get; set; }
+    public List<String> aSEzsigntemplatesigner { get; set; }
+
+    /**
+     * Get aPkiEzsignfoldersignerassociationID
+     * @return aPkiEzsignfoldersignerassociationID
+     */
+    public List<Integer> aPkiEzsignfoldersignerassociationID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_sEzsigntemplatesigner' => 'aSEzsigntemplatesigner',
+        'a_pkiEzsignfoldersignerassociationID' => 'aPkiEzsignfoldersignerassociationID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_sEzsigntemplatesigner' => 'aSEzsigntemplatesigner',
+        'a_pkiEzsignfoldersignerassociationID' => 'aPkiEzsignfoldersignerassociationID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentApplyEzsigntemplate() {
+        aSEzsigntemplatesigner = new List<String>();
+        aPkiEzsignfoldersignerassociationID = new List<Integer>();
+    }
 
     public static OASEzsigndocumentApplyEzsigntemplate getExample() {
-        OASEzsigndocumentApplyEzsigntemplate ezsigndocumentApplyEzsigntemplateV2Response = new OASEzsigndocumentApplyEzsigntemplate();
-          ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
-          ezsigndocumentApplyEzsigntemplateV2Response.objDebug = OASCommonResponseObjDebug.getExample();
-        return ezsigndocumentApplyEzsigntemplateV2Response;
+        OASEzsigndocumentApplyEzsigntemplate ezsigndocumentApplyEzsigntemplateV2Request = new OASEzsigndocumentApplyEzsigntemplate();
+          ezsigndocumentApplyEzsigntemplateV2Request.fkiEzsigntemplateID = 36;
+          ezsigndocumentApplyEzsigntemplateV2Request.aSEzsigntemplatesigner = new List<String>{String.getExample()};
+          ezsigndocumentApplyEzsigntemplateV2Request.aPkiEzsignfoldersignerassociationID = new List<Integer>{Integer.getExample()};
+        return ezsigndocumentApplyEzsigntemplateV2Request;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentApplyEzsigntemplate) {           
-            OASEzsigndocumentApplyEzsigntemplate ezsigndocumentApplyEzsigntemplateV2Response = (OASEzsigndocumentApplyEzsigntemplate) obj;
-            return this.objDebugPayload == ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload
-                && this.objDebug == ezsigndocumentApplyEzsigntemplateV2Response.objDebug;
+            OASEzsigndocumentApplyEzsigntemplate ezsigndocumentApplyEzsigntemplateV2Request = (OASEzsigndocumentApplyEzsigntemplate) obj;
+            return this.fkiEzsigntemplateID == ezsigndocumentApplyEzsigntemplateV2Request.fkiEzsigntemplateID
+                && this.aSEzsigntemplatesigner == ezsigndocumentApplyEzsigntemplateV2Request.aSEzsigntemplatesigner
+                && this.aPkiEzsignfoldersignerassociationID == ezsigndocumentApplyEzsigntemplateV2Request.aPkiEzsignfoldersignerassociationID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
-        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (fkiEzsigntemplateID == null ? 0 : System.hashCode(fkiEzsigntemplateID));
+        hashCode = (17 * hashCode) + (aSEzsigntemplatesigner == null ? 0 : System.hashCode(aSEzsigntemplatesigner));
+        hashCode = (17 * hashCode) + (aPkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(aPkiEzsignfoldersignerassociationID));
         return hashCode;
     }
 }

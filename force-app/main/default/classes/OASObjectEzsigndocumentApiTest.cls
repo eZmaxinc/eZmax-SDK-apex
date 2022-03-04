@@ -178,9 +178,45 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
-     * Edit multiple ezsignsignatures
+     * Edit multiple Ezsignformfieldgroups
      *
-     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+     */
+    @isTest
+    private static void ezsigndocumentEditEzsignformfieldgroupsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'oaSEzsigndocumentEditEzsignformfield' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentEditEzsignformfield response;
+        OASEzsigndocumentEditEzsignformfield expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentEditEzsignformfield.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentEditEzsignformfield.getExample();
+        response = (OASEzsigndocumentEditEzsignformfield) api.ezsigndocumentEditEzsignformfieldgroupsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Edit multiple Ezsignsignatures
+     *
+     * Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
      */
     @isTest
     private static void ezsigndocumentEditEzsignsignaturesV1Test() {
@@ -226,7 +262,8 @@ private class OASObjectEzsigndocumentApiTest {
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsigndocumentID' => ''
+            'pkiEzsigndocumentID' => '',
+            'body' => 
         };
 
         OASClient client;
@@ -285,6 +322,41 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignformfieldgroups
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigndocumentGetEzsignformfieldgroupsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetEzsignformfieldg response;
+        OASEzsigndocumentGetEzsignformfieldg expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetEzsignformfieldg.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetEzsignformfieldg.getExample();
+        response = (OASEzsigndocumentGetEzsignformfieldg) api.ezsigndocumentGetEzsignformfieldgroupsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsigndocument\&#39;s Ezsignpages
      *
      * 
@@ -316,6 +388,41 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentGetEzsignpagesV1Res.getExample();
         response = (OASEzsigndocumentGetEzsignpagesV1Res) api.ezsigndocumentGetEzsignpagesV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignsignatures
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigndocumentGetEzsignsignaturesV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetEzsignsignatures response;
+        OASEzsigndocumentGetEzsignsignatures expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetEzsignsignatures.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetEzsignsignatures.getExample();
+        response = (OASEzsigndocumentGetEzsignsignatures) api.ezsigndocumentGetEzsignsignaturesV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

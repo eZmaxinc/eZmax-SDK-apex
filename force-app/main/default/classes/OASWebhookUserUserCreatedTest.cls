@@ -79,7 +79,7 @@ private class OASWebhookUserUserCreatedTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASWebhookUserUserCreated webhookUserUserCreated = new OASWebhookUserUserCreated();
-        System.assertEquals(new List<OASAttemptResponse>(), webhookUserUserCreated.aObjAttempt);
+        System.assertEquals(new List<OASAttemptResponseCompound>(), webhookUserUserCreated.aObjAttempt);
         System.assertEquals(null, webhookUserUserCreated.objUser);
         System.assertEquals(null, webhookUserUserCreated.objWebhook);
     }

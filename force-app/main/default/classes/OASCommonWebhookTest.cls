@@ -79,7 +79,7 @@ private class OASCommonWebhookTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASCommonWebhook commonWebhook = new OASCommonWebhook();
-        System.assertEquals(new List<OASAttemptResponse>(), commonWebhook.aObjAttempt);
+        System.assertEquals(new List<OASAttemptResponseCompound>(), commonWebhook.aObjAttempt);
         System.assertEquals(null, commonWebhook.objWebhook);
     }
 }

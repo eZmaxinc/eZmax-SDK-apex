@@ -11,7 +11,7 @@
  */
 
 /**
- * Generic Autocomplete Response
+ * Generic AutocompleteElement Response
  */
 public class OASCustomAutocompleteElementResponse {
     /**

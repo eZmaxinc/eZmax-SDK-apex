@@ -26,6 +26,31 @@ public class OASObjectEzsignbulksendApi {
     }
 
     /**
+     * Retrieve an existing Ezsignbulksend\&#39;s Ezsignbulksendtransmissions
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @return OASEzsignbulksendGetEzsignbulksendtr
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendGetEzsignbulksendtr ezsignbulksendGetEzsignbulksendtransmissionsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendGetEzsignbulksendtr) client.invoke(
+            'GET', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendGetEzsignbulksendtr.class
+        );
+    }
+    /**
      * Retrieve Ezsignbulksend list
      * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)

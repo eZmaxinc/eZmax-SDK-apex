@@ -82,9 +82,9 @@ private class OASContactinformationsRequestCompounTest {
     @isTest
     private static void defaultValuesPopulated() {
         OASContactinformationsRequestCompoun contactinformationsRequestCompoundAllOf = new OASContactinformationsRequestCompoun();
-        System.assertEquals(new List<OASAddressRequest>(), contactinformationsRequestCompoundAllOf.aObjAddress);
-        System.assertEquals(new List<OASPhoneRequest>(), contactinformationsRequestCompoundAllOf.aObjPhone);
-        System.assertEquals(new List<OASEmailRequest>(), contactinformationsRequestCompoundAllOf.aObjEmail);
-        System.assertEquals(new List<OASWebsiteRequest>(), contactinformationsRequestCompoundAllOf.aObjWebsite);
+        System.assertEquals(new List<OASAddressRequestCompound>(), contactinformationsRequestCompoundAllOf.aObjAddress);
+        System.assertEquals(new List<OASPhoneRequestCompound>(), contactinformationsRequestCompoundAllOf.aObjPhone);
+        System.assertEquals(new List<OASEmailRequestCompound>(), contactinformationsRequestCompoundAllOf.aObjEmail);
+        System.assertEquals(new List<OASWebsiteRequestCompound>(), contactinformationsRequestCompoundAllOf.aObjWebsite);
     }
 }

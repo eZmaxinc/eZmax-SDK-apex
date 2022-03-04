@@ -15,13 +15,47 @@
  */
 public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedProperties {
     /**
-     * 
+     * Get aObjEzsignformfield
      * @return aObjEzsignformfield
      */
-    public List<OASEzsignformfieldResponse> aObjEzsignformfield { get; set; }
+    public List<OASEzsignformfieldResponseCompound> aObjEzsignformfield { get; set; }
+
+    /**
+     * Get aObjDropdownElement
+     * @return aObjDropdownElement
+     */
+    public List<OASCustomDropdownElementResponseComp> aObjDropdownElement { get; set; }
+
+    /**
+     * Get aObjEzsignformfieldgroupsigner
+     * @return aObjEzsignformfieldgroupsigner
+     */
+    public OASEzsignformfieldgroupsignerRespons aObjEzsignformfieldgroupsigner { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objEzsignformfield' => 'aObjEzsignformfield'
+        'a_objEzsignformfield' => 'aObjEzsignformfield',
+        'a_objDropdownElement' => 'aObjDropdownElement',
+        'a_objEzsignformfieldgroupsigner' => 'aObjEzsignformfieldgroupsigner'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignformfield' => 'aObjEzsignformfield',
+        'a_objDropdownElement' => 'aObjDropdownElement',
+        'a_objEzsignformfieldgroupsigner' => 'aObjEzsignformfieldgroupsigner'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignformfield' => 'aObjEzsignformfield',
+        'a_objDropdownElement' => 'aObjDropdownElement',
+        'a_objEzsignformfieldgroupsigner' => 'aObjEzsignformfieldgroupsigner'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -29,19 +63,24 @@ public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedPropertie
     }
 
     public OASEzsignformfieldgroupResponseCompo() {
-        aObjEzsignformfield = new List<OASEzsignformfieldResponse>();
+        aObjEzsignformfield = new List<OASEzsignformfieldResponseCompound>();
+        aObjDropdownElement = new List<OASCustomDropdownElementResponseComp>();
     }
 
     public static OASEzsignformfieldgroupResponseCompo getExample() {
         OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = new OASEzsignformfieldgroupResponseCompo();
-          ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield = new List<OASEzsignformfieldResponse>{OASEzsignformfieldResponse.getExample()};
+          ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield = new List<OASEzsignformfieldResponseCompound>{OASEzsignformfieldResponseCompound.getExample()};
+          ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement = new List<OASCustomDropdownElementResponseComp>{OASCustomDropdownElementResponseComp.getExample()};
+          ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner = OASEzsignformfieldgroupsignerRespons.getExample();
         return ezsignformfieldgroupResponseCompoundAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignformfieldgroupResponseCompo) {           
             OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = (OASEzsignformfieldgroupResponseCompo) obj;
-            return this.aObjEzsignformfield == ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield;
+            return this.aObjEzsignformfield == ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield
+                && this.aObjDropdownElement == ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement
+                && this.aObjEzsignformfieldgroupsigner == ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner;
         }
         return false;
     }
@@ -49,6 +88,8 @@ public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedPropertie
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (aObjEzsignformfield == null ? 0 : System.hashCode(aObjEzsignformfield));
+        hashCode = (17 * hashCode) + (aObjDropdownElement == null ? 0 : System.hashCode(aObjDropdownElement));
+        hashCode = (17 * hashCode) + (aObjEzsignformfieldgroupsigner == null ? 0 : System.hashCode(aObjEzsignformfieldgroupsigner));
         return hashCode;
     }
 }

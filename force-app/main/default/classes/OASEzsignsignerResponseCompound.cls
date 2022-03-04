@@ -13,13 +13,7 @@
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-public class OASEzsignsignerResponseCompound implements OASEzsignsignerResponseCompoundAllOf, OASEzsignsignerResponse {
-    /**
-     * Get objContact
-     * @return objContact
-     */
-    public OASEzsignsignerResponseCompoundConta objContact { get; set; }
-
+public class OASEzsignsignerResponseCompound implements OASEzsignsignerResponse, OASEzsignsignerResponseCompoundAllOf {
     /**
      * The unique ID of the Ezsignsigner
      * @return pkiEzsignsignerID
@@ -41,7 +35,7 @@ public class OASEzsignsignerResponseCompound implements OASEzsignsignerResponseC
     public Integer fkiSecretquestionID { get; set; }
 
     /**
-     * The unique ID of the Userlogintype
+     * The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n|-|-|-|\n|1|**Email Only**|The Ezsignsigner will receive a secure link by email|\n|2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|\n|3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|\n|4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won\'t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|\n|5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
      * @return fkiUserlogintypeID
      */
     public Integer fkiUserlogintypeID { get; set; }
@@ -52,38 +46,44 @@ public class OASEzsignsignerResponseCompound implements OASEzsignsignerResponseC
      */
     public String sUserlogintypeDescriptionX { get; set; }
 
+    /**
+     * Get objContact
+     * @return objContact
+     */
+    public OASEzsignsignerResponseCompoundConta objContact { get; set; }
+
     public static OASEzsignsignerResponseCompound getExample() {
         OASEzsignsignerResponseCompound ezsignsignerResponseCompound = new OASEzsignsignerResponseCompound();
-          ezsignsignerResponseCompound.objContact = OASEzsignsignerResponseCompoundConta.getExample();
           ezsignsignerResponseCompound.pkiEzsignsignerID = 89;
           ezsignsignerResponseCompound.fkiTaxassignmentID = 1;
           ezsignsignerResponseCompound.fkiSecretquestionID = 7;
           ezsignsignerResponseCompound.fkiUserlogintypeID = 2;
           ezsignsignerResponseCompound.sUserlogintypeDescriptionX = 'Email and phone or SMS';
+          ezsignsignerResponseCompound.objContact = OASEzsignsignerResponseCompoundConta.getExample();
         return ezsignsignerResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignerResponseCompound) {           
             OASEzsignsignerResponseCompound ezsignsignerResponseCompound = (OASEzsignsignerResponseCompound) obj;
-            return this.objContact == ezsignsignerResponseCompound.objContact
-                && this.pkiEzsignsignerID == ezsignsignerResponseCompound.pkiEzsignsignerID
+            return this.pkiEzsignsignerID == ezsignsignerResponseCompound.pkiEzsignsignerID
                 && this.fkiTaxassignmentID == ezsignsignerResponseCompound.fkiTaxassignmentID
                 && this.fkiSecretquestionID == ezsignsignerResponseCompound.fkiSecretquestionID
                 && this.fkiUserlogintypeID == ezsignsignerResponseCompound.fkiUserlogintypeID
-                && this.sUserlogintypeDescriptionX == ezsignsignerResponseCompound.sUserlogintypeDescriptionX;
+                && this.sUserlogintypeDescriptionX == ezsignsignerResponseCompound.sUserlogintypeDescriptionX
+                && this.objContact == ezsignsignerResponseCompound.objContact;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objContact == null ? 0 : System.hashCode(objContact));
         hashCode = (17 * hashCode) + (pkiEzsignsignerID == null ? 0 : System.hashCode(pkiEzsignsignerID));
         hashCode = (17 * hashCode) + (fkiTaxassignmentID == null ? 0 : System.hashCode(fkiTaxassignmentID));
         hashCode = (17 * hashCode) + (fkiSecretquestionID == null ? 0 : System.hashCode(fkiSecretquestionID));
         hashCode = (17 * hashCode) + (fkiUserlogintypeID == null ? 0 : System.hashCode(fkiUserlogintypeID));
         hashCode = (17 * hashCode) + (sUserlogintypeDescriptionX == null ? 0 : System.hashCode(sUserlogintypeDescriptionX));
+        hashCode = (17 * hashCode) + (objContact == null ? 0 : System.hashCode(objContact));
         return hashCode;
     }
 }

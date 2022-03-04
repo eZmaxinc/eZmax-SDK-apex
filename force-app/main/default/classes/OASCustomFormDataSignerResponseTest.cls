@@ -73,13 +73,13 @@ private class OASCustomFormDataSignerResponseTest {
     private static void maintainRenamedProperties() {
         OASCustomFormDataSignerResponse customFormDataSignerResponse = new OASCustomFormDataSignerResponse();
         Map<String, String> x-property-mappings = customFormDataSignerResponse.getx-property-mappings();
-        System.assertEquals('aObjEzsignformfieldgroupCompound', x-property-mappings.get('a_objEzsignformfieldgroupCompound'));
+        System.assertEquals('aObjEzsignformfieldgroup', x-property-mappings.get('a_objEzsignformfieldgroup'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         OASCustomFormDataSignerResponse customFormDataSignerResponse = new OASCustomFormDataSignerResponse();
-        System.assertEquals(new List<OASEzsignformfieldgroupResponseCompo>(), customFormDataSignerResponse.aObjEzsignformfieldgroupCompound);
+        System.assertEquals(new List<OASCustomFormDataEzsignformfieldgrou>(), customFormDataSignerResponse.aObjEzsignformfieldgroup);
         System.assertEquals(null, customFormDataSignerResponse.fkiEzsignfoldersignerassociationID);
         System.assertEquals(null, customFormDataSignerResponse.fkiUserID);
         System.assertEquals(null, customFormDataSignerResponse.sContactFirstname);

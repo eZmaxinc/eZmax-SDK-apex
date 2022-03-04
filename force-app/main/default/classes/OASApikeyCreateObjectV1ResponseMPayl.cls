@@ -15,10 +15,10 @@
  */
 public class OASApikeyCreateObjectV1ResponseMPayl implements OAS.MappedProperties {
     /**
-     * 
+     * Get aObjApikey
      * @return aObjApikey
      */
-    public List<OASApikeyResponse> aObjApikey { get; set; }
+    public List<OASApikeyResponseCompound> aObjApikey { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objApikey' => 'aObjApikey'
@@ -29,12 +29,12 @@ public class OASApikeyCreateObjectV1ResponseMPayl implements OAS.MappedPropertie
     }
 
     public OASApikeyCreateObjectV1ResponseMPayl() {
-        aObjApikey = new List<OASApikeyResponse>();
+        aObjApikey = new List<OASApikeyResponseCompound>();
     }
 
     public static OASApikeyCreateObjectV1ResponseMPayl getExample() {
         OASApikeyCreateObjectV1ResponseMPayl apikeyCreateObjectV1ResponseMPayload = new OASApikeyCreateObjectV1ResponseMPayl();
-          apikeyCreateObjectV1ResponseMPayload.aObjApikey = new List<OASApikeyResponse>{OASApikeyResponse.getExample()};
+          apikeyCreateObjectV1ResponseMPayload.aObjApikey = new List<OASApikeyResponseCompound>{OASApikeyResponseCompound.getExample()};
         return apikeyCreateObjectV1ResponseMPayload;
     }
 

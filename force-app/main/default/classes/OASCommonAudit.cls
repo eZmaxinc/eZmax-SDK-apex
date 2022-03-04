@@ -11,77 +11,41 @@
  */
 
 /**
- * Gives informations about the user that created the object and the last user to have modified it.\n\nIf the object was never modified after creation, both Created and Modified informations will be the same.\n\nApikey details will only be provided if the changes were made by an API key.\n\n
+ * Gives informations about the user that created the object and the last user to have modified it.\n\nIf the object was never modified after creation, objAuditdetailModified won\&#39;t be returned.\n
  */
 public class OASCommonAudit {
     /**
-     * The unique ID of the User
-     * @return fkiUserIDCreated
+     * Get objAuditdetailCreated
+     * @return objAuditdetailCreated
      */
-    public Integer fkiUserIDCreated { get; set; }
+    public OASCommonAuditdetail objAuditdetailCreated { get; set; }
 
     /**
-     * The unique ID of the User
-     * @return fkiUserIDModified
+     * Get objAuditdetailModified
+     * @return objAuditdetailModified
      */
-    public Integer fkiUserIDModified { get; set; }
-
-    /**
-     * The unique ID of the Apikey
-     * @return fkiApikeyIDCreated
-     */
-    public Integer fkiApikeyIDCreated { get; set; }
-
-    /**
-     * The unique ID of the Apikey
-     * @return fkiApikeyIDModified
-     */
-    public Integer fkiApikeyIDModified { get; set; }
-
-    /**
-     * Represent a Date Time.\nThe timezone is the one configured in the User\'s profile.
-     * @return dtCreatedDate
-     */
-    public String dtCreatedDate { get; set; }
-
-    /**
-     * Represent a Date Time.\nThe timezone is the one configured in the User\'s profile.
-     * @return dtModifiedDate
-     */
-    public String dtModifiedDate { get; set; }
+    public OASCommonAuditdetail objAuditdetailModified { get; set; }
 
     public static OASCommonAudit getExample() {
         OASCommonAudit commonAudit = new OASCommonAudit();
-          commonAudit.fkiUserIDCreated = 70;
-          commonAudit.fkiUserIDModified = 70;
-          commonAudit.fkiApikeyIDCreated = 99;
-          commonAudit.fkiApikeyIDModified = 99;
-          commonAudit.dtCreatedDate = '2020-12-31 23:59:59';
-          commonAudit.dtModifiedDate = '2020-12-31 23:59:59';
+          commonAudit.objAuditdetailCreated = OASCommonAuditdetail.getExample();
+          commonAudit.objAuditdetailModified = OASCommonAuditdetail.getExample();
         return commonAudit;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCommonAudit) {           
             OASCommonAudit commonAudit = (OASCommonAudit) obj;
-            return this.fkiUserIDCreated == commonAudit.fkiUserIDCreated
-                && this.fkiUserIDModified == commonAudit.fkiUserIDModified
-                && this.fkiApikeyIDCreated == commonAudit.fkiApikeyIDCreated
-                && this.fkiApikeyIDModified == commonAudit.fkiApikeyIDModified
-                && this.dtCreatedDate == commonAudit.dtCreatedDate
-                && this.dtModifiedDate == commonAudit.dtModifiedDate;
+            return this.objAuditdetailCreated == commonAudit.objAuditdetailCreated
+                && this.objAuditdetailModified == commonAudit.objAuditdetailModified;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (fkiUserIDCreated == null ? 0 : System.hashCode(fkiUserIDCreated));
-        hashCode = (17 * hashCode) + (fkiUserIDModified == null ? 0 : System.hashCode(fkiUserIDModified));
-        hashCode = (17 * hashCode) + (fkiApikeyIDCreated == null ? 0 : System.hashCode(fkiApikeyIDCreated));
-        hashCode = (17 * hashCode) + (fkiApikeyIDModified == null ? 0 : System.hashCode(fkiApikeyIDModified));
-        hashCode = (17 * hashCode) + (dtCreatedDate == null ? 0 : System.hashCode(dtCreatedDate));
-        hashCode = (17 * hashCode) + (dtModifiedDate == null ? 0 : System.hashCode(dtModifiedDate));
+        hashCode = (17 * hashCode) + (objAuditdetailCreated == null ? 0 : System.hashCode(objAuditdetailCreated));
+        hashCode = (17 * hashCode) + (objAuditdetailModified == null ? 0 : System.hashCode(objAuditdetailModified));
         return hashCode;
     }
 }

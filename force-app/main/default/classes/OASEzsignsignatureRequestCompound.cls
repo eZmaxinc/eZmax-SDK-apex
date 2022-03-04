@@ -13,19 +13,7 @@
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequestCompoundAll, OASEzsignsignatureRequest, OAS.MappedProperties {
-    /**
-     * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is "Name" or "Handwritten")
-     * @return bEzsignsignatureCustomdate
-     */
-    public Boolean bEzsignsignatureCustomdate { get; set; }
-
-    /**
-     * An array of custom date blocks that will be filled at the time of signature.\n\nCan only be used if bEzsignsignatureCustomdate is true.\n\nUse an empty array if you don\'t want to have a date at all.
-     * @return aObjEzsignsignaturecustomdate
-     */
-    public List<OASEzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate { get; set; }
-
+public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequest, OASEzsignsignatureRequestCompoundAll, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignsignature
      * @return pkiEzsignsignatureID
@@ -45,7 +33,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public Integer iEzsignpagePagenumber { get; set; }
 
     /**
-     * The X coordinate (Horizontal) where to put the signature block on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
+     * The X coordinate (Horizontal) where to put the Ezsignsignature on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
      * @return iEzsignsignatureX
      */
     public Integer iEzsignsignatureX { get; set; }
@@ -57,7 +45,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public Integer iEzsignsignatureY { get; set; }
 
     /**
-     * The step when the Ezsignsigner will be invited to sign or fill form fields
+     * The step when the Ezsignsigner will be invited to sign
      * @return iEzsignsignatureStep
      */
     public Integer iEzsignsignatureStep { get; set; }
@@ -74,6 +62,18 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
      */
     public Integer fkiEzsigndocumentID { get; set; }
 
+    /**
+     * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is "Name" or "Handwritten")
+     * @return bEzsignsignatureCustomdate
+     */
+    public Boolean bEzsignsignatureCustomdate { get; set; }
+
+    /**
+     * An array of custom date blocks that will be filled at the time of signature.\n\nCan only be used if bEzsignsignatureCustomdate is true.\n\nUse an empty array if you don\'t want to have a date at all.
+     * @return aObjEzsignsignaturecustomdate
+     */
+    public List<OASEzsignsignaturecustomdateRequestC> aObjEzsignsignaturecustomdate { get; set; }
+
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate'
     };
@@ -83,13 +83,11 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     }
 
     public OASEzsignsignatureRequestCompound() {
-        aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequest>();
+        aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequestC>();
     }
 
     public static OASEzsignsignatureRequestCompound getExample() {
         OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = new OASEzsignsignatureRequestCompound();
-          ezsignsignatureRequestCompound.bEzsignsignatureCustomdate = true;
-          ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequest>{OASEzsignsignaturecustomdateRequest.getExample()};
           ezsignsignatureRequestCompound.pkiEzsignsignatureID = 49;
           ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID = 20;
           ezsignsignatureRequestCompound.iEzsignpagePagenumber = 1;
@@ -98,30 +96,30 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
           ezsignsignatureRequestCompound.iEzsignsignatureStep = 1;
           ezsignsignatureRequestCompound.eEzsignsignatureType = OASFieldEEzsignsignatureType.getExample();
           ezsignsignatureRequestCompound.fkiEzsigndocumentID = 97;
+          ezsignsignatureRequestCompound.bEzsignsignatureCustomdate = true;
+          ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequestC>{OASEzsignsignaturecustomdateRequestC.getExample()};
         return ezsignsignatureRequestCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignatureRequestCompound) {           
             OASEzsignsignatureRequestCompound ezsignsignatureRequestCompound = (OASEzsignsignatureRequestCompound) obj;
-            return this.bEzsignsignatureCustomdate == ezsignsignatureRequestCompound.bEzsignsignatureCustomdate
-                && this.aObjEzsignsignaturecustomdate == ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate
-                && this.pkiEzsignsignatureID == ezsignsignatureRequestCompound.pkiEzsignsignatureID
+            return this.pkiEzsignsignatureID == ezsignsignatureRequestCompound.pkiEzsignsignatureID
                 && this.fkiEzsignfoldersignerassociationID == ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID
                 && this.iEzsignpagePagenumber == ezsignsignatureRequestCompound.iEzsignpagePagenumber
                 && this.iEzsignsignatureX == ezsignsignatureRequestCompound.iEzsignsignatureX
                 && this.iEzsignsignatureY == ezsignsignatureRequestCompound.iEzsignsignatureY
                 && this.iEzsignsignatureStep == ezsignsignatureRequestCompound.iEzsignsignatureStep
                 && this.eEzsignsignatureType == ezsignsignatureRequestCompound.eEzsignsignatureType
-                && this.fkiEzsigndocumentID == ezsignsignatureRequestCompound.fkiEzsigndocumentID;
+                && this.fkiEzsigndocumentID == ezsignsignatureRequestCompound.fkiEzsigndocumentID
+                && this.bEzsignsignatureCustomdate == ezsignsignatureRequestCompound.bEzsignsignatureCustomdate
+                && this.aObjEzsignsignaturecustomdate == ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
-        hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
         hashCode = (17 * hashCode) + (pkiEzsignsignatureID == null ? 0 : System.hashCode(pkiEzsignsignatureID));
         hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationID));
         hashCode = (17 * hashCode) + (iEzsignpagePagenumber == null ? 0 : System.hashCode(iEzsignpagePagenumber));
@@ -130,6 +128,8 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
         hashCode = (17 * hashCode) + (iEzsignsignatureStep == null ? 0 : System.hashCode(iEzsignsignatureStep));
         hashCode = (17 * hashCode) + (eEzsignsignatureType == null ? 0 : System.hashCode(eEzsignsignatureType));
         hashCode = (17 * hashCode) + (fkiEzsigndocumentID == null ? 0 : System.hashCode(fkiEzsigndocumentID));
+        hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
+        hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
         return hashCode;
     }
 }

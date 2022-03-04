@@ -11,7 +11,7 @@
  */
 
 /**
- * A Contact Object
+ * An Email Object
  */
 public class OASEmailRequest {
     /**

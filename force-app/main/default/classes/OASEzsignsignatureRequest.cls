@@ -33,7 +33,7 @@ public class OASEzsignsignatureRequest {
     public Integer iEzsignpagePagenumber { get; set; }
 
     /**
-     * The X coordinate (Horizontal) where to put the signature block on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
+     * The X coordinate (Horizontal) where to put the Ezsignsignature on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
      * @return iEzsignsignatureX
      */
     public Integer iEzsignsignatureX { get; set; }
@@ -45,7 +45,7 @@ public class OASEzsignsignatureRequest {
     public Integer iEzsignsignatureY { get; set; }
 
     /**
-     * The step when the Ezsignsigner will be invited to sign or fill form fields
+     * The step when the Ezsignsigner will be invited to sign
      * @return iEzsignsignatureStep
      */
     public Integer iEzsignsignatureStep { get; set; }
