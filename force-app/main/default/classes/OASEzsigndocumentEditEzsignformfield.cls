@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -11,41 +11,32 @@
  */
 
 /**
- * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups API Request
+ * OASEzsigndocumentEditEzsignformfield
  */
-public class OASEzsigndocumentEditEzsignformfield implements OASCommonResponse {
+public class OASEzsigndocumentEditEzsignformfield {
     /**
-     * Get objDebugPayload
-     * @return objDebugPayload
+     * Get mPayload
+     * @return mPayload
      */
-    public OASCommonResponseObjDebugPayload objDebugPayload { get; set; }
-
-    /**
-     * Get objDebug
-     * @return objDebug
-     */
-    public OASCommonResponseObjDebug objDebug { get; set; }
+    public OASEzsigndocumentEditEzsignformfield mPayload { get; set; }
 
     public static OASEzsigndocumentEditEzsignformfield getExample() {
-        OASEzsigndocumentEditEzsignformfield ezsigndocumentEditEzsignformfieldgroupsV1Response = new OASEzsigndocumentEditEzsignformfield();
-          ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
-          ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebug = OASCommonResponseObjDebug.getExample();
-        return ezsigndocumentEditEzsignformfieldgroupsV1Response;
+        OASEzsigndocumentEditEzsignformfield ezsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf = new OASEzsigndocumentEditEzsignformfield();
+          ezsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf.mPayload = OASEzsigndocumentEditEzsignformfield.getExample();
+        return ezsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentEditEzsignformfield) {           
-            OASEzsigndocumentEditEzsignformfield ezsigndocumentEditEzsignformfieldgroupsV1Response = (OASEzsigndocumentEditEzsignformfield) obj;
-            return this.objDebugPayload == ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebugPayload
-                && this.objDebug == ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebug;
+            OASEzsigndocumentEditEzsignformfield ezsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf = (OASEzsigndocumentEditEzsignformfield) obj;
+            return this.mPayload == ezsigndocumentEditEzsignformfieldgroupsV1ResponseAllOf.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
-        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

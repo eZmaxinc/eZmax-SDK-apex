@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,10 +39,10 @@ public class OASEzsignbulksendListElement {
     public String sEzsignfoldertypeNameX { get; set; }
 
     /**
-     * Get eEzsignfoldertypePrivacylevel
-     * @return eEzsignfoldertypePrivacylevel
+     * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+     * @return bEzsignbulksendNeedvalidation
      */
-    public OASFieldEEzsignfoldertypePrivacyleve eEzsignfoldertypePrivacylevel { get; set; }
+    public Boolean bEzsignbulksendNeedvalidation { get; set; }
 
     /**
      * Whether the Ezsignbulksend is active or not
@@ -86,7 +86,7 @@ public class OASEzsignbulksendListElement {
           ezsignbulksendListElement.fkiEzsignfoldertypeID = 5;
           ezsignbulksendListElement.sEzsignbulksendDescription = 'Test eZsign Bulk Send';
           ezsignbulksendListElement.sEzsignfoldertypeNameX = 'Default';
-          ezsignbulksendListElement.eEzsignfoldertypePrivacylevel = OASFieldEEzsignfoldertypePrivacyleve.getExample();
+          ezsignbulksendListElement.bEzsignbulksendNeedvalidation = true;
           ezsignbulksendListElement.bEzsignbulksendIsactive = true;
           ezsignbulksendListElement.iEzsignbulksendtransmission = 0;
           ezsignbulksendListElement.iEzsignfolder = 0;
@@ -103,7 +103,7 @@ public class OASEzsignbulksendListElement {
                 && this.fkiEzsignfoldertypeID == ezsignbulksendListElement.fkiEzsignfoldertypeID
                 && this.sEzsignbulksendDescription == ezsignbulksendListElement.sEzsignbulksendDescription
                 && this.sEzsignfoldertypeNameX == ezsignbulksendListElement.sEzsignfoldertypeNameX
-                && this.eEzsignfoldertypePrivacylevel == ezsignbulksendListElement.eEzsignfoldertypePrivacylevel
+                && this.bEzsignbulksendNeedvalidation == ezsignbulksendListElement.bEzsignbulksendNeedvalidation
                 && this.bEzsignbulksendIsactive == ezsignbulksendListElement.bEzsignbulksendIsactive
                 && this.iEzsignbulksendtransmission == ezsignbulksendListElement.iEzsignbulksendtransmission
                 && this.iEzsignfolder == ezsignbulksendListElement.iEzsignfolder
@@ -120,7 +120,7 @@ public class OASEzsignbulksendListElement {
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
         hashCode = (17 * hashCode) + (sEzsignbulksendDescription == null ? 0 : System.hashCode(sEzsignbulksendDescription));
         hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
-        hashCode = (17 * hashCode) + (eEzsignfoldertypePrivacylevel == null ? 0 : System.hashCode(eEzsignfoldertypePrivacylevel));
+        hashCode = (17 * hashCode) + (bEzsignbulksendNeedvalidation == null ? 0 : System.hashCode(bEzsignbulksendNeedvalidation));
         hashCode = (17 * hashCode) + (bEzsignbulksendIsactive == null ? 0 : System.hashCode(bEzsignbulksendIsactive));
         hashCode = (17 * hashCode) + (iEzsignbulksendtransmission == null ? 0 : System.hashCode(iEzsignbulksendtransmission));
         hashCode = (17 * hashCode) + (iEzsignfolder == null ? 0 : System.hashCode(iEzsignfolder));

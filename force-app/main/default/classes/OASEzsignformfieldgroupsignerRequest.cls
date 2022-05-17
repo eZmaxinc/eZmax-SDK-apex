@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -11,9 +11,9 @@
  */
 
 /**
- * A Ezsignformfieldgroupsigner Object
+ * An Ezsignformfieldgroupsigner Object and children to create a complete structure
  */
-public class OASEzsignformfieldgroupsignerRequest {
+public class OASEzsignformfieldgroupsignerRequest implements OASEzsignformfieldgroupsignerRequest {
     /**
      * The unique ID of the Ezsignformfieldgroupsigner
      * @return pkiEzsignformfieldgroupsignerID
@@ -27,17 +27,17 @@ public class OASEzsignformfieldgroupsignerRequest {
     public Integer fkiEzsignfoldersignerassociationID { get; set; }
 
     public static OASEzsignformfieldgroupsignerRequest getExample() {
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest = new OASEzsignformfieldgroupsignerRequest();
-          ezsignformfieldgroupsignerRequest.pkiEzsignformfieldgroupsignerID = 81;
-          ezsignformfieldgroupsignerRequest.fkiEzsignfoldersignerassociationID = 20;
-        return ezsignformfieldgroupsignerRequest;
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound = new OASEzsignformfieldgroupsignerRequest();
+          ezsignformfieldgroupsignerRequestCompound.pkiEzsignformfieldgroupsignerID = 81;
+          ezsignformfieldgroupsignerRequestCompound.fkiEzsignfoldersignerassociationID = 20;
+        return ezsignformfieldgroupsignerRequestCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignformfieldgroupsignerRequest) {           
-            OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest = (OASEzsignformfieldgroupsignerRequest) obj;
-            return this.pkiEzsignformfieldgroupsignerID == ezsignformfieldgroupsignerRequest.pkiEzsignformfieldgroupsignerID
-                && this.fkiEzsignfoldersignerassociationID == ezsignformfieldgroupsignerRequest.fkiEzsignfoldersignerassociationID;
+            OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound = (OASEzsignformfieldgroupsignerRequest) obj;
+            return this.pkiEzsignformfieldgroupsignerID == ezsignformfieldgroupsignerRequestCompound.pkiEzsignformfieldgroupsignerID
+                && this.fkiEzsignfoldersignerassociationID == ezsignformfieldgroupsignerRequestCompound.fkiEzsignfoldersignerassociationID;
         }
         return false;
     }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -41,13 +41,31 @@ public class OASEzsignsignerRequestCompoundContac {
     public String sEmailAddress { get; set; }
 
     /**
-     * The Phone number of the contact.\nUse format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.\nUse format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+     * A phone number in E.164 Format
+     * @return sPhoneE164
+     */
+    public String sPhoneE164 { get; set; }
+
+    /**
+     * The extension of the phone number.\n\nThe extension is the "123" section in this sample phone number: (514) 990-1516 x123.\n\nIt can also be used with international phone numbers
+     * @return sPhoneExtension
+     */
+    public String sPhoneExtension { get; set; }
+
+    /**
+     * A phone number in E.164 Format
+     * @return sPhoneE164Cell
+     */
+    public String sPhoneE164Cell { get; set; }
+
+    /**
+     * Get sPhoneNumber
      * @return sPhoneNumber
      */
     public String sPhoneNumber { get; set; }
 
     /**
-     * The Cell Phone number of the contact.\nUse format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.\nUse format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+     * Get sPhoneNumberCell
      * @return sPhoneNumberCell
      */
     public String sPhoneNumberCell { get; set; }
@@ -58,6 +76,9 @@ public class OASEzsignsignerRequestCompoundContac {
           ezsignsignerRequestCompoundContact.sContactLastname = 'Doe';
           ezsignsignerRequestCompoundContact.fkiLanguageID = 2;
           ezsignsignerRequestCompoundContact.sEmailAddress = 'example@domain.com';
+          ezsignsignerRequestCompoundContact.sPhoneE164 = '+15149901516';
+          ezsignsignerRequestCompoundContact.sPhoneExtension = '123';
+          ezsignsignerRequestCompoundContact.sPhoneE164Cell = '+15149901516';
           ezsignsignerRequestCompoundContact.sPhoneNumber = '';
           ezsignsignerRequestCompoundContact.sPhoneNumberCell = '';
         return ezsignsignerRequestCompoundContact;
@@ -70,6 +91,9 @@ public class OASEzsignsignerRequestCompoundContac {
                 && this.sContactLastname == ezsignsignerRequestCompoundContact.sContactLastname
                 && this.fkiLanguageID == ezsignsignerRequestCompoundContact.fkiLanguageID
                 && this.sEmailAddress == ezsignsignerRequestCompoundContact.sEmailAddress
+                && this.sPhoneE164 == ezsignsignerRequestCompoundContact.sPhoneE164
+                && this.sPhoneExtension == ezsignsignerRequestCompoundContact.sPhoneExtension
+                && this.sPhoneE164Cell == ezsignsignerRequestCompoundContact.sPhoneE164Cell
                 && this.sPhoneNumber == ezsignsignerRequestCompoundContact.sPhoneNumber
                 && this.sPhoneNumberCell == ezsignsignerRequestCompoundContact.sPhoneNumberCell;
         }
@@ -82,6 +106,9 @@ public class OASEzsignsignerRequestCompoundContac {
         hashCode = (17 * hashCode) + (sContactLastname == null ? 0 : System.hashCode(sContactLastname));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
+        hashCode = (17 * hashCode) + (sPhoneE164 == null ? 0 : System.hashCode(sPhoneE164));
+        hashCode = (17 * hashCode) + (sPhoneExtension == null ? 0 : System.hashCode(sPhoneExtension));
+        hashCode = (17 * hashCode) + (sPhoneE164Cell == null ? 0 : System.hashCode(sPhoneE164Cell));
         hashCode = (17 * hashCode) + (sPhoneNumber == null ? 0 : System.hashCode(sPhoneNumber));
         hashCode = (17 * hashCode) + (sPhoneNumberCell == null ? 0 : System.hashCode(sPhoneNumberCell));
         return hashCode;

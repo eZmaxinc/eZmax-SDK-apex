@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -101,6 +101,12 @@ public class OASEzsigndocumentResponse {
     public String sEzsigndocumentMD5signed { get; set; }
 
     /**
+     * If the Ezsigndocument contains an Ezsignform or not
+     * @return bEzsigndocumentEzsignform
+     */
+    public Boolean bEzsigndocumentEzsignform { get; set; }
+
+    /**
      * Get objAudit
      * @return objAudit
      */
@@ -122,6 +128,7 @@ public class OASEzsigndocumentResponse {
           ezsigndocumentResponse.iEzsigndocumentSignaturetotal = 4;
           ezsigndocumentResponse.sEzsigndocumentMD5initial = '012345678901234567890123456789AB';
           ezsigndocumentResponse.sEzsigndocumentMD5signed = '012345678901234567890123456789AB';
+          ezsigndocumentResponse.bEzsigndocumentEzsignform = true;
           ezsigndocumentResponse.objAudit = OASCommonAudit.getExample();
         return ezsigndocumentResponse;
     }
@@ -143,6 +150,7 @@ public class OASEzsigndocumentResponse {
                 && this.iEzsigndocumentSignaturetotal == ezsigndocumentResponse.iEzsigndocumentSignaturetotal
                 && this.sEzsigndocumentMD5initial == ezsigndocumentResponse.sEzsigndocumentMD5initial
                 && this.sEzsigndocumentMD5signed == ezsigndocumentResponse.sEzsigndocumentMD5signed
+                && this.bEzsigndocumentEzsignform == ezsigndocumentResponse.bEzsigndocumentEzsignform
                 && this.objAudit == ezsigndocumentResponse.objAudit;
         }
         return false;
@@ -164,6 +172,7 @@ public class OASEzsigndocumentResponse {
         hashCode = (17 * hashCode) + (iEzsigndocumentSignaturetotal == null ? 0 : System.hashCode(iEzsigndocumentSignaturetotal));
         hashCode = (17 * hashCode) + (sEzsigndocumentMD5initial == null ? 0 : System.hashCode(sEzsigndocumentMD5initial));
         hashCode = (17 * hashCode) + (sEzsigndocumentMD5signed == null ? 0 : System.hashCode(sEzsigndocumentMD5signed));
+        hashCode = (17 * hashCode) + (bEzsigndocumentEzsignform == null ? 0 : System.hashCode(bEzsigndocumentEzsignform));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         return hashCode;
     }

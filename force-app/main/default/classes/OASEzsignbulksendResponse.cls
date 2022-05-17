@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -35,6 +35,18 @@ public class OASEzsignbulksendResponse {
     public Integer fkiLanguageID { get; set; }
 
     /**
+     * The Name of the Language in the language of the requester
+     * @return sLanguageNameX
+     */
+    public String sLanguageNameX { get; set; }
+
+    /**
+     * The name of the Ezsignfoldertype in the language of the requester
+     * @return sEzsignfoldertypeNameX
+     */
+    public String sEzsignfoldertypeNameX { get; set; }
+
+    /**
      * The description of the Ezsignbulksend
      * @return sEzsignbulksendDescription
      */
@@ -45,6 +57,12 @@ public class OASEzsignbulksendResponse {
      * @return tEzsignbulksendNote
      */
     public String tEzsignbulksendNote { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+     * @return bEzsignbulksendNeedvalidation
+     */
+    public Boolean bEzsignbulksendNeedvalidation { get; set; }
 
     /**
      * Whether the Ezsignbulksend is active or not
@@ -63,8 +81,11 @@ public class OASEzsignbulksendResponse {
           ezsignbulksendResponse.pkiEzsignbulksendID = 8;
           ezsignbulksendResponse.fkiEzsignfoldertypeID = 5;
           ezsignbulksendResponse.fkiLanguageID = 2;
+          ezsignbulksendResponse.sLanguageNameX = 'English';
+          ezsignbulksendResponse.sEzsignfoldertypeNameX = 'Default';
           ezsignbulksendResponse.sEzsignbulksendDescription = 'Test eZsign Bulk Send';
           ezsignbulksendResponse.tEzsignbulksendNote = 'This is a note';
+          ezsignbulksendResponse.bEzsignbulksendNeedvalidation = true;
           ezsignbulksendResponse.bEzsignbulksendIsactive = true;
           ezsignbulksendResponse.objAudit = OASCommonAudit.getExample();
         return ezsignbulksendResponse;
@@ -76,8 +97,11 @@ public class OASEzsignbulksendResponse {
             return this.pkiEzsignbulksendID == ezsignbulksendResponse.pkiEzsignbulksendID
                 && this.fkiEzsignfoldertypeID == ezsignbulksendResponse.fkiEzsignfoldertypeID
                 && this.fkiLanguageID == ezsignbulksendResponse.fkiLanguageID
+                && this.sLanguageNameX == ezsignbulksendResponse.sLanguageNameX
+                && this.sEzsignfoldertypeNameX == ezsignbulksendResponse.sEzsignfoldertypeNameX
                 && this.sEzsignbulksendDescription == ezsignbulksendResponse.sEzsignbulksendDescription
                 && this.tEzsignbulksendNote == ezsignbulksendResponse.tEzsignbulksendNote
+                && this.bEzsignbulksendNeedvalidation == ezsignbulksendResponse.bEzsignbulksendNeedvalidation
                 && this.bEzsignbulksendIsactive == ezsignbulksendResponse.bEzsignbulksendIsactive
                 && this.objAudit == ezsignbulksendResponse.objAudit;
         }
@@ -89,8 +113,11 @@ public class OASEzsignbulksendResponse {
         hashCode = (17 * hashCode) + (pkiEzsignbulksendID == null ? 0 : System.hashCode(pkiEzsignbulksendID));
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
+        hashCode = (17 * hashCode) + (sLanguageNameX == null ? 0 : System.hashCode(sLanguageNameX));
+        hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
         hashCode = (17 * hashCode) + (sEzsignbulksendDescription == null ? 0 : System.hashCode(sEzsignbulksendDescription));
         hashCode = (17 * hashCode) + (tEzsignbulksendNote == null ? 0 : System.hashCode(tEzsignbulksendNote));
+        hashCode = (17 * hashCode) + (bEzsignbulksendNeedvalidation == null ? 0 : System.hashCode(bEzsignbulksendNeedvalidation));
         hashCode = (17 * hashCode) + (bEzsignbulksendIsactive == null ? 0 : System.hashCode(bEzsignbulksendIsactive));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         return hashCode;

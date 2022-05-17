@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -149,6 +149,34 @@ public class OASObjectEzsignsignatureApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsignsignatureGetObjectV1Respons.class
+        );
+    }
+    /**
+     * Sign the Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID  (required)
+     * @param oaSEzsignsignatureSignV1Request  (required)
+     * @return OASEzsignsignatureSignV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignsignatureSignV1Response ezsignsignatureSignV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignsignatureID'), 'pkiEzsignsignatureID');
+        client.assertNotNull(params.get('oaSEzsignsignatureSignV1Request'), 'oaSEzsignsignatureSignV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignsignatureSignV1Response) client.invoke(
+            'POST', '/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign',
+            (OASEzsignsignatureSignV1Request) params.get('oaSEzsignsignatureSignV1Request'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignsignatureID' => (Integer) params.get('pkiEzsignsignatureID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignsignatureSignV1Response.class
         );
     }
 }

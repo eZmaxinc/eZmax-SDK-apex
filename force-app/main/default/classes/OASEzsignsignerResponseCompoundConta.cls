@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -53,6 +53,12 @@ public class OASEzsignsignerResponseCompoundConta {
     public String sPhoneE164 { get; set; }
 
     /**
+     * The extension of the phone number.\n\nThe extension is the "123" section in this sample phone number: (514) 990-1516 x123.\n\nIt can also be used with international phone numbers
+     * @return sPhoneExtension
+     */
+    public String sPhoneExtension { get; set; }
+
+    /**
      * A phone number in E.164 Format
      * @return sPhoneE164Cell
      */
@@ -65,8 +71,9 @@ public class OASEzsignsignerResponseCompoundConta {
           ezsignsignerResponseCompoundContact.sContactLastname = 'Doe';
           ezsignsignerResponseCompoundContact.fkiLanguageID = 2;
           ezsignsignerResponseCompoundContact.sEmailAddress = 'example@domain.com';
-          ezsignsignerResponseCompoundContact.sPhoneE164 = '+5149901516';
-          ezsignsignerResponseCompoundContact.sPhoneE164Cell = '+5149901516';
+          ezsignsignerResponseCompoundContact.sPhoneE164 = '+15149901516';
+          ezsignsignerResponseCompoundContact.sPhoneExtension = '123';
+          ezsignsignerResponseCompoundContact.sPhoneE164Cell = '+15149901516';
         return ezsignsignerResponseCompoundContact;
     }
 
@@ -79,6 +86,7 @@ public class OASEzsignsignerResponseCompoundConta {
                 && this.fkiLanguageID == ezsignsignerResponseCompoundContact.fkiLanguageID
                 && this.sEmailAddress == ezsignsignerResponseCompoundContact.sEmailAddress
                 && this.sPhoneE164 == ezsignsignerResponseCompoundContact.sPhoneE164
+                && this.sPhoneExtension == ezsignsignerResponseCompoundContact.sPhoneExtension
                 && this.sPhoneE164Cell == ezsignsignerResponseCompoundContact.sPhoneE164Cell;
         }
         return false;
@@ -92,6 +100,7 @@ public class OASEzsignsignerResponseCompoundConta {
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
         hashCode = (17 * hashCode) + (sPhoneE164 == null ? 0 : System.hashCode(sPhoneE164));
+        hashCode = (17 * hashCode) + (sPhoneExtension == null ? 0 : System.hashCode(sPhoneExtension));
         hashCode = (17 * hashCode) + (sPhoneE164Cell == null ? 0 : System.hashCode(sPhoneE164Cell));
         return hashCode;
     }

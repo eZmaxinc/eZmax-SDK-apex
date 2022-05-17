@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -11,44 +11,32 @@
  */
 
 /**
- * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
+ * OASEzsigndocumentEditEzsignsignature
  */
-public class OASEzsigndocumentEditEzsignsignature implements OAS.MappedProperties {
+public class OASEzsigndocumentEditEzsignsignature {
     /**
-     * Get aObjEzsignsignature
-     * @return aObjEzsignsignature
+     * Get mPayload
+     * @return mPayload
      */
-    public List<OASEzsignsignatureRequestCompound> aObjEzsignsignature { get; set; }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objEzsignsignature' => 'aObjEzsignsignature'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    public OASEzsigndocumentEditEzsignsignature() {
-        aObjEzsignsignature = new List<OASEzsignsignatureRequestCompound>();
-    }
+    public OASEzsigndocumentEditEzsignsignature mPayload { get; set; }
 
     public static OASEzsigndocumentEditEzsignsignature getExample() {
-        OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1Request = new OASEzsigndocumentEditEzsignsignature();
-          ezsigndocumentEditEzsignsignaturesV1Request.aObjEzsignsignature = new List<OASEzsignsignatureRequestCompound>{OASEzsignsignatureRequestCompound.getExample()};
-        return ezsigndocumentEditEzsignsignaturesV1Request;
+        OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1ResponseAllOf = new OASEzsigndocumentEditEzsignsignature();
+          ezsigndocumentEditEzsignsignaturesV1ResponseAllOf.mPayload = OASEzsigndocumentEditEzsignsignature.getExample();
+        return ezsigndocumentEditEzsignsignaturesV1ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentEditEzsignsignature) {           
-            OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1Request = (OASEzsigndocumentEditEzsignsignature) obj;
-            return this.aObjEzsignsignature == ezsigndocumentEditEzsignsignaturesV1Request.aObjEzsignsignature;
+            OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1ResponseAllOf = (OASEzsigndocumentEditEzsignsignature) obj;
+            return this.mPayload == ezsigndocumentEditEzsignsignaturesV1ResponseAllOf.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aObjEzsignsignature == null ? 0 : System.hashCode(aObjEzsignsignature));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

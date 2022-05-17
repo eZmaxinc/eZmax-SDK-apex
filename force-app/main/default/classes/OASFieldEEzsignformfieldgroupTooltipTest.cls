@@ -7,7 +7,6 @@ private class OASFieldEEzsignformfieldgroupTooltipTest {
             OASFieldEEzsignformfieldgroupTooltip.TOPCENTER,
             OASFieldEEzsignformfieldgroupTooltip.TOPRIGHT,
             OASFieldEEzsignformfieldgroupTooltip.MIDDLELEFT,
-            OASFieldEEzsignformfieldgroupTooltip.MIDDLECENTER,
             OASFieldEEzsignformfieldgroupTooltip.MIDDLERIGHT,
             OASFieldEEzsignformfieldgroupTooltip.BOTTOMLEFT,
             OASFieldEEzsignformfieldgroupTooltip.BOTTOMCENTER,

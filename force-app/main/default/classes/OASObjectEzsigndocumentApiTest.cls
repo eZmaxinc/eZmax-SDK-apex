@@ -1,7 +1,7 @@
 @isTest
 private class OASObjectEzsigndocumentApiTest {
     /**
-     * Apply an Ezsign Template to the Ezsigndocument.
+     * Apply an Ezsigntemplate to the Ezsigndocument.
      *
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital &quot;E&quot; to normalize the nomenclature.\n\nThis endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
      */
@@ -37,7 +37,7 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
-     * Apply an Ezsign Template to the Ezsigndocument.
+     * Apply an Ezsigntemplate to the Ezsigndocument.
      *
      * This endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
      */
@@ -282,6 +282,41 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentEndPrematurelyV1Res.getExample();
         response = (OASEzsigndocumentEndPrematurelyV1Res) api.ezsigndocumentEndPrematurelyV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve actionable elements for the Ezsigndocument
+     *
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     */
+    @isTest
+    private static void ezsigndocumentGetActionableElementsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetActionableElemen response;
+        OASEzsigndocumentGetActionableElemen expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetActionableElemen.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetActionableElemen.getExample();
+        response = (OASEzsigndocumentGetActionableElemen) api.ezsigndocumentGetActionableElementsV1(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -600,6 +635,42 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentPatchObjectV1Respon.getExample();
         response = (OASEzsigndocumentPatchObjectV1Respon) api.ezsigndocumentPatchObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Unsend the Ezsigndocument
+     *
+     * Once an Ezsigndocument has been sent to signatories, it cannot be modified.\n\nUsing this endpoint, you can unsend the Ezsigndocument and make it modifiable again.\n\nSignatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.\n\n⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+     */
+    @isTest
+    private static void ezsigndocumentUnsendV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'body' => 
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentUnsendV1Response response;
+        OASEzsigndocumentUnsendV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentUnsendV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentUnsendV1Response.getExample();
+        response = (OASEzsigndocumentUnsendV1Response) api.ezsigndocumentUnsendV1(params);
         System.assertEquals(expectedResponse, response);
     }
 }

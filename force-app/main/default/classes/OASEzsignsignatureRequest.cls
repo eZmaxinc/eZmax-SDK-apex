@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,7 +39,7 @@ public class OASEzsignsignatureRequest {
     public Integer iEzsignsignatureX { get; set; }
 
     /**
-     * The Y coordinate (Vertical) where to put the signature block on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
+     * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
      * @return iEzsignsignatureY
      */
     public Integer iEzsignsignatureY { get; set; }
@@ -62,6 +62,24 @@ public class OASEzsignsignatureRequest {
      */
     public Integer fkiEzsigndocumentID { get; set; }
 
+    /**
+     * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+     * @return tEzsignsignatureTooltip
+     */
+    public String tEzsignsignatureTooltip { get; set; }
+
+    /**
+     * Get eEzsignsignatureTooltipposition
+     * @return eEzsignsignatureTooltipposition
+     */
+    public OASFieldEEzsignsignatureTooltipposit eEzsignsignatureTooltipposition { get; set; }
+
+    /**
+     * Get eEzsignsignatureFont
+     * @return eEzsignsignatureFont
+     */
+    public OASFieldEEzsignsignatureFont eEzsignsignatureFont { get; set; }
+
     public static OASEzsignsignatureRequest getExample() {
         OASEzsignsignatureRequest ezsignsignatureRequest = new OASEzsignsignatureRequest();
           ezsignsignatureRequest.pkiEzsignsignatureID = 49;
@@ -72,6 +90,9 @@ public class OASEzsignsignatureRequest {
           ezsignsignatureRequest.iEzsignsignatureStep = 1;
           ezsignsignatureRequest.eEzsignsignatureType = OASFieldEEzsignsignatureType.getExample();
           ezsignsignatureRequest.fkiEzsigndocumentID = 97;
+          ezsignsignatureRequest.tEzsignsignatureTooltip = 'Please sign here if you agree to the terms';
+          ezsignsignatureRequest.eEzsignsignatureTooltipposition = OASFieldEEzsignsignatureTooltipposit.getExample();
+          ezsignsignatureRequest.eEzsignsignatureFont = OASFieldEEzsignsignatureFont.getExample();
         return ezsignsignatureRequest;
     }
 
@@ -85,7 +106,10 @@ public class OASEzsignsignatureRequest {
                 && this.iEzsignsignatureY == ezsignsignatureRequest.iEzsignsignatureY
                 && this.iEzsignsignatureStep == ezsignsignatureRequest.iEzsignsignatureStep
                 && this.eEzsignsignatureType == ezsignsignatureRequest.eEzsignsignatureType
-                && this.fkiEzsigndocumentID == ezsignsignatureRequest.fkiEzsigndocumentID;
+                && this.fkiEzsigndocumentID == ezsignsignatureRequest.fkiEzsigndocumentID
+                && this.tEzsignsignatureTooltip == ezsignsignatureRequest.tEzsignsignatureTooltip
+                && this.eEzsignsignatureTooltipposition == ezsignsignatureRequest.eEzsignsignatureTooltipposition
+                && this.eEzsignsignatureFont == ezsignsignatureRequest.eEzsignsignatureFont;
         }
         return false;
     }
@@ -100,6 +124,9 @@ public class OASEzsignsignatureRequest {
         hashCode = (17 * hashCode) + (iEzsignsignatureStep == null ? 0 : System.hashCode(iEzsignsignatureStep));
         hashCode = (17 * hashCode) + (eEzsignsignatureType == null ? 0 : System.hashCode(eEzsignsignatureType));
         hashCode = (17 * hashCode) + (fkiEzsigndocumentID == null ? 0 : System.hashCode(fkiEzsigndocumentID));
+        hashCode = (17 * hashCode) + (tEzsignsignatureTooltip == null ? 0 : System.hashCode(tEzsignsignatureTooltip));
+        hashCode = (17 * hashCode) + (eEzsignsignatureTooltipposition == null ? 0 : System.hashCode(eEzsignsignatureTooltipposition));
+        hashCode = (17 * hashCode) + (eEzsignsignatureFont == null ? 0 : System.hashCode(eEzsignsignatureFont));
         return hashCode;
     }
 }

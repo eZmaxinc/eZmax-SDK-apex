@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -125,13 +125,13 @@ public class OASEzsignfolderResponse {
           ezsignfolderResponse.sEzsignfoldertypeNameX = 'Default';
           ezsignfolderResponse.fkiBillingentityinternalID = 1;
           ezsignfolderResponse.sBillingentityinternalDescriptionX = 'Default';
-          ezsignfolderResponse.fkiEzsigntsarequirementID = 92;
+          ezsignfolderResponse.fkiEzsigntsarequirementID = 1;
           ezsignfolderResponse.sEzsigntsarequirementDescriptionX = 'Default';
           ezsignfolderResponse.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderResponse.tEzsignfolderNote = 'This is a note';
           ezsignfolderResponse.eEzsignfolderSendreminderfrequency = OASFieldEEzsignfolderSendreminderfre.getExample();
           ezsignfolderResponse.dtEzsignfolderDuedate = '2020-12-31 23:59:59';
-          ezsignfolderResponse.dtEzsignfolderSentdate = '2020-12-31 23:59:59';
+          ezsignfolderResponse.dtEzsignfolderSentdate = '2020-12-31T23:59:59.000Z';
           ezsignfolderResponse.dtEzsignfolderScheduledarchive = '2020-12-31 23:59:59';
           ezsignfolderResponse.dtEzsignfolderScheduleddestruction = '2020-12-31 23:59:59';
           ezsignfolderResponse.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();

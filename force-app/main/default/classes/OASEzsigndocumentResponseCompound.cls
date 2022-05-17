@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -101,6 +101,12 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
     public String sEzsigndocumentMD5signed { get; set; }
 
     /**
+     * If the Ezsigndocument contains an Ezsignform or not
+     * @return bEzsigndocumentEzsignform
+     */
+    public Boolean bEzsigndocumentEzsignform { get; set; }
+
+    /**
      * Get objAudit
      * @return objAudit
      */
@@ -164,6 +170,7 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
           ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal = 4;
           ezsigndocumentResponseCompound.sEzsigndocumentMD5initial = '012345678901234567890123456789AB';
           ezsigndocumentResponseCompound.sEzsigndocumentMD5signed = '012345678901234567890123456789AB';
+          ezsigndocumentResponseCompound.bEzsigndocumentEzsignform = true;
           ezsigndocumentResponseCompound.objAudit = OASCommonAudit.getExample();
           ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal = 2;
           ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent = 1;
@@ -190,6 +197,7 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
                 && this.iEzsigndocumentSignaturetotal == ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal
                 && this.sEzsigndocumentMD5initial == ezsigndocumentResponseCompound.sEzsigndocumentMD5initial
                 && this.sEzsigndocumentMD5signed == ezsigndocumentResponseCompound.sEzsigndocumentMD5signed
+                && this.bEzsigndocumentEzsignform == ezsigndocumentResponseCompound.bEzsigndocumentEzsignform
                 && this.objAudit == ezsigndocumentResponseCompound.objAudit
                 && this.iEzsigndocumentStepformtotal == ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal
                 && this.iEzsigndocumentStepformcurrent == ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent
@@ -216,6 +224,7 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
         hashCode = (17 * hashCode) + (iEzsigndocumentSignaturetotal == null ? 0 : System.hashCode(iEzsigndocumentSignaturetotal));
         hashCode = (17 * hashCode) + (sEzsigndocumentMD5initial == null ? 0 : System.hashCode(sEzsigndocumentMD5initial));
         hashCode = (17 * hashCode) + (sEzsigndocumentMD5signed == null ? 0 : System.hashCode(sEzsigndocumentMD5signed));
+        hashCode = (17 * hashCode) + (bEzsigndocumentEzsignform == null ? 0 : System.hashCode(bEzsigndocumentEzsignform));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         hashCode = (17 * hashCode) + (iEzsigndocumentStepformtotal == null ? 0 : System.hashCode(iEzsigndocumentStepformtotal));
         hashCode = (17 * hashCode) + (iEzsigndocumentStepformcurrent == null ? 0 : System.hashCode(iEzsigndocumentStepformcurrent));

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -56,7 +56,7 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
         OASEzsignfolderRequestCompound ezsignfolderRequestCompound = new OASEzsignfolderRequestCompound();
           ezsignfolderRequestCompound.pkiEzsignfolderID = 33;
           ezsignfolderRequestCompound.fkiEzsignfoldertypeID = 5;
-          ezsignfolderRequestCompound.fkiEzsigntsarequirementID = 92;
+          ezsignfolderRequestCompound.fkiEzsigntsarequirementID = 1;
           ezsignfolderRequestCompound.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderRequestCompound.tEzsignfolderNote = 'This is a note';
           ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency = OASFieldEEzsignfolderSendreminderfre.getExample();

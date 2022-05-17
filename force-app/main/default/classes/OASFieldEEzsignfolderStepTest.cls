@@ -8,7 +8,8 @@ private class OASFieldEEzsignfolderStepTest {
             OASFieldEEzsignfolderStep.PARTIALLYSIGNED,
             OASFieldEEzsignfolderStep.EXPIRED,
             OASFieldEEzsignfolderStep.COMPLETED,
-            OASFieldEEzsignfolderStep.ARCHIVED
+            OASFieldEEzsignfolderStep.ARCHIVED,
+            OASFieldEEzsignfolderStep.DISPOSED
         };
         Set<OASFieldEEzsignfolderStep> actual  = new Set<OASFieldEEzsignfolderStep>(OASFieldEEzsignfolderStep.values());
         System.assertEquals(expected, actual);

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -25,6 +25,62 @@ public class OASObjectEzsignfolderApi {
         return this.client;
     }
 
+    /**
+     * Archive the Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param body  (required)
+     * @return OASEzsignfolderArchiveV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderArchiveV1Response ezsignfolderArchiveV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        client.assertNotNull(params.get('body'), 'body');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderArchiveV1Response) client.invoke(
+            'POST', '/1/object/ezsignfolder/{pkiEzsignfolderID}/archive',
+            (Object) params.get('body'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignfolderArchiveV1Response.class
+        );
+    }
+    /**
+     * Download multiples files from an Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param oaSEzsignfolderBatchDownloadV1Reques  (required)
+     * @return Blob
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public Blob ezsignfolderBatchDownloadV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        client.assertNotNull(params.get('oaSEzsignfolderBatchDownloadV1Reques'), 'oaSEzsignfolderBatchDownloadV1Reques');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (Blob) client.invoke(
+            'POST', '/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload',
+            (OASEzsignfolderBatchDownloadV1Reques) params.get('oaSEzsignfolderBatchDownloadV1Reques'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/zip', 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            Blob.class
+        );
+    }
     /**
      * Create a new Ezsignfolder
      * The endpoint allows to create one or many elements at once.\n\nThe array can contain simple (Just the object) or compound (The object and its child) objects.\n\nCreating compound elements allows to reduce the multiple requests to create all child objects.
@@ -127,6 +183,31 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
+     * Retrieve actionable elements for the Ezsignfolder
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * @param pkiEzsignfolderID  (required)
+     * @return OASEzsignfolderGetActionableElements
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderGetActionableElements ezsignfolderGetActionableElementsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderGetActionableElements) client.invoke(
+            'GET', '/1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignfolderGetActionableElements.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
      * 
      * @param pkiEzsignfolderID  (required)
@@ -203,7 +284,7 @@ public class OASObjectEzsignfolderApi {
     }
     /**
      * Retrieve Ezsignfolder list
-     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed|\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional)
@@ -259,6 +340,62 @@ public class OASObjectEzsignfolderApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsignfolderGetObjectV1Response.class
+        );
+    }
+    /**
+     * Import an Ezsigntemplatepackage in the Ezsignfolder.
+     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.\n\nThis allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+     * @param pkiEzsignfolderID  (required)
+     * @param oaSEzsignfolderImportEzsigntemplatep  (required)
+     * @return OASEzsignfolderImportEzsigntemplatep
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderImportEzsigntemplatep ezsignfolderImportEzsigntemplatepackageV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        client.assertNotNull(params.get('oaSEzsignfolderImportEzsigntemplatep'), 'oaSEzsignfolderImportEzsigntemplatep');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderImportEzsigntemplatep) client.invoke(
+            'POST', '/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage',
+            (OASEzsignfolderImportEzsigntemplatep) params.get('oaSEzsignfolderImportEzsigntemplatep'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignfolderImportEzsigntemplatep.class
+        );
+    }
+    /**
+     * Reorder Ezsigndocuments in the Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param oaSEzsignfolderReorderV1Request  (required)
+     * @return OASEzsignfolderReorderV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderReorderV1Response ezsignfolderReorderV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        client.assertNotNull(params.get('oaSEzsignfolderReorderV1Request'), 'oaSEzsignfolderReorderV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderReorderV1Response) client.invoke(
+            'POST', '/1/object/ezsignfolder/{pkiEzsignfolderID}/reorder',
+            (OASEzsignfolderReorderV1Request) params.get('oaSEzsignfolderReorderV1Request'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignfolderReorderV1Response.class
         );
     }
     /**

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -26,7 +26,7 @@ public class OASObjectEzsigndocumentApi {
     }
 
     /**
-     * Apply an Ezsign Template to the Ezsigndocument.
+     * Apply an Ezsigntemplate to the Ezsigndocument.
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital &quot;E&quot; to normalize the nomenclature.\n\nThis endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID  (required)
      * @param oaSEzsigndocumentApplyEzsigntemplate  (required)
@@ -54,7 +54,7 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
-     * Apply an Ezsign Template to the Ezsigndocument.
+     * Apply an Ezsigntemplate to the Ezsigndocument.
      * This endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID  (required)
      * @param oaSEzsigndocumentApplyEzsigntemplate  (required)
@@ -236,6 +236,31 @@ public class OASObjectEzsigndocumentApi {
             new List<String>{ 'application/json' },
             new List<String> { 'Authorization' },
             OASEzsigndocumentEndPrematurelyV1Res.class
+        );
+    }
+    /**
+     * Retrieve actionable elements for the Ezsigndocument
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetActionableElemen
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetActionableElemen ezsigndocumentGetActionableElementsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetActionableElemen) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetActionableElemen.class
         );
     }
     /**
@@ -470,6 +495,34 @@ public class OASObjectEzsigndocumentApi {
             new List<String>{ 'application/json' },
             new List<String> { 'Authorization' },
             OASEzsigndocumentPatchObjectV1Respon.class
+        );
+    }
+    /**
+     * Unsend the Ezsigndocument
+     * Once an Ezsigndocument has been sent to signatories, it cannot be modified.\n\nUsing this endpoint, you can unsend the Ezsigndocument and make it modifiable again.\n\nSignatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.\n\n⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+     * @param pkiEzsigndocumentID  (required)
+     * @param body  (required)
+     * @return OASEzsigndocumentUnsendV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentUnsendV1Response ezsigndocumentUnsendV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        client.assertNotNull(params.get('body'), 'body');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentUnsendV1Response) client.invoke(
+            'POST', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend',
+            (Object) params.get('body'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentUnsendV1Response.class
         );
     }
 }

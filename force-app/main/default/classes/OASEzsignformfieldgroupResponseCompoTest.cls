@@ -83,6 +83,6 @@ private class OASEzsignformfieldgroupResponseCompoTest {
         OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = new OASEzsignformfieldgroupResponseCompo();
         System.assertEquals(new List<OASEzsignformfieldResponseCompound>(), ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield);
         System.assertEquals(new List<OASCustomDropdownElementResponseComp>(), ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement);
-        System.assertEquals(null, ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner);
+        System.assertEquals(new List<OASEzsignformfieldgroupsignerRespons>(), ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner);
     }
 }

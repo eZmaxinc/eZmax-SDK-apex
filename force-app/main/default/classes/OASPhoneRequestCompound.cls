@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -63,7 +63,7 @@ public class OASPhoneRequestCompound implements OASPhoneRequest {
           phoneRequestCompound.sPhoneRegion = '514';
           phoneRequestCompound.sPhoneExchange = '990';
           phoneRequestCompound.sPhoneNumber = '1516';
-          phoneRequestCompound.sPhoneInternational = '+5149901516';
+          phoneRequestCompound.sPhoneInternational = '+15149901516';
           phoneRequestCompound.sPhoneExtension = '123';
         return phoneRequestCompound;
     }

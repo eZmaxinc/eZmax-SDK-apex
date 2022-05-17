@@ -106,6 +106,42 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
     }
 
     /**
+     * Edit an existing Ezsignfoldersignerassociation
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfoldersignerassociationEditObjectV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfoldersignerassociationID' => '',
+            'oaSEzsignfoldersignerassociationEdit' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfoldersignerassociationApi api;
+        OASEzsignfoldersignerassociationEdit response;
+        OASEzsignfoldersignerassociationEdit expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfoldersignerassociationApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfoldersignerassociationEdit.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfoldersignerassociationEdit.getExample();
+        response = (OASEzsignfoldersignerassociationEdit) api.ezsignfoldersignerassociationEditObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve a Login Url to allow In-Person signing
      *
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.\n\nThe signer Login type must be configured as In-Person.

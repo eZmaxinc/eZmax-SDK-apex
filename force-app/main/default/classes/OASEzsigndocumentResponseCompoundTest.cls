@@ -94,6 +94,7 @@ private class OASEzsigndocumentResponseCompoundTest {
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5initial);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5signed);
+        System.assertEquals(null, ezsigndocumentResponseCompound.bEzsigndocumentEzsignform);
         System.assertEquals(null, ezsigndocumentResponseCompound.objAudit);
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal);
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent);

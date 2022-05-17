@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -26,8 +26,146 @@ public class OASObjectEzsigntemplatepackageApi {
     }
 
     /**
+     * Create a new Ezsigntemplatepackage
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSEzsigntemplatepackageCreateObject  (required)
+     * @return OASEzsigntemplatepackageCreateObject
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigntemplatepackageCreateObject ezsigntemplatepackageCreateObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSEzsigntemplatepackageCreateObject'), 'oaSEzsigntemplatepackageCreateObject');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigntemplatepackageCreateObject) client.invoke(
+            'POST', '/1/object/ezsigntemplatepackage',
+            (OASEzsigntemplatepackageCreateObject) params.get('oaSEzsigntemplatepackageCreateObject'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigntemplatepackageCreateObject.class
+        );
+    }
+    /**
+     * Delete an existing Ezsigntemplatepackage
+     * 
+     * @param pkiEzsigntemplatepackageID  (required)
+     * @return OASEzsigntemplatepackageDeleteObject
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigntemplatepackageDeleteObject ezsigntemplatepackageDeleteObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigntemplatepackageID'), 'pkiEzsigntemplatepackageID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigntemplatepackageDeleteObject) client.invoke(
+            'DELETE', '/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigntemplatepackageID' => (Integer) params.get('pkiEzsigntemplatepackageID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigntemplatepackageDeleteObject.class
+        );
+    }
+    /**
+     * Edit multiple Ezsigntemplatepackagesigners
+     * Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+     * @param pkiEzsigntemplatepackageID  (required)
+     * @param oaSEzsigntemplatepackageEditEzsignte  (required)
+     * @return OASEzsigntemplatepackageEditEzsignte
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigntemplatepackageEditEzsignte ezsigntemplatepackageEditEzsigntemplatepackagesignersV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigntemplatepackageID'), 'pkiEzsigntemplatepackageID');
+        client.assertNotNull(params.get('oaSEzsigntemplatepackageEditEzsignte'), 'oaSEzsigntemplatepackageEditEzsignte');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigntemplatepackageEditEzsignte) client.invoke(
+            'PUT', '/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners',
+            (OASEzsigntemplatepackageEditEzsignte) params.get('oaSEzsigntemplatepackageEditEzsignte'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigntemplatepackageID' => (Integer) params.get('pkiEzsigntemplatepackageID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigntemplatepackageEditEzsignte.class
+        );
+    }
+    /**
+     * Edit an existing Ezsigntemplatepackage
+     * 
+     * @param pkiEzsigntemplatepackageID  (required)
+     * @param oaSEzsigntemplatepackageEditObjectV1  (required)
+     * @return OASEzsigntemplatepackageEditObjectV1
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigntemplatepackageEditObjectV1 ezsigntemplatepackageEditObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigntemplatepackageID'), 'pkiEzsigntemplatepackageID');
+        client.assertNotNull(params.get('oaSEzsigntemplatepackageEditObjectV1'), 'oaSEzsigntemplatepackageEditObjectV1');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigntemplatepackageEditObjectV1) client.invoke(
+            'PUT', '/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}',
+            (OASEzsigntemplatepackageEditObjectV1) params.get('oaSEzsigntemplatepackageEditObjectV1'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigntemplatepackageID' => (Integer) params.get('pkiEzsigntemplatepackageID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigntemplatepackageEditObjectV1.class
+        );
+    }
+    /**
+     * Retrieve Ezsigntemplatepackages and IDs
+     * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+     * @param sSelector The type of Ezsigntemplatepackages to return (required)
+     * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
+     * @return OASCommonGetAutocompleteDisabledV1Re
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASCommonGetAutocompleteDisabledV1Re ezsigntemplatepackageGetAutocompleteV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('sSelector'), 'sSelector');
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASCommonGetAutocompleteDisabledV1Re) client.invoke(
+            'GET', '/1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}', '',
+            query, form,
+            new Map<String, Object>{
+                'sSelector' => (String) params.get('sSelector')
+            },
+            new Map<String, Object>{
+                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
+            },
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASCommonGetAutocompleteDisabledV1Re.class
+        );
+    }
+    /**
      * Retrieve Ezsigntemplatepackage list
-     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsigntemplatepackageType | Company&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional)
@@ -58,6 +196,31 @@ public class OASObjectEzsigntemplatepackageApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsigntemplatepackageGetListV1Res.class
+        );
+    }
+    /**
+     * Retrieve an existing Ezsigntemplatepackage
+     * 
+     * @param pkiEzsigntemplatepackageID  (required)
+     * @return OASEzsigntemplatepackageGetObjectV1R
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigntemplatepackageGetObjectV1R ezsigntemplatepackageGetObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigntemplatepackageID'), 'pkiEzsigntemplatepackageID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigntemplatepackageGetObjectV1R) client.invoke(
+            'GET', '/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigntemplatepackageID' => (Integer) params.get('pkiEzsigntemplatepackageID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigntemplatepackageGetObjectV1R.class
         );
     }
 }

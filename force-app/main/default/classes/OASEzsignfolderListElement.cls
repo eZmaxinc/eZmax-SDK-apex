@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -63,10 +63,10 @@ public class OASEzsignfolderListElement {
     public String dtEzsignfolderSentdate { get; set; }
 
     /**
-     * Represent a Date Time.\nThe timezone is the one configured in the User\'s profile.
-     * @return dtDueDate
+     * The maximum date and time at which the Ezsignfolder can be signed.
+     * @return dtEzsignfolderDuedate
      */
-    public String dtDueDate { get; set; }
+    public String dtEzsignfolderDuedate { get; set; }
 
     /**
      * The total number of Ezsigndocument in the folder
@@ -101,8 +101,8 @@ public class OASEzsignfolderListElement {
           ezsignfolderListElement.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderListElement.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();
           ezsignfolderListElement.dtCreatedDate = '2020-12-31 23:59:59';
-          ezsignfolderListElement.dtEzsignfolderSentdate = '2020-12-31 23:59:59';
-          ezsignfolderListElement.dtDueDate = '2020-12-31 23:59:59';
+          ezsignfolderListElement.dtEzsignfolderSentdate = '2020-12-31T23:59:59.000Z';
+          ezsignfolderListElement.dtEzsignfolderDuedate = '2020-12-31 23:59:59';
           ezsignfolderListElement.iEzsigndocument = 0;
           ezsignfolderListElement.iEzsigndocumentEdm = 0;
           ezsignfolderListElement.iEzsignsignature = 0;
@@ -121,7 +121,7 @@ public class OASEzsignfolderListElement {
                 && this.eEzsignfolderStep == ezsignfolderListElement.eEzsignfolderStep
                 && this.dtCreatedDate == ezsignfolderListElement.dtCreatedDate
                 && this.dtEzsignfolderSentdate == ezsignfolderListElement.dtEzsignfolderSentdate
-                && this.dtDueDate == ezsignfolderListElement.dtDueDate
+                && this.dtEzsignfolderDuedate == ezsignfolderListElement.dtEzsignfolderDuedate
                 && this.iEzsigndocument == ezsignfolderListElement.iEzsigndocument
                 && this.iEzsigndocumentEdm == ezsignfolderListElement.iEzsigndocumentEdm
                 && this.iEzsignsignature == ezsignfolderListElement.iEzsignsignature
@@ -140,7 +140,7 @@ public class OASEzsignfolderListElement {
         hashCode = (17 * hashCode) + (eEzsignfolderStep == null ? 0 : System.hashCode(eEzsignfolderStep));
         hashCode = (17 * hashCode) + (dtCreatedDate == null ? 0 : System.hashCode(dtCreatedDate));
         hashCode = (17 * hashCode) + (dtEzsignfolderSentdate == null ? 0 : System.hashCode(dtEzsignfolderSentdate));
-        hashCode = (17 * hashCode) + (dtDueDate == null ? 0 : System.hashCode(dtDueDate));
+        hashCode = (17 * hashCode) + (dtEzsignfolderDuedate == null ? 0 : System.hashCode(dtEzsignfolderDuedate));
         hashCode = (17 * hashCode) + (iEzsigndocument == null ? 0 : System.hashCode(iEzsigndocument));
         hashCode = (17 * hashCode) + (iEzsigndocumentEdm == null ? 0 : System.hashCode(iEzsigndocumentEdm));
         hashCode = (17 * hashCode) + (iEzsignsignature == null ? 0 : System.hashCode(iEzsignsignature));

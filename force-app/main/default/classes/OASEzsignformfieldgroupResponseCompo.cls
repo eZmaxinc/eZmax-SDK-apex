@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -30,7 +30,7 @@ public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedPropertie
      * Get aObjEzsignformfieldgroupsigner
      * @return aObjEzsignformfieldgroupsigner
      */
-    public OASEzsignformfieldgroupsignerRespons aObjEzsignformfieldgroupsigner { get; set; }
+    public List<OASEzsignformfieldgroupsignerRespons> aObjEzsignformfieldgroupsigner { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignformfield' => 'aObjEzsignformfield',
@@ -65,13 +65,14 @@ public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedPropertie
     public OASEzsignformfieldgroupResponseCompo() {
         aObjEzsignformfield = new List<OASEzsignformfieldResponseCompound>();
         aObjDropdownElement = new List<OASCustomDropdownElementResponseComp>();
+        aObjEzsignformfieldgroupsigner = new List<OASEzsignformfieldgroupsignerRespons>();
     }
 
     public static OASEzsignformfieldgroupResponseCompo getExample() {
         OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = new OASEzsignformfieldgroupResponseCompo();
           ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield = new List<OASEzsignformfieldResponseCompound>{OASEzsignformfieldResponseCompound.getExample()};
           ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement = new List<OASCustomDropdownElementResponseComp>{OASCustomDropdownElementResponseComp.getExample()};
-          ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner = OASEzsignformfieldgroupsignerRespons.getExample();
+          ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner = new List<OASEzsignformfieldgroupsignerRespons>{OASEzsignformfieldgroupsignerRespons.getExample()};
         return ezsignformfieldgroupResponseCompoundAllOf;
     }
 

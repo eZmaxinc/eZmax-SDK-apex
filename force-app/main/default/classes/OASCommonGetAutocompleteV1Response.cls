@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -11,7 +11,7 @@
  */
 
 /**
- * Response for the /1/object/xxx/getAutocomplete API Request
+ * Response for GET /1/object/xxx/getAutocomplete
  */
 public class OASCommonGetAutocompleteV1Response implements OASCommonGetAutocompleteV1ResponseAl, OASCommonResponse {
     /**

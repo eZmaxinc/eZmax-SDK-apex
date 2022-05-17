@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -21,10 +21,37 @@ public class OASEzsigndocumentRequest {
     public Integer pkiEzsigndocumentID { get; set; }
 
     /**
+     * The unique ID of the Ezsignfolder
+     * @return fkiEzsignfolderID
+     */
+    public Integer fkiEzsignfolderID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigntemplate
+     * @return fkiEzsigntemplateID
+     */
+    public Integer fkiEzsigntemplateID { get; set; }
+
+    /**
+     * The unique ID of the Ezsignfoldersignerassociation
+     * @return fkiEzsignfoldersignerassociationID
+     */
+    public Integer fkiEzsignfoldersignerassociationID { get; set; }
+
+    /**
+     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
+     * minimum: 1
+     * maximum: 2
+     * @return fkiLanguageID
+     */
+    public Integer fkiLanguageID { get; set; }
+
+    /**
      * Indicates where to look for the document binary content.
      */
     public enum EEzsigndocumentSourceEnum {
         BASE64,
+        EZSIGNTEMPLATE,
         URL
     }
 
@@ -72,24 +99,24 @@ public class OASEzsigndocumentRequest {
     public String sEzsigndocumentPassword { get; set; }
 
     /**
-     * The unique ID of the Ezsignfolder
-     * @return fkiEzsignfolderID
+     * If the document contains an existing PDF form this property must be set.\r\n**Keep** leaves the form as-is in the document.\r\n**Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
      */
-    public Integer fkiEzsignfolderID { get; set; }
+    public enum EEzsigndocumentFormEnum {
+        KEEP,
+        CONVERT
+    }
+
+    /**
+     * If the document contains an existing PDF form this property must be set.\r\n**Keep** leaves the form as-is in the document.\r\n**Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+     * @return eEzsigndocumentForm
+     */
+    public EEzsigndocumentFormEnum eEzsigndocumentForm { get; set; }
 
     /**
      * The maximum date and time at which the Ezsigndocument can be signed.
      * @return dtEzsigndocumentDuedate
      */
     public String dtEzsigndocumentDuedate { get; set; }
-
-    /**
-     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
-     * minimum: 1
-     * maximum: 2
-     * @return fkiLanguageID
-     */
-    public Integer fkiLanguageID { get; set; }
 
     /**
      * The name of the document that will be presented to Ezsignfoldersignerassociations
@@ -99,21 +126,23 @@ public class OASEzsigndocumentRequest {
 
     public OASEzsigndocumentRequest() {
         bEzsigndocumentForcerepair = true;
-        sEzsigndocumentPassword = '';
     }
 
     public static OASEzsigndocumentRequest getExample() {
         OASEzsigndocumentRequest ezsigndocumentRequest = new OASEzsigndocumentRequest();
           ezsigndocumentRequest.pkiEzsigndocumentID = 97;
+          ezsigndocumentRequest.fkiEzsignfolderID = 33;
+          ezsigndocumentRequest.fkiEzsigntemplateID = 36;
+          ezsigndocumentRequest.fkiEzsignfoldersignerassociationID = 20;
+          ezsigndocumentRequest.fkiLanguageID = 2;
           ezsigndocumentRequest.eEzsigndocumentSource = EEzsigndocumentSourceEnum.BASE64;
           ezsigndocumentRequest.eEzsigndocumentFormat = EEzsigndocumentFormatEnum.PDF;
           ezsigndocumentRequest.sEzsigndocumentBase64 = EncodingUtil.base64Decode('VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wZWQgb3ZlciB0aGUgbGF6eSBkb2cu');
           ezsigndocumentRequest.sEzsigndocumentUrl = 'http://www.example.com/document.pdf';
           ezsigndocumentRequest.bEzsigndocumentForcerepair = true;
           ezsigndocumentRequest.sEzsigndocumentPassword = 'SecretPassword123';
-          ezsigndocumentRequest.fkiEzsignfolderID = 33;
+          ezsigndocumentRequest.eEzsigndocumentForm = EEzsigndocumentFormEnum.KEEP;
           ezsigndocumentRequest.dtEzsigndocumentDuedate = '2020-12-31 23:59:59';
-          ezsigndocumentRequest.fkiLanguageID = 2;
           ezsigndocumentRequest.sEzsigndocumentName = 'Contract #123';
         return ezsigndocumentRequest;
     }
@@ -122,15 +151,18 @@ public class OASEzsigndocumentRequest {
         if (obj instanceof OASEzsigndocumentRequest) {           
             OASEzsigndocumentRequest ezsigndocumentRequest = (OASEzsigndocumentRequest) obj;
             return this.pkiEzsigndocumentID == ezsigndocumentRequest.pkiEzsigndocumentID
+                && this.fkiEzsignfolderID == ezsigndocumentRequest.fkiEzsignfolderID
+                && this.fkiEzsigntemplateID == ezsigndocumentRequest.fkiEzsigntemplateID
+                && this.fkiEzsignfoldersignerassociationID == ezsigndocumentRequest.fkiEzsignfoldersignerassociationID
+                && this.fkiLanguageID == ezsigndocumentRequest.fkiLanguageID
                 && this.eEzsigndocumentSource == ezsigndocumentRequest.eEzsigndocumentSource
                 && this.eEzsigndocumentFormat == ezsigndocumentRequest.eEzsigndocumentFormat
                 && this.sEzsigndocumentBase64 == ezsigndocumentRequest.sEzsigndocumentBase64
                 && this.sEzsigndocumentUrl == ezsigndocumentRequest.sEzsigndocumentUrl
                 && this.bEzsigndocumentForcerepair == ezsigndocumentRequest.bEzsigndocumentForcerepair
                 && this.sEzsigndocumentPassword == ezsigndocumentRequest.sEzsigndocumentPassword
-                && this.fkiEzsignfolderID == ezsigndocumentRequest.fkiEzsignfolderID
+                && this.eEzsigndocumentForm == ezsigndocumentRequest.eEzsigndocumentForm
                 && this.dtEzsigndocumentDuedate == ezsigndocumentRequest.dtEzsigndocumentDuedate
-                && this.fkiLanguageID == ezsigndocumentRequest.fkiLanguageID
                 && this.sEzsigndocumentName == ezsigndocumentRequest.sEzsigndocumentName;
         }
         return false;
@@ -139,15 +171,18 @@ public class OASEzsigndocumentRequest {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiEzsigndocumentID == null ? 0 : System.hashCode(pkiEzsigndocumentID));
+        hashCode = (17 * hashCode) + (fkiEzsignfolderID == null ? 0 : System.hashCode(fkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (fkiEzsigntemplateID == null ? 0 : System.hashCode(fkiEzsigntemplateID));
+        hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationID));
+        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (eEzsigndocumentSource == null ? 0 : System.hashCode(eEzsigndocumentSource));
         hashCode = (17 * hashCode) + (eEzsigndocumentFormat == null ? 0 : System.hashCode(eEzsigndocumentFormat));
         hashCode = (17 * hashCode) + (sEzsigndocumentBase64 == null ? 0 : System.hashCode(sEzsigndocumentBase64));
         hashCode = (17 * hashCode) + (sEzsigndocumentUrl == null ? 0 : System.hashCode(sEzsigndocumentUrl));
         hashCode = (17 * hashCode) + (bEzsigndocumentForcerepair == null ? 0 : System.hashCode(bEzsigndocumentForcerepair));
         hashCode = (17 * hashCode) + (sEzsigndocumentPassword == null ? 0 : System.hashCode(sEzsigndocumentPassword));
-        hashCode = (17 * hashCode) + (fkiEzsignfolderID == null ? 0 : System.hashCode(fkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (eEzsigndocumentForm == null ? 0 : System.hashCode(eEzsigndocumentForm));
         hashCode = (17 * hashCode) + (dtEzsigndocumentDuedate == null ? 0 : System.hashCode(dtEzsigndocumentDuedate));
-        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sEzsigndocumentName == null ? 0 : System.hashCode(sEzsigndocumentName));
         return hashCode;
     }

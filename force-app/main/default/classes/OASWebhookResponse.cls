@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -14,6 +14,12 @@
  * A webhook object
  */
 public class OASWebhookResponse {
+    /**
+     * The customer code assigned to your account
+     * @return pksCustomerCode
+     */
+    public String pksCustomerCode { get; set; }
+
     /**
      * The Webhook ID. This value is visible in the admin interface.
      * @return pkiWebhookID
@@ -49,24 +55,6 @@ public class OASWebhookResponse {
     public EWebhookEzsigneventEnum eWebhookEzsignevent { get; set; }
 
     /**
-     * The customer code assigned to your account
-     * @return pksCustomerCode
-     */
-    public String pksCustomerCode { get; set; }
-
-    /**
-     * The url being called
-     * @return sWebhookUrl
-     */
-    public String sWebhookUrl { get; set; }
-
-    /**
-     * The email that will receive the webhook in case all attempts fail.
-     * @return sWebhookEmailfailed
-     */
-    public String sWebhookEmailfailed { get; set; }
-
-    /**
      * This Management Event. This property will be set only if the Module is "Management".
      */
     public enum EWebhookManagementeventEnum {
@@ -79,41 +67,71 @@ public class OASWebhookResponse {
      */
     public EWebhookManagementeventEnum eWebhookManagementevent { get; set; }
 
+    /**
+     * The url being called
+     * @return sWebhookUrl
+     */
+    public String sWebhookUrl { get; set; }
+
+    /**
+     * Wheter the webhook received is a manual test or a real event
+     * @return bWebhookTest
+     */
+    public Boolean bWebhookTest { get; set; }
+
+    /**
+     * Wheter the server\'s SSL certificate should be validated or not. Not recommended for production use.
+     * @return bWebhookSkipsslvalidation
+     */
+    public Boolean bWebhookSkipsslvalidation { get; set; }
+
+    /**
+     * The email that will receive the webhook in case all attempts fail.
+     * @return sWebhookEmailfailed
+     */
+    public String sWebhookEmailfailed { get; set; }
+
     public static OASWebhookResponse getExample() {
         OASWebhookResponse webhookResponse = new OASWebhookResponse();
+          webhookResponse.pksCustomerCode = 'demo';
           webhookResponse.pkiWebhookID = 0;
           webhookResponse.eWebhookModule = EWebhookModuleEnum.EZSIGN;
           webhookResponse.eWebhookEzsignevent = EWebhookEzsigneventEnum.DOCUMENTCOMPLETED;
-          webhookResponse.pksCustomerCode = 'demo';
-          webhookResponse.sWebhookUrl = '';
-          webhookResponse.sWebhookEmailfailed = '';
           webhookResponse.eWebhookManagementevent = EWebhookManagementeventEnum.USERCREATED;
+          webhookResponse.sWebhookUrl = '';
+          webhookResponse.bWebhookTest = true;
+          webhookResponse.bWebhookSkipsslvalidation = true;
+          webhookResponse.sWebhookEmailfailed = '';
         return webhookResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookResponse) {           
             OASWebhookResponse webhookResponse = (OASWebhookResponse) obj;
-            return this.pkiWebhookID == webhookResponse.pkiWebhookID
+            return this.pksCustomerCode == webhookResponse.pksCustomerCode
+                && this.pkiWebhookID == webhookResponse.pkiWebhookID
                 && this.eWebhookModule == webhookResponse.eWebhookModule
                 && this.eWebhookEzsignevent == webhookResponse.eWebhookEzsignevent
-                && this.pksCustomerCode == webhookResponse.pksCustomerCode
+                && this.eWebhookManagementevent == webhookResponse.eWebhookManagementevent
                 && this.sWebhookUrl == webhookResponse.sWebhookUrl
-                && this.sWebhookEmailfailed == webhookResponse.sWebhookEmailfailed
-                && this.eWebhookManagementevent == webhookResponse.eWebhookManagementevent;
+                && this.bWebhookTest == webhookResponse.bWebhookTest
+                && this.bWebhookSkipsslvalidation == webhookResponse.bWebhookSkipsslvalidation
+                && this.sWebhookEmailfailed == webhookResponse.sWebhookEmailfailed;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pksCustomerCode == null ? 0 : System.hashCode(pksCustomerCode));
         hashCode = (17 * hashCode) + (pkiWebhookID == null ? 0 : System.hashCode(pkiWebhookID));
         hashCode = (17 * hashCode) + (eWebhookModule == null ? 0 : System.hashCode(eWebhookModule));
         hashCode = (17 * hashCode) + (eWebhookEzsignevent == null ? 0 : System.hashCode(eWebhookEzsignevent));
-        hashCode = (17 * hashCode) + (pksCustomerCode == null ? 0 : System.hashCode(pksCustomerCode));
-        hashCode = (17 * hashCode) + (sWebhookUrl == null ? 0 : System.hashCode(sWebhookUrl));
-        hashCode = (17 * hashCode) + (sWebhookEmailfailed == null ? 0 : System.hashCode(sWebhookEmailfailed));
         hashCode = (17 * hashCode) + (eWebhookManagementevent == null ? 0 : System.hashCode(eWebhookManagementevent));
+        hashCode = (17 * hashCode) + (sWebhookUrl == null ? 0 : System.hashCode(sWebhookUrl));
+        hashCode = (17 * hashCode) + (bWebhookTest == null ? 0 : System.hashCode(bWebhookTest));
+        hashCode = (17 * hashCode) + (bWebhookSkipsslvalidation == null ? 0 : System.hashCode(bWebhookSkipsslvalidation));
+        hashCode = (17 * hashCode) + (sWebhookEmailfailed == null ? 0 : System.hashCode(sWebhookEmailfailed));
         return hashCode;
     }
 }

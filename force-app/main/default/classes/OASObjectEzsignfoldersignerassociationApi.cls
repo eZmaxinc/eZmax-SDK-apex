@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -96,6 +96,34 @@ public class OASObjectEzsignfoldersignerassociationApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsignfoldersignerassociationDele.class
+        );
+    }
+    /**
+     * Edit an existing Ezsignfoldersignerassociation
+     * 
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param oaSEzsignfoldersignerassociationEdit  (required)
+     * @return OASEzsignfoldersignerassociationEdit
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfoldersignerassociationEdit ezsignfoldersignerassociationEditObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfoldersignerassociationID'), 'pkiEzsignfoldersignerassociationID');
+        client.assertNotNull(params.get('oaSEzsignfoldersignerassociationEdit'), 'oaSEzsignfoldersignerassociationEdit');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfoldersignerassociationEdit) client.invoke(
+            'PUT', '/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}',
+            (OASEzsignfoldersignerassociationEdit) params.get('oaSEzsignfoldersignerassociationEdit'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfoldersignerassociationID' => (Integer) params.get('pkiEzsignfoldersignerassociationID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignfoldersignerassociationEdit.class
         );
     }
     /**

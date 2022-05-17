@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -26,6 +26,142 @@ public class OASObjectEzsignbulksendApi {
     }
 
     /**
+     * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @param oaSEzsignbulksendCreateEzsignbulksen  (required)
+     * @return OASEzsignbulksendCreateEzsignbulksen
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendCreateEzsignbulksen ezsignbulksendCreateEzsignbulksendtransmissionV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        client.assertNotNull(params.get('oaSEzsignbulksendCreateEzsignbulksen'), 'oaSEzsignbulksendCreateEzsignbulksen');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendCreateEzsignbulksen) client.invoke(
+            'POST', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission',
+            (OASEzsignbulksendCreateEzsignbulksen) params.get('oaSEzsignbulksendCreateEzsignbulksen'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendCreateEzsignbulksen.class
+        );
+    }
+    /**
+     * Create a new Ezsignbulksend
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSEzsignbulksendCreateObjectV1Reque  (required)
+     * @return OASEzsignbulksendCreateObjectV1Respo
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendCreateObjectV1Respo ezsignbulksendCreateObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSEzsignbulksendCreateObjectV1Reque'), 'oaSEzsignbulksendCreateObjectV1Reque');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendCreateObjectV1Respo) client.invoke(
+            'POST', '/1/object/ezsignbulksend',
+            (OASEzsignbulksendCreateObjectV1Reque) params.get('oaSEzsignbulksendCreateObjectV1Reque'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendCreateObjectV1Respo.class
+        );
+    }
+    /**
+     * Delete an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @return OASEzsignbulksendDeleteObjectV1Respo
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendDeleteObjectV1Respo ezsignbulksendDeleteObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendDeleteObjectV1Respo) client.invoke(
+            'DELETE', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendDeleteObjectV1Respo.class
+        );
+    }
+    /**
+     * Edit an existing Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @param oaSEzsignbulksendEditObjectV1Request  (required)
+     * @return OASEzsignbulksendEditObjectV1Respons
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendEditObjectV1Respons ezsignbulksendEditObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        client.assertNotNull(params.get('oaSEzsignbulksendEditObjectV1Request'), 'oaSEzsignbulksendEditObjectV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendEditObjectV1Respons) client.invoke(
+            'PUT', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}',
+            (OASEzsignbulksendEditObjectV1Request) params.get('oaSEzsignbulksendEditObjectV1Request'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendEditObjectV1Respons.class
+        );
+    }
+    /**
+     * Retrieve an existing Ezsignbulksend\&#39;s empty Csv template
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @param eCsvSeparator Separator that will be used to separate fields (required)
+     * @return String
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public String ezsignbulksendGetCsvTemplateV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        client.assertNotNull(params.get('eCsvSeparator'), 'eCsvSeparator');
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('eCsvSeparator', (String) params.get('eCsvSeparator')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (String) client.invoke(
+            'GET', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'text/csv', 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            String.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignbulksend\&#39;s Ezsignbulksendtransmissions
      * 
      * @param pkiEzsignbulksendID  (required)
@@ -48,6 +184,31 @@ public class OASObjectEzsignbulksendApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsignbulksendGetEzsignbulksendtr.class
+        );
+    }
+    /**
+     * Retrieve an existing Ezsignbulksend\&#39;s forms data
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @return OASEzsignbulksendGetFormsDataV1Respo
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendGetFormsDataV1Respo ezsignbulksendGetFormsDataV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendGetFormsDataV1Respo) client.invoke(
+            'GET', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json', 'application/zip' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendGetFormsDataV1Respo.class
         );
     }
     /**
@@ -108,6 +269,34 @@ public class OASObjectEzsignbulksendApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsignbulksendGetObjectV1Response.class
+        );
+    }
+    /**
+     * Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
+     * 
+     * @param pkiEzsignbulksendID  (required)
+     * @param oaSEzsignbulksendReorderV1Request  (required)
+     * @return OASEzsignbulksendReorderV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendReorderV1Response ezsignbulksendReorderV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendID'), 'pkiEzsignbulksendID');
+        client.assertNotNull(params.get('oaSEzsignbulksendReorderV1Request'), 'oaSEzsignbulksendReorderV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendReorderV1Response) client.invoke(
+            'POST', '/1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder',
+            (OASEzsignbulksendReorderV1Request) params.get('oaSEzsignbulksendReorderV1Request'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendID' => (Integer) params.get('pkiEzsignbulksendID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendReorderV1Response.class
         );
     }
 }

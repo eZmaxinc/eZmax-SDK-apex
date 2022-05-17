@@ -2,70 +2,70 @@
 private class OASEzsignformfieldgroupsignerRequestTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest1 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest2 = ezsignformfieldgroupsignerRequest1;
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest3 = new OASEzsignformfieldgroupsignerRequest();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest4 = ezsignformfieldgroupsignerRequest3;
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound1 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound2 = ezsignformfieldgroupsignerRequestCompound1;
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound3 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound4 = ezsignformfieldgroupsignerRequestCompound3;
 
-        System.assert(ezsignformfieldgroupsignerRequest1.equals(ezsignformfieldgroupsignerRequest2));
-        System.assert(ezsignformfieldgroupsignerRequest2.equals(ezsignformfieldgroupsignerRequest1));
-        System.assert(ezsignformfieldgroupsignerRequest1.equals(ezsignformfieldgroupsignerRequest1));
-        System.assert(ezsignformfieldgroupsignerRequest3.equals(ezsignformfieldgroupsignerRequest4));
-        System.assert(ezsignformfieldgroupsignerRequest4.equals(ezsignformfieldgroupsignerRequest3));
-        System.assert(ezsignformfieldgroupsignerRequest3.equals(ezsignformfieldgroupsignerRequest3));
+        System.assert(ezsignformfieldgroupsignerRequestCompound1.equals(ezsignformfieldgroupsignerRequestCompound2));
+        System.assert(ezsignformfieldgroupsignerRequestCompound2.equals(ezsignformfieldgroupsignerRequestCompound1));
+        System.assert(ezsignformfieldgroupsignerRequestCompound1.equals(ezsignformfieldgroupsignerRequestCompound1));
+        System.assert(ezsignformfieldgroupsignerRequestCompound3.equals(ezsignformfieldgroupsignerRequestCompound4));
+        System.assert(ezsignformfieldgroupsignerRequestCompound4.equals(ezsignformfieldgroupsignerRequestCompound3));
+        System.assert(ezsignformfieldgroupsignerRequestCompound3.equals(ezsignformfieldgroupsignerRequestCompound3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest1 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest2 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest3 = new OASEzsignformfieldgroupsignerRequest();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest4 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound1 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound2 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound3 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound4 = new OASEzsignformfieldgroupsignerRequest();
 
-        System.assert(ezsignformfieldgroupsignerRequest1.equals(ezsignformfieldgroupsignerRequest2));
-        System.assert(ezsignformfieldgroupsignerRequest2.equals(ezsignformfieldgroupsignerRequest1));
-        System.assert(ezsignformfieldgroupsignerRequest3.equals(ezsignformfieldgroupsignerRequest4));
-        System.assert(ezsignformfieldgroupsignerRequest4.equals(ezsignformfieldgroupsignerRequest3));
+        System.assert(ezsignformfieldgroupsignerRequestCompound1.equals(ezsignformfieldgroupsignerRequestCompound2));
+        System.assert(ezsignformfieldgroupsignerRequestCompound2.equals(ezsignformfieldgroupsignerRequestCompound1));
+        System.assert(ezsignformfieldgroupsignerRequestCompound3.equals(ezsignformfieldgroupsignerRequestCompound4));
+        System.assert(ezsignformfieldgroupsignerRequestCompound4.equals(ezsignformfieldgroupsignerRequestCompound3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest1 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest2 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound1 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound2 = new OASEzsignformfieldgroupsignerRequest();
 
-        System.assertEquals(false, ezsignformfieldgroupsignerRequest1.equals('foo'));
-        System.assertEquals(false, ezsignformfieldgroupsignerRequest2.equals('foo'));
+        System.assertEquals(false, ezsignformfieldgroupsignerRequestCompound1.equals('foo'));
+        System.assertEquals(false, ezsignformfieldgroupsignerRequestCompound2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest1 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest2 = new OASEzsignformfieldgroupsignerRequest();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest3;
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound1 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound2 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound3;
 
-        System.assertEquals(false, ezsignformfieldgroupsignerRequest1.equals(ezsignformfieldgroupsignerRequest3));
-        System.assertEquals(false, ezsignformfieldgroupsignerRequest2.equals(ezsignformfieldgroupsignerRequest3));
+        System.assertEquals(false, ezsignformfieldgroupsignerRequestCompound1.equals(ezsignformfieldgroupsignerRequestCompound3));
+        System.assertEquals(false, ezsignformfieldgroupsignerRequestCompound2.equals(ezsignformfieldgroupsignerRequestCompound3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest1 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest2 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound1 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound2 = new OASEzsignformfieldgroupsignerRequest();
 
-        System.assertEquals(ezsignformfieldgroupsignerRequest1.hashCode(), ezsignformfieldgroupsignerRequest1.hashCode());
-        System.assertEquals(ezsignformfieldgroupsignerRequest2.hashCode(), ezsignformfieldgroupsignerRequest2.hashCode());
+        System.assertEquals(ezsignformfieldgroupsignerRequestCompound1.hashCode(), ezsignformfieldgroupsignerRequestCompound1.hashCode());
+        System.assertEquals(ezsignformfieldgroupsignerRequestCompound2.hashCode(), ezsignformfieldgroupsignerRequestCompound2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest1 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest2 = OASEzsignformfieldgroupsignerRequest.getExample();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest3 = new OASEzsignformfieldgroupsignerRequest();
-        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequest4 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound1 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound2 = OASEzsignformfieldgroupsignerRequest.getExample();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound3 = new OASEzsignformfieldgroupsignerRequest();
+        OASEzsignformfieldgroupsignerRequest ezsignformfieldgroupsignerRequestCompound4 = new OASEzsignformfieldgroupsignerRequest();
 
-        System.assert(ezsignformfieldgroupsignerRequest1.equals(ezsignformfieldgroupsignerRequest2));
-        System.assert(ezsignformfieldgroupsignerRequest3.equals(ezsignformfieldgroupsignerRequest4));
-        System.assertEquals(ezsignformfieldgroupsignerRequest1.hashCode(), ezsignformfieldgroupsignerRequest2.hashCode());
-        System.assertEquals(ezsignformfieldgroupsignerRequest3.hashCode(), ezsignformfieldgroupsignerRequest4.hashCode());
+        System.assert(ezsignformfieldgroupsignerRequestCompound1.equals(ezsignformfieldgroupsignerRequestCompound2));
+        System.assert(ezsignformfieldgroupsignerRequestCompound3.equals(ezsignformfieldgroupsignerRequestCompound4));
+        System.assertEquals(ezsignformfieldgroupsignerRequestCompound1.hashCode(), ezsignformfieldgroupsignerRequestCompound2.hashCode());
+        System.assertEquals(ezsignformfieldgroupsignerRequestCompound3.hashCode(), ezsignformfieldgroupsignerRequestCompound4.hashCode());
     }
 }

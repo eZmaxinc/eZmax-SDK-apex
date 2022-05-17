@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -13,7 +13,7 @@
 /**
  * An Ezsignbulksend Object and children to create a complete structure
  */
-public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendResponse {
+public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendResponse, OASEzsignbulksendResponseCompoundAll, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignbulksend
      * @return pkiEzsignbulksendID
@@ -35,6 +35,18 @@ public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendRespo
     public Integer fkiLanguageID { get; set; }
 
     /**
+     * The Name of the Language in the language of the requester
+     * @return sLanguageNameX
+     */
+    public String sLanguageNameX { get; set; }
+
+    /**
+     * The name of the Ezsignfoldertype in the language of the requester
+     * @return sEzsignfoldertypeNameX
+     */
+    public String sEzsignfoldertypeNameX { get; set; }
+
+    /**
      * The description of the Ezsignbulksend
      * @return sEzsignbulksendDescription
      */
@@ -45,6 +57,12 @@ public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendRespo
      * @return tEzsignbulksendNote
      */
     public String tEzsignbulksendNote { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+     * @return bEzsignbulksendNeedvalidation
+     */
+    public Boolean bEzsignbulksendNeedvalidation { get; set; }
 
     /**
      * Whether the Ezsignbulksend is active or not
@@ -58,15 +76,55 @@ public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendRespo
      */
     public OASCommonAudit objAudit { get; set; }
 
+    /**
+     * Get aObjEzsignbulksenddocumentmapping
+     * @return aObjEzsignbulksenddocumentmapping
+     */
+    public List<OASEzsignbulksenddocumentmappingResp> aObjEzsignbulksenddocumentmapping { get; set; }
+
+    /**
+     * Get aObjEzsignbulksendsignermapping
+     * @return aObjEzsignbulksendsignermapping
+     */
+    public List<OASEzsignbulksendsignermappingRespon> aObjEzsignbulksendsignermapping { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignbulksenddocumentmapping' => 'aObjEzsignbulksenddocumentmapping',
+        'a_objEzsignbulksendsignermapping' => 'aObjEzsignbulksendsignermapping'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignbulksenddocumentmapping' => 'aObjEzsignbulksenddocumentmapping',
+        'a_objEzsignbulksendsignermapping' => 'aObjEzsignbulksendsignermapping'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignbulksendResponseCompound() {
+        aObjEzsignbulksenddocumentmapping = new List<OASEzsignbulksenddocumentmappingResp>();
+        aObjEzsignbulksendsignermapping = new List<OASEzsignbulksendsignermappingRespon>();
+    }
+
     public static OASEzsignbulksendResponseCompound getExample() {
         OASEzsignbulksendResponseCompound ezsignbulksendResponseCompound = new OASEzsignbulksendResponseCompound();
           ezsignbulksendResponseCompound.pkiEzsignbulksendID = 8;
           ezsignbulksendResponseCompound.fkiEzsignfoldertypeID = 5;
           ezsignbulksendResponseCompound.fkiLanguageID = 2;
+          ezsignbulksendResponseCompound.sLanguageNameX = 'English';
+          ezsignbulksendResponseCompound.sEzsignfoldertypeNameX = 'Default';
           ezsignbulksendResponseCompound.sEzsignbulksendDescription = 'Test eZsign Bulk Send';
           ezsignbulksendResponseCompound.tEzsignbulksendNote = 'This is a note';
+          ezsignbulksendResponseCompound.bEzsignbulksendNeedvalidation = true;
           ezsignbulksendResponseCompound.bEzsignbulksendIsactive = true;
           ezsignbulksendResponseCompound.objAudit = OASCommonAudit.getExample();
+          ezsignbulksendResponseCompound.aObjEzsignbulksenddocumentmapping = new List<OASEzsignbulksenddocumentmappingResp>{OASEzsignbulksenddocumentmappingResp.getExample()};
+          ezsignbulksendResponseCompound.aObjEzsignbulksendsignermapping = new List<OASEzsignbulksendsignermappingRespon>{OASEzsignbulksendsignermappingRespon.getExample()};
         return ezsignbulksendResponseCompound;
     }
 
@@ -76,10 +134,15 @@ public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendRespo
             return this.pkiEzsignbulksendID == ezsignbulksendResponseCompound.pkiEzsignbulksendID
                 && this.fkiEzsignfoldertypeID == ezsignbulksendResponseCompound.fkiEzsignfoldertypeID
                 && this.fkiLanguageID == ezsignbulksendResponseCompound.fkiLanguageID
+                && this.sLanguageNameX == ezsignbulksendResponseCompound.sLanguageNameX
+                && this.sEzsignfoldertypeNameX == ezsignbulksendResponseCompound.sEzsignfoldertypeNameX
                 && this.sEzsignbulksendDescription == ezsignbulksendResponseCompound.sEzsignbulksendDescription
                 && this.tEzsignbulksendNote == ezsignbulksendResponseCompound.tEzsignbulksendNote
+                && this.bEzsignbulksendNeedvalidation == ezsignbulksendResponseCompound.bEzsignbulksendNeedvalidation
                 && this.bEzsignbulksendIsactive == ezsignbulksendResponseCompound.bEzsignbulksendIsactive
-                && this.objAudit == ezsignbulksendResponseCompound.objAudit;
+                && this.objAudit == ezsignbulksendResponseCompound.objAudit
+                && this.aObjEzsignbulksenddocumentmapping == ezsignbulksendResponseCompound.aObjEzsignbulksenddocumentmapping
+                && this.aObjEzsignbulksendsignermapping == ezsignbulksendResponseCompound.aObjEzsignbulksendsignermapping;
         }
         return false;
     }
@@ -89,10 +152,15 @@ public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendRespo
         hashCode = (17 * hashCode) + (pkiEzsignbulksendID == null ? 0 : System.hashCode(pkiEzsignbulksendID));
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
+        hashCode = (17 * hashCode) + (sLanguageNameX == null ? 0 : System.hashCode(sLanguageNameX));
+        hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
         hashCode = (17 * hashCode) + (sEzsignbulksendDescription == null ? 0 : System.hashCode(sEzsignbulksendDescription));
         hashCode = (17 * hashCode) + (tEzsignbulksendNote == null ? 0 : System.hashCode(tEzsignbulksendNote));
+        hashCode = (17 * hashCode) + (bEzsignbulksendNeedvalidation == null ? 0 : System.hashCode(bEzsignbulksendNeedvalidation));
         hashCode = (17 * hashCode) + (bEzsignbulksendIsactive == null ? 0 : System.hashCode(bEzsignbulksendIsactive));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
+        hashCode = (17 * hashCode) + (aObjEzsignbulksenddocumentmapping == null ? 0 : System.hashCode(aObjEzsignbulksenddocumentmapping));
+        hashCode = (17 * hashCode) + (aObjEzsignbulksendsignermapping == null ? 0 : System.hashCode(aObjEzsignbulksendsignermapping));
         return hashCode;
     }
 }

@@ -1,6 +1,72 @@
 @isTest
 private class OASObjectEzsignfolderApiTest {
     /**
+     * Archive the Ezsignfolder
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderArchiveV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'body' => 
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderArchiveV1Response response;
+        OASEzsignfolderArchiveV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderArchiveV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderArchiveV1Response.getExample();
+        response = (OASEzsignfolderArchiveV1Response) api.ezsignfolderArchiveV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Download multiples files from an Ezsignfolder
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderBatchDownloadV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'oaSEzsignfolderBatchDownloadV1Reques' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        Blob response;
+        Blob expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+        api.ezsignfolderBatchDownloadV1(params);
+    }
+
+    /**
      * Create a new Ezsignfolder
      *
      * The endpoint allows to create one or many elements at once.\n\nThe array can contain simple (Just the object) or compound (The object and its child) objects.\n\nCreating compound elements allows to reduce the multiple requests to create all child objects.
@@ -142,6 +208,41 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Retrieve actionable elements for the Ezsignfolder
+     *
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     */
+    @isTest
+    private static void ezsignfolderGetActionableElementsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetActionableElements response;
+        OASEzsignfolderGetActionableElements expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderGetActionableElements.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetActionableElements.getExample();
+        response = (OASEzsignfolderGetActionableElements) api.ezsignfolderGetActionableElementsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
      *
      * 
@@ -249,7 +350,7 @@ private class OASObjectEzsignfolderApiTest {
     /**
      * Retrieve Ezsignfolder list
      *
-     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed|\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      */
     @isTest
     private static void ezsignfolderGetListV1Test() {
@@ -317,6 +418,78 @@ private class OASObjectEzsignfolderApiTest {
         res.setBody(js);
         expectedResponse = OASEzsignfolderGetObjectV1Response.getExample();
         response = (OASEzsignfolderGetObjectV1Response) api.ezsignfolderGetObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Import an Ezsigntemplatepackage in the Ezsignfolder.
+     *
+     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.\n\nThis allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+     */
+    @isTest
+    private static void ezsignfolderImportEzsigntemplatepackageV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'oaSEzsignfolderImportEzsigntemplatep' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderImportEzsigntemplatep response;
+        OASEzsignfolderImportEzsigntemplatep expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderImportEzsigntemplatep.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderImportEzsigntemplatep.getExample();
+        response = (OASEzsignfolderImportEzsigntemplatep) api.ezsignfolderImportEzsigntemplatepackageV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Reorder Ezsigndocuments in the Ezsignfolder
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderReorderV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'oaSEzsignfolderReorderV1Request' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderReorderV1Response response;
+        OASEzsignfolderReorderV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderReorderV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderReorderV1Response.getExample();
+        response = (OASEzsignfolderReorderV1Response) api.ezsignfolderReorderV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -11,14 +11,14 @@
  */
 
 /**
- * Payload for the /1/object/activesession/getCurrent API Request
+ * Payload for GET /1/object/activesession/getCurrent
  */
 public class OASActivesessionResponseCompound implements OASActivesessionResponse, OASActivesessionResponseCompoundAllO, OAS.MappedProperties {
     /**
-     * Get eActivesessionSessiontype
-     * @return eActivesessionSessiontype
+     * Get eActivesessionUsertype
+     * @return eActivesessionUsertype
      */
-    public OASFieldEActivesessionSessiontype eActivesessionSessiontype { get; set; }
+    public OASFieldEActivesessionUsertype eActivesessionUsertype { get; set; }
 
     /**
      * Get eActivesessionWeekdaystart
@@ -113,7 +113,7 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
 
     public static OASActivesessionResponseCompound getExample() {
         OASActivesessionResponseCompound activesessionResponseCompound = new OASActivesessionResponseCompound();
-          activesessionResponseCompound.eActivesessionSessiontype = OASFieldEActivesessionSessiontype.getExample();
+          activesessionResponseCompound.eActivesessionUsertype = OASFieldEActivesessionUsertype.getExample();
           activesessionResponseCompound.eActivesessionWeekdaystart = OASFieldEActivesessionWeekdaystart.getExample();
           activesessionResponseCompound.fkiLanguageID = 2;
           activesessionResponseCompound.sCompanyNameX = 'Acme inc.';
@@ -131,7 +131,7 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
     public Boolean equals(Object obj) {
         if (obj instanceof OASActivesessionResponseCompound) {           
             OASActivesessionResponseCompound activesessionResponseCompound = (OASActivesessionResponseCompound) obj;
-            return this.eActivesessionSessiontype == activesessionResponseCompound.eActivesessionSessiontype
+            return this.eActivesessionUsertype == activesessionResponseCompound.eActivesessionUsertype
                 && this.eActivesessionWeekdaystart == activesessionResponseCompound.eActivesessionWeekdaystart
                 && this.fkiLanguageID == activesessionResponseCompound.fkiLanguageID
                 && this.sCompanyNameX == activesessionResponseCompound.sCompanyNameX
@@ -149,7 +149,7 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (eActivesessionSessiontype == null ? 0 : System.hashCode(eActivesessionSessiontype));
+        hashCode = (17 * hashCode) + (eActivesessionUsertype == null ? 0 : System.hashCode(eActivesessionUsertype));
         hashCode = (17 * hashCode) + (eActivesessionWeekdaystart == null ? 0 : System.hashCode(eActivesessionWeekdaystart));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sCompanyNameX == null ? 0 : System.hashCode(sCompanyNameX));

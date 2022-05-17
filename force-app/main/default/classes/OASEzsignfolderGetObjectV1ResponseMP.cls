@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -11,7 +11,7 @@
  */
 
 /**
- * Payload for the /1/object/ezsignfolder/getObject API Request
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
  */
 public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResponseCompound {
     /**
@@ -125,13 +125,13 @@ public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResp
           ezsignfolderGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX = 'Default';
           ezsignfolderGetObjectV1ResponseMPayload.fkiBillingentityinternalID = 1;
           ezsignfolderGetObjectV1ResponseMPayload.sBillingentityinternalDescriptionX = 'Default';
-          ezsignfolderGetObjectV1ResponseMPayload.fkiEzsigntsarequirementID = 92;
+          ezsignfolderGetObjectV1ResponseMPayload.fkiEzsigntsarequirementID = 1;
           ezsignfolderGetObjectV1ResponseMPayload.sEzsigntsarequirementDescriptionX = 'Default';
           ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderNote = 'This is a note';
           ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderSendreminderfrequency = OASFieldEEzsignfolderSendreminderfre.getExample();
           ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderDuedate = '2020-12-31 23:59:59';
-          ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderSentdate = '2020-12-31 23:59:59';
+          ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderSentdate = '2020-12-31T23:59:59.000Z';
           ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderScheduledarchive = '2020-12-31 23:59:59';
           ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderScheduleddestruction = '2020-12-31 23:59:59';
           ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();

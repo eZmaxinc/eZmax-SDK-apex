@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,7 +39,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public Integer iEzsignsignatureX { get; set; }
 
     /**
-     * The Y coordinate (Vertical) where to put the signature block on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
+     * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
      * @return iEzsignsignatureY
      */
     public Integer iEzsignsignatureY { get; set; }
@@ -63,7 +63,25 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public Integer fkiEzsigndocumentID { get; set; }
 
     /**
-     * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is "Name" or "Handwritten")
+     * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+     * @return tEzsignsignatureTooltip
+     */
+    public String tEzsignsignatureTooltip { get; set; }
+
+    /**
+     * Get eEzsignsignatureTooltipposition
+     * @return eEzsignsignatureTooltipposition
+     */
+    public OASFieldEEzsignsignatureTooltipposit eEzsignsignatureTooltipposition { get; set; }
+
+    /**
+     * Get eEzsignsignatureFont
+     * @return eEzsignsignatureFont
+     */
+    public OASFieldEEzsignsignatureFont eEzsignsignatureFont { get; set; }
+
+    /**
+     * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
      * @return bEzsignsignatureCustomdate
      */
     public Boolean bEzsignsignatureCustomdate { get; set; }
@@ -96,6 +114,9 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
           ezsignsignatureRequestCompound.iEzsignsignatureStep = 1;
           ezsignsignatureRequestCompound.eEzsignsignatureType = OASFieldEEzsignsignatureType.getExample();
           ezsignsignatureRequestCompound.fkiEzsigndocumentID = 97;
+          ezsignsignatureRequestCompound.tEzsignsignatureTooltip = 'Please sign here if you agree to the terms';
+          ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition = OASFieldEEzsignsignatureTooltipposit.getExample();
+          ezsignsignatureRequestCompound.eEzsignsignatureFont = OASFieldEEzsignsignatureFont.getExample();
           ezsignsignatureRequestCompound.bEzsignsignatureCustomdate = true;
           ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateRequestC>{OASEzsignsignaturecustomdateRequestC.getExample()};
         return ezsignsignatureRequestCompound;
@@ -112,6 +133,9 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
                 && this.iEzsignsignatureStep == ezsignsignatureRequestCompound.iEzsignsignatureStep
                 && this.eEzsignsignatureType == ezsignsignatureRequestCompound.eEzsignsignatureType
                 && this.fkiEzsigndocumentID == ezsignsignatureRequestCompound.fkiEzsigndocumentID
+                && this.tEzsignsignatureTooltip == ezsignsignatureRequestCompound.tEzsignsignatureTooltip
+                && this.eEzsignsignatureTooltipposition == ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition
+                && this.eEzsignsignatureFont == ezsignsignatureRequestCompound.eEzsignsignatureFont
                 && this.bEzsignsignatureCustomdate == ezsignsignatureRequestCompound.bEzsignsignatureCustomdate
                 && this.aObjEzsignsignaturecustomdate == ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate;
         }
@@ -128,6 +152,9 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
         hashCode = (17 * hashCode) + (iEzsignsignatureStep == null ? 0 : System.hashCode(iEzsignsignatureStep));
         hashCode = (17 * hashCode) + (eEzsignsignatureType == null ? 0 : System.hashCode(eEzsignsignatureType));
         hashCode = (17 * hashCode) + (fkiEzsigndocumentID == null ? 0 : System.hashCode(fkiEzsigndocumentID));
+        hashCode = (17 * hashCode) + (tEzsignsignatureTooltip == null ? 0 : System.hashCode(tEzsignsignatureTooltip));
+        hashCode = (17 * hashCode) + (eEzsignsignatureTooltipposition == null ? 0 : System.hashCode(eEzsignsignatureTooltipposition));
+        hashCode = (17 * hashCode) + (eEzsignsignatureFont == null ? 0 : System.hashCode(eEzsignsignatureFont));
         hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
         hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
         return hashCode;

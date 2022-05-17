@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -25,6 +25,56 @@ public class OASObjectEzsignbulksendtransmissionApi {
         return this.client;
     }
 
+    /**
+     * Retrieve an existing Ezsignbulksendtransmission\&#39;s Csv containing errors
+     * 
+     * @param pkiEzsignbulksendtransmissionID  (required)
+     * @return String
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public String ezsignbulksendtransmissionGetCsvErrorsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendtransmissionID'), 'pkiEzsignbulksendtransmissionID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (String) client.invoke(
+            'GET', '/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendtransmissionID' => (Integer) params.get('pkiEzsignbulksendtransmissionID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'text/csv', 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            String.class
+        );
+    }
+    /**
+     * Retrieve an existing Ezsignbulksendtransmission\&#39;s forms data
+     * 
+     * @param pkiEzsignbulksendtransmissionID  (required)
+     * @return OASEzsignbulksendtransmissionGetForm
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendtransmissionGetForm ezsignbulksendtransmissionGetFormsDataV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendtransmissionID'), 'pkiEzsignbulksendtransmissionID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendtransmissionGetForm) client.invoke(
+            'GET', '/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendtransmissionID' => (Integer) params.get('pkiEzsignbulksendtransmissionID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json', 'application/zip' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendtransmissionGetForm.class
+        );
+    }
     /**
      * Retrieve an existing Ezsignbulksendtransmission
      * 

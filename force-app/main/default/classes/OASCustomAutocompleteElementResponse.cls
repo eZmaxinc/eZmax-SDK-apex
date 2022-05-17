@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -28,6 +28,12 @@ public class OASCustomAutocompleteElementResponse {
 
     /**
      * The Unique ID of the element
+     * @return sValue
+     */
+    public String sValue { get; set; }
+
+    /**
+     * The Unique ID of the element
      * @return mValue
      */
     public String mValue { get; set; }
@@ -36,6 +42,7 @@ public class OASCustomAutocompleteElementResponse {
         OASCustomAutocompleteElementResponse customAutocompleteElementResponse = new OASCustomAutocompleteElementResponse();
           customAutocompleteElementResponse.sCategory = '';
           customAutocompleteElementResponse.sLabel = '';
+          customAutocompleteElementResponse.sValue = '';
           customAutocompleteElementResponse.mValue = '';
         return customAutocompleteElementResponse;
     }
@@ -45,6 +52,7 @@ public class OASCustomAutocompleteElementResponse {
             OASCustomAutocompleteElementResponse customAutocompleteElementResponse = (OASCustomAutocompleteElementResponse) obj;
             return this.sCategory == customAutocompleteElementResponse.sCategory
                 && this.sLabel == customAutocompleteElementResponse.sLabel
+                && this.sValue == customAutocompleteElementResponse.sValue
                 && this.mValue == customAutocompleteElementResponse.mValue;
         }
         return false;
@@ -54,6 +62,7 @@ public class OASCustomAutocompleteElementResponse {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (sCategory == null ? 0 : System.hashCode(sCategory));
         hashCode = (17 * hashCode) + (sLabel == null ? 0 : System.hashCode(sLabel));
+        hashCode = (17 * hashCode) + (sValue == null ? 0 : System.hashCode(sValue));
         hashCode = (17 * hashCode) + (mValue == null ? 0 : System.hashCode(mValue));
         return hashCode;
     }

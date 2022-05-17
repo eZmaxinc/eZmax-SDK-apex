@@ -82,7 +82,7 @@ private class OASActivesessionResponseCompoundTest {
         OASActivesessionResponseCompound activesessionResponseCompound = new OASActivesessionResponseCompound();
         System.assertEquals(new List<Integer>(), activesessionResponseCompound.aPkiPermissionID);
         System.assertEquals(new List<String>(), activesessionResponseCompound.aEModuleInternalname);
-        System.assertEquals(null, activesessionResponseCompound.eActivesessionSessiontype);
+        System.assertEquals(null, activesessionResponseCompound.eActivesessionUsertype);
         System.assertEquals(null, activesessionResponseCompound.eActivesessionWeekdaystart);
         System.assertEquals(null, activesessionResponseCompound.fkiLanguageID);
         System.assertEquals(null, activesessionResponseCompound.sCompanyNameX);

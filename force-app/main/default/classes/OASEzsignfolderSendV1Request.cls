@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -11,18 +11,18 @@
  */
 
 /**
- * Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request
+ * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
 public class OASEzsignfolderSendV1Request {
     /**
-     * A custom text message that will be added to the email sent to signatories inviting them to sign.\n\nYou can send an empty string and only the generic message will be sent.
+     * A custom text message that will be added to the email sent.
      * @return tExtraMessage
      */
     public String tExtraMessage { get; set; }
 
     public static OASEzsignfolderSendV1Request getExample() {
         OASEzsignfolderSendV1Request ezsignfolderSendV1Request = new OASEzsignfolderSendV1Request();
-          ezsignfolderSendV1Request.tExtraMessage = '';
+          ezsignfolderSendV1Request.tExtraMessage = 'Hi John,\n\nThis is the document I need you to review.\n\nCould you sign it before monday please.\n\nBest Regards.\n\nMary';
         return ezsignfolderSendV1Request;
     }
 

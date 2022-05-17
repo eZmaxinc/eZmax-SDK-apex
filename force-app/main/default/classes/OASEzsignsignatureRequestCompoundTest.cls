@@ -88,6 +88,9 @@ private class OASEzsignsignatureRequestCompoundTest {
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureStep);
         System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureType);
         System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsigndocumentID);
+        System.assertEquals(null, ezsignsignatureRequestCompound.tEzsignsignatureTooltip);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureFont);
         System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
     }
 }

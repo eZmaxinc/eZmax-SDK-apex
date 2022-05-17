@@ -81,13 +81,16 @@ private class OASEzsignsignatureResponseCompoundTest {
         OASEzsignsignatureResponseCompound ezsignsignatureResponseCompound = new OASEzsignsignatureResponseCompound();
         System.assertEquals(new List<OASEzsignsignaturecustomdateResponse>(), ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate);
         System.assertEquals(null, ezsignsignatureResponseCompound.pkiEzsignsignatureID);
+        System.assertEquals(null, ezsignsignatureResponseCompound.fkiEzsigndocumentID);
         System.assertEquals(null, ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationID);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignpagePagenumber);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureX);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureY);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureStep);
         System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureType);
-        System.assertEquals(null, ezsignsignatureResponseCompound.fkiEzsigndocumentID);
+        System.assertEquals(null, ezsignsignatureResponseCompound.tEzsignsignatureTooltip);
+        System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureTooltipposition);
+        System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureFont);
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureCustomdate);
     }
 }
