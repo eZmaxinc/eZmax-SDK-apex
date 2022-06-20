@@ -172,6 +172,77 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Dispose Ezsignfolders
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderDisposeEzsignfoldersV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'oaSEzsignfolderDisposeEzsignfoldersV' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderDisposeEzsignfoldersV response;
+        OASEzsignfolderDisposeEzsignfoldersV expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderDisposeEzsignfoldersV.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderDisposeEzsignfoldersV.getExample();
+        response = (OASEzsignfolderDisposeEzsignfoldersV) api.ezsignfolderDisposeEzsignfoldersV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Dispose the Ezsignfolder
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderDisposeV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'body' => 
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderDisposeV1Response response;
+        OASEzsignfolderDisposeV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderDisposeV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderDisposeV1Response.getExample();
+        response = (OASEzsignfolderDisposeV1Response) api.ezsignfolderDisposeV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Edit an existing Ezsignfolder
      *
      * 

@@ -73,6 +73,8 @@ Class | Method | HTTP request | Description
 *OASObjectActivesessionApi* | [**activesessionGetCurrentV1**](OASObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *OASObjectApikeyApi* | [**apikeyCreateObjectV1**](OASObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey
 *OASObjectApikeyApi* | [**apikeyCreateObjectV2**](OASObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
+*OASObjectBillingentityinternalApi* | [**billingentityinternalGetAutocompleteV1**](OASObjectBillingentityinternalApi.md#billingentityinternalGetAutocompleteV1) | **GET** /1/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
+*OASObjectBrandingApi* | [**brandingGetAutocompleteV1**](OASObjectBrandingApi.md#brandingGetAutocompleteV1) | **GET** /1/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendCreateEzsignbulksendtransmissionV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendCreateEzsignbulksendtransmissionV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendCreateObjectV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendDeleteObjectV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendDeleteObjectV1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend
@@ -116,6 +118,8 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV2**](OASObjectEzsignfolderApi.md#ezsignfolderCreateObjectV2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
+*OASObjectEzsignfolderApi* | [**ezsignfolderDisposeEzsignfoldersV1**](OASObjectEzsignfolderApi.md#ezsignfolderDisposeEzsignfoldersV1) | **POST** /1/object/ezsignfolder/disposeEzsignfolders | Dispose Ezsignfolders
+*OASObjectEzsignfolderApi* | [**ezsignfolderDisposeV1**](OASObjectEzsignfolderApi.md#ezsignfolderDisposeV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderEditObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderEditObjectV1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetActionableElementsV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
@@ -196,8 +200,13 @@ Class | Method | HTTP request | Description
 *OASObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](OASObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *OASObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](OASObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
 *OASObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](OASObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection\&#39;s Notificationtests
+*OASObjectNotificationtestApi* | [**notificationtestGetElementsV1**](OASObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest\&#39;s Elements
 *OASObjectPeriodApi* | [**periodGetAutocompleteV1**](OASObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *OASObjectSecretquestionApi* | [**secretquestionGetAutocompleteV1**](OASObjectSecretquestionApi.md#secretquestionGetAutocompleteV1) | **GET** /1/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
+*OASObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV1**](OASObjectTaxassignmentApi.md#taxassignmentGetAutocompleteV1) | **GET** /1/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
+*OASObjectTimezoneApi* | [**timezoneGetAutocompleteV1**](OASObjectTimezoneApi.md#timezoneGetAutocompleteV1) | **GET** /1/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
+*OASObjectUserApi* | [**userGetAutocompleteV1**](OASObjectUserApi.md#userGetAutocompleteV1) | **GET** /1/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
+*OASObjectUsergroupApi* | [**usergroupGetAutocompleteV1**](OASObjectUsergroupApi.md#usergroupGetAutocompleteV1) | **GET** /1/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 
 
 ## Documentation for Models
@@ -239,6 +248,8 @@ Class | Method | HTTP request | Description
  - [OASCommonResponseObjDebugPayload](OASCommonResponseObjDebugPayload.md)
  - [OASCommonResponseObjDebugPayloadGetL](OASCommonResponseObjDebugPayloadGetL.md)
  - [OASCommonResponseObjSQLQuery](OASCommonResponseObjSQLQuery.md)
+ - [OASCommonResponseRedirectSSecretques](OASCommonResponseRedirectSSecretques.md)
+ - [OASCommonResponseWarning](OASCommonResponseWarning.md)
  - [OASCommonWebhook](OASCommonWebhook.md)
  - [OASContactRequest](OASContactRequest.md)
  - [OASContactRequestCompound](OASContactRequestCompound.md)
@@ -343,6 +354,8 @@ Class | Method | HTTP request | Description
  - [OASEzsignfolderCreateObjectV2Request](OASEzsignfolderCreateObjectV2Request.md)
  - [OASEzsignfolderCreateObjectV2Respons](OASEzsignfolderCreateObjectV2Respons.md)
  - [OASEzsignfolderDeleteObjectV1Respons](OASEzsignfolderDeleteObjectV1Respons.md)
+ - [OASEzsignfolderDisposeEzsignfoldersV](OASEzsignfolderDisposeEzsignfoldersV.md)
+ - [OASEzsignfolderDisposeV1Response](OASEzsignfolderDisposeV1Response.md)
  - [OASEzsignfolderEditObjectV1Request](OASEzsignfolderEditObjectV1Request.md)
  - [OASEzsignfolderEditObjectV1Response](OASEzsignfolderEditObjectV1Response.md)
  - [OASEzsignfolderGetActionableElements](OASEzsignfolderGetActionableElements.md)
@@ -516,6 +529,7 @@ Class | Method | HTTP request | Description
  - [OASFieldEEzsigntemplatesignatureType](OASFieldEEzsigntemplatesignatureType.md)
  - [OASFieldENotificationpreferenceStatu](OASFieldENotificationpreferenceStatu.md)
  - [OASFieldEPhoneType](OASFieldEPhoneType.md)
+ - [OASFieldEUserEzsignsendreminderfrequ](OASFieldEUserEzsignsendreminderfrequ.md)
  - [OASFieldEUserType](OASFieldEUserType.md)
  - [OASFranchisereferalincomeCreateObjec](OASFranchisereferalincomeCreateObjec.md)
  - [OASFranchisereferalincomeRequest](OASFranchisereferalincomeRequest.md)
@@ -525,6 +539,7 @@ Class | Method | HTTP request | Description
  - [OASMultilingualApikeyDescription](OASMultilingualApikeyDescription.md)
  - [OASNotificationsectionGetNotificatio](OASNotificationsectionGetNotificatio.md)
  - [OASNotificationsubsectionResponse](OASNotificationsubsectionResponse.md)
+ - [OASNotificationtestGetElementsV1Resp](OASNotificationtestGetElementsV1Resp.md)
  - [OASNotificationtestResponse](OASNotificationtestResponse.md)
  - [OASPhoneRequest](OASPhoneRequest.md)
  - [OASPhoneRequestCompound](OASPhoneRequestCompound.md)
