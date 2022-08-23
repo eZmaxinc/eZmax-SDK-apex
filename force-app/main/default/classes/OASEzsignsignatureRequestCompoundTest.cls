@@ -91,6 +91,11 @@ private class OASEzsignsignatureRequestCompoundTest {
         System.assertEquals(null, ezsignsignatureRequestCompound.tEzsignsignatureTooltip);
         System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition);
         System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureFont);
+        System.assertEquals(null, ezsignsignatureRequestCompound.fkiUserID);
+        System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureRequired);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureAttachmentnamesource);
+        System.assertEquals(null, ezsignsignatureRequestCompound.sEzsignsignatureAttachmentdescription);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureValidationstep);
         System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
     }
 }

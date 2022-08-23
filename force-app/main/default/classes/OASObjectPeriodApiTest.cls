@@ -14,6 +14,7 @@ private class OASObjectPeriodApiTest {
 
         Map<String, Object> params = new Map<String, Object>{
             'sSelector' => ActiveNormal,
+            'eFilterActive' => All,
             'sQuery' => 'null',
             'acceptLanguage' => ''
         };

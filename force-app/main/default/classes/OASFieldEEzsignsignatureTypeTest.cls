@@ -7,7 +7,8 @@ private class OASFieldEEzsignsignatureTypeTest {
             OASFieldEEzsignsignatureType.CITY,
             OASFieldEEzsignsignatureType.HANDWRITTEN,
             OASFieldEEzsignsignatureType.INITIALS,
-            OASFieldEEzsignsignatureType.NAME
+            OASFieldEEzsignsignatureType.NAME,
+            OASFieldEEzsignsignatureType.ATTACHMENTS
         };
         Set<OASFieldEEzsignsignatureType> actual  = new Set<OASFieldEEzsignsignatureType>(OASFieldEEzsignsignatureType.values());
         System.assertEquals(expected, actual);

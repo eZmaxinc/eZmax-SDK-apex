@@ -14,6 +14,7 @@ private class OASObjectBillingentityinternalApiTest {
 
         Map<String, Object> params = new Map<String, Object>{
             'sSelector' => All,
+            'eFilterActive' => All,
             'sQuery' => 'null',
             'acceptLanguage' => ''
         };

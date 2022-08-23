@@ -493,6 +493,42 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderImportEzsignfoldersignerassociationsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'oaSEzsignfolderImportEzsignfoldersig' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderImportEzsignfoldersig response;
+        OASEzsignfolderImportEzsignfoldersig expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderImportEzsignfoldersig.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderImportEzsignfoldersig.getExample();
+        response = (OASEzsignfolderImportEzsignfoldersig) api.ezsignfolderImportEzsignfoldersignerassociationsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Import an Ezsigntemplatepackage in the Ezsignfolder.
      *
      * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.\n\nThis allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
@@ -597,6 +633,42 @@ private class OASObjectEzsignfolderApiTest {
         res.setBody(js);
         expectedResponse = OASEzsignfolderSendV1Response.getExample();
         response = (OASEzsignfolderSendV1Response) api.ezsignfolderSendV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Send the Ezsignfolder to the signatories for signature
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderSendV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'oaSEzsignfolderSendV2Request' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderSendV2Response response;
+        OASEzsignfolderSendV2Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderSendV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderSendV2Response.getExample();
+        response = (OASEzsignfolderSendV2Response) api.ezsignfolderSendV2(params);
         System.assertEquals(expectedResponse, response);
     }
 

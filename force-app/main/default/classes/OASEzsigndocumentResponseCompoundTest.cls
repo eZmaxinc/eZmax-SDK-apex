@@ -82,6 +82,7 @@ private class OASEzsigndocumentResponseCompoundTest {
         System.assertEquals(new List<OASCustomEzsignfoldersignerassociati>(), ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiEzsignfolderID);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentDuedate);
+        System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsignformCompleted);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiLanguageID);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentName);
         System.assertEquals(null, ezsigndocumentResponseCompound.pkiEzsigndocumentID);

@@ -15,6 +15,7 @@ private class OASObjectEzsigntsarequirementApiTest {
         Map<String, Object> params = new Map<String, Object>{
             'sSelector' => User,
             'fkiEzsignfoldertypeID' => '',
+            'eFilterActive' => All,
             'sQuery' => 'null',
             'acceptLanguage' => ''
         };

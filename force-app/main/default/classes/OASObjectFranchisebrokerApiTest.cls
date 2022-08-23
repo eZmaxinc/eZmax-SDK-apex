@@ -14,6 +14,7 @@ private class OASObjectFranchisebrokerApiTest {
 
         Map<String, Object> params = new Map<String, Object>{
             'sSelector' => Active,
+            'eFilterActive' => All,
             'sQuery' => 'null',
             'acceptLanguage' => ''
         };
