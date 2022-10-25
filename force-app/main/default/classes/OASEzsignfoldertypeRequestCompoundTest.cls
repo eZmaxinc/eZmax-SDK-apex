@@ -108,6 +108,8 @@ private class OASEzsignfoldertypeRequestCompoundTest {
         System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsummarytofullgroup);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsummarytolimitedgroup);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsummarytocolleague);
+        System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeIncludeproofsigner);
+        System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeIncludeproofuser);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeIsactive);
     }
 }

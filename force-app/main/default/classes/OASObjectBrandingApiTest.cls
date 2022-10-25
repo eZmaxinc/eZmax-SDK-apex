@@ -110,6 +110,44 @@ private class OASObjectBrandingApiTest {
     }
 
     /**
+     * Retrieve Brandings and IDs
+     *
+     * Get the list of Branding to be used in a dropdown or autocomplete control.
+     */
+    @isTest
+    private static void brandingGetAutocompleteV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'sSelector' => All,
+            'eFilterActive' => All,
+            'sQuery' => 'null',
+            'acceptLanguage' => ''
+        };
+
+        OASClient client;
+        OASObjectBrandingApi api;
+        OASBrandingGetAutocompleteV2Response response;
+        OASBrandingGetAutocompleteV2Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectBrandingApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASBrandingGetAutocompleteV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASBrandingGetAutocompleteV2Response.getExample();
+        response = (OASBrandingGetAutocompleteV2Response) api.brandingGetAutocompleteV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve Branding list
      *
      * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |

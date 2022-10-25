@@ -222,14 +222,15 @@ private class OASObjectWebhookApiTest {
      * 
      */
     @isTest
-    private static void webhookTestUrlV1Test() {
+    private static void webhookTestV1Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'pkiWebhookID' => ''
+            'pkiWebhookID' => '',
+            'body' => 
         };
 
         OASClient client;
@@ -247,7 +248,7 @@ private class OASObjectWebhookApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = OASWebhookTestV1Response.getExample();
-        response = (OASWebhookTestV1Response) api.webhookTestUrlV1(params);
+        response = (OASWebhookTestV1Response) api.webhookTestV1(params);
         System.assertEquals(expectedResponse, response);
     }
 }

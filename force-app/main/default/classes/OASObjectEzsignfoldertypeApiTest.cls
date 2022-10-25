@@ -110,6 +110,44 @@ private class OASObjectEzsignfoldertypeApiTest {
     }
 
     /**
+     * Retrieve Ezsignfoldertypes and IDs
+     *
+     * Get the list of Ezsignfoldertype to be used in a dropdown or autocomplete control.
+     */
+    @isTest
+    private static void ezsignfoldertypeGetAutocompleteV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'sSelector' => Active,
+            'eFilterActive' => All,
+            'sQuery' => 'null',
+            'acceptLanguage' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfoldertypeApi api;
+        OASEzsignfoldertypeGetAutocompleteV2 response;
+        OASEzsignfoldertypeGetAutocompleteV2 expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfoldertypeApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfoldertypeGetAutocompleteV2.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfoldertypeGetAutocompleteV2.getExample();
+        response = (OASEzsignfoldertypeGetAutocompleteV2) api.ezsignfoldertypeGetAutocompleteV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve Ezsignfoldertype list
      *
      * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |

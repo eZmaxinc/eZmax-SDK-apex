@@ -86,6 +86,7 @@ private class OASEzsignbulksendResponseCompoundTest {
         System.assertEquals(null, ezsignbulksendResponseCompound.fkiEzsignfoldertypeID);
         System.assertEquals(null, ezsignbulksendResponseCompound.fkiLanguageID);
         System.assertEquals(null, ezsignbulksendResponseCompound.sLanguageNameX);
+        System.assertEquals(null, ezsignbulksendResponseCompound.eEzsignfoldertypePrivacylevel);
         System.assertEquals(null, ezsignbulksendResponseCompound.sEzsignfoldertypeNameX);
         System.assertEquals(null, ezsignbulksendResponseCompound.sEzsignbulksendDescription);
         System.assertEquals(null, ezsignbulksendResponseCompound.tEzsignbulksendNote);
