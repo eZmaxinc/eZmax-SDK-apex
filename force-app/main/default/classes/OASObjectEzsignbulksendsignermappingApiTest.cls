@@ -104,4 +104,39 @@ private class OASObjectEzsignbulksendsignermappingApiTest {
         response = (OASEzsignbulksendsignermappingGetObj) api.ezsignbulksendsignermappingGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Retrieve an existing Ezsignbulksendsignermapping
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignbulksendsignermappingGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignbulksendsignermappingID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignbulksendsignermappingApi api;
+        OASEzsignbulksendsignermappingGetObj response;
+        OASEzsignbulksendsignermappingGetObj expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignbulksendsignermappingApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignbulksendsignermappingGetObj.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksendsignermappingGetObj.getExample();
+        response = (OASEzsignbulksendsignermappingGetObj) api.ezsignbulksendsignermappingGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }

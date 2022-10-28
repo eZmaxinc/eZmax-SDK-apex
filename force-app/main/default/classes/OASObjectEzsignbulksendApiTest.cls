@@ -317,6 +317,41 @@ private class OASObjectEzsignbulksendApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignbulksend
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignbulksendGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignbulksendID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignbulksendApi api;
+        OASEzsignbulksendGetObjectV2Response response;
+        OASEzsignbulksendGetObjectV2Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignbulksendApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignbulksendGetObjectV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksendGetObjectV2Response.getExample();
+        response = (OASEzsignbulksendGetObjectV2Response) api.ezsignbulksendGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
      *
      * 

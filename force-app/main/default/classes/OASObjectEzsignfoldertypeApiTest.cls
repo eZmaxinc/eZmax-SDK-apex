@@ -220,4 +220,39 @@ private class OASObjectEzsignfoldertypeApiTest {
         response = (OASEzsignfoldertypeGetObjectV1Respon) api.ezsignfoldertypeGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Retrieve an existing Ezsignfoldertype
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfoldertypeGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfoldertypeID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfoldertypeApi api;
+        OASEzsignfoldertypeGetObjectV2Respon response;
+        OASEzsignfoldertypeGetObjectV2Respon expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfoldertypeApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfoldertypeGetObjectV2Respon.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfoldertypeGetObjectV2Respon.getExample();
+        response = (OASEzsignfoldertypeGetObjectV2Respon) api.ezsignfoldertypeGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }

@@ -95,7 +95,7 @@ private class OASEzsignsignatureResponseCompoundTest {
         System.assertEquals(null, ezsignsignatureResponseCompound.sEzsignsignatureAttachmentdescription);
         System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureAttachmentnamesource);
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureRequired);
-        System.assertEquals(null, ezsignsignatureResponseCompound.fkiUserID);
+        System.assertEquals(null, ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation);
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureCustomdate);
     }
 }

@@ -112,6 +112,41 @@ private class OASObjectEzmaxinvoicingApiTest {
     }
 
     /**
+     * Retrieve an existing Ezmaxinvoicing
+     *
+     * 
+     */
+    @isTest
+    private static void ezmaxinvoicingGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzmaxinvoicingID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzmaxinvoicingApi api;
+        OASEzmaxinvoicingGetObjectV2Response response;
+        OASEzmaxinvoicingGetObjectV2Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzmaxinvoicingApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzmaxinvoicingGetObjectV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzmaxinvoicingGetObjectV2Response.getExample();
+        response = (OASEzmaxinvoicingGetObjectV2Response) api.ezmaxinvoicingGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve provisional Ezmaxinvoicing
      *
      * 

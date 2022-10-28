@@ -220,4 +220,39 @@ private class OASObjectBrandingApiTest {
         response = (OASBrandingGetObjectV1Response) api.brandingGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Retrieve an existing Branding
+     *
+     * 
+     */
+    @isTest
+    private static void brandingGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiBrandingID' => ''
+        };
+
+        OASClient client;
+        OASObjectBrandingApi api;
+        OASBrandingGetObjectV2Response response;
+        OASBrandingGetObjectV2Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectBrandingApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASBrandingGetObjectV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASBrandingGetObjectV2Response.getExample();
+        response = (OASBrandingGetObjectV2Response) api.brandingGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }

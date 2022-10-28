@@ -81,12 +81,14 @@ Class | Method | HTTP request | Description
 *OASObjectBrandingApi* | [**brandingGetAutocompleteV2**](OASObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs
 *OASObjectBrandingApi* | [**brandingGetListV1**](OASObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *OASObjectBrandingApi* | [**brandingGetObjectV1**](OASObjectBrandingApi.md#brandingGetObjectV1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*OASObjectBrandingApi* | [**brandingGetObjectV2**](OASObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV1**](OASObjectDepartmentApi.md#departmentGetAutocompleteV1) | **GET** /1/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV2**](OASObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *OASObjectDepartmentApi* | [**departmentGetMembersV1**](OASObjectDepartmentApi.md#departmentGetMembersV1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department\&#39;s members
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV1**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV1) | **GET** /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
+*OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV2**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetProvisionalV1**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetProvisionalV1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendCreateEzsignbulksendtransmissionV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendCreateEzsignbulksendtransmissionV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendCreateObjectV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend
@@ -97,16 +99,20 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendGetFormsDataV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendGetFormsDataV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend\&#39;s forms data
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendGetListV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendGetListV1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendGetObjectV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
+*OASObjectEzsignbulksendApi* | [**ezsignbulksendGetObjectV2**](OASObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend
 *OASObjectEzsignbulksendApi* | [**ezsignbulksendReorderV1**](OASObjectEzsignbulksendApi.md#ezsignbulksendReorderV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 *OASObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingCreateObjectV1**](OASObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingCreateObjectV1) | **POST** /1/object/ezsignbulksenddocumentmapping | Create a new Ezsignbulksenddocumentmapping
 *OASObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingDeleteObjectV1**](OASObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingDeleteObjectV1) | **DELETE** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Delete an existing Ezsignbulksenddocumentmapping
 *OASObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingGetObjectV1**](OASObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingGetObjectV1) | **GET** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
+*OASObjectEzsignbulksenddocumentmappingApi* | [**ezsignbulksenddocumentmappingGetObjectV2**](OASObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingGetObjectV2) | **GET** /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping
 *OASObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingCreateObjectV1**](OASObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappingCreateObjectV1) | **POST** /1/object/ezsignbulksendsignermapping | Create a new Ezsignbulksendsignermapping
 *OASObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingDeleteObjectV1**](OASObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappingDeleteObjectV1) | **DELETE** /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID} | Delete an existing Ezsignbulksendsignermapping
 *OASObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingGetObjectV1**](OASObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappingGetObjectV1) | **GET** /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID} | Retrieve an existing Ezsignbulksendsignermapping
+*OASObjectEzsignbulksendsignermappingApi* | [**ezsignbulksendsignermappingGetObjectV2**](OASObjectEzsignbulksendsignermappingApi.md#ezsignbulksendsignermappingGetObjectV2) | **GET** /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID} | Retrieve an existing Ezsignbulksendsignermapping
 *OASObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetCsvErrorsV1**](OASObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetCsvErrorsV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors | Retrieve an existing Ezsignbulksendtransmission\&#39;s Csv containing errors
 *OASObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetFormsDataV1**](OASObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetFormsDataV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission\&#39;s forms data
 *OASObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetObjectV1**](OASObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
+*OASObjectEzsignbulksendtransmissionApi* | [**ezsignbulksendtransmissionGetObjectV2**](OASObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](OASObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
@@ -122,6 +128,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetEzsignsignaturesV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignsignaturesV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures | Retrieve an existing Ezsigndocument\&#39;s Ezsignsignatures
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetFormDataV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetFormDataV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData | Retrieve an existing Ezsigndocument\&#39;s Form Data
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
+*OASObjectEzsigndocumentApi* | [**ezsigndocumentGetObjectV2**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetTemporaryProofV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetTemporaryProofV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof | Retrieve the temporary proof
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentPatchObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentPatchObjectV1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
@@ -140,6 +147,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder\&#39;s forms data
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetListV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *OASObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](OASObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
+*OASObjectEzsignfolderApi* | [**ezsignfolderGetObjectV2**](OASObjectEzsignfolderApi.md#ezsignfolderGetObjectV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderImportEzsignfoldersignerassociationsV1**](OASObjectEzsignfolderApi.md#ezsignfolderImportEzsignfoldersignerassociationsV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderImportEzsigntemplatepackageV1**](OASObjectEzsignfolderApi.md#ezsignfolderImportEzsigntemplatepackageV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder.
 *OASObjectEzsignfolderApi* | [**ezsignfolderReorderV1**](OASObjectEzsignfolderApi.md#ezsignfolderReorderV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder
@@ -153,21 +161,25 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationForceDisconnectV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationForceDisconnectV1) | **POST** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect | Disconnects the Ezsignfoldersignerassociation
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetInPersonLoginUrlV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetInPersonLoginUrlV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl | Retrieve a Login Url to allow In-Person signing
 *OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV1**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV1) | **GET** /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
+*OASObjectEzsignfoldersignerassociationApi* | [**ezsignfoldersignerassociationGetObjectV2**](OASObjectEzsignfoldersignerassociationApi.md#ezsignfoldersignerassociationGetObjectV2) | **GET** /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} | Retrieve an existing Ezsignfoldersignerassociation
 *OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeCreateObjectV1**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeCreateObjectV1) | **POST** /1/object/ezsignfoldertype | Create a new Ezsignfoldertype
 *OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeEditObjectV1**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeEditObjectV1) | **PUT** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype
 *OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV1**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV1) | **GET** /1/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 *OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetAutocompleteV2**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetAutocompleteV2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs
 *OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetListV1**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetListV1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list
 *OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetObjectV1**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV1) | **GET** /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
+*OASObjectEzsignfoldertypeApi* | [**ezsignfoldertypeGetObjectV2**](OASObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype
 *OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupCreateObjectV1**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupCreateObjectV1) | **POST** /1/object/ezsignformfieldgroup | Create a new Ezsignformfieldgroup
 *OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupDeleteObjectV1**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupDeleteObjectV1) | **DELETE** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Delete an existing Ezsignformfieldgroup
 *OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupEditObjectV1**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupEditObjectV1) | **PUT** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Edit an existing Ezsignformfieldgroup
 *OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupGetObjectV1**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV1) | **GET** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
+*OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupGetObjectV2**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV2) | **GET** /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV2**](OASObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureEditObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
+*OASObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV2**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureSignV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateCreateObjectV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateDeleteObjectV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
@@ -176,6 +188,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateGetAutocompleteV2**](OASObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateGetListV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateGetObjectV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
+*OASObjectEzsigntemplateApi* | [**ezsigntemplateGetObjectV2**](OASObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentCreateObjectV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentCreateObjectV1) | **POST** /1/object/ezsigntemplatedocument | Create a new Ezsigntemplatedocument
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups | Edit multiple Ezsigntemplateformfieldgroups
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentEditEzsigntemplatesignaturesV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentEditEzsigntemplatesignaturesV1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures | Edit multiple Ezsigntemplatesignatures
@@ -184,12 +197,14 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups | Retrieve an existing Ezsigntemplatedocument\&#39;s Ezsigntemplateformfieldgroups
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetEzsigntemplatesignaturesV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentGetEzsigntemplatesignaturesV1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures | Retrieve an existing Ezsigntemplatedocument\&#39;s Ezsigntemplatesignatures
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetObjectV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentGetObjectV1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Retrieve an existing Ezsigntemplatedocument
+*OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetObjectV2**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentGetObjectV2) | **GET** /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Retrieve an existing Ezsigntemplatedocument
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentGetWordsPositionsV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentGetWordsPositionsV1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigntemplatedocument
 *OASObjectEzsigntemplatedocumentApi* | [**ezsigntemplatedocumentPatchObjectV1**](OASObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentPatchObjectV1) | **PATCH** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Patch an existing Ezsigntemplatedocument
 *OASObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupCreateObjectV1**](OASObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupCreateObjectV1) | **POST** /1/object/ezsigntemplateformfieldgroup | Create a new Ezsigntemplateformfieldgroup
 *OASObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupDeleteObjectV1**](OASObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupDeleteObjectV1) | **DELETE** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Delete an existing Ezsigntemplateformfieldgroup
 *OASObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupEditObjectV1**](OASObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupEditObjectV1) | **PUT** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Edit an existing Ezsigntemplateformfieldgroup
 *OASObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupGetObjectV1**](OASObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupGetObjectV1) | **GET** /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
+*OASObjectEzsigntemplateformfieldgroupApi* | [**ezsigntemplateformfieldgroupGetObjectV2**](OASObjectEzsigntemplateformfieldgroupApi.md#ezsigntemplateformfieldgroupGetObjectV2) | **GET** /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID} | Retrieve an existing Ezsigntemplateformfieldgroup
 *OASObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageCreateObjectV1**](OASObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageCreateObjectV1) | **POST** /1/object/ezsigntemplatepackage | Create a new Ezsigntemplatepackage
 *OASObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageDeleteObjectV1**](OASObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage
 *OASObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](OASObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditEzsigntemplatepackagesignersV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners
@@ -198,24 +213,30 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetAutocompleteV2**](OASObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs
 *OASObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetListV1**](OASObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetListV1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list
 *OASObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetObjectV1**](OASObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV1) | **GET** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
+*OASObjectEzsigntemplatepackageApi* | [**ezsigntemplatepackageGetObjectV2**](OASObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage
 *OASObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipCreateObjectV1**](OASObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipCreateObjectV1) | **POST** /1/object/ezsigntemplatepackagemembership | Create a new Ezsigntemplatepackagemembership
 *OASObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipDeleteObjectV1**](OASObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Delete an existing Ezsigntemplatepackagemembership
 *OASObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipGetObjectV1**](OASObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipGetObjectV1) | **GET** /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
+*OASObjectEzsigntemplatepackagemembershipApi* | [**ezsigntemplatepackagemembershipGetObjectV2**](OASObjectEzsigntemplatepackagemembershipApi.md#ezsigntemplatepackagemembershipGetObjectV2) | **GET** /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID} | Retrieve an existing Ezsigntemplatepackagemembership
 *OASObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerCreateObjectV1**](OASObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerCreateObjectV1) | **POST** /1/object/ezsigntemplatepackagesigner | Create a new Ezsigntemplatepackagesigner
 *OASObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerDeleteObjectV1**](OASObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Delete an existing Ezsigntemplatepackagesigner
 *OASObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerEditObjectV1**](OASObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerEditObjectV1) | **PUT** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Edit an existing Ezsigntemplatepackagesigner
 *OASObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerGetObjectV1**](OASObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerGetObjectV1) | **GET** /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
+*OASObjectEzsigntemplatepackagesignerApi* | [**ezsigntemplatepackagesignerGetObjectV2**](OASObjectEzsigntemplatepackagesignerApi.md#ezsigntemplatepackagesignerGetObjectV2) | **GET** /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID} | Retrieve an existing Ezsigntemplatepackagesigner
 *OASObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipCreateObjectV1**](OASObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipCreateObjectV1) | **POST** /1/object/ezsigntemplatepackagesignermembership | Create a new Ezsigntemplatepackagesignermembership
 *OASObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipDeleteObjectV1**](OASObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Delete an existing Ezsigntemplatepackagesignermembership
 *OASObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipGetObjectV1**](OASObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipGetObjectV1) | **GET** /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
+*OASObjectEzsigntemplatepackagesignermembershipApi* | [**ezsigntemplatepackagesignermembershipGetObjectV2**](OASObjectEzsigntemplatepackagesignermembershipApi.md#ezsigntemplatepackagesignermembershipGetObjectV2) | **GET** /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID} | Retrieve an existing Ezsigntemplatepackagesignermembership
 *OASObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureCreateObjectV1**](OASObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureCreateObjectV1) | **POST** /1/object/ezsigntemplatesignature | Create a new Ezsigntemplatesignature
 *OASObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureDeleteObjectV1**](OASObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Delete an existing Ezsigntemplatesignature
 *OASObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureEditObjectV1**](OASObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureEditObjectV1) | **PUT** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Edit an existing Ezsigntemplatesignature
 *OASObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureGetObjectV1**](OASObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureGetObjectV1) | **GET** /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
+*OASObjectEzsigntemplatesignatureApi* | [**ezsigntemplatesignatureGetObjectV2**](OASObjectEzsigntemplatesignatureApi.md#ezsigntemplatesignatureGetObjectV2) | **GET** /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} | Retrieve an existing Ezsigntemplatesignature
 *OASObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerCreateObjectV1**](OASObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerCreateObjectV1) | **POST** /1/object/ezsigntemplatesigner | Create a new Ezsigntemplatesigner
 *OASObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerDeleteObjectV1**](OASObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Delete an existing Ezsigntemplatesigner
 *OASObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerEditObjectV1**](OASObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerEditObjectV1) | **PUT** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Edit an existing Ezsigntemplatesigner
 *OASObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerGetObjectV1**](OASObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerGetObjectV1) | **GET** /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
+*OASObjectEzsigntemplatesignerApi* | [**ezsigntemplatesignerGetObjectV2**](OASObjectEzsigntemplatesignerApi.md#ezsigntemplatesignerGetObjectV2) | **GET** /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID} | Retrieve an existing Ezsigntemplatesigner
 *OASObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV1**](OASObjectEzsigntsarequirementApi.md#ezsigntsarequirementGetAutocompleteV1) | **GET** /1/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *OASObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV2**](OASObjectEzsigntsarequirementApi.md#ezsigntsarequirementGetAutocompleteV2) | **GET** /2/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *OASObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](OASObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
@@ -235,12 +256,14 @@ Class | Method | HTTP request | Description
 *OASObjectUserApi* | [**userGetAutocompleteV2**](OASObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 *OASObjectUsergroupApi* | [**usergroupGetAutocompleteV1**](OASObjectUsergroupApi.md#usergroupGetAutocompleteV1) | **GET** /1/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *OASObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](OASObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
+*OASObjectVersionhistoryApi* | [**versionhistoryGetObjectV2**](OASObjectVersionhistoryApi.md#versionhistoryGetObjectV2) | **GET** /2/object/versionhistory/{pkiVersionhistoryID} | Retrieve an existing Versionhistory
 *OASObjectWebhookApi* | [**webhookCreateObjectV1**](OASObjectWebhookApi.md#webhookCreateObjectV1) | **POST** /1/object/webhook | Create a new Webhook
 *OASObjectWebhookApi* | [**webhookDeleteObjectV1**](OASObjectWebhookApi.md#webhookDeleteObjectV1) | **DELETE** /1/object/webhook/{pkiWebhookID} | Delete an existing Webhook
 *OASObjectWebhookApi* | [**webhookEditObjectV1**](OASObjectWebhookApi.md#webhookEditObjectV1) | **PUT** /1/object/webhook/{pkiWebhookID} | Edit an existing Webhook
 *OASObjectWebhookApi* | [**webhookGetHistoryV1**](OASObjectWebhookApi.md#webhookGetHistoryV1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls
 *OASObjectWebhookApi* | [**webhookGetListV1**](OASObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 *OASObjectWebhookApi* | [**webhookGetObjectV1**](OASObjectWebhookApi.md#webhookGetObjectV1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
+*OASObjectWebhookApi* | [**webhookGetObjectV2**](OASObjectWebhookApi.md#webhookGetObjectV2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 *OASObjectWebhookApi* | [**webhookTestV1**](OASObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
 
 
@@ -284,6 +307,9 @@ Class | Method | HTTP request | Description
  - [OASBrandingGetObjectV1Response](OASBrandingGetObjectV1Response.md)
  - [OASBrandingGetObjectV1ResponseAllOf](OASBrandingGetObjectV1ResponseAllOf.md)
  - [OASBrandingGetObjectV1ResponseMPaylo](OASBrandingGetObjectV1ResponseMPaylo.md)
+ - [OASBrandingGetObjectV2Response](OASBrandingGetObjectV2Response.md)
+ - [OASBrandingGetObjectV2ResponseAllOf](OASBrandingGetObjectV2ResponseAllOf.md)
+ - [OASBrandingGetObjectV2ResponseMPaylo](OASBrandingGetObjectV2ResponseMPaylo.md)
  - [OASBrandingListElement](OASBrandingListElement.md)
  - [OASBrandingRequest](OASBrandingRequest.md)
  - [OASBrandingRequestCompound](OASBrandingRequestCompound.md)
@@ -353,6 +379,7 @@ Class | Method | HTTP request | Description
  - [OASEzmaxinvoicingAutocompleteElement](OASEzmaxinvoicingAutocompleteElement.md)
  - [OASEzmaxinvoicingGetAutocompleteV2Re](OASEzmaxinvoicingGetAutocompleteV2Re.md)
  - [OASEzmaxinvoicingGetObjectV1Response](OASEzmaxinvoicingGetObjectV1Response.md)
+ - [OASEzmaxinvoicingGetObjectV2Response](OASEzmaxinvoicingGetObjectV2Response.md)
  - [OASEzmaxinvoicingGetProvisionalV1Res](OASEzmaxinvoicingGetProvisionalV1Res.md)
  - [OASEzmaxinvoicingResponse](OASEzmaxinvoicingResponse.md)
  - [OASEzmaxinvoicingResponseCompound](OASEzmaxinvoicingResponseCompound.md)
@@ -388,6 +415,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignbulksendGetListV1ResponseAl](OASEzsignbulksendGetListV1ResponseAl.md)
  - [OASEzsignbulksendGetListV1ResponseMP](OASEzsignbulksendGetListV1ResponseMP.md)
  - [OASEzsignbulksendGetObjectV1Response](OASEzsignbulksendGetObjectV1Response.md)
+ - [OASEzsignbulksendGetObjectV2Response](OASEzsignbulksendGetObjectV2Response.md)
  - [OASEzsignbulksendListElement](OASEzsignbulksendListElement.md)
  - [OASEzsignbulksendReorderV1Request](OASEzsignbulksendReorderV1Request.md)
  - [OASEzsignbulksendReorderV1Response](OASEzsignbulksendReorderV1Response.md)
@@ -425,6 +453,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigndocumentGetEzsignsignatures](OASEzsigndocumentGetEzsignsignatures.md)
  - [OASEzsigndocumentGetFormDataV1Respon](OASEzsigndocumentGetFormDataV1Respon.md)
  - [OASEzsigndocumentGetObjectV1Response](OASEzsigndocumentGetObjectV1Response.md)
+ - [OASEzsigndocumentGetObjectV2Response](OASEzsigndocumentGetObjectV2Response.md)
  - [OASEzsigndocumentGetTemporaryProofV1](OASEzsigndocumentGetTemporaryProofV1.md)
  - [OASEzsigndocumentGetWordsPositionsV1](OASEzsigndocumentGetWordsPositionsV1.md)
  - [OASEzsigndocumentPatchObjectV1Reques](OASEzsigndocumentPatchObjectV1Reques.md)
@@ -459,6 +488,9 @@ Class | Method | HTTP request | Description
  - [OASEzsignfolderGetObjectV1Response](OASEzsignfolderGetObjectV1Response.md)
  - [OASEzsignfolderGetObjectV1ResponseAl](OASEzsignfolderGetObjectV1ResponseAl.md)
  - [OASEzsignfolderGetObjectV1ResponseMP](OASEzsignfolderGetObjectV1ResponseMP.md)
+ - [OASEzsignfolderGetObjectV2Response](OASEzsignfolderGetObjectV2Response.md)
+ - [OASEzsignfolderGetObjectV2ResponseAl](OASEzsignfolderGetObjectV2ResponseAl.md)
+ - [OASEzsignfolderGetObjectV2ResponseMP](OASEzsignfolderGetObjectV2ResponseMP.md)
  - [OASEzsignfolderImportEzsignfoldersig](OASEzsignfolderImportEzsignfoldersig.md)
  - [OASEzsignfolderImportEzsigntemplatep](OASEzsignfolderImportEzsigntemplatep.md)
  - [OASEzsignfolderListElement](OASEzsignfolderListElement.md)
@@ -489,6 +521,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignfoldertypeGetAutocompleteV2](OASEzsignfoldertypeGetAutocompleteV2.md)
  - [OASEzsignfoldertypeGetListV1Response](OASEzsignfoldertypeGetListV1Response.md)
  - [OASEzsignfoldertypeGetObjectV1Respon](OASEzsignfoldertypeGetObjectV1Respon.md)
+ - [OASEzsignfoldertypeGetObjectV2Respon](OASEzsignfoldertypeGetObjectV2Respon.md)
  - [OASEzsignfoldertypeListElement](OASEzsignfoldertypeListElement.md)
  - [OASEzsignfoldertypeRequest](OASEzsignfoldertypeRequest.md)
  - [OASEzsignfoldertypeRequestCompound](OASEzsignfoldertypeRequestCompound.md)
@@ -503,6 +536,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignformfieldgroupDeleteObjectV](OASEzsignformfieldgroupDeleteObjectV.md)
  - [OASEzsignformfieldgroupEditObjectV1R](OASEzsignformfieldgroupEditObjectV1R.md)
  - [OASEzsignformfieldgroupGetObjectV1Re](OASEzsignformfieldgroupGetObjectV1Re.md)
+ - [OASEzsignformfieldgroupGetObjectV2Re](OASEzsignformfieldgroupGetObjectV2Re.md)
  - [OASEzsignformfieldgroupRequest](OASEzsignformfieldgroupRequest.md)
  - [OASEzsignformfieldgroupRequestCompou](OASEzsignformfieldgroupRequestCompou.md)
  - [OASEzsignformfieldgroupResponse](OASEzsignformfieldgroupResponse.md)
@@ -519,6 +553,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignatureEditObjectV1Reques](OASEzsignsignatureEditObjectV1Reques.md)
  - [OASEzsignsignatureEditObjectV1Respon](OASEzsignsignatureEditObjectV1Respon.md)
  - [OASEzsignsignatureGetObjectV1Respons](OASEzsignsignatureGetObjectV1Respons.md)
+ - [OASEzsignsignatureGetObjectV2Respons](OASEzsignsignatureGetObjectV2Respons.md)
  - [OASEzsignsignatureRequest](OASEzsignsignatureRequest.md)
  - [OASEzsignsignatureRequestCompound](OASEzsignsignatureRequestCompound.md)
  - [OASEzsignsignatureRequestCompoundAll](OASEzsignsignatureRequestCompoundAll.md)
@@ -550,6 +585,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigntemplateGetListV1ResponseAl](OASEzsigntemplateGetListV1ResponseAl.md)
  - [OASEzsigntemplateGetListV1ResponseMP](OASEzsigntemplateGetListV1ResponseMP.md)
  - [OASEzsigntemplateGetObjectV1Response](OASEzsigntemplateGetObjectV1Response.md)
+ - [OASEzsigntemplateGetObjectV2Response](OASEzsigntemplateGetObjectV2Response.md)
  - [OASEzsigntemplateListElement](OASEzsigntemplateListElement.md)
  - [OASEzsigntemplateRequest](OASEzsigntemplateRequest.md)
  - [OASEzsigntemplateRequestCompound](OASEzsigntemplateRequestCompound.md)
@@ -561,6 +597,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigntemplatedocumentEditObjectV](OASEzsigntemplatedocumentEditObjectV.md)
  - [OASEzsigntemplatedocumentGetEzsignte](OASEzsigntemplatedocumentGetEzsignte.md)
  - [OASEzsigntemplatedocumentGetObjectV1](OASEzsigntemplatedocumentGetObjectV1.md)
+ - [OASEzsigntemplatedocumentGetObjectV2](OASEzsigntemplatedocumentGetObjectV2.md)
  - [OASEzsigntemplatedocumentGetWordsPos](OASEzsigntemplatedocumentGetWordsPos.md)
  - [OASEzsigntemplatedocumentPatchObject](OASEzsigntemplatedocumentPatchObject.md)
  - [OASEzsigntemplatedocumentRequest](OASEzsigntemplatedocumentRequest.md)
@@ -588,6 +625,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigntemplatepackageGetAutocompl](OASEzsigntemplatepackageGetAutocompl.md)
  - [OASEzsigntemplatepackageGetListV1Res](OASEzsigntemplatepackageGetListV1Res.md)
  - [OASEzsigntemplatepackageGetObjectV1R](OASEzsigntemplatepackageGetObjectV1R.md)
+ - [OASEzsigntemplatepackageGetObjectV2R](OASEzsigntemplatepackageGetObjectV2R.md)
  - [OASEzsigntemplatepackageListElement](OASEzsigntemplatepackageListElement.md)
  - [OASEzsigntemplatepackageRequest](OASEzsigntemplatepackageRequest.md)
  - [OASEzsigntemplatepackageRequestCompo](OASEzsigntemplatepackageRequestCompo.md)
@@ -617,6 +655,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigntemplatesignerDeleteObjectV](OASEzsigntemplatesignerDeleteObjectV.md)
  - [OASEzsigntemplatesignerEditObjectV1R](OASEzsigntemplatesignerEditObjectV1R.md)
  - [OASEzsigntemplatesignerGetObjectV1Re](OASEzsigntemplatesignerGetObjectV1Re.md)
+ - [OASEzsigntemplatesignerGetObjectV2Re](OASEzsigntemplatesignerGetObjectV2Re.md)
  - [OASEzsigntemplatesignerRequest](OASEzsigntemplatesignerRequest.md)
  - [OASEzsigntemplatesignerRequestCompou](OASEzsigntemplatesignerRequestCompou.md)
  - [OASEzsigntemplatesignerResponse](OASEzsigntemplatesignerResponse.md)
@@ -653,6 +692,8 @@ Class | Method | HTTP request | Description
  - [OASFieldEPhoneType](OASFieldEPhoneType.md)
  - [OASFieldEUserEzsignsendreminderfrequ](OASFieldEUserEzsignsendreminderfrequ.md)
  - [OASFieldEUserType](OASFieldEUserType.md)
+ - [OASFieldEVersionhistoryType](OASFieldEVersionhistoryType.md)
+ - [OASFieldEVersionhistoryUsertype](OASFieldEVersionhistoryUsertype.md)
  - [OASFieldEWebhookEzsignevent](OASFieldEWebhookEzsignevent.md)
  - [OASFieldEWebhookManagementevent](OASFieldEWebhookManagementevent.md)
  - [OASFieldEWebhookModule](OASFieldEWebhookModule.md)
@@ -667,6 +708,7 @@ Class | Method | HTTP request | Description
  - [OASMultilingualEzsignfoldertypeName](OASMultilingualEzsignfoldertypeName.md)
  - [OASMultilingualNotificationsubsectio](OASMultilingualNotificationsubsectio.md)
  - [OASMultilingualNotificationtestName](OASMultilingualNotificationtestName.md)
+ - [OASMultilingualVersionhistoryDetail](OASMultilingualVersionhistoryDetail.md)
  - [OASNotificationsectionGetNotificatio](OASNotificationsectionGetNotificatio.md)
  - [OASNotificationsubsectionResponse](OASNotificationsubsectionResponse.md)
  - [OASNotificationtestGetElementsV1Resp](OASNotificationtestGetElementsV1Resp.md)
@@ -691,6 +733,9 @@ Class | Method | HTTP request | Description
  - [OASUserResponseCompound](OASUserResponseCompound.md)
  - [OASUsergroupAutocompleteElementRespo](OASUsergroupAutocompleteElementRespo.md)
  - [OASUsergroupGetAutocompleteV2Respons](OASUsergroupGetAutocompleteV2Respons.md)
+ - [OASVersionhistoryGetObjectV2Response](OASVersionhistoryGetObjectV2Response.md)
+ - [OASVersionhistoryResponse](OASVersionhistoryResponse.md)
+ - [OASVersionhistoryResponseCompound](OASVersionhistoryResponseCompound.md)
  - [OASWebhookCreateObjectV1Request](OASWebhookCreateObjectV1Request.md)
  - [OASWebhookCreateObjectV1Response](OASWebhookCreateObjectV1Response.md)
  - [OASWebhookCreateObjectV1ResponseAllO](OASWebhookCreateObjectV1ResponseAllO.md)
@@ -712,11 +757,15 @@ Class | Method | HTTP request | Description
  - [OASWebhookGetObjectV1Response](OASWebhookGetObjectV1Response.md)
  - [OASWebhookGetObjectV1ResponseAllOf](OASWebhookGetObjectV1ResponseAllOf.md)
  - [OASWebhookGetObjectV1ResponseMPayloa](OASWebhookGetObjectV1ResponseMPayloa.md)
+ - [OASWebhookGetObjectV2Response](OASWebhookGetObjectV2Response.md)
+ - [OASWebhookGetObjectV2ResponseAllOf](OASWebhookGetObjectV2ResponseAllOf.md)
+ - [OASWebhookGetObjectV2ResponseMPayloa](OASWebhookGetObjectV2ResponseMPayloa.md)
  - [OASWebhookListElement](OASWebhookListElement.md)
  - [OASWebhookRequest](OASWebhookRequest.md)
  - [OASWebhookRequestCompound](OASWebhookRequestCompound.md)
  - [OASWebhookResponse](OASWebhookResponse.md)
  - [OASWebhookResponseCompound](OASWebhookResponseCompound.md)
+ - [OASWebhookResponseCompoundAllOf](OASWebhookResponseCompoundAllOf.md)
  - [OASWebhookTestV1Response](OASWebhookTestV1Response.md)
  - [OASWebhookUserUserCreated](OASWebhookUserUserCreated.md)
  - [OASWebhookUserUserCreatedAllOf](OASWebhookUserUserCreatedAllOf.md)

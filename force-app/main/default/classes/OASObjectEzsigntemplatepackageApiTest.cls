@@ -291,4 +291,39 @@ private class OASObjectEzsigntemplatepackageApiTest {
         response = (OASEzsigntemplatepackageGetObjectV1R) api.ezsigntemplatepackageGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Retrieve an existing Ezsigntemplatepackage
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigntemplatepackageGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigntemplatepackageID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigntemplatepackageApi api;
+        OASEzsigntemplatepackageGetObjectV2R response;
+        OASEzsigntemplatepackageGetObjectV2R expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigntemplatepackageApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigntemplatepackageGetObjectV2R.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigntemplatepackageGetObjectV2R.getExample();
+        response = (OASEzsigntemplatepackageGetObjectV2R) api.ezsigntemplatepackageGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }

@@ -284,6 +284,41 @@ private class OASObjectEzsigntemplatedocumentApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsigntemplatedocument
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigntemplatedocumentGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigntemplatedocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigntemplatedocumentApi api;
+        OASEzsigntemplatedocumentGetObjectV2 response;
+        OASEzsigntemplatedocumentGetObjectV2 expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigntemplatedocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigntemplatedocumentGetObjectV2.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigntemplatedocumentGetObjectV2.getExample();
+        response = (OASEzsigntemplatedocumentGetObjectV2) api.ezsigntemplatedocumentGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve positions X,Y of given words from a Ezsigntemplatedocument
      *
      * 

@@ -104,4 +104,39 @@ private class OASObjectEzsignbulksenddocumentmappingApiTest {
         response = (OASEzsignbulksenddocumentmappingGetO) api.ezsignbulksenddocumentmappingGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Retrieve an existing Ezsignbulksenddocumentmapping
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignbulksenddocumentmappingGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignbulksenddocumentmappingID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignbulksenddocumentmappingApi api;
+        OASEzsignbulksenddocumentmappingGetO response;
+        OASEzsignbulksenddocumentmappingGetO expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignbulksenddocumentmappingApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignbulksenddocumentmappingGetO.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksenddocumentmappingGetO.getExample();
+        response = (OASEzsignbulksenddocumentmappingGetO) api.ezsignbulksenddocumentmappingGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }

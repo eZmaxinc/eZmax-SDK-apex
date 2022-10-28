@@ -217,6 +217,41 @@ private class OASObjectWebhookApiTest {
     }
 
     /**
+     * Retrieve an existing Webhook
+     *
+     * 
+     */
+    @isTest
+    private static void webhookGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiWebhookID' => ''
+        };
+
+        OASClient client;
+        OASObjectWebhookApi api;
+        OASWebhookGetObjectV2Response response;
+        OASWebhookGetObjectV2Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectWebhookApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASWebhookGetObjectV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASWebhookGetObjectV2Response.getExample();
+        response = (OASWebhookGetObjectV2Response) api.webhookGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Test the Webhook by calling the Url
      *
      * 

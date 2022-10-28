@@ -493,6 +493,41 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignfolder
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetObjectV2Response response;
+        OASEzsignfolderGetObjectV2Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderGetObjectV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetObjectV2Response.getExample();
+        response = (OASEzsignfolderGetObjectV2Response) api.ezsignfolderGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Import an existing Ezsignfoldersignerassociation into this Ezsignfolder
      *
      * 

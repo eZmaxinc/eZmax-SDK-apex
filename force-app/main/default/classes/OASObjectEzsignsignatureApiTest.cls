@@ -177,6 +177,41 @@ private class OASObjectEzsignsignatureApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignsignature
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignsignatureGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignsignatureID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignsignatureApi api;
+        OASEzsignsignatureGetObjectV2Respons response;
+        OASEzsignsignatureGetObjectV2Respons expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignsignatureApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignsignatureGetObjectV2Respons.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignsignatureGetObjectV2Respons.getExample();
+        response = (OASEzsignsignatureGetObjectV2Respons) api.ezsignsignatureGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Sign the Ezsignsignature
      *
      * 

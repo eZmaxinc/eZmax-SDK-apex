@@ -140,4 +140,39 @@ private class OASObjectEzsigntemplateformfieldgroupApiTest {
         response = (OASEzsigntemplateformfieldgroupGetOb) api.ezsigntemplateformfieldgroupGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Retrieve an existing Ezsigntemplateformfieldgroup
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigntemplateformfieldgroupGetObjectV2Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigntemplateformfieldgroupID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigntemplateformfieldgroupApi api;
+        OASEzsigntemplateformfieldgroupGetOb response;
+        OASEzsigntemplateformfieldgroupGetOb expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigntemplateformfieldgroupApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigntemplateformfieldgroupGetOb.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigntemplateformfieldgroupGetOb.getExample();
+        response = (OASEzsigntemplateformfieldgroupGetOb) api.ezsigntemplateformfieldgroupGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }
