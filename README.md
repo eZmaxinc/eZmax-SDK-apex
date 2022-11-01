@@ -240,12 +240,15 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV1**](OASObjectEzsigntsarequirementApi.md#ezsigntsarequirementGetAutocompleteV1) | **GET** /1/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *OASObjectEzsigntsarequirementApi* | [**ezsigntsarequirementGetAutocompleteV2**](OASObjectEzsigntsarequirementApi.md#ezsigntsarequirementGetAutocompleteV2) | **GET** /2/object/ezsigntsarequirement/getAutocomplete/{sSelector} | Retrieve Ezsigntsarequirements and IDs
 *OASObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV1**](OASObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
+*OASObjectFranchisebrokerApi* | [**franchisebrokerGetAutocompleteV2**](OASObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
 *OASObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV1**](OASObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
+*OASObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](OASObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *OASObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](OASObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *OASObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](OASObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
 *OASObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](OASObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection\&#39;s Notificationtests
 *OASObjectNotificationtestApi* | [**notificationtestGetElementsV1**](OASObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest\&#39;s Elements
 *OASObjectPeriodApi* | [**periodGetAutocompleteV1**](OASObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
+*OASObjectPeriodApi* | [**periodGetAutocompleteV2**](OASObjectPeriodApi.md#periodGetAutocompleteV2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *OASObjectSecretquestionApi* | [**secretquestionGetAutocompleteV1**](OASObjectSecretquestionApi.md#secretquestionGetAutocompleteV1) | **GET** /1/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *OASObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](OASObjectSecretquestionApi.md#secretquestionGetAutocompleteV2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *OASObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV1**](OASObjectTaxassignmentApi.md#taxassignmentGetAutocompleteV1) | **GET** /1/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
@@ -562,7 +565,6 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignatureResponseCompoundAl](OASEzsignsignatureResponseCompoundAl.md)
  - [OASEzsignsignatureSignV1Request](OASEzsignsignatureSignV1Request.md)
  - [OASEzsignsignatureSignV1Response](OASEzsignsignatureSignV1Response.md)
- - [OASEzsignsignatureSignV1ResponseAllO](OASEzsignsignatureSignV1ResponseAllO.md)
  - [OASEzsignsignaturecustomdateRequest](OASEzsignsignaturecustomdateRequest.md)
  - [OASEzsignsignaturecustomdateRequestC](OASEzsignsignaturecustomdateRequestC.md)
  - [OASEzsignsignaturecustomdateResponse](OASEzsignsignaturecustomdateResponse.md)
@@ -697,6 +699,10 @@ Class | Method | HTTP request | Description
  - [OASFieldEWebhookEzsignevent](OASFieldEWebhookEzsignevent.md)
  - [OASFieldEWebhookManagementevent](OASFieldEWebhookManagementevent.md)
  - [OASFieldEWebhookModule](OASFieldEWebhookModule.md)
+ - [OASFranchisebrokerAutocompleteElemen](OASFranchisebrokerAutocompleteElemen.md)
+ - [OASFranchisebrokerGetAutocompleteV2R](OASFranchisebrokerGetAutocompleteV2R.md)
+ - [OASFranchiseofficeAutocompleteElemen](OASFranchiseofficeAutocompleteElemen.md)
+ - [OASFranchiseofficeGetAutocompleteV2R](OASFranchiseofficeGetAutocompleteV2R.md)
  - [OASFranchisereferalincomeCreateObjec](OASFranchisereferalincomeCreateObjec.md)
  - [OASFranchisereferalincomeRequest](OASFranchisereferalincomeRequest.md)
  - [OASFranchisereferalincomeRequestComp](OASFranchisereferalincomeRequestComp.md)
@@ -713,6 +719,10 @@ Class | Method | HTTP request | Description
  - [OASNotificationsubsectionResponse](OASNotificationsubsectionResponse.md)
  - [OASNotificationtestGetElementsV1Resp](OASNotificationtestGetElementsV1Resp.md)
  - [OASNotificationtestResponse](OASNotificationtestResponse.md)
+ - [OASPeriodAutocompleteElementResponse](OASPeriodAutocompleteElementResponse.md)
+ - [OASPeriodGetAutocompleteV2Response](OASPeriodGetAutocompleteV2Response.md)
+ - [OASPeriodGetAutocompleteV2ResponseAl](OASPeriodGetAutocompleteV2ResponseAl.md)
+ - [OASPeriodGetAutocompleteV2ResponseMP](OASPeriodGetAutocompleteV2ResponseMP.md)
  - [OASPhoneRequest](OASPhoneRequest.md)
  - [OASPhoneRequestCompound](OASPhoneRequestCompound.md)
  - [OASSecretquestionAutocompleteElement](OASSecretquestionAutocompleteElement.md)
