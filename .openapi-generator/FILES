@@ -945,6 +945,14 @@ force-app/main/default/classes/OASEzsignfolderSendV2Response.cls
 force-app/main/default/classes/OASEzsignfolderSendV2Response.cls-meta.xml
 force-app/main/default/classes/OASEzsignfolderSendV2ResponseTest.cls
 force-app/main/default/classes/OASEzsignfolderSendV2ResponseTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignfolderSendV3Request.cls
+force-app/main/default/classes/OASEzsignfolderSendV3Request.cls-meta.xml
+force-app/main/default/classes/OASEzsignfolderSendV3RequestTest.cls
+force-app/main/default/classes/OASEzsignfolderSendV3RequestTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignfolderSendV3Response.cls
+force-app/main/default/classes/OASEzsignfolderSendV3Response.cls-meta.xml
+force-app/main/default/classes/OASEzsignfolderSendV3ResponseTest.cls
+force-app/main/default/classes/OASEzsignfolderSendV3ResponseTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignfolderUnsendV1Response.cls
 force-app/main/default/classes/OASEzsignfolderUnsendV1Response.cls-meta.xml
 force-app/main/default/classes/OASEzsignfolderUnsendV1ResponseTest.cls
@@ -973,6 +981,10 @@ force-app/main/default/classes/OASEzsignfoldersignerassociationGetO.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationGetO.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldersignerassociationGetOTest.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationGetOTest.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldersignerassociationPatc.cls
+force-app/main/default/classes/OASEzsignfoldersignerassociationPatc.cls-meta.xml
+force-app/main/default/classes/OASEzsignfoldersignerassociationPatcTest.cls
+force-app/main/default/classes/OASEzsignfoldersignerassociationPatcTest.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequ.cls-meta.xml
 force-app/main/default/classes/OASEzsignfoldersignerassociationRequTest.cls

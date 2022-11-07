@@ -281,4 +281,40 @@ private class OASObjectEzsignfoldersignerassociationApiTest {
         response = (OASEzsignfoldersignerassociationGetO) api.ezsignfoldersignerassociationGetObjectV2(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Patch an existing Ezsignfoldersignerassociation
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfoldersignerassociationPatchObjectV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfoldersignerassociationID' => '',
+            'oaSEzsignfoldersignerassociationPatc' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfoldersignerassociationApi api;
+        OASEzsignfoldersignerassociationPatc response;
+        OASEzsignfoldersignerassociationPatc expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfoldersignerassociationApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfoldersignerassociationPatc.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfoldersignerassociationPatc.getExample();
+        response = (OASEzsignfoldersignerassociationPatc) api.ezsignfoldersignerassociationPatchObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }

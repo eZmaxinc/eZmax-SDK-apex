@@ -708,6 +708,42 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Send the Ezsignfolder to the signatories for signature
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderSendV3Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => '',
+            'oaSEzsignfolderSendV3Request' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderSendV3Response response;
+        OASEzsignfolderSendV3Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderSendV3Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderSendV3Response.getExample();
+        response = (OASEzsignfolderSendV3Response) api.ezsignfolderSendV3(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Unsend the Ezsignfolder
      *
      * Once an Ezsignfolder has been sent to signatories, it cannot be modified.\n\nUsing this endpoint, you can unsend the Ezsignfolder and make it modifiable again.\n\nSignatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.\n\n⚠️ Warning: Any signature previously made by signatories on &quot;Non-completed&quot; Ezsigndocuments will be lost.

@@ -4,6 +4,7 @@ private class OASFieldEEzsignfolderStepTest {
     private static void allowableValues() {
         Set<OASFieldEEzsignfolderStep> expected = new Set<OASFieldEEzsignfolderStep>{
             OASFieldEEzsignfolderStep.UNSENT,
+            OASFieldEEzsignfolderStep.PENDINGSEND,
             OASFieldEEzsignfolderStep.SENT,
             OASFieldEEzsignfolderStep.PARTIALLYSIGNED,
             OASFieldEEzsignfolderStep.EXPIRED,
