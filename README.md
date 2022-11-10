@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV2**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureSignV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
+*OASObjectEzsigntemplateApi* | [**ezsigntemplateCopyV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateCopyV1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateCreateObjectV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateDeleteObjectV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate
 *OASObjectEzsigntemplateApi* | [**ezsigntemplateEditObjectV1**](OASObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate
@@ -582,6 +583,10 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignerResponseCompoundAllOf](OASEzsignsignerResponseCompoundAllOf.md)
  - [OASEzsignsignerResponseCompoundConta](OASEzsignsignerResponseCompoundConta.md)
  - [OASEzsigntemplateAutocompleteElement](OASEzsigntemplateAutocompleteElement.md)
+ - [OASEzsigntemplateCopyV1Request](OASEzsigntemplateCopyV1Request.md)
+ - [OASEzsigntemplateCopyV1Response](OASEzsigntemplateCopyV1Response.md)
+ - [OASEzsigntemplateCopyV1ResponseAllOf](OASEzsigntemplateCopyV1ResponseAllOf.md)
+ - [OASEzsigntemplateCopyV1ResponseMPayl](OASEzsigntemplateCopyV1ResponseMPayl.md)
  - [OASEzsigntemplateCreateObjectV1Reque](OASEzsigntemplateCreateObjectV1Reque.md)
  - [OASEzsigntemplateCreateObjectV1Respo](OASEzsigntemplateCreateObjectV1Respo.md)
  - [OASEzsigntemplateDeleteObjectV1Respo](OASEzsigntemplateDeleteObjectV1Respo.md)

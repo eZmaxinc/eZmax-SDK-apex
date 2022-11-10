@@ -1,6 +1,42 @@
 @isTest
 private class OASObjectEzsigntemplateApiTest {
     /**
+     * Copy the Ezsigntemplate
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigntemplateCopyV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigntemplateID' => '',
+            'oaSEzsigntemplateCopyV1Request' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigntemplateApi api;
+        OASEzsigntemplateCopyV1Response response;
+        OASEzsigntemplateCopyV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigntemplateApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigntemplateCopyV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigntemplateCopyV1Response.getExample();
+        response = (OASEzsigntemplateCopyV1Response) api.ezsigntemplateCopyV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Create a new Ezsigntemplate
      *
      * The endpoint allows to create one or many elements at once.

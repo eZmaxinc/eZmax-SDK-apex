@@ -81,6 +81,7 @@ private class OASEzsigndocumentResponseCompoundTest {
         OASEzsigndocumentResponseCompound ezsigndocumentResponseCompound = new OASEzsigndocumentResponseCompound();
         System.assertEquals(new List<OASCustomEzsignfoldersignerassociati>(), ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiEzsignfolderID);
+        System.assertEquals(null, ezsigndocumentResponseCompound.fkiEzsignfoldersignerassociationIDDeclinedtosign);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentDuedate);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsignformCompleted);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiLanguageID);
@@ -94,6 +95,7 @@ private class OASEzsigndocumentResponseCompoundTest {
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentSignaturesigned);
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5initial);
+        System.assertEquals(null, ezsigndocumentResponseCompound.tEzsigndocumentDeclinedtosignreason);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentMD5signed);
         System.assertEquals(null, ezsigndocumentResponseCompound.bEzsigndocumentEzsignform);
         System.assertEquals(null, ezsigndocumentResponseCompound.objAudit);
