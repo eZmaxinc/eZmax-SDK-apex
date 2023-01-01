@@ -184,6 +184,14 @@ private class OASObjectBrandingApiTest {
         expectedResponse = OASBrandingGetListV1Response.getExample();
         response = (OASBrandingGetListV1Response) api.brandingGetListV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASBrandingGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setBody(js);
+        expectedResponse = OASBrandingGetListV1Response.getExample();
+        response = (OASBrandingGetListV1Response) api.brandingGetListV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

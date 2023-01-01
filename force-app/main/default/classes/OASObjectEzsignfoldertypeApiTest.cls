@@ -184,6 +184,14 @@ private class OASObjectEzsignfoldertypeApiTest {
         expectedResponse = OASEzsignfoldertypeGetListV1Response.getExample();
         response = (OASEzsignfoldertypeGetListV1Response) api.ezsignfoldertypeGetListV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsignfoldertypeGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setBody(js);
+        expectedResponse = OASEzsignfoldertypeGetListV1Response.getExample();
+        response = (OASEzsignfoldertypeGetListV1Response) api.ezsignfoldertypeGetListV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

@@ -255,6 +255,14 @@ private class OASObjectEzsigntemplatepackageApiTest {
         expectedResponse = OASEzsigntemplatepackageGetListV1Res.getExample();
         response = (OASEzsigntemplatepackageGetListV1Res) api.ezsigntemplatepackageGetListV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsigntemplatepackageGetListV1Res.getExample());
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setBody(js);
+        expectedResponse = OASEzsigntemplatepackageGetListV1Res.getExample();
+        response = (OASEzsigntemplatepackageGetListV1Res) api.ezsigntemplatepackageGetListV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

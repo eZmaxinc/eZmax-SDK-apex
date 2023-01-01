@@ -179,6 +179,14 @@ private class OASObjectWebhookApiTest {
         expectedResponse = OASWebhookGetListV1Response.getExample();
         response = (OASWebhookGetListV1Response) api.webhookGetListV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASWebhookGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setBody(js);
+        expectedResponse = OASWebhookGetListV1Response.getExample();
+        response = (OASWebhookGetListV1Response) api.webhookGetListV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

@@ -240,6 +240,14 @@ private class OASObjectEzsignbulksendApiTest {
         expectedResponse = OASEzsignbulksendGetFormsDataV1Respo.getExample();
         response = (OASEzsignbulksendGetFormsDataV1Respo) api.ezsignbulksendGetFormsDataV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsignbulksendGetFormsDataV1Respo.getExample());
+        res.setHeader('Content-Type', 'application/zip');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksendGetFormsDataV1Respo.getExample();
+        response = (OASEzsignbulksendGetFormsDataV1Respo) api.ezsignbulksendGetFormsDataV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -275,6 +283,14 @@ private class OASObjectEzsignbulksendApiTest {
 
         js = JSON.serialize(OASEzsignbulksendGetListV1Response.getExample());
         res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksendGetListV1Response.getExample();
+        response = (OASEzsignbulksendGetListV1Response) api.ezsignbulksendGetListV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsignbulksendGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         res.setBody(js);
         expectedResponse = OASEzsignbulksendGetListV1Response.getExample();
         response = (OASEzsignbulksendGetListV1Response) api.ezsignbulksendGetListV1(params);

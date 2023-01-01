@@ -25,7 +25,8 @@ private class OASFieldEEzsigndocumentlogTypeTest {
             OASFieldEEzsigndocumentlogType.SIGNATUREATTACHMENTVALIDATION,
             OASFieldEEzsigndocumentlogType.SIGNATUREATTACHMENTREFUSED,
             OASFieldEEzsigndocumentlogType.SIGNATUREATTACHMENTDELETED,
-            OASFieldEEzsigndocumentlogType.DECLINEDTOSIGN
+            OASFieldEEzsigndocumentlogType.DECLINEDTOSIGN,
+            OASFieldEEzsigndocumentlogType.DELAYEDSENDEMAIL
         };
         Set<OASFieldEEzsigndocumentlogType> actual  = new Set<OASFieldEEzsigndocumentlogType>(OASFieldEEzsigndocumentlogType.values());
         System.assertEquals(expected, actual);

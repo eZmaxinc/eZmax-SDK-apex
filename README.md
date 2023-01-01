@@ -67,6 +67,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OASGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](OASGlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
+*OASModuleCommunicationApi* | [**communicationGetCommunicationCountV1**](OASModuleCommunicationApi.md#communicationGetCommunicationCountV1) | **GET** /1/module/communication/getCommunicationCount | Get the number of communication
+*OASModuleCommunicationApi* | [**communicationGetCommunicationListV1**](OASModuleCommunicationApi.md#communicationGetCommunicationListV1) | **GET** /1/module/communication/getCommunicationList | Retrieve communication list
 *OASModuleEzsignApi* | [**ezsignSuggestSignersV1**](OASModuleEzsignApi.md#ezsignSuggestSignersV1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *OASModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](OASModuleEzsignApi.md#ezsignSuggestTemplatesV1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *OASModuleUserApi* | [**userCreateEzsignuserV1**](OASModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
@@ -82,6 +84,7 @@ Class | Method | HTTP request | Description
 *OASObjectBrandingApi* | [**brandingGetListV1**](OASObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *OASObjectBrandingApi* | [**brandingGetObjectV1**](OASObjectBrandingApi.md#brandingGetObjectV1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *OASObjectBrandingApi* | [**brandingGetObjectV2**](OASObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*OASObjectCommunicationApi* | [**communicationGetObjectV2**](OASObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV1**](OASObjectDepartmentApi.md#departmentGetAutocompleteV1) | **GET** /1/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV2**](OASObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *OASObjectDepartmentApi* | [**departmentGetMembersV1**](OASObjectDepartmentApi.md#departmentGetMembersV1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department\&#39;s members
@@ -341,6 +344,27 @@ Class | Method | HTTP request | Description
  - [OASCommonResponseRedirectSSecretques](OASCommonResponseRedirectSSecretques.md)
  - [OASCommonResponseWarning](OASCommonResponseWarning.md)
  - [OASCommonWebhook](OASCommonWebhook.md)
+ - [OASCommunicationGetCountV1Response](OASCommunicationGetCountV1Response.md)
+ - [OASCommunicationGetCountV1ResponseAl](OASCommunicationGetCountV1ResponseAl.md)
+ - [OASCommunicationGetCountV1ResponseMP](OASCommunicationGetCountV1ResponseMP.md)
+ - [OASCommunicationGetListV1Response](OASCommunicationGetListV1Response.md)
+ - [OASCommunicationGetListV1ResponseAll](OASCommunicationGetListV1ResponseAll.md)
+ - [OASCommunicationGetListV1ResponseMPa](OASCommunicationGetListV1ResponseMPa.md)
+ - [OASCommunicationGetObjectV2Response](OASCommunicationGetObjectV2Response.md)
+ - [OASCommunicationGetObjectV2ResponseA](OASCommunicationGetObjectV2ResponseA.md)
+ - [OASCommunicationGetObjectV2ResponseM](OASCommunicationGetObjectV2ResponseM.md)
+ - [OASCommunicationListElement](OASCommunicationListElement.md)
+ - [OASCommunicationResponse](OASCommunicationResponse.md)
+ - [OASCommunicationResponseCompound](OASCommunicationResponseCompound.md)
+ - [OASCommunicationResponseCompoundAllO](OASCommunicationResponseCompoundAllO.md)
+ - [OASCommunicationattachmentResponse](OASCommunicationattachmentResponse.md)
+ - [OASCommunicationattachmentResponseCo](OASCommunicationattachmentResponseCo.md)
+ - [OASCommunicationexternalimageRespons](OASCommunicationexternalimageRespons.md)
+ - [OASCommunicationexternalrecipientRes](OASCommunicationexternalrecipientRes.md)
+ - [OASCommunicationimageResponse](OASCommunicationimageResponse.md)
+ - [OASCommunicationimageResponseCompoun](OASCommunicationimageResponseCompoun.md)
+ - [OASCommunicationrecipientResponse](OASCommunicationrecipientResponse.md)
+ - [OASCommunicationrecipientResponseCom](OASCommunicationrecipientResponseCom.md)
  - [OASContactRequest](OASContactRequest.md)
  - [OASContactRequestCompound](OASContactRequestCompound.md)
  - [OASContactRequestCompoundAllOf](OASContactRequestCompoundAllOf.md)
@@ -677,6 +701,10 @@ Class | Method | HTTP request | Description
  - [OASFieldEActivesessionUsertype](OASFieldEActivesessionUsertype.md)
  - [OASFieldEActivesessionWeekdaystart](OASFieldEActivesessionWeekdaystart.md)
  - [OASFieldEBrandingLogo](OASFieldEBrandingLogo.md)
+ - [OASFieldECommunicationEmailimportanc](OASFieldECommunicationEmailimportanc.md)
+ - [OASFieldECommunicationType](OASFieldECommunicationType.md)
+ - [OASFieldECommunicationexternalrecipi](OASFieldECommunicationexternalrecipi.md)
+ - [OASFieldECommunicationrecipientType](OASFieldECommunicationrecipientType.md)
  - [OASFieldEEzmaxinvoicingPaymenttype](OASFieldEEzmaxinvoicingPaymenttype.md)
  - [OASFieldEEzmaxinvoicingagentVariatio](OASFieldEEzmaxinvoicingagentVariatio.md)
  - [OASFieldEEzmaxinvoicingcontractPayme](OASFieldEEzmaxinvoicingcontractPayme.md)
@@ -735,6 +763,8 @@ Class | Method | HTTP request | Description
  - [OASPeriodGetAutocompleteV2ResponseMP](OASPeriodGetAutocompleteV2ResponseMP.md)
  - [OASPhoneRequest](OASPhoneRequest.md)
  - [OASPhoneRequestCompound](OASPhoneRequestCompound.md)
+ - [OASPhoneResponse](OASPhoneResponse.md)
+ - [OASPhoneResponseCompound](OASPhoneResponseCompound.md)
  - [OASSecretquestionAutocompleteElement](OASSecretquestionAutocompleteElement.md)
  - [OASSecretquestionGetAutocompleteV2Re](OASSecretquestionGetAutocompleteV2Re.md)
  - [OASTaxassignmentAutocompleteElementR](OASTaxassignmentAutocompleteElementR.md)

@@ -88,6 +88,7 @@ private class OASActivesessionResponseCompoundTest {
         System.assertEquals(null, activesessionResponseCompound.sCompanyNameX);
         System.assertEquals(null, activesessionResponseCompound.sDepartmentNameX);
         System.assertEquals(null, activesessionResponseCompound.bActivesessionDebug);
+        System.assertEquals(null, activesessionResponseCompound.bActivesessionIssuperadmin);
         System.assertEquals(null, activesessionResponseCompound.pksCustomerCode);
         System.assertEquals(null, activesessionResponseCompound.fkiSystemconfigurationtypeID);
         System.assertEquals(null, activesessionResponseCompound.objUserReal);

@@ -62,6 +62,14 @@ private class OASObjectEzsignbulksendtransmissionApiTest {
         expectedResponse = OASEzsignbulksendtransmissionGetForm.getExample();
         response = (OASEzsignbulksendtransmissionGetForm) api.ezsignbulksendtransmissionGetFormsDataV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsignbulksendtransmissionGetForm.getExample());
+        res.setHeader('Content-Type', 'application/zip');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksendtransmissionGetForm.getExample();
+        response = (OASEzsignbulksendtransmissionGetForm) api.ezsignbulksendtransmissionGetFormsDataV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**

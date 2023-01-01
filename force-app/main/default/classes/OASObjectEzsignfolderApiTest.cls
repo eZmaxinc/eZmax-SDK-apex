@@ -63,7 +63,13 @@ private class OASObjectEzsignfolderApiTest {
         api = new OASObjectEzsignfolderApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
 
-        api.ezsignfolderBatchDownloadV1(params);
+
+        js = JSON.serialize(Blob.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = Blob.getExample();
+        response = (Blob) api.ezsignfolderBatchDownloadV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -416,6 +422,14 @@ private class OASObjectEzsignfolderApiTest {
         expectedResponse = OASEzsignfolderGetFormsDataV1Respons.getExample();
         response = (OASEzsignfolderGetFormsDataV1Respons) api.ezsignfolderGetFormsDataV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsignfolderGetFormsDataV1Respons.getExample());
+        res.setHeader('Content-Type', 'application/zip');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetFormsDataV1Respons.getExample();
+        response = (OASEzsignfolderGetFormsDataV1Respons) api.ezsignfolderGetFormsDataV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -451,6 +465,14 @@ private class OASObjectEzsignfolderApiTest {
 
         js = JSON.serialize(OASEzsignfolderGetListV1Response.getExample());
         res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetListV1Response.getExample();
+        response = (OASEzsignfolderGetListV1Response) api.ezsignfolderGetListV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsignfolderGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         res.setBody(js);
         expectedResponse = OASEzsignfolderGetListV1Response.getExample();
         response = (OASEzsignfolderGetListV1Response) api.ezsignfolderGetListV1(params);

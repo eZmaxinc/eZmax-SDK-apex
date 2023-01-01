@@ -494,6 +494,22 @@ private class OASObjectEzsigndocumentApiTest {
         expectedResponse = OASEzsigndocumentGetFormDataV1Respon.getExample();
         response = (OASEzsigndocumentGetFormDataV1Respon) api.ezsigndocumentGetFormDataV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsigndocumentGetFormDataV1Respon.getExample());
+        res.setHeader('Content-Type', 'application/zip');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetFormDataV1Respon.getExample();
+        response = (OASEzsigndocumentGetFormDataV1Respon) api.ezsigndocumentGetFormDataV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASEzsigndocumentGetFormDataV1Respon.getExample());
+        res.setHeader('Content-Type', 'text/csv');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetFormDataV1Respon.getExample();
+        response = (OASEzsigndocumentGetFormDataV1Respon) api.ezsigndocumentGetFormDataV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
