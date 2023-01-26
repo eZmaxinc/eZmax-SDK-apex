@@ -11,9 +11,9 @@
  */
 
 /**
- * Response for GET /1/module/communication/getList
+ * Response for GET /1/object/communication/getList
  */
-public class OASCommunicationGetListV1Response implements OASCommunicationGetListV1ResponseAll, OASCommonResponse {
+public class OASCommunicationGetListV1Response implements OASCommunicationGetListV1ResponseAll, OASCommonResponseGetList {
     /**
      * Get mPayload
      * @return mPayload
@@ -24,7 +24,7 @@ public class OASCommunicationGetListV1Response implements OASCommunicationGetLis
      * Get objDebugPayload
      * @return objDebugPayload
      */
-    public OASCommonResponseObjDebugPayload objDebugPayload { get; set; }
+    public OASCommonResponseObjDebugPayloadGetL objDebugPayload { get; set; }
 
     /**
      * Get objDebug
@@ -35,7 +35,7 @@ public class OASCommunicationGetListV1Response implements OASCommunicationGetLis
     public static OASCommunicationGetListV1Response getExample() {
         OASCommunicationGetListV1Response communicationGetListV1Response = new OASCommunicationGetListV1Response();
           communicationGetListV1Response.mPayload = OASCommunicationGetListV1ResponseMPa.getExample();
-          communicationGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
+          communicationGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayloadGetL.getExample();
           communicationGetListV1Response.objDebug = OASCommonResponseObjDebug.getExample();
         return communicationGetListV1Response;
     }

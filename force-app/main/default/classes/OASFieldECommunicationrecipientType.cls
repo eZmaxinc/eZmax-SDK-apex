@@ -11,7 +11,7 @@
  */
 
 /**
- * The Type for the Communicationrecipient
+ * The type for the Communicationrecipient
  */
 public enum OASFieldECommunicationrecipientType {
     TO,

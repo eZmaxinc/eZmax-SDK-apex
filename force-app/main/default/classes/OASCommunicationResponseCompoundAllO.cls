@@ -32,24 +32,10 @@ public class OASCommunicationResponseCompoundAllO implements OAS.MappedPropertie
      */
     public List<OASCommunicationexternalrecipientRes> aObjCommunicationexternalrecipient { get; set; }
 
-    /**
-     * Get aObjCommunicationimage
-     * @return aObjCommunicationimage
-     */
-    public List<OASCommunicationimageResponseCompoun> aObjCommunicationimage { get; set; }
-
-    /**
-     * Get aObjCommunicationexternalimage
-     * @return aObjCommunicationexternalimage
-     */
-    public List<OASCommunicationexternalimageRespons> aObjCommunicationexternalimage { get; set; }
-
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objCommunicationattachment' => 'aObjCommunicationattachment',
         'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
+        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -59,9 +45,7 @@ public class OASCommunicationResponseCompoundAllO implements OAS.MappedPropertie
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objCommunicationattachment' => 'aObjCommunicationattachment',
         'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
+        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -71,33 +55,7 @@ public class OASCommunicationResponseCompoundAllO implements OAS.MappedPropertie
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objCommunicationattachment' => 'aObjCommunicationattachment',
         'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objCommunicationattachment' => 'aObjCommunicationattachment',
-        'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objCommunicationattachment' => 'aObjCommunicationattachment',
-        'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
+        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -108,8 +66,6 @@ public class OASCommunicationResponseCompoundAllO implements OAS.MappedPropertie
         aObjCommunicationattachment = new List<OASCommunicationattachmentResponseCo>();
         aObjCommunicationrecipient = new List<OASCommunicationrecipientResponseCom>();
         aObjCommunicationexternalrecipient = new List<OASCommunicationexternalrecipientRes>();
-        aObjCommunicationimage = new List<OASCommunicationimageResponseCompoun>();
-        aObjCommunicationexternalimage = new List<OASCommunicationexternalimageRespons>();
     }
 
     public static OASCommunicationResponseCompoundAllO getExample() {
@@ -117,8 +73,6 @@ public class OASCommunicationResponseCompoundAllO implements OAS.MappedPropertie
           communicationResponseCompoundAllOf.aObjCommunicationattachment = new List<OASCommunicationattachmentResponseCo>{OASCommunicationattachmentResponseCo.getExample()};
           communicationResponseCompoundAllOf.aObjCommunicationrecipient = new List<OASCommunicationrecipientResponseCom>{OASCommunicationrecipientResponseCom.getExample()};
           communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient = new List<OASCommunicationexternalrecipientRes>{OASCommunicationexternalrecipientRes.getExample()};
-          communicationResponseCompoundAllOf.aObjCommunicationimage = new List<OASCommunicationimageResponseCompoun>{OASCommunicationimageResponseCompoun.getExample()};
-          communicationResponseCompoundAllOf.aObjCommunicationexternalimage = new List<OASCommunicationexternalimageRespons>{OASCommunicationexternalimageRespons.getExample()};
         return communicationResponseCompoundAllOf;
     }
 
@@ -127,9 +81,7 @@ public class OASCommunicationResponseCompoundAllO implements OAS.MappedPropertie
             OASCommunicationResponseCompoundAllO communicationResponseCompoundAllOf = (OASCommunicationResponseCompoundAllO) obj;
             return this.aObjCommunicationattachment == communicationResponseCompoundAllOf.aObjCommunicationattachment
                 && this.aObjCommunicationrecipient == communicationResponseCompoundAllOf.aObjCommunicationrecipient
-                && this.aObjCommunicationexternalrecipient == communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient
-                && this.aObjCommunicationimage == communicationResponseCompoundAllOf.aObjCommunicationimage
-                && this.aObjCommunicationexternalimage == communicationResponseCompoundAllOf.aObjCommunicationexternalimage;
+                && this.aObjCommunicationexternalrecipient == communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient;
         }
         return false;
     }
@@ -139,8 +91,6 @@ public class OASCommunicationResponseCompoundAllO implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (aObjCommunicationattachment == null ? 0 : System.hashCode(aObjCommunicationattachment));
         hashCode = (17 * hashCode) + (aObjCommunicationrecipient == null ? 0 : System.hashCode(aObjCommunicationrecipient));
         hashCode = (17 * hashCode) + (aObjCommunicationexternalrecipient == null ? 0 : System.hashCode(aObjCommunicationexternalrecipient));
-        hashCode = (17 * hashCode) + (aObjCommunicationimage == null ? 0 : System.hashCode(aObjCommunicationimage));
-        hashCode = (17 * hashCode) + (aObjCommunicationexternalimage == null ? 0 : System.hashCode(aObjCommunicationexternalimage));
         return hashCode;
     }
 }

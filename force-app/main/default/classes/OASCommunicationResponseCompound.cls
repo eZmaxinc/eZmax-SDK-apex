@@ -22,10 +22,10 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
     public Integer pkiCommunicationID { get; set; }
 
     /**
-     * Get eCommunicationEmailimportance
-     * @return eCommunicationEmailimportance
+     * Get eCommunicationImportance
+     * @return eCommunicationImportance
      */
-    public OASFieldECommunicationEmailimportanc eCommunicationEmailimportance { get; set; }
+    public OASFieldECommunicationImportance eCommunicationImportance { get; set; }
 
     /**
      * Get eCommunicationType
@@ -34,22 +34,34 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
     public OASFieldECommunicationType eCommunicationType { get; set; }
 
     /**
-     * The Subject of the Communication
+     * The subject of the Communication
      * @return sCommunicationSubject
      */
     public String sCommunicationSubject { get; set; }
 
     /**
-     * The send date and time at which the Communication was sent.
-     * @return dtCommunicationSentdate
+     * Get eCommunicationDirection
+     * @return eCommunicationDirection
      */
-    public String dtCommunicationSentdate { get; set; }
+    public OASComputedECommunicationDirection eCommunicationDirection { get; set; }
+
+    /**
+     * The count of Communicationrecipient
+     * @return iCommunicationrecipientCount
+     */
+    public Integer iCommunicationrecipientCount { get; set; }
 
     /**
      * Get objContactFrom
      * @return objContactFrom
      */
     public OASCustomContactNameResponse objContactFrom { get; set; }
+
+    /**
+     * Get objAudit
+     * @return objAudit
+     */
+    public OASCommonAudit objAudit { get; set; }
 
     /**
      * Get aObjCommunicationattachment
@@ -69,24 +81,10 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
      */
     public List<OASCommunicationexternalrecipientRes> aObjCommunicationexternalrecipient { get; set; }
 
-    /**
-     * Get aObjCommunicationimage
-     * @return aObjCommunicationimage
-     */
-    public List<OASCommunicationimageResponseCompoun> aObjCommunicationimage { get; set; }
-
-    /**
-     * Get aObjCommunicationexternalimage
-     * @return aObjCommunicationexternalimage
-     */
-    public List<OASCommunicationexternalimageRespons> aObjCommunicationexternalimage { get; set; }
-
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objCommunicationattachment' => 'aObjCommunicationattachment',
         'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
+        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -96,9 +94,7 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objCommunicationattachment' => 'aObjCommunicationattachment',
         'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
+        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -108,33 +104,7 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objCommunicationattachment' => 'aObjCommunicationattachment',
         'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objCommunicationattachment' => 'aObjCommunicationattachment',
-        'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
-    };
-
-    public Map<String, String> getPropertyMappings() {
-        return propertyMappings;
-    }
-
-    private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objCommunicationattachment' => 'aObjCommunicationattachment',
-        'a_objCommunicationrecipient' => 'aObjCommunicationrecipient',
-        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient',
-        'a_objCommunicationimage' => 'aObjCommunicationimage',
-        'a_objCommunicationexternalimage' => 'aObjCommunicationexternalimage'
+        'a_objCommunicationexternalrecipient' => 'aObjCommunicationexternalrecipient'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -145,23 +115,21 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
         aObjCommunicationattachment = new List<OASCommunicationattachmentResponseCo>();
         aObjCommunicationrecipient = new List<OASCommunicationrecipientResponseCom>();
         aObjCommunicationexternalrecipient = new List<OASCommunicationexternalrecipientRes>();
-        aObjCommunicationimage = new List<OASCommunicationimageResponseCompoun>();
-        aObjCommunicationexternalimage = new List<OASCommunicationexternalimageRespons>();
     }
 
     public static OASCommunicationResponseCompound getExample() {
         OASCommunicationResponseCompound communicationResponseCompound = new OASCommunicationResponseCompound();
           communicationResponseCompound.pkiCommunicationID = 1;
-          communicationResponseCompound.eCommunicationEmailimportance = OASFieldECommunicationEmailimportanc.getExample();
+          communicationResponseCompound.eCommunicationImportance = OASFieldECommunicationImportance.getExample();
           communicationResponseCompound.eCommunicationType = OASFieldECommunicationType.getExample();
           communicationResponseCompound.sCommunicationSubject = 'This is an example of subject';
-          communicationResponseCompound.dtCommunicationSentdate = '2020-12-31 23:59:59';
+          communicationResponseCompound.eCommunicationDirection = OASComputedECommunicationDirection.getExample();
+          communicationResponseCompound.iCommunicationrecipientCount = 8;
           communicationResponseCompound.objContactFrom = OASCustomContactNameResponse.getExample();
+          communicationResponseCompound.objAudit = OASCommonAudit.getExample();
           communicationResponseCompound.aObjCommunicationattachment = new List<OASCommunicationattachmentResponseCo>{OASCommunicationattachmentResponseCo.getExample()};
           communicationResponseCompound.aObjCommunicationrecipient = new List<OASCommunicationrecipientResponseCom>{OASCommunicationrecipientResponseCom.getExample()};
           communicationResponseCompound.aObjCommunicationexternalrecipient = new List<OASCommunicationexternalrecipientRes>{OASCommunicationexternalrecipientRes.getExample()};
-          communicationResponseCompound.aObjCommunicationimage = new List<OASCommunicationimageResponseCompoun>{OASCommunicationimageResponseCompoun.getExample()};
-          communicationResponseCompound.aObjCommunicationexternalimage = new List<OASCommunicationexternalimageRespons>{OASCommunicationexternalimageRespons.getExample()};
         return communicationResponseCompound;
     }
 
@@ -169,16 +137,16 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
         if (obj instanceof OASCommunicationResponseCompound) {           
             OASCommunicationResponseCompound communicationResponseCompound = (OASCommunicationResponseCompound) obj;
             return this.pkiCommunicationID == communicationResponseCompound.pkiCommunicationID
-                && this.eCommunicationEmailimportance == communicationResponseCompound.eCommunicationEmailimportance
+                && this.eCommunicationImportance == communicationResponseCompound.eCommunicationImportance
                 && this.eCommunicationType == communicationResponseCompound.eCommunicationType
                 && this.sCommunicationSubject == communicationResponseCompound.sCommunicationSubject
-                && this.dtCommunicationSentdate == communicationResponseCompound.dtCommunicationSentdate
+                && this.eCommunicationDirection == communicationResponseCompound.eCommunicationDirection
+                && this.iCommunicationrecipientCount == communicationResponseCompound.iCommunicationrecipientCount
                 && this.objContactFrom == communicationResponseCompound.objContactFrom
+                && this.objAudit == communicationResponseCompound.objAudit
                 && this.aObjCommunicationattachment == communicationResponseCompound.aObjCommunicationattachment
                 && this.aObjCommunicationrecipient == communicationResponseCompound.aObjCommunicationrecipient
-                && this.aObjCommunicationexternalrecipient == communicationResponseCompound.aObjCommunicationexternalrecipient
-                && this.aObjCommunicationimage == communicationResponseCompound.aObjCommunicationimage
-                && this.aObjCommunicationexternalimage == communicationResponseCompound.aObjCommunicationexternalimage;
+                && this.aObjCommunicationexternalrecipient == communicationResponseCompound.aObjCommunicationexternalrecipient;
         }
         return false;
     }
@@ -186,16 +154,16 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiCommunicationID == null ? 0 : System.hashCode(pkiCommunicationID));
-        hashCode = (17 * hashCode) + (eCommunicationEmailimportance == null ? 0 : System.hashCode(eCommunicationEmailimportance));
+        hashCode = (17 * hashCode) + (eCommunicationImportance == null ? 0 : System.hashCode(eCommunicationImportance));
         hashCode = (17 * hashCode) + (eCommunicationType == null ? 0 : System.hashCode(eCommunicationType));
         hashCode = (17 * hashCode) + (sCommunicationSubject == null ? 0 : System.hashCode(sCommunicationSubject));
-        hashCode = (17 * hashCode) + (dtCommunicationSentdate == null ? 0 : System.hashCode(dtCommunicationSentdate));
+        hashCode = (17 * hashCode) + (eCommunicationDirection == null ? 0 : System.hashCode(eCommunicationDirection));
+        hashCode = (17 * hashCode) + (iCommunicationrecipientCount == null ? 0 : System.hashCode(iCommunicationrecipientCount));
         hashCode = (17 * hashCode) + (objContactFrom == null ? 0 : System.hashCode(objContactFrom));
+        hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         hashCode = (17 * hashCode) + (aObjCommunicationattachment == null ? 0 : System.hashCode(aObjCommunicationattachment));
         hashCode = (17 * hashCode) + (aObjCommunicationrecipient == null ? 0 : System.hashCode(aObjCommunicationrecipient));
         hashCode = (17 * hashCode) + (aObjCommunicationexternalrecipient == null ? 0 : System.hashCode(aObjCommunicationexternalrecipient));
-        hashCode = (17 * hashCode) + (aObjCommunicationimage == null ? 0 : System.hashCode(aObjCommunicationimage));
-        hashCode = (17 * hashCode) + (aObjCommunicationexternalimage == null ? 0 : System.hashCode(aObjCommunicationexternalimage));
         return hashCode;
     }
 }

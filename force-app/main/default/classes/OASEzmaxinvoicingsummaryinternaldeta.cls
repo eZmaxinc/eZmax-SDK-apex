@@ -84,6 +84,12 @@ public class OASEzmaxinvoicingsummaryinternaldeta implements OASEzmaxinvoicingsu
      */
     public Boolean bEzmaxinvoicingsummaryinternaldetailAdjustment { get; set; }
 
+    /**
+     * The help message of the Ezmaxproduct in the language of the requester
+     * @return tEzmaxproductHelpX
+     */
+    public String tEzmaxproductHelpX { get; set; }
+
     public static OASEzmaxinvoicingsummaryinternaldeta getExample() {
         OASEzmaxinvoicingsummaryinternaldeta ezmaxinvoicingsummaryinternaldetailResponseCompound = new OASEzmaxinvoicingsummaryinternaldeta();
           ezmaxinvoicingsummaryinternaldetailResponseCompound.pkiEzmaxinvoicingsummaryinternaldetailID = 73;
@@ -97,6 +103,7 @@ public class OASEzmaxinvoicingsummaryinternaldeta implements OASEzmaxinvoicingsu
           ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailRebate = '560.81';
           ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailTotal = '510.77';
           ezmaxinvoicingsummaryinternaldetailResponseCompound.bEzmaxinvoicingsummaryinternaldetailAdjustment = true;
+          ezmaxinvoicingsummaryinternaldetailResponseCompound.tEzmaxproductHelpX = 'This is an exemple of help message';
         return ezmaxinvoicingsummaryinternaldetailResponseCompound;
     }
 
@@ -113,7 +120,8 @@ public class OASEzmaxinvoicingsummaryinternaldeta implements OASEzmaxinvoicingsu
                 && this.dEzmaxinvoicingsummaryinternaldetailSubtotal == ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailSubtotal
                 && this.dEzmaxinvoicingsummaryinternaldetailRebate == ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailRebate
                 && this.dEzmaxinvoicingsummaryinternaldetailTotal == ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailTotal
-                && this.bEzmaxinvoicingsummaryinternaldetailAdjustment == ezmaxinvoicingsummaryinternaldetailResponseCompound.bEzmaxinvoicingsummaryinternaldetailAdjustment;
+                && this.bEzmaxinvoicingsummaryinternaldetailAdjustment == ezmaxinvoicingsummaryinternaldetailResponseCompound.bEzmaxinvoicingsummaryinternaldetailAdjustment
+                && this.tEzmaxproductHelpX == ezmaxinvoicingsummaryinternaldetailResponseCompound.tEzmaxproductHelpX;
         }
         return false;
     }
@@ -131,6 +139,7 @@ public class OASEzmaxinvoicingsummaryinternaldeta implements OASEzmaxinvoicingsu
         hashCode = (17 * hashCode) + (dEzmaxinvoicingsummaryinternaldetailRebate == null ? 0 : System.hashCode(dEzmaxinvoicingsummaryinternaldetailRebate));
         hashCode = (17 * hashCode) + (dEzmaxinvoicingsummaryinternaldetailTotal == null ? 0 : System.hashCode(dEzmaxinvoicingsummaryinternaldetailTotal));
         hashCode = (17 * hashCode) + (bEzmaxinvoicingsummaryinternaldetailAdjustment == null ? 0 : System.hashCode(bEzmaxinvoicingsummaryinternaldetailAdjustment));
+        hashCode = (17 * hashCode) + (tEzmaxproductHelpX == null ? 0 : System.hashCode(tEzmaxproductHelpX));
         return hashCode;
     }
 }

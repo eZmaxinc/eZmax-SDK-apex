@@ -21,36 +21,36 @@ public class OASCommunicationexternalrecipientRes implements OASCommunicationext
     public Integer pkiCommunicationexternalrecipientID { get; set; }
 
     /**
-     * The email address.
-     * @return sEmailAddress
-     */
-    public String sEmailAddress { get; set; }
-
-    /**
-     * Get objPhoneSms
-     * @return objPhoneSms
-     */
-    public OASPhoneResponseCompound objPhoneSms { get; set; }
-
-    /**
      * Get eCommunicationexternalrecipientType
      * @return eCommunicationexternalrecipientType
      */
     public OASFieldECommunicationexternalrecipi eCommunicationexternalrecipientType { get; set; }
 
     /**
-     * The Name of the Communicationexternalrecipient
-     * @return sCommunicationexternalrecipientName
+     * Get objDescriptionstatic
+     * @return objDescriptionstatic
      */
-    public String sCommunicationexternalrecipientName { get; set; }
+    public OASDescriptionstaticResponseCompound objDescriptionstatic { get; set; }
+
+    /**
+     * Get objEmailstatic
+     * @return objEmailstatic
+     */
+    public OASEmailstaticResponseCompound objEmailstatic { get; set; }
+
+    /**
+     * Get objPhonestatic
+     * @return objPhonestatic
+     */
+    public OASPhonestaticResponseCompound objPhonestatic { get; set; }
 
     public static OASCommunicationexternalrecipientRes getExample() {
         OASCommunicationexternalrecipientRes communicationexternalrecipientResponseCompound = new OASCommunicationexternalrecipientRes();
           communicationexternalrecipientResponseCompound.pkiCommunicationexternalrecipientID = 9;
-          communicationexternalrecipientResponseCompound.sEmailAddress = 'email@example.com';
-          communicationexternalrecipientResponseCompound.objPhoneSms = OASPhoneResponseCompound.getExample();
           communicationexternalrecipientResponseCompound.eCommunicationexternalrecipientType = OASFieldECommunicationexternalrecipi.getExample();
-          communicationexternalrecipientResponseCompound.sCommunicationexternalrecipientName = 'John Doe';
+          communicationexternalrecipientResponseCompound.objDescriptionstatic = OASDescriptionstaticResponseCompound.getExample();
+          communicationexternalrecipientResponseCompound.objEmailstatic = OASEmailstaticResponseCompound.getExample();
+          communicationexternalrecipientResponseCompound.objPhonestatic = OASPhonestaticResponseCompound.getExample();
         return communicationexternalrecipientResponseCompound;
     }
 
@@ -58,10 +58,10 @@ public class OASCommunicationexternalrecipientRes implements OASCommunicationext
         if (obj instanceof OASCommunicationexternalrecipientRes) {           
             OASCommunicationexternalrecipientRes communicationexternalrecipientResponseCompound = (OASCommunicationexternalrecipientRes) obj;
             return this.pkiCommunicationexternalrecipientID == communicationexternalrecipientResponseCompound.pkiCommunicationexternalrecipientID
-                && this.sEmailAddress == communicationexternalrecipientResponseCompound.sEmailAddress
-                && this.objPhoneSms == communicationexternalrecipientResponseCompound.objPhoneSms
                 && this.eCommunicationexternalrecipientType == communicationexternalrecipientResponseCompound.eCommunicationexternalrecipientType
-                && this.sCommunicationexternalrecipientName == communicationexternalrecipientResponseCompound.sCommunicationexternalrecipientName;
+                && this.objDescriptionstatic == communicationexternalrecipientResponseCompound.objDescriptionstatic
+                && this.objEmailstatic == communicationexternalrecipientResponseCompound.objEmailstatic
+                && this.objPhonestatic == communicationexternalrecipientResponseCompound.objPhonestatic;
         }
         return false;
     }
@@ -69,10 +69,10 @@ public class OASCommunicationexternalrecipientRes implements OASCommunicationext
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiCommunicationexternalrecipientID == null ? 0 : System.hashCode(pkiCommunicationexternalrecipientID));
-        hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
-        hashCode = (17 * hashCode) + (objPhoneSms == null ? 0 : System.hashCode(objPhoneSms));
         hashCode = (17 * hashCode) + (eCommunicationexternalrecipientType == null ? 0 : System.hashCode(eCommunicationexternalrecipientType));
-        hashCode = (17 * hashCode) + (sCommunicationexternalrecipientName == null ? 0 : System.hashCode(sCommunicationexternalrecipientName));
+        hashCode = (17 * hashCode) + (objDescriptionstatic == null ? 0 : System.hashCode(objDescriptionstatic));
+        hashCode = (17 * hashCode) + (objEmailstatic == null ? 0 : System.hashCode(objEmailstatic));
+        hashCode = (17 * hashCode) + (objPhonestatic == null ? 0 : System.hashCode(objPhonestatic));
         return hashCode;
     }
 }

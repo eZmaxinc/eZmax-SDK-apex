@@ -22,10 +22,10 @@ public class OASCommunicationResponse {
     public Integer pkiCommunicationID { get; set; }
 
     /**
-     * Get eCommunicationEmailimportance
-     * @return eCommunicationEmailimportance
+     * Get eCommunicationImportance
+     * @return eCommunicationImportance
      */
-    public OASFieldECommunicationEmailimportanc eCommunicationEmailimportance { get; set; }
+    public OASFieldECommunicationImportance eCommunicationImportance { get; set; }
 
     /**
      * Get eCommunicationType
@@ -34,16 +34,22 @@ public class OASCommunicationResponse {
     public OASFieldECommunicationType eCommunicationType { get; set; }
 
     /**
-     * The Subject of the Communication
+     * The subject of the Communication
      * @return sCommunicationSubject
      */
     public String sCommunicationSubject { get; set; }
 
     /**
-     * The send date and time at which the Communication was sent.
-     * @return dtCommunicationSentdate
+     * Get eCommunicationDirection
+     * @return eCommunicationDirection
      */
-    public String dtCommunicationSentdate { get; set; }
+    public OASComputedECommunicationDirection eCommunicationDirection { get; set; }
+
+    /**
+     * The count of Communicationrecipient
+     * @return iCommunicationrecipientCount
+     */
+    public Integer iCommunicationrecipientCount { get; set; }
 
     /**
      * Get objContactFrom
@@ -51,14 +57,22 @@ public class OASCommunicationResponse {
      */
     public OASCustomContactNameResponse objContactFrom { get; set; }
 
+    /**
+     * Get objAudit
+     * @return objAudit
+     */
+    public OASCommonAudit objAudit { get; set; }
+
     public static OASCommunicationResponse getExample() {
         OASCommunicationResponse communicationResponse = new OASCommunicationResponse();
           communicationResponse.pkiCommunicationID = 1;
-          communicationResponse.eCommunicationEmailimportance = OASFieldECommunicationEmailimportanc.getExample();
+          communicationResponse.eCommunicationImportance = OASFieldECommunicationImportance.getExample();
           communicationResponse.eCommunicationType = OASFieldECommunicationType.getExample();
           communicationResponse.sCommunicationSubject = 'This is an example of subject';
-          communicationResponse.dtCommunicationSentdate = '2020-12-31 23:59:59';
+          communicationResponse.eCommunicationDirection = OASComputedECommunicationDirection.getExample();
+          communicationResponse.iCommunicationrecipientCount = 8;
           communicationResponse.objContactFrom = OASCustomContactNameResponse.getExample();
+          communicationResponse.objAudit = OASCommonAudit.getExample();
         return communicationResponse;
     }
 
@@ -66,11 +80,13 @@ public class OASCommunicationResponse {
         if (obj instanceof OASCommunicationResponse) {           
             OASCommunicationResponse communicationResponse = (OASCommunicationResponse) obj;
             return this.pkiCommunicationID == communicationResponse.pkiCommunicationID
-                && this.eCommunicationEmailimportance == communicationResponse.eCommunicationEmailimportance
+                && this.eCommunicationImportance == communicationResponse.eCommunicationImportance
                 && this.eCommunicationType == communicationResponse.eCommunicationType
                 && this.sCommunicationSubject == communicationResponse.sCommunicationSubject
-                && this.dtCommunicationSentdate == communicationResponse.dtCommunicationSentdate
-                && this.objContactFrom == communicationResponse.objContactFrom;
+                && this.eCommunicationDirection == communicationResponse.eCommunicationDirection
+                && this.iCommunicationrecipientCount == communicationResponse.iCommunicationrecipientCount
+                && this.objContactFrom == communicationResponse.objContactFrom
+                && this.objAudit == communicationResponse.objAudit;
         }
         return false;
     }
@@ -78,11 +94,13 @@ public class OASCommunicationResponse {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiCommunicationID == null ? 0 : System.hashCode(pkiCommunicationID));
-        hashCode = (17 * hashCode) + (eCommunicationEmailimportance == null ? 0 : System.hashCode(eCommunicationEmailimportance));
+        hashCode = (17 * hashCode) + (eCommunicationImportance == null ? 0 : System.hashCode(eCommunicationImportance));
         hashCode = (17 * hashCode) + (eCommunicationType == null ? 0 : System.hashCode(eCommunicationType));
         hashCode = (17 * hashCode) + (sCommunicationSubject == null ? 0 : System.hashCode(sCommunicationSubject));
-        hashCode = (17 * hashCode) + (dtCommunicationSentdate == null ? 0 : System.hashCode(dtCommunicationSentdate));
+        hashCode = (17 * hashCode) + (eCommunicationDirection == null ? 0 : System.hashCode(eCommunicationDirection));
+        hashCode = (17 * hashCode) + (iCommunicationrecipientCount == null ? 0 : System.hashCode(iCommunicationrecipientCount));
         hashCode = (17 * hashCode) + (objContactFrom == null ? 0 : System.hashCode(objContactFrom));
+        hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         return hashCode;
     }
 }

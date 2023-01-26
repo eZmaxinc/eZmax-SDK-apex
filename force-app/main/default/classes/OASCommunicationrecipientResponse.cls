@@ -22,6 +22,12 @@ public class OASCommunicationrecipientResponse {
     public Integer pkiCommunicationrecipientID { get; set; }
 
     /**
+     * Get eCommunicationrecipientObjecttype
+     * @return eCommunicationrecipientObjecttype
+     */
+    public OASFieldECommunicationrecipientObjec eCommunicationrecipientObjecttype { get; set; }
+
+    /**
      * The unique ID of the Agent.
      * minimum: 0
      * @return fkiAgentID
@@ -78,18 +84,6 @@ public class OASCommunicationrecipientResponse {
     public Integer fkiUserID { get; set; }
 
     /**
-     * The email address.
-     * @return sEmailAddress
-     */
-    public String sEmailAddress { get; set; }
-
-    /**
-     * Get eCommunicationrecipientType
-     * @return eCommunicationrecipientType
-     */
-    public OASFieldECommunicationrecipientType eCommunicationrecipientType { get; set; }
-
-    /**
      * The unique ID of the Agentincorporation.
      * minimum: 0
      * @return fkiAgentincorporationID
@@ -139,14 +133,33 @@ public class OASCommunicationrecipientResponse {
     public Integer fkiSupplierID { get; set; }
 
     /**
-     * Get objPhoneSms
-     * @return objPhoneSms
+     * Get eCommunicationrecipientType
+     * @return eCommunicationrecipientType
      */
-    public OASPhoneResponseCompound objPhoneSms { get; set; }
+    public OASFieldECommunicationrecipientType eCommunicationrecipientType { get; set; }
+
+    /**
+     * Get objDescriptionstatic
+     * @return objDescriptionstatic
+     */
+    public OASDescriptionstaticResponseCompound objDescriptionstatic { get; set; }
+
+    /**
+     * Get objEmailstatic
+     * @return objEmailstatic
+     */
+    public OASEmailstaticResponseCompound objEmailstatic { get; set; }
+
+    /**
+     * Get objPhonestatic
+     * @return objPhonestatic
+     */
+    public OASPhonestaticResponseCompound objPhonestatic { get; set; }
 
     public static OASCommunicationrecipientResponse getExample() {
         OASCommunicationrecipientResponse communicationrecipientResponse = new OASCommunicationrecipientResponse();
           communicationrecipientResponse.pkiCommunicationrecipientID = 1;
+          communicationrecipientResponse.eCommunicationrecipientObjecttype = OASFieldECommunicationrecipientObjec.getExample();
           communicationrecipientResponse.fkiAgentID = 1;
           communicationrecipientResponse.fkiBrokerID = 26;
           communicationrecipientResponse.fkiContactID = 21;
@@ -155,8 +168,6 @@ public class OASCommunicationrecipientResponse {
           communicationrecipientResponse.fkiEzsignsignerID = 89;
           communicationrecipientResponse.fkiFranchiseofficeID = 50;
           communicationrecipientResponse.fkiUserID = 70;
-          communicationrecipientResponse.sEmailAddress = 'email@example.com';
-          communicationrecipientResponse.eCommunicationrecipientType = OASFieldECommunicationrecipientType.getExample();
           communicationrecipientResponse.fkiAgentincorporationID = 1;
           communicationrecipientResponse.fkiAssistantID = 1;
           communicationrecipientResponse.fkiExternalbrokerID = 1;
@@ -164,7 +175,10 @@ public class OASCommunicationrecipientResponse {
           communicationrecipientResponse.fkiNotaryID = 1;
           communicationrecipientResponse.fkiRewardmemberID = 1;
           communicationrecipientResponse.fkiSupplierID = 1;
-          communicationrecipientResponse.objPhoneSms = OASPhoneResponseCompound.getExample();
+          communicationrecipientResponse.eCommunicationrecipientType = OASFieldECommunicationrecipientType.getExample();
+          communicationrecipientResponse.objDescriptionstatic = OASDescriptionstaticResponseCompound.getExample();
+          communicationrecipientResponse.objEmailstatic = OASEmailstaticResponseCompound.getExample();
+          communicationrecipientResponse.objPhonestatic = OASPhonestaticResponseCompound.getExample();
         return communicationrecipientResponse;
     }
 
@@ -172,6 +186,7 @@ public class OASCommunicationrecipientResponse {
         if (obj instanceof OASCommunicationrecipientResponse) {           
             OASCommunicationrecipientResponse communicationrecipientResponse = (OASCommunicationrecipientResponse) obj;
             return this.pkiCommunicationrecipientID == communicationrecipientResponse.pkiCommunicationrecipientID
+                && this.eCommunicationrecipientObjecttype == communicationrecipientResponse.eCommunicationrecipientObjecttype
                 && this.fkiAgentID == communicationrecipientResponse.fkiAgentID
                 && this.fkiBrokerID == communicationrecipientResponse.fkiBrokerID
                 && this.fkiContactID == communicationrecipientResponse.fkiContactID
@@ -180,8 +195,6 @@ public class OASCommunicationrecipientResponse {
                 && this.fkiEzsignsignerID == communicationrecipientResponse.fkiEzsignsignerID
                 && this.fkiFranchiseofficeID == communicationrecipientResponse.fkiFranchiseofficeID
                 && this.fkiUserID == communicationrecipientResponse.fkiUserID
-                && this.sEmailAddress == communicationrecipientResponse.sEmailAddress
-                && this.eCommunicationrecipientType == communicationrecipientResponse.eCommunicationrecipientType
                 && this.fkiAgentincorporationID == communicationrecipientResponse.fkiAgentincorporationID
                 && this.fkiAssistantID == communicationrecipientResponse.fkiAssistantID
                 && this.fkiExternalbrokerID == communicationrecipientResponse.fkiExternalbrokerID
@@ -189,7 +202,10 @@ public class OASCommunicationrecipientResponse {
                 && this.fkiNotaryID == communicationrecipientResponse.fkiNotaryID
                 && this.fkiRewardmemberID == communicationrecipientResponse.fkiRewardmemberID
                 && this.fkiSupplierID == communicationrecipientResponse.fkiSupplierID
-                && this.objPhoneSms == communicationrecipientResponse.objPhoneSms;
+                && this.eCommunicationrecipientType == communicationrecipientResponse.eCommunicationrecipientType
+                && this.objDescriptionstatic == communicationrecipientResponse.objDescriptionstatic
+                && this.objEmailstatic == communicationrecipientResponse.objEmailstatic
+                && this.objPhonestatic == communicationrecipientResponse.objPhonestatic;
         }
         return false;
     }
@@ -197,6 +213,7 @@ public class OASCommunicationrecipientResponse {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiCommunicationrecipientID == null ? 0 : System.hashCode(pkiCommunicationrecipientID));
+        hashCode = (17 * hashCode) + (eCommunicationrecipientObjecttype == null ? 0 : System.hashCode(eCommunicationrecipientObjecttype));
         hashCode = (17 * hashCode) + (fkiAgentID == null ? 0 : System.hashCode(fkiAgentID));
         hashCode = (17 * hashCode) + (fkiBrokerID == null ? 0 : System.hashCode(fkiBrokerID));
         hashCode = (17 * hashCode) + (fkiContactID == null ? 0 : System.hashCode(fkiContactID));
@@ -205,8 +222,6 @@ public class OASCommunicationrecipientResponse {
         hashCode = (17 * hashCode) + (fkiEzsignsignerID == null ? 0 : System.hashCode(fkiEzsignsignerID));
         hashCode = (17 * hashCode) + (fkiFranchiseofficeID == null ? 0 : System.hashCode(fkiFranchiseofficeID));
         hashCode = (17 * hashCode) + (fkiUserID == null ? 0 : System.hashCode(fkiUserID));
-        hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
-        hashCode = (17 * hashCode) + (eCommunicationrecipientType == null ? 0 : System.hashCode(eCommunicationrecipientType));
         hashCode = (17 * hashCode) + (fkiAgentincorporationID == null ? 0 : System.hashCode(fkiAgentincorporationID));
         hashCode = (17 * hashCode) + (fkiAssistantID == null ? 0 : System.hashCode(fkiAssistantID));
         hashCode = (17 * hashCode) + (fkiExternalbrokerID == null ? 0 : System.hashCode(fkiExternalbrokerID));
@@ -214,7 +229,10 @@ public class OASCommunicationrecipientResponse {
         hashCode = (17 * hashCode) + (fkiNotaryID == null ? 0 : System.hashCode(fkiNotaryID));
         hashCode = (17 * hashCode) + (fkiRewardmemberID == null ? 0 : System.hashCode(fkiRewardmemberID));
         hashCode = (17 * hashCode) + (fkiSupplierID == null ? 0 : System.hashCode(fkiSupplierID));
-        hashCode = (17 * hashCode) + (objPhoneSms == null ? 0 : System.hashCode(objPhoneSms));
+        hashCode = (17 * hashCode) + (eCommunicationrecipientType == null ? 0 : System.hashCode(eCommunicationrecipientType));
+        hashCode = (17 * hashCode) + (objDescriptionstatic == null ? 0 : System.hashCode(objDescriptionstatic));
+        hashCode = (17 * hashCode) + (objEmailstatic == null ? 0 : System.hashCode(objEmailstatic));
+        hashCode = (17 * hashCode) + (objPhonestatic == null ? 0 : System.hashCode(objPhonestatic));
         return hashCode;
     }
 }

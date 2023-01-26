@@ -46,7 +46,7 @@ public class OASCustomEzmaxinvoicingEzsignfolderR {
     public Boolean bEzsignfolderPaymentused { get; set; }
 
     /**
-     * Get bEzsignfolderAllowed
+     * Whether you have access to the Ezsignfolder or not
      * @return bEzsignfolderAllowed
      */
     public Boolean bEzsignfolderAllowed { get; set; }

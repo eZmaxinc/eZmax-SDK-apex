@@ -11,11 +11,11 @@
  */
 
 /**
- * Payload for GET /1/module/communication/getCount
+ * Payload for GET /1/module/communication/getCommunicationCount
  */
 public class OASCommunicationGetCountV1ResponseMP {
     /**
-     * The number of total signatures in the Ezsigntemplate.
+     * The count of Communication.
      * @return iCommunicationCount
      */
     public Integer iCommunicationCount { get; set; }

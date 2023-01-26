@@ -76,8 +76,6 @@ private class OASCommunicationResponseCompoundAllOTest {
         System.assertEquals('aObjCommunicationattachment', x-property-mappings.get('a_objCommunicationattachment'));
         System.assertEquals('aObjCommunicationrecipient', x-property-mappings.get('a_objCommunicationrecipient'));
         System.assertEquals('aObjCommunicationexternalrecipient', x-property-mappings.get('a_objCommunicationexternalrecipient'));
-        System.assertEquals('aObjCommunicationimage', x-property-mappings.get('a_objCommunicationimage'));
-        System.assertEquals('aObjCommunicationexternalimage', x-property-mappings.get('a_objCommunicationexternalimage'));
     }
 
     @isTest
@@ -86,7 +84,5 @@ private class OASCommunicationResponseCompoundAllOTest {
         System.assertEquals(new List<OASCommunicationattachmentResponseCo>(), communicationResponseCompoundAllOf.aObjCommunicationattachment);
         System.assertEquals(new List<OASCommunicationrecipientResponseCom>(), communicationResponseCompoundAllOf.aObjCommunicationrecipient);
         System.assertEquals(new List<OASCommunicationexternalrecipientRes>(), communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient);
-        System.assertEquals(new List<OASCommunicationimageResponseCompoun>(), communicationResponseCompoundAllOf.aObjCommunicationimage);
-        System.assertEquals(new List<OASCommunicationexternalimageRespons>(), communicationResponseCompoundAllOf.aObjCommunicationexternalimage);
     }
 }

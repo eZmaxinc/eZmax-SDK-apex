@@ -76,8 +76,6 @@ private class OASCommunicationResponseCompoundTest {
         System.assertEquals('aObjCommunicationattachment', x-property-mappings.get('a_objCommunicationattachment'));
         System.assertEquals('aObjCommunicationrecipient', x-property-mappings.get('a_objCommunicationrecipient'));
         System.assertEquals('aObjCommunicationexternalrecipient', x-property-mappings.get('a_objCommunicationexternalrecipient'));
-        System.assertEquals('aObjCommunicationimage', x-property-mappings.get('a_objCommunicationimage'));
-        System.assertEquals('aObjCommunicationexternalimage', x-property-mappings.get('a_objCommunicationexternalimage'));
     }
 
     @isTest
@@ -86,13 +84,13 @@ private class OASCommunicationResponseCompoundTest {
         System.assertEquals(new List<OASCommunicationattachmentResponseCo>(), communicationResponseCompound.aObjCommunicationattachment);
         System.assertEquals(new List<OASCommunicationrecipientResponseCom>(), communicationResponseCompound.aObjCommunicationrecipient);
         System.assertEquals(new List<OASCommunicationexternalrecipientRes>(), communicationResponseCompound.aObjCommunicationexternalrecipient);
-        System.assertEquals(new List<OASCommunicationimageResponseCompoun>(), communicationResponseCompound.aObjCommunicationimage);
-        System.assertEquals(new List<OASCommunicationexternalimageRespons>(), communicationResponseCompound.aObjCommunicationexternalimage);
         System.assertEquals(null, communicationResponseCompound.pkiCommunicationID);
-        System.assertEquals(null, communicationResponseCompound.eCommunicationEmailimportance);
+        System.assertEquals(null, communicationResponseCompound.eCommunicationImportance);
         System.assertEquals(null, communicationResponseCompound.eCommunicationType);
         System.assertEquals(null, communicationResponseCompound.sCommunicationSubject);
-        System.assertEquals(null, communicationResponseCompound.dtCommunicationSentdate);
+        System.assertEquals(null, communicationResponseCompound.eCommunicationDirection);
+        System.assertEquals(null, communicationResponseCompound.iCommunicationrecipientCount);
         System.assertEquals(null, communicationResponseCompound.objContactFrom);
+        System.assertEquals(null, communicationResponseCompound.objAudit);
     }
 }

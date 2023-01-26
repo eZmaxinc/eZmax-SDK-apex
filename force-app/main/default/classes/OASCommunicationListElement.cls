@@ -22,10 +22,43 @@ public class OASCommunicationListElement {
     public Integer pkiCommunicationID { get; set; }
 
     /**
-     * Get eCommunicationEmailimportance
-     * @return eCommunicationEmailimportance
+     * The unique ID of the Ezsignfolder
+     * minimum: 0
+     * @return fkiEzsignfolderID
      */
-    public OASFieldECommunicationEmailimportanc eCommunicationEmailimportance { get; set; }
+    public Integer fkiEzsignfolderID { get; set; }
+
+    /**
+     * The unique ID of the Inscription.
+     * minimum: 0
+     * @return fkiInscriptionID
+     */
+    public Integer fkiInscriptionID { get; set; }
+
+    /**
+     * The unique ID of the Inscriptionnotauthenticated.
+     * minimum: 0
+     * @return fkiInscriptionnotauthenticatedID
+     */
+    public Integer fkiInscriptionnotauthenticatedID { get; set; }
+
+    /**
+     * The date and time at which the object was created
+     * @return dtCreatedDate
+     */
+    public String dtCreatedDate { get; set; }
+
+    /**
+     * Get eCommunicationDirection
+     * @return eCommunicationDirection
+     */
+    public OASComputedECommunicationDirection eCommunicationDirection { get; set; }
+
+    /**
+     * Get eCommunicationImportance
+     * @return eCommunicationImportance
+     */
+    public OASFieldECommunicationImportance eCommunicationImportance { get; set; }
 
     /**
      * Get eCommunicationType
@@ -34,31 +67,43 @@ public class OASCommunicationListElement {
     public OASFieldECommunicationType eCommunicationType { get; set; }
 
     /**
-     * The Subject of the Communication
+     * The count of Communicationrecipient
+     * @return iCommunicationrecipientCount
+     */
+    public Integer iCommunicationrecipientCount { get; set; }
+
+    /**
+     * The subject of the Communication
      * @return sCommunicationSubject
      */
     public String sCommunicationSubject { get; set; }
 
     /**
-     * The send date and time at which the Communication was sent.
-     * @return dtCommunicationSentdate
+     * The sender name of the Communication
+     * @return sCommunicationSender
      */
-    public String dtCommunicationSentdate { get; set; }
+    public String sCommunicationSender { get; set; }
 
     /**
-     * Get objContactFrom
-     * @return objContactFrom
+     * The recipients\' name of the Communication
+     * @return sCommunicationRecipient
      */
-    public OASCustomContactNameResponse objContactFrom { get; set; }
+    public String sCommunicationRecipient { get; set; }
 
     public static OASCommunicationListElement getExample() {
         OASCommunicationListElement communicationListElement = new OASCommunicationListElement();
           communicationListElement.pkiCommunicationID = 1;
-          communicationListElement.eCommunicationEmailimportance = OASFieldECommunicationEmailimportanc.getExample();
+          communicationListElement.fkiEzsignfolderID = 33;
+          communicationListElement.fkiInscriptionID = 17;
+          communicationListElement.fkiInscriptionnotauthenticatedID = 24;
+          communicationListElement.dtCreatedDate = '2020-12-31 23:59:59';
+          communicationListElement.eCommunicationDirection = OASComputedECommunicationDirection.getExample();
+          communicationListElement.eCommunicationImportance = OASFieldECommunicationImportance.getExample();
           communicationListElement.eCommunicationType = OASFieldECommunicationType.getExample();
+          communicationListElement.iCommunicationrecipientCount = 8;
           communicationListElement.sCommunicationSubject = 'This is an example of subject';
-          communicationListElement.dtCommunicationSentdate = '2020-12-31 23:59:59';
-          communicationListElement.objContactFrom = OASCustomContactNameResponse.getExample();
+          communicationListElement.sCommunicationSender = 'John Doe';
+          communicationListElement.sCommunicationRecipient = 'Jane Doe';
         return communicationListElement;
     }
 
@@ -66,11 +111,17 @@ public class OASCommunicationListElement {
         if (obj instanceof OASCommunicationListElement) {           
             OASCommunicationListElement communicationListElement = (OASCommunicationListElement) obj;
             return this.pkiCommunicationID == communicationListElement.pkiCommunicationID
-                && this.eCommunicationEmailimportance == communicationListElement.eCommunicationEmailimportance
+                && this.fkiEzsignfolderID == communicationListElement.fkiEzsignfolderID
+                && this.fkiInscriptionID == communicationListElement.fkiInscriptionID
+                && this.fkiInscriptionnotauthenticatedID == communicationListElement.fkiInscriptionnotauthenticatedID
+                && this.dtCreatedDate == communicationListElement.dtCreatedDate
+                && this.eCommunicationDirection == communicationListElement.eCommunicationDirection
+                && this.eCommunicationImportance == communicationListElement.eCommunicationImportance
                 && this.eCommunicationType == communicationListElement.eCommunicationType
+                && this.iCommunicationrecipientCount == communicationListElement.iCommunicationrecipientCount
                 && this.sCommunicationSubject == communicationListElement.sCommunicationSubject
-                && this.dtCommunicationSentdate == communicationListElement.dtCommunicationSentdate
-                && this.objContactFrom == communicationListElement.objContactFrom;
+                && this.sCommunicationSender == communicationListElement.sCommunicationSender
+                && this.sCommunicationRecipient == communicationListElement.sCommunicationRecipient;
         }
         return false;
     }
@@ -78,11 +129,17 @@ public class OASCommunicationListElement {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiCommunicationID == null ? 0 : System.hashCode(pkiCommunicationID));
-        hashCode = (17 * hashCode) + (eCommunicationEmailimportance == null ? 0 : System.hashCode(eCommunicationEmailimportance));
+        hashCode = (17 * hashCode) + (fkiEzsignfolderID == null ? 0 : System.hashCode(fkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (fkiInscriptionID == null ? 0 : System.hashCode(fkiInscriptionID));
+        hashCode = (17 * hashCode) + (fkiInscriptionnotauthenticatedID == null ? 0 : System.hashCode(fkiInscriptionnotauthenticatedID));
+        hashCode = (17 * hashCode) + (dtCreatedDate == null ? 0 : System.hashCode(dtCreatedDate));
+        hashCode = (17 * hashCode) + (eCommunicationDirection == null ? 0 : System.hashCode(eCommunicationDirection));
+        hashCode = (17 * hashCode) + (eCommunicationImportance == null ? 0 : System.hashCode(eCommunicationImportance));
         hashCode = (17 * hashCode) + (eCommunicationType == null ? 0 : System.hashCode(eCommunicationType));
+        hashCode = (17 * hashCode) + (iCommunicationrecipientCount == null ? 0 : System.hashCode(iCommunicationrecipientCount));
         hashCode = (17 * hashCode) + (sCommunicationSubject == null ? 0 : System.hashCode(sCommunicationSubject));
-        hashCode = (17 * hashCode) + (dtCommunicationSentdate == null ? 0 : System.hashCode(dtCommunicationSentdate));
-        hashCode = (17 * hashCode) + (objContactFrom == null ? 0 : System.hashCode(objContactFrom));
+        hashCode = (17 * hashCode) + (sCommunicationSender == null ? 0 : System.hashCode(sCommunicationSender));
+        hashCode = (17 * hashCode) + (sCommunicationRecipient == null ? 0 : System.hashCode(sCommunicationRecipient));
         return hashCode;
     }
 }

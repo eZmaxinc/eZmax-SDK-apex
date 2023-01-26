@@ -15,7 +15,7 @@
  */
 public class OASPeriodAutocompleteElementResponse {
     /**
-     * The period YYYYMM
+     * The YYYYMM of the Period
      * @return sPeriodYYYYMM
      */
     public String sPeriodYYYYMM { get; set; }

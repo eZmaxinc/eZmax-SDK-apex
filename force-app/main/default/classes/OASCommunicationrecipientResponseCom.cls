@@ -22,6 +22,12 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
     public Integer pkiCommunicationrecipientID { get; set; }
 
     /**
+     * Get eCommunicationrecipientObjecttype
+     * @return eCommunicationrecipientObjecttype
+     */
+    public OASFieldECommunicationrecipientObjec eCommunicationrecipientObjecttype { get; set; }
+
+    /**
      * The unique ID of the Agent.
      * minimum: 0
      * @return fkiAgentID
@@ -78,18 +84,6 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
     public Integer fkiUserID { get; set; }
 
     /**
-     * The email address.
-     * @return sEmailAddress
-     */
-    public String sEmailAddress { get; set; }
-
-    /**
-     * Get eCommunicationrecipientType
-     * @return eCommunicationrecipientType
-     */
-    public OASFieldECommunicationrecipientType eCommunicationrecipientType { get; set; }
-
-    /**
      * The unique ID of the Agentincorporation.
      * minimum: 0
      * @return fkiAgentincorporationID
@@ -139,14 +133,33 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
     public Integer fkiSupplierID { get; set; }
 
     /**
-     * Get objPhoneSms
-     * @return objPhoneSms
+     * Get eCommunicationrecipientType
+     * @return eCommunicationrecipientType
      */
-    public OASPhoneResponseCompound objPhoneSms { get; set; }
+    public OASFieldECommunicationrecipientType eCommunicationrecipientType { get; set; }
+
+    /**
+     * Get objDescriptionstatic
+     * @return objDescriptionstatic
+     */
+    public OASDescriptionstaticResponseCompound objDescriptionstatic { get; set; }
+
+    /**
+     * Get objEmailstatic
+     * @return objEmailstatic
+     */
+    public OASEmailstaticResponseCompound objEmailstatic { get; set; }
+
+    /**
+     * Get objPhonestatic
+     * @return objPhonestatic
+     */
+    public OASPhonestaticResponseCompound objPhonestatic { get; set; }
 
     public static OASCommunicationrecipientResponseCom getExample() {
         OASCommunicationrecipientResponseCom communicationrecipientResponseCompound = new OASCommunicationrecipientResponseCom();
           communicationrecipientResponseCompound.pkiCommunicationrecipientID = 1;
+          communicationrecipientResponseCompound.eCommunicationrecipientObjecttype = OASFieldECommunicationrecipientObjec.getExample();
           communicationrecipientResponseCompound.fkiAgentID = 1;
           communicationrecipientResponseCompound.fkiBrokerID = 26;
           communicationrecipientResponseCompound.fkiContactID = 21;
@@ -155,8 +168,6 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
           communicationrecipientResponseCompound.fkiEzsignsignerID = 89;
           communicationrecipientResponseCompound.fkiFranchiseofficeID = 50;
           communicationrecipientResponseCompound.fkiUserID = 70;
-          communicationrecipientResponseCompound.sEmailAddress = 'email@example.com';
-          communicationrecipientResponseCompound.eCommunicationrecipientType = OASFieldECommunicationrecipientType.getExample();
           communicationrecipientResponseCompound.fkiAgentincorporationID = 1;
           communicationrecipientResponseCompound.fkiAssistantID = 1;
           communicationrecipientResponseCompound.fkiExternalbrokerID = 1;
@@ -164,7 +175,10 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
           communicationrecipientResponseCompound.fkiNotaryID = 1;
           communicationrecipientResponseCompound.fkiRewardmemberID = 1;
           communicationrecipientResponseCompound.fkiSupplierID = 1;
-          communicationrecipientResponseCompound.objPhoneSms = OASPhoneResponseCompound.getExample();
+          communicationrecipientResponseCompound.eCommunicationrecipientType = OASFieldECommunicationrecipientType.getExample();
+          communicationrecipientResponseCompound.objDescriptionstatic = OASDescriptionstaticResponseCompound.getExample();
+          communicationrecipientResponseCompound.objEmailstatic = OASEmailstaticResponseCompound.getExample();
+          communicationrecipientResponseCompound.objPhonestatic = OASPhonestaticResponseCompound.getExample();
         return communicationrecipientResponseCompound;
     }
 
@@ -172,6 +186,7 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
         if (obj instanceof OASCommunicationrecipientResponseCom) {           
             OASCommunicationrecipientResponseCom communicationrecipientResponseCompound = (OASCommunicationrecipientResponseCom) obj;
             return this.pkiCommunicationrecipientID == communicationrecipientResponseCompound.pkiCommunicationrecipientID
+                && this.eCommunicationrecipientObjecttype == communicationrecipientResponseCompound.eCommunicationrecipientObjecttype
                 && this.fkiAgentID == communicationrecipientResponseCompound.fkiAgentID
                 && this.fkiBrokerID == communicationrecipientResponseCompound.fkiBrokerID
                 && this.fkiContactID == communicationrecipientResponseCompound.fkiContactID
@@ -180,8 +195,6 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
                 && this.fkiEzsignsignerID == communicationrecipientResponseCompound.fkiEzsignsignerID
                 && this.fkiFranchiseofficeID == communicationrecipientResponseCompound.fkiFranchiseofficeID
                 && this.fkiUserID == communicationrecipientResponseCompound.fkiUserID
-                && this.sEmailAddress == communicationrecipientResponseCompound.sEmailAddress
-                && this.eCommunicationrecipientType == communicationrecipientResponseCompound.eCommunicationrecipientType
                 && this.fkiAgentincorporationID == communicationrecipientResponseCompound.fkiAgentincorporationID
                 && this.fkiAssistantID == communicationrecipientResponseCompound.fkiAssistantID
                 && this.fkiExternalbrokerID == communicationrecipientResponseCompound.fkiExternalbrokerID
@@ -189,7 +202,10 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
                 && this.fkiNotaryID == communicationrecipientResponseCompound.fkiNotaryID
                 && this.fkiRewardmemberID == communicationrecipientResponseCompound.fkiRewardmemberID
                 && this.fkiSupplierID == communicationrecipientResponseCompound.fkiSupplierID
-                && this.objPhoneSms == communicationrecipientResponseCompound.objPhoneSms;
+                && this.eCommunicationrecipientType == communicationrecipientResponseCompound.eCommunicationrecipientType
+                && this.objDescriptionstatic == communicationrecipientResponseCompound.objDescriptionstatic
+                && this.objEmailstatic == communicationrecipientResponseCompound.objEmailstatic
+                && this.objPhonestatic == communicationrecipientResponseCompound.objPhonestatic;
         }
         return false;
     }
@@ -197,6 +213,7 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiCommunicationrecipientID == null ? 0 : System.hashCode(pkiCommunicationrecipientID));
+        hashCode = (17 * hashCode) + (eCommunicationrecipientObjecttype == null ? 0 : System.hashCode(eCommunicationrecipientObjecttype));
         hashCode = (17 * hashCode) + (fkiAgentID == null ? 0 : System.hashCode(fkiAgentID));
         hashCode = (17 * hashCode) + (fkiBrokerID == null ? 0 : System.hashCode(fkiBrokerID));
         hashCode = (17 * hashCode) + (fkiContactID == null ? 0 : System.hashCode(fkiContactID));
@@ -205,8 +222,6 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
         hashCode = (17 * hashCode) + (fkiEzsignsignerID == null ? 0 : System.hashCode(fkiEzsignsignerID));
         hashCode = (17 * hashCode) + (fkiFranchiseofficeID == null ? 0 : System.hashCode(fkiFranchiseofficeID));
         hashCode = (17 * hashCode) + (fkiUserID == null ? 0 : System.hashCode(fkiUserID));
-        hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
-        hashCode = (17 * hashCode) + (eCommunicationrecipientType == null ? 0 : System.hashCode(eCommunicationrecipientType));
         hashCode = (17 * hashCode) + (fkiAgentincorporationID == null ? 0 : System.hashCode(fkiAgentincorporationID));
         hashCode = (17 * hashCode) + (fkiAssistantID == null ? 0 : System.hashCode(fkiAssistantID));
         hashCode = (17 * hashCode) + (fkiExternalbrokerID == null ? 0 : System.hashCode(fkiExternalbrokerID));
@@ -214,7 +229,10 @@ public class OASCommunicationrecipientResponseCom implements OASCommunicationrec
         hashCode = (17 * hashCode) + (fkiNotaryID == null ? 0 : System.hashCode(fkiNotaryID));
         hashCode = (17 * hashCode) + (fkiRewardmemberID == null ? 0 : System.hashCode(fkiRewardmemberID));
         hashCode = (17 * hashCode) + (fkiSupplierID == null ? 0 : System.hashCode(fkiSupplierID));
-        hashCode = (17 * hashCode) + (objPhoneSms == null ? 0 : System.hashCode(objPhoneSms));
+        hashCode = (17 * hashCode) + (eCommunicationrecipientType == null ? 0 : System.hashCode(eCommunicationrecipientType));
+        hashCode = (17 * hashCode) + (objDescriptionstatic == null ? 0 : System.hashCode(objDescriptionstatic));
+        hashCode = (17 * hashCode) + (objEmailstatic == null ? 0 : System.hashCode(objEmailstatic));
+        hashCode = (17 * hashCode) + (objPhonestatic == null ? 0 : System.hashCode(objPhonestatic));
         return hashCode;
     }
 }

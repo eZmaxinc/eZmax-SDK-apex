@@ -26,25 +26,25 @@ public class OASModuleCommunicationApi {
     }
 
     /**
-     * Get the number of communication
-     * Get the number of communication in specified module
-     * @param eCommunicationModule Specify the requested module (required)
+     * Retrieve Communication count
+     * 
+     * @param eCommunicationObjecttype The object type for the Communication (required)
      * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
      * @return OASCommunicationGetCountV1Response
      * @throws OAS.ApiException if fails to make API call
      */
     public OASCommunicationGetCountV1Response communicationGetCommunicationCountV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('eCommunicationModule'), 'eCommunicationModule');
+        client.assertNotNull(params.get('eCommunicationObjecttype'), 'eCommunicationObjecttype');
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
-        query.addAll(client.makeParam('eCommunicationModule', (String) params.get('eCommunicationModule')));
+        query.addAll(client.makeParam('eCommunicationObjecttype', (String) params.get('eCommunicationObjecttype')));
         query.addAll(client.makeParam('pkiEzsignfolderID', (Integer) params.get('pkiEzsignfolderID')));
 
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (OASCommunicationGetCountV1Response) client.invoke(
-            'GET', '/1/module/communication/getCommunicationCount', '',
+            'GET', '/1/module/communication/getCount', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -52,35 +52,6 @@ public class OASModuleCommunicationApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASCommunicationGetCountV1Response.class
-        );
-    }
-    /**
-     * Retrieve communication list
-     * Retrieve communication list
-     * @param eCommunicationModule Specify the requested module (required)
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (optional)
-     * @return OASCommunicationGetListV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASCommunicationGetListV1Response communicationGetCommunicationListV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('eCommunicationModule'), 'eCommunicationModule');
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('eCommunicationModule', (String) params.get('eCommunicationModule')));
-        query.addAll(client.makeParam('pkiEzsignfolderID', (Integer) params.get('pkiEzsignfolderID')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASCommunicationGetListV1Response) client.invoke(
-            'GET', '/1/module/communication/getCommunicationList', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASCommunicationGetListV1Response.class
         );
     }
 }

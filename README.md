@@ -67,8 +67,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OASGlobalCustomerApi* | [**globalCustomerGetEndpointV1**](OASGlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
-*OASModuleCommunicationApi* | [**communicationGetCommunicationCountV1**](OASModuleCommunicationApi.md#communicationGetCommunicationCountV1) | **GET** /1/module/communication/getCommunicationCount | Get the number of communication
-*OASModuleCommunicationApi* | [**communicationGetCommunicationListV1**](OASModuleCommunicationApi.md#communicationGetCommunicationListV1) | **GET** /1/module/communication/getCommunicationList | Retrieve communication list
+*OASModuleCommunicationApi* | [**communicationGetCommunicationCountV1**](OASModuleCommunicationApi.md#communicationGetCommunicationCountV1) | **GET** /1/module/communication/getCount | Retrieve Communication count
 *OASModuleEzsignApi* | [**ezsignSuggestSignersV1**](OASModuleEzsignApi.md#ezsignSuggestSignersV1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *OASModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](OASModuleEzsignApi.md#ezsignSuggestTemplatesV1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *OASModuleUserApi* | [**userCreateEzsignuserV1**](OASModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
@@ -84,6 +83,7 @@ Class | Method | HTTP request | Description
 *OASObjectBrandingApi* | [**brandingGetListV1**](OASObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *OASObjectBrandingApi* | [**brandingGetObjectV1**](OASObjectBrandingApi.md#brandingGetObjectV1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *OASObjectBrandingApi* | [**brandingGetObjectV2**](OASObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*OASObjectCommunicationApi* | [**communicationGetListV1**](OASObjectCommunicationApi.md#communicationGetListV1) | **GET** /1/object/communication/getList | Retrieve Communication list
 *OASObjectCommunicationApi* | [**communicationGetObjectV2**](OASObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV1**](OASObjectDepartmentApi.md#departmentGetAutocompleteV1) | **GET** /1/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV2**](OASObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
@@ -253,6 +253,12 @@ Class | Method | HTTP request | Description
 *OASObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](OASObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
 *OASObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](OASObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection\&#39;s Notificationtests
 *OASObjectNotificationtestApi* | [**notificationtestGetElementsV1**](OASObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest\&#39;s Elements
+*OASObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](OASObjectPaymenttermApi.md#paymenttermCreateObjectV1) | **POST** /1/object/paymentterm | Create a new Paymentterm
+*OASObjectPaymenttermApi* | [**paymenttermDeleteObjectV1**](OASObjectPaymenttermApi.md#paymenttermDeleteObjectV1) | **DELETE** /1/object/paymentterm/{pkiPaymenttermID} | Delete an existing Paymentterm
+*OASObjectPaymenttermApi* | [**paymenttermEditObjectV1**](OASObjectPaymenttermApi.md#paymenttermEditObjectV1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
+*OASObjectPaymenttermApi* | [**paymenttermGetAutocompleteV2**](OASObjectPaymenttermApi.md#paymenttermGetAutocompleteV2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
+*OASObjectPaymenttermApi* | [**paymenttermGetListV1**](OASObjectPaymenttermApi.md#paymenttermGetListV1) | **GET** /1/object/paymentterm/getList | Retrieve Paymentterm list
+*OASObjectPaymenttermApi* | [**paymenttermGetObjectV2**](OASObjectPaymenttermApi.md#paymenttermGetObjectV2) | **GET** /2/object/paymentterm/{pkiPaymenttermID} | Retrieve an existing Paymentterm
 *OASObjectPeriodApi* | [**periodGetAutocompleteV1**](OASObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *OASObjectPeriodApi* | [**periodGetAutocompleteV2**](OASObjectPeriodApi.md#periodGetAutocompleteV2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *OASObjectSecretquestionApi* | [**secretquestionGetAutocompleteV1**](OASObjectSecretquestionApi.md#secretquestionGetAutocompleteV1) | **GET** /1/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
@@ -359,12 +365,10 @@ Class | Method | HTTP request | Description
  - [OASCommunicationResponseCompoundAllO](OASCommunicationResponseCompoundAllO.md)
  - [OASCommunicationattachmentResponse](OASCommunicationattachmentResponse.md)
  - [OASCommunicationattachmentResponseCo](OASCommunicationattachmentResponseCo.md)
- - [OASCommunicationexternalimageRespons](OASCommunicationexternalimageRespons.md)
  - [OASCommunicationexternalrecipientRes](OASCommunicationexternalrecipientRes.md)
- - [OASCommunicationimageResponse](OASCommunicationimageResponse.md)
- - [OASCommunicationimageResponseCompoun](OASCommunicationimageResponseCompoun.md)
  - [OASCommunicationrecipientResponse](OASCommunicationrecipientResponse.md)
  - [OASCommunicationrecipientResponseCom](OASCommunicationrecipientResponseCom.md)
+ - [OASComputedECommunicationDirection](OASComputedECommunicationDirection.md)
  - [OASContactRequest](OASContactRequest.md)
  - [OASContactRequestCompound](OASContactRequestCompound.md)
  - [OASContactRequestCompoundAllOf](OASContactRequestCompoundAllOf.md)
@@ -404,8 +408,12 @@ Class | Method | HTTP request | Description
  - [OASDepartmentGetMembersV1Response](OASDepartmentGetMembersV1Response.md)
  - [OASDepartmentGetMembersV1ResponseAll](OASDepartmentGetMembersV1ResponseAll.md)
  - [OASDepartmentGetMembersV1ResponseMPa](OASDepartmentGetMembersV1ResponseMPa.md)
+ - [OASDescriptionstaticResponse](OASDescriptionstaticResponse.md)
+ - [OASDescriptionstaticResponseCompound](OASDescriptionstaticResponseCompound.md)
  - [OASEmailRequest](OASEmailRequest.md)
  - [OASEmailRequestCompound](OASEmailRequestCompound.md)
+ - [OASEmailstaticResponse](OASEmailstaticResponse.md)
+ - [OASEmailstaticResponseCompound](OASEmailstaticResponseCompound.md)
  - [OASEzmaxinvoicingAutocompleteElement](OASEzmaxinvoicingAutocompleteElement.md)
  - [OASEzmaxinvoicingGetAutocompleteV2Re](OASEzmaxinvoicingGetAutocompleteV2Re.md)
  - [OASEzmaxinvoicingGetObjectV1Response](OASEzmaxinvoicingGetObjectV1Response.md)
@@ -701,9 +709,10 @@ Class | Method | HTTP request | Description
  - [OASFieldEActivesessionUsertype](OASFieldEActivesessionUsertype.md)
  - [OASFieldEActivesessionWeekdaystart](OASFieldEActivesessionWeekdaystart.md)
  - [OASFieldEBrandingLogo](OASFieldEBrandingLogo.md)
- - [OASFieldECommunicationEmailimportanc](OASFieldECommunicationEmailimportanc.md)
+ - [OASFieldECommunicationImportance](OASFieldECommunicationImportance.md)
  - [OASFieldECommunicationType](OASFieldECommunicationType.md)
  - [OASFieldECommunicationexternalrecipi](OASFieldECommunicationexternalrecipi.md)
+ - [OASFieldECommunicationrecipientObjec](OASFieldECommunicationrecipientObjec.md)
  - [OASFieldECommunicationrecipientType](OASFieldECommunicationrecipientType.md)
  - [OASFieldEEzmaxinvoicingPaymenttype](OASFieldEEzmaxinvoicingPaymenttype.md)
  - [OASFieldEEzmaxinvoicingagentVariatio](OASFieldEEzmaxinvoicingagentVariatio.md)
@@ -752,19 +761,38 @@ Class | Method | HTTP request | Description
  - [OASMultilingualEzsignfoldertypeName](OASMultilingualEzsignfoldertypeName.md)
  - [OASMultilingualNotificationsubsectio](OASMultilingualNotificationsubsectio.md)
  - [OASMultilingualNotificationtestName](OASMultilingualNotificationtestName.md)
+ - [OASMultilingualPaymenttermDescriptio](OASMultilingualPaymenttermDescriptio.md)
  - [OASMultilingualVersionhistoryDetail](OASMultilingualVersionhistoryDetail.md)
  - [OASNotificationsectionGetNotificatio](OASNotificationsectionGetNotificatio.md)
  - [OASNotificationsubsectionResponse](OASNotificationsubsectionResponse.md)
  - [OASNotificationtestGetElementsV1Resp](OASNotificationtestGetElementsV1Resp.md)
  - [OASNotificationtestResponse](OASNotificationtestResponse.md)
+ - [OASPaymenttermAutocompleteElementRes](OASPaymenttermAutocompleteElementRes.md)
+ - [OASPaymenttermCreateObjectV1Request](OASPaymenttermCreateObjectV1Request.md)
+ - [OASPaymenttermCreateObjectV1Response](OASPaymenttermCreateObjectV1Response.md)
+ - [OASPaymenttermDeleteObjectV1Response](OASPaymenttermDeleteObjectV1Response.md)
+ - [OASPaymenttermEditObjectV1Request](OASPaymenttermEditObjectV1Request.md)
+ - [OASPaymenttermEditObjectV1Response](OASPaymenttermEditObjectV1Response.md)
+ - [OASPaymenttermGetAutocompleteV2Respo](OASPaymenttermGetAutocompleteV2Respo.md)
+ - [OASPaymenttermGetListV1Response](OASPaymenttermGetListV1Response.md)
+ - [OASPaymenttermGetListV1ResponseAllOf](OASPaymenttermGetListV1ResponseAllOf.md)
+ - [OASPaymenttermGetListV1ResponseMPayl](OASPaymenttermGetListV1ResponseMPayl.md)
+ - [OASPaymenttermGetObjectV2Response](OASPaymenttermGetObjectV2Response.md)
+ - [OASPaymenttermGetObjectV2ResponseAll](OASPaymenttermGetObjectV2ResponseAll.md)
+ - [OASPaymenttermGetObjectV2ResponseMPa](OASPaymenttermGetObjectV2ResponseMPa.md)
+ - [OASPaymenttermListElement](OASPaymenttermListElement.md)
+ - [OASPaymenttermRequest](OASPaymenttermRequest.md)
+ - [OASPaymenttermRequestCompound](OASPaymenttermRequestCompound.md)
+ - [OASPaymenttermResponse](OASPaymenttermResponse.md)
+ - [OASPaymenttermResponseCompound](OASPaymenttermResponseCompound.md)
  - [OASPeriodAutocompleteElementResponse](OASPeriodAutocompleteElementResponse.md)
  - [OASPeriodGetAutocompleteV2Response](OASPeriodGetAutocompleteV2Response.md)
  - [OASPeriodGetAutocompleteV2ResponseAl](OASPeriodGetAutocompleteV2ResponseAl.md)
  - [OASPeriodGetAutocompleteV2ResponseMP](OASPeriodGetAutocompleteV2ResponseMP.md)
  - [OASPhoneRequest](OASPhoneRequest.md)
  - [OASPhoneRequestCompound](OASPhoneRequestCompound.md)
- - [OASPhoneResponse](OASPhoneResponse.md)
- - [OASPhoneResponseCompound](OASPhoneResponseCompound.md)
+ - [OASPhonestaticResponse](OASPhonestaticResponse.md)
+ - [OASPhonestaticResponseCompound](OASPhonestaticResponseCompound.md)
  - [OASSecretquestionAutocompleteElement](OASSecretquestionAutocompleteElement.md)
  - [OASSecretquestionGetAutocompleteV2Re](OASSecretquestionGetAutocompleteV2Re.md)
  - [OASTaxassignmentAutocompleteElementR](OASTaxassignmentAutocompleteElementR.md)

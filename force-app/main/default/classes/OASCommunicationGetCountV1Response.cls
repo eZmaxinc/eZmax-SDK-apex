@@ -11,7 +11,7 @@
  */
 
 /**
- * Response for GET /1/module/communication/getCount
+ * Response for GET /1/module/communication/getCommunicationCount
  */
 public class OASCommunicationGetCountV1Response implements OASCommunicationGetCountV1ResponseAl, OASCommonResponse {
     /**

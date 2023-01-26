@@ -11,7 +11,7 @@
  */
 
 /**
- * The Type for the Communication
+ * The type of the Communication
  */
 public enum OASFieldECommunicationType {
     EMAIL,

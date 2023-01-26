@@ -11,7 +11,7 @@
  */
 
 /**
- * Payload for GET /1/module/communication/getList
+ * OASCommunicationGetListV1ResponseMPa
  */
 public class OASCommunicationGetListV1ResponseMPa implements OAS.MappedProperties {
     /**
@@ -33,15 +33,15 @@ public class OASCommunicationGetListV1ResponseMPa implements OAS.MappedPropertie
     }
 
     public static OASCommunicationGetListV1ResponseMPa getExample() {
-        OASCommunicationGetListV1ResponseMPa communicationGetListV1ResponseMPayload = new OASCommunicationGetListV1ResponseMPa();
-          communicationGetListV1ResponseMPayload.aObjCommunication = new List<OASCommunicationListElement>{OASCommunicationListElement.getExample()};
-        return communicationGetListV1ResponseMPayload;
+        OASCommunicationGetListV1ResponseMPa communicationGetListV1ResponseMPayloadAllOf = new OASCommunicationGetListV1ResponseMPa();
+          communicationGetListV1ResponseMPayloadAllOf.aObjCommunication = new List<OASCommunicationListElement>{OASCommunicationListElement.getExample()};
+        return communicationGetListV1ResponseMPayloadAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCommunicationGetListV1ResponseMPa) {           
-            OASCommunicationGetListV1ResponseMPa communicationGetListV1ResponseMPayload = (OASCommunicationGetListV1ResponseMPa) obj;
-            return this.aObjCommunication == communicationGetListV1ResponseMPayload.aObjCommunication;
+            OASCommunicationGetListV1ResponseMPa communicationGetListV1ResponseMPayloadAllOf = (OASCommunicationGetListV1ResponseMPa) obj;
+            return this.aObjCommunication == communicationGetListV1ResponseMPayloadAllOf.aObjCommunication;
         }
         return false;
     }

@@ -11,7 +11,7 @@
  */
 
 /**
- * The Type of Communicationexternalrecipient
+ * The type of Communicationexternalrecipient
  */
 public enum OASFieldECommunicationexternalrecipi {
     TO,
