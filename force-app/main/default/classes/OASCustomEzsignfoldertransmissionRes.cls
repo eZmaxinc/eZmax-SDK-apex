@@ -22,6 +22,12 @@ public class OASCustomEzsignfoldertransmissionRes implements OAS.MappedPropertie
     public Integer pkiEzsignfolderID { get; set; }
 
     /**
+     * The description of the Ezsignfolder
+     * @return sEzsignfolderDescription
+     */
+    public String sEzsignfolderDescription { get; set; }
+
+    /**
      * Get eEzsignfolderStep
      * @return eEzsignfolderStep
      */
@@ -60,6 +66,7 @@ public class OASCustomEzsignfoldertransmissionRes implements OAS.MappedPropertie
     public static OASCustomEzsignfoldertransmissionRes getExample() {
         OASCustomEzsignfoldertransmissionRes customEzsignfoldertransmissionResponse = new OASCustomEzsignfoldertransmissionRes();
           customEzsignfoldertransmissionResponse.pkiEzsignfolderID = 33;
+          customEzsignfoldertransmissionResponse.sEzsignfolderDescription = 'Test eZsign Folder';
           customEzsignfoldertransmissionResponse.eEzsignfolderStep = OASFieldEEzsignfolderStep.getExample();
           customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal = 4;
           customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned = 3;
@@ -71,6 +78,7 @@ public class OASCustomEzsignfoldertransmissionRes implements OAS.MappedPropertie
         if (obj instanceof OASCustomEzsignfoldertransmissionRes) {           
             OASCustomEzsignfoldertransmissionRes customEzsignfoldertransmissionResponse = (OASCustomEzsignfoldertransmissionRes) obj;
             return this.pkiEzsignfolderID == customEzsignfoldertransmissionResponse.pkiEzsignfolderID
+                && this.sEzsignfolderDescription == customEzsignfoldertransmissionResponse.sEzsignfolderDescription
                 && this.eEzsignfolderStep == customEzsignfoldertransmissionResponse.eEzsignfolderStep
                 && this.iEzsignfolderSignaturetotal == customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal
                 && this.iEzsignfolderSignaturesigned == customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned
@@ -82,6 +90,7 @@ public class OASCustomEzsignfoldertransmissionRes implements OAS.MappedPropertie
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiEzsignfolderID == null ? 0 : System.hashCode(pkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (sEzsignfolderDescription == null ? 0 : System.hashCode(sEzsignfolderDescription));
         hashCode = (17 * hashCode) + (eEzsignfolderStep == null ? 0 : System.hashCode(eEzsignfolderStep));
         hashCode = (17 * hashCode) + (iEzsignfolderSignaturetotal == null ? 0 : System.hashCode(iEzsignfolderSignaturetotal));
         hashCode = (17 * hashCode) + (iEzsignfolderSignaturesigned == null ? 0 : System.hashCode(iEzsignfolderSignaturesigned));

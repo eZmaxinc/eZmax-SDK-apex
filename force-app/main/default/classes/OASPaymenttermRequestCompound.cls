@@ -27,6 +27,20 @@ public class OASPaymenttermRequestCompound implements OASPaymenttermRequest {
     public String sPaymenttermCode { get; set; }
 
     /**
+     * Get ePaymenttermType
+     * @return ePaymenttermType
+     */
+    public OASFieldEPaymenttermType ePaymenttermType { get; set; }
+
+    /**
+     * The day of the Paymentterm
+     * minimum: 0
+     * maximum: 255
+     * @return iPaymenttermDay
+     */
+    public Integer iPaymenttermDay { get; set; }
+
+    /**
      * Get objPaymenttermDescription
      * @return objPaymenttermDescription
      */
@@ -42,6 +56,8 @@ public class OASPaymenttermRequestCompound implements OASPaymenttermRequest {
         OASPaymenttermRequestCompound paymenttermRequestCompound = new OASPaymenttermRequestCompound();
           paymenttermRequestCompound.pkiPaymenttermID = 46;
           paymenttermRequestCompound.sPaymenttermCode = '0030';
+          paymenttermRequestCompound.ePaymenttermType = OASFieldEPaymenttermType.getExample();
+          paymenttermRequestCompound.iPaymenttermDay = 5;
           paymenttermRequestCompound.objPaymenttermDescription = OASMultilingualPaymenttermDescriptio.getExample();
           paymenttermRequestCompound.bPaymenttermIsactive = true;
         return paymenttermRequestCompound;
@@ -52,6 +68,8 @@ public class OASPaymenttermRequestCompound implements OASPaymenttermRequest {
             OASPaymenttermRequestCompound paymenttermRequestCompound = (OASPaymenttermRequestCompound) obj;
             return this.pkiPaymenttermID == paymenttermRequestCompound.pkiPaymenttermID
                 && this.sPaymenttermCode == paymenttermRequestCompound.sPaymenttermCode
+                && this.ePaymenttermType == paymenttermRequestCompound.ePaymenttermType
+                && this.iPaymenttermDay == paymenttermRequestCompound.iPaymenttermDay
                 && this.objPaymenttermDescription == paymenttermRequestCompound.objPaymenttermDescription
                 && this.bPaymenttermIsactive == paymenttermRequestCompound.bPaymenttermIsactive;
         }
@@ -62,6 +80,8 @@ public class OASPaymenttermRequestCompound implements OASPaymenttermRequest {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiPaymenttermID == null ? 0 : System.hashCode(pkiPaymenttermID));
         hashCode = (17 * hashCode) + (sPaymenttermCode == null ? 0 : System.hashCode(sPaymenttermCode));
+        hashCode = (17 * hashCode) + (ePaymenttermType == null ? 0 : System.hashCode(ePaymenttermType));
+        hashCode = (17 * hashCode) + (iPaymenttermDay == null ? 0 : System.hashCode(iPaymenttermDay));
         hashCode = (17 * hashCode) + (objPaymenttermDescription == null ? 0 : System.hashCode(objPaymenttermDescription));
         hashCode = (17 * hashCode) + (bPaymenttermIsactive == null ? 0 : System.hashCode(bPaymenttermIsactive));
         return hashCode;

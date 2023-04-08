@@ -47,6 +47,12 @@ public class OASEzsigntemplatedocumentResponse {
      */
     public Integer iEzsigntemplatedocumentSignaturetotal { get; set; }
 
+    /**
+     * If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
+     * @return bEzsigntemplatedocumentHassignedsignatures
+     */
+    public Boolean bEzsigntemplatedocumentHassignedsignatures { get; set; }
+
     public static OASEzsigntemplatedocumentResponse getExample() {
         OASEzsigntemplatedocumentResponse ezsigntemplatedocumentResponse = new OASEzsigntemplatedocumentResponse();
           ezsigntemplatedocumentResponse.pkiEzsigntemplatedocumentID = 133;
@@ -54,6 +60,7 @@ public class OASEzsigntemplatedocumentResponse {
           ezsigntemplatedocumentResponse.sEzsigntemplatedocumentName = 'Standard Contract';
           ezsigntemplatedocumentResponse.iEzsigntemplatedocumentPagetotal = 5;
           ezsigntemplatedocumentResponse.iEzsigntemplatedocumentSignaturetotal = 8;
+          ezsigntemplatedocumentResponse.bEzsigntemplatedocumentHassignedsignatures = true;
         return ezsigntemplatedocumentResponse;
     }
 
@@ -64,7 +71,8 @@ public class OASEzsigntemplatedocumentResponse {
                 && this.fkiEzsigntemplateID == ezsigntemplatedocumentResponse.fkiEzsigntemplateID
                 && this.sEzsigntemplatedocumentName == ezsigntemplatedocumentResponse.sEzsigntemplatedocumentName
                 && this.iEzsigntemplatedocumentPagetotal == ezsigntemplatedocumentResponse.iEzsigntemplatedocumentPagetotal
-                && this.iEzsigntemplatedocumentSignaturetotal == ezsigntemplatedocumentResponse.iEzsigntemplatedocumentSignaturetotal;
+                && this.iEzsigntemplatedocumentSignaturetotal == ezsigntemplatedocumentResponse.iEzsigntemplatedocumentSignaturetotal
+                && this.bEzsigntemplatedocumentHassignedsignatures == ezsigntemplatedocumentResponse.bEzsigntemplatedocumentHassignedsignatures;
         }
         return false;
     }
@@ -76,6 +84,7 @@ public class OASEzsigntemplatedocumentResponse {
         hashCode = (17 * hashCode) + (sEzsigntemplatedocumentName == null ? 0 : System.hashCode(sEzsigntemplatedocumentName));
         hashCode = (17 * hashCode) + (iEzsigntemplatedocumentPagetotal == null ? 0 : System.hashCode(iEzsigntemplatedocumentPagetotal));
         hashCode = (17 * hashCode) + (iEzsigntemplatedocumentSignaturetotal == null ? 0 : System.hashCode(iEzsigntemplatedocumentSignaturetotal));
+        hashCode = (17 * hashCode) + (bEzsigntemplatedocumentHassignedsignatures == null ? 0 : System.hashCode(bEzsigntemplatedocumentHassignedsignatures));
         return hashCode;
     }
 }

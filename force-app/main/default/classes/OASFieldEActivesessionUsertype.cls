@@ -16,6 +16,7 @@
 public enum OASFieldEActivesessionUsertype {
     AGENTBROKER,
     ASSISTANT,
+    EZSIGNSIGNER,
     EZSIGNUSER,
     NORMAL
 }

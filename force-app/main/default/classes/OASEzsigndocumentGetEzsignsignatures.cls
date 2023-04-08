@@ -21,15 +21,15 @@ public class OASEzsigndocumentGetEzsignsignatures {
     public OASEzsigndocumentGetEzsignsignatures mPayload { get; set; }
 
     public static OASEzsigndocumentGetEzsignsignatures getExample() {
-        OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesV1ResponseAllOf = new OASEzsigndocumentGetEzsignsignatures();
-          ezsigndocumentGetEzsignsignaturesV1ResponseAllOf.mPayload = OASEzsigndocumentGetEzsignsignatures.getExample();
-        return ezsigndocumentGetEzsignsignaturesV1ResponseAllOf;
+        OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf = new OASEzsigndocumentGetEzsignsignatures();
+          ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf.mPayload = OASEzsigndocumentGetEzsignsignatures.getExample();
+        return ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetEzsignsignatures) {           
-            OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesV1ResponseAllOf = (OASEzsigndocumentGetEzsignsignatures) obj;
-            return this.mPayload == ezsigndocumentGetEzsignsignaturesV1ResponseAllOf.mPayload;
+            OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf = (OASEzsigndocumentGetEzsignsignatures) obj;
+            return this.mPayload == ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf.mPayload;
         }
         return false;
     }

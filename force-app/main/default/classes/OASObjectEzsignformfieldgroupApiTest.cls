@@ -112,41 +112,6 @@ private class OASObjectEzsignformfieldgroupApiTest {
      * 
      */
     @isTest
-    private static void ezsignformfieldgroupGetObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignformfieldgroupID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsignformfieldgroupApi api;
-        OASEzsignformfieldgroupGetObjectV1Re response;
-        OASEzsignformfieldgroupGetObjectV1Re expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsignformfieldgroupApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsignformfieldgroupGetObjectV1Re.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsignformfieldgroupGetObjectV1Re.getExample();
-        response = (OASEzsignformfieldgroupGetObjectV1Re) api.ezsignformfieldgroupGetObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Ezsignformfieldgroup
-     *
-     * 
-     */
-    @isTest
     private static void ezsignformfieldgroupGetObjectV2Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);

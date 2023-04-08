@@ -5,6 +5,7 @@ private class OASFieldEActivesessionUsertypeTest {
         Set<OASFieldEActivesessionUsertype> expected = new Set<OASFieldEActivesessionUsertype>{
             OASFieldEActivesessionUsertype.AGENTBROKER,
             OASFieldEActivesessionUsertype.ASSISTANT,
+            OASFieldEActivesessionUsertype.EZSIGNSIGNER,
             OASFieldEActivesessionUsertype.EZSIGNUSER,
             OASFieldEActivesessionUsertype.NORMAL
         };

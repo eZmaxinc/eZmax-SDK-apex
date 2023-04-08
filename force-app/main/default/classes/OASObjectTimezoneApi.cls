@@ -32,41 +32,6 @@ public class OASObjectTimezoneApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return OASCommonGetAutocompleteV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASCommonGetAutocompleteV1Response timezoneGetAutocompleteV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('sSelector'), 'sSelector');
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('eFilterActive', (String) params.get('eFilterActive')));
-        query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASCommonGetAutocompleteV1Response) client.invoke(
-            'GET', '/1/object/timezone/getAutocomplete/{sSelector}', '',
-            query, form,
-            new Map<String, Object>{
-                'sSelector' => (String) params.get('sSelector')
-            },
-            new Map<String, Object>{
-                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
-            },
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASCommonGetAutocompleteV1Response.class
-        );
-    }
-    /**
-     * Retrieve Timezones and IDs
-     * Get the list of Timezone to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Timezones to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
      * @return OASTimezoneGetAutocompleteV2Response
      * @throws OAS.ApiException if fails to make API call
      */

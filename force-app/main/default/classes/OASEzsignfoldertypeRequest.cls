@@ -207,8 +207,8 @@ public class OASEzsignfoldertypeRequest {
           ezsignfoldertypeRequest.objEzsignfoldertypeName = OASMultilingualEzsignfoldertypeName.getExample();
           ezsignfoldertypeRequest.fkiBrandingID = 78;
           ezsignfoldertypeRequest.fkiBillingentityinternalID = 1;
-          ezsignfoldertypeRequest.fkiUsergroupID = 89;
-          ezsignfoldertypeRequest.fkiUsergroupIDRestricted = 89;
+          ezsignfoldertypeRequest.fkiUsergroupID = 2;
+          ezsignfoldertypeRequest.fkiUsergroupIDRestricted = 2;
           ezsignfoldertypeRequest.fkiEzsigntsarequirementID = 1;
           ezsignfoldertypeRequest.sEmailAddressSigned = 'email@example.com';
           ezsignfoldertypeRequest.sEmailAddressSummary = 'email@example.com';

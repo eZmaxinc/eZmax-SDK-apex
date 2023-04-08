@@ -47,6 +47,12 @@ public class OASEzsigntemplatedocumentResponseCom implements OASEzsigntemplatedo
      */
     public Integer iEzsigntemplatedocumentSignaturetotal { get; set; }
 
+    /**
+     * If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
+     * @return bEzsigntemplatedocumentHassignedsignatures
+     */
+    public Boolean bEzsigntemplatedocumentHassignedsignatures { get; set; }
+
     public static OASEzsigntemplatedocumentResponseCom getExample() {
         OASEzsigntemplatedocumentResponseCom ezsigntemplatedocumentResponseCompound = new OASEzsigntemplatedocumentResponseCom();
           ezsigntemplatedocumentResponseCompound.pkiEzsigntemplatedocumentID = 133;
@@ -54,6 +60,7 @@ public class OASEzsigntemplatedocumentResponseCom implements OASEzsigntemplatedo
           ezsigntemplatedocumentResponseCompound.sEzsigntemplatedocumentName = 'Standard Contract';
           ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentPagetotal = 5;
           ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal = 8;
+          ezsigntemplatedocumentResponseCompound.bEzsigntemplatedocumentHassignedsignatures = true;
         return ezsigntemplatedocumentResponseCompound;
     }
 
@@ -64,7 +71,8 @@ public class OASEzsigntemplatedocumentResponseCom implements OASEzsigntemplatedo
                 && this.fkiEzsigntemplateID == ezsigntemplatedocumentResponseCompound.fkiEzsigntemplateID
                 && this.sEzsigntemplatedocumentName == ezsigntemplatedocumentResponseCompound.sEzsigntemplatedocumentName
                 && this.iEzsigntemplatedocumentPagetotal == ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentPagetotal
-                && this.iEzsigntemplatedocumentSignaturetotal == ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal;
+                && this.iEzsigntemplatedocumentSignaturetotal == ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal
+                && this.bEzsigntemplatedocumentHassignedsignatures == ezsigntemplatedocumentResponseCompound.bEzsigntemplatedocumentHassignedsignatures;
         }
         return false;
     }
@@ -76,6 +84,7 @@ public class OASEzsigntemplatedocumentResponseCom implements OASEzsigntemplatedo
         hashCode = (17 * hashCode) + (sEzsigntemplatedocumentName == null ? 0 : System.hashCode(sEzsigntemplatedocumentName));
         hashCode = (17 * hashCode) + (iEzsigntemplatedocumentPagetotal == null ? 0 : System.hashCode(iEzsigntemplatedocumentPagetotal));
         hashCode = (17 * hashCode) + (iEzsigntemplatedocumentSignaturetotal == null ? 0 : System.hashCode(iEzsigntemplatedocumentSignaturetotal));
+        hashCode = (17 * hashCode) + (bEzsigntemplatedocumentHassignedsignatures == null ? 0 : System.hashCode(bEzsigntemplatedocumentHassignedsignatures));
         return hashCode;
     }
 }

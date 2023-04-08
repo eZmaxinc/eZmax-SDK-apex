@@ -239,6 +239,34 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * Flatten
+     * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     * @param pkiEzsigndocumentID  (required)
+     * @param body  (required)
+     * @return OASEzsigndocumentFlattenV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentFlattenV1Response ezsigndocumentFlattenV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        client.assertNotNull(params.get('body'), 'body');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentFlattenV1Response) client.invoke(
+            'POST', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten',
+            (Object) params.get('body'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentFlattenV1Response.class
+        );
+    }
+    /**
      * Retrieve actionable elements for the Ezsigndocument
      * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
      * @param pkiEzsigndocumentID  (required)
@@ -292,6 +320,31 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignannotations
+     * 
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetEzsignannotation
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetEzsignannotation ezsigndocumentGetEzsignannotationsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetEzsignannotation) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetEzsignannotation.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsigndocument\&#39;s Ezsignformfieldgroups
      * 
      * @param pkiEzsigndocumentID  (required)
@@ -339,6 +392,31 @@ public class OASObjectEzsigndocumentApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsigndocumentGetEzsignpagesV1Res.class
+        );
+    }
+    /**
+     * Retrieve an existing Ezsigndocument\&#39;s automatic Ezsignsignatures
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetEzsignsignatures
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesAutomaticV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetEzsignsignatures) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetEzsignsignatures.class
         );
     }
     /**

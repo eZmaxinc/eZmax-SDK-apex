@@ -54,6 +54,12 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
      */
     public OASFieldEEzsignfolderSendreminderfre eEzsignfolderSendreminderfrequency { get; set; }
 
+    /**
+     * This field can be used to store an External ID from the client\'s system.\n\nAnything can be stored in this field, it will never be evaluated by the eZmax system and will be returned\nAS-IS.\n\nTo store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.\n
+     * @return sEzsignfolderExternalid
+     */
+    public String sEzsignfolderExternalid { get; set; }
+
     public static OASEzsignfolderRequestCompound getExample() {
         OASEzsignfolderRequestCompound ezsignfolderRequestCompound = new OASEzsignfolderRequestCompound();
           ezsignfolderRequestCompound.pkiEzsignfolderID = 33;
@@ -62,6 +68,7 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
           ezsignfolderRequestCompound.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderRequestCompound.tEzsignfolderNote = 'This is a note';
           ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency = OASFieldEEzsignfolderSendreminderfre.getExample();
+          ezsignfolderRequestCompound.sEzsignfolderExternalid = '{"ID": 1234, "TAGS": ["tag1", "tag2", "tag3"]}';
         return ezsignfolderRequestCompound;
     }
 
@@ -73,7 +80,8 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
                 && this.fkiEzsigntsarequirementID == ezsignfolderRequestCompound.fkiEzsigntsarequirementID
                 && this.sEzsignfolderDescription == ezsignfolderRequestCompound.sEzsignfolderDescription
                 && this.tEzsignfolderNote == ezsignfolderRequestCompound.tEzsignfolderNote
-                && this.eEzsignfolderSendreminderfrequency == ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency;
+                && this.eEzsignfolderSendreminderfrequency == ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency
+                && this.sEzsignfolderExternalid == ezsignfolderRequestCompound.sEzsignfolderExternalid;
         }
         return false;
     }
@@ -86,6 +94,7 @@ public class OASEzsignfolderRequestCompound implements OASEzsignfolderRequest {
         hashCode = (17 * hashCode) + (sEzsignfolderDescription == null ? 0 : System.hashCode(sEzsignfolderDescription));
         hashCode = (17 * hashCode) + (tEzsignfolderNote == null ? 0 : System.hashCode(tEzsignfolderNote));
         hashCode = (17 * hashCode) + (eEzsignfolderSendreminderfrequency == null ? 0 : System.hashCode(eEzsignfolderSendreminderfrequency));
+        hashCode = (17 * hashCode) + (sEzsignfolderExternalid == null ? 0 : System.hashCode(sEzsignfolderExternalid));
         return hashCode;
     }
 }

@@ -81,6 +81,7 @@ private class OASCustomEzsignfoldertransmissionResTest {
         OASCustomEzsignfoldertransmissionRes customEzsignfoldertransmissionResponse = new OASCustomEzsignfoldertransmissionRes();
         System.assertEquals(new List<OASCustomEzsignfoldertransmissionSig>(), customEzsignfoldertransmissionResponse.aObjEzsignfoldertransmissionSigner);
         System.assertEquals(null, customEzsignfoldertransmissionResponse.pkiEzsignfolderID);
+        System.assertEquals(null, customEzsignfoldertransmissionResponse.sEzsignfolderDescription);
         System.assertEquals(null, customEzsignfoldertransmissionResponse.eEzsignfolderStep);
         System.assertEquals(null, customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal);
         System.assertEquals(null, customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned);

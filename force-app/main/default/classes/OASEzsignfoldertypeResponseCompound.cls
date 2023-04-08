@@ -272,8 +272,8 @@ public class OASEzsignfoldertypeResponseCompound implements OASEzsignfoldertypeR
           ezsignfoldertypeResponseCompound.objEzsignfoldertypeName = OASMultilingualEzsignfoldertypeName.getExample();
           ezsignfoldertypeResponseCompound.fkiBrandingID = 78;
           ezsignfoldertypeResponseCompound.fkiBillingentityinternalID = 1;
-          ezsignfoldertypeResponseCompound.fkiUsergroupID = 89;
-          ezsignfoldertypeResponseCompound.fkiUsergroupIDRestricted = 89;
+          ezsignfoldertypeResponseCompound.fkiUsergroupID = 2;
+          ezsignfoldertypeResponseCompound.fkiUsergroupIDRestricted = 2;
           ezsignfoldertypeResponseCompound.fkiEzsigntsarequirementID = 1;
           ezsignfoldertypeResponseCompound.sBrandingDescriptionX = 'Company X';
           ezsignfoldertypeResponseCompound.sBillingentityinternalDescriptionX = 'Default';

@@ -77,44 +77,6 @@ private class OASObjectBrandingApiTest {
      * Get the list of Branding to be used in a dropdown or autocomplete control.
      */
     @isTest
-    private static void brandingGetAutocompleteV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'sSelector' => All,
-            'eFilterActive' => All,
-            'sQuery' => 'null',
-            'acceptLanguage' => ''
-        };
-
-        OASClient client;
-        OASObjectBrandingApi api;
-        OASCommonGetAutocompleteV1Response response;
-        OASCommonGetAutocompleteV1Response expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectBrandingApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASCommonGetAutocompleteV1Response.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASCommonGetAutocompleteV1Response.getExample();
-        response = (OASCommonGetAutocompleteV1Response) api.brandingGetAutocompleteV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve Brandings and IDs
-     *
-     * Get the list of Branding to be used in a dropdown or autocomplete control.
-     */
-    @isTest
     private static void brandingGetAutocompleteV2Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
@@ -191,41 +153,6 @@ private class OASObjectBrandingApiTest {
         res.setBody(js);
         expectedResponse = OASBrandingGetListV1Response.getExample();
         response = (OASBrandingGetListV1Response) api.brandingGetListV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Branding
-     *
-     * 
-     */
-    @isTest
-    private static void brandingGetObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiBrandingID' => ''
-        };
-
-        OASClient client;
-        OASObjectBrandingApi api;
-        OASBrandingGetObjectV1Response response;
-        OASBrandingGetObjectV1Response expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectBrandingApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASBrandingGetObjectV1Response.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASBrandingGetObjectV1Response.getExample();
-        response = (OASBrandingGetObjectV1Response) api.brandingGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

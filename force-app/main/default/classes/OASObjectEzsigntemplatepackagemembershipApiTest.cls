@@ -76,41 +76,6 @@ private class OASObjectEzsigntemplatepackagemembershipApiTest {
      * 
      */
     @isTest
-    private static void ezsigntemplatepackagemembershipGetObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsigntemplatepackagemembershipID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsigntemplatepackagemembershipApi api;
-        OASEzsigntemplatepackagemembershipGe response;
-        OASEzsigntemplatepackagemembershipGe expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsigntemplatepackagemembershipApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsigntemplatepackagemembershipGe.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsigntemplatepackagemembershipGe.getExample();
-        response = (OASEzsigntemplatepackagemembershipGe) api.ezsigntemplatepackagemembershipGetObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatepackagemembership
-     *
-     * 
-     */
-    @isTest
     private static void ezsigntemplatepackagemembershipGetObjectV2Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);

@@ -46,4 +46,39 @@ public class OASObjectActivesessionApi {
             OASActivesessionGetCurrentV1Response.class
         );
     }
+    /**
+     * Retrieve Activesession list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return OASActivesessionGetListV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASActivesessionGetListV1Response activesessionGetListV1(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('eOrderBy', (String) params.get('eOrderBy')));
+        query.addAll(client.makeParam('iRowMax', (Integer) params.get('iRowMax')));
+        query.addAll(client.makeParam('iRowOffset', (Integer) params.get('iRowOffset')));
+        query.addAll(client.makeParam('sFilter', (String) params.get('sFilter')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASActivesessionGetListV1Response) client.invoke(
+            'GET', '/1/object/activesession/getList', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>{
+                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
+            },
+            new List<String>{ 'application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASActivesessionGetListV1Response.class
+        );
+    }
 }

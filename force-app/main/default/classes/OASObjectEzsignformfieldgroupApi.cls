@@ -106,31 +106,6 @@ public class OASObjectEzsignformfieldgroupApi {
      * Retrieve an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID  (required)
-     * @return OASEzsignformfieldgroupGetObjectV1Re
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASEzsignformfieldgroupGetObjectV1Re ezsignformfieldgroupGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsignformfieldgroupID'), 'pkiEzsignformfieldgroupID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsignformfieldgroupGetObjectV1Re) client.invoke(
-            'GET', '/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsignformfieldgroupID' => (Integer) params.get('pkiEzsignformfieldgroupID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsignformfieldgroupGetObjectV1Re.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsignformfieldgroup
-     * 
-     * @param pkiEzsignformfieldgroupID  (required)
      * @return OASEzsignformfieldgroupGetObjectV2Re
      * @throws OAS.ApiException if fails to make API call
      */

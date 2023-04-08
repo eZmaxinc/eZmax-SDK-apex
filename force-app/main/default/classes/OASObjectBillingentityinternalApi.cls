@@ -26,38 +26,80 @@ public class OASObjectBillingentityinternalApi {
     }
 
     /**
-     * Retrieve Billingentityinternals and IDs
-     * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Billingentityinternals to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return OASCommonGetAutocompleteV1Response
+     * Create a new Billingentityinternal
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSBillingentityinternalCreateObject  (required)
+     * @return OASBillingentityinternalCreateObject
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASCommonGetAutocompleteV1Response billingentityinternalGetAutocompleteV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('sSelector'), 'sSelector');
+    public OASBillingentityinternalCreateObject billingentityinternalCreateObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSBillingentityinternalCreateObject'), 'oaSBillingentityinternalCreateObject');
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('eFilterActive', (String) params.get('eFilterActive')));
-        query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASCommonGetAutocompleteV1Response) client.invoke(
-            'GET', '/1/object/billingentityinternal/getAutocomplete/{sSelector}', '',
+        return (OASBillingentityinternalCreateObject) client.invoke(
+            'POST', '/1/object/billingentityinternal',
+            (OASBillingentityinternalCreateObject) params.get('oaSBillingentityinternalCreateObject'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASBillingentityinternalCreateObject.class
+        );
+    }
+    /**
+     * Delete an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @return OASBillingentityinternalDeleteObject
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASBillingentityinternalDeleteObject billingentityinternalDeleteObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiBillingentityinternalID'), 'pkiBillingentityinternalID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASBillingentityinternalDeleteObject) client.invoke(
+            'DELETE', '/1/object/billingentityinternal/{pkiBillingentityinternalID}', '',
             query, form,
             new Map<String, Object>{
-                'sSelector' => (String) params.get('sSelector')
+                'pkiBillingentityinternalID' => (Integer) params.get('pkiBillingentityinternalID')
             },
-            new Map<String, Object>{
-                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
-            },
+            new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String> { 'Authorization' },
-            OASCommonGetAutocompleteV1Response.class
+            OASBillingentityinternalDeleteObject.class
+        );
+    }
+    /**
+     * Edit an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @param oaSBillingentityinternalEditObjectV1  (required)
+     * @return OASBillingentityinternalEditObjectV1
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASBillingentityinternalEditObjectV1 billingentityinternalEditObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiBillingentityinternalID'), 'pkiBillingentityinternalID');
+        client.assertNotNull(params.get('oaSBillingentityinternalEditObjectV1'), 'oaSBillingentityinternalEditObjectV1');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASBillingentityinternalEditObjectV1) client.invoke(
+            'PUT', '/1/object/billingentityinternal/{pkiBillingentityinternalID}',
+            (OASBillingentityinternalEditObjectV1) params.get('oaSBillingentityinternalEditObjectV1'),
+            query, form,
+            new Map<String, Object>{
+                'pkiBillingentityinternalID' => (Integer) params.get('pkiBillingentityinternalID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASBillingentityinternalEditObjectV1.class
         );
     }
     /**
@@ -93,6 +135,66 @@ public class OASObjectBillingentityinternalApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASBillingentityinternalGetAutocompl.class
+        );
+    }
+    /**
+     * Retrieve Billingentityinternal list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return OASBillingentityinternalGetListV1Res
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASBillingentityinternalGetListV1Res billingentityinternalGetListV1(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('eOrderBy', (String) params.get('eOrderBy')));
+        query.addAll(client.makeParam('iRowMax', (Integer) params.get('iRowMax')));
+        query.addAll(client.makeParam('iRowOffset', (Integer) params.get('iRowOffset')));
+        query.addAll(client.makeParam('sFilter', (String) params.get('sFilter')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASBillingentityinternalGetListV1Res) client.invoke(
+            'GET', '/1/object/billingentityinternal/getList', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>{
+                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
+            },
+            new List<String>{ 'application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASBillingentityinternalGetListV1Res.class
+        );
+    }
+    /**
+     * Retrieve an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @return OASBillingentityinternalGetObjectV2R
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASBillingentityinternalGetObjectV2R billingentityinternalGetObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiBillingentityinternalID'), 'pkiBillingentityinternalID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASBillingentityinternalGetObjectV2R) client.invoke(
+            'GET', '/2/object/billingentityinternal/{pkiBillingentityinternalID}', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiBillingentityinternalID' => (Integer) params.get('pkiBillingentityinternalID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASBillingentityinternalGetObjectV2R.class
         );
     }
 }

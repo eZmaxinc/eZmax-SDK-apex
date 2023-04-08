@@ -139,6 +139,12 @@ public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResp
      */
     public OASCommonAudit objAudit { get; set; }
 
+    /**
+     * This field can be used to store an External ID from the client\'s system.\n\nAnything can be stored in this field, it will never be evaluated by the eZmax system and will be returned\nAS-IS.\n\nTo store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.\n
+     * @return sEzsignfolderExternalid
+     */
+    public String sEzsignfolderExternalid { get; set; }
+
     public static OASEzsignfolderGetObjectV1ResponseMP getExample() {
         OASEzsignfolderGetObjectV1ResponseMP ezsignfolderGetObjectV1ResponseMPayload = new OASEzsignfolderGetObjectV1ResponseMP();
           ezsignfolderGetObjectV1ResponseMPayload.pkiEzsignfolderID = 33;
@@ -161,6 +167,7 @@ public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResp
           ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderClose = '2020-12-31 23:59:59';
           ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderMessage = 'Hi everyone,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary';
           ezsignfolderGetObjectV1ResponseMPayload.objAudit = OASCommonAudit.getExample();
+          ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderExternalid = '{"ID": 1234, "TAGS": ["tag1", "tag2", "tag3"]}';
         return ezsignfolderGetObjectV1ResponseMPayload;
     }
 
@@ -186,7 +193,8 @@ public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResp
                 && this.eEzsignfolderStep == ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderStep
                 && this.dtEzsignfolderClose == ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderClose
                 && this.tEzsignfolderMessage == ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderMessage
-                && this.objAudit == ezsignfolderGetObjectV1ResponseMPayload.objAudit;
+                && this.objAudit == ezsignfolderGetObjectV1ResponseMPayload.objAudit
+                && this.sEzsignfolderExternalid == ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderExternalid;
         }
         return false;
     }
@@ -213,6 +221,7 @@ public class OASEzsignfolderGetObjectV1ResponseMP implements OASEzsignfolderResp
         hashCode = (17 * hashCode) + (dtEzsignfolderClose == null ? 0 : System.hashCode(dtEzsignfolderClose));
         hashCode = (17 * hashCode) + (tEzsignfolderMessage == null ? 0 : System.hashCode(tEzsignfolderMessage));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
+        hashCode = (17 * hashCode) + (sEzsignfolderExternalid == null ? 0 : System.hashCode(sEzsignfolderExternalid));
         return hashCode;
     }
 }

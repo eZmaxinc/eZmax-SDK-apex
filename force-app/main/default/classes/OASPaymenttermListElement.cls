@@ -27,6 +27,20 @@ public class OASPaymenttermListElement {
     public String sPaymenttermCode { get; set; }
 
     /**
+     * Get ePaymenttermType
+     * @return ePaymenttermType
+     */
+    public OASFieldEPaymenttermType ePaymenttermType { get; set; }
+
+    /**
+     * The day of the Paymentterm
+     * minimum: 0
+     * maximum: 255
+     * @return iPaymenttermDay
+     */
+    public Integer iPaymenttermDay { get; set; }
+
+    /**
      * The description of the Paymentterm in the language of the requester
      * @return sPaymenttermDescriptionX
      */
@@ -42,6 +56,8 @@ public class OASPaymenttermListElement {
         OASPaymenttermListElement paymenttermListElement = new OASPaymenttermListElement();
           paymenttermListElement.pkiPaymenttermID = 46;
           paymenttermListElement.sPaymenttermCode = '0030';
+          paymenttermListElement.ePaymenttermType = OASFieldEPaymenttermType.getExample();
+          paymenttermListElement.iPaymenttermDay = 5;
           paymenttermListElement.sPaymenttermDescriptionX = 'Net 30 days';
           paymenttermListElement.bPaymenttermIsactive = true;
         return paymenttermListElement;
@@ -52,6 +68,8 @@ public class OASPaymenttermListElement {
             OASPaymenttermListElement paymenttermListElement = (OASPaymenttermListElement) obj;
             return this.pkiPaymenttermID == paymenttermListElement.pkiPaymenttermID
                 && this.sPaymenttermCode == paymenttermListElement.sPaymenttermCode
+                && this.ePaymenttermType == paymenttermListElement.ePaymenttermType
+                && this.iPaymenttermDay == paymenttermListElement.iPaymenttermDay
                 && this.sPaymenttermDescriptionX == paymenttermListElement.sPaymenttermDescriptionX
                 && this.bPaymenttermIsactive == paymenttermListElement.bPaymenttermIsactive;
         }
@@ -62,6 +80,8 @@ public class OASPaymenttermListElement {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiPaymenttermID == null ? 0 : System.hashCode(pkiPaymenttermID));
         hashCode = (17 * hashCode) + (sPaymenttermCode == null ? 0 : System.hashCode(sPaymenttermCode));
+        hashCode = (17 * hashCode) + (ePaymenttermType == null ? 0 : System.hashCode(ePaymenttermType));
+        hashCode = (17 * hashCode) + (iPaymenttermDay == null ? 0 : System.hashCode(iPaymenttermDay));
         hashCode = (17 * hashCode) + (sPaymenttermDescriptionX == null ? 0 : System.hashCode(sPaymenttermDescriptionX));
         hashCode = (17 * hashCode) + (bPaymenttermIsactive == null ? 0 : System.hashCode(bPaymenttermIsactive));
         return hashCode;

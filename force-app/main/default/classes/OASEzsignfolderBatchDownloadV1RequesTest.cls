@@ -81,6 +81,6 @@ private class OASEzsignfolderBatchDownloadV1RequesTest {
     private static void defaultValuesPopulated() {
         OASEzsignfolderBatchDownloadV1Reques ezsignfolderBatchDownloadV1Request = new OASEzsignfolderBatchDownloadV1Reques();
         System.assertEquals(new List<Integer>(), ezsignfolderBatchDownloadV1Request.aPkiEzsigndocumentID);
-        System.assertEquals(new List<AEDocumentTypeEnum>(), ezsignfolderBatchDownloadV1Request.aEDocumentType);
+        System.assertEquals(new List<String>(), ezsignfolderBatchDownloadV1Request.aEDocumentType);
     }
 }

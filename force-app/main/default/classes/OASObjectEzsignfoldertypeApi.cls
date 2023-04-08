@@ -186,31 +186,6 @@ public class OASObjectEzsignfoldertypeApi {
      * Retrieve an existing Ezsignfoldertype
      * 
      * @param pkiEzsignfoldertypeID  (required)
-     * @return OASEzsignfoldertypeGetObjectV1Respon
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASEzsignfoldertypeGetObjectV1Respon ezsignfoldertypeGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsignfoldertypeID'), 'pkiEzsignfoldertypeID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsignfoldertypeGetObjectV1Respon) client.invoke(
-            'GET', '/1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsignfoldertypeID' => (Integer) params.get('pkiEzsignfoldertypeID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsignfoldertypeGetObjectV1Respon.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsignfoldertype
-     * 
-     * @param pkiEzsignfoldertypeID  (required)
      * @return OASEzsignfoldertypeGetObjectV2Respon
      * @throws OAS.ApiException if fails to make API call
      */

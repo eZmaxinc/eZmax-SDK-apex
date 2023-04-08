@@ -208,6 +208,41 @@ private class OASObjectEzsignbulksendApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignbulksend\&#39;s automatic Ezsignsignatures
+     *
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     */
+    @isTest
+    private static void ezsignbulksendGetEzsignsignaturesAutomaticV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignbulksendID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignbulksendApi api;
+        OASEzsignbulksendGetEzsignsignatures response;
+        OASEzsignbulksendGetEzsignsignatures expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignbulksendApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignbulksendGetEzsignsignatures.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignbulksendGetEzsignsignatures.getExample();
+        response = (OASEzsignbulksendGetEzsignsignatures) api.ezsignbulksendGetEzsignsignaturesAutomaticV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsignbulksend\&#39;s forms data
      *
      * 
@@ -294,41 +329,6 @@ private class OASObjectEzsignbulksendApiTest {
         res.setBody(js);
         expectedResponse = OASEzsignbulksendGetListV1Response.getExample();
         response = (OASEzsignbulksendGetListV1Response) api.ezsignbulksendGetListV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksend
-     *
-     * 
-     */
-    @isTest
-    private static void ezsignbulksendGetObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignbulksendID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsignbulksendApi api;
-        OASEzsignbulksendGetObjectV1Response response;
-        OASEzsignbulksendGetObjectV1Response expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsignbulksendApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsignbulksendGetObjectV1Response.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsignbulksendGetObjectV1Response.getExample();
-        response = (OASEzsignbulksendGetObjectV1Response) api.ezsignbulksendGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

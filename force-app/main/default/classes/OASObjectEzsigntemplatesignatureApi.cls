@@ -109,31 +109,6 @@ public class OASObjectEzsigntemplatesignatureApi {
      * @return OASEzsigntemplatesignatureGetObjectV
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASEzsigntemplatesignatureGetObjectV ezsigntemplatesignatureGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsigntemplatesignatureID'), 'pkiEzsigntemplatesignatureID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsigntemplatesignatureGetObjectV) client.invoke(
-            'GET', '/1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsigntemplatesignatureID' => (Integer) params.get('pkiEzsigntemplatesignatureID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsigntemplatesignatureGetObjectV.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsigntemplatesignature
-     * 
-     * @param pkiEzsigntemplatesignatureID  (required)
-     * @return OASEzsigntemplatesignatureGetObjectV
-     * @throws OAS.ApiException if fails to make API call
-     */
     public OASEzsigntemplatesignatureGetObjectV ezsigntemplatesignatureGetObjectV2(Map<String, Object> params) {
         client.assertNotNull(params.get('pkiEzsigntemplatesignatureID'), 'pkiEzsigntemplatesignatureID');
         List<OAS.Param> query = new List<OAS.Param>();

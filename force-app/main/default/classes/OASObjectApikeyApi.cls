@@ -27,30 +27,6 @@ public class OASObjectApikeyApi {
 
     /**
      * Create a new Apikey
-     * The endpoint allows to create one or many elements at once.\n\nThe array can contain simple (Just the object) or compound (The object and its child) objects.\n\nCreating compound elements allows to reduce the multiple requests to create all child objects.
-     * @param oaSApikeyCreateObjectV1Request  (required)
-     * @return OASApikeyCreateObjectV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASApikeyCreateObjectV1Response apikeyCreateObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('oaSApikeyCreateObjectV1Request'), 'oaSApikeyCreateObjectV1Request');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASApikeyCreateObjectV1Response) client.invoke(
-            'POST', '/1/object/apikey',
-            (List<OASApikeyCreateObjectV1Request>) params.get('oaSApikeyCreateObjectV1Request'),
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>{ 'application/json' },
-            new List<String> { 'Authorization' },
-            OASApikeyCreateObjectV1Response.class
-        );
-    }
-    /**
-     * Create a new Apikey
      * The endpoint allows to create one or many elements at once.
      * @param oaSApikeyCreateObjectV2Request  (required)
      * @return OASApikeyCreateObjectV2Response

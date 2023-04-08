@@ -144,6 +144,42 @@ private class OASObjectEzsigntemplatedocumentApiTest {
     }
 
     /**
+     * Flatten
+     *
+     * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     */
+    @isTest
+    private static void ezsigntemplatedocumentFlattenV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigntemplatedocumentID' => '',
+            'body' => 
+        };
+
+        OASClient client;
+        OASObjectEzsigntemplatedocumentApi api;
+        OASEzsigntemplatedocumentFlattenV1Re response;
+        OASEzsigntemplatedocumentFlattenV1Re expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigntemplatedocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigntemplatedocumentFlattenV1Re.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigntemplatedocumentFlattenV1Re.getExample();
+        response = (OASEzsigntemplatedocumentFlattenV1Re) api.ezsigntemplatedocumentFlattenV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsigntemplatedocument\&#39;s Ezsigntemplatedocumentpages
      *
      * 
@@ -245,41 +281,6 @@ private class OASObjectEzsigntemplatedocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigntemplatedocumentGetEzsignte.getExample();
         response = (OASEzsigntemplatedocumentGetEzsignte) api.ezsigntemplatedocumentGetEzsigntemplatesignaturesV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatedocument
-     *
-     * 
-     */
-    @isTest
-    private static void ezsigntemplatedocumentGetObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsigntemplatedocumentID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsigntemplatedocumentApi api;
-        OASEzsigntemplatedocumentGetObjectV1 response;
-        OASEzsigntemplatedocumentGetObjectV1 expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsigntemplatedocumentApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsigntemplatedocumentGetObjectV1.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsigntemplatedocumentGetObjectV1.getExample();
-        response = (OASEzsigntemplatedocumentGetObjectV1) api.ezsigntemplatedocumentGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

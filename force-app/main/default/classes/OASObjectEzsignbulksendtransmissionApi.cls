@@ -51,6 +51,31 @@ public class OASObjectEzsignbulksendtransmissionApi {
         );
     }
     /**
+     * Retrieve an existing Ezsignbulksendtransmission\&#39;s automatic Ezsignsignatures
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     * @param pkiEzsignbulksendtransmissionID  (required)
+     * @return OASEzsignbulksendtransmissionGetEzsi
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignbulksendtransmissionGetEzsi ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignbulksendtransmissionID'), 'pkiEzsignbulksendtransmissionID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignbulksendtransmissionGetEzsi) client.invoke(
+            'GET', '/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignbulksendtransmissionID' => (Integer) params.get('pkiEzsignbulksendtransmissionID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignbulksendtransmissionGetEzsi.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignbulksendtransmission\&#39;s forms data
      * 
      * @param pkiEzsignbulksendtransmissionID  (required)
@@ -73,31 +98,6 @@ public class OASObjectEzsignbulksendtransmissionApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsignbulksendtransmissionGetForm.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsignbulksendtransmission
-     * 
-     * @param pkiEzsignbulksendtransmissionID  (required)
-     * @return OASEzsignbulksendtransmissionGetObje
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASEzsignbulksendtransmissionGetObje ezsignbulksendtransmissionGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsignbulksendtransmissionID'), 'pkiEzsignbulksendtransmissionID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsignbulksendtransmissionGetObje) client.invoke(
-            'GET', '/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsignbulksendtransmissionID' => (Integer) params.get('pkiEzsignbulksendtransmissionID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsignbulksendtransmissionGetObje.class
         );
     }
     /**

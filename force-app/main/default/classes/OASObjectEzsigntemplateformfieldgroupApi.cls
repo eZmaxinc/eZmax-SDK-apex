@@ -109,31 +109,6 @@ public class OASObjectEzsigntemplateformfieldgroupApi {
      * @return OASEzsigntemplateformfieldgroupGetOb
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASEzsigntemplateformfieldgroupGetOb ezsigntemplateformfieldgroupGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsigntemplateformfieldgroupID'), 'pkiEzsigntemplateformfieldgroupID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsigntemplateformfieldgroupGetOb) client.invoke(
-            'GET', '/1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsigntemplateformfieldgroupID' => (Integer) params.get('pkiEzsigntemplateformfieldgroupID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsigntemplateformfieldgroupGetOb.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsigntemplateformfieldgroup
-     * 
-     * @param pkiEzsigntemplateformfieldgroupID  (required)
-     * @return OASEzsigntemplateformfieldgroupGetOb
-     * @throws OAS.ApiException if fails to make API call
-     */
     public OASEzsigntemplateformfieldgroupGetOb ezsigntemplateformfieldgroupGetObjectV2(Map<String, Object> params) {
         client.assertNotNull(params.get('pkiEzsigntemplateformfieldgroupID'), 'pkiEzsigntemplateformfieldgroupID');
         List<OAS.Param> query = new List<OAS.Param>();

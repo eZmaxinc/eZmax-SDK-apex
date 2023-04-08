@@ -69,7 +69,13 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
      * Indicates the format of the document.
      */
     public enum EEzsigndocumentFormatEnum {
-        PDF
+        PDF,
+        DOC,
+        DOCX,
+        XLS,
+        XLSX,
+        PPT,
+        PPTX
     }
 
     /**
@@ -128,6 +134,12 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
      */
     public String sEzsigndocumentName { get; set; }
 
+    /**
+     * This field can be used to store an External ID from the client\'s system.\n\nAnything can be stored in this field, it will never be evaluated by the eZmax system and will be returned\nAS-IS.\n\nTo store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.\n
+     * @return sEzsigndocumentExternalid
+     */
+    public String sEzsigndocumentExternalid { get; set; }
+
     public OASEzsigndocumentRequestCompound() {
         bEzsigndocumentForcerepair = true;
     }
@@ -141,13 +153,14 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
           ezsigndocumentRequestCompound.fkiLanguageID = 2;
           ezsigndocumentRequestCompound.eEzsigndocumentSource = EEzsigndocumentSourceEnum.BASE64;
           ezsigndocumentRequestCompound.eEzsigndocumentFormat = EEzsigndocumentFormatEnum.PDF;
-          ezsigndocumentRequestCompound.sEzsigndocumentBase64 = EncodingUtil.base64Decode('[B@4795ded0');
+          ezsigndocumentRequestCompound.sEzsigndocumentBase64 = EncodingUtil.base64Decode('[B@2cae1042');
           ezsigndocumentRequestCompound.sEzsigndocumentUrl = 'http://www.example.com/document.pdf';
           ezsigndocumentRequestCompound.bEzsigndocumentForcerepair = true;
           ezsigndocumentRequestCompound.sEzsigndocumentPassword = 'SecretPassword123';
           ezsigndocumentRequestCompound.eEzsigndocumentForm = EEzsigndocumentFormEnum.KEEP;
           ezsigndocumentRequestCompound.dtEzsigndocumentDuedate = '2020-12-31 23:59:59';
           ezsigndocumentRequestCompound.sEzsigndocumentName = 'Contract #123';
+          ezsigndocumentRequestCompound.sEzsigndocumentExternalid = '{"ID": 1234, "TAGS": ["tag1", "tag2", "tag3"]}';
         return ezsigndocumentRequestCompound;
     }
 
@@ -167,7 +180,8 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
                 && this.sEzsigndocumentPassword == ezsigndocumentRequestCompound.sEzsigndocumentPassword
                 && this.eEzsigndocumentForm == ezsigndocumentRequestCompound.eEzsigndocumentForm
                 && this.dtEzsigndocumentDuedate == ezsigndocumentRequestCompound.dtEzsigndocumentDuedate
-                && this.sEzsigndocumentName == ezsigndocumentRequestCompound.sEzsigndocumentName;
+                && this.sEzsigndocumentName == ezsigndocumentRequestCompound.sEzsigndocumentName
+                && this.sEzsigndocumentExternalid == ezsigndocumentRequestCompound.sEzsigndocumentExternalid;
         }
         return false;
     }
@@ -188,6 +202,7 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
         hashCode = (17 * hashCode) + (eEzsigndocumentForm == null ? 0 : System.hashCode(eEzsigndocumentForm));
         hashCode = (17 * hashCode) + (dtEzsigndocumentDuedate == null ? 0 : System.hashCode(dtEzsigndocumentDuedate));
         hashCode = (17 * hashCode) + (sEzsigndocumentName == null ? 0 : System.hashCode(sEzsigndocumentName));
+        hashCode = (17 * hashCode) + (sEzsigndocumentExternalid == null ? 0 : System.hashCode(sEzsigndocumentExternalid));
         return hashCode;
     }
 }

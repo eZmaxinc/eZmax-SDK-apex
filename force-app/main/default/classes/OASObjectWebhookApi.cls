@@ -172,31 +172,6 @@ public class OASObjectWebhookApi {
      * Retrieve an existing Webhook
      * 
      * @param pkiWebhookID  (required)
-     * @return OASWebhookGetObjectV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASWebhookGetObjectV1Response webhookGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiWebhookID'), 'pkiWebhookID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASWebhookGetObjectV1Response) client.invoke(
-            'GET', '/1/object/webhook/{pkiWebhookID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiWebhookID' => (Integer) params.get('pkiWebhookID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASWebhookGetObjectV1Response.class
-        );
-    }
-    /**
-     * Retrieve an existing Webhook
-     * 
-     * @param pkiWebhookID  (required)
      * @return OASWebhookGetObjectV2Response
      * @throws OAS.ApiException if fails to make API call
      */

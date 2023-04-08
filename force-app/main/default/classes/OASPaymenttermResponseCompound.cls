@@ -27,6 +27,20 @@ public class OASPaymenttermResponseCompound implements OASPaymenttermResponse {
     public String sPaymenttermCode { get; set; }
 
     /**
+     * Get ePaymenttermType
+     * @return ePaymenttermType
+     */
+    public OASFieldEPaymenttermType ePaymenttermType { get; set; }
+
+    /**
+     * The day of the Paymentterm
+     * minimum: 0
+     * maximum: 255
+     * @return iPaymenttermDay
+     */
+    public Integer iPaymenttermDay { get; set; }
+
+    /**
      * Get objPaymenttermDescription
      * @return objPaymenttermDescription
      */
@@ -48,6 +62,8 @@ public class OASPaymenttermResponseCompound implements OASPaymenttermResponse {
         OASPaymenttermResponseCompound paymenttermResponseCompound = new OASPaymenttermResponseCompound();
           paymenttermResponseCompound.pkiPaymenttermID = 46;
           paymenttermResponseCompound.sPaymenttermCode = '0030';
+          paymenttermResponseCompound.ePaymenttermType = OASFieldEPaymenttermType.getExample();
+          paymenttermResponseCompound.iPaymenttermDay = 5;
           paymenttermResponseCompound.objPaymenttermDescription = OASMultilingualPaymenttermDescriptio.getExample();
           paymenttermResponseCompound.bPaymenttermIsactive = true;
           paymenttermResponseCompound.objAudit = OASCommonAudit.getExample();
@@ -59,6 +75,8 @@ public class OASPaymenttermResponseCompound implements OASPaymenttermResponse {
             OASPaymenttermResponseCompound paymenttermResponseCompound = (OASPaymenttermResponseCompound) obj;
             return this.pkiPaymenttermID == paymenttermResponseCompound.pkiPaymenttermID
                 && this.sPaymenttermCode == paymenttermResponseCompound.sPaymenttermCode
+                && this.ePaymenttermType == paymenttermResponseCompound.ePaymenttermType
+                && this.iPaymenttermDay == paymenttermResponseCompound.iPaymenttermDay
                 && this.objPaymenttermDescription == paymenttermResponseCompound.objPaymenttermDescription
                 && this.bPaymenttermIsactive == paymenttermResponseCompound.bPaymenttermIsactive
                 && this.objAudit == paymenttermResponseCompound.objAudit;
@@ -70,6 +88,8 @@ public class OASPaymenttermResponseCompound implements OASPaymenttermResponse {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiPaymenttermID == null ? 0 : System.hashCode(pkiPaymenttermID));
         hashCode = (17 * hashCode) + (sPaymenttermCode == null ? 0 : System.hashCode(sPaymenttermCode));
+        hashCode = (17 * hashCode) + (ePaymenttermType == null ? 0 : System.hashCode(ePaymenttermType));
+        hashCode = (17 * hashCode) + (iPaymenttermDay == null ? 0 : System.hashCode(iPaymenttermDay));
         hashCode = (17 * hashCode) + (objPaymenttermDescription == null ? 0 : System.hashCode(objPaymenttermDescription));
         hashCode = (17 * hashCode) + (bPaymenttermIsactive == null ? 0 : System.hashCode(bPaymenttermIsactive));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));

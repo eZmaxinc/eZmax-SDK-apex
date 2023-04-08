@@ -320,6 +320,76 @@ private class OASObjectEzsignfolderApiTest {
     }
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderGetCommunicationCountV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetCommunicationCount response;
+        OASEzsignfolderGetCommunicationCount expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderGetCommunicationCount.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetCommunicationCount.getExample();
+        response = (OASEzsignfolderGetCommunicationCount) api.ezsignfolderGetCommunicationCountV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve Communication list
+     *
+     * 
+     */
+    @isTest
+    private static void ezsignfolderGetCommunicationListV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetCommunicationListV response;
+        OASEzsignfolderGetCommunicationListV expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderGetCommunicationListV.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetCommunicationListV.getExample();
+        response = (OASEzsignfolderGetCommunicationListV) api.ezsignfolderGetCommunicationListV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
      *
      * 
@@ -386,6 +456,41 @@ private class OASObjectEzsignfolderApiTest {
         res.setBody(js);
         expectedResponse = OASEzsignfolderGetEzsignfoldersigner.getExample();
         response = (OASEzsignfolderGetEzsignfoldersigner) api.ezsignfolderGetEzsignfoldersignerassociationsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder\&#39;s automatic Ezsignsignatures
+     *
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     */
+    @isTest
+    private static void ezsignfolderGetEzsignsignaturesAutomaticV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsignfolderID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsignfolderApi api;
+        OASEzsignfolderGetEzsignsignaturesAu response;
+        OASEzsignfolderGetEzsignsignaturesAu expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsignfolderApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsignfolderGetEzsignsignaturesAu.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsignfolderGetEzsignsignaturesAu.getExample();
+        response = (OASEzsignfolderGetEzsignsignaturesAu) api.ezsignfolderGetEzsignsignaturesAutomaticV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

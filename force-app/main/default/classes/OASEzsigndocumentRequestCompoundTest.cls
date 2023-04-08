@@ -86,5 +86,6 @@ private class OASEzsigndocumentRequestCompoundTest {
         System.assertEquals(null, ezsigndocumentRequestCompound.eEzsigndocumentForm);
         System.assertEquals(null, ezsigndocumentRequestCompound.dtEzsigndocumentDuedate);
         System.assertEquals(null, ezsigndocumentRequestCompound.sEzsigndocumentName);
+        System.assertEquals(null, ezsigndocumentRequestCompound.sEzsigndocumentExternalid);
     }
 }

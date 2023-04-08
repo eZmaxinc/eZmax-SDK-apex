@@ -260,6 +260,56 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
+     * Retrieve Communication count
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @return OASEzsignfolderGetCommunicationCount
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderGetCommunicationCount ezsignfolderGetCommunicationCountV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderGetCommunicationCount) client.invoke(
+            'GET', '/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignfolderGetCommunicationCount.class
+        );
+    }
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @return OASEzsignfolderGetCommunicationListV
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderGetCommunicationListV ezsignfolderGetCommunicationListV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderGetCommunicationListV) client.invoke(
+            'GET', '/1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignfolderGetCommunicationListV.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s Ezsigndocuments
      * 
      * @param pkiEzsignfolderID  (required)
@@ -307,6 +357,31 @@ public class OASObjectEzsignfolderApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsignfolderGetEzsignfoldersigner.class
+        );
+    }
+    /**
+     * Retrieve an existing Ezsignfolder\&#39;s automatic Ezsignsignatures
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     * @param pkiEzsignfolderID  (required)
+     * @return OASEzsignfolderGetEzsignsignaturesAu
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderGetEzsignsignaturesAu ezsignfolderGetEzsignsignaturesAutomaticV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderGetEzsignsignaturesAu) client.invoke(
+            'GET', '/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignfolderGetEzsignsignaturesAu.class
         );
     }
     /**

@@ -68,6 +68,12 @@ public class OASEzsigntemplateResponseCompound implements OASEzsigntemplateRespo
     public String sEzsignfoldertypeNameX { get; set; }
 
     /**
+     * Get objAudit
+     * @return objAudit
+     */
+    public OASCommonAudit objAudit { get; set; }
+
+    /**
      * Get objEzsigntemplatedocument
      * @return objEzsigntemplatedocument
      */
@@ -101,6 +107,7 @@ public class OASEzsigntemplateResponseCompound implements OASEzsigntemplateRespo
           ezsigntemplateResponseCompound.sEzsigntemplateDescription = 'Standard Contract';
           ezsigntemplateResponseCompound.bEzsigntemplateAdminonly = true;
           ezsigntemplateResponseCompound.sEzsignfoldertypeNameX = 'Default';
+          ezsigntemplateResponseCompound.objAudit = OASCommonAudit.getExample();
           ezsigntemplateResponseCompound.objEzsigntemplatedocument = OASEzsigntemplatedocumentResponse.getExample();
           ezsigntemplateResponseCompound.aObjEzsigntemplatesigner = new List<OASEzsigntemplatesignerResponseCompo>{OASEzsigntemplatesignerResponseCompo.getExample()};
         return ezsigntemplateResponseCompound;
@@ -117,6 +124,7 @@ public class OASEzsigntemplateResponseCompound implements OASEzsigntemplateRespo
                 && this.sEzsigntemplateDescription == ezsigntemplateResponseCompound.sEzsigntemplateDescription
                 && this.bEzsigntemplateAdminonly == ezsigntemplateResponseCompound.bEzsigntemplateAdminonly
                 && this.sEzsignfoldertypeNameX == ezsigntemplateResponseCompound.sEzsignfoldertypeNameX
+                && this.objAudit == ezsigntemplateResponseCompound.objAudit
                 && this.objEzsigntemplatedocument == ezsigntemplateResponseCompound.objEzsigntemplatedocument
                 && this.aObjEzsigntemplatesigner == ezsigntemplateResponseCompound.aObjEzsigntemplatesigner;
         }
@@ -133,6 +141,7 @@ public class OASEzsigntemplateResponseCompound implements OASEzsigntemplateRespo
         hashCode = (17 * hashCode) + (sEzsigntemplateDescription == null ? 0 : System.hashCode(sEzsigntemplateDescription));
         hashCode = (17 * hashCode) + (bEzsigntemplateAdminonly == null ? 0 : System.hashCode(bEzsigntemplateAdminonly));
         hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
+        hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         hashCode = (17 * hashCode) + (objEzsigntemplatedocument == null ? 0 : System.hashCode(objEzsigntemplatedocument));
         hashCode = (17 * hashCode) + (aObjEzsigntemplatesigner == null ? 0 : System.hashCode(aObjEzsigntemplatesigner));
         return hashCode;

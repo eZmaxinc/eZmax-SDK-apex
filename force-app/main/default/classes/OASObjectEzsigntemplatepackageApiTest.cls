@@ -148,44 +148,6 @@ private class OASObjectEzsigntemplatepackageApiTest {
      * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
      */
     @isTest
-    private static void ezsigntemplatepackageGetAutocompleteV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'sSelector' => All,
-            'eFilterActive' => All,
-            'sQuery' => 'null',
-            'acceptLanguage' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsigntemplatepackageApi api;
-        OASCommonGetAutocompleteDisabledV1Re response;
-        OASCommonGetAutocompleteDisabledV1Re expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsigntemplatepackageApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASCommonGetAutocompleteDisabledV1Re.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASCommonGetAutocompleteDisabledV1Re.getExample();
-        response = (OASCommonGetAutocompleteDisabledV1Re) api.ezsigntemplatepackageGetAutocompleteV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve Ezsigntemplatepackages and IDs
-     *
-     * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-     */
-    @isTest
     private static void ezsigntemplatepackageGetAutocompleteV2Test() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
@@ -262,41 +224,6 @@ private class OASObjectEzsigntemplatepackageApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigntemplatepackageGetListV1Res.getExample();
         response = (OASEzsigntemplatepackageGetListV1Res) api.ezsigntemplatepackageGetListV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatepackage
-     *
-     * 
-     */
-    @isTest
-    private static void ezsigntemplatepackageGetObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsigntemplatepackageID' => ''
-        };
-
-        OASClient client;
-        OASObjectEzsigntemplatepackageApi api;
-        OASEzsigntemplatepackageGetObjectV1R response;
-        OASEzsigntemplatepackageGetObjectV1R expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectEzsigntemplatepackageApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASEzsigntemplatepackageGetObjectV1R.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASEzsigntemplatepackageGetObjectV1R.getExample();
-        response = (OASEzsigntemplatepackageGetObjectV1R) api.ezsigntemplatepackageGetObjectV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

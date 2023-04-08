@@ -67,7 +67,13 @@ public class OASEzsigntemplatedocumentRequest {
      * Indicates the format of the template.
      */
     public enum EEzsigntemplatedocumentFormatEnum {
-        PDF
+        PDF,
+        DOC,
+        DOCX,
+        XLS,
+        XLSX,
+        PPT,
+        PPTX
     }
 
     /**
@@ -127,7 +133,7 @@ public class OASEzsigntemplatedocumentRequest {
           ezsigntemplatedocumentRequest.sEzsigntemplatedocumentName = 'Standard Contract';
           ezsigntemplatedocumentRequest.eEzsigntemplatedocumentSource = EEzsigntemplatedocumentSourceEnum.BASE64;
           ezsigntemplatedocumentRequest.eEzsigntemplatedocumentFormat = EEzsigntemplatedocumentFormatEnum.PDF;
-          ezsigntemplatedocumentRequest.sEzsigntemplatedocumentBase64 = EncodingUtil.base64Decode('[B@53dacd14');
+          ezsigntemplatedocumentRequest.sEzsigntemplatedocumentBase64 = EncodingUtil.base64Decode('[B@163d04ff');
           ezsigntemplatedocumentRequest.sEzsigntemplatedocumentUrl = 'http://www.example.com/template.pdf';
           ezsigntemplatedocumentRequest.bEzsigntemplatedocumentForcerepair = true;
           ezsigntemplatedocumentRequest.eEzsigntemplatedocumentForm = EEzsigntemplatedocumentFormEnum.KEEP;

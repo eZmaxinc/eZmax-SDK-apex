@@ -55,7 +55,7 @@ public class OASEzsignfolderBatchDownloadV1Reques implements OAS.MappedPropertie
 
     public OASEzsignfolderBatchDownloadV1Reques() {
         aPkiEzsigndocumentID = new List<Integer>();
-        aEDocumentType = new List<AEDocumentTypeEnum>();
+        aEDocumentType = new List<String>();
     }
 
     public static OASEzsignfolderBatchDownloadV1Reques getExample() {

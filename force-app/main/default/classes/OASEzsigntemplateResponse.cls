@@ -67,6 +67,12 @@ public class OASEzsigntemplateResponse {
      */
     public String sEzsignfoldertypeNameX { get; set; }
 
+    /**
+     * Get objAudit
+     * @return objAudit
+     */
+    public OASCommonAudit objAudit { get; set; }
+
     public static OASEzsigntemplateResponse getExample() {
         OASEzsigntemplateResponse ezsigntemplateResponse = new OASEzsigntemplateResponse();
           ezsigntemplateResponse.pkiEzsigntemplateID = 36;
@@ -77,6 +83,7 @@ public class OASEzsigntemplateResponse {
           ezsigntemplateResponse.sEzsigntemplateDescription = 'Standard Contract';
           ezsigntemplateResponse.bEzsigntemplateAdminonly = true;
           ezsigntemplateResponse.sEzsignfoldertypeNameX = 'Default';
+          ezsigntemplateResponse.objAudit = OASCommonAudit.getExample();
         return ezsigntemplateResponse;
     }
 
@@ -90,7 +97,8 @@ public class OASEzsigntemplateResponse {
                 && this.sLanguageNameX == ezsigntemplateResponse.sLanguageNameX
                 && this.sEzsigntemplateDescription == ezsigntemplateResponse.sEzsigntemplateDescription
                 && this.bEzsigntemplateAdminonly == ezsigntemplateResponse.bEzsigntemplateAdminonly
-                && this.sEzsignfoldertypeNameX == ezsigntemplateResponse.sEzsignfoldertypeNameX;
+                && this.sEzsignfoldertypeNameX == ezsigntemplateResponse.sEzsignfoldertypeNameX
+                && this.objAudit == ezsigntemplateResponse.objAudit;
         }
         return false;
     }
@@ -105,6 +113,7 @@ public class OASEzsigntemplateResponse {
         hashCode = (17 * hashCode) + (sEzsigntemplateDescription == null ? 0 : System.hashCode(sEzsigntemplateDescription));
         hashCode = (17 * hashCode) + (bEzsigntemplateAdminonly == null ? 0 : System.hashCode(bEzsigntemplateAdminonly));
         hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
+        hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         return hashCode;
     }
 }

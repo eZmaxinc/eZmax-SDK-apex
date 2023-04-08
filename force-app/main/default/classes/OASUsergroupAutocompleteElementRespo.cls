@@ -36,7 +36,7 @@ public class OASUsergroupAutocompleteElementRespo {
     public static OASUsergroupAutocompleteElementRespo getExample() {
         OASUsergroupAutocompleteElementRespo usergroupAutocompleteElementResponse = new OASUsergroupAutocompleteElementRespo();
           usergroupAutocompleteElementResponse.sUsergroupNameX = 'Administration';
-          usergroupAutocompleteElementResponse.pkiUsergroupID = 89;
+          usergroupAutocompleteElementResponse.pkiUsergroupID = 2;
           usergroupAutocompleteElementResponse.bUsergroupIsactive = true;
         return usergroupAutocompleteElementResponse;
     }

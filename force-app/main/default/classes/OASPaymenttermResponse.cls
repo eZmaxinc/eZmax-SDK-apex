@@ -27,6 +27,20 @@ public class OASPaymenttermResponse {
     public String sPaymenttermCode { get; set; }
 
     /**
+     * Get ePaymenttermType
+     * @return ePaymenttermType
+     */
+    public OASFieldEPaymenttermType ePaymenttermType { get; set; }
+
+    /**
+     * The day of the Paymentterm
+     * minimum: 0
+     * maximum: 255
+     * @return iPaymenttermDay
+     */
+    public Integer iPaymenttermDay { get; set; }
+
+    /**
      * Get objPaymenttermDescription
      * @return objPaymenttermDescription
      */
@@ -48,6 +62,8 @@ public class OASPaymenttermResponse {
         OASPaymenttermResponse paymenttermResponse = new OASPaymenttermResponse();
           paymenttermResponse.pkiPaymenttermID = 46;
           paymenttermResponse.sPaymenttermCode = '0030';
+          paymenttermResponse.ePaymenttermType = OASFieldEPaymenttermType.getExample();
+          paymenttermResponse.iPaymenttermDay = 5;
           paymenttermResponse.objPaymenttermDescription = OASMultilingualPaymenttermDescriptio.getExample();
           paymenttermResponse.bPaymenttermIsactive = true;
           paymenttermResponse.objAudit = OASCommonAudit.getExample();
@@ -59,6 +75,8 @@ public class OASPaymenttermResponse {
             OASPaymenttermResponse paymenttermResponse = (OASPaymenttermResponse) obj;
             return this.pkiPaymenttermID == paymenttermResponse.pkiPaymenttermID
                 && this.sPaymenttermCode == paymenttermResponse.sPaymenttermCode
+                && this.ePaymenttermType == paymenttermResponse.ePaymenttermType
+                && this.iPaymenttermDay == paymenttermResponse.iPaymenttermDay
                 && this.objPaymenttermDescription == paymenttermResponse.objPaymenttermDescription
                 && this.bPaymenttermIsactive == paymenttermResponse.bPaymenttermIsactive
                 && this.objAudit == paymenttermResponse.objAudit;
@@ -70,6 +88,8 @@ public class OASPaymenttermResponse {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiPaymenttermID == null ? 0 : System.hashCode(pkiPaymenttermID));
         hashCode = (17 * hashCode) + (sPaymenttermCode == null ? 0 : System.hashCode(sPaymenttermCode));
+        hashCode = (17 * hashCode) + (ePaymenttermType == null ? 0 : System.hashCode(ePaymenttermType));
+        hashCode = (17 * hashCode) + (iPaymenttermDay == null ? 0 : System.hashCode(iPaymenttermDay));
         hashCode = (17 * hashCode) + (objPaymenttermDescription == null ? 0 : System.hashCode(objPaymenttermDescription));
         hashCode = (17 * hashCode) + (bPaymenttermIsactive == null ? 0 : System.hashCode(bPaymenttermIsactive));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));

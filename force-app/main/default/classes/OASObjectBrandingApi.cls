@@ -84,41 +84,6 @@ public class OASObjectBrandingApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return OASCommonGetAutocompleteV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASCommonGetAutocompleteV1Response brandingGetAutocompleteV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('sSelector'), 'sSelector');
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('eFilterActive', (String) params.get('eFilterActive')));
-        query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASCommonGetAutocompleteV1Response) client.invoke(
-            'GET', '/1/object/branding/getAutocomplete/{sSelector}', '',
-            query, form,
-            new Map<String, Object>{
-                'sSelector' => (String) params.get('sSelector')
-            },
-            new Map<String, Object>{
-                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
-            },
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASCommonGetAutocompleteV1Response.class
-        );
-    }
-    /**
-     * Retrieve Brandings and IDs
-     * Get the list of Branding to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Brandings to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
      * @return OASBrandingGetAutocompleteV2Response
      * @throws OAS.ApiException if fails to make API call
      */
@@ -180,31 +145,6 @@ public class OASObjectBrandingApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASBrandingGetListV1Response.class
-        );
-    }
-    /**
-     * Retrieve an existing Branding
-     * 
-     * @param pkiBrandingID  (required)
-     * @return OASBrandingGetObjectV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASBrandingGetObjectV1Response brandingGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiBrandingID'), 'pkiBrandingID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASBrandingGetObjectV1Response) client.invoke(
-            'GET', '/1/object/branding/{pkiBrandingID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiBrandingID' => (Integer) params.get('pkiBrandingID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASBrandingGetObjectV1Response.class
         );
     }
     /**

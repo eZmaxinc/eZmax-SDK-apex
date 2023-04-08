@@ -26,38 +26,80 @@ public class OASObjectUsergroupApi {
     }
 
     /**
-     * Retrieve Usergroups and IDs
-     * Get the list of Usergroup to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Usergroups to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return OASCommonGetAutocompleteV1Response
+     * Create a new Usergroup
+     * The endpoint allows to create one or many elements at once.
+     * @param oaSUsergroupCreateObjectV1Request  (required)
+     * @return OASUsergroupCreateObjectV1Response
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASCommonGetAutocompleteV1Response usergroupGetAutocompleteV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('sSelector'), 'sSelector');
+    public OASUsergroupCreateObjectV1Response usergroupCreateObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('oaSUsergroupCreateObjectV1Request'), 'oaSUsergroupCreateObjectV1Request');
         List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('eFilterActive', (String) params.get('eFilterActive')));
-        query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
-
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASCommonGetAutocompleteV1Response) client.invoke(
-            'GET', '/1/object/usergroup/getAutocomplete/{sSelector}', '',
+        return (OASUsergroupCreateObjectV1Response) client.invoke(
+            'POST', '/1/object/usergroup',
+            (OASUsergroupCreateObjectV1Request) params.get('oaSUsergroupCreateObjectV1Request'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASUsergroupCreateObjectV1Response.class
+        );
+    }
+    /**
+     * Delete an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return OASUsergroupDeleteObjectV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUsergroupDeleteObjectV1Response usergroupDeleteObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUsergroupDeleteObjectV1Response) client.invoke(
+            'DELETE', '/1/object/usergroup/{pkiUsergroupID}', '',
             query, form,
             new Map<String, Object>{
-                'sSelector' => (String) params.get('sSelector')
+                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
             },
-            new Map<String, Object>{
-                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
-            },
+            new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String> { 'Authorization' },
-            OASCommonGetAutocompleteV1Response.class
+            OASUsergroupDeleteObjectV1Response.class
+        );
+    }
+    /**
+     * Edit an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param oaSUsergroupEditObjectV1Request  (required)
+     * @return OASUsergroupEditObjectV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUsergroupEditObjectV1Response usergroupEditObjectV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
+        client.assertNotNull(params.get('oaSUsergroupEditObjectV1Request'), 'oaSUsergroupEditObjectV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUsergroupEditObjectV1Response) client.invoke(
+            'PUT', '/1/object/usergroup/{pkiUsergroupID}',
+            (OASUsergroupEditObjectV1Request) params.get('oaSUsergroupEditObjectV1Request'),
+            query, form,
+            new Map<String, Object>{
+                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASUsergroupEditObjectV1Response.class
         );
     }
     /**
@@ -93,6 +135,91 @@ public class OASObjectUsergroupApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASUsergroupGetAutocompleteV2Respons.class
+        );
+    }
+    /**
+     * Retrieve Usergroup list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return OASUsergroupGetListV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUsergroupGetListV1Response usergroupGetListV1(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('eOrderBy', (String) params.get('eOrderBy')));
+        query.addAll(client.makeParam('iRowMax', (Integer) params.get('iRowMax')));
+        query.addAll(client.makeParam('iRowOffset', (Integer) params.get('iRowOffset')));
+        query.addAll(client.makeParam('sFilter', (String) params.get('sFilter')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUsergroupGetListV1Response) client.invoke(
+            'GET', '/1/object/usergroup/getList', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>{
+                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
+            },
+            new List<String>{ 'application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASUsergroupGetListV1Response.class
+        );
+    }
+    /**
+     * Retrieve an existing Usergroup\&#39;s members
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return OASUsergroupGetMembersV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUsergroupGetMembersV1Response usergroupGetMembersV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUsergroupGetMembersV1Response) client.invoke(
+            'GET', '/1/object/usergroup/{pkiUsergroupID}/getMembers', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASUsergroupGetMembersV1Response.class
+        );
+    }
+    /**
+     * Retrieve an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return OASUsergroupGetObjectV2Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUsergroupGetObjectV2Response usergroupGetObjectV2(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUsergroupGetObjectV2Response) client.invoke(
+            'GET', '/2/object/usergroup/{pkiUsergroupID}', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASUsergroupGetObjectV2Response.class
         );
     }
 }

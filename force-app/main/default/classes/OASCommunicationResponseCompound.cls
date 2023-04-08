@@ -40,6 +40,12 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
     public String sCommunicationSubject { get; set; }
 
     /**
+     * The url of the body used as body in the Communication
+     * @return sCommunicationBodyurl
+     */
+    public String sCommunicationBodyurl { get; set; }
+
+    /**
      * Get eCommunicationDirection
      * @return eCommunicationDirection
      */
@@ -52,10 +58,22 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
     public Integer iCommunicationrecipientCount { get; set; }
 
     /**
-     * Get objContactFrom
-     * @return objContactFrom
+     * Get objDescriptionstaticSender
+     * @return objDescriptionstaticSender
      */
-    public OASCustomContactNameResponse objContactFrom { get; set; }
+    public OASDescriptionstaticResponse objDescriptionstaticSender { get; set; }
+
+    /**
+     * Get objEmailstaticSender
+     * @return objEmailstaticSender
+     */
+    public OASEmailstaticResponse objEmailstaticSender { get; set; }
+
+    /**
+     * Get objPhonestaticSender
+     * @return objPhonestaticSender
+     */
+    public OASPhonestaticResponse objPhonestaticSender { get; set; }
 
     /**
      * Get objAudit
@@ -123,9 +141,12 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
           communicationResponseCompound.eCommunicationImportance = OASFieldECommunicationImportance.getExample();
           communicationResponseCompound.eCommunicationType = OASFieldECommunicationType.getExample();
           communicationResponseCompound.sCommunicationSubject = 'This is an example of subject';
+          communicationResponseCompound.sCommunicationBodyurl = 'http://www.example.com/4526.html';
           communicationResponseCompound.eCommunicationDirection = OASComputedECommunicationDirection.getExample();
           communicationResponseCompound.iCommunicationrecipientCount = 8;
-          communicationResponseCompound.objContactFrom = OASCustomContactNameResponse.getExample();
+          communicationResponseCompound.objDescriptionstaticSender = OASDescriptionstaticResponse.getExample();
+          communicationResponseCompound.objEmailstaticSender = OASEmailstaticResponse.getExample();
+          communicationResponseCompound.objPhonestaticSender = OASPhonestaticResponse.getExample();
           communicationResponseCompound.objAudit = OASCommonAudit.getExample();
           communicationResponseCompound.aObjCommunicationattachment = new List<OASCommunicationattachmentResponseCo>{OASCommunicationattachmentResponseCo.getExample()};
           communicationResponseCompound.aObjCommunicationrecipient = new List<OASCommunicationrecipientResponseCom>{OASCommunicationrecipientResponseCom.getExample()};
@@ -140,9 +161,12 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
                 && this.eCommunicationImportance == communicationResponseCompound.eCommunicationImportance
                 && this.eCommunicationType == communicationResponseCompound.eCommunicationType
                 && this.sCommunicationSubject == communicationResponseCompound.sCommunicationSubject
+                && this.sCommunicationBodyurl == communicationResponseCompound.sCommunicationBodyurl
                 && this.eCommunicationDirection == communicationResponseCompound.eCommunicationDirection
                 && this.iCommunicationrecipientCount == communicationResponseCompound.iCommunicationrecipientCount
-                && this.objContactFrom == communicationResponseCompound.objContactFrom
+                && this.objDescriptionstaticSender == communicationResponseCompound.objDescriptionstaticSender
+                && this.objEmailstaticSender == communicationResponseCompound.objEmailstaticSender
+                && this.objPhonestaticSender == communicationResponseCompound.objPhonestaticSender
                 && this.objAudit == communicationResponseCompound.objAudit
                 && this.aObjCommunicationattachment == communicationResponseCompound.aObjCommunicationattachment
                 && this.aObjCommunicationrecipient == communicationResponseCompound.aObjCommunicationrecipient
@@ -157,9 +181,12 @@ public class OASCommunicationResponseCompound implements OASCommunicationRespons
         hashCode = (17 * hashCode) + (eCommunicationImportance == null ? 0 : System.hashCode(eCommunicationImportance));
         hashCode = (17 * hashCode) + (eCommunicationType == null ? 0 : System.hashCode(eCommunicationType));
         hashCode = (17 * hashCode) + (sCommunicationSubject == null ? 0 : System.hashCode(sCommunicationSubject));
+        hashCode = (17 * hashCode) + (sCommunicationBodyurl == null ? 0 : System.hashCode(sCommunicationBodyurl));
         hashCode = (17 * hashCode) + (eCommunicationDirection == null ? 0 : System.hashCode(eCommunicationDirection));
         hashCode = (17 * hashCode) + (iCommunicationrecipientCount == null ? 0 : System.hashCode(iCommunicationrecipientCount));
-        hashCode = (17 * hashCode) + (objContactFrom == null ? 0 : System.hashCode(objContactFrom));
+        hashCode = (17 * hashCode) + (objDescriptionstaticSender == null ? 0 : System.hashCode(objDescriptionstaticSender));
+        hashCode = (17 * hashCode) + (objEmailstaticSender == null ? 0 : System.hashCode(objEmailstaticSender));
+        hashCode = (17 * hashCode) + (objPhonestaticSender == null ? 0 : System.hashCode(objPhonestaticSender));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         hashCode = (17 * hashCode) + (aObjCommunicationattachment == null ? 0 : System.hashCode(aObjCommunicationattachment));
         hashCode = (17 * hashCode) + (aObjCommunicationrecipient == null ? 0 : System.hashCode(aObjCommunicationrecipient));

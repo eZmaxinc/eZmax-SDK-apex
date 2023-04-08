@@ -33,43 +33,6 @@ public class OASObjectEzsigntsarequirementApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return OASCommonGetAutocompleteDisabledV1Re
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASCommonGetAutocompleteDisabledV1Re ezsigntsarequirementGetAutocompleteV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('sSelector'), 'sSelector');
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('fkiEzsignfoldertypeID', (Integer) params.get('fkiEzsignfoldertypeID')));
-        query.addAll(client.makeParam('eFilterActive', (String) params.get('eFilterActive')));
-        query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASCommonGetAutocompleteDisabledV1Re) client.invoke(
-            'GET', '/1/object/ezsigntsarequirement/getAutocomplete/{sSelector}', '',
-            query, form,
-            new Map<String, Object>{
-                'sSelector' => (String) params.get('sSelector')
-            },
-            new Map<String, Object>{
-                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
-            },
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASCommonGetAutocompleteDisabledV1Re.class
-        );
-    }
-    /**
-     * Retrieve Ezsigntsarequirements and IDs
-     * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Ezsigntsarequirements to return (required)
-     * @param fkiEzsignfoldertypeID  (optional)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
      * @return OASEzsigntsarequirementGetAutocomple
      * @throws OAS.ApiException if fails to make API call
      */

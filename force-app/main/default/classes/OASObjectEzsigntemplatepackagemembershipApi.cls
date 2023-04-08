@@ -81,31 +81,6 @@ public class OASObjectEzsigntemplatepackagemembershipApi {
      * @return OASEzsigntemplatepackagemembershipGe
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsigntemplatepackagemembershipID'), 'pkiEzsigntemplatepackagemembershipID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsigntemplatepackagemembershipGe) client.invoke(
-            'GET', '/1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsigntemplatepackagemembershipID' => (Integer) params.get('pkiEzsigntemplatepackagemembershipID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsigntemplatepackagemembershipGe.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsigntemplatepackagemembership
-     * 
-     * @param pkiEzsigntemplatepackagemembershipID  (required)
-     * @return OASEzsigntemplatepackagemembershipGe
-     * @throws OAS.ApiException if fails to make API call
-     */
     public OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2(Map<String, Object> params) {
         client.assertNotNull(params.get('pkiEzsigntemplatepackagemembershipID'), 'pkiEzsigntemplatepackagemembershipID');
         List<OAS.Param> query = new List<OAS.Param>();

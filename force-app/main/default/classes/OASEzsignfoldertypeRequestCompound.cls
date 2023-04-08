@@ -242,8 +242,8 @@ public class OASEzsignfoldertypeRequestCompound implements OASEzsignfoldertypeRe
           ezsignfoldertypeRequestCompound.objEzsignfoldertypeName = OASMultilingualEzsignfoldertypeName.getExample();
           ezsignfoldertypeRequestCompound.fkiBrandingID = 78;
           ezsignfoldertypeRequestCompound.fkiBillingentityinternalID = 1;
-          ezsignfoldertypeRequestCompound.fkiUsergroupID = 89;
-          ezsignfoldertypeRequestCompound.fkiUsergroupIDRestricted = 89;
+          ezsignfoldertypeRequestCompound.fkiUsergroupID = 2;
+          ezsignfoldertypeRequestCompound.fkiUsergroupIDRestricted = 2;
           ezsignfoldertypeRequestCompound.fkiEzsigntsarequirementID = 1;
           ezsignfoldertypeRequestCompound.sEmailAddressSigned = 'email@example.com';
           ezsignfoldertypeRequestCompound.sEmailAddressSummary = 'email@example.com';

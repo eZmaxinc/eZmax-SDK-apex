@@ -106,31 +106,6 @@ public class OASObjectEzsigntemplatesignerApi {
      * Retrieve an existing Ezsigntemplatesigner
      * 
      * @param pkiEzsigntemplatesignerID  (required)
-     * @return OASEzsigntemplatesignerGetObjectV1Re
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASEzsigntemplatesignerGetObjectV1Re ezsigntemplatesignerGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsigntemplatesignerID'), 'pkiEzsigntemplatesignerID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsigntemplatesignerGetObjectV1Re) client.invoke(
-            'GET', '/1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsigntemplatesignerID' => (Integer) params.get('pkiEzsigntemplatesignerID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsigntemplatesignerGetObjectV1Re.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsigntemplatesigner
-     * 
-     * @param pkiEzsigntemplatesignerID  (required)
      * @return OASEzsigntemplatesignerGetObjectV2Re
      * @throws OAS.ApiException if fails to make API call
      */

@@ -286,6 +286,42 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Flatten
+     *
+     * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     */
+    @isTest
+    private static void ezsigndocumentFlattenV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'body' => 
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentFlattenV1Response response;
+        OASEzsigndocumentFlattenV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentFlattenV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentFlattenV1Response.getExample();
+        response = (OASEzsigndocumentFlattenV1Response) api.ezsigndocumentFlattenV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve actionable elements for the Ezsigndocument
      *
      * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
@@ -357,6 +393,41 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsigndocument\&#39;s Ezsignannotations
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigndocumentGetEzsignannotationsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetEzsignannotation response;
+        OASEzsigndocumentGetEzsignannotation expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetEzsignannotation.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetEzsignannotation.getExample();
+        response = (OASEzsigndocumentGetEzsignannotation) api.ezsigndocumentGetEzsignannotationsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Ezsigndocument\&#39;s Ezsignformfieldgroups
      *
      * 
@@ -423,6 +494,41 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentGetEzsignpagesV1Res.getExample();
         response = (OASEzsigndocumentGetEzsignpagesV1Res) api.ezsigndocumentGetEzsignpagesV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument\&#39;s automatic Ezsignsignatures
+     *
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     */
+    @isTest
+    private static void ezsigndocumentGetEzsignsignaturesAutomaticV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentGetEzsignsignatures response;
+        OASEzsigndocumentGetEzsignsignatures expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentGetEzsignsignatures.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentGetEzsignsignatures.getExample();
+        response = (OASEzsigndocumentGetEzsignsignatures) api.ezsigndocumentGetEzsignsignaturesAutomaticV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

@@ -134,6 +134,34 @@ public class OASObjectEzsigntemplatedocumentApi {
         );
     }
     /**
+     * Flatten
+     * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     * @param pkiEzsigntemplatedocumentID  (required)
+     * @param body  (required)
+     * @return OASEzsigntemplatedocumentFlattenV1Re
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigntemplatedocumentFlattenV1Re ezsigntemplatedocumentFlattenV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigntemplatedocumentID'), 'pkiEzsigntemplatedocumentID');
+        client.assertNotNull(params.get('body'), 'body');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigntemplatedocumentFlattenV1Re) client.invoke(
+            'POST', '/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten',
+            (Object) params.get('body'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigntemplatedocumentID' => (Integer) params.get('pkiEzsigntemplatedocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASEzsigntemplatedocumentFlattenV1Re.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsigntemplatedocument\&#39;s Ezsigntemplatedocumentpages
      * 
      * @param pkiEzsigntemplatedocumentID  (required)
@@ -206,31 +234,6 @@ public class OASObjectEzsigntemplatedocumentApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsigntemplatedocumentGetEzsignte.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsigntemplatedocument
-     * 
-     * @param pkiEzsigntemplatedocumentID  (required)
-     * @return OASEzsigntemplatedocumentGetObjectV1
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASEzsigntemplatedocumentGetObjectV1 ezsigntemplatedocumentGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsigntemplatedocumentID'), 'pkiEzsigntemplatedocumentID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsigntemplatedocumentGetObjectV1) client.invoke(
-            'GET', '/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsigntemplatedocumentID' => (Integer) params.get('pkiEzsigntemplatedocumentID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsigntemplatedocumentGetObjectV1.class
         );
     }
     /**

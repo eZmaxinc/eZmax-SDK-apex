@@ -88,9 +88,12 @@ private class OASCommunicationResponseCompoundTest {
         System.assertEquals(null, communicationResponseCompound.eCommunicationImportance);
         System.assertEquals(null, communicationResponseCompound.eCommunicationType);
         System.assertEquals(null, communicationResponseCompound.sCommunicationSubject);
+        System.assertEquals(null, communicationResponseCompound.sCommunicationBodyurl);
         System.assertEquals(null, communicationResponseCompound.eCommunicationDirection);
         System.assertEquals(null, communicationResponseCompound.iCommunicationrecipientCount);
-        System.assertEquals(null, communicationResponseCompound.objContactFrom);
+        System.assertEquals(null, communicationResponseCompound.objDescriptionstaticSender);
+        System.assertEquals(null, communicationResponseCompound.objEmailstaticSender);
+        System.assertEquals(null, communicationResponseCompound.objPhonestaticSender);
         System.assertEquals(null, communicationResponseCompound.objAudit);
     }
 }

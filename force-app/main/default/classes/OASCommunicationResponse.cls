@@ -40,6 +40,12 @@ public class OASCommunicationResponse {
     public String sCommunicationSubject { get; set; }
 
     /**
+     * The url of the body used as body in the Communication
+     * @return sCommunicationBodyurl
+     */
+    public String sCommunicationBodyurl { get; set; }
+
+    /**
      * Get eCommunicationDirection
      * @return eCommunicationDirection
      */
@@ -52,10 +58,22 @@ public class OASCommunicationResponse {
     public Integer iCommunicationrecipientCount { get; set; }
 
     /**
-     * Get objContactFrom
-     * @return objContactFrom
+     * Get objDescriptionstaticSender
+     * @return objDescriptionstaticSender
      */
-    public OASCustomContactNameResponse objContactFrom { get; set; }
+    public OASDescriptionstaticResponse objDescriptionstaticSender { get; set; }
+
+    /**
+     * Get objEmailstaticSender
+     * @return objEmailstaticSender
+     */
+    public OASEmailstaticResponse objEmailstaticSender { get; set; }
+
+    /**
+     * Get objPhonestaticSender
+     * @return objPhonestaticSender
+     */
+    public OASPhonestaticResponse objPhonestaticSender { get; set; }
 
     /**
      * Get objAudit
@@ -69,9 +87,12 @@ public class OASCommunicationResponse {
           communicationResponse.eCommunicationImportance = OASFieldECommunicationImportance.getExample();
           communicationResponse.eCommunicationType = OASFieldECommunicationType.getExample();
           communicationResponse.sCommunicationSubject = 'This is an example of subject';
+          communicationResponse.sCommunicationBodyurl = 'http://www.example.com/4526.html';
           communicationResponse.eCommunicationDirection = OASComputedECommunicationDirection.getExample();
           communicationResponse.iCommunicationrecipientCount = 8;
-          communicationResponse.objContactFrom = OASCustomContactNameResponse.getExample();
+          communicationResponse.objDescriptionstaticSender = OASDescriptionstaticResponse.getExample();
+          communicationResponse.objEmailstaticSender = OASEmailstaticResponse.getExample();
+          communicationResponse.objPhonestaticSender = OASPhonestaticResponse.getExample();
           communicationResponse.objAudit = OASCommonAudit.getExample();
         return communicationResponse;
     }
@@ -83,9 +104,12 @@ public class OASCommunicationResponse {
                 && this.eCommunicationImportance == communicationResponse.eCommunicationImportance
                 && this.eCommunicationType == communicationResponse.eCommunicationType
                 && this.sCommunicationSubject == communicationResponse.sCommunicationSubject
+                && this.sCommunicationBodyurl == communicationResponse.sCommunicationBodyurl
                 && this.eCommunicationDirection == communicationResponse.eCommunicationDirection
                 && this.iCommunicationrecipientCount == communicationResponse.iCommunicationrecipientCount
-                && this.objContactFrom == communicationResponse.objContactFrom
+                && this.objDescriptionstaticSender == communicationResponse.objDescriptionstaticSender
+                && this.objEmailstaticSender == communicationResponse.objEmailstaticSender
+                && this.objPhonestaticSender == communicationResponse.objPhonestaticSender
                 && this.objAudit == communicationResponse.objAudit;
         }
         return false;
@@ -97,9 +121,12 @@ public class OASCommunicationResponse {
         hashCode = (17 * hashCode) + (eCommunicationImportance == null ? 0 : System.hashCode(eCommunicationImportance));
         hashCode = (17 * hashCode) + (eCommunicationType == null ? 0 : System.hashCode(eCommunicationType));
         hashCode = (17 * hashCode) + (sCommunicationSubject == null ? 0 : System.hashCode(sCommunicationSubject));
+        hashCode = (17 * hashCode) + (sCommunicationBodyurl == null ? 0 : System.hashCode(sCommunicationBodyurl));
         hashCode = (17 * hashCode) + (eCommunicationDirection == null ? 0 : System.hashCode(eCommunicationDirection));
         hashCode = (17 * hashCode) + (iCommunicationrecipientCount == null ? 0 : System.hashCode(iCommunicationrecipientCount));
-        hashCode = (17 * hashCode) + (objContactFrom == null ? 0 : System.hashCode(objContactFrom));
+        hashCode = (17 * hashCode) + (objDescriptionstaticSender == null ? 0 : System.hashCode(objDescriptionstaticSender));
+        hashCode = (17 * hashCode) + (objEmailstaticSender == null ? 0 : System.hashCode(objEmailstaticSender));
+        hashCode = (17 * hashCode) + (objPhonestaticSender == null ? 0 : System.hashCode(objPhonestaticSender));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         return hashCode;
     }

@@ -132,10 +132,22 @@ public class OASEzsigndocumentResponse {
     public Boolean bEzsigndocumentEzsignform { get; set; }
 
     /**
+     * If the Ezsigndocument contains signed signatures (From internal or external sources)
+     * @return bEzsigndocumentHassignedsignatures
+     */
+    public Boolean bEzsigndocumentHassignedsignatures { get; set; }
+
+    /**
      * Get objAudit
      * @return objAudit
      */
     public OASCommonAudit objAudit { get; set; }
+
+    /**
+     * This field can be used to store an External ID from the client\'s system.\n\nAnything can be stored in this field, it will never be evaluated by the eZmax system and will be returned\nAS-IS.\n\nTo store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.\n
+     * @return sEzsigndocumentExternalid
+     */
+    public String sEzsigndocumentExternalid { get; set; }
 
     public static OASEzsigndocumentResponse getExample() {
         OASEzsigndocumentResponse ezsigndocumentResponse = new OASEzsigndocumentResponse();
@@ -157,7 +169,9 @@ public class OASEzsigndocumentResponse {
           ezsigndocumentResponse.tEzsigndocumentDeclinedtosignreason = 'The conditions in the contract are different than those discuted';
           ezsigndocumentResponse.sEzsigndocumentMD5signed = '012345678901234567890123456789AB';
           ezsigndocumentResponse.bEzsigndocumentEzsignform = true;
+          ezsigndocumentResponse.bEzsigndocumentHassignedsignatures = true;
           ezsigndocumentResponse.objAudit = OASCommonAudit.getExample();
+          ezsigndocumentResponse.sEzsigndocumentExternalid = '{"ID": 1234, "TAGS": ["tag1", "tag2", "tag3"]}';
         return ezsigndocumentResponse;
     }
 
@@ -182,7 +196,9 @@ public class OASEzsigndocumentResponse {
                 && this.tEzsigndocumentDeclinedtosignreason == ezsigndocumentResponse.tEzsigndocumentDeclinedtosignreason
                 && this.sEzsigndocumentMD5signed == ezsigndocumentResponse.sEzsigndocumentMD5signed
                 && this.bEzsigndocumentEzsignform == ezsigndocumentResponse.bEzsigndocumentEzsignform
-                && this.objAudit == ezsigndocumentResponse.objAudit;
+                && this.bEzsigndocumentHassignedsignatures == ezsigndocumentResponse.bEzsigndocumentHassignedsignatures
+                && this.objAudit == ezsigndocumentResponse.objAudit
+                && this.sEzsigndocumentExternalid == ezsigndocumentResponse.sEzsigndocumentExternalid;
         }
         return false;
     }
@@ -207,7 +223,9 @@ public class OASEzsigndocumentResponse {
         hashCode = (17 * hashCode) + (tEzsigndocumentDeclinedtosignreason == null ? 0 : System.hashCode(tEzsigndocumentDeclinedtosignreason));
         hashCode = (17 * hashCode) + (sEzsigndocumentMD5signed == null ? 0 : System.hashCode(sEzsigndocumentMD5signed));
         hashCode = (17 * hashCode) + (bEzsigndocumentEzsignform == null ? 0 : System.hashCode(bEzsigndocumentEzsignform));
+        hashCode = (17 * hashCode) + (bEzsigndocumentHassignedsignatures == null ? 0 : System.hashCode(bEzsigndocumentHassignedsignatures));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
+        hashCode = (17 * hashCode) + (sEzsigndocumentExternalid == null ? 0 : System.hashCode(sEzsigndocumentExternalid));
         return hashCode;
     }
 }

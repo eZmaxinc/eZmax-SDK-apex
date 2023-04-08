@@ -81,31 +81,6 @@ public class OASObjectEzsignbulksendsignermappingApi {
      * @return OASEzsignbulksendsignermappingGetObj
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASEzsignbulksendsignermappingGetObj ezsignbulksendsignermappingGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsignbulksendsignermappingID'), 'pkiEzsignbulksendsignermappingID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsignbulksendsignermappingGetObj) client.invoke(
-            'GET', '/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsignbulksendsignermappingID' => (Integer) params.get('pkiEzsignbulksendsignermappingID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsignbulksendsignermappingGetObj.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsignbulksendsignermapping
-     * 
-     * @param pkiEzsignbulksendsignermappingID  (required)
-     * @return OASEzsignbulksendsignermappingGetObj
-     * @throws OAS.ApiException if fails to make API call
-     */
     public OASEzsignbulksendsignermappingGetObj ezsignbulksendsignermappingGetObjectV2(Map<String, Object> params) {
         client.assertNotNull(params.get('pkiEzsignbulksendsignermappingID'), 'pkiEzsignbulksendsignermappingID');
         List<OAS.Param> query = new List<OAS.Param>();

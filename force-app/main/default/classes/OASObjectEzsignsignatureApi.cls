@@ -127,28 +127,24 @@ public class OASObjectEzsignsignatureApi {
         );
     }
     /**
-     * Retrieve an existing Ezsignsignature
-     * 
-     * @param pkiEzsignsignatureID  (required)
-     * @return OASEzsignsignatureGetObjectV1Respons
+     * Retrieve all automatic Ezsignsignatures
+     * Return all the Ezsignsignatures that can be signed by the current user
+     * @return OASEzsignsignatureGetEzsignsignature
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASEzsignsignatureGetObjectV1Respons ezsignsignatureGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsignsignatureID'), 'pkiEzsignsignatureID');
+    public OASEzsignsignatureGetEzsignsignature ezsignsignatureGetEzsignsignaturesAutomaticV1() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASEzsignsignatureGetObjectV1Respons) client.invoke(
-            'GET', '/1/object/ezsignsignature/{pkiEzsignsignatureID}', '',
+        return (OASEzsignsignatureGetEzsignsignature) client.invoke(
+            'GET', '/1/object/ezsignsignature/getEzsignsignaturesAutomatic', '',
             query, form,
-            new Map<String, Object>{
-                'pkiEzsignsignatureID' => (Integer) params.get('pkiEzsignsignatureID')
-            },
+            new Map<String, Object>(),
             new Map<String, Object>(),
             new List<String>{ 'application/json' },
             new List<String>(),
             new List<String> { 'Authorization' },
-            OASEzsignsignatureGetObjectV1Respons.class
+            OASEzsignsignatureGetEzsignsignature.class
         );
     }
     /**

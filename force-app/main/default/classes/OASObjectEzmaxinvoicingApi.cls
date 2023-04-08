@@ -99,31 +99,6 @@ public class OASObjectEzmaxinvoicingApi {
      * Retrieve an existing Ezmaxinvoicing
      * 
      * @param pkiEzmaxinvoicingID  (required)
-     * @return OASEzmaxinvoicingGetObjectV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASEzmaxinvoicingGetObjectV1Response ezmaxinvoicingGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzmaxinvoicingID'), 'pkiEzmaxinvoicingID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzmaxinvoicingGetObjectV1Response) client.invoke(
-            'GET', '/1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzmaxinvoicingID' => (Integer) params.get('pkiEzmaxinvoicingID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzmaxinvoicingGetObjectV1Response.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezmaxinvoicing
-     * 
-     * @param pkiEzmaxinvoicingID  (required)
      * @return OASEzmaxinvoicingGetObjectV2Response
      * @throws OAS.ApiException if fails to make API call
      */

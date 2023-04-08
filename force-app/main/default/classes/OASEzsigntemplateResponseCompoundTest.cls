@@ -88,6 +88,7 @@ private class OASEzsigntemplateResponseCompoundTest {
         System.assertEquals(null, ezsigntemplateResponseCompound.sEzsigntemplateDescription);
         System.assertEquals(null, ezsigntemplateResponseCompound.bEzsigntemplateAdminonly);
         System.assertEquals(null, ezsigntemplateResponseCompound.sEzsignfoldertypeNameX);
+        System.assertEquals(null, ezsigntemplateResponseCompound.objAudit);
         System.assertEquals(null, ezsigntemplateResponseCompound.objEzsigntemplatedocument);
     }
 }

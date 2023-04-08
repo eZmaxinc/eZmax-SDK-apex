@@ -137,41 +137,6 @@ public class OASObjectEzsigntemplatepackageApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
-     * @return OASCommonGetAutocompleteDisabledV1Re
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASCommonGetAutocompleteDisabledV1Re ezsigntemplatepackageGetAutocompleteV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('sSelector'), 'sSelector');
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('eFilterActive', (String) params.get('eFilterActive')));
-        query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASCommonGetAutocompleteDisabledV1Re) client.invoke(
-            'GET', '/1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}', '',
-            query, form,
-            new Map<String, Object>{
-                'sSelector' => (String) params.get('sSelector')
-            },
-            new Map<String, Object>{
-                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
-            },
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASCommonGetAutocompleteDisabledV1Re.class
-        );
-    }
-    /**
-     * Retrieve Ezsigntemplatepackages and IDs
-     * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Ezsigntemplatepackages to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
      * @return OASEzsigntemplatepackageGetAutocompl
      * @throws OAS.ApiException if fails to make API call
      */
@@ -233,31 +198,6 @@ public class OASObjectEzsigntemplatepackageApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASEzsigntemplatepackageGetListV1Res.class
-        );
-    }
-    /**
-     * Retrieve an existing Ezsigntemplatepackage
-     * 
-     * @param pkiEzsigntemplatepackageID  (required)
-     * @return OASEzsigntemplatepackageGetObjectV1R
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASEzsigntemplatepackageGetObjectV1R ezsigntemplatepackageGetObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiEzsigntemplatepackageID'), 'pkiEzsigntemplatepackageID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASEzsigntemplatepackageGetObjectV1R) client.invoke(
-            'GET', '/1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiEzsigntemplatepackageID' => (Integer) params.get('pkiEzsigntemplatepackageID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASEzsigntemplatepackageGetObjectV1R.class
         );
     }
     /**

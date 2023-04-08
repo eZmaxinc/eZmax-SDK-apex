@@ -237,8 +237,8 @@ public class OASEzsignfoldertypeResponse {
           ezsignfoldertypeResponse.objEzsignfoldertypeName = OASMultilingualEzsignfoldertypeName.getExample();
           ezsignfoldertypeResponse.fkiBrandingID = 78;
           ezsignfoldertypeResponse.fkiBillingentityinternalID = 1;
-          ezsignfoldertypeResponse.fkiUsergroupID = 89;
-          ezsignfoldertypeResponse.fkiUsergroupIDRestricted = 89;
+          ezsignfoldertypeResponse.fkiUsergroupID = 2;
+          ezsignfoldertypeResponse.fkiUsergroupIDRestricted = 2;
           ezsignfoldertypeResponse.fkiEzsigntsarequirementID = 1;
           ezsignfoldertypeResponse.sBrandingDescriptionX = 'Company X';
           ezsignfoldertypeResponse.sBillingentityinternalDescriptionX = 'Default';
