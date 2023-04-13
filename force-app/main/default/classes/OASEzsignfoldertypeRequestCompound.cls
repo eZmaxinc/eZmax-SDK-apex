@@ -43,14 +43,16 @@ public class OASEzsignfoldertypeRequestCompound implements OASEzsignfoldertypeRe
 
     /**
      * The unique ID of the Usergroup
-     * minimum: 0
+     * minimum: 1
+     * maximum: 255
      * @return fkiUsergroupID
      */
     public Integer fkiUsergroupID { get; set; }
 
     /**
      * The unique ID of the Usergroup
-     * minimum: 0
+     * minimum: 1
+     * maximum: 255
      * @return fkiUsergroupIDRestricted
      */
     public Integer fkiUsergroupIDRestricted { get; set; }

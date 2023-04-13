@@ -63,7 +63,7 @@ public class OASPaymenttermResponse {
           paymenttermResponse.pkiPaymenttermID = 46;
           paymenttermResponse.sPaymenttermCode = '0030';
           paymenttermResponse.ePaymenttermType = OASFieldEPaymenttermType.getExample();
-          paymenttermResponse.iPaymenttermDay = 5;
+          paymenttermResponse.iPaymenttermDay = 30;
           paymenttermResponse.objPaymenttermDescription = OASMultilingualPaymenttermDescriptio.getExample();
           paymenttermResponse.bPaymenttermIsactive = true;
           paymenttermResponse.objAudit = OASCommonAudit.getExample();

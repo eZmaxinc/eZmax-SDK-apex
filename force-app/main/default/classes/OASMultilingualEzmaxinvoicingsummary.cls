@@ -15,13 +15,13 @@
  */
 public class OASMultilingualEzmaxinvoicingsummary {
     /**
-     * The Ezmaxinvoicingsummaryinternal description in french
+     * The Ezmaxinvoicingsummaryinternal description in French
      * @return sEzmaxinvoicingsummaryinternalDescription1
      */
     public String sEzmaxinvoicingsummaryinternalDescription1 { get; set; }
 
     /**
-     * The Ezmaxinvoicingsummaryinternal description in english
+     * The Ezmaxinvoicingsummaryinternal description in English
      * @return sEzmaxinvoicingsummaryinternalDescription2
      */
     public String sEzmaxinvoicingsummaryinternalDescription2 { get; set; }

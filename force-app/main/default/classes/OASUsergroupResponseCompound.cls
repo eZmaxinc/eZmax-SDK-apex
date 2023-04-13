@@ -16,7 +16,8 @@
 public class OASUsergroupResponseCompound implements OASUsergroupResponse {
     /**
      * The unique ID of the Usergroup
-     * minimum: 0
+     * minimum: 1
+     * maximum: 255
      * @return pkiUsergroupID
      */
     public Integer pkiUsergroupID { get; set; }

@@ -57,7 +57,7 @@ public class OASPaymenttermRequest {
           paymenttermRequest.pkiPaymenttermID = 46;
           paymenttermRequest.sPaymenttermCode = '0030';
           paymenttermRequest.ePaymenttermType = OASFieldEPaymenttermType.getExample();
-          paymenttermRequest.iPaymenttermDay = 5;
+          paymenttermRequest.iPaymenttermDay = 30;
           paymenttermRequest.objPaymenttermDescription = OASMultilingualPaymenttermDescriptio.getExample();
           paymenttermRequest.bPaymenttermIsactive = true;
         return paymenttermRequest;

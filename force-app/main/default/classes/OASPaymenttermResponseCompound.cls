@@ -63,7 +63,7 @@ public class OASPaymenttermResponseCompound implements OASPaymenttermResponse {
           paymenttermResponseCompound.pkiPaymenttermID = 46;
           paymenttermResponseCompound.sPaymenttermCode = '0030';
           paymenttermResponseCompound.ePaymenttermType = OASFieldEPaymenttermType.getExample();
-          paymenttermResponseCompound.iPaymenttermDay = 5;
+          paymenttermResponseCompound.iPaymenttermDay = 30;
           paymenttermResponseCompound.objPaymenttermDescription = OASMultilingualPaymenttermDescriptio.getExample();
           paymenttermResponseCompound.bPaymenttermIsactive = true;
           paymenttermResponseCompound.objAudit = OASCommonAudit.getExample();

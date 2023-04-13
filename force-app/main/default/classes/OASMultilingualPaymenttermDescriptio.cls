@@ -15,13 +15,13 @@
  */
 public class OASMultilingualPaymenttermDescriptio {
     /**
-     * The description of the Paymentterm in french
+     * The description of the Paymentterm in French
      * @return sPaymenttermDescription1
      */
     public String sPaymenttermDescription1 { get; set; }
 
     /**
-     * The description of the Paymentterm in english
+     * The description of the Paymentterm in English
      * @return sPaymenttermDescription2
      */
     public String sPaymenttermDescription2 { get; set; }
