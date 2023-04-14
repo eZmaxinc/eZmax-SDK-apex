@@ -50,31 +50,6 @@ public class OASObjectUsergroupApi {
         );
     }
     /**
-     * Delete an existing Usergroup
-     * 
-     * @param pkiUsergroupID The unique ID of the Usergroup (required)
-     * @return OASUsergroupDeleteObjectV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASUsergroupDeleteObjectV1Response usergroupDeleteObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASUsergroupDeleteObjectV1Response) client.invoke(
-            'DELETE', '/1/object/usergroup/{pkiUsergroupID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASUsergroupDeleteObjectV1Response.class
-        );
-    }
-    /**
      * Edit an existing Usergroup
      * 
      * @param pkiUsergroupID The unique ID of the Usergroup (required)
@@ -170,31 +145,6 @@ public class OASObjectUsergroupApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASUsergroupGetListV1Response.class
-        );
-    }
-    /**
-     * Retrieve an existing Usergroup\&#39;s members
-     * 
-     * @param pkiUsergroupID The unique ID of the Usergroup (required)
-     * @return OASUsergroupGetMembersV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASUsergroupGetMembersV1Response usergroupGetMembersV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASUsergroupGetMembersV1Response) client.invoke(
-            'GET', '/1/object/usergroup/{pkiUsergroupID}/getMembers', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASUsergroupGetMembersV1Response.class
         );
     }
     /**

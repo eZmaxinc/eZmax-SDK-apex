@@ -76,7 +76,6 @@ Class | Method | HTTP request | Description
 *OASObjectApikeyApi* | [**apikeyCreateObjectV2**](OASObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
 *OASObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](OASObjectBillingentityexternalApi.md#billingentityexternalGetAutocompleteV2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *OASObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](OASObjectBillingentityinternalApi.md#billingentityinternalCreateObjectV1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
-*OASObjectBillingentityinternalApi* | [**billingentityinternalDeleteObjectV1**](OASObjectBillingentityinternalApi.md#billingentityinternalDeleteObjectV1) | **DELETE** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Delete an existing Billingentityinternal
 *OASObjectBillingentityinternalApi* | [**billingentityinternalEditObjectV1**](OASObjectBillingentityinternalApi.md#billingentityinternalEditObjectV1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
 *OASObjectBillingentityinternalApi* | [**billingentityinternalGetAutocompleteV2**](OASObjectBillingentityinternalApi.md#billingentityinternalGetAutocompleteV2) | **GET** /2/object/billingentityinternal/getAutocomplete/{sSelector} | Retrieve Billingentityinternals and IDs
 *OASObjectBillingentityinternalApi* | [**billingentityinternalGetListV1**](OASObjectBillingentityinternalApi.md#billingentityinternalGetListV1) | **GET** /1/object/billingentityinternal/getList | Retrieve Billingentityinternal list
@@ -88,7 +87,6 @@ Class | Method | HTTP request | Description
 *OASObjectBrandingApi* | [**brandingGetObjectV2**](OASObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *OASObjectCommunicationApi* | [**communicationGetObjectV2**](OASObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV2**](OASObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
-*OASObjectDepartmentApi* | [**departmentGetMembersV1**](OASObjectDepartmentApi.md#departmentGetMembersV1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department\&#39;s members
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetObjectV2**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetObjectV2) | **GET** /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID} | Retrieve an existing Ezmaxinvoicing
@@ -247,7 +245,6 @@ Class | Method | HTTP request | Description
 *OASObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](OASObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection\&#39;s Notificationtests
 *OASObjectNotificationtestApi* | [**notificationtestGetElementsV1**](OASObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest\&#39;s Elements
 *OASObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](OASObjectPaymenttermApi.md#paymenttermCreateObjectV1) | **POST** /1/object/paymentterm | Create a new Paymentterm
-*OASObjectPaymenttermApi* | [**paymenttermDeleteObjectV1**](OASObjectPaymenttermApi.md#paymenttermDeleteObjectV1) | **DELETE** /1/object/paymentterm/{pkiPaymenttermID} | Delete an existing Paymentterm
 *OASObjectPaymenttermApi* | [**paymenttermEditObjectV1**](OASObjectPaymenttermApi.md#paymenttermEditObjectV1) | **PUT** /1/object/paymentterm/{pkiPaymenttermID} | Edit an existing Paymentterm
 *OASObjectPaymenttermApi* | [**paymenttermGetAutocompleteV2**](OASObjectPaymenttermApi.md#paymenttermGetAutocompleteV2) | **GET** /2/object/paymentterm/getAutocomplete/{sSelector} | Retrieve Paymentterms and IDs
 *OASObjectPaymenttermApi* | [**paymenttermGetListV1**](OASObjectPaymenttermApi.md#paymenttermGetListV1) | **GET** /1/object/paymentterm/getList | Retrieve Paymentterm list
@@ -259,14 +256,11 @@ Class | Method | HTTP request | Description
 *OASObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](OASObjectTimezoneApi.md#timezoneGetAutocompleteV2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
 *OASObjectUserApi* | [**userGetAutocompleteV2**](OASObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
 *OASObjectUsergroupApi* | [**usergroupCreateObjectV1**](OASObjectUsergroupApi.md#usergroupCreateObjectV1) | **POST** /1/object/usergroup | Create a new Usergroup
-*OASObjectUsergroupApi* | [**usergroupDeleteObjectV1**](OASObjectUsergroupApi.md#usergroupDeleteObjectV1) | **DELETE** /1/object/usergroup/{pkiUsergroupID} | Delete an existing Usergroup
 *OASObjectUsergroupApi* | [**usergroupEditObjectV1**](OASObjectUsergroupApi.md#usergroupEditObjectV1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
 *OASObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](OASObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *OASObjectUsergroupApi* | [**usergroupGetListV1**](OASObjectUsergroupApi.md#usergroupGetListV1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
-*OASObjectUsergroupApi* | [**usergroupGetMembersV1**](OASObjectUsergroupApi.md#usergroupGetMembersV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getMembers | Retrieve an existing Usergroup\&#39;s members
 *OASObjectUsergroupApi* | [**usergroupGetObjectV2**](OASObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
 *OASObjectVariableexpenseApi* | [**variableexpenseCreateObjectV1**](OASObjectVariableexpenseApi.md#variableexpenseCreateObjectV1) | **POST** /1/object/variableexpense | Create a new Variableexpense
-*OASObjectVariableexpenseApi* | [**variableexpenseDeleteObjectV1**](OASObjectVariableexpenseApi.md#variableexpenseDeleteObjectV1) | **DELETE** /1/object/variableexpense/{pkiVariableexpenseID} | Delete an existing Variableexpense
 *OASObjectVariableexpenseApi* | [**variableexpenseEditObjectV1**](OASObjectVariableexpenseApi.md#variableexpenseEditObjectV1) | **PUT** /1/object/variableexpense/{pkiVariableexpenseID} | Edit an existing Variableexpense
 *OASObjectVariableexpenseApi* | [**variableexpenseGetAutocompleteV2**](OASObjectVariableexpenseApi.md#variableexpenseGetAutocompleteV2) | **GET** /2/object/variableexpense/getAutocomplete/{sSelector} | Retrieve Variableexpenses and IDs
 *OASObjectVariableexpenseApi* | [**variableexpenseGetListV1**](OASObjectVariableexpenseApi.md#variableexpenseGetListV1) | **GET** /1/object/variableexpense/getList | Retrieve Variableexpense list
@@ -309,7 +303,6 @@ Class | Method | HTTP request | Description
  - [OASBillingentityexternalGetAutocompl](OASBillingentityexternalGetAutocompl.md)
  - [OASBillingentityinternalAutocomplete](OASBillingentityinternalAutocomplete.md)
  - [OASBillingentityinternalCreateObject](OASBillingentityinternalCreateObject.md)
- - [OASBillingentityinternalDeleteObject](OASBillingentityinternalDeleteObject.md)
  - [OASBillingentityinternalEditObjectV1](OASBillingentityinternalEditObjectV1.md)
  - [OASBillingentityinternalGetAutocompl](OASBillingentityinternalGetAutocompl.md)
  - [OASBillingentityinternalGetListV1Res](OASBillingentityinternalGetListV1Res.md)
@@ -408,9 +401,6 @@ Class | Method | HTTP request | Description
  - [OASCustomWordPositionWordResponse](OASCustomWordPositionWordResponse.md)
  - [OASDepartmentAutocompleteElementResp](OASDepartmentAutocompleteElementResp.md)
  - [OASDepartmentGetAutocompleteV2Respon](OASDepartmentGetAutocompleteV2Respon.md)
- - [OASDepartmentGetMembersV1Response](OASDepartmentGetMembersV1Response.md)
- - [OASDepartmentGetMembersV1ResponseAll](OASDepartmentGetMembersV1ResponseAll.md)
- - [OASDepartmentGetMembersV1ResponseMPa](OASDepartmentGetMembersV1ResponseMPa.md)
  - [OASDescriptionstaticResponse](OASDescriptionstaticResponse.md)
  - [OASDescriptionstaticResponseCompound](OASDescriptionstaticResponseCompound.md)
  - [OASEmailRequest](OASEmailRequest.md)
@@ -793,7 +783,6 @@ Class | Method | HTTP request | Description
  - [OASPaymenttermAutocompleteElementRes](OASPaymenttermAutocompleteElementRes.md)
  - [OASPaymenttermCreateObjectV1Request](OASPaymenttermCreateObjectV1Request.md)
  - [OASPaymenttermCreateObjectV1Response](OASPaymenttermCreateObjectV1Response.md)
- - [OASPaymenttermDeleteObjectV1Response](OASPaymenttermDeleteObjectV1Response.md)
  - [OASPaymenttermEditObjectV1Request](OASPaymenttermEditObjectV1Request.md)
  - [OASPaymenttermEditObjectV1Response](OASPaymenttermEditObjectV1Response.md)
  - [OASPaymenttermGetAutocompleteV2Respo](OASPaymenttermGetAutocompleteV2Respo.md)
@@ -839,16 +828,12 @@ Class | Method | HTTP request | Description
  - [OASUsergroupCreateObjectV1Response](OASUsergroupCreateObjectV1Response.md)
  - [OASUsergroupCreateObjectV1ResponseAl](OASUsergroupCreateObjectV1ResponseAl.md)
  - [OASUsergroupCreateObjectV1ResponseMP](OASUsergroupCreateObjectV1ResponseMP.md)
- - [OASUsergroupDeleteObjectV1Response](OASUsergroupDeleteObjectV1Response.md)
  - [OASUsergroupEditObjectV1Request](OASUsergroupEditObjectV1Request.md)
  - [OASUsergroupEditObjectV1Response](OASUsergroupEditObjectV1Response.md)
  - [OASUsergroupGetAutocompleteV2Respons](OASUsergroupGetAutocompleteV2Respons.md)
  - [OASUsergroupGetListV1Response](OASUsergroupGetListV1Response.md)
  - [OASUsergroupGetListV1ResponseAllOf](OASUsergroupGetListV1ResponseAllOf.md)
  - [OASUsergroupGetListV1ResponseMPayloa](OASUsergroupGetListV1ResponseMPayloa.md)
- - [OASUsergroupGetMembersV1Response](OASUsergroupGetMembersV1Response.md)
- - [OASUsergroupGetMembersV1ResponseAllO](OASUsergroupGetMembersV1ResponseAllO.md)
- - [OASUsergroupGetMembersV1ResponseMPay](OASUsergroupGetMembersV1ResponseMPay.md)
  - [OASUsergroupGetObjectV2Response](OASUsergroupGetObjectV2Response.md)
  - [OASUsergroupGetObjectV2ResponseAllOf](OASUsergroupGetObjectV2ResponseAllOf.md)
  - [OASUsergroupGetObjectV2ResponseMPayl](OASUsergroupGetObjectV2ResponseMPayl.md)
@@ -860,7 +845,6 @@ Class | Method | HTTP request | Description
  - [OASVariableexpenseAutocompleteElemen](OASVariableexpenseAutocompleteElemen.md)
  - [OASVariableexpenseCreateObjectV1Requ](OASVariableexpenseCreateObjectV1Requ.md)
  - [OASVariableexpenseCreateObjectV1Resp](OASVariableexpenseCreateObjectV1Resp.md)
- - [OASVariableexpenseDeleteObjectV1Resp](OASVariableexpenseDeleteObjectV1Resp.md)
  - [OASVariableexpenseEditObjectV1Reques](OASVariableexpenseEditObjectV1Reques.md)
  - [OASVariableexpenseEditObjectV1Respon](OASVariableexpenseEditObjectV1Respon.md)
  - [OASVariableexpenseGetAutocompleteV2R](OASVariableexpenseGetAutocompleteV2R.md)

@@ -36,41 +36,6 @@ private class OASObjectUsergroupApiTest {
     }
 
     /**
-     * Delete an existing Usergroup
-     *
-     * 
-     */
-    @isTest
-    private static void usergroupDeleteObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiUsergroupID' => ''
-        };
-
-        OASClient client;
-        OASObjectUsergroupApi api;
-        OASUsergroupDeleteObjectV1Response response;
-        OASUsergroupDeleteObjectV1Response expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectUsergroupApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASUsergroupDeleteObjectV1Response.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASUsergroupDeleteObjectV1Response.getExample();
-        response = (OASUsergroupDeleteObjectV1Response) api.usergroupDeleteObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Edit an existing Usergroup
      *
      * 
@@ -188,41 +153,6 @@ private class OASObjectUsergroupApiTest {
         res.setBody(js);
         expectedResponse = OASUsergroupGetListV1Response.getExample();
         response = (OASUsergroupGetListV1Response) api.usergroupGetListV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
-     * Retrieve an existing Usergroup\&#39;s members
-     *
-     * 
-     */
-    @isTest
-    private static void usergroupGetMembersV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiUsergroupID' => ''
-        };
-
-        OASClient client;
-        OASObjectUsergroupApi api;
-        OASUsergroupGetMembersV1Response response;
-        OASUsergroupGetMembersV1Response expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectUsergroupApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASUsergroupGetMembersV1Response.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASUsergroupGetMembersV1Response.getExample();
-        response = (OASUsergroupGetMembersV1Response) api.usergroupGetMembersV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

@@ -50,31 +50,6 @@ public class OASObjectVariableexpenseApi {
         );
     }
     /**
-     * Delete an existing Variableexpense
-     * 
-     * @param pkiVariableexpenseID The unique ID of the Variableexpense (required)
-     * @return OASVariableexpenseDeleteObjectV1Resp
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASVariableexpenseDeleteObjectV1Resp variableexpenseDeleteObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiVariableexpenseID'), 'pkiVariableexpenseID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASVariableexpenseDeleteObjectV1Resp) client.invoke(
-            'DELETE', '/1/object/variableexpense/{pkiVariableexpenseID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiVariableexpenseID' => (Integer) params.get('pkiVariableexpenseID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASVariableexpenseDeleteObjectV1Resp.class
-        );
-    }
-    /**
      * Edit an existing Variableexpense
      * 
      * @param pkiVariableexpenseID The unique ID of the Variableexpense (required)

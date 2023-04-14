@@ -36,41 +36,6 @@ private class OASObjectPaymenttermApiTest {
     }
 
     /**
-     * Delete an existing Paymentterm
-     *
-     * 
-     */
-    @isTest
-    private static void paymenttermDeleteObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiPaymenttermID' => ''
-        };
-
-        OASClient client;
-        OASObjectPaymenttermApi api;
-        OASPaymenttermDeleteObjectV1Response response;
-        OASPaymenttermDeleteObjectV1Response expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectPaymenttermApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASPaymenttermDeleteObjectV1Response.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASPaymenttermDeleteObjectV1Response.getExample();
-        response = (OASPaymenttermDeleteObjectV1Response) api.paymenttermDeleteObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Edit an existing Paymentterm
      *
      * 

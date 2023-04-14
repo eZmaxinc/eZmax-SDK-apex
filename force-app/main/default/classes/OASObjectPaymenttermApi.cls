@@ -50,31 +50,6 @@ public class OASObjectPaymenttermApi {
         );
     }
     /**
-     * Delete an existing Paymentterm
-     * 
-     * @param pkiPaymenttermID  (required)
-     * @return OASPaymenttermDeleteObjectV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASPaymenttermDeleteObjectV1Response paymenttermDeleteObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiPaymenttermID'), 'pkiPaymenttermID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASPaymenttermDeleteObjectV1Response) client.invoke(
-            'DELETE', '/1/object/paymentterm/{pkiPaymenttermID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiPaymenttermID' => (Integer) params.get('pkiPaymenttermID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASPaymenttermDeleteObjectV1Response.class
-        );
-    }
-    /**
      * Edit an existing Paymentterm
      * 
      * @param pkiPaymenttermID  (required)

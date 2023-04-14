@@ -50,31 +50,6 @@ public class OASObjectBillingentityinternalApi {
         );
     }
     /**
-     * Delete an existing Billingentityinternal
-     * 
-     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
-     * @return OASBillingentityinternalDeleteObject
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASBillingentityinternalDeleteObject billingentityinternalDeleteObjectV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiBillingentityinternalID'), 'pkiBillingentityinternalID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASBillingentityinternalDeleteObject) client.invoke(
-            'DELETE', '/1/object/billingentityinternal/{pkiBillingentityinternalID}', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiBillingentityinternalID' => (Integer) params.get('pkiBillingentityinternalID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASBillingentityinternalDeleteObject.class
-        );
-    }
-    /**
      * Edit an existing Billingentityinternal
      * 
      * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)

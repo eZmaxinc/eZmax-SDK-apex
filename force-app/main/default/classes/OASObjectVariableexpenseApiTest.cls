@@ -36,41 +36,6 @@ private class OASObjectVariableexpenseApiTest {
     }
 
     /**
-     * Delete an existing Variableexpense
-     *
-     * 
-     */
-    @isTest
-    private static void variableexpenseDeleteObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiVariableexpenseID' => ''
-        };
-
-        OASClient client;
-        OASObjectVariableexpenseApi api;
-        OASVariableexpenseDeleteObjectV1Resp response;
-        OASVariableexpenseDeleteObjectV1Resp expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectVariableexpenseApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASVariableexpenseDeleteObjectV1Resp.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASVariableexpenseDeleteObjectV1Resp.getExample();
-        response = (OASVariableexpenseDeleteObjectV1Resp) api.variableexpenseDeleteObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Edit an existing Variableexpense
      *
      * 

@@ -60,29 +60,4 @@ public class OASObjectDepartmentApi {
             OASDepartmentGetAutocompleteV2Respon.class
         );
     }
-    /**
-     * Retrieve an existing Department\&#39;s members
-     * 
-     * @param pkiDepartmentID  (required)
-     * @return OASDepartmentGetMembersV1Response
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public OASDepartmentGetMembersV1Response departmentGetMembersV1(Map<String, Object> params) {
-        client.assertNotNull(params.get('pkiDepartmentID'), 'pkiDepartmentID');
-        List<OAS.Param> query = new List<OAS.Param>();
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (OASDepartmentGetMembersV1Response) client.invoke(
-            'GET', '/1/object/department/{pkiDepartmentID}/getMembers', '',
-            query, form,
-            new Map<String, Object>{
-                'pkiDepartmentID' => (Integer) params.get('pkiDepartmentID')
-            },
-            new Map<String, Object>(),
-            new List<String>{ 'application/json' },
-            new List<String>(),
-            new List<String> { 'Authorization' },
-            OASDepartmentGetMembersV1Response.class
-        );
-    }
 }

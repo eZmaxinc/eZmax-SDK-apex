@@ -36,41 +36,6 @@ private class OASObjectBillingentityinternalApiTest {
     }
 
     /**
-     * Delete an existing Billingentityinternal
-     *
-     * 
-     */
-    @isTest
-    private static void billingentityinternalDeleteObjectV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiBillingentityinternalID' => ''
-        };
-
-        OASClient client;
-        OASObjectBillingentityinternalApi api;
-        OASBillingentityinternalDeleteObject response;
-        OASBillingentityinternalDeleteObject expectedResponse;
-        String js = '';
-
-        client = new OASClient();
-        api = new OASObjectBillingentityinternalApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(OASBillingentityinternalDeleteObject.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = OASBillingentityinternalDeleteObject.getExample();
-        response = (OASBillingentityinternalDeleteObject) api.billingentityinternalDeleteObjectV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Edit an existing Billingentityinternal
      *
      * 
