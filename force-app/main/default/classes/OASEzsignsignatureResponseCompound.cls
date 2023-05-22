@@ -118,6 +118,18 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
     public Integer fkiEzsignfoldersignerassociationIDValidation { get; set; }
 
     /**
+     * The date the Ezsignsignature was signed
+     * @return dtEzsignsignatureDate
+     */
+    public String dtEzsignsignatureDate { get; set; }
+
+    /**
+     * Get objContactName
+     * @return objContactName
+     */
+    public OASCustomContactNameResponse objContactName { get; set; }
+
+    /**
      * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
      * @return bEzsignsignatureCustomdate
      */
@@ -128,6 +140,12 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
      * @return aObjEzsignsignaturecustomdate
      */
     public List<OASEzsignsignaturecustomdateResponse> aObjEzsignsignaturecustomdate { get; set; }
+
+    /**
+     * Get objCreditcardtransaction
+     * @return objCreditcardtransaction
+     */
+    public OASCustomCreditcardtransactionRespon objCreditcardtransaction { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate'
@@ -159,8 +177,11 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
           ezsignsignatureResponseCompound.eEzsignsignatureAttachmentnamesource = OASFieldEEzsignsignatureAttachmentna.getExample();
           ezsignsignatureResponseCompound.bEzsignsignatureRequired = true;
           ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation = 20;
+          ezsignsignatureResponseCompound.dtEzsignsignatureDate = '2020-12-31 23:59:59';
+          ezsignsignatureResponseCompound.objContactName = OASCustomContactNameResponse.getExample();
           ezsignsignatureResponseCompound.bEzsignsignatureCustomdate = true;
           ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateResponse>{OASEzsignsignaturecustomdateResponse.getExample()};
+          ezsignsignatureResponseCompound.objCreditcardtransaction = OASCustomCreditcardtransactionRespon.getExample();
         return ezsignsignatureResponseCompound;
     }
 
@@ -183,8 +204,11 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
                 && this.eEzsignsignatureAttachmentnamesource == ezsignsignatureResponseCompound.eEzsignsignatureAttachmentnamesource
                 && this.bEzsignsignatureRequired == ezsignsignatureResponseCompound.bEzsignsignatureRequired
                 && this.fkiEzsignfoldersignerassociationIDValidation == ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation
+                && this.dtEzsignsignatureDate == ezsignsignatureResponseCompound.dtEzsignsignatureDate
+                && this.objContactName == ezsignsignatureResponseCompound.objContactName
                 && this.bEzsignsignatureCustomdate == ezsignsignatureResponseCompound.bEzsignsignatureCustomdate
-                && this.aObjEzsignsignaturecustomdate == ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate;
+                && this.aObjEzsignsignaturecustomdate == ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate
+                && this.objCreditcardtransaction == ezsignsignatureResponseCompound.objCreditcardtransaction;
         }
         return false;
     }
@@ -207,8 +231,11 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
         hashCode = (17 * hashCode) + (eEzsignsignatureAttachmentnamesource == null ? 0 : System.hashCode(eEzsignsignatureAttachmentnamesource));
         hashCode = (17 * hashCode) + (bEzsignsignatureRequired == null ? 0 : System.hashCode(bEzsignsignatureRequired));
         hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationIDValidation));
+        hashCode = (17 * hashCode) + (dtEzsignsignatureDate == null ? 0 : System.hashCode(dtEzsignsignatureDate));
+        hashCode = (17 * hashCode) + (objContactName == null ? 0 : System.hashCode(objContactName));
         hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
         hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
+        hashCode = (17 * hashCode) + (objCreditcardtransaction == null ? 0 : System.hashCode(objCreditcardtransaction));
         return hashCode;
     }
 }

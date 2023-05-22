@@ -21,6 +21,12 @@ public class OASActivesessionResponse {
     public OASFieldEActivesessionUsertype eActivesessionUsertype { get; set; }
 
     /**
+     * Get eActivesessionOrigin
+     * @return eActivesessionOrigin
+     */
+    public OASFieldEActivesessionOrigin eActivesessionOrigin { get; set; }
+
+    /**
      * Get eActivesessionWeekdaystart
      * @return eActivesessionWeekdaystart
      */
@@ -74,6 +80,7 @@ public class OASActivesessionResponse {
     public static OASActivesessionResponse getExample() {
         OASActivesessionResponse activesessionResponse = new OASActivesessionResponse();
           activesessionResponse.eActivesessionUsertype = OASFieldEActivesessionUsertype.getExample();
+          activesessionResponse.eActivesessionOrigin = OASFieldEActivesessionOrigin.getExample();
           activesessionResponse.eActivesessionWeekdaystart = OASFieldEActivesessionWeekdaystart.getExample();
           activesessionResponse.fkiLanguageID = 2;
           activesessionResponse.sCompanyNameX = 'Acme inc.';
@@ -89,6 +96,7 @@ public class OASActivesessionResponse {
         if (obj instanceof OASActivesessionResponse) {           
             OASActivesessionResponse activesessionResponse = (OASActivesessionResponse) obj;
             return this.eActivesessionUsertype == activesessionResponse.eActivesessionUsertype
+                && this.eActivesessionOrigin == activesessionResponse.eActivesessionOrigin
                 && this.eActivesessionWeekdaystart == activesessionResponse.eActivesessionWeekdaystart
                 && this.fkiLanguageID == activesessionResponse.fkiLanguageID
                 && this.sCompanyNameX == activesessionResponse.sCompanyNameX
@@ -104,6 +112,7 @@ public class OASActivesessionResponse {
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (eActivesessionUsertype == null ? 0 : System.hashCode(eActivesessionUsertype));
+        hashCode = (17 * hashCode) + (eActivesessionOrigin == null ? 0 : System.hashCode(eActivesessionOrigin));
         hashCode = (17 * hashCode) + (eActivesessionWeekdaystart == null ? 0 : System.hashCode(eActivesessionWeekdaystart));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sCompanyNameX == null ? 0 : System.hashCode(sCompanyNameX));

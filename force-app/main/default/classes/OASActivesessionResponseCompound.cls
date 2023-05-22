@@ -21,6 +21,12 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
     public OASFieldEActivesessionUsertype eActivesessionUsertype { get; set; }
 
     /**
+     * Get eActivesessionOrigin
+     * @return eActivesessionOrigin
+     */
+    public OASFieldEActivesessionOrigin eActivesessionOrigin { get; set; }
+
+    /**
      * Get eActivesessionWeekdaystart
      * @return eActivesessionWeekdaystart
      */
@@ -127,6 +133,7 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
     public static OASActivesessionResponseCompound getExample() {
         OASActivesessionResponseCompound activesessionResponseCompound = new OASActivesessionResponseCompound();
           activesessionResponseCompound.eActivesessionUsertype = OASFieldEActivesessionUsertype.getExample();
+          activesessionResponseCompound.eActivesessionOrigin = OASFieldEActivesessionOrigin.getExample();
           activesessionResponseCompound.eActivesessionWeekdaystart = OASFieldEActivesessionWeekdaystart.getExample();
           activesessionResponseCompound.fkiLanguageID = 2;
           activesessionResponseCompound.sCompanyNameX = 'Acme inc.';
@@ -147,6 +154,7 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
         if (obj instanceof OASActivesessionResponseCompound) {           
             OASActivesessionResponseCompound activesessionResponseCompound = (OASActivesessionResponseCompound) obj;
             return this.eActivesessionUsertype == activesessionResponseCompound.eActivesessionUsertype
+                && this.eActivesessionOrigin == activesessionResponseCompound.eActivesessionOrigin
                 && this.eActivesessionWeekdaystart == activesessionResponseCompound.eActivesessionWeekdaystart
                 && this.fkiLanguageID == activesessionResponseCompound.fkiLanguageID
                 && this.sCompanyNameX == activesessionResponseCompound.sCompanyNameX
@@ -167,6 +175,7 @@ public class OASActivesessionResponseCompound implements OASActivesessionRespons
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (eActivesessionUsertype == null ? 0 : System.hashCode(eActivesessionUsertype));
+        hashCode = (17 * hashCode) + (eActivesessionOrigin == null ? 0 : System.hashCode(eActivesessionOrigin));
         hashCode = (17 * hashCode) + (eActivesessionWeekdaystart == null ? 0 : System.hashCode(eActivesessionWeekdaystart));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sCompanyNameX == null ? 0 : System.hashCode(sCompanyNameX));

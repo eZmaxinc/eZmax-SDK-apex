@@ -117,6 +117,18 @@ public class OASEzsignsignatureResponse {
      */
     public Integer fkiEzsignfoldersignerassociationIDValidation { get; set; }
 
+    /**
+     * The date the Ezsignsignature was signed
+     * @return dtEzsignsignatureDate
+     */
+    public String dtEzsignsignatureDate { get; set; }
+
+    /**
+     * Get objContactName
+     * @return objContactName
+     */
+    public OASCustomContactNameResponse objContactName { get; set; }
+
     public static OASEzsignsignatureResponse getExample() {
         OASEzsignsignatureResponse ezsignsignatureResponse = new OASEzsignsignatureResponse();
           ezsignsignatureResponse.pkiEzsignsignatureID = 49;
@@ -135,6 +147,8 @@ public class OASEzsignsignatureResponse {
           ezsignsignatureResponse.eEzsignsignatureAttachmentnamesource = OASFieldEEzsignsignatureAttachmentna.getExample();
           ezsignsignatureResponse.bEzsignsignatureRequired = true;
           ezsignsignatureResponse.fkiEzsignfoldersignerassociationIDValidation = 20;
+          ezsignsignatureResponse.dtEzsignsignatureDate = '2020-12-31 23:59:59';
+          ezsignsignatureResponse.objContactName = OASCustomContactNameResponse.getExample();
         return ezsignsignatureResponse;
     }
 
@@ -156,7 +170,9 @@ public class OASEzsignsignatureResponse {
                 && this.sEzsignsignatureAttachmentdescription == ezsignsignatureResponse.sEzsignsignatureAttachmentdescription
                 && this.eEzsignsignatureAttachmentnamesource == ezsignsignatureResponse.eEzsignsignatureAttachmentnamesource
                 && this.bEzsignsignatureRequired == ezsignsignatureResponse.bEzsignsignatureRequired
-                && this.fkiEzsignfoldersignerassociationIDValidation == ezsignsignatureResponse.fkiEzsignfoldersignerassociationIDValidation;
+                && this.fkiEzsignfoldersignerassociationIDValidation == ezsignsignatureResponse.fkiEzsignfoldersignerassociationIDValidation
+                && this.dtEzsignsignatureDate == ezsignsignatureResponse.dtEzsignsignatureDate
+                && this.objContactName == ezsignsignatureResponse.objContactName;
         }
         return false;
     }
@@ -179,6 +195,8 @@ public class OASEzsignsignatureResponse {
         hashCode = (17 * hashCode) + (eEzsignsignatureAttachmentnamesource == null ? 0 : System.hashCode(eEzsignsignatureAttachmentnamesource));
         hashCode = (17 * hashCode) + (bEzsignsignatureRequired == null ? 0 : System.hashCode(bEzsignsignatureRequired));
         hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationIDValidation == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationIDValidation));
+        hashCode = (17 * hashCode) + (dtEzsignsignatureDate == null ? 0 : System.hashCode(dtEzsignsignatureDate));
+        hashCode = (17 * hashCode) + (objContactName == null ? 0 : System.hashCode(objContactName));
         return hashCode;
     }
 }

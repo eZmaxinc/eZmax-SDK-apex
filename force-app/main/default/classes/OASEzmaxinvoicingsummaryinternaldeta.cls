@@ -97,7 +97,7 @@ public class OASEzmaxinvoicingsummaryinternaldeta implements OASEzmaxinvoicingsu
           ezmaxinvoicingsummaryinternaldetailResponseCompound.fkiEzmaxproductID = 172;
           ezmaxinvoicingsummaryinternaldetailResponseCompound.sEzmaxproductDescriptionX = 'eZmax (License)';
           ezmaxinvoicingsummaryinternaldetailResponseCompound.fkiBillingentityexternalID = 83;
-          ezmaxinvoicingsummaryinternaldetailResponseCompound.sBillingentityexternalDescription = 'Default';
+          ezmaxinvoicingsummaryinternaldetailResponseCompound.sBillingentityexternalDescription = 'ACME Inc';
           ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailCountreal = '350.32';
           ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailSubtotal = '625.41';
           ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailRebate = '560.81';

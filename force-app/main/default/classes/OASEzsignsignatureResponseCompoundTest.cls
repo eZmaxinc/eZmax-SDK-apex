@@ -96,6 +96,9 @@ private class OASEzsignsignatureResponseCompoundTest {
         System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureAttachmentnamesource);
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureRequired);
         System.assertEquals(null, ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation);
+        System.assertEquals(null, ezsignsignatureResponseCompound.dtEzsignsignatureDate);
+        System.assertEquals(null, ezsignsignatureResponseCompound.objContactName);
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureCustomdate);
+        System.assertEquals(null, ezsignsignatureResponseCompound.objCreditcardtransaction);
     }
 }

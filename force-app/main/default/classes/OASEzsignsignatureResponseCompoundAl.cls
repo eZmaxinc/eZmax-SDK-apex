@@ -26,6 +26,12 @@ public class OASEzsignsignatureResponseCompoundAl implements OAS.MappedPropertie
      */
     public List<OASEzsignsignaturecustomdateResponse> aObjEzsignsignaturecustomdate { get; set; }
 
+    /**
+     * Get objCreditcardtransaction
+     * @return objCreditcardtransaction
+     */
+    public OASCustomCreditcardtransactionRespon objCreditcardtransaction { get; set; }
+
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate'
     };
@@ -42,6 +48,7 @@ public class OASEzsignsignatureResponseCompoundAl implements OAS.MappedPropertie
         OASEzsignsignatureResponseCompoundAl ezsignsignatureResponseCompoundAllOf = new OASEzsignsignatureResponseCompoundAl();
           ezsignsignatureResponseCompoundAllOf.bEzsignsignatureCustomdate = true;
           ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate = new List<OASEzsignsignaturecustomdateResponse>{OASEzsignsignaturecustomdateResponse.getExample()};
+          ezsignsignatureResponseCompoundAllOf.objCreditcardtransaction = OASCustomCreditcardtransactionRespon.getExample();
         return ezsignsignatureResponseCompoundAllOf;
     }
 
@@ -49,7 +56,8 @@ public class OASEzsignsignatureResponseCompoundAl implements OAS.MappedPropertie
         if (obj instanceof OASEzsignsignatureResponseCompoundAl) {           
             OASEzsignsignatureResponseCompoundAl ezsignsignatureResponseCompoundAllOf = (OASEzsignsignatureResponseCompoundAl) obj;
             return this.bEzsignsignatureCustomdate == ezsignsignatureResponseCompoundAllOf.bEzsignsignatureCustomdate
-                && this.aObjEzsignsignaturecustomdate == ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate;
+                && this.aObjEzsignsignaturecustomdate == ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate
+                && this.objCreditcardtransaction == ezsignsignatureResponseCompoundAllOf.objCreditcardtransaction;
         }
         return false;
     }
@@ -58,6 +66,7 @@ public class OASEzsignsignatureResponseCompoundAl implements OAS.MappedPropertie
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
         hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
+        hashCode = (17 * hashCode) + (objCreditcardtransaction == null ? 0 : System.hashCode(objCreditcardtransaction));
         return hashCode;
     }
 }

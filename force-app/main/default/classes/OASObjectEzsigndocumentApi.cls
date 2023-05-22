@@ -292,6 +292,31 @@ public class OASObjectEzsigndocumentApi {
         );
     }
     /**
+     * Retrieve completed elements for the Ezsigndocument
+     * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+     * @param pkiEzsigndocumentID  (required)
+     * @return OASEzsigndocumentGetCompletedElement
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsigndocumentGetCompletedElement ezsigndocumentGetCompletedElementsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsigndocumentGetCompletedElement) client.invoke(
+            'GET', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsigndocumentGetCompletedElement.class
+        );
+    }
+    /**
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID  (required)

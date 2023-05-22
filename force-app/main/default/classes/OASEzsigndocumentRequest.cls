@@ -153,7 +153,7 @@ public class OASEzsigndocumentRequest {
           ezsigndocumentRequest.fkiLanguageID = 2;
           ezsigndocumentRequest.eEzsigndocumentSource = EEzsigndocumentSourceEnum.BASE64;
           ezsigndocumentRequest.eEzsigndocumentFormat = EEzsigndocumentFormatEnum.PDF;
-          ezsigndocumentRequest.sEzsigndocumentBase64 = EncodingUtil.base64Decode('[B@2cae1042');
+          ezsigndocumentRequest.sEzsigndocumentBase64 = EncodingUtil.base64Decode('[B@163d04ff');
           ezsigndocumentRequest.sEzsigndocumentUrl = 'http://www.example.com/document.pdf';
           ezsigndocumentRequest.bEzsigndocumentForcerepair = true;
           ezsigndocumentRequest.sEzsigndocumentPassword = 'SecretPassword123';

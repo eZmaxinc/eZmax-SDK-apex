@@ -28,10 +28,19 @@ public class OASUsergroupListElement {
      */
     public String sUsergroupNameX { get; set; }
 
+    /**
+     * Numer of user in group
+     * minimum: 0
+     * maximum: 16777215
+     * @return iCountUser
+     */
+    public Integer iCountUser { get; set; }
+
     public static OASUsergroupListElement getExample() {
         OASUsergroupListElement usergroupListElement = new OASUsergroupListElement();
           usergroupListElement.pkiUsergroupID = 2;
           usergroupListElement.sUsergroupNameX = 'Administration';
+          usergroupListElement.iCountUser = 15;
         return usergroupListElement;
     }
 
@@ -39,7 +48,8 @@ public class OASUsergroupListElement {
         if (obj instanceof OASUsergroupListElement) {           
             OASUsergroupListElement usergroupListElement = (OASUsergroupListElement) obj;
             return this.pkiUsergroupID == usergroupListElement.pkiUsergroupID
-                && this.sUsergroupNameX == usergroupListElement.sUsergroupNameX;
+                && this.sUsergroupNameX == usergroupListElement.sUsergroupNameX
+                && this.iCountUser == usergroupListElement.iCountUser;
         }
         return false;
     }
@@ -48,6 +58,7 @@ public class OASUsergroupListElement {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiUsergroupID == null ? 0 : System.hashCode(pkiUsergroupID));
         hashCode = (17 * hashCode) + (sUsergroupNameX == null ? 0 : System.hashCode(sUsergroupNameX));
+        hashCode = (17 * hashCode) + (iCountUser == null ? 0 : System.hashCode(iCountUser));
         return hashCode;
     }
 }

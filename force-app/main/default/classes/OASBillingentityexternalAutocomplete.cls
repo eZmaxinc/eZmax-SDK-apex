@@ -36,7 +36,7 @@ public class OASBillingentityexternalAutocomplete {
     public static OASBillingentityexternalAutocomplete getExample() {
         OASBillingentityexternalAutocomplete billingentityexternalAutocompleteElementResponse = new OASBillingentityexternalAutocomplete();
           billingentityexternalAutocompleteElementResponse.pkiBillingentityexternalID = 83;
-          billingentityexternalAutocompleteElementResponse.sBillingentityexternalDescription = 'Default';
+          billingentityexternalAutocompleteElementResponse.sBillingentityexternalDescription = 'ACME Inc';
           billingentityexternalAutocompleteElementResponse.bBillingentityexternalIsactive = true;
         return billingentityexternalAutocompleteElementResponse;
     }

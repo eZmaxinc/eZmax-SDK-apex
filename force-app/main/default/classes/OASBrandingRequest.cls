@@ -98,7 +98,7 @@ public class OASBrandingRequest {
           brandingRequest.pkiBrandingID = 78;
           brandingRequest.objBrandingDescription = OASMultilingualBrandingDescription.getExample();
           brandingRequest.eBrandingLogo = OASFieldEBrandingLogo.getExample();
-          brandingRequest.sBrandingBase64 = EncodingUtil.base64Decode('[B@53d1b9b3');
+          brandingRequest.sBrandingBase64 = EncodingUtil.base64Decode('[B@2cae1042');
           brandingRequest.iBrandingColortext = 3752795;
           brandingRequest.iBrandingColortextlinkbox = 0;
           brandingRequest.iBrandingColortextbutton = 16777215;

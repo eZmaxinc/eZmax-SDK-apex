@@ -81,5 +81,6 @@ private class OASEzsignsignatureResponseCompoundAlTest {
         OASEzsignsignatureResponseCompoundAl ezsignsignatureResponseCompoundAllOf = new OASEzsignsignatureResponseCompoundAl();
         System.assertEquals(new List<OASEzsignsignaturecustomdateResponse>(), ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate);
         System.assertEquals(null, ezsignsignatureResponseCompoundAllOf.bEzsignsignatureCustomdate);
+        System.assertEquals(null, ezsignsignatureResponseCompoundAllOf.objCreditcardtransaction);
     }
 }

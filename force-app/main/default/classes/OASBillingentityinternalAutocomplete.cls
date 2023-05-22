@@ -15,17 +15,17 @@
  */
 public class OASBillingentityinternalAutocomplete {
     /**
-     * The description of the Billingentityinternal in the language of the requester
-     * @return sBillingentityinternalDescriptionX
-     */
-    public String sBillingentityinternalDescriptionX { get; set; }
-
-    /**
      * The unique ID of the Billingentityinternal.
      * minimum: 0
      * @return pkiBillingentityinternalID
      */
     public Integer pkiBillingentityinternalID { get; set; }
+
+    /**
+     * The description of the Billingentityinternal in the language of the requester
+     * @return sBillingentityinternalDescriptionX
+     */
+    public String sBillingentityinternalDescriptionX { get; set; }
 
     /**
      * Whether the Billingentityinternal is active or not
@@ -35,8 +35,8 @@ public class OASBillingentityinternalAutocomplete {
 
     public static OASBillingentityinternalAutocomplete getExample() {
         OASBillingentityinternalAutocomplete billingentityinternalAutocompleteElementResponse = new OASBillingentityinternalAutocomplete();
-          billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX = 'Default';
           billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID = 1;
+          billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX = 'Default';
           billingentityinternalAutocompleteElementResponse.bBillingentityinternalIsactive = true;
         return billingentityinternalAutocompleteElementResponse;
     }
@@ -44,8 +44,8 @@ public class OASBillingentityinternalAutocomplete {
     public Boolean equals(Object obj) {
         if (obj instanceof OASBillingentityinternalAutocomplete) {           
             OASBillingentityinternalAutocomplete billingentityinternalAutocompleteElementResponse = (OASBillingentityinternalAutocomplete) obj;
-            return this.sBillingentityinternalDescriptionX == billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX
-                && this.pkiBillingentityinternalID == billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID
+            return this.pkiBillingentityinternalID == billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID
+                && this.sBillingentityinternalDescriptionX == billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX
                 && this.bBillingentityinternalIsactive == billingentityinternalAutocompleteElementResponse.bBillingentityinternalIsactive;
         }
         return false;
@@ -53,8 +53,8 @@ public class OASBillingentityinternalAutocomplete {
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sBillingentityinternalDescriptionX == null ? 0 : System.hashCode(sBillingentityinternalDescriptionX));
         hashCode = (17 * hashCode) + (pkiBillingentityinternalID == null ? 0 : System.hashCode(pkiBillingentityinternalID));
+        hashCode = (17 * hashCode) + (sBillingentityinternalDescriptionX == null ? 0 : System.hashCode(sBillingentityinternalDescriptionX));
         hashCode = (17 * hashCode) + (bBillingentityinternalIsactive == null ? 0 : System.hashCode(bBillingentityinternalIsactive));
         return hashCode;
     }
