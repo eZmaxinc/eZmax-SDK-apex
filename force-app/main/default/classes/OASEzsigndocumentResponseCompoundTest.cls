@@ -80,13 +80,13 @@ private class OASEzsigndocumentResponseCompoundTest {
     private static void defaultValuesPopulated() {
         OASEzsigndocumentResponseCompound ezsigndocumentResponseCompound = new OASEzsigndocumentResponseCompound();
         System.assertEquals(new List<OASCustomEzsignfoldersignerassociati>(), ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus);
+        System.assertEquals(null, ezsigndocumentResponseCompound.pkiEzsigndocumentID);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiEzsignfolderID);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiEzsignfoldersignerassociationIDDeclinedtosign);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentDuedate);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsignformCompleted);
         System.assertEquals(null, ezsigndocumentResponseCompound.fkiLanguageID);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentName);
-        System.assertEquals(null, ezsigndocumentResponseCompound.pkiEzsigndocumentID);
         System.assertEquals(null, ezsigndocumentResponseCompound.eEzsigndocumentStep);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentFirstsend);
         System.assertEquals(null, ezsigndocumentResponseCompound.dtEzsigndocumentLastsend);

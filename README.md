@@ -43,8 +43,6 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 OASGlobalCustomerApi api = new OASGlobalCustomerApi();
-OASClient client = api.getClient();
-
 
 Map<String, Object> params = new Map<String, Object>{
     'pksCustomerCode' => 'null',
@@ -71,10 +69,16 @@ Class | Method | HTTP request | Description
 *OASGlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](OASGlobalEzmaxcustomerApi.md#globalEzmaxcustomerGetConfigurationV1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
 *OASModuleEzsignApi* | [**ezsignSuggestSignersV1**](OASModuleEzsignApi.md#ezsignSuggestSignersV1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *OASModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](OASModuleEzsignApi.md#ezsignSuggestTemplatesV1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
+*OASModuleReportApi* | [**reportGetReportFromCacheV1**](OASModuleReportApi.md#reportGetReportFromCacheV1) | **GET** /1/module/report/getReportFromCache/{sReportgroupCacheID} | Retrieve report from cache
 *OASModuleUserApi* | [**userCreateEzsignuserV1**](OASModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *OASObjectActivesessionApi* | [**activesessionGetCurrentV1**](OASObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *OASObjectActivesessionApi* | [**activesessionGetListV1**](OASObjectActivesessionApi.md#activesessionGetListV1) | **GET** /1/object/activesession/getList | Retrieve Activesession list
 *OASObjectApikeyApi* | [**apikeyCreateObjectV2**](OASObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
+*OASObjectApikeyApi* | [**apikeyEditObjectV1**](OASObjectApikeyApi.md#apikeyEditObjectV1) | **PUT** /1/object/apikey/{pkiApikeyID} | Edit an existing Apikey
+*OASObjectApikeyApi* | [**apikeyEditPermissionsV1**](OASObjectApikeyApi.md#apikeyEditPermissionsV1) | **PUT** /1/object/apikey/{pkiApikeyID}/editPermissions | Edit multiple Permissions
+*OASObjectApikeyApi* | [**apikeyGetObjectV2**](OASObjectApikeyApi.md#apikeyGetObjectV2) | **GET** /2/object/apikey/{pkiApikeyID} | Retrieve an existing Apikey
+*OASObjectApikeyApi* | [**apikeyGetPermissionsV1**](OASObjectApikeyApi.md#apikeyGetPermissionsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getPermissions | Retrieve an existing Apikey\&#39;s Permissions
+*OASObjectApikeyApi* | [**apikeyGetSubnetsV1**](OASObjectApikeyApi.md#apikeyGetSubnetsV1) | **GET** /1/object/apikey/{pkiApikeyID}/getSubnets | Retrieve an existing Apikey\&#39;s subnets
 *OASObjectBillingentityexternalApi* | [**billingentityexternalGetAutocompleteV2**](OASObjectBillingentityexternalApi.md#billingentityexternalGetAutocompleteV2) | **GET** /2/object/billingentityexternal/getAutocomplete/{sSelector} | Retrieve Billingentityexternals and IDs
 *OASObjectBillingentityinternalApi* | [**billingentityinternalCreateObjectV1**](OASObjectBillingentityinternalApi.md#billingentityinternalCreateObjectV1) | **POST** /1/object/billingentityinternal | Create a new Billingentityinternal
 *OASObjectBillingentityinternalApi* | [**billingentityinternalEditObjectV1**](OASObjectBillingentityinternalApi.md#billingentityinternalEditObjectV1) | **PUT** /1/object/billingentityinternal/{pkiBillingentityinternalID} | Edit an existing Billingentityinternal
@@ -88,6 +92,7 @@ Class | Method | HTTP request | Description
 *OASObjectBrandingApi* | [**brandingGetObjectV2**](OASObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *OASObjectClonehistoryApi* | [**clonehistoryGetListV1**](OASObjectClonehistoryApi.md#clonehistoryGetListV1) | **GET** /1/object/clonehistory/getList | Retrieve Clonehistory list
 *OASObjectCommunicationApi* | [**communicationGetObjectV2**](OASObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
+*OASObjectCompanyApi* | [**companyGetAutocompleteV2**](OASObjectCompanyApi.md#companyGetAutocompleteV2) | **GET** /2/object/company/getAutocomplete/{sSelector} | Retrieve Companys and IDs
 *OASObjectDepartmentApi* | [**departmentGetAutocompleteV2**](OASObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV1**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV1) | **GET** /1/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
 *OASObjectEzmaxinvoicingApi* | [**ezmaxinvoicingGetAutocompleteV2**](OASObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetAutocompleteV2) | **GET** /2/object/ezmaxinvoicing/getAutocomplete/{sSelector} | Retrieve Ezmaxinvoicings and IDs
@@ -119,6 +124,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](OASObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV2**](OASObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
+*OASObjectEzsigndocumentApi* | [**ezsigndocumentDeclineToSignV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentDeclineToSignV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign | Decline to sign
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentDeleteObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignformfieldgroupsV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentEditEzsignsignaturesV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures
@@ -138,6 +144,7 @@ Class | Method | HTTP request | Description
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetTemporaryProofV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetTemporaryProofV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof | Retrieve the temporary proof
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentGetWordsPositionsV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentGetWordsPositionsV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | Retrieve positions X,Y of given words from a Ezsigndocument
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentPatchObjectV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentPatchObjectV1) | **PATCH** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Patch an existing Ezsigndocument
+*OASObjectEzsigndocumentApi* | [**ezsigndocumentSubmitEzsignformV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentSubmitEzsignformV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform | Submit the Ezsignform
 *OASObjectEzsigndocumentApi* | [**ezsigndocumentUnsendV1**](OASObjectEzsigndocumentApi.md#ezsigndocumentUnsendV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend | Unsend the Ezsigndocument
 *OASObjectEzsignfolderApi* | [**ezsignfolderArchiveV1**](OASObjectEzsignfolderApi.md#ezsignfolderArchiveV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/archive | Archive the Ezsignfolder
 *OASObjectEzsignfolderApi* | [**ezsignfolderBatchDownloadV1**](OASObjectEzsignfolderApi.md#ezsignfolderBatchDownloadV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload | Download multiples files from an Ezsignfolder
@@ -183,10 +190,12 @@ Class | Method | HTTP request | Description
 *OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupDeleteObjectV1**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupDeleteObjectV1) | **DELETE** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Delete an existing Ezsignformfieldgroup
 *OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupEditObjectV1**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupEditObjectV1) | **PUT** /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Edit an existing Ezsignformfieldgroup
 *OASObjectEzsignformfieldgroupApi* | [**ezsignformfieldgroupGetObjectV2**](OASObjectEzsignformfieldgroupApi.md#ezsignformfieldgroupGetObjectV2) | **GET** /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID} | Retrieve an existing Ezsignformfieldgroup
+*OASObjectEzsignpageApi* | [**ezsignpageConsultV1**](OASObjectEzsignpageApi.md#ezsignpageConsultV1) | **POST** /1/object/ezsignpage/{pkiEzsignpageID}/consult | Consult an Ezsignpage
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureCreateObjectV2**](OASObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureDeleteObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureEditObjectV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature
+*OASObjectEzsignsignatureApi* | [**ezsignsignatureGetEzsignsignatureattachmentV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature\&#39;s Ezsignsignatureattachments
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureGetObjectV2**](OASObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 *OASObjectEzsignsignatureApi* | [**ezsignsignatureSignV1**](OASObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature
@@ -245,6 +254,7 @@ Class | Method | HTTP request | Description
 *OASObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](OASObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *OASObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](OASObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *OASObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](OASObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
+*OASObjectModulegroupApi* | [**modulegroupGetAllV1**](OASObjectModulegroupApi.md#modulegroupGetAllV1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
 *OASObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](OASObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection\&#39;s Notificationtests
 *OASObjectNotificationtestApi* | [**notificationtestGetElementsV1**](OASObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest\&#39;s Elements
 *OASObjectPaymenttermApi* | [**paymenttermCreateObjectV1**](OASObjectPaymenttermApi.md#paymenttermCreateObjectV1) | **POST** /1/object/paymentterm | Create a new Paymentterm
@@ -254,16 +264,47 @@ Class | Method | HTTP request | Description
 *OASObjectPaymenttermApi* | [**paymenttermGetObjectV2**](OASObjectPaymenttermApi.md#paymenttermGetObjectV2) | **GET** /2/object/paymentterm/{pkiPaymenttermID} | Retrieve an existing Paymentterm
 *OASObjectPeriodApi* | [**periodGetAutocompleteV1**](OASObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
 *OASObjectPeriodApi* | [**periodGetAutocompleteV2**](OASObjectPeriodApi.md#periodGetAutocompleteV2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
+*OASObjectPermissionApi* | [**permissionCreateObjectV1**](OASObjectPermissionApi.md#permissionCreateObjectV1) | **POST** /1/object/permission | Create a new Permission
+*OASObjectPermissionApi* | [**permissionDeleteObjectV1**](OASObjectPermissionApi.md#permissionDeleteObjectV1) | **DELETE** /1/object/permission/{pkiPermissionID} | Delete an existing Permission
+*OASObjectPermissionApi* | [**permissionEditObjectV1**](OASObjectPermissionApi.md#permissionEditObjectV1) | **PUT** /1/object/permission/{pkiPermissionID} | Edit an existing Permission
+*OASObjectPermissionApi* | [**permissionGetObjectV2**](OASObjectPermissionApi.md#permissionGetObjectV2) | **GET** /2/object/permission/{pkiPermissionID} | Retrieve an existing Permission
 *OASObjectSecretquestionApi* | [**secretquestionGetAutocompleteV2**](OASObjectSecretquestionApi.md#secretquestionGetAutocompleteV2) | **GET** /2/object/secretquestion/getAutocomplete/{sSelector} | Retrieve Secretquestions and IDs
 *OASObjectSessionhistoryApi* | [**sessionhistoryGetListV1**](OASObjectSessionhistoryApi.md#sessionhistoryGetListV1) | **GET** /1/object/sessionhistory/getList | Retrieve Sessionhistory list
+*OASObjectSignatureApi* | [**signatureCreateObjectV1**](OASObjectSignatureApi.md#signatureCreateObjectV1) | **POST** /1/object/signature | Create a new Signature
+*OASObjectSignatureApi* | [**signatureDeleteObjectV1**](OASObjectSignatureApi.md#signatureDeleteObjectV1) | **DELETE** /1/object/signature/{pkiSignatureID} | Delete an existing Signature
+*OASObjectSignatureApi* | [**signatureEditObjectV1**](OASObjectSignatureApi.md#signatureEditObjectV1) | **PUT** /1/object/signature/{pkiSignatureID} | Edit an existing Signature
+*OASObjectSignatureApi* | [**signatureGetObjectV2**](OASObjectSignatureApi.md#signatureGetObjectV2) | **GET** /2/object/signature/{pkiSignatureID} | Retrieve an existing Signature
+*OASObjectSubnetApi* | [**subnetCreateObjectV1**](OASObjectSubnetApi.md#subnetCreateObjectV1) | **POST** /1/object/subnet | Create a new Subnet
+*OASObjectSubnetApi* | [**subnetDeleteObjectV1**](OASObjectSubnetApi.md#subnetDeleteObjectV1) | **DELETE** /1/object/subnet/{pkiSubnetID} | Delete an existing Subnet
+*OASObjectSubnetApi* | [**subnetEditObjectV1**](OASObjectSubnetApi.md#subnetEditObjectV1) | **PUT** /1/object/subnet/{pkiSubnetID} | Edit an existing Subnet
+*OASObjectSubnetApi* | [**subnetGetObjectV2**](OASObjectSubnetApi.md#subnetGetObjectV2) | **GET** /2/object/subnet/{pkiSubnetID} | Retrieve an existing Subnet
+*OASObjectSystemconfigurationApi* | [**systemconfigurationEditObjectV1**](OASObjectSystemconfigurationApi.md#systemconfigurationEditObjectV1) | **PUT** /1/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration
+*OASObjectSystemconfigurationApi* | [**systemconfigurationGetObjectV2**](OASObjectSystemconfigurationApi.md#systemconfigurationGetObjectV2) | **GET** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Retrieve an existing Systemconfiguration
 *OASObjectTaxassignmentApi* | [**taxassignmentGetAutocompleteV2**](OASObjectTaxassignmentApi.md#taxassignmentGetAutocompleteV2) | **GET** /2/object/taxassignment/getAutocomplete/{sSelector} | Retrieve Taxassignments and IDs
 *OASObjectTimezoneApi* | [**timezoneGetAutocompleteV2**](OASObjectTimezoneApi.md#timezoneGetAutocompleteV2) | **GET** /2/object/timezone/getAutocomplete/{sSelector} | Retrieve Timezones and IDs
+*OASObjectUserApi* | [**userCreateObjectV1**](OASObjectUserApi.md#userCreateObjectV1) | **POST** /1/object/user | Create a new User
+*OASObjectUserApi* | [**userEditObjectV1**](OASObjectUserApi.md#userEditObjectV1) | **PUT** /1/object/user/{pkiUserID} | Edit an existing User
+*OASObjectUserApi* | [**userEditPermissionsV1**](OASObjectUserApi.md#userEditPermissionsV1) | **PUT** /1/object/user/{pkiUserID}/editPermissions | Edit multiple Permissions
 *OASObjectUserApi* | [**userGetAutocompleteV2**](OASObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs
+*OASObjectUserApi* | [**userGetEffectivePermissionsV1**](OASObjectUserApi.md#userGetEffectivePermissionsV1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User\&#39;s Effective Permissions
+*OASObjectUserApi* | [**userGetListV1**](OASObjectUserApi.md#userGetListV1) | **GET** /1/object/user/getList | Retrieve User list
+*OASObjectUserApi* | [**userGetObjectV2**](OASObjectUserApi.md#userGetObjectV2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User
+*OASObjectUserApi* | [**userGetPermissionsV1**](OASObjectUserApi.md#userGetPermissionsV1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User\&#39;s Permissions
+*OASObjectUserApi* | [**userGetSubnetsV1**](OASObjectUserApi.md#userGetSubnetsV1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User\&#39;s Subnets
 *OASObjectUsergroupApi* | [**usergroupCreateObjectV1**](OASObjectUsergroupApi.md#usergroupCreateObjectV1) | **POST** /1/object/usergroup | Create a new Usergroup
 *OASObjectUsergroupApi* | [**usergroupEditObjectV1**](OASObjectUsergroupApi.md#usergroupEditObjectV1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup
+*OASObjectUsergroupApi* | [**usergroupEditPermissionsV1**](OASObjectUsergroupApi.md#usergroupEditPermissionsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions
+*OASObjectUsergroupApi* | [**usergroupEditUsergroupmembershipsV1**](OASObjectUsergroupApi.md#usergroupEditUsergroupmembershipsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships
 *OASObjectUsergroupApi* | [**usergroupGetAutocompleteV2**](OASObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs
 *OASObjectUsergroupApi* | [**usergroupGetListV1**](OASObjectUsergroupApi.md#usergroupGetListV1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list
 *OASObjectUsergroupApi* | [**usergroupGetObjectV2**](OASObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup
+*OASObjectUsergroupApi* | [**usergroupGetPermissionsV1**](OASObjectUsergroupApi.md#usergroupGetPermissionsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup\&#39;s Permissions
+*OASObjectUsergroupApi* | [**usergroupGetUsergroupmembershipsV1**](OASObjectUsergroupApi.md#usergroupGetUsergroupmembershipsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup\&#39;s Usergroupmemberships
+*OASObjectUsergroupmembershipApi* | [**usergroupmembershipCreateObjectV1**](OASObjectUsergroupmembershipApi.md#usergroupmembershipCreateObjectV1) | **POST** /1/object/usergroupmembership | Create a new Usergroupmembership
+*OASObjectUsergroupmembershipApi* | [**usergroupmembershipDeleteObjectV1**](OASObjectUsergroupmembershipApi.md#usergroupmembershipDeleteObjectV1) | **DELETE** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Delete an existing Usergroupmembership
+*OASObjectUsergroupmembershipApi* | [**usergroupmembershipEditObjectV1**](OASObjectUsergroupmembershipApi.md#usergroupmembershipEditObjectV1) | **PUT** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Edit an existing Usergroupmembership
+*OASObjectUsergroupmembershipApi* | [**usergroupmembershipGetObjectV2**](OASObjectUsergroupmembershipApi.md#usergroupmembershipGetObjectV2) | **GET** /2/object/usergroupmembership/{pkiUsergroupmembershipID} | Retrieve an existing Usergroupmembership
+*OASObjectUserstagedApi* | [**userstagedCreateUserV1**](OASObjectUserstagedApi.md#userstagedCreateUserV1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
 *OASObjectUserstagedApi* | [**userstagedDeleteObjectV1**](OASObjectUserstagedApi.md#userstagedDeleteObjectV1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
 *OASObjectUserstagedApi* | [**userstagedGetListV1**](OASObjectUserstagedApi.md#userstagedGetListV1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
 *OASObjectUserstagedApi* | [**userstagedGetObjectV2**](OASObjectUserstagedApi.md#userstagedGetObjectV2) | **GET** /2/object/userstaged/{pkiUserstagedID} | Retrieve an existing Userstaged
@@ -281,6 +322,17 @@ Class | Method | HTTP request | Description
 *OASObjectWebhookApi* | [**webhookGetListV1**](OASObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list
 *OASObjectWebhookApi* | [**webhookGetObjectV2**](OASObjectWebhookApi.md#webhookGetObjectV2) | **GET** /2/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook
 *OASObjectWebhookApi* | [**webhookTestV1**](OASObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url
+*OASScimGroupsApi* | [**groupsCreateObjectScimV2**](OASScimGroupsApi.md#groupsCreateObjectScimV2) | **POST** /2/scim/Groups | Create a new Usergroup
+*OASScimGroupsApi* | [**groupsDeleteObjectScimV2**](OASScimGroupsApi.md#groupsDeleteObjectScimV2) | **DELETE** /2/scim/Groups/{groupId} | Delete an existing Usergroup
+*OASScimGroupsApi* | [**groupsEditObjectScimV2**](OASScimGroupsApi.md#groupsEditObjectScimV2) | **PUT** /2/scim/Groups/{groupId} | Edit an existing Usergroup
+*OASScimGroupsApi* | [**groupsGetListScimV2**](OASScimGroupsApi.md#groupsGetListScimV2) | **GET** /2/scim/Groups | Retrieve Usergroup list
+*OASScimGroupsApi* | [**groupsGetObjectScimV2**](OASScimGroupsApi.md#groupsGetObjectScimV2) | **GET** /2/scim/Groups/{groupId} | Retrieve an existing Usergroup
+*OASScimServiceProviderConfigApi* | [**serviceProviderConfigGetObjectScimV2**](OASScimServiceProviderConfigApi.md#serviceProviderConfigGetObjectScimV2) | **GET** /2/scim/ServiceProviderConfig | Get Service Provider Configuration
+*OASScimUsersApi* | [**usersCreateObjectScimV2**](OASScimUsersApi.md#usersCreateObjectScimV2) | **POST** /2/scim/Users | Create a new User
+*OASScimUsersApi* | [**usersDeleteObjectScimV2**](OASScimUsersApi.md#usersDeleteObjectScimV2) | **DELETE** /2/scim/Users/{userId} | Delete an existing User
+*OASScimUsersApi* | [**usersEditObjectScimV2**](OASScimUsersApi.md#usersEditObjectScimV2) | **PUT** /2/scim/Users/{userId} | Edit an existing User
+*OASScimUsersApi* | [**usersGetListScimV2**](OASScimUsersApi.md#usersGetListScimV2) | **GET** /2/scim/Users | Retrieve User list
+*OASScimUsersApi* | [**usersGetObjectScimV2**](OASScimUsersApi.md#usersGetObjectScimV2) | **GET** /2/scim/Users/{userId} | Retrieve an existing User
 
 
 ## Documentation for Models
@@ -301,6 +353,21 @@ Class | Method | HTTP request | Description
  - [OASApikeyCreateObjectV2Response](OASApikeyCreateObjectV2Response.md)
  - [OASApikeyCreateObjectV2ResponseAllOf](OASApikeyCreateObjectV2ResponseAllOf.md)
  - [OASApikeyCreateObjectV2ResponseMPayl](OASApikeyCreateObjectV2ResponseMPayl.md)
+ - [OASApikeyEditObjectV1Request](OASApikeyEditObjectV1Request.md)
+ - [OASApikeyEditObjectV1Response](OASApikeyEditObjectV1Response.md)
+ - [OASApikeyEditPermissionsV1Request](OASApikeyEditPermissionsV1Request.md)
+ - [OASApikeyEditPermissionsV1Response](OASApikeyEditPermissionsV1Response.md)
+ - [OASApikeyEditPermissionsV1ResponseAl](OASApikeyEditPermissionsV1ResponseAl.md)
+ - [OASApikeyEditPermissionsV1ResponseMP](OASApikeyEditPermissionsV1ResponseMP.md)
+ - [OASApikeyGetObjectV2Response](OASApikeyGetObjectV2Response.md)
+ - [OASApikeyGetObjectV2ResponseAllOf](OASApikeyGetObjectV2ResponseAllOf.md)
+ - [OASApikeyGetObjectV2ResponseMPayload](OASApikeyGetObjectV2ResponseMPayload.md)
+ - [OASApikeyGetPermissionsV1Response](OASApikeyGetPermissionsV1Response.md)
+ - [OASApikeyGetPermissionsV1ResponseAll](OASApikeyGetPermissionsV1ResponseAll.md)
+ - [OASApikeyGetPermissionsV1ResponseMPa](OASApikeyGetPermissionsV1ResponseMPa.md)
+ - [OASApikeyGetSubnetsV1Response](OASApikeyGetSubnetsV1Response.md)
+ - [OASApikeyGetSubnetsV1ResponseAllOf](OASApikeyGetSubnetsV1ResponseAllOf.md)
+ - [OASApikeyGetSubnetsV1ResponseMPayloa](OASApikeyGetSubnetsV1ResponseMPayloa.md)
  - [OASApikeyRequest](OASApikeyRequest.md)
  - [OASApikeyRequestCompound](OASApikeyRequestCompound.md)
  - [OASApikeyResponse](OASApikeyResponse.md)
@@ -320,6 +387,8 @@ Class | Method | HTTP request | Description
  - [OASBillingentityinternalRequestCompo](OASBillingentityinternalRequestCompo.md)
  - [OASBillingentityinternalResponse](OASBillingentityinternalResponse.md)
  - [OASBillingentityinternalResponseComp](OASBillingentityinternalResponseComp.md)
+ - [OASBillingentityinternalproductReque](OASBillingentityinternalproductReque.md)
+ - [OASBillingentityinternalproductRespo](OASBillingentityinternalproductRespo.md)
  - [OASBrandingAutocompleteElementRespon](OASBrandingAutocompleteElementRespon.md)
  - [OASBrandingCreateObjectV1Request](OASBrandingCreateObjectV1Request.md)
  - [OASBrandingCreateObjectV1Response](OASBrandingCreateObjectV1Response.md)
@@ -346,11 +415,25 @@ Class | Method | HTTP request | Description
  - [OASClonehistoryListElement](OASClonehistoryListElement.md)
  - [OASCommonAudit](OASCommonAudit.md)
  - [OASCommonAuditdetail](OASCommonAuditdetail.md)
+ - [OASCommonFile](OASCommonFile.md)
  - [OASCommonGetAutocompleteV1Response](OASCommonGetAutocompleteV1Response.md)
  - [OASCommonGetAutocompleteV1ResponseAl](OASCommonGetAutocompleteV1ResponseAl.md)
  - [OASCommonGetListV1ResponseMPayload](OASCommonGetListV1ResponseMPayload.md)
+ - [OASCommonGetReportV1Response](OASCommonGetReportV1Response.md)
+ - [OASCommonGetReportV1ResponseAllOf](OASCommonGetReportV1ResponseAllOf.md)
+ - [OASCommonGetReportV1ResponseMPayload](OASCommonGetReportV1ResponseMPayload.md)
+ - [OASCommonReport](OASCommonReport.md)
+ - [OASCommonReportcell](OASCommonReportcell.md)
+ - [OASCommonReportcellstyle](OASCommonReportcellstyle.md)
+ - [OASCommonReportcolumn](OASCommonReportcolumn.md)
+ - [OASCommonReportgroup](OASCommonReportgroup.md)
+ - [OASCommonReportrow](OASCommonReportrow.md)
+ - [OASCommonReportsection](OASCommonReportsection.md)
+ - [OASCommonReportsubsection](OASCommonReportsubsection.md)
+ - [OASCommonReportsubsectionpart](OASCommonReportsubsectionpart.md)
  - [OASCommonResponse](OASCommonResponse.md)
  - [OASCommonResponseError](OASCommonResponseError.md)
+ - [OASCommonResponseErrorEzsignformVali](OASCommonResponseErrorEzsignformVali.md)
  - [OASCommonResponseErrorSTemporaryFile](OASCommonResponseErrorSTemporaryFile.md)
  - [OASCommonResponseErrorTooManyRequest](OASCommonResponseErrorTooManyRequest.md)
  - [OASCommonResponseFilter](OASCommonResponseFilter.md)
@@ -373,6 +456,10 @@ Class | Method | HTTP request | Description
  - [OASCommunicationexternalrecipientRes](OASCommunicationexternalrecipientRes.md)
  - [OASCommunicationrecipientResponse](OASCommunicationrecipientResponse.md)
  - [OASCommunicationrecipientResponseCom](OASCommunicationrecipientResponseCom.md)
+ - [OASCompanyAutocompleteElementRespons](OASCompanyAutocompleteElementRespons.md)
+ - [OASCompanyGetAutocompleteV2Response](OASCompanyGetAutocompleteV2Response.md)
+ - [OASCompanyGetAutocompleteV2ResponseA](OASCompanyGetAutocompleteV2ResponseA.md)
+ - [OASCompanyGetAutocompleteV2ResponseM](OASCompanyGetAutocompleteV2ResponseM.md)
  - [OASComputedECommunicationDirection](OASComputedECommunicationDirection.md)
  - [OASContactRequest](OASContactRequest.md)
  - [OASContactRequestCompound](OASContactRequestCompound.md)
@@ -395,6 +482,11 @@ Class | Method | HTTP request | Description
  - [OASCustomEzsignfoldersignerassociati](OASCustomEzsignfoldersignerassociati.md)
  - [OASCustomEzsignfoldertransmissionRes](OASCustomEzsignfoldertransmissionRes.md)
  - [OASCustomEzsignfoldertransmissionSig](OASCustomEzsignfoldertransmissionSig.md)
+ - [OASCustomEzsignformfieldRequest](OASCustomEzsignformfieldRequest.md)
+ - [OASCustomEzsignformfieldRequestAllOf](OASCustomEzsignformfieldRequestAllOf.md)
+ - [OASCustomEzsignformfielderrorRespons](OASCustomEzsignformfielderrorRespons.md)
+ - [OASCustomEzsignformfielderrortestRes](OASCustomEzsignformfielderrortestRes.md)
+ - [OASCustomEzsignformfieldgroupRequest](OASCustomEzsignformfieldgroupRequest.md)
  - [OASCustomEzsignsignatureEzsignsignat](OASCustomEzsignsignatureEzsignsignat.md)
  - [OASCustomEzsignsignaturestatusRespon](OASCustomEzsignsignaturestatusRespon.md)
  - [OASCustomFormDataDocumentResponse](OASCustomFormDataDocumentResponse.md)
@@ -418,9 +510,14 @@ Class | Method | HTTP request | Description
  - [OASDescriptionstaticResponseCompound](OASDescriptionstaticResponseCompound.md)
  - [OASEmailRequest](OASEmailRequest.md)
  - [OASEmailRequestCompound](OASEmailRequestCompound.md)
+ - [OASEmailResponse](OASEmailResponse.md)
+ - [OASEmailResponseCompound](OASEmailResponseCompound.md)
  - [OASEmailstaticResponse](OASEmailstaticResponse.md)
  - [OASEmailstaticResponseCompound](OASEmailstaticResponseCompound.md)
+ - [OASEnumFontunderline](OASEnumFontunderline.md)
+ - [OASEnumFontweight](OASEnumFontweight.md)
  - [OASEnumHorizontalalignment](OASEnumHorizontalalignment.md)
+ - [OASEnumTextvalidation](OASEnumTextvalidation.md)
  - [OASEnumVerticalalignment](OASEnumVerticalalignment.md)
  - [OASEzmaxinvoicingAutocompleteElement](OASEzmaxinvoicingAutocompleteElement.md)
  - [OASEzmaxinvoicingGetAutocompleteV2Re](OASEzmaxinvoicingGetAutocompleteV2Re.md)
@@ -493,6 +590,8 @@ Class | Method | HTTP request | Description
  - [OASEzsigndocumentCreateObjectV1Respo](OASEzsigndocumentCreateObjectV1Respo.md)
  - [OASEzsigndocumentCreateObjectV2Reque](OASEzsigndocumentCreateObjectV2Reque.md)
  - [OASEzsigndocumentCreateObjectV2Respo](OASEzsigndocumentCreateObjectV2Respo.md)
+ - [OASEzsigndocumentDeclineToSignV1Requ](OASEzsigndocumentDeclineToSignV1Requ.md)
+ - [OASEzsigndocumentDeclineToSignV1Resp](OASEzsigndocumentDeclineToSignV1Resp.md)
  - [OASEzsigndocumentDeleteObjectV1Respo](OASEzsigndocumentDeleteObjectV1Respo.md)
  - [OASEzsigndocumentEditEzsignformfield](OASEzsigndocumentEditEzsignformfield.md)
  - [OASEzsigndocumentEditEzsignsignature](OASEzsigndocumentEditEzsignsignature.md)
@@ -518,6 +617,7 @@ Class | Method | HTTP request | Description
  - [OASEzsigndocumentResponse](OASEzsigndocumentResponse.md)
  - [OASEzsigndocumentResponseCompound](OASEzsigndocumentResponseCompound.md)
  - [OASEzsigndocumentResponseCompoundAll](OASEzsigndocumentResponseCompoundAll.md)
+ - [OASEzsigndocumentSubmitEzsignformV1R](OASEzsigndocumentSubmitEzsignformV1R.md)
  - [OASEzsigndocumentUnsendV1Response](OASEzsigndocumentUnsendV1Response.md)
  - [OASEzsigndocumentlogResponse](OASEzsigndocumentlogResponse.md)
  - [OASEzsigndocumentlogResponseCompound](OASEzsigndocumentlogResponseCompound.md)
@@ -601,6 +701,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignformfieldgroupResponseCompo](OASEzsignformfieldgroupResponseCompo.md)
  - [OASEzsignformfieldgroupsignerRequest](OASEzsignformfieldgroupsignerRequest.md)
  - [OASEzsignformfieldgroupsignerRespons](OASEzsignformfieldgroupsignerRespons.md)
+ - [OASEzsignpageConsultV1Response](OASEzsignpageConsultV1Response.md)
  - [OASEzsignpageResponse](OASEzsignpageResponse.md)
  - [OASEzsignpageResponseCompound](OASEzsignpageResponseCompound.md)
  - [OASEzsignsignatureCreateObjectV1Requ](OASEzsignsignatureCreateObjectV1Requ.md)
@@ -620,6 +721,7 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignatureResponseCompoundAl](OASEzsignsignatureResponseCompoundAl.md)
  - [OASEzsignsignatureSignV1Request](OASEzsignsignatureSignV1Request.md)
  - [OASEzsignsignatureSignV1Response](OASEzsignsignatureSignV1Response.md)
+ - [OASEzsignsignatureattachmentResponse](OASEzsignsignatureattachmentResponse.md)
  - [OASEzsignsignaturecustomdateRequest](OASEzsignsignaturecustomdateRequest.md)
  - [OASEzsignsignaturecustomdateRequestC](OASEzsignsignaturecustomdateRequestC.md)
  - [OASEzsignsignaturecustomdateResponse](OASEzsignsignaturecustomdateResponse.md)
@@ -631,6 +733,8 @@ Class | Method | HTTP request | Description
  - [OASEzsignsignerResponseCompound](OASEzsignsignerResponseCompound.md)
  - [OASEzsignsignerResponseCompoundAllOf](OASEzsignsignerResponseCompoundAllOf.md)
  - [OASEzsignsignerResponseCompoundConta](OASEzsignsignerResponseCompoundConta.md)
+ - [OASEzsignsignergroupResponse](OASEzsignsignergroupResponse.md)
+ - [OASEzsignsignergroupResponseCompound](OASEzsignsignergroupResponseCompound.md)
  - [OASEzsigntemplateAutocompleteElement](OASEzsigntemplateAutocompleteElement.md)
  - [OASEzsigntemplateCopyV1Request](OASEzsigntemplateCopyV1Request.md)
  - [OASEzsigntemplateCopyV1Response](OASEzsigntemplateCopyV1Response.md)
@@ -730,6 +834,8 @@ Class | Method | HTTP request | Description
  - [OASFieldECommunicationexternalrecipi](OASFieldECommunicationexternalrecipi.md)
  - [OASFieldECommunicationrecipientObjec](OASFieldECommunicationrecipientObjec.md)
  - [OASFieldECommunicationrecipientType](OASFieldECommunicationrecipientType.md)
+ - [OASFieldECreditcardtypeCodename](OASFieldECreditcardtypeCodename.md)
+ - [OASFieldEErrorCode](OASFieldEErrorCode.md)
  - [OASFieldEEzmaxinvoicingPaymenttype](OASFieldEEzmaxinvoicingPaymenttype.md)
  - [OASFieldEEzmaxinvoicingagentVariatio](OASFieldEEzmaxinvoicingagentVariatio.md)
  - [OASFieldEEzmaxinvoicingcontractPayme](OASFieldEEzmaxinvoicingcontractPayme.md)
@@ -758,7 +864,13 @@ Class | Method | HTTP request | Description
  - [OASFieldEPaymenttermType](OASFieldEPaymenttermType.md)
  - [OASFieldEPhoneType](OASFieldEPhoneType.md)
  - [OASFieldESessionhistoryEndby](OASFieldESessionhistoryEndby.md)
+ - [OASFieldESystemconfigurationEzsign](OASFieldESystemconfigurationEzsign.md)
+ - [OASFieldESystemconfigurationLanguage](OASFieldESystemconfigurationLanguage.md)
+ - [OASFieldESystemconfigurationNewexter](OASFieldESystemconfigurationNewexter.md)
+ - [OASFieldEUserEzsignaccess](OASFieldEUserEzsignaccess.md)
  - [OASFieldEUserEzsignsendreminderfrequ](OASFieldEUserEzsignsendreminderfrequ.md)
+ - [OASFieldEUserLogintype](OASFieldEUserLogintype.md)
+ - [OASFieldEUserOrigin](OASFieldEUserOrigin.md)
  - [OASFieldEUserType](OASFieldEUserType.md)
  - [OASFieldEVariableexpenseTaxable](OASFieldEVariableexpenseTaxable.md)
  - [OASFieldEVersionhistoryType](OASFieldEVersionhistoryType.md)
@@ -782,6 +894,18 @@ Class | Method | HTTP request | Description
  - [OASGlobalEzmaxclientVersionV1Respons](OASGlobalEzmaxclientVersionV1Respons.md)
  - [OASGlobalEzmaxcustomerGetConfigurati](OASGlobalEzmaxcustomerGetConfigurati.md)
  - [OASHeaderAcceptLanguage](OASHeaderAcceptLanguage.md)
+ - [OASModuleResponse](OASModuleResponse.md)
+ - [OASModuleResponseCompound](OASModuleResponseCompound.md)
+ - [OASModuleResponseCompoundAllOf](OASModuleResponseCompoundAllOf.md)
+ - [OASModulegroupGetAllV1Response](OASModulegroupGetAllV1Response.md)
+ - [OASModulegroupGetAllV1ResponseAllOf](OASModulegroupGetAllV1ResponseAllOf.md)
+ - [OASModulegroupGetAllV1ResponseMPaylo](OASModulegroupGetAllV1ResponseMPaylo.md)
+ - [OASModulegroupResponse](OASModulegroupResponse.md)
+ - [OASModulegroupResponseCompound](OASModulegroupResponseCompound.md)
+ - [OASModulegroupResponseCompoundAllOf](OASModulegroupResponseCompoundAllOf.md)
+ - [OASModulesectionResponse](OASModulesectionResponse.md)
+ - [OASModulesectionResponseCompound](OASModulesectionResponseCompound.md)
+ - [OASModulesectionResponseCompoundAllO](OASModulesectionResponseCompoundAllO.md)
  - [OASMultilingualApikeyDescription](OASMultilingualApikeyDescription.md)
  - [OASMultilingualBillingentityinternal](OASMultilingualBillingentityinternal.md)
  - [OASMultilingualBrandingDescription](OASMultilingualBrandingDescription.md)
@@ -790,6 +914,7 @@ Class | Method | HTTP request | Description
  - [OASMultilingualNotificationsubsectio](OASMultilingualNotificationsubsectio.md)
  - [OASMultilingualNotificationtestName](OASMultilingualNotificationtestName.md)
  - [OASMultilingualPaymenttermDescriptio](OASMultilingualPaymenttermDescriptio.md)
+ - [OASMultilingualSubnetDescription](OASMultilingualSubnetDescription.md)
  - [OASMultilingualUsergroupName](OASMultilingualUsergroupName.md)
  - [OASMultilingualVariableexpenseDescri](OASMultilingualVariableexpenseDescri.md)
  - [OASMultilingualVersionhistoryDetail](OASMultilingualVersionhistoryDetail.md)
@@ -818,16 +943,79 @@ Class | Method | HTTP request | Description
  - [OASPeriodGetAutocompleteV2Response](OASPeriodGetAutocompleteV2Response.md)
  - [OASPeriodGetAutocompleteV2ResponseAl](OASPeriodGetAutocompleteV2ResponseAl.md)
  - [OASPeriodGetAutocompleteV2ResponseMP](OASPeriodGetAutocompleteV2ResponseMP.md)
+ - [OASPermissionCreateObjectV1Request](OASPermissionCreateObjectV1Request.md)
+ - [OASPermissionCreateObjectV1Response](OASPermissionCreateObjectV1Response.md)
+ - [OASPermissionCreateObjectV1ResponseA](OASPermissionCreateObjectV1ResponseA.md)
+ - [OASPermissionCreateObjectV1ResponseM](OASPermissionCreateObjectV1ResponseM.md)
+ - [OASPermissionDeleteObjectV1Response](OASPermissionDeleteObjectV1Response.md)
+ - [OASPermissionEditObjectV1Request](OASPermissionEditObjectV1Request.md)
+ - [OASPermissionEditObjectV1Response](OASPermissionEditObjectV1Response.md)
+ - [OASPermissionGetObjectV2Response](OASPermissionGetObjectV2Response.md)
+ - [OASPermissionGetObjectV2ResponseAllO](OASPermissionGetObjectV2ResponseAllO.md)
+ - [OASPermissionGetObjectV2ResponseMPay](OASPermissionGetObjectV2ResponseMPay.md)
+ - [OASPermissionRequest](OASPermissionRequest.md)
+ - [OASPermissionRequestCompound](OASPermissionRequestCompound.md)
+ - [OASPermissionResponse](OASPermissionResponse.md)
+ - [OASPermissionResponseCompound](OASPermissionResponseCompound.md)
  - [OASPhoneRequest](OASPhoneRequest.md)
  - [OASPhoneRequestCompound](OASPhoneRequestCompound.md)
+ - [OASPhoneResponse](OASPhoneResponse.md)
+ - [OASPhoneResponseCompound](OASPhoneResponseCompound.md)
  - [OASPhonestaticResponse](OASPhonestaticResponse.md)
  - [OASPhonestaticResponseCompound](OASPhonestaticResponseCompound.md)
+ - [OASScimAuthenticationScheme](OASScimAuthenticationScheme.md)
+ - [OASScimEmail](OASScimEmail.md)
+ - [OASScimGroup](OASScimGroup.md)
+ - [OASScimGroupMember](OASScimGroupMember.md)
+ - [OASScimServiceProviderConfig](OASScimServiceProviderConfig.md)
+ - [OASScimServiceProviderConfigBulk](OASScimServiceProviderConfigBulk.md)
+ - [OASScimServiceProviderConfigChangePa](OASScimServiceProviderConfigChangePa.md)
+ - [OASScimServiceProviderConfigEtag](OASScimServiceProviderConfigEtag.md)
+ - [OASScimServiceProviderConfigFilter](OASScimServiceProviderConfigFilter.md)
+ - [OASScimServiceProviderConfigPatch](OASScimServiceProviderConfigPatch.md)
+ - [OASScimServiceProviderConfigSort](OASScimServiceProviderConfigSort.md)
+ - [OASScimUser](OASScimUser.md)
+ - [OASScimUserList](OASScimUserList.md)
  - [OASSecretquestionAutocompleteElement](OASSecretquestionAutocompleteElement.md)
  - [OASSecretquestionGetAutocompleteV2Re](OASSecretquestionGetAutocompleteV2Re.md)
  - [OASSessionhistoryGetListV1Response](OASSessionhistoryGetListV1Response.md)
  - [OASSessionhistoryGetListV1ResponseAl](OASSessionhistoryGetListV1ResponseAl.md)
  - [OASSessionhistoryGetListV1ResponseMP](OASSessionhistoryGetListV1ResponseMP.md)
  - [OASSessionhistoryListElement](OASSessionhistoryListElement.md)
+ - [OASSignatureCreateObjectV1Request](OASSignatureCreateObjectV1Request.md)
+ - [OASSignatureCreateObjectV1Response](OASSignatureCreateObjectV1Response.md)
+ - [OASSignatureCreateObjectV1ResponseAl](OASSignatureCreateObjectV1ResponseAl.md)
+ - [OASSignatureCreateObjectV1ResponseMP](OASSignatureCreateObjectV1ResponseMP.md)
+ - [OASSignatureDeleteObjectV1Response](OASSignatureDeleteObjectV1Response.md)
+ - [OASSignatureEditObjectV1Request](OASSignatureEditObjectV1Request.md)
+ - [OASSignatureEditObjectV1Response](OASSignatureEditObjectV1Response.md)
+ - [OASSignatureGetObjectV2Response](OASSignatureGetObjectV2Response.md)
+ - [OASSignatureGetObjectV2ResponseAllOf](OASSignatureGetObjectV2ResponseAllOf.md)
+ - [OASSignatureGetObjectV2ResponseMPayl](OASSignatureGetObjectV2ResponseMPayl.md)
+ - [OASSignatureRequest](OASSignatureRequest.md)
+ - [OASSignatureRequestCompound](OASSignatureRequestCompound.md)
+ - [OASSignatureResponse](OASSignatureResponse.md)
+ - [OASSignatureResponseCompound](OASSignatureResponseCompound.md)
+ - [OASSubnetCreateObjectV1Request](OASSubnetCreateObjectV1Request.md)
+ - [OASSubnetCreateObjectV1Response](OASSubnetCreateObjectV1Response.md)
+ - [OASSubnetCreateObjectV1ResponseAllOf](OASSubnetCreateObjectV1ResponseAllOf.md)
+ - [OASSubnetCreateObjectV1ResponseMPayl](OASSubnetCreateObjectV1ResponseMPayl.md)
+ - [OASSubnetDeleteObjectV1Response](OASSubnetDeleteObjectV1Response.md)
+ - [OASSubnetEditObjectV1Request](OASSubnetEditObjectV1Request.md)
+ - [OASSubnetEditObjectV1Response](OASSubnetEditObjectV1Response.md)
+ - [OASSubnetGetObjectV2Response](OASSubnetGetObjectV2Response.md)
+ - [OASSubnetGetObjectV2ResponseAllOf](OASSubnetGetObjectV2ResponseAllOf.md)
+ - [OASSubnetGetObjectV2ResponseMPayload](OASSubnetGetObjectV2ResponseMPayload.md)
+ - [OASSubnetRequest](OASSubnetRequest.md)
+ - [OASSubnetRequestCompound](OASSubnetRequestCompound.md)
+ - [OASSubnetResponse](OASSubnetResponse.md)
+ - [OASSubnetResponseCompound](OASSubnetResponseCompound.md)
+ - [OASSystemconfigurationEditObjectV1Re](OASSystemconfigurationEditObjectV1Re.md)
+ - [OASSystemconfigurationGetObjectV2Res](OASSystemconfigurationGetObjectV2Res.md)
+ - [OASSystemconfigurationRequest](OASSystemconfigurationRequest.md)
+ - [OASSystemconfigurationRequestCompoun](OASSystemconfigurationRequestCompoun.md)
+ - [OASSystemconfigurationResponse](OASSystemconfigurationResponse.md)
+ - [OASSystemconfigurationResponseCompou](OASSystemconfigurationResponseCompou.md)
  - [OASTaxassignmentAutocompleteElementR](OASTaxassignmentAutocompleteElementR.md)
  - [OASTaxassignmentGetAutocompleteV2Res](OASTaxassignmentGetAutocompleteV2Res.md)
  - [OASTextstylestaticResponse](OASTextstylestaticResponse.md)
@@ -839,9 +1027,36 @@ Class | Method | HTTP request | Description
  - [OASUserCreateEzsignuserV1Response](OASUserCreateEzsignuserV1Response.md)
  - [OASUserCreateEzsignuserV1ResponseAll](OASUserCreateEzsignuserV1ResponseAll.md)
  - [OASUserCreateEzsignuserV1ResponseMPa](OASUserCreateEzsignuserV1ResponseMPa.md)
+ - [OASUserCreateObjectV1Request](OASUserCreateObjectV1Request.md)
+ - [OASUserCreateObjectV1Response](OASUserCreateObjectV1Response.md)
+ - [OASUserCreateObjectV1ResponseAllOf](OASUserCreateObjectV1ResponseAllOf.md)
+ - [OASUserCreateObjectV1ResponseMPayloa](OASUserCreateObjectV1ResponseMPayloa.md)
+ - [OASUserEditObjectV1Request](OASUserEditObjectV1Request.md)
+ - [OASUserEditObjectV1Response](OASUserEditObjectV1Response.md)
+ - [OASUserEditPermissionsV1Request](OASUserEditPermissionsV1Request.md)
+ - [OASUserEditPermissionsV1Response](OASUserEditPermissionsV1Response.md)
+ - [OASUserEditPermissionsV1ResponseAllO](OASUserEditPermissionsV1ResponseAllO.md)
+ - [OASUserEditPermissionsV1ResponseMPay](OASUserEditPermissionsV1ResponseMPay.md)
  - [OASUserGetAutocompleteV2Response](OASUserGetAutocompleteV2Response.md)
  - [OASUserGetAutocompleteV2ResponseAllO](OASUserGetAutocompleteV2ResponseAllO.md)
  - [OASUserGetAutocompleteV2ResponseMPay](OASUserGetAutocompleteV2ResponseMPay.md)
+ - [OASUserGetEffectivePermissionsV1Resp](OASUserGetEffectivePermissionsV1Resp.md)
+ - [OASUserGetListV1Response](OASUserGetListV1Response.md)
+ - [OASUserGetListV1ResponseAllOf](OASUserGetListV1ResponseAllOf.md)
+ - [OASUserGetListV1ResponseMPayload](OASUserGetListV1ResponseMPayload.md)
+ - [OASUserGetListV1ResponseMPayloadAllO](OASUserGetListV1ResponseMPayloadAllO.md)
+ - [OASUserGetObjectV2Response](OASUserGetObjectV2Response.md)
+ - [OASUserGetObjectV2ResponseAllOf](OASUserGetObjectV2ResponseAllOf.md)
+ - [OASUserGetObjectV2ResponseMPayload](OASUserGetObjectV2ResponseMPayload.md)
+ - [OASUserGetPermissionsV1Response](OASUserGetPermissionsV1Response.md)
+ - [OASUserGetPermissionsV1ResponseAllOf](OASUserGetPermissionsV1ResponseAllOf.md)
+ - [OASUserGetPermissionsV1ResponseMPayl](OASUserGetPermissionsV1ResponseMPayl.md)
+ - [OASUserGetSubnetsV1Response](OASUserGetSubnetsV1Response.md)
+ - [OASUserGetSubnetsV1ResponseAllOf](OASUserGetSubnetsV1ResponseAllOf.md)
+ - [OASUserGetSubnetsV1ResponseMPayload](OASUserGetSubnetsV1ResponseMPayload.md)
+ - [OASUserListElement](OASUserListElement.md)
+ - [OASUserRequest](OASUserRequest.md)
+ - [OASUserRequestCompound](OASUserRequestCompound.md)
  - [OASUserResponse](OASUserResponse.md)
  - [OASUserResponseCompound](OASUserResponseCompound.md)
  - [OASUsergroupAutocompleteElementRespo](OASUsergroupAutocompleteElementRespo.md)
@@ -851,6 +1066,9 @@ Class | Method | HTTP request | Description
  - [OASUsergroupCreateObjectV1ResponseMP](OASUsergroupCreateObjectV1ResponseMP.md)
  - [OASUsergroupEditObjectV1Request](OASUsergroupEditObjectV1Request.md)
  - [OASUsergroupEditObjectV1Response](OASUsergroupEditObjectV1Response.md)
+ - [OASUsergroupEditPermissionsV1Request](OASUsergroupEditPermissionsV1Request.md)
+ - [OASUsergroupEditPermissionsV1Respons](OASUsergroupEditPermissionsV1Respons.md)
+ - [OASUsergroupEditUsergroupmemberships](OASUsergroupEditUsergroupmemberships.md)
  - [OASUsergroupGetAutocompleteV2Respons](OASUsergroupGetAutocompleteV2Respons.md)
  - [OASUsergroupGetListV1Response](OASUsergroupGetListV1Response.md)
  - [OASUsergroupGetListV1ResponseAllOf](OASUsergroupGetListV1ResponseAllOf.md)
@@ -858,11 +1076,24 @@ Class | Method | HTTP request | Description
  - [OASUsergroupGetObjectV2Response](OASUsergroupGetObjectV2Response.md)
  - [OASUsergroupGetObjectV2ResponseAllOf](OASUsergroupGetObjectV2ResponseAllOf.md)
  - [OASUsergroupGetObjectV2ResponseMPayl](OASUsergroupGetObjectV2ResponseMPayl.md)
+ - [OASUsergroupGetPermissionsV1Response](OASUsergroupGetPermissionsV1Response.md)
+ - [OASUsergroupGetUsergroupmembershipsV](OASUsergroupGetUsergroupmembershipsV.md)
  - [OASUsergroupListElement](OASUsergroupListElement.md)
  - [OASUsergroupRequest](OASUsergroupRequest.md)
  - [OASUsergroupRequestCompound](OASUsergroupRequestCompound.md)
  - [OASUsergroupResponse](OASUsergroupResponse.md)
  - [OASUsergroupResponseCompound](OASUsergroupResponseCompound.md)
+ - [OASUsergroupmembershipCreateObjectV1](OASUsergroupmembershipCreateObjectV1.md)
+ - [OASUsergroupmembershipDeleteObjectV1](OASUsergroupmembershipDeleteObjectV1.md)
+ - [OASUsergroupmembershipEditObjectV1Re](OASUsergroupmembershipEditObjectV1Re.md)
+ - [OASUsergroupmembershipGetObjectV2Res](OASUsergroupmembershipGetObjectV2Res.md)
+ - [OASUsergroupmembershipRequest](OASUsergroupmembershipRequest.md)
+ - [OASUsergroupmembershipRequestCompoun](OASUsergroupmembershipRequestCompoun.md)
+ - [OASUsergroupmembershipResponse](OASUsergroupmembershipResponse.md)
+ - [OASUsergroupmembershipResponseCompou](OASUsergroupmembershipResponseCompou.md)
+ - [OASUserstagedCreateUserV1Response](OASUserstagedCreateUserV1Response.md)
+ - [OASUserstagedCreateUserV1ResponseAll](OASUserstagedCreateUserV1ResponseAll.md)
+ - [OASUserstagedCreateUserV1ResponseMPa](OASUserstagedCreateUserV1ResponseMPa.md)
  - [OASUserstagedDeleteObjectV1Response](OASUserstagedDeleteObjectV1Response.md)
  - [OASUserstagedGetListV1Response](OASUserstagedGetListV1Response.md)
  - [OASUserstagedGetListV1ResponseAllOf](OASUserstagedGetListV1ResponseAllOf.md)
@@ -925,8 +1156,15 @@ Class | Method | HTTP request | Description
  - [OASWebhookTestV1Response](OASWebhookTestV1Response.md)
  - [OASWebhookUserUserCreated](OASWebhookUserUserCreated.md)
  - [OASWebhookUserUserCreatedAllOf](OASWebhookUserUserCreatedAllOf.md)
+ - [OASWebhookUserstagedUserstagedCreate](OASWebhookUserstagedUserstagedCreate.md)
  - [OASWebsiteRequest](OASWebsiteRequest.md)
  - [OASWebsiteRequestCompound](OASWebsiteRequestCompound.md)
+ - [OASWebsocketRequestServerGetWebsocke](OASWebsocketRequestServerGetWebsocke.md)
+ - [OASWebsocketResponseErrorV1](OASWebsocketResponseErrorV1.md)
+ - [OASWebsocketResponseErrorV1MPayload](OASWebsocketResponseErrorV1MPayload.md)
+ - [OASWebsocketResponseGetWebsocketIDV1](OASWebsocketResponseGetWebsocketIDV1.md)
+ - [OASWebsocketResponseInformationV1](OASWebsocketResponseInformationV1.md)
+ - [OASWebsocketResponseInformationV1MPa](OASWebsocketResponseInformationV1MPa.md)
 
 
 ## Documentation for Authorization
@@ -939,6 +1177,17 @@ Authentication schemes defined for the API:
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
+
+### Bearer
+
+- **Type**: HTTP basic authentication
+
+### Presigned
+
+
+- **Type**: API key
+- **API key parameter name**: sAuthorization
+- **Location**: URL query string
 
 
 ## Author

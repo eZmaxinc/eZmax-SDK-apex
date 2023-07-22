@@ -92,6 +92,7 @@ private class OASActivesessionResponseCompoundTest {
         System.assertEquals(null, activesessionResponseCompound.bActivesessionIssuperadmin);
         System.assertEquals(null, activesessionResponseCompound.pksCustomerCode);
         System.assertEquals(null, activesessionResponseCompound.fkiSystemconfigurationtypeID);
+        System.assertEquals(null, activesessionResponseCompound.fkiSignatureID);
         System.assertEquals(null, activesessionResponseCompound.objUserReal);
         System.assertEquals(null, activesessionResponseCompound.objUserCloned);
         System.assertEquals(null, activesessionResponseCompound.objApikey);

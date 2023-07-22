@@ -1,6 +1,42 @@
 @isTest
 private class OASObjectUserstagedApiTest {
     /**
+     * Create a User from a Userstaged and then map it
+     *
+     * Default values will be used while creating the User. If you need to change those values, you should use the route to edit a User.
+     */
+    @isTest
+    private static void userstagedCreateUserV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUserstagedID' => '',
+            'body' => 
+        };
+
+        OASClient client;
+        OASObjectUserstagedApi api;
+        OASUserstagedCreateUserV1Response response;
+        OASUserstagedCreateUserV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUserstagedApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUserstagedCreateUserV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUserstagedCreateUserV1Response.getExample();
+        response = (OASUserstagedCreateUserV1Response) api.userstagedCreateUserV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Delete an existing Userstaged
      *
      * 

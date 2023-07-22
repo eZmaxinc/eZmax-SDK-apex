@@ -23,10 +23,7 @@ private class OASGlobalCustomerApiTest {
         OASGlobalCustomerGetEndpointV1Respon expectedResponse;
         String js = '';
 
-        client = new OASClient();
-        api = new OASGlobalCustomerApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
+        api = new OASGlobalCustomerApi(new OASClient());
 
         js = JSON.serialize(OASGlobalCustomerGetEndpointV1Respon.getExample());
         res.setHeader('Content-Type', 'application/json');

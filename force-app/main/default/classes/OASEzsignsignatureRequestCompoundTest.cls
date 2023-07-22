@@ -85,6 +85,8 @@ private class OASEzsignsignatureRequestCompoundTest {
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignpagePagenumber);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureX);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureY);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureWidth);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureHeight);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureStep);
         System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureType);
         System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsigndocumentID);
@@ -96,6 +98,8 @@ private class OASEzsignsignatureRequestCompoundTest {
         System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureAttachmentnamesource);
         System.assertEquals(null, ezsignsignatureRequestCompound.sEzsignsignatureAttachmentdescription);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureValidationstep);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation);
+        System.assertEquals(null, ezsignsignatureRequestCompound.sEzsignsignatureRegexp);
         System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
     }
 }

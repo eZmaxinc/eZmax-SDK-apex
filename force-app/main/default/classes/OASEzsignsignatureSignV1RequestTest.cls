@@ -68,4 +68,22 @@ private class OASEzsignsignatureSignV1RequestTest {
         System.assertEquals(ezsignsignatureSignV1Request1.hashCode(), ezsignsignatureSignV1Request2.hashCode());
         System.assertEquals(ezsignsignatureSignV1Request3.hashCode(), ezsignsignatureSignV1Request4.hashCode());
     }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        OASEzsignsignatureSignV1Request ezsignsignatureSignV1Request = new OASEzsignsignatureSignV1Request();
+        Map<String, String> x-property-mappings = ezsignsignatureSignV1Request.getx-property-mappings();
+        System.assertEquals('aObjFile', x-property-mappings.get('a_objFile'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASEzsignsignatureSignV1Request ezsignsignatureSignV1Request = new OASEzsignsignatureSignV1Request();
+        System.assertEquals(new List<OASCommonFile>(), ezsignsignatureSignV1Request.aObjFile);
+        System.assertEquals(null, ezsignsignatureSignV1Request.sValue);
+        System.assertEquals(null, ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision);
+        System.assertEquals(null, ezsignsignatureSignV1Request.sAttachmentsRefusalReason);
+        System.assertEquals(null, ezsignsignatureSignV1Request.sSvg);
+        System.assertEquals(null, ezsignsignatureSignV1Request.bIsAutomatic);
+    }
 }

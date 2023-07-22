@@ -72,6 +72,78 @@ private class OASObjectUsergroupApiTest {
     }
 
     /**
+     * Edit multiple Permissions
+     *
+     * Using this endpoint, you can edit multiple Permissions at the same time.
+     */
+    @isTest
+    private static void usergroupEditPermissionsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUsergroupID' => '',
+            'oaSUsergroupEditPermissionsV1Request' => ''
+        };
+
+        OASClient client;
+        OASObjectUsergroupApi api;
+        OASUsergroupEditPermissionsV1Respons response;
+        OASUsergroupEditPermissionsV1Respons expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUsergroupApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUsergroupEditPermissionsV1Respons.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUsergroupEditPermissionsV1Respons.getExample();
+        response = (OASUsergroupEditPermissionsV1Respons) api.usergroupEditPermissionsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Edit multiple Usergroupmemberships
+     *
+     * Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+     */
+    @isTest
+    private static void usergroupEditUsergroupmembershipsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUsergroupID' => '',
+            'oaSUsergroupEditUsergroupmemberships' => ''
+        };
+
+        OASClient client;
+        OASObjectUsergroupApi api;
+        OASUsergroupEditUsergroupmemberships response;
+        OASUsergroupEditUsergroupmemberships expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUsergroupApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUsergroupEditUsergroupmemberships.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUsergroupEditUsergroupmemberships.getExample();
+        response = (OASUsergroupEditUsergroupmemberships) api.usergroupEditUsergroupmembershipsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve Usergroups and IDs
      *
      * Get the list of Usergroup to be used in a dropdown or autocomplete control.
@@ -188,6 +260,76 @@ private class OASObjectUsergroupApiTest {
         res.setBody(js);
         expectedResponse = OASUsergroupGetObjectV2Response.getExample();
         response = (OASUsergroupGetObjectV2Response) api.usergroupGetObjectV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve an existing Usergroup\&#39;s Permissions
+     *
+     * 
+     */
+    @isTest
+    private static void usergroupGetPermissionsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUsergroupID' => ''
+        };
+
+        OASClient client;
+        OASObjectUsergroupApi api;
+        OASUsergroupGetPermissionsV1Response response;
+        OASUsergroupGetPermissionsV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUsergroupApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUsergroupGetPermissionsV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUsergroupGetPermissionsV1Response.getExample();
+        response = (OASUsergroupGetPermissionsV1Response) api.usergroupGetPermissionsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve an existing Usergroup\&#39;s Usergroupmemberships
+     *
+     * 
+     */
+    @isTest
+    private static void usergroupGetUsergroupmembershipsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUsergroupID' => ''
+        };
+
+        OASClient client;
+        OASObjectUsergroupApi api;
+        OASUsergroupGetUsergroupmembershipsV response;
+        OASUsergroupGetUsergroupmembershipsV expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUsergroupApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUsergroupGetUsergroupmembershipsV.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUsergroupGetUsergroupmembershipsV.getExample();
+        response = (OASUsergroupGetUsergroupmembershipsV) api.usergroupGetUsergroupmembershipsV1(params);
         System.assertEquals(expectedResponse, response);
     }
 }

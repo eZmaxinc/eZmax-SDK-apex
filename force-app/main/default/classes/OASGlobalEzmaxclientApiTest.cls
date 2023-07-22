@@ -22,10 +22,7 @@ private class OASGlobalEzmaxclientApiTest {
         OASGlobalEzmaxclientVersionV1Respons expectedResponse;
         String js = '';
 
-        client = new OASClient();
-        api = new OASGlobalEzmaxclientApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
+        api = new OASGlobalEzmaxclientApi(new OASClient());
 
         js = JSON.serialize(OASGlobalEzmaxclientVersionV1Respons.getExample());
         res.setHeader('Content-Type', 'application/json');

@@ -91,6 +91,7 @@ private class OASCommunicationResponseCompoundTest {
         System.assertEquals(null, communicationResponseCompound.sCommunicationBodyurl);
         System.assertEquals(null, communicationResponseCompound.eCommunicationDirection);
         System.assertEquals(null, communicationResponseCompound.iCommunicationrecipientCount);
+        System.assertEquals(null, communicationResponseCompound.bCommunicationPrivate);
         System.assertEquals(null, communicationResponseCompound.objDescriptionstaticSender);
         System.assertEquals(null, communicationResponseCompound.objEmailstaticSender);
         System.assertEquals(null, communicationResponseCompound.objPhonestaticSender);

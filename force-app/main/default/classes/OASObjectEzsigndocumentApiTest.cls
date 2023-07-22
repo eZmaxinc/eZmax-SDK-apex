@@ -143,6 +143,42 @@ private class OASObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Decline to sign
+     *
+     * Decline to sign
+     */
+    @isTest
+    private static void ezsigndocumentDeclineToSignV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'oaSEzsigndocumentDeclineToSignV1Requ' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentDeclineToSignV1Resp response;
+        OASEzsigndocumentDeclineToSignV1Resp expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentDeclineToSignV1Resp.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentDeclineToSignV1Resp.getExample();
+        response = (OASEzsigndocumentDeclineToSignV1Resp) api.ezsigndocumentDeclineToSignV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Delete an existing Ezsigndocument
      *
      * 
@@ -827,6 +863,42 @@ private class OASObjectEzsigndocumentApiTest {
         res.setBody(js);
         expectedResponse = OASEzsigndocumentPatchObjectV1Respon.getExample();
         response = (OASEzsigndocumentPatchObjectV1Respon) api.ezsigndocumentPatchObjectV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Submit the Ezsignform
+     *
+     * 
+     */
+    @isTest
+    private static void ezsigndocumentSubmitEzsignformV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'oaSEzsigndocumentSubmitEzsignformV1R' => ''
+        };
+
+        OASClient client;
+        OASObjectEzsigndocumentApi api;
+        OASEzsigndocumentSubmitEzsignformV1R response;
+        OASEzsigndocumentSubmitEzsignformV1R expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectEzsigndocumentApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASEzsigndocumentSubmitEzsignformV1R.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASEzsigndocumentSubmitEzsignformV1R.getExample();
+        response = (OASEzsigndocumentSubmitEzsignformV1R) api.ezsigndocumentSubmitEzsignformV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

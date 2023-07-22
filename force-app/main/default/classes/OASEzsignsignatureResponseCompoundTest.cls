@@ -86,6 +86,8 @@ private class OASEzsignsignatureResponseCompoundTest {
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignpagePagenumber);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureX);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureY);
+        System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureHeight);
+        System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureWidth);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureStep);
         System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureType);
         System.assertEquals(null, ezsignsignatureResponseCompound.tEzsignsignatureTooltip);
@@ -97,7 +99,12 @@ private class OASEzsignsignatureResponseCompoundTest {
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureRequired);
         System.assertEquals(null, ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation);
         System.assertEquals(null, ezsignsignatureResponseCompound.dtEzsignsignatureDate);
+        System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureattachmentCount);
+        System.assertEquals(null, ezsignsignatureResponseCompound.sEzsignsignatureDescription);
+        System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation);
+        System.assertEquals(null, ezsignsignatureResponseCompound.sEzsignsignatureRegexp);
         System.assertEquals(null, ezsignsignatureResponseCompound.objContactName);
+        System.assertEquals(null, ezsignsignatureResponseCompound.objSignature);
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureCustomdate);
         System.assertEquals(null, ezsignsignatureResponseCompound.objCreditcardtransaction);
     }
