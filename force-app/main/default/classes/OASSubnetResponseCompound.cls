@@ -48,7 +48,7 @@ public class OASSubnetResponseCompound implements OASSubnetResponse {
      * maximum: 4294967295
      * @return iSubnetNetwork
      */
-    public Integer iSubnetNetwork { get; set; }
+    public Long iSubnetNetwork { get; set; }
 
     /**
      * The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040
@@ -56,7 +56,7 @@ public class OASSubnetResponseCompound implements OASSubnetResponse {
      * maximum: 4294967295
      * @return iSubnetMask
      */
-    public Integer iSubnetMask { get; set; }
+    public Long iSubnetMask { get; set; }
 
     public static OASSubnetResponseCompound getExample() {
         OASSubnetResponseCompound subnetResponseCompound = new OASSubnetResponseCompound();
@@ -64,8 +64,8 @@ public class OASSubnetResponseCompound implements OASSubnetResponse {
           subnetResponseCompound.fkiUserID = 70;
           subnetResponseCompound.fkiApikeyID = 99;
           subnetResponseCompound.objSubnetDescription = OASMultilingualSubnetDescription.getExample();
-          subnetResponseCompound.iSubnetNetwork = 134744064;
-          subnetResponseCompound.iSubnetMask = 4294967040;
+          subnetResponseCompound.iSubnetNetwork = 134744064L;
+          subnetResponseCompound.iSubnetMask = 4294967040L;
         return subnetResponseCompound;
     }
 
