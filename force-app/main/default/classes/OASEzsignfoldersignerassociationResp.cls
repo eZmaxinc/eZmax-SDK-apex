@@ -27,12 +27,6 @@ public class OASEzsignfoldersignerassociationResp {
     public OASEzsignfoldersignerassociationResp objUser { get; set; }
 
     /**
-     * Get objUsergroup
-     * @return objUsergroup
-     */
-    public OASUsergroupResponseCompound objUsergroup { get; set; }
-
-    /**
      * Get objEzsignsigner
      * @return objEzsignsigner
      */
@@ -42,7 +36,6 @@ public class OASEzsignfoldersignerassociationResp {
         OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf = new OASEzsignfoldersignerassociationResp();
           ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsignergroup = OASEzsignsignergroupResponseCompound.getExample();
           ezsignfoldersignerassociationResponseCompoundAllOf.objUser = OASEzsignfoldersignerassociationResp.getExample();
-          ezsignfoldersignerassociationResponseCompoundAllOf.objUsergroup = OASUsergroupResponseCompound.getExample();
           ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsigner = OASEzsignsignerResponseCompound.getExample();
         return ezsignfoldersignerassociationResponseCompoundAllOf;
     }
@@ -52,7 +45,6 @@ public class OASEzsignfoldersignerassociationResp {
             OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf = (OASEzsignfoldersignerassociationResp) obj;
             return this.objEzsignsignergroup == ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsignergroup
                 && this.objUser == ezsignfoldersignerassociationResponseCompoundAllOf.objUser
-                && this.objUsergroup == ezsignfoldersignerassociationResponseCompoundAllOf.objUsergroup
                 && this.objEzsignsigner == ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsigner;
         }
         return false;
@@ -62,7 +54,6 @@ public class OASEzsignfoldersignerassociationResp {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (objEzsignsignergroup == null ? 0 : System.hashCode(objEzsignsignergroup));
         hashCode = (17 * hashCode) + (objUser == null ? 0 : System.hashCode(objUser));
-        hashCode = (17 * hashCode) + (objUsergroup == null ? 0 : System.hashCode(objUsergroup));
         hashCode = (17 * hashCode) + (objEzsignsigner == null ? 0 : System.hashCode(objEzsignsigner));
         return hashCode;
     }

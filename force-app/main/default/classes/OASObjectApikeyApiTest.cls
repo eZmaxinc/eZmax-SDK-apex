@@ -108,6 +108,88 @@ private class OASObjectApikeyApiTest {
     }
 
     /**
+     * Retrieve an existing Apikey\&#39;s cors
+     *
+     * 
+     */
+    @isTest
+    private static void apikeyGetCorsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiApikeyID' => ''
+        };
+
+        OASClient client;
+        OASObjectApikeyApi api;
+        OASApikeyGetCorsV1Response response;
+        OASApikeyGetCorsV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectApikeyApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASApikeyGetCorsV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASApikeyGetCorsV1Response.getExample();
+        response = (OASApikeyGetCorsV1Response) api.apikeyGetCorsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve Apikey list
+     *
+     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|
+     */
+    @isTest
+    private static void apikeyGetListV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'eOrderBy' => pkiApikeyID_ASC,
+            'iRowMax' => '',
+            'iRowOffset' => '',
+            'acceptLanguage' => '',
+            'sFilter' => 'null'
+        };
+
+        OASClient client;
+        OASObjectApikeyApi api;
+        OASApikeyGetListV1Response response;
+        OASApikeyGetListV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectApikeyApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASApikeyGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASApikeyGetListV1Response.getExample();
+        response = (OASApikeyGetListV1Response) api.apikeyGetListV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(OASApikeyGetListV1Response.getExample());
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setBody(js);
+        expectedResponse = OASApikeyGetListV1Response.getExample();
+        response = (OASApikeyGetListV1Response) api.apikeyGetListV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve an existing Apikey
      *
      * 
@@ -209,6 +291,42 @@ private class OASObjectApikeyApiTest {
         res.setBody(js);
         expectedResponse = OASApikeyGetSubnetsV1Response.getExample();
         response = (OASApikeyGetSubnetsV1Response) api.apikeyGetSubnetsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Regenerate the Apikey
+     *
+     * 
+     */
+    @isTest
+    private static void apikeyRegenerateV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiApikeyID' => '',
+            'oaSApikeyRegenerateV1Request' => ''
+        };
+
+        OASClient client;
+        OASObjectApikeyApi api;
+        OASApikeyRegenerateV1Response response;
+        OASApikeyRegenerateV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectApikeyApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASApikeyRegenerateV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASApikeyRegenerateV1Response.getExample();
+        response = (OASApikeyRegenerateV1Response) api.apikeyRegenerateV1(params);
         System.assertEquals(expectedResponse, response);
     }
 }

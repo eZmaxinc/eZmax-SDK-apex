@@ -360,6 +360,31 @@ public class OASObjectEzsignfolderApi {
         );
     }
     /**
+     * Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @return OASEzsignfolderGetEzsignfoldersigner
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASEzsignfolderGetEzsignfoldersigner ezsignfolderGetEzsignfoldersignerassociationsmineV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsignfolderID'), 'pkiEzsignfolderID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASEzsignfolderGetEzsignfoldersigner) client.invoke(
+            'GET', '/1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociationsmine', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsignfolderID' => (Integer) params.get('pkiEzsignfolderID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASEzsignfolderGetEzsignfoldersigner.class
+        );
+    }
+    /**
      * Retrieve an existing Ezsignfolder\&#39;s automatic Ezsignsignatures
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
      * @param pkiEzsignfolderID  (required)

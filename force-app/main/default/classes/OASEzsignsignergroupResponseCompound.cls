@@ -22,16 +22,32 @@ public class OASEzsignsignergroupResponseCompound implements OASEzsignsignergrou
      */
     public Integer pkiEzsignsignergroupID { get; set; }
 
+    /**
+     * Get objEzsignsignergroupDescription
+     * @return objEzsignsignergroupDescription
+     */
+    public OASMultilingualEzsignsignergroupDesc objEzsignsignergroupDescription { get; set; }
+
+    /**
+     * The Description of the Ezsignsignergroup in the language of the requester
+     * @return sEzsignsignergroupDescriptionX
+     */
+    public String sEzsignsignergroupDescriptionX { get; set; }
+
     public static OASEzsignsignergroupResponseCompound getExample() {
         OASEzsignsignergroupResponseCompound ezsignsignergroupResponseCompound = new OASEzsignsignergroupResponseCompound();
           ezsignsignergroupResponseCompound.pkiEzsignsignergroupID = 27;
+          ezsignsignergroupResponseCompound.objEzsignsignergroupDescription = OASMultilingualEzsignsignergroupDesc.getExample();
+          ezsignsignergroupResponseCompound.sEzsignsignergroupDescriptionX = 'HR';
         return ezsignsignergroupResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignergroupResponseCompound) {           
             OASEzsignsignergroupResponseCompound ezsignsignergroupResponseCompound = (OASEzsignsignergroupResponseCompound) obj;
-            return this.pkiEzsignsignergroupID == ezsignsignergroupResponseCompound.pkiEzsignsignergroupID;
+            return this.pkiEzsignsignergroupID == ezsignsignergroupResponseCompound.pkiEzsignsignergroupID
+                && this.objEzsignsignergroupDescription == ezsignsignergroupResponseCompound.objEzsignsignergroupDescription
+                && this.sEzsignsignergroupDescriptionX == ezsignsignergroupResponseCompound.sEzsignsignergroupDescriptionX;
         }
         return false;
     }
@@ -39,6 +55,8 @@ public class OASEzsignsignergroupResponseCompound implements OASEzsignsignergrou
     public Integer hashCode() {
         Integer hashCode = 43;
         hashCode = (17 * hashCode) + (pkiEzsignsignergroupID == null ? 0 : System.hashCode(pkiEzsignsignergroupID));
+        hashCode = (17 * hashCode) + (objEzsignsignergroupDescription == null ? 0 : System.hashCode(objEzsignsignergroupDescription));
+        hashCode = (17 * hashCode) + (sEzsignsignergroupDescriptionX == null ? 0 : System.hashCode(sEzsignsignergroupDescriptionX));
         return hashCode;
     }
 }

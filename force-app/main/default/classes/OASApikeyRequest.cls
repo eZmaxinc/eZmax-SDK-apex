@@ -40,12 +40,19 @@ public class OASApikeyRequest {
      */
     public Boolean bApikeyIsactive { get; set; }
 
+    /**
+     * Whether the apikey is signed or not
+     * @return bApikeyIssigned
+     */
+    public Boolean bApikeyIssigned { get; set; }
+
     public static OASApikeyRequest getExample() {
         OASApikeyRequest apikeyRequest = new OASApikeyRequest();
           apikeyRequest.pkiApikeyID = 99;
           apikeyRequest.fkiUserID = 70;
           apikeyRequest.objApikeyDescription = OASMultilingualApikeyDescription.getExample();
           apikeyRequest.bApikeyIsactive = true;
+          apikeyRequest.bApikeyIssigned = true;
         return apikeyRequest;
     }
 
@@ -55,7 +62,8 @@ public class OASApikeyRequest {
             return this.pkiApikeyID == apikeyRequest.pkiApikeyID
                 && this.fkiUserID == apikeyRequest.fkiUserID
                 && this.objApikeyDescription == apikeyRequest.objApikeyDescription
-                && this.bApikeyIsactive == apikeyRequest.bApikeyIsactive;
+                && this.bApikeyIsactive == apikeyRequest.bApikeyIsactive
+                && this.bApikeyIssigned == apikeyRequest.bApikeyIssigned;
         }
         return false;
     }
@@ -66,6 +74,7 @@ public class OASApikeyRequest {
         hashCode = (17 * hashCode) + (fkiUserID == null ? 0 : System.hashCode(fkiUserID));
         hashCode = (17 * hashCode) + (objApikeyDescription == null ? 0 : System.hashCode(objApikeyDescription));
         hashCode = (17 * hashCode) + (bApikeyIsactive == null ? 0 : System.hashCode(bApikeyIsactive));
+        hashCode = (17 * hashCode) + (bApikeyIssigned == null ? 0 : System.hashCode(bApikeyIssigned));
         return hashCode;
     }
 }

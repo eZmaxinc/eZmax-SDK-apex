@@ -106,6 +106,66 @@ public class OASObjectApikeyApi {
         );
     }
     /**
+     * Retrieve an existing Apikey\&#39;s cors
+     * 
+     * @param pkiApikeyID  (required)
+     * @return OASApikeyGetCorsV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASApikeyGetCorsV1Response apikeyGetCorsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiApikeyID'), 'pkiApikeyID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASApikeyGetCorsV1Response) client.invoke(
+            'GET', '/1/object/apikey/{pkiApikeyID}/getCors', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiApikeyID' => (Integer) params.get('pkiApikeyID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASApikeyGetCorsV1Response.class
+        );
+    }
+    /**
+     * Retrieve Apikey list
+     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return OASApikeyGetListV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASApikeyGetListV1Response apikeyGetListV1(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('eOrderBy', (String) params.get('eOrderBy')));
+        query.addAll(client.makeParam('iRowMax', (Integer) params.get('iRowMax')));
+        query.addAll(client.makeParam('iRowOffset', (Integer) params.get('iRowOffset')));
+        query.addAll(client.makeParam('sFilter', (String) params.get('sFilter')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASApikeyGetListV1Response) client.invoke(
+            'GET', '/1/object/apikey/getList', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>{
+                'Accept-Language' => (OASHeaderAcceptLanguage) params.get('acceptLanguage')
+            },
+            new List<String>{ 'application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASApikeyGetListV1Response.class
+        );
+    }
+    /**
      * Retrieve an existing Apikey
      * 
      * @param pkiApikeyID The unique ID of the Apikey (required)
@@ -178,6 +238,34 @@ public class OASObjectApikeyApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASApikeyGetSubnetsV1Response.class
+        );
+    }
+    /**
+     * Regenerate the Apikey
+     * 
+     * @param pkiApikeyID  (required)
+     * @param oaSApikeyRegenerateV1Request  (required)
+     * @return OASApikeyRegenerateV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASApikeyRegenerateV1Response apikeyRegenerateV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiApikeyID'), 'pkiApikeyID');
+        client.assertNotNull(params.get('oaSApikeyRegenerateV1Request'), 'oaSApikeyRegenerateV1Request');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASApikeyRegenerateV1Response) client.invoke(
+            'POST', '/1/object/apikey/{pkiApikeyID}/regenerate',
+            (OASApikeyRegenerateV1Request) params.get('oaSApikeyRegenerateV1Request'),
+            query, form,
+            new Map<String, Object>{
+                'pkiApikeyID' => (Integer) params.get('pkiApikeyID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASApikeyRegenerateV1Response.class
         );
     }
 }

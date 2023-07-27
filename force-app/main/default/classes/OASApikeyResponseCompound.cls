@@ -35,16 +35,34 @@ public class OASApikeyResponseCompound implements OASApikeyResponse {
     public OASMultilingualApikeyDescription objApikeyDescription { get; set; }
 
     /**
-     * The secret token for the API key.\n\nThis will be returned only on creation.
-     * @return sComputedToken
+     * Get objContactName
+     * @return objContactName
      */
-    public String sComputedToken { get; set; }
+    public OASCustomContactNameResponse objContactName { get; set; }
+
+    /**
+     * The Apikey for the API key.\n\nThis will be hidden if we are not creating or regenerating the Apikey.
+     * @return sApikeyApikey
+     */
+    public String sApikeyApikey { get; set; }
+
+    /**
+     * The Secret for the API key.\n\nThis will be hidden if we are not creating or regenerating the Apikey.
+     * @return sApikeySecret
+     */
+    public String sApikeySecret { get; set; }
 
     /**
      * Whether the apikey is active or not
      * @return bApikeyIsactive
      */
     public Boolean bApikeyIsactive { get; set; }
+
+    /**
+     * Whether the apikey is signed or not
+     * @return bApikeyIssigned
+     */
+    public Boolean bApikeyIssigned { get; set; }
 
     /**
      * Get objAudit
@@ -57,8 +75,11 @@ public class OASApikeyResponseCompound implements OASApikeyResponse {
           apikeyResponseCompound.pkiApikeyID = 99;
           apikeyResponseCompound.fkiUserID = 70;
           apikeyResponseCompound.objApikeyDescription = OASMultilingualApikeyDescription.getExample();
-          apikeyResponseCompound.sComputedToken = '';
+          apikeyResponseCompound.objContactName = OASCustomContactNameResponse.getExample();
+          apikeyResponseCompound.sApikeyApikey = '';
+          apikeyResponseCompound.sApikeySecret = '';
           apikeyResponseCompound.bApikeyIsactive = true;
+          apikeyResponseCompound.bApikeyIssigned = true;
           apikeyResponseCompound.objAudit = OASCommonAudit.getExample();
         return apikeyResponseCompound;
     }
@@ -69,8 +90,11 @@ public class OASApikeyResponseCompound implements OASApikeyResponse {
             return this.pkiApikeyID == apikeyResponseCompound.pkiApikeyID
                 && this.fkiUserID == apikeyResponseCompound.fkiUserID
                 && this.objApikeyDescription == apikeyResponseCompound.objApikeyDescription
-                && this.sComputedToken == apikeyResponseCompound.sComputedToken
+                && this.objContactName == apikeyResponseCompound.objContactName
+                && this.sApikeyApikey == apikeyResponseCompound.sApikeyApikey
+                && this.sApikeySecret == apikeyResponseCompound.sApikeySecret
                 && this.bApikeyIsactive == apikeyResponseCompound.bApikeyIsactive
+                && this.bApikeyIssigned == apikeyResponseCompound.bApikeyIssigned
                 && this.objAudit == apikeyResponseCompound.objAudit;
         }
         return false;
@@ -81,8 +105,11 @@ public class OASApikeyResponseCompound implements OASApikeyResponse {
         hashCode = (17 * hashCode) + (pkiApikeyID == null ? 0 : System.hashCode(pkiApikeyID));
         hashCode = (17 * hashCode) + (fkiUserID == null ? 0 : System.hashCode(fkiUserID));
         hashCode = (17 * hashCode) + (objApikeyDescription == null ? 0 : System.hashCode(objApikeyDescription));
-        hashCode = (17 * hashCode) + (sComputedToken == null ? 0 : System.hashCode(sComputedToken));
+        hashCode = (17 * hashCode) + (objContactName == null ? 0 : System.hashCode(objContactName));
+        hashCode = (17 * hashCode) + (sApikeyApikey == null ? 0 : System.hashCode(sApikeyApikey));
+        hashCode = (17 * hashCode) + (sApikeySecret == null ? 0 : System.hashCode(sApikeySecret));
         hashCode = (17 * hashCode) + (bApikeyIsactive == null ? 0 : System.hashCode(bApikeyIsactive));
+        hashCode = (17 * hashCode) + (bApikeyIssigned == null ? 0 : System.hashCode(bApikeyIssigned));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         return hashCode;
     }

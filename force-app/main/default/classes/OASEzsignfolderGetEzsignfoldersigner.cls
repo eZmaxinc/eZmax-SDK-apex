@@ -21,15 +21,15 @@ public class OASEzsignfolderGetEzsignfoldersigner {
     public OASEzsignfolderGetEzsignfoldersigner mPayload { get; set; }
 
     public static OASEzsignfolderGetEzsignfoldersigner getExample() {
-        OASEzsignfolderGetEzsignfoldersigner ezsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf = new OASEzsignfolderGetEzsignfoldersigner();
-          ezsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.mPayload = OASEzsignfolderGetEzsignfoldersigner.getExample();
-        return ezsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf;
+        OASEzsignfolderGetEzsignfoldersigner ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseAllOf = new OASEzsignfolderGetEzsignfoldersigner();
+          ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseAllOf.mPayload = OASEzsignfolderGetEzsignfoldersigner.getExample();
+        return ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseAllOf;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderGetEzsignfoldersigner) {           
-            OASEzsignfolderGetEzsignfoldersigner ezsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf = (OASEzsignfolderGetEzsignfoldersigner) obj;
-            return this.mPayload == ezsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.mPayload;
+            OASEzsignfolderGetEzsignfoldersigner ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseAllOf = (OASEzsignfolderGetEzsignfoldersigner) obj;
+            return this.mPayload == ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseAllOf.mPayload;
         }
         return false;
     }
