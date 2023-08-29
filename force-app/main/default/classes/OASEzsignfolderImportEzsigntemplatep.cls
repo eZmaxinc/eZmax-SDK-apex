@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignfolderImportEzsigntemplatep
+ * Payload for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
  */
-public class OASEzsignfolderImportEzsigntemplatep {
+public class OASEzsignfolderImportEzsigntemplatep implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjEzsigndocument
+     * @return aObjEzsigndocument
      */
-    public OASEzsignfolderImportEzsigntemplatep mPayload { get; set; }
+    public List<OASEzsigndocumentResponseCompound> aObjEzsigndocument { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsigndocument' => 'aObjEzsigndocument'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignfolderImportEzsigntemplatep() {
+        aObjEzsigndocument = new List<OASEzsigndocumentResponseCompound>();
+    }
 
     public static OASEzsignfolderImportEzsigntemplatep getExample() {
-        OASEzsignfolderImportEzsigntemplatep ezsignfolderImportEzsigntemplatepackageV1ResponseAllOf = new OASEzsignfolderImportEzsigntemplatep();
-          ezsignfolderImportEzsigntemplatepackageV1ResponseAllOf.mPayload = OASEzsignfolderImportEzsigntemplatep.getExample();
-        return ezsignfolderImportEzsigntemplatepackageV1ResponseAllOf;
+        OASEzsignfolderImportEzsigntemplatep ezsignfolderImportEzsigntemplatepackageV1ResponseMPayload = new OASEzsignfolderImportEzsigntemplatep();
+          ezsignfolderImportEzsigntemplatepackageV1ResponseMPayload.aObjEzsigndocument = new List<OASEzsigndocumentResponseCompound>{OASEzsigndocumentResponseCompound.getExample()};
+        return ezsignfolderImportEzsigntemplatepackageV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderImportEzsigntemplatep) {           
-            OASEzsignfolderImportEzsigntemplatep ezsignfolderImportEzsigntemplatepackageV1ResponseAllOf = (OASEzsignfolderImportEzsigntemplatep) obj;
-            return this.mPayload == ezsignfolderImportEzsigntemplatepackageV1ResponseAllOf.mPayload;
+            OASEzsignfolderImportEzsigntemplatep ezsignfolderImportEzsigntemplatepackageV1ResponseMPayload = (OASEzsignfolderImportEzsigntemplatep) obj;
+            return this.aObjEzsigndocument == ezsignfolderImportEzsigntemplatepackageV1ResponseMPayload.aObjEzsigndocument;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsigndocument == null ? 0 : System.hashCode(aObjEzsigndocument));
         return hashCode;
     }
 }

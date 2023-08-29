@@ -11,32 +11,62 @@
  */
 
 /**
- * OASEzsigntemplatepackagemembershipCr
+ * Payload for POST /1/object/ezsigntemplatepackagemembership
  */
-public class OASEzsigntemplatepackagemembershipCr {
+public class OASEzsigntemplatepackagemembershipCr implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsigntemplatepackagemembershipID
      */
-    public OASEzsigntemplatepackagemembershipCr mPayload { get; set; }
+    public List<Integer> aPkiEzsigntemplatepackagemembershipID { get; set; }
+
+    /**
+     * Whether the Ezsignbulksend was automatically modified and needs a manual validation
+     * @return bEzsigntemplatepackageNeedvalidation
+     */
+    public Boolean bEzsigntemplatepackageNeedvalidation { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+     * @return bEzsignbulksendNeedvalidation
+     */
+    public Boolean bEzsignbulksendNeedvalidation { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsigntemplatepackagemembershipID' => 'aPkiEzsigntemplatepackagemembershipID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntemplatepackagemembershipCr() {
+        aPkiEzsigntemplatepackagemembershipID = new List<Integer>();
+    }
 
     public static OASEzsigntemplatepackagemembershipCr getExample() {
-        OASEzsigntemplatepackagemembershipCr ezsigntemplatepackagemembershipCreateObjectV1ResponseAllOf = new OASEzsigntemplatepackagemembershipCr();
-          ezsigntemplatepackagemembershipCreateObjectV1ResponseAllOf.mPayload = OASEzsigntemplatepackagemembershipCr.getExample();
-        return ezsigntemplatepackagemembershipCreateObjectV1ResponseAllOf;
+        OASEzsigntemplatepackagemembershipCr ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload = new OASEzsigntemplatepackagemembershipCr();
+          ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.aPkiEzsigntemplatepackagemembershipID = new List<Integer>{Integer.getExample()};
+          ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.bEzsigntemplatepackageNeedvalidation = true;
+          ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.bEzsignbulksendNeedvalidation = true;
+        return ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatepackagemembershipCr) {           
-            OASEzsigntemplatepackagemembershipCr ezsigntemplatepackagemembershipCreateObjectV1ResponseAllOf = (OASEzsigntemplatepackagemembershipCr) obj;
-            return this.mPayload == ezsigntemplatepackagemembershipCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsigntemplatepackagemembershipCr ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload = (OASEzsigntemplatepackagemembershipCr) obj;
+            return this.aPkiEzsigntemplatepackagemembershipID == ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.aPkiEzsigntemplatepackagemembershipID
+                && this.bEzsigntemplatepackageNeedvalidation == ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.bEzsigntemplatepackageNeedvalidation
+                && this.bEzsignbulksendNeedvalidation == ezsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.bEzsignbulksendNeedvalidation;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsigntemplatepackagemembershipID == null ? 0 : System.hashCode(aPkiEzsigntemplatepackagemembershipID));
+        hashCode = (17 * hashCode) + (bEzsigntemplatepackageNeedvalidation == null ? 0 : System.hashCode(bEzsigntemplatepackageNeedvalidation));
+        hashCode = (17 * hashCode) + (bEzsignbulksendNeedvalidation == null ? 0 : System.hashCode(bEzsignbulksendNeedvalidation));
         return hashCode;
     }
 }

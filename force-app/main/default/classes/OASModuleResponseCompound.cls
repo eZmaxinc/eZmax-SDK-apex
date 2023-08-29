@@ -13,7 +13,7 @@
 /**
  * A Module Object
  */
-public class OASModuleResponseCompound implements OASModuleResponse, OASModuleResponseCompoundAllOf, OAS.MappedProperties {
+public class OASModuleResponseCompound implements OASModuleResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Module
      * minimum: 0

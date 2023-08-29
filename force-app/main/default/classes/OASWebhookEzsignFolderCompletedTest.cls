@@ -80,7 +80,7 @@ private class OASWebhookEzsignFolderCompletedTest {
     private static void defaultValuesPopulated() {
         OASWebhookEzsignFolderCompleted webhookEzsignFolderCompleted = new OASWebhookEzsignFolderCompleted();
         System.assertEquals(new List<OASAttemptResponseCompound>(), webhookEzsignFolderCompleted.aObjAttempt);
-        System.assertEquals(null, webhookEzsignFolderCompleted.objEzsignfolder);
         System.assertEquals(null, webhookEzsignFolderCompleted.objWebhook);
+        System.assertEquals(null, webhookEzsignFolderCompleted.objEzsignfolder);
     }
 }

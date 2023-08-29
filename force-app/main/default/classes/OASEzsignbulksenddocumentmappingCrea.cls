@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignbulksenddocumentmappingCrea
+ * Payload for POST /1/object/ezsignbulksenddocumentmapping
  */
-public class OASEzsignbulksenddocumentmappingCrea {
+public class OASEzsignbulksenddocumentmappingCrea implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsignbulksenddocumentmappingID
      */
-    public OASEzsignbulksenddocumentmappingCrea mPayload { get; set; }
+    public List<Integer> aPkiEzsignbulksenddocumentmappingID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignbulksenddocumentmappingID' => 'aPkiEzsignbulksenddocumentmappingID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignbulksenddocumentmappingCrea() {
+        aPkiEzsignbulksenddocumentmappingID = new List<Integer>();
+    }
 
     public static OASEzsignbulksenddocumentmappingCrea getExample() {
-        OASEzsignbulksenddocumentmappingCrea ezsignbulksenddocumentmappingCreateObjectV1ResponseAllOf = new OASEzsignbulksenddocumentmappingCrea();
-          ezsignbulksenddocumentmappingCreateObjectV1ResponseAllOf.mPayload = OASEzsignbulksenddocumentmappingCrea.getExample();
-        return ezsignbulksenddocumentmappingCreateObjectV1ResponseAllOf;
+        OASEzsignbulksenddocumentmappingCrea ezsignbulksenddocumentmappingCreateObjectV1ResponseMPayload = new OASEzsignbulksenddocumentmappingCrea();
+          ezsignbulksenddocumentmappingCreateObjectV1ResponseMPayload.aPkiEzsignbulksenddocumentmappingID = new List<Integer>{Integer.getExample()};
+        return ezsignbulksenddocumentmappingCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksenddocumentmappingCrea) {           
-            OASEzsignbulksenddocumentmappingCrea ezsignbulksenddocumentmappingCreateObjectV1ResponseAllOf = (OASEzsignbulksenddocumentmappingCrea) obj;
-            return this.mPayload == ezsignbulksenddocumentmappingCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsignbulksenddocumentmappingCrea ezsignbulksenddocumentmappingCreateObjectV1ResponseMPayload = (OASEzsignbulksenddocumentmappingCrea) obj;
+            return this.aPkiEzsignbulksenddocumentmappingID == ezsignbulksenddocumentmappingCreateObjectV1ResponseMPayload.aPkiEzsignbulksenddocumentmappingID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignbulksenddocumentmappingID == null ? 0 : System.hashCode(aPkiEzsignbulksenddocumentmappingID));
         return hashCode;
     }
 }

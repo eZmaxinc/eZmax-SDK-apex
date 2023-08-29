@@ -11,32 +11,44 @@
  */
 
 /**
- * OASUserGetEffectivePermissionsV1Resp
+ * Response for GET /1/object/user/{pkiUserID}/getEffectivePermissions
  */
-public class OASUserGetEffectivePermissionsV1Resp {
+public class OASUserGetEffectivePermissionsV1Resp implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjModulegroup
+     * @return aObjModulegroup
      */
-    public OASUserGetEffectivePermissionsV1Resp mPayload { get; set; }
+    public List<OASModulegroupResponseCompound> aObjModulegroup { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objModulegroup' => 'aObjModulegroup'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASUserGetEffectivePermissionsV1Resp() {
+        aObjModulegroup = new List<OASModulegroupResponseCompound>();
+    }
 
     public static OASUserGetEffectivePermissionsV1Resp getExample() {
-        OASUserGetEffectivePermissionsV1Resp userGetEffectivePermissionsV1ResponseAllOf = new OASUserGetEffectivePermissionsV1Resp();
-          userGetEffectivePermissionsV1ResponseAllOf.mPayload = OASUserGetEffectivePermissionsV1Resp.getExample();
-        return userGetEffectivePermissionsV1ResponseAllOf;
+        OASUserGetEffectivePermissionsV1Resp userGetEffectivePermissionsV1ResponseMPayload = new OASUserGetEffectivePermissionsV1Resp();
+          userGetEffectivePermissionsV1ResponseMPayload.aObjModulegroup = new List<OASModulegroupResponseCompound>{OASModulegroupResponseCompound.getExample()};
+        return userGetEffectivePermissionsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUserGetEffectivePermissionsV1Resp) {           
-            OASUserGetEffectivePermissionsV1Resp userGetEffectivePermissionsV1ResponseAllOf = (OASUserGetEffectivePermissionsV1Resp) obj;
-            return this.mPayload == userGetEffectivePermissionsV1ResponseAllOf.mPayload;
+            OASUserGetEffectivePermissionsV1Resp userGetEffectivePermissionsV1ResponseMPayload = (OASUserGetEffectivePermissionsV1Resp) obj;
+            return this.aObjModulegroup == userGetEffectivePermissionsV1ResponseMPayload.aObjModulegroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjModulegroup == null ? 0 : System.hashCode(aObjModulegroup));
         return hashCode;
     }
 }

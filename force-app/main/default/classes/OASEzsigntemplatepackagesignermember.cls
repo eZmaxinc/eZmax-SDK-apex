@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigntemplatepackagesignermember
+ * Payload for GET /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}
  */
 public class OASEzsigntemplatepackagesignermember {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsigntemplatepackagesignermembership
+     * @return objEzsigntemplatepackagesignermembership
      */
-    public OASEzsigntemplatepackagesignermember mPayload { get; set; }
+    public OASEzsigntemplatepackagesignermember objEzsigntemplatepackagesignermembership { get; set; }
 
     public static OASEzsigntemplatepackagesignermember getExample() {
-        OASEzsigntemplatepackagesignermember ezsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf = new OASEzsigntemplatepackagesignermember();
-          ezsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.mPayload = OASEzsigntemplatepackagesignermember.getExample();
-        return ezsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf;
+        OASEzsigntemplatepackagesignermember ezsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload = new OASEzsigntemplatepackagesignermember();
+          ezsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.objEzsigntemplatepackagesignermembership = OASEzsigntemplatepackagesignermember.getExample();
+        return ezsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatepackagesignermember) {           
-            OASEzsigntemplatepackagesignermember ezsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf = (OASEzsigntemplatepackagesignermember) obj;
-            return this.mPayload == ezsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.mPayload;
+            OASEzsigntemplatepackagesignermember ezsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload = (OASEzsigntemplatepackagesignermember) obj;
+            return this.objEzsigntemplatepackagesignermembership == ezsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.objEzsigntemplatepackagesignermembership;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsigntemplatepackagesignermembership == null ? 0 : System.hashCode(objEzsigntemplatepackagesignermembership));
         return hashCode;
     }
 }

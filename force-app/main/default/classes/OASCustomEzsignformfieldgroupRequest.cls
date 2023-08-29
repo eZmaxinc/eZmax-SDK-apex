@@ -11,7 +11,7 @@
  */
 
 /**
- * OASCustomEzsignformfieldgroupRequest
+ * A Custom Ezsignformfieldgroup Object to fill an Ezsignform using submitForm
  */
 public class OASCustomEzsignformfieldgroupRequest implements OAS.MappedProperties {
     /**
@@ -46,19 +46,19 @@ public class OASCustomEzsignformfieldgroupRequest implements OAS.MappedPropertie
     }
 
     public static OASCustomEzsignformfieldgroupRequest getExample() {
-        OASCustomEzsignformfieldgroupRequest customEzsignformfieldgroupRequestAllOf = new OASCustomEzsignformfieldgroupRequest();
-          customEzsignformfieldgroupRequestAllOf.pkiEzsignformfieldgroupID = 26;
-          customEzsignformfieldgroupRequestAllOf.sEzsignformfieldgroupLabel = 'Allergies';
-          customEzsignformfieldgroupRequestAllOf.aObjEzsignformfield = new List<OASCustomEzsignformfieldRequest>{OASCustomEzsignformfieldRequest.getExample()};
-        return customEzsignformfieldgroupRequestAllOf;
+        OASCustomEzsignformfieldgroupRequest customEzsignformfieldgroupRequest = new OASCustomEzsignformfieldgroupRequest();
+          customEzsignformfieldgroupRequest.pkiEzsignformfieldgroupID = 26;
+          customEzsignformfieldgroupRequest.sEzsignformfieldgroupLabel = 'Allergies';
+          customEzsignformfieldgroupRequest.aObjEzsignformfield = new List<OASCustomEzsignformfieldRequest>{OASCustomEzsignformfieldRequest.getExample()};
+        return customEzsignformfieldgroupRequest;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCustomEzsignformfieldgroupRequest) {           
-            OASCustomEzsignformfieldgroupRequest customEzsignformfieldgroupRequestAllOf = (OASCustomEzsignformfieldgroupRequest) obj;
-            return this.pkiEzsignformfieldgroupID == customEzsignformfieldgroupRequestAllOf.pkiEzsignformfieldgroupID
-                && this.sEzsignformfieldgroupLabel == customEzsignformfieldgroupRequestAllOf.sEzsignformfieldgroupLabel
-                && this.aObjEzsignformfield == customEzsignformfieldgroupRequestAllOf.aObjEzsignformfield;
+            OASCustomEzsignformfieldgroupRequest customEzsignformfieldgroupRequest = (OASCustomEzsignformfieldgroupRequest) obj;
+            return this.pkiEzsignformfieldgroupID == customEzsignformfieldgroupRequest.pkiEzsignformfieldgroupID
+                && this.sEzsignformfieldgroupLabel == customEzsignformfieldgroupRequest.sEzsignformfieldgroupLabel
+                && this.aObjEzsignformfield == customEzsignformfieldgroupRequest.aObjEzsignformfield;
         }
         return false;
     }

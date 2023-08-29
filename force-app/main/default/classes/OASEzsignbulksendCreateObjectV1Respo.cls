@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignbulksendCreateObjectV1Respo
+ * Payload for POST /1/object/ezsignbulksend
  */
-public class OASEzsignbulksendCreateObjectV1Respo {
+public class OASEzsignbulksendCreateObjectV1Respo implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsignbulksendID
      */
-    public OASEzsignbulksendCreateObjectV1Respo mPayload { get; set; }
+    public List<Integer> aPkiEzsignbulksendID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignbulksendID' => 'aPkiEzsignbulksendID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignbulksendCreateObjectV1Respo() {
+        aPkiEzsignbulksendID = new List<Integer>();
+    }
 
     public static OASEzsignbulksendCreateObjectV1Respo getExample() {
-        OASEzsignbulksendCreateObjectV1Respo ezsignbulksendCreateObjectV1ResponseAllOf = new OASEzsignbulksendCreateObjectV1Respo();
-          ezsignbulksendCreateObjectV1ResponseAllOf.mPayload = OASEzsignbulksendCreateObjectV1Respo.getExample();
-        return ezsignbulksendCreateObjectV1ResponseAllOf;
+        OASEzsignbulksendCreateObjectV1Respo ezsignbulksendCreateObjectV1ResponseMPayload = new OASEzsignbulksendCreateObjectV1Respo();
+          ezsignbulksendCreateObjectV1ResponseMPayload.aPkiEzsignbulksendID = new List<Integer>{Integer.getExample()};
+        return ezsignbulksendCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendCreateObjectV1Respo) {           
-            OASEzsignbulksendCreateObjectV1Respo ezsignbulksendCreateObjectV1ResponseAllOf = (OASEzsignbulksendCreateObjectV1Respo) obj;
-            return this.mPayload == ezsignbulksendCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsignbulksendCreateObjectV1Respo ezsignbulksendCreateObjectV1ResponseMPayload = (OASEzsignbulksendCreateObjectV1Respo) obj;
+            return this.aPkiEzsignbulksendID == ezsignbulksendCreateObjectV1ResponseMPayload.aPkiEzsignbulksendID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignbulksendID == null ? 0 : System.hashCode(aPkiEzsignbulksendID));
         return hashCode;
     }
 }

@@ -50,7 +50,7 @@ public class OASCommonFile {
         OASCommonFile commonFile = new OASCommonFile();
           commonFile.sFileName = 'example.pdf';
           commonFile.sFileUrl = '';
-          commonFile.sFileBase64 = EncodingUtil.base64Decode('[B@4d722ac9');
+          commonFile.sFileBase64 = EncodingUtil.base64Decode('[B@119020fb');
           commonFile.eFileSource = EFileSourceEnum.BASE64;
         return commonFile;
     }

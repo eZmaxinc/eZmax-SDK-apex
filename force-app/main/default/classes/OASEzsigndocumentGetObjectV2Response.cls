@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigndocumentGetObjectV2Response
+ * Payload for GET /2/object/ezsigndocument/{pkiEzsigndocumentID}
  */
 public class OASEzsigndocumentGetObjectV2Response {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsigndocument
+     * @return objEzsigndocument
      */
-    public OASEzsigndocumentGetObjectV2Response mPayload { get; set; }
+    public OASEzsigndocumentResponseCompound objEzsigndocument { get; set; }
 
     public static OASEzsigndocumentGetObjectV2Response getExample() {
-        OASEzsigndocumentGetObjectV2Response ezsigndocumentGetObjectV2ResponseAllOf = new OASEzsigndocumentGetObjectV2Response();
-          ezsigndocumentGetObjectV2ResponseAllOf.mPayload = OASEzsigndocumentGetObjectV2Response.getExample();
-        return ezsigndocumentGetObjectV2ResponseAllOf;
+        OASEzsigndocumentGetObjectV2Response ezsigndocumentGetObjectV2ResponseMPayload = new OASEzsigndocumentGetObjectV2Response();
+          ezsigndocumentGetObjectV2ResponseMPayload.objEzsigndocument = OASEzsigndocumentResponseCompound.getExample();
+        return ezsigndocumentGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetObjectV2Response) {           
-            OASEzsigndocumentGetObjectV2Response ezsigndocumentGetObjectV2ResponseAllOf = (OASEzsigndocumentGetObjectV2Response) obj;
-            return this.mPayload == ezsigndocumentGetObjectV2ResponseAllOf.mPayload;
+            OASEzsigndocumentGetObjectV2Response ezsigndocumentGetObjectV2ResponseMPayload = (OASEzsigndocumentGetObjectV2Response) obj;
+            return this.objEzsigndocument == ezsigndocumentGetObjectV2ResponseMPayload.objEzsigndocument;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsigndocument == null ? 0 : System.hashCode(objEzsigndocument));
         return hashCode;
     }
 }

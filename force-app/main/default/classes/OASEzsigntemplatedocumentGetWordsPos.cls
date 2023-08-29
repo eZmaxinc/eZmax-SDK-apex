@@ -11,9 +11,21 @@
  */
 
 /**
- * OASEzsigntemplatedocumentGetWordsPos
+ * Response for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
  */
-public class OASEzsigntemplatedocumentGetWordsPos {
+public class OASEzsigntemplatedocumentGetWordsPos implements OASCommonResponse {
+    /**
+     * Get objDebugPayload
+     * @return objDebugPayload
+     */
+    public OASCommonResponseObjDebugPayload objDebugPayload { get; set; }
+
+    /**
+     * Get objDebug
+     * @return objDebug
+     */
+    public OASCommonResponseObjDebug objDebug { get; set; }
+
     /**
      * Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
      * @return mPayload
@@ -25,21 +37,27 @@ public class OASEzsigntemplatedocumentGetWordsPos {
     }
 
     public static OASEzsigntemplatedocumentGetWordsPos getExample() {
-        OASEzsigntemplatedocumentGetWordsPos ezsigntemplatedocumentGetWordsPositionsV1ResponseAllOf = new OASEzsigntemplatedocumentGetWordsPos();
-          ezsigntemplatedocumentGetWordsPositionsV1ResponseAllOf.mPayload = new List<OASCustomWordPositionWordResponse>{OASCustomWordPositionWordResponse.getExample()};
-        return ezsigntemplatedocumentGetWordsPositionsV1ResponseAllOf;
+        OASEzsigntemplatedocumentGetWordsPos ezsigntemplatedocumentGetWordsPositionsV1Response = new OASEzsigntemplatedocumentGetWordsPos();
+          ezsigntemplatedocumentGetWordsPositionsV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
+          ezsigntemplatedocumentGetWordsPositionsV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          ezsigntemplatedocumentGetWordsPositionsV1Response.mPayload = new List<OASCustomWordPositionWordResponse>{OASCustomWordPositionWordResponse.getExample()};
+        return ezsigntemplatedocumentGetWordsPositionsV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatedocumentGetWordsPos) {           
-            OASEzsigntemplatedocumentGetWordsPos ezsigntemplatedocumentGetWordsPositionsV1ResponseAllOf = (OASEzsigntemplatedocumentGetWordsPos) obj;
-            return this.mPayload == ezsigntemplatedocumentGetWordsPositionsV1ResponseAllOf.mPayload;
+            OASEzsigntemplatedocumentGetWordsPos ezsigntemplatedocumentGetWordsPositionsV1Response = (OASEzsigntemplatedocumentGetWordsPos) obj;
+            return this.objDebugPayload == ezsigntemplatedocumentGetWordsPositionsV1Response.objDebugPayload
+                && this.objDebug == ezsigntemplatedocumentGetWordsPositionsV1Response.objDebug
+                && this.mPayload == ezsigntemplatedocumentGetWordsPositionsV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
+        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
         hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }

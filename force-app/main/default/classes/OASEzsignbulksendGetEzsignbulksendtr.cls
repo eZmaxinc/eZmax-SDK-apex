@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignbulksendGetEzsignbulksendtr
+ * Payload for GET /1/object/ezsignbulksend/{pkiEzsignbulksend}/getEzsignbulksendtransmissions
  */
-public class OASEzsignbulksendGetEzsignbulksendtr {
+public class OASEzsignbulksendGetEzsignbulksendtr implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjEzsignbulksendtransmission
+     * @return aObjEzsignbulksendtransmission
      */
-    public OASEzsignbulksendGetEzsignbulksendtr mPayload { get; set; }
+    public List<OASEzsignbulksendtransmissionRespons> aObjEzsignbulksendtransmission { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignbulksendtransmission' => 'aObjEzsignbulksendtransmission'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignbulksendGetEzsignbulksendtr() {
+        aObjEzsignbulksendtransmission = new List<OASEzsignbulksendtransmissionRespons>();
+    }
 
     public static OASEzsignbulksendGetEzsignbulksendtr getExample() {
-        OASEzsignbulksendGetEzsignbulksendtr ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf = new OASEzsignbulksendGetEzsignbulksendtr();
-          ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf.mPayload = OASEzsignbulksendGetEzsignbulksendtr.getExample();
-        return ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf;
+        OASEzsignbulksendGetEzsignbulksendtr ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload = new OASEzsignbulksendGetEzsignbulksendtr();
+          ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload.aObjEzsignbulksendtransmission = new List<OASEzsignbulksendtransmissionRespons>{OASEzsignbulksendtransmissionRespons.getExample()};
+        return ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendGetEzsignbulksendtr) {           
-            OASEzsignbulksendGetEzsignbulksendtr ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf = (OASEzsignbulksendGetEzsignbulksendtr) obj;
-            return this.mPayload == ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseAllOf.mPayload;
+            OASEzsignbulksendGetEzsignbulksendtr ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload = (OASEzsignbulksendGetEzsignbulksendtr) obj;
+            return this.aObjEzsignbulksendtransmission == ezsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload.aObjEzsignbulksendtransmission;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsignbulksendtransmission == null ? 0 : System.hashCode(aObjEzsignbulksendtransmission));
         return hashCode;
     }
 }

@@ -2,70 +2,99 @@
 private class OASActivesessionGetCurrentV1ResponseTest {
     @isTest
     private static void equalsSameInstance() {
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf1 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf2 = activesessionGetCurrentV1ResponseAllOf1;
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf3 = new OASActivesessionGetCurrentV1Response();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf4 = activesessionGetCurrentV1ResponseAllOf3;
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload1 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload2 = activesessionGetCurrentV1ResponseMPayload1;
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload3 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload4 = activesessionGetCurrentV1ResponseMPayload3;
 
-        System.assert(activesessionGetCurrentV1ResponseAllOf1.equals(activesessionGetCurrentV1ResponseAllOf2));
-        System.assert(activesessionGetCurrentV1ResponseAllOf2.equals(activesessionGetCurrentV1ResponseAllOf1));
-        System.assert(activesessionGetCurrentV1ResponseAllOf1.equals(activesessionGetCurrentV1ResponseAllOf1));
-        System.assert(activesessionGetCurrentV1ResponseAllOf3.equals(activesessionGetCurrentV1ResponseAllOf4));
-        System.assert(activesessionGetCurrentV1ResponseAllOf4.equals(activesessionGetCurrentV1ResponseAllOf3));
-        System.assert(activesessionGetCurrentV1ResponseAllOf3.equals(activesessionGetCurrentV1ResponseAllOf3));
+        System.assert(activesessionGetCurrentV1ResponseMPayload1.equals(activesessionGetCurrentV1ResponseMPayload2));
+        System.assert(activesessionGetCurrentV1ResponseMPayload2.equals(activesessionGetCurrentV1ResponseMPayload1));
+        System.assert(activesessionGetCurrentV1ResponseMPayload1.equals(activesessionGetCurrentV1ResponseMPayload1));
+        System.assert(activesessionGetCurrentV1ResponseMPayload3.equals(activesessionGetCurrentV1ResponseMPayload4));
+        System.assert(activesessionGetCurrentV1ResponseMPayload4.equals(activesessionGetCurrentV1ResponseMPayload3));
+        System.assert(activesessionGetCurrentV1ResponseMPayload3.equals(activesessionGetCurrentV1ResponseMPayload3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf1 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf2 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf3 = new OASActivesessionGetCurrentV1Response();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf4 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload1 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload2 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload3 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload4 = new OASActivesessionGetCurrentV1Response();
 
-        System.assert(activesessionGetCurrentV1ResponseAllOf1.equals(activesessionGetCurrentV1ResponseAllOf2));
-        System.assert(activesessionGetCurrentV1ResponseAllOf2.equals(activesessionGetCurrentV1ResponseAllOf1));
-        System.assert(activesessionGetCurrentV1ResponseAllOf3.equals(activesessionGetCurrentV1ResponseAllOf4));
-        System.assert(activesessionGetCurrentV1ResponseAllOf4.equals(activesessionGetCurrentV1ResponseAllOf3));
+        System.assert(activesessionGetCurrentV1ResponseMPayload1.equals(activesessionGetCurrentV1ResponseMPayload2));
+        System.assert(activesessionGetCurrentV1ResponseMPayload2.equals(activesessionGetCurrentV1ResponseMPayload1));
+        System.assert(activesessionGetCurrentV1ResponseMPayload3.equals(activesessionGetCurrentV1ResponseMPayload4));
+        System.assert(activesessionGetCurrentV1ResponseMPayload4.equals(activesessionGetCurrentV1ResponseMPayload3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf1 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf2 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload1 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload2 = new OASActivesessionGetCurrentV1Response();
 
-        System.assertEquals(false, activesessionGetCurrentV1ResponseAllOf1.equals('foo'));
-        System.assertEquals(false, activesessionGetCurrentV1ResponseAllOf2.equals('foo'));
+        System.assertEquals(false, activesessionGetCurrentV1ResponseMPayload1.equals('foo'));
+        System.assertEquals(false, activesessionGetCurrentV1ResponseMPayload2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf1 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf2 = new OASActivesessionGetCurrentV1Response();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf3;
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload1 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload2 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload3;
 
-        System.assertEquals(false, activesessionGetCurrentV1ResponseAllOf1.equals(activesessionGetCurrentV1ResponseAllOf3));
-        System.assertEquals(false, activesessionGetCurrentV1ResponseAllOf2.equals(activesessionGetCurrentV1ResponseAllOf3));
+        System.assertEquals(false, activesessionGetCurrentV1ResponseMPayload1.equals(activesessionGetCurrentV1ResponseMPayload3));
+        System.assertEquals(false, activesessionGetCurrentV1ResponseMPayload2.equals(activesessionGetCurrentV1ResponseMPayload3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf1 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf2 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload1 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload2 = new OASActivesessionGetCurrentV1Response();
 
-        System.assertEquals(activesessionGetCurrentV1ResponseAllOf1.hashCode(), activesessionGetCurrentV1ResponseAllOf1.hashCode());
-        System.assertEquals(activesessionGetCurrentV1ResponseAllOf2.hashCode(), activesessionGetCurrentV1ResponseAllOf2.hashCode());
+        System.assertEquals(activesessionGetCurrentV1ResponseMPayload1.hashCode(), activesessionGetCurrentV1ResponseMPayload1.hashCode());
+        System.assertEquals(activesessionGetCurrentV1ResponseMPayload2.hashCode(), activesessionGetCurrentV1ResponseMPayload2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf1 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf2 = OASActivesessionGetCurrentV1Response.getExample();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf3 = new OASActivesessionGetCurrentV1Response();
-        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseAllOf4 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload1 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload2 = OASActivesessionGetCurrentV1Response.getExample();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload3 = new OASActivesessionGetCurrentV1Response();
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload4 = new OASActivesessionGetCurrentV1Response();
 
-        System.assert(activesessionGetCurrentV1ResponseAllOf1.equals(activesessionGetCurrentV1ResponseAllOf2));
-        System.assert(activesessionGetCurrentV1ResponseAllOf3.equals(activesessionGetCurrentV1ResponseAllOf4));
-        System.assertEquals(activesessionGetCurrentV1ResponseAllOf1.hashCode(), activesessionGetCurrentV1ResponseAllOf2.hashCode());
-        System.assertEquals(activesessionGetCurrentV1ResponseAllOf3.hashCode(), activesessionGetCurrentV1ResponseAllOf4.hashCode());
+        System.assert(activesessionGetCurrentV1ResponseMPayload1.equals(activesessionGetCurrentV1ResponseMPayload2));
+        System.assert(activesessionGetCurrentV1ResponseMPayload3.equals(activesessionGetCurrentV1ResponseMPayload4));
+        System.assertEquals(activesessionGetCurrentV1ResponseMPayload1.hashCode(), activesessionGetCurrentV1ResponseMPayload2.hashCode());
+        System.assertEquals(activesessionGetCurrentV1ResponseMPayload3.hashCode(), activesessionGetCurrentV1ResponseMPayload4.hashCode());
+    }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload = new OASActivesessionGetCurrentV1Response();
+        Map<String, String> x-property-mappings = activesessionGetCurrentV1ResponseMPayload.getx-property-mappings();
+        System.assertEquals('aPkiPermissionID', x-property-mappings.get('a_pkiPermissionID'));
+        System.assertEquals('aEModuleInternalname', x-property-mappings.get('a_eModuleInternalname'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASActivesessionGetCurrentV1Response activesessionGetCurrentV1ResponseMPayload = new OASActivesessionGetCurrentV1Response();
+        System.assertEquals(new List<Integer>(), activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID);
+        System.assertEquals(new List<String>(), activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.fkiLanguageID);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.sCompanyNameX);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.bActivesessionIssuperadmin);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.pksCustomerCode);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.fkiSignatureID);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.objUserReal);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.objUserCloned);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.objApikey);
     }
 }

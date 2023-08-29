@@ -82,5 +82,6 @@ private class OASCommonResponseObjDebugPayloadTest {
         System.assertEquals(new List<Integer>(), commonResponseObjDebugPayload.aRequiredPermission);
         System.assertEquals(null, commonResponseObjDebugPayload.iVersionMin);
         System.assertEquals(null, commonResponseObjDebugPayload.iVersionMax);
+        System.assertEquals(null, commonResponseObjDebugPayload.bVersionDeprecated);
     }
 }

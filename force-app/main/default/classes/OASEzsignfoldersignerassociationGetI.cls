@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignfoldersignerassociationGetI
+ * Payload for GET /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl
  */
 public class OASEzsignfoldersignerassociationGetI {
     /**
-     * Get mPayload
-     * @return mPayload
+     * The Url to login to the signing application.\r\n\r\nUrl will expire after 30 minutes.\r\n
+     * @return sLoginUrl
      */
-    public OASEzsignfoldersignerassociationGetI mPayload { get; set; }
+    public String sLoginUrl { get; set; }
 
     public static OASEzsignfoldersignerassociationGetI getExample() {
-        OASEzsignfoldersignerassociationGetI ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf = new OASEzsignfoldersignerassociationGetI();
-          ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf.mPayload = OASEzsignfoldersignerassociationGetI.getExample();
-        return ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf;
+        OASEzsignfoldersignerassociationGetI ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload = new OASEzsignfoldersignerassociationGetI();
+          ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.sLoginUrl = '';
+        return ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldersignerassociationGetI) {           
-            OASEzsignfoldersignerassociationGetI ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf = (OASEzsignfoldersignerassociationGetI) obj;
-            return this.mPayload == ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf.mPayload;
+            OASEzsignfoldersignerassociationGetI ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload = (OASEzsignfoldersignerassociationGetI) obj;
+            return this.sLoginUrl == ezsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.sLoginUrl;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (sLoginUrl == null ? 0 : System.hashCode(sLoginUrl));
         return hashCode;
     }
 }

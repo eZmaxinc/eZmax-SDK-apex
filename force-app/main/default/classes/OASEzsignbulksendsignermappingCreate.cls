@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignbulksendsignermappingCreate
+ * Payload for POST /1/object/ezsignbulksendsignermapping
  */
-public class OASEzsignbulksendsignermappingCreate {
+public class OASEzsignbulksendsignermappingCreate implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsignbulksendsignermappingID
      */
-    public OASEzsignbulksendsignermappingCreate mPayload { get; set; }
+    public List<Integer> aPkiEzsignbulksendsignermappingID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignbulksendsignermappingID' => 'aPkiEzsignbulksendsignermappingID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignbulksendsignermappingCreate() {
+        aPkiEzsignbulksendsignermappingID = new List<Integer>();
+    }
 
     public static OASEzsignbulksendsignermappingCreate getExample() {
-        OASEzsignbulksendsignermappingCreate ezsignbulksendsignermappingCreateObjectV1ResponseAllOf = new OASEzsignbulksendsignermappingCreate();
-          ezsignbulksendsignermappingCreateObjectV1ResponseAllOf.mPayload = OASEzsignbulksendsignermappingCreate.getExample();
-        return ezsignbulksendsignermappingCreateObjectV1ResponseAllOf;
+        OASEzsignbulksendsignermappingCreate ezsignbulksendsignermappingCreateObjectV1ResponseMPayload = new OASEzsignbulksendsignermappingCreate();
+          ezsignbulksendsignermappingCreateObjectV1ResponseMPayload.aPkiEzsignbulksendsignermappingID = new List<Integer>{Integer.getExample()};
+        return ezsignbulksendsignermappingCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendsignermappingCreate) {           
-            OASEzsignbulksendsignermappingCreate ezsignbulksendsignermappingCreateObjectV1ResponseAllOf = (OASEzsignbulksendsignermappingCreate) obj;
-            return this.mPayload == ezsignbulksendsignermappingCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsignbulksendsignermappingCreate ezsignbulksendsignermappingCreateObjectV1ResponseMPayload = (OASEzsignbulksendsignermappingCreate) obj;
+            return this.aPkiEzsignbulksendsignermappingID == ezsignbulksendsignermappingCreateObjectV1ResponseMPayload.aPkiEzsignbulksendsignermappingID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignbulksendsignermappingID == null ? 0 : System.hashCode(aPkiEzsignbulksendsignermappingID));
         return hashCode;
     }
 }

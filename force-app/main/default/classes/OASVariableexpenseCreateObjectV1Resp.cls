@@ -11,32 +11,44 @@
  */
 
 /**
- * OASVariableexpenseCreateObjectV1Resp
+ * Payload for POST /1/object/variableexpense
  */
-public class OASVariableexpenseCreateObjectV1Resp {
+public class OASVariableexpenseCreateObjectV1Resp implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiVariableexpenseID
      */
-    public OASVariableexpenseCreateObjectV1Resp mPayload { get; set; }
+    public List<Integer> aPkiVariableexpenseID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiVariableexpenseID' => 'aPkiVariableexpenseID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASVariableexpenseCreateObjectV1Resp() {
+        aPkiVariableexpenseID = new List<Integer>();
+    }
 
     public static OASVariableexpenseCreateObjectV1Resp getExample() {
-        OASVariableexpenseCreateObjectV1Resp variableexpenseCreateObjectV1ResponseAllOf = new OASVariableexpenseCreateObjectV1Resp();
-          variableexpenseCreateObjectV1ResponseAllOf.mPayload = OASVariableexpenseCreateObjectV1Resp.getExample();
-        return variableexpenseCreateObjectV1ResponseAllOf;
+        OASVariableexpenseCreateObjectV1Resp variableexpenseCreateObjectV1ResponseMPayload = new OASVariableexpenseCreateObjectV1Resp();
+          variableexpenseCreateObjectV1ResponseMPayload.aPkiVariableexpenseID = new List<Integer>{Integer.getExample()};
+        return variableexpenseCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASVariableexpenseCreateObjectV1Resp) {           
-            OASVariableexpenseCreateObjectV1Resp variableexpenseCreateObjectV1ResponseAllOf = (OASVariableexpenseCreateObjectV1Resp) obj;
-            return this.mPayload == variableexpenseCreateObjectV1ResponseAllOf.mPayload;
+            OASVariableexpenseCreateObjectV1Resp variableexpenseCreateObjectV1ResponseMPayload = (OASVariableexpenseCreateObjectV1Resp) obj;
+            return this.aPkiVariableexpenseID == variableexpenseCreateObjectV1ResponseMPayload.aPkiVariableexpenseID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiVariableexpenseID == null ? 0 : System.hashCode(aPkiVariableexpenseID));
         return hashCode;
     }
 }

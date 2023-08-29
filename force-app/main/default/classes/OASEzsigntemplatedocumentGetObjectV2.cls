@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigntemplatedocumentGetObjectV2
+ * Payload for GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
  */
 public class OASEzsigntemplatedocumentGetObjectV2 {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsigntemplatedocument
+     * @return objEzsigntemplatedocument
      */
-    public OASEzsigntemplatedocumentGetObjectV2 mPayload { get; set; }
+    public OASEzsigntemplatedocumentResponseCom objEzsigntemplatedocument { get; set; }
 
     public static OASEzsigntemplatedocumentGetObjectV2 getExample() {
-        OASEzsigntemplatedocumentGetObjectV2 ezsigntemplatedocumentGetObjectV2ResponseAllOf = new OASEzsigntemplatedocumentGetObjectV2();
-          ezsigntemplatedocumentGetObjectV2ResponseAllOf.mPayload = OASEzsigntemplatedocumentGetObjectV2.getExample();
-        return ezsigntemplatedocumentGetObjectV2ResponseAllOf;
+        OASEzsigntemplatedocumentGetObjectV2 ezsigntemplatedocumentGetObjectV2ResponseMPayload = new OASEzsigntemplatedocumentGetObjectV2();
+          ezsigntemplatedocumentGetObjectV2ResponseMPayload.objEzsigntemplatedocument = OASEzsigntemplatedocumentResponseCom.getExample();
+        return ezsigntemplatedocumentGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatedocumentGetObjectV2) {           
-            OASEzsigntemplatedocumentGetObjectV2 ezsigntemplatedocumentGetObjectV2ResponseAllOf = (OASEzsigntemplatedocumentGetObjectV2) obj;
-            return this.mPayload == ezsigntemplatedocumentGetObjectV2ResponseAllOf.mPayload;
+            OASEzsigntemplatedocumentGetObjectV2 ezsigntemplatedocumentGetObjectV2ResponseMPayload = (OASEzsigntemplatedocumentGetObjectV2) obj;
+            return this.objEzsigntemplatedocument == ezsigntemplatedocumentGetObjectV2ResponseMPayload.objEzsigntemplatedocument;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsigntemplatedocument == null ? 0 : System.hashCode(objEzsigntemplatedocument));
         return hashCode;
     }
 }

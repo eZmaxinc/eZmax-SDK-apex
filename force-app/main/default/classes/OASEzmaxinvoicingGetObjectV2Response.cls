@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzmaxinvoicingGetObjectV2Response
+ * Payload for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
  */
 public class OASEzmaxinvoicingGetObjectV2Response {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzmaxinvoicing
+     * @return objEzmaxinvoicing
      */
-    public OASEzmaxinvoicingGetObjectV2Response mPayload { get; set; }
+    public OASEzmaxinvoicingResponseCompound objEzmaxinvoicing { get; set; }
 
     public static OASEzmaxinvoicingGetObjectV2Response getExample() {
-        OASEzmaxinvoicingGetObjectV2Response ezmaxinvoicingGetObjectV2ResponseAllOf = new OASEzmaxinvoicingGetObjectV2Response();
-          ezmaxinvoicingGetObjectV2ResponseAllOf.mPayload = OASEzmaxinvoicingGetObjectV2Response.getExample();
-        return ezmaxinvoicingGetObjectV2ResponseAllOf;
+        OASEzmaxinvoicingGetObjectV2Response ezmaxinvoicingGetObjectV2ResponseMPayload = new OASEzmaxinvoicingGetObjectV2Response();
+          ezmaxinvoicingGetObjectV2ResponseMPayload.objEzmaxinvoicing = OASEzmaxinvoicingResponseCompound.getExample();
+        return ezmaxinvoicingGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzmaxinvoicingGetObjectV2Response) {           
-            OASEzmaxinvoicingGetObjectV2Response ezmaxinvoicingGetObjectV2ResponseAllOf = (OASEzmaxinvoicingGetObjectV2Response) obj;
-            return this.mPayload == ezmaxinvoicingGetObjectV2ResponseAllOf.mPayload;
+            OASEzmaxinvoicingGetObjectV2Response ezmaxinvoicingGetObjectV2ResponseMPayload = (OASEzmaxinvoicingGetObjectV2Response) obj;
+            return this.objEzmaxinvoicing == ezmaxinvoicingGetObjectV2ResponseMPayload.objEzmaxinvoicing;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzmaxinvoicing == null ? 0 : System.hashCode(objEzmaxinvoicing));
         return hashCode;
     }
 }

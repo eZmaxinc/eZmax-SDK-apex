@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignfolderGetFormsDataV1Respons
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
  */
 public class OASEzsignfolderGetFormsDataV1Respons {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objFormsDataFolder
+     * @return objFormsDataFolder
      */
-    public OASEzsignfolderGetFormsDataV1Respons mPayload { get; set; }
+    public OASCustomFormsDataFolderResponse objFormsDataFolder { get; set; }
 
     public static OASEzsignfolderGetFormsDataV1Respons getExample() {
-        OASEzsignfolderGetFormsDataV1Respons ezsignfolderGetFormsDataV1ResponseAllOf = new OASEzsignfolderGetFormsDataV1Respons();
-          ezsignfolderGetFormsDataV1ResponseAllOf.mPayload = OASEzsignfolderGetFormsDataV1Respons.getExample();
-        return ezsignfolderGetFormsDataV1ResponseAllOf;
+        OASEzsignfolderGetFormsDataV1Respons ezsignfolderGetFormsDataV1ResponseMPayload = new OASEzsignfolderGetFormsDataV1Respons();
+          ezsignfolderGetFormsDataV1ResponseMPayload.objFormsDataFolder = OASCustomFormsDataFolderResponse.getExample();
+        return ezsignfolderGetFormsDataV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderGetFormsDataV1Respons) {           
-            OASEzsignfolderGetFormsDataV1Respons ezsignfolderGetFormsDataV1ResponseAllOf = (OASEzsignfolderGetFormsDataV1Respons) obj;
-            return this.mPayload == ezsignfolderGetFormsDataV1ResponseAllOf.mPayload;
+            OASEzsignfolderGetFormsDataV1Respons ezsignfolderGetFormsDataV1ResponseMPayload = (OASEzsignfolderGetFormsDataV1Respons) obj;
+            return this.objFormsDataFolder == ezsignfolderGetFormsDataV1ResponseMPayload.objFormsDataFolder;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objFormsDataFolder == null ? 0 : System.hashCode(objFormsDataFolder));
         return hashCode;
     }
 }

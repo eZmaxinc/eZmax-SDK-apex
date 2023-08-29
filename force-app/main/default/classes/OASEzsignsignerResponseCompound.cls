@@ -13,7 +13,7 @@
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-public class OASEzsignsignerResponseCompound implements OASEzsignsignerResponse, OASEzsignsignerResponseCompoundAllOf {
+public class OASEzsignsignerResponseCompound implements OASEzsignsignerResponse {
     /**
      * The unique ID of the Ezsignsigner
      * minimum: 0

@@ -11,32 +11,62 @@
  */
 
 /**
- * OASEzsigntemplatesignerCreateObjectV
+ * Payload for POST /1/object/ezsigntemplatesigner
  */
-public class OASEzsigntemplatesignerCreateObjectV {
+public class OASEzsigntemplatesignerCreateObjectV implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsigntemplatesignerID
      */
-    public OASEzsigntemplatesignerCreateObjectV mPayload { get; set; }
+    public List<Integer> aPkiEzsigntemplatesignerID { get; set; }
+
+    /**
+     * Whether the Ezsignbulksend was automatically modified and needs a manual validation
+     * @return bEzsigntemplatepackageNeedvalidation
+     */
+    public Boolean bEzsigntemplatepackageNeedvalidation { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+     * @return bEzsignbulksendNeedvalidation
+     */
+    public Boolean bEzsignbulksendNeedvalidation { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsigntemplatesignerID' => 'aPkiEzsigntemplatesignerID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntemplatesignerCreateObjectV() {
+        aPkiEzsigntemplatesignerID = new List<Integer>();
+    }
 
     public static OASEzsigntemplatesignerCreateObjectV getExample() {
-        OASEzsigntemplatesignerCreateObjectV ezsigntemplatesignerCreateObjectV1ResponseAllOf = new OASEzsigntemplatesignerCreateObjectV();
-          ezsigntemplatesignerCreateObjectV1ResponseAllOf.mPayload = OASEzsigntemplatesignerCreateObjectV.getExample();
-        return ezsigntemplatesignerCreateObjectV1ResponseAllOf;
+        OASEzsigntemplatesignerCreateObjectV ezsigntemplatesignerCreateObjectV1ResponseMPayload = new OASEzsigntemplatesignerCreateObjectV();
+          ezsigntemplatesignerCreateObjectV1ResponseMPayload.aPkiEzsigntemplatesignerID = new List<Integer>{Integer.getExample()};
+          ezsigntemplatesignerCreateObjectV1ResponseMPayload.bEzsigntemplatepackageNeedvalidation = true;
+          ezsigntemplatesignerCreateObjectV1ResponseMPayload.bEzsignbulksendNeedvalidation = true;
+        return ezsigntemplatesignerCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatesignerCreateObjectV) {           
-            OASEzsigntemplatesignerCreateObjectV ezsigntemplatesignerCreateObjectV1ResponseAllOf = (OASEzsigntemplatesignerCreateObjectV) obj;
-            return this.mPayload == ezsigntemplatesignerCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsigntemplatesignerCreateObjectV ezsigntemplatesignerCreateObjectV1ResponseMPayload = (OASEzsigntemplatesignerCreateObjectV) obj;
+            return this.aPkiEzsigntemplatesignerID == ezsigntemplatesignerCreateObjectV1ResponseMPayload.aPkiEzsigntemplatesignerID
+                && this.bEzsigntemplatepackageNeedvalidation == ezsigntemplatesignerCreateObjectV1ResponseMPayload.bEzsigntemplatepackageNeedvalidation
+                && this.bEzsignbulksendNeedvalidation == ezsigntemplatesignerCreateObjectV1ResponseMPayload.bEzsignbulksendNeedvalidation;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsigntemplatesignerID == null ? 0 : System.hashCode(aPkiEzsigntemplatesignerID));
+        hashCode = (17 * hashCode) + (bEzsigntemplatepackageNeedvalidation == null ? 0 : System.hashCode(bEzsigntemplatepackageNeedvalidation));
+        hashCode = (17 * hashCode) + (bEzsignbulksendNeedvalidation == null ? 0 : System.hashCode(bEzsignbulksendNeedvalidation));
         return hashCode;
     }
 }

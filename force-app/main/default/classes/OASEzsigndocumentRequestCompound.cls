@@ -153,7 +153,7 @@ public class OASEzsigndocumentRequestCompound implements OASEzsigndocumentReques
           ezsigndocumentRequestCompound.fkiLanguageID = 2;
           ezsigndocumentRequestCompound.eEzsigndocumentSource = EEzsigndocumentSourceEnum.BASE64;
           ezsigndocumentRequestCompound.eEzsigndocumentFormat = EEzsigndocumentFormatEnum.PDF;
-          ezsigndocumentRequestCompound.sEzsigndocumentBase64 = EncodingUtil.base64Decode('[B@10c626be');
+          ezsigndocumentRequestCompound.sEzsigndocumentBase64 = EncodingUtil.base64Decode('[B@c055c54');
           ezsigndocumentRequestCompound.sEzsigndocumentUrl = 'http://www.example.com/document.pdf';
           ezsigndocumentRequestCompound.bEzsigndocumentForcerepair = true;
           ezsigndocumentRequestCompound.sEzsigndocumentPassword = 'SecretPassword123';

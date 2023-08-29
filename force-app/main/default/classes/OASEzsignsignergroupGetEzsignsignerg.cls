@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignsignergroupGetEzsignsignerg
+ * Response for GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships
  */
-public class OASEzsignsignergroupGetEzsignsignerg {
+public class OASEzsignsignergroupGetEzsignsignerg implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjEzsignsignergroupmembership
+     * @return aObjEzsignsignergroupmembership
      */
-    public OASEzsignsignergroupGetEzsignsignerg mPayload { get; set; }
+    public List<OASEzsignsignergroupmembershipRespon> aObjEzsignsignergroupmembership { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignsignergroupmembership' => 'aObjEzsignsignergroupmembership'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignsignergroupGetEzsignsignerg() {
+        aObjEzsignsignergroupmembership = new List<OASEzsignsignergroupmembershipRespon>();
+    }
 
     public static OASEzsignsignergroupGetEzsignsignerg getExample() {
-        OASEzsignsignergroupGetEzsignsignerg ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseAllOf = new OASEzsignsignergroupGetEzsignsignerg();
-          ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseAllOf.mPayload = OASEzsignsignergroupGetEzsignsignerg.getExample();
-        return ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseAllOf;
+        OASEzsignsignergroupGetEzsignsignerg ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload = new OASEzsignsignergroupGetEzsignsignerg();
+          ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload.aObjEzsignsignergroupmembership = new List<OASEzsignsignergroupmembershipRespon>{OASEzsignsignergroupmembershipRespon.getExample()};
+        return ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignergroupGetEzsignsignerg) {           
-            OASEzsignsignergroupGetEzsignsignerg ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseAllOf = (OASEzsignsignergroupGetEzsignsignerg) obj;
-            return this.mPayload == ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseAllOf.mPayload;
+            OASEzsignsignergroupGetEzsignsignerg ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload = (OASEzsignsignergroupGetEzsignsignerg) obj;
+            return this.aObjEzsignsignergroupmembership == ezsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload.aObjEzsignsignergroupmembership;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsignsignergroupmembership == null ? 0 : System.hashCode(aObjEzsignsignergroupmembership));
         return hashCode;
     }
 }

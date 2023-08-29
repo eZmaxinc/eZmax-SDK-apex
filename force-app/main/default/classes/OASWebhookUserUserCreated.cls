@@ -13,13 +13,7 @@
 /**
  * This is the base Webhook object
  */
-public class OASWebhookUserUserCreated implements OASWebhookUserUserCreatedAllOf, OASCommonWebhook, OAS.MappedProperties {
-    /**
-     * Get objUser
-     * @return objUser
-     */
-    public OASUserResponseCompound objUser { get; set; }
-
+public class OASWebhookUserUserCreated implements OASCommonWebhook, OAS.MappedProperties {
     /**
      * Get objWebhook
      * @return objWebhook
@@ -31,6 +25,12 @@ public class OASWebhookUserUserCreated implements OASWebhookUserUserCreatedAllOf
      * @return aObjAttempt
      */
     public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
+
+    /**
+     * Get objUser
+     * @return objUser
+     */
+    public OASUserResponseCompound objUser { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objAttempt' => 'aObjAttempt'
@@ -46,27 +46,27 @@ public class OASWebhookUserUserCreated implements OASWebhookUserUserCreatedAllOf
 
     public static OASWebhookUserUserCreated getExample() {
         OASWebhookUserUserCreated webhookUserUserCreated = new OASWebhookUserUserCreated();
-          webhookUserUserCreated.objUser = OASUserResponseCompound.getExample();
           webhookUserUserCreated.objWebhook = OASCustomWebhookResponse.getExample();
           webhookUserUserCreated.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
+          webhookUserUserCreated.objUser = OASUserResponseCompound.getExample();
         return webhookUserUserCreated;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookUserUserCreated) {           
             OASWebhookUserUserCreated webhookUserUserCreated = (OASWebhookUserUserCreated) obj;
-            return this.objUser == webhookUserUserCreated.objUser
-                && this.objWebhook == webhookUserUserCreated.objWebhook
-                && this.aObjAttempt == webhookUserUserCreated.aObjAttempt;
+            return this.objWebhook == webhookUserUserCreated.objWebhook
+                && this.aObjAttempt == webhookUserUserCreated.aObjAttempt
+                && this.objUser == webhookUserUserCreated.objUser;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objUser == null ? 0 : System.hashCode(objUser));
         hashCode = (17 * hashCode) + (objWebhook == null ? 0 : System.hashCode(objWebhook));
         hashCode = (17 * hashCode) + (aObjAttempt == null ? 0 : System.hashCode(aObjAttempt));
+        hashCode = (17 * hashCode) + (objUser == null ? 0 : System.hashCode(objUser));
         return hashCode;
     }
 }

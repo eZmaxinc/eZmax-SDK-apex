@@ -2,84 +2,84 @@
 private class OASCustomEzsignformfielderrorResponsTest {
     @isTest
     private static void equalsSameInstance() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf1 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf2 = customEzsignformfielderrorResponseAllOf1;
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf3 = new OASCustomEzsignformfielderrorRespons();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf4 = customEzsignformfielderrorResponseAllOf3;
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse1 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse2 = customEzsignformfielderrorResponse1;
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse3 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse4 = customEzsignformfielderrorResponse3;
 
-        System.assert(customEzsignformfielderrorResponseAllOf1.equals(customEzsignformfielderrorResponseAllOf2));
-        System.assert(customEzsignformfielderrorResponseAllOf2.equals(customEzsignformfielderrorResponseAllOf1));
-        System.assert(customEzsignformfielderrorResponseAllOf1.equals(customEzsignformfielderrorResponseAllOf1));
-        System.assert(customEzsignformfielderrorResponseAllOf3.equals(customEzsignformfielderrorResponseAllOf4));
-        System.assert(customEzsignformfielderrorResponseAllOf4.equals(customEzsignformfielderrorResponseAllOf3));
-        System.assert(customEzsignformfielderrorResponseAllOf3.equals(customEzsignformfielderrorResponseAllOf3));
+        System.assert(customEzsignformfielderrorResponse1.equals(customEzsignformfielderrorResponse2));
+        System.assert(customEzsignformfielderrorResponse2.equals(customEzsignformfielderrorResponse1));
+        System.assert(customEzsignformfielderrorResponse1.equals(customEzsignformfielderrorResponse1));
+        System.assert(customEzsignformfielderrorResponse3.equals(customEzsignformfielderrorResponse4));
+        System.assert(customEzsignformfielderrorResponse4.equals(customEzsignformfielderrorResponse3));
+        System.assert(customEzsignformfielderrorResponse3.equals(customEzsignformfielderrorResponse3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf1 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf2 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf3 = new OASCustomEzsignformfielderrorRespons();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf4 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse1 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse2 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse3 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse4 = new OASCustomEzsignformfielderrorRespons();
 
-        System.assert(customEzsignformfielderrorResponseAllOf1.equals(customEzsignformfielderrorResponseAllOf2));
-        System.assert(customEzsignformfielderrorResponseAllOf2.equals(customEzsignformfielderrorResponseAllOf1));
-        System.assert(customEzsignformfielderrorResponseAllOf3.equals(customEzsignformfielderrorResponseAllOf4));
-        System.assert(customEzsignformfielderrorResponseAllOf4.equals(customEzsignformfielderrorResponseAllOf3));
+        System.assert(customEzsignformfielderrorResponse1.equals(customEzsignformfielderrorResponse2));
+        System.assert(customEzsignformfielderrorResponse2.equals(customEzsignformfielderrorResponse1));
+        System.assert(customEzsignformfielderrorResponse3.equals(customEzsignformfielderrorResponse4));
+        System.assert(customEzsignformfielderrorResponse4.equals(customEzsignformfielderrorResponse3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf1 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf2 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse1 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse2 = new OASCustomEzsignformfielderrorRespons();
 
-        System.assertEquals(false, customEzsignformfielderrorResponseAllOf1.equals('foo'));
-        System.assertEquals(false, customEzsignformfielderrorResponseAllOf2.equals('foo'));
+        System.assertEquals(false, customEzsignformfielderrorResponse1.equals('foo'));
+        System.assertEquals(false, customEzsignformfielderrorResponse2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf1 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf2 = new OASCustomEzsignformfielderrorRespons();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf3;
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse1 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse2 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse3;
 
-        System.assertEquals(false, customEzsignformfielderrorResponseAllOf1.equals(customEzsignformfielderrorResponseAllOf3));
-        System.assertEquals(false, customEzsignformfielderrorResponseAllOf2.equals(customEzsignformfielderrorResponseAllOf3));
+        System.assertEquals(false, customEzsignformfielderrorResponse1.equals(customEzsignformfielderrorResponse3));
+        System.assertEquals(false, customEzsignformfielderrorResponse2.equals(customEzsignformfielderrorResponse3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf1 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf2 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse1 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse2 = new OASCustomEzsignformfielderrorRespons();
 
-        System.assertEquals(customEzsignformfielderrorResponseAllOf1.hashCode(), customEzsignformfielderrorResponseAllOf1.hashCode());
-        System.assertEquals(customEzsignformfielderrorResponseAllOf2.hashCode(), customEzsignformfielderrorResponseAllOf2.hashCode());
+        System.assertEquals(customEzsignformfielderrorResponse1.hashCode(), customEzsignformfielderrorResponse1.hashCode());
+        System.assertEquals(customEzsignformfielderrorResponse2.hashCode(), customEzsignformfielderrorResponse2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf1 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf2 = OASCustomEzsignformfielderrorRespons.getExample();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf3 = new OASCustomEzsignformfielderrorRespons();
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf4 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse1 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse2 = OASCustomEzsignformfielderrorRespons.getExample();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse3 = new OASCustomEzsignformfielderrorRespons();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse4 = new OASCustomEzsignformfielderrorRespons();
 
-        System.assert(customEzsignformfielderrorResponseAllOf1.equals(customEzsignformfielderrorResponseAllOf2));
-        System.assert(customEzsignformfielderrorResponseAllOf3.equals(customEzsignformfielderrorResponseAllOf4));
-        System.assertEquals(customEzsignformfielderrorResponseAllOf1.hashCode(), customEzsignformfielderrorResponseAllOf2.hashCode());
-        System.assertEquals(customEzsignformfielderrorResponseAllOf3.hashCode(), customEzsignformfielderrorResponseAllOf4.hashCode());
+        System.assert(customEzsignformfielderrorResponse1.equals(customEzsignformfielderrorResponse2));
+        System.assert(customEzsignformfielderrorResponse3.equals(customEzsignformfielderrorResponse4));
+        System.assertEquals(customEzsignformfielderrorResponse1.hashCode(), customEzsignformfielderrorResponse2.hashCode());
+        System.assertEquals(customEzsignformfielderrorResponse3.hashCode(), customEzsignformfielderrorResponse4.hashCode());
     }
 
     @isTest
     private static void maintainRenamedProperties() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf = new OASCustomEzsignformfielderrorRespons();
-        Map<String, String> x-property-mappings = customEzsignformfielderrorResponseAllOf.getx-property-mappings();
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse = new OASCustomEzsignformfielderrorRespons();
+        Map<String, String> x-property-mappings = customEzsignformfielderrorResponse.getx-property-mappings();
         System.assertEquals('aObjEzsignformfielderrortest', x-property-mappings.get('a_objEzsignformfielderrortest'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf = new OASCustomEzsignformfielderrorRespons();
-        System.assertEquals(new List<OASCustomEzsignformfielderrortestRes>(), customEzsignformfielderrorResponseAllOf.aObjEzsignformfielderrortest);
-        System.assertEquals(null, customEzsignformfielderrorResponseAllOf.sEzsignformfieldLabel);
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse = new OASCustomEzsignformfielderrorRespons();
+        System.assertEquals(new List<OASCustomEzsignformfielderrortestRes>(), customEzsignformfielderrorResponse.aObjEzsignformfielderrortest);
+        System.assertEquals(null, customEzsignformfielderrorResponse.sEzsignformfieldLabel);
     }
 }

@@ -13,13 +13,7 @@
 /**
  * Response for GET /2/object/usergroup/{pkiUsergroupID}
  */
-public class OASUsergroupGetObjectV2Response implements OASUsergroupGetObjectV2ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASUsergroupGetObjectV2ResponseMPayl mPayload { get; set; }
-
+public class OASUsergroupGetObjectV2Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASUsergroupGetObjectV2Response implements OASUsergroupGetObjectV2R
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASUsergroupGetObjectV2ResponseMPayl mPayload { get; set; }
+
     public static OASUsergroupGetObjectV2Response getExample() {
         OASUsergroupGetObjectV2Response usergroupGetObjectV2Response = new OASUsergroupGetObjectV2Response();
-          usergroupGetObjectV2Response.mPayload = OASUsergroupGetObjectV2ResponseMPayl.getExample();
           usergroupGetObjectV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           usergroupGetObjectV2Response.objDebug = OASCommonResponseObjDebug.getExample();
+          usergroupGetObjectV2Response.mPayload = OASUsergroupGetObjectV2ResponseMPayl.getExample();
         return usergroupGetObjectV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupGetObjectV2Response) {           
             OASUsergroupGetObjectV2Response usergroupGetObjectV2Response = (OASUsergroupGetObjectV2Response) obj;
-            return this.mPayload == usergroupGetObjectV2Response.mPayload
-                && this.objDebugPayload == usergroupGetObjectV2Response.objDebugPayload
-                && this.objDebug == usergroupGetObjectV2Response.objDebug;
+            return this.objDebugPayload == usergroupGetObjectV2Response.objDebugPayload
+                && this.objDebug == usergroupGetObjectV2Response.objDebug
+                && this.mPayload == usergroupGetObjectV2Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

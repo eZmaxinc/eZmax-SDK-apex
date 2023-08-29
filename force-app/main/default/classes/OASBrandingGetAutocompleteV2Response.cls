@@ -11,32 +11,44 @@
  */
 
 /**
- * OASBrandingGetAutocompleteV2Response
+ * Payload for POST /2/object/branding/getAutocomplete
  */
-public class OASBrandingGetAutocompleteV2Response {
+public class OASBrandingGetAutocompleteV2Response implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Branding object containing the description, ID and active status about the element.
+     * @return aObjBranding
      */
-    public OASBrandingGetAutocompleteV2Response mPayload { get; set; }
+    public List<OASBrandingAutocompleteElementRespon> aObjBranding { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objBranding' => 'aObjBranding'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASBrandingGetAutocompleteV2Response() {
+        aObjBranding = new List<OASBrandingAutocompleteElementRespon>();
+    }
 
     public static OASBrandingGetAutocompleteV2Response getExample() {
-        OASBrandingGetAutocompleteV2Response brandingGetAutocompleteV2ResponseAllOf = new OASBrandingGetAutocompleteV2Response();
-          brandingGetAutocompleteV2ResponseAllOf.mPayload = OASBrandingGetAutocompleteV2Response.getExample();
-        return brandingGetAutocompleteV2ResponseAllOf;
+        OASBrandingGetAutocompleteV2Response brandingGetAutocompleteV2ResponseMPayload = new OASBrandingGetAutocompleteV2Response();
+          brandingGetAutocompleteV2ResponseMPayload.aObjBranding = new List<OASBrandingAutocompleteElementRespon>{OASBrandingAutocompleteElementRespon.getExample()};
+        return brandingGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASBrandingGetAutocompleteV2Response) {           
-            OASBrandingGetAutocompleteV2Response brandingGetAutocompleteV2ResponseAllOf = (OASBrandingGetAutocompleteV2Response) obj;
-            return this.mPayload == brandingGetAutocompleteV2ResponseAllOf.mPayload;
+            OASBrandingGetAutocompleteV2Response brandingGetAutocompleteV2ResponseMPayload = (OASBrandingGetAutocompleteV2Response) obj;
+            return this.aObjBranding == brandingGetAutocompleteV2ResponseMPayload.aObjBranding;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjBranding == null ? 0 : System.hashCode(aObjBranding));
         return hashCode;
     }
 }

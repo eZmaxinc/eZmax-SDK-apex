@@ -11,9 +11,67 @@
  */
 
 /**
- * OASEzsigntemplatepackageResponseComp
+ * A Ezsigntemplatepackage Object
  */
-public class OASEzsigntemplatepackageResponseComp implements OAS.MappedProperties {
+public class OASEzsigntemplatepackageResponseComp implements OASEzsigntemplatepackageResponse, OAS.MappedProperties {
+    /**
+     * The unique ID of the Ezsigntemplatepackage
+     * minimum: 0
+     * @return pkiEzsigntemplatepackageID
+     */
+    public Integer pkiEzsigntemplatepackageID { get; set; }
+
+    /**
+     * The unique ID of the Ezsignfoldertype.
+     * minimum: 0
+     * @return fkiEzsignfoldertypeID
+     */
+    public Integer fkiEzsignfoldertypeID { get; set; }
+
+    /**
+     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
+     * minimum: 1
+     * maximum: 2
+     * @return fkiLanguageID
+     */
+    public Integer fkiLanguageID { get; set; }
+
+    /**
+     * The Name of the Language in the language of the requester
+     * @return sLanguageNameX
+     */
+    public String sLanguageNameX { get; set; }
+
+    /**
+     * The description of the Ezsigntemplatepackage
+     * @return sEzsigntemplatepackageDescription
+     */
+    public String sEzsigntemplatepackageDescription { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType=Normal)
+     * @return bEzsigntemplatepackageAdminonly
+     */
+    public Boolean bEzsigntemplatepackageAdminonly { get; set; }
+
+    /**
+     * Whether the Ezsignbulksend was automatically modified and needs a manual validation
+     * @return bEzsigntemplatepackageNeedvalidation
+     */
+    public Boolean bEzsigntemplatepackageNeedvalidation { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage is active or not
+     * @return bEzsigntemplatepackageIsactive
+     */
+    public Boolean bEzsigntemplatepackageIsactive { get; set; }
+
+    /**
+     * The name of the Ezsignfoldertype in the language of the requester
+     * @return sEzsignfoldertypeNameX
+     */
+    public String sEzsignfoldertypeNameX { get; set; }
+
     /**
      * Get aObjEzsigntemplatepackagesigner
      * @return aObjEzsigntemplatepackagesigner
@@ -50,23 +108,50 @@ public class OASEzsigntemplatepackageResponseComp implements OAS.MappedPropertie
     }
 
     public static OASEzsigntemplatepackageResponseComp getExample() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf = new OASEzsigntemplatepackageResponseComp();
-          ezsigntemplatepackageResponseCompoundAllOf.aObjEzsigntemplatepackagesigner = new List<OASEzsigntemplatepackagesignerRespon>{OASEzsigntemplatepackagesignerRespon.getExample()};
-          ezsigntemplatepackageResponseCompoundAllOf.aObjEzsigntemplatepackagemembership = new List<OASEzsigntemplatepackagemembershipRe>{OASEzsigntemplatepackagemembershipRe.getExample()};
-        return ezsigntemplatepackageResponseCompoundAllOf;
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound = new OASEzsigntemplatepackageResponseComp();
+          ezsigntemplatepackageResponseCompound.pkiEzsigntemplatepackageID = 99;
+          ezsigntemplatepackageResponseCompound.fkiEzsignfoldertypeID = 5;
+          ezsigntemplatepackageResponseCompound.fkiLanguageID = 2;
+          ezsigntemplatepackageResponseCompound.sLanguageNameX = 'English';
+          ezsigntemplatepackageResponseCompound.sEzsigntemplatepackageDescription = 'Package for new clients';
+          ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageAdminonly = true;
+          ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageNeedvalidation = true;
+          ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageIsactive = true;
+          ezsigntemplatepackageResponseCompound.sEzsignfoldertypeNameX = 'Default';
+          ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagesigner = new List<OASEzsigntemplatepackagesignerRespon>{OASEzsigntemplatepackagesignerRespon.getExample()};
+          ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagemembership = new List<OASEzsigntemplatepackagemembershipRe>{OASEzsigntemplatepackagemembershipRe.getExample()};
+        return ezsigntemplatepackageResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatepackageResponseComp) {           
-            OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf = (OASEzsigntemplatepackageResponseComp) obj;
-            return this.aObjEzsigntemplatepackagesigner == ezsigntemplatepackageResponseCompoundAllOf.aObjEzsigntemplatepackagesigner
-                && this.aObjEzsigntemplatepackagemembership == ezsigntemplatepackageResponseCompoundAllOf.aObjEzsigntemplatepackagemembership;
+            OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound = (OASEzsigntemplatepackageResponseComp) obj;
+            return this.pkiEzsigntemplatepackageID == ezsigntemplatepackageResponseCompound.pkiEzsigntemplatepackageID
+                && this.fkiEzsignfoldertypeID == ezsigntemplatepackageResponseCompound.fkiEzsignfoldertypeID
+                && this.fkiLanguageID == ezsigntemplatepackageResponseCompound.fkiLanguageID
+                && this.sLanguageNameX == ezsigntemplatepackageResponseCompound.sLanguageNameX
+                && this.sEzsigntemplatepackageDescription == ezsigntemplatepackageResponseCompound.sEzsigntemplatepackageDescription
+                && this.bEzsigntemplatepackageAdminonly == ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageAdminonly
+                && this.bEzsigntemplatepackageNeedvalidation == ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageNeedvalidation
+                && this.bEzsigntemplatepackageIsactive == ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageIsactive
+                && this.sEzsignfoldertypeNameX == ezsigntemplatepackageResponseCompound.sEzsignfoldertypeNameX
+                && this.aObjEzsigntemplatepackagesigner == ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagesigner
+                && this.aObjEzsigntemplatepackagemembership == ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagemembership;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsigntemplatepackageID == null ? 0 : System.hashCode(pkiEzsigntemplatepackageID));
+        hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
+        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
+        hashCode = (17 * hashCode) + (sLanguageNameX == null ? 0 : System.hashCode(sLanguageNameX));
+        hashCode = (17 * hashCode) + (sEzsigntemplatepackageDescription == null ? 0 : System.hashCode(sEzsigntemplatepackageDescription));
+        hashCode = (17 * hashCode) + (bEzsigntemplatepackageAdminonly == null ? 0 : System.hashCode(bEzsigntemplatepackageAdminonly));
+        hashCode = (17 * hashCode) + (bEzsigntemplatepackageNeedvalidation == null ? 0 : System.hashCode(bEzsigntemplatepackageNeedvalidation));
+        hashCode = (17 * hashCode) + (bEzsigntemplatepackageIsactive == null ? 0 : System.hashCode(bEzsigntemplatepackageIsactive));
+        hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
         hashCode = (17 * hashCode) + (aObjEzsigntemplatepackagesigner == null ? 0 : System.hashCode(aObjEzsigntemplatepackagesigner));
         hashCode = (17 * hashCode) + (aObjEzsigntemplatepackagemembership == null ? 0 : System.hashCode(aObjEzsigntemplatepackagemembership));
         return hashCode;

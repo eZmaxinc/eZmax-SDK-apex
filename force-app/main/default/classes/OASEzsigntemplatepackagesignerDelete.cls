@@ -11,32 +11,41 @@
  */
 
 /**
- * OASEzsigntemplatepackagesignerDelete
+ * Payload for DELETE /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}
  */
 public class OASEzsigntemplatepackagesignerDelete {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Whether the Ezsignbulksend was automatically modified and needs a manual validation
+     * @return bEzsigntemplatepackageNeedvalidation
      */
-    public OASEzsigntemplatepackagesignerDelete mPayload { get; set; }
+    public Boolean bEzsigntemplatepackageNeedvalidation { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+     * @return bEzsignbulksendNeedvalidation
+     */
+    public Boolean bEzsignbulksendNeedvalidation { get; set; }
 
     public static OASEzsigntemplatepackagesignerDelete getExample() {
-        OASEzsigntemplatepackagesignerDelete ezsigntemplatepackagesignerDeleteObjectV1ResponseAllOf = new OASEzsigntemplatepackagesignerDelete();
-          ezsigntemplatepackagesignerDeleteObjectV1ResponseAllOf.mPayload = OASEzsigntemplatepackagesignerDelete.getExample();
-        return ezsigntemplatepackagesignerDeleteObjectV1ResponseAllOf;
+        OASEzsigntemplatepackagesignerDelete ezsigntemplatepackagesignerDeleteObjectV1ResponseMPayload = new OASEzsigntemplatepackagesignerDelete();
+          ezsigntemplatepackagesignerDeleteObjectV1ResponseMPayload.bEzsigntemplatepackageNeedvalidation = true;
+          ezsigntemplatepackagesignerDeleteObjectV1ResponseMPayload.bEzsignbulksendNeedvalidation = true;
+        return ezsigntemplatepackagesignerDeleteObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatepackagesignerDelete) {           
-            OASEzsigntemplatepackagesignerDelete ezsigntemplatepackagesignerDeleteObjectV1ResponseAllOf = (OASEzsigntemplatepackagesignerDelete) obj;
-            return this.mPayload == ezsigntemplatepackagesignerDeleteObjectV1ResponseAllOf.mPayload;
+            OASEzsigntemplatepackagesignerDelete ezsigntemplatepackagesignerDeleteObjectV1ResponseMPayload = (OASEzsigntemplatepackagesignerDelete) obj;
+            return this.bEzsigntemplatepackageNeedvalidation == ezsigntemplatepackagesignerDeleteObjectV1ResponseMPayload.bEzsigntemplatepackageNeedvalidation
+                && this.bEzsignbulksendNeedvalidation == ezsigntemplatepackagesignerDeleteObjectV1ResponseMPayload.bEzsignbulksendNeedvalidation;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (bEzsigntemplatepackageNeedvalidation == null ? 0 : System.hashCode(bEzsigntemplatepackageNeedvalidation));
+        hashCode = (17 * hashCode) + (bEzsignbulksendNeedvalidation == null ? 0 : System.hashCode(bEzsignbulksendNeedvalidation));
         return hashCode;
     }
 }

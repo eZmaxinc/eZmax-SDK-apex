@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigntemplatesignerGetObjectV2Re
+ * Payload for GET /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
  */
 public class OASEzsigntemplatesignerGetObjectV2Re {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsigntemplatesigner
+     * @return objEzsigntemplatesigner
      */
-    public OASEzsigntemplatesignerGetObjectV2Re mPayload { get; set; }
+    public OASEzsigntemplatesignerResponseCompo objEzsigntemplatesigner { get; set; }
 
     public static OASEzsigntemplatesignerGetObjectV2Re getExample() {
-        OASEzsigntemplatesignerGetObjectV2Re ezsigntemplatesignerGetObjectV2ResponseAllOf = new OASEzsigntemplatesignerGetObjectV2Re();
-          ezsigntemplatesignerGetObjectV2ResponseAllOf.mPayload = OASEzsigntemplatesignerGetObjectV2Re.getExample();
-        return ezsigntemplatesignerGetObjectV2ResponseAllOf;
+        OASEzsigntemplatesignerGetObjectV2Re ezsigntemplatesignerGetObjectV2ResponseMPayload = new OASEzsigntemplatesignerGetObjectV2Re();
+          ezsigntemplatesignerGetObjectV2ResponseMPayload.objEzsigntemplatesigner = OASEzsigntemplatesignerResponseCompo.getExample();
+        return ezsigntemplatesignerGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatesignerGetObjectV2Re) {           
-            OASEzsigntemplatesignerGetObjectV2Re ezsigntemplatesignerGetObjectV2ResponseAllOf = (OASEzsigntemplatesignerGetObjectV2Re) obj;
-            return this.mPayload == ezsigntemplatesignerGetObjectV2ResponseAllOf.mPayload;
+            OASEzsigntemplatesignerGetObjectV2Re ezsigntemplatesignerGetObjectV2ResponseMPayload = (OASEzsigntemplatesignerGetObjectV2Re) obj;
+            return this.objEzsigntemplatesigner == ezsigntemplatesignerGetObjectV2ResponseMPayload.objEzsigntemplatesigner;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsigntemplatesigner == null ? 0 : System.hashCode(objEzsigntemplatesigner));
         return hashCode;
     }
 }

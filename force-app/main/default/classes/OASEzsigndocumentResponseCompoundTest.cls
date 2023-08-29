@@ -101,6 +101,7 @@ private class OASEzsigndocumentResponseCompoundTest {
         System.assertEquals(null, ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures);
         System.assertEquals(null, ezsigndocumentResponseCompound.objAudit);
         System.assertEquals(null, ezsigndocumentResponseCompound.sEzsigndocumentExternalid);
+        System.assertEquals(null, ezsigndocumentResponseCompound.eEzsigndocumentSteptype);
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal);
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent);
         System.assertEquals(null, ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal);

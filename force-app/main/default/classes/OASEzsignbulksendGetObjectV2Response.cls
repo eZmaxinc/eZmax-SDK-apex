@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignbulksendGetObjectV2Response
+ * Payload for GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}
  */
 public class OASEzsignbulksendGetObjectV2Response {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignbulksend
+     * @return objEzsignbulksend
      */
-    public OASEzsignbulksendGetObjectV2Response mPayload { get; set; }
+    public OASEzsignbulksendResponseCompound objEzsignbulksend { get; set; }
 
     public static OASEzsignbulksendGetObjectV2Response getExample() {
-        OASEzsignbulksendGetObjectV2Response ezsignbulksendGetObjectV2ResponseAllOf = new OASEzsignbulksendGetObjectV2Response();
-          ezsignbulksendGetObjectV2ResponseAllOf.mPayload = OASEzsignbulksendGetObjectV2Response.getExample();
-        return ezsignbulksendGetObjectV2ResponseAllOf;
+        OASEzsignbulksendGetObjectV2Response ezsignbulksendGetObjectV2ResponseMPayload = new OASEzsignbulksendGetObjectV2Response();
+          ezsignbulksendGetObjectV2ResponseMPayload.objEzsignbulksend = OASEzsignbulksendResponseCompound.getExample();
+        return ezsignbulksendGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendGetObjectV2Response) {           
-            OASEzsignbulksendGetObjectV2Response ezsignbulksendGetObjectV2ResponseAllOf = (OASEzsignbulksendGetObjectV2Response) obj;
-            return this.mPayload == ezsignbulksendGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignbulksendGetObjectV2Response ezsignbulksendGetObjectV2ResponseMPayload = (OASEzsignbulksendGetObjectV2Response) obj;
+            return this.objEzsignbulksend == ezsignbulksendGetObjectV2ResponseMPayload.objEzsignbulksend;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignbulksend == null ? 0 : System.hashCode(objEzsignbulksend));
         return hashCode;
     }
 }

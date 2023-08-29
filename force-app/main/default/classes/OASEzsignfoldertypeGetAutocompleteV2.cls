@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignfoldertypeGetAutocompleteV2
+ * Payload for POST /2/object/ezsignfoldertype/getAutocomplete
  */
-public class OASEzsignfoldertypeGetAutocompleteV2 {
+public class OASEzsignfoldertypeGetAutocompleteV2 implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Ezsignfoldertype autocomplete element response.
+     * @return aObjEzsignfoldertype
      */
-    public OASEzsignfoldertypeGetAutocompleteV2 mPayload { get; set; }
+    public List<OASEzsignfoldertypeAutocompleteEleme> aObjEzsignfoldertype { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignfoldertype' => 'aObjEzsignfoldertype'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignfoldertypeGetAutocompleteV2() {
+        aObjEzsignfoldertype = new List<OASEzsignfoldertypeAutocompleteEleme>();
+    }
 
     public static OASEzsignfoldertypeGetAutocompleteV2 getExample() {
-        OASEzsignfoldertypeGetAutocompleteV2 ezsignfoldertypeGetAutocompleteV2ResponseAllOf = new OASEzsignfoldertypeGetAutocompleteV2();
-          ezsignfoldertypeGetAutocompleteV2ResponseAllOf.mPayload = OASEzsignfoldertypeGetAutocompleteV2.getExample();
-        return ezsignfoldertypeGetAutocompleteV2ResponseAllOf;
+        OASEzsignfoldertypeGetAutocompleteV2 ezsignfoldertypeGetAutocompleteV2ResponseMPayload = new OASEzsignfoldertypeGetAutocompleteV2();
+          ezsignfoldertypeGetAutocompleteV2ResponseMPayload.aObjEzsignfoldertype = new List<OASEzsignfoldertypeAutocompleteEleme>{OASEzsignfoldertypeAutocompleteEleme.getExample()};
+        return ezsignfoldertypeGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldertypeGetAutocompleteV2) {           
-            OASEzsignfoldertypeGetAutocompleteV2 ezsignfoldertypeGetAutocompleteV2ResponseAllOf = (OASEzsignfoldertypeGetAutocompleteV2) obj;
-            return this.mPayload == ezsignfoldertypeGetAutocompleteV2ResponseAllOf.mPayload;
+            OASEzsignfoldertypeGetAutocompleteV2 ezsignfoldertypeGetAutocompleteV2ResponseMPayload = (OASEzsignfoldertypeGetAutocompleteV2) obj;
+            return this.aObjEzsignfoldertype == ezsignfoldertypeGetAutocompleteV2ResponseMPayload.aObjEzsignfoldertype;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsignfoldertype == null ? 0 : System.hashCode(aObjEzsignfoldertype));
         return hashCode;
     }
 }

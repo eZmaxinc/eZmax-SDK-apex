@@ -2,70 +2,70 @@
 private class OASEzsignbulksenddocumentmappingRespTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf1 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf2 = ezsignbulksenddocumentmappingResponseCompoundAllOf1;
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf3 = new OASEzsignbulksenddocumentmappingResp();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf4 = ezsignbulksenddocumentmappingResponseCompoundAllOf3;
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound1 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound2 = ezsignbulksenddocumentmappingResponseCompound1;
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound3 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound4 = ezsignbulksenddocumentmappingResponseCompound3;
 
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf1.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf2));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf2.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf1));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf1.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf1));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf3.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf4));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf4.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf3));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf3.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf3));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound1.equals(ezsignbulksenddocumentmappingResponseCompound2));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound2.equals(ezsignbulksenddocumentmappingResponseCompound1));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound1.equals(ezsignbulksenddocumentmappingResponseCompound1));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound3.equals(ezsignbulksenddocumentmappingResponseCompound4));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound4.equals(ezsignbulksenddocumentmappingResponseCompound3));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound3.equals(ezsignbulksenddocumentmappingResponseCompound3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf1 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf2 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf3 = new OASEzsignbulksenddocumentmappingResp();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf4 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound1 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound2 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound3 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound4 = new OASEzsignbulksenddocumentmappingResp();
 
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf1.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf2));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf2.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf1));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf3.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf4));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf4.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf3));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound1.equals(ezsignbulksenddocumentmappingResponseCompound2));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound2.equals(ezsignbulksenddocumentmappingResponseCompound1));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound3.equals(ezsignbulksenddocumentmappingResponseCompound4));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound4.equals(ezsignbulksenddocumentmappingResponseCompound3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf1 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf2 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound1 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound2 = new OASEzsignbulksenddocumentmappingResp();
 
-        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompoundAllOf1.equals('foo'));
-        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompoundAllOf2.equals('foo'));
+        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompound1.equals('foo'));
+        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompound2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf1 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf2 = new OASEzsignbulksenddocumentmappingResp();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf3;
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound1 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound2 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound3;
 
-        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompoundAllOf1.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf3));
-        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompoundAllOf2.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf3));
+        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompound1.equals(ezsignbulksenddocumentmappingResponseCompound3));
+        System.assertEquals(false, ezsignbulksenddocumentmappingResponseCompound2.equals(ezsignbulksenddocumentmappingResponseCompound3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf1 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf2 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound1 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound2 = new OASEzsignbulksenddocumentmappingResp();
 
-        System.assertEquals(ezsignbulksenddocumentmappingResponseCompoundAllOf1.hashCode(), ezsignbulksenddocumentmappingResponseCompoundAllOf1.hashCode());
-        System.assertEquals(ezsignbulksenddocumentmappingResponseCompoundAllOf2.hashCode(), ezsignbulksenddocumentmappingResponseCompoundAllOf2.hashCode());
+        System.assertEquals(ezsignbulksenddocumentmappingResponseCompound1.hashCode(), ezsignbulksenddocumentmappingResponseCompound1.hashCode());
+        System.assertEquals(ezsignbulksenddocumentmappingResponseCompound2.hashCode(), ezsignbulksenddocumentmappingResponseCompound2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf1 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf2 = OASEzsignbulksenddocumentmappingResp.getExample();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf3 = new OASEzsignbulksenddocumentmappingResp();
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf4 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound1 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound2 = OASEzsignbulksenddocumentmappingResp.getExample();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound3 = new OASEzsignbulksenddocumentmappingResp();
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound4 = new OASEzsignbulksenddocumentmappingResp();
 
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf1.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf2));
-        System.assert(ezsignbulksenddocumentmappingResponseCompoundAllOf3.equals(ezsignbulksenddocumentmappingResponseCompoundAllOf4));
-        System.assertEquals(ezsignbulksenddocumentmappingResponseCompoundAllOf1.hashCode(), ezsignbulksenddocumentmappingResponseCompoundAllOf2.hashCode());
-        System.assertEquals(ezsignbulksenddocumentmappingResponseCompoundAllOf3.hashCode(), ezsignbulksenddocumentmappingResponseCompoundAllOf4.hashCode());
+        System.assert(ezsignbulksenddocumentmappingResponseCompound1.equals(ezsignbulksenddocumentmappingResponseCompound2));
+        System.assert(ezsignbulksenddocumentmappingResponseCompound3.equals(ezsignbulksenddocumentmappingResponseCompound4));
+        System.assertEquals(ezsignbulksenddocumentmappingResponseCompound1.hashCode(), ezsignbulksenddocumentmappingResponseCompound2.hashCode());
+        System.assertEquals(ezsignbulksenddocumentmappingResponseCompound3.hashCode(), ezsignbulksenddocumentmappingResponseCompound4.hashCode());
     }
 }

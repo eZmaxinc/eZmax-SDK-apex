@@ -13,13 +13,7 @@
 /**
  * Response for GET /2/object/user/getAutocomplete
  */
-public class OASUserGetAutocompleteV2Response implements OASUserGetAutocompleteV2ResponseAllO, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASUserGetAutocompleteV2ResponseMPay mPayload { get; set; }
-
+public class OASUserGetAutocompleteV2Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASUserGetAutocompleteV2Response implements OASUserGetAutocompleteV
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASUserGetAutocompleteV2ResponseMPay mPayload { get; set; }
+
     public static OASUserGetAutocompleteV2Response getExample() {
         OASUserGetAutocompleteV2Response userGetAutocompleteV2Response = new OASUserGetAutocompleteV2Response();
-          userGetAutocompleteV2Response.mPayload = OASUserGetAutocompleteV2ResponseMPay.getExample();
           userGetAutocompleteV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           userGetAutocompleteV2Response.objDebug = OASCommonResponseObjDebug.getExample();
+          userGetAutocompleteV2Response.mPayload = OASUserGetAutocompleteV2ResponseMPay.getExample();
         return userGetAutocompleteV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUserGetAutocompleteV2Response) {           
             OASUserGetAutocompleteV2Response userGetAutocompleteV2Response = (OASUserGetAutocompleteV2Response) obj;
-            return this.mPayload == userGetAutocompleteV2Response.mPayload
-                && this.objDebugPayload == userGetAutocompleteV2Response.objDebugPayload
-                && this.objDebug == userGetAutocompleteV2Response.objDebug;
+            return this.objDebugPayload == userGetAutocompleteV2Response.objDebugPayload
+                && this.objDebug == userGetAutocompleteV2Response.objDebug
+                && this.mPayload == userGetAutocompleteV2Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

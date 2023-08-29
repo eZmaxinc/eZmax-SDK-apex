@@ -11,32 +11,44 @@
  */
 
 /**
- * OASBillingentityinternalGetAutocompl
+ * Payload for POST /2/object/billingentityinternal/getAutocomplete
  */
-public class OASBillingentityinternalGetAutocompl {
+public class OASBillingentityinternalGetAutocompl implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Billingentityinternal object containing the description, ID and active status about the element.
+     * @return aObjBillingentityinternal
      */
-    public OASBillingentityinternalGetAutocompl mPayload { get; set; }
+    public List<OASBillingentityinternalAutocomplete> aObjBillingentityinternal { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objBillingentityinternal' => 'aObjBillingentityinternal'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASBillingentityinternalGetAutocompl() {
+        aObjBillingentityinternal = new List<OASBillingentityinternalAutocomplete>();
+    }
 
     public static OASBillingentityinternalGetAutocompl getExample() {
-        OASBillingentityinternalGetAutocompl billingentityinternalGetAutocompleteV2ResponseAllOf = new OASBillingentityinternalGetAutocompl();
-          billingentityinternalGetAutocompleteV2ResponseAllOf.mPayload = OASBillingentityinternalGetAutocompl.getExample();
-        return billingentityinternalGetAutocompleteV2ResponseAllOf;
+        OASBillingentityinternalGetAutocompl billingentityinternalGetAutocompleteV2ResponseMPayload = new OASBillingentityinternalGetAutocompl();
+          billingentityinternalGetAutocompleteV2ResponseMPayload.aObjBillingentityinternal = new List<OASBillingentityinternalAutocomplete>{OASBillingentityinternalAutocomplete.getExample()};
+        return billingentityinternalGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASBillingentityinternalGetAutocompl) {           
-            OASBillingentityinternalGetAutocompl billingentityinternalGetAutocompleteV2ResponseAllOf = (OASBillingentityinternalGetAutocompl) obj;
-            return this.mPayload == billingentityinternalGetAutocompleteV2ResponseAllOf.mPayload;
+            OASBillingentityinternalGetAutocompl billingentityinternalGetAutocompleteV2ResponseMPayload = (OASBillingentityinternalGetAutocompl) obj;
+            return this.aObjBillingentityinternal == billingentityinternalGetAutocompleteV2ResponseMPayload.aObjBillingentityinternal;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjBillingentityinternal == null ? 0 : System.hashCode(aObjBillingentityinternal));
         return hashCode;
     }
 }

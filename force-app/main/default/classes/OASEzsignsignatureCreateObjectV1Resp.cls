@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignsignatureCreateObjectV1Resp
+ * Payload for POST /1/object/ezsignsignature
  */
-public class OASEzsignsignatureCreateObjectV1Resp {
+public class OASEzsignsignatureCreateObjectV1Resp implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsignsignatureID
      */
-    public OASEzsignsignatureCreateObjectV1Resp mPayload { get; set; }
+    public List<Integer> aPkiEzsignsignatureID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignsignatureID' => 'aPkiEzsignsignatureID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignsignatureCreateObjectV1Resp() {
+        aPkiEzsignsignatureID = new List<Integer>();
+    }
 
     public static OASEzsignsignatureCreateObjectV1Resp getExample() {
-        OASEzsignsignatureCreateObjectV1Resp ezsignsignatureCreateObjectV1ResponseAllOf = new OASEzsignsignatureCreateObjectV1Resp();
-          ezsignsignatureCreateObjectV1ResponseAllOf.mPayload = OASEzsignsignatureCreateObjectV1Resp.getExample();
-        return ezsignsignatureCreateObjectV1ResponseAllOf;
+        OASEzsignsignatureCreateObjectV1Resp ezsignsignatureCreateObjectV1ResponseMPayload = new OASEzsignsignatureCreateObjectV1Resp();
+          ezsignsignatureCreateObjectV1ResponseMPayload.aPkiEzsignsignatureID = new List<Integer>{Integer.getExample()};
+        return ezsignsignatureCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignatureCreateObjectV1Resp) {           
-            OASEzsignsignatureCreateObjectV1Resp ezsignsignatureCreateObjectV1ResponseAllOf = (OASEzsignsignatureCreateObjectV1Resp) obj;
-            return this.mPayload == ezsignsignatureCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsignsignatureCreateObjectV1Resp ezsignsignatureCreateObjectV1ResponseMPayload = (OASEzsignsignatureCreateObjectV1Resp) obj;
+            return this.aPkiEzsignsignatureID == ezsignsignatureCreateObjectV1ResponseMPayload.aPkiEzsignsignatureID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignsignatureID == null ? 0 : System.hashCode(aPkiEzsignsignatureID));
         return hashCode;
     }
 }

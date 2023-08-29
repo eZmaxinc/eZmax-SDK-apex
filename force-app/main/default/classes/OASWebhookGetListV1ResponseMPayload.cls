@@ -13,13 +13,7 @@
 /**
  * Payload for GET /1/object/webhook/getList
  */
-public class OASWebhookGetListV1ResponseMPayload implements OASWebhookGetListV1ResponseMPayloadA, OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
-    /**
-     * Get aObjWebhook
-     * @return aObjWebhook
-     */
-    public List<OASWebhookListElement> aObjWebhook { get; set; }
-
+public class OASWebhookGetListV1ResponseMPayload implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
     /**
      * The number of rows returned
      * @return iRowReturned
@@ -31,6 +25,12 @@ public class OASWebhookGetListV1ResponseMPayload implements OASWebhookGetListV1R
      * @return iRowFiltered
      */
     public Integer iRowFiltered { get; set; }
+
+    /**
+     * Get aObjWebhook
+     * @return aObjWebhook
+     */
+    public List<OASWebhookListElement> aObjWebhook { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objWebhook' => 'aObjWebhook'
@@ -46,27 +46,27 @@ public class OASWebhookGetListV1ResponseMPayload implements OASWebhookGetListV1R
 
     public static OASWebhookGetListV1ResponseMPayload getExample() {
         OASWebhookGetListV1ResponseMPayload webhookGetListV1ResponseMPayload = new OASWebhookGetListV1ResponseMPayload();
-          webhookGetListV1ResponseMPayload.aObjWebhook = new List<OASWebhookListElement>{OASWebhookListElement.getExample()};
           webhookGetListV1ResponseMPayload.iRowReturned = 100;
           webhookGetListV1ResponseMPayload.iRowFiltered = 533;
+          webhookGetListV1ResponseMPayload.aObjWebhook = new List<OASWebhookListElement>{OASWebhookListElement.getExample()};
         return webhookGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookGetListV1ResponseMPayload) {           
             OASWebhookGetListV1ResponseMPayload webhookGetListV1ResponseMPayload = (OASWebhookGetListV1ResponseMPayload) obj;
-            return this.aObjWebhook == webhookGetListV1ResponseMPayload.aObjWebhook
-                && this.iRowReturned == webhookGetListV1ResponseMPayload.iRowReturned
-                && this.iRowFiltered == webhookGetListV1ResponseMPayload.iRowFiltered;
+            return this.iRowReturned == webhookGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == webhookGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjWebhook == webhookGetListV1ResponseMPayload.aObjWebhook;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aObjWebhook == null ? 0 : System.hashCode(aObjWebhook));
         hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
         hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
+        hashCode = (17 * hashCode) + (aObjWebhook == null ? 0 : System.hashCode(aObjWebhook));
         return hashCode;
     }
 }

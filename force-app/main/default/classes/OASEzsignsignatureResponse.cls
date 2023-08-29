@@ -150,6 +150,14 @@ public class OASEzsignsignatureResponse {
     public String sEzsignsignatureDescription { get; set; }
 
     /**
+     * The maximum length for the value in the Ezsignsignature\n\nThis can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+     * minimum: 0
+     * maximum: 65535
+     * @return iEzsignsignatureMaxlength
+     */
+    public Integer iEzsignsignatureMaxlength { get; set; }
+
+    /**
      * Get eEzsignsignatureTextvalidation
      * @return eEzsignsignatureTextvalidation
      */
@@ -196,6 +204,7 @@ public class OASEzsignsignatureResponse {
           ezsignsignatureResponse.dtEzsignsignatureDate = '2020-12-31 23:59:59';
           ezsignsignatureResponse.iEzsignsignatureattachmentCount = 7;
           ezsignsignatureResponse.sEzsignsignatureDescription = 'Montreal';
+          ezsignsignatureResponse.iEzsignsignatureMaxlength = 75;
           ezsignsignatureResponse.eEzsignsignatureTextvalidation = OASEnumTextvalidation.getExample();
           ezsignsignatureResponse.sEzsignsignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
           ezsignsignatureResponse.objContactName = OASCustomContactNameResponse.getExample();
@@ -227,6 +236,7 @@ public class OASEzsignsignatureResponse {
                 && this.dtEzsignsignatureDate == ezsignsignatureResponse.dtEzsignsignatureDate
                 && this.iEzsignsignatureattachmentCount == ezsignsignatureResponse.iEzsignsignatureattachmentCount
                 && this.sEzsignsignatureDescription == ezsignsignatureResponse.sEzsignsignatureDescription
+                && this.iEzsignsignatureMaxlength == ezsignsignatureResponse.iEzsignsignatureMaxlength
                 && this.eEzsignsignatureTextvalidation == ezsignsignatureResponse.eEzsignsignatureTextvalidation
                 && this.sEzsignsignatureRegexp == ezsignsignatureResponse.sEzsignsignatureRegexp
                 && this.objContactName == ezsignsignatureResponse.objContactName
@@ -258,6 +268,7 @@ public class OASEzsignsignatureResponse {
         hashCode = (17 * hashCode) + (dtEzsignsignatureDate == null ? 0 : System.hashCode(dtEzsignsignatureDate));
         hashCode = (17 * hashCode) + (iEzsignsignatureattachmentCount == null ? 0 : System.hashCode(iEzsignsignatureattachmentCount));
         hashCode = (17 * hashCode) + (sEzsignsignatureDescription == null ? 0 : System.hashCode(sEzsignsignatureDescription));
+        hashCode = (17 * hashCode) + (iEzsignsignatureMaxlength == null ? 0 : System.hashCode(iEzsignsignatureMaxlength));
         hashCode = (17 * hashCode) + (eEzsignsignatureTextvalidation == null ? 0 : System.hashCode(eEzsignsignatureTextvalidation));
         hashCode = (17 * hashCode) + (sEzsignsignatureRegexp == null ? 0 : System.hashCode(sEzsignsignatureRegexp));
         hashCode = (17 * hashCode) + (objContactName == null ? 0 : System.hashCode(objContactName));

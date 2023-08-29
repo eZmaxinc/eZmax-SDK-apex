@@ -13,13 +13,7 @@
 /**
  * Response for GET /2/object/company/getAutocomplete
  */
-public class OASCompanyGetAutocompleteV2Response implements OASCompanyGetAutocompleteV2ResponseA, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASCompanyGetAutocompleteV2ResponseM mPayload { get; set; }
-
+public class OASCompanyGetAutocompleteV2Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASCompanyGetAutocompleteV2Response implements OASCompanyGetAutocom
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASCompanyGetAutocompleteV2ResponseM mPayload { get; set; }
+
     public static OASCompanyGetAutocompleteV2Response getExample() {
         OASCompanyGetAutocompleteV2Response companyGetAutocompleteV2Response = new OASCompanyGetAutocompleteV2Response();
-          companyGetAutocompleteV2Response.mPayload = OASCompanyGetAutocompleteV2ResponseM.getExample();
           companyGetAutocompleteV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           companyGetAutocompleteV2Response.objDebug = OASCommonResponseObjDebug.getExample();
+          companyGetAutocompleteV2Response.mPayload = OASCompanyGetAutocompleteV2ResponseM.getExample();
         return companyGetAutocompleteV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCompanyGetAutocompleteV2Response) {           
             OASCompanyGetAutocompleteV2Response companyGetAutocompleteV2Response = (OASCompanyGetAutocompleteV2Response) obj;
-            return this.mPayload == companyGetAutocompleteV2Response.mPayload
-                && this.objDebugPayload == companyGetAutocompleteV2Response.objDebugPayload
-                && this.objDebug == companyGetAutocompleteV2Response.objDebug;
+            return this.objDebugPayload == companyGetAutocompleteV2Response.objDebugPayload
+                && this.objDebug == companyGetAutocompleteV2Response.objDebug
+                && this.mPayload == companyGetAutocompleteV2Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

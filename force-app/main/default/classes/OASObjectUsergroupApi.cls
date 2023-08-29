@@ -106,6 +106,34 @@ public class OASObjectUsergroupApi {
         );
     }
     /**
+     * Edit multiple Usergroupdelegations
+     * Edit multiple Usergroupdelegations
+     * @param pkiUsergroupID  (required)
+     * @param oaSUsergroupEditUsergroupdelegations  (required)
+     * @return OASUsergroupEditUsergroupdelegations
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUsergroupEditUsergroupdelegations usergroupEditUsergroupdelegationsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
+        client.assertNotNull(params.get('oaSUsergroupEditUsergroupdelegations'), 'oaSUsergroupEditUsergroupdelegations');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUsergroupEditUsergroupdelegations) client.invoke(
+            'PUT', '/1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations',
+            (OASUsergroupEditUsergroupdelegations) params.get('oaSUsergroupEditUsergroupdelegations'),
+            query, form,
+            new Map<String, Object>{
+                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASUsergroupEditUsergroupdelegations.class
+        );
+    }
+    /**
      * Edit multiple Usergroupmemberships
      * Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
      * @param pkiUsergroupID  (required)
@@ -251,6 +279,31 @@ public class OASObjectUsergroupApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASUsergroupGetPermissionsV1Response.class
+        );
+    }
+    /**
+     * Retrieve an existing Usergroup\&#39;s Usergroupdelegations
+     * 
+     * @param pkiUsergroupID  (required)
+     * @return OASUsergroupGetUsergroupdelegationsV
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUsergroupGetUsergroupdelegationsV usergroupGetUsergroupdelegationsV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUsergroupID'), 'pkiUsergroupID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUsergroupGetUsergroupdelegationsV) client.invoke(
+            'GET', '/1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiUsergroupID' => (Integer) params.get('pkiUsergroupID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASUsergroupGetUsergroupdelegationsV.class
         );
     }
     /**

@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  */
-public class OASEzsigntemplateCopyV1Response implements OASEzsigntemplateCopyV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASEzsigntemplateCopyV1ResponseMPayl mPayload { get; set; }
-
+public class OASEzsigntemplateCopyV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASEzsigntemplateCopyV1Response implements OASEzsigntemplateCopyV1R
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASEzsigntemplateCopyV1ResponseMPayl mPayload { get; set; }
+
     public static OASEzsigntemplateCopyV1Response getExample() {
         OASEzsigntemplateCopyV1Response ezsigntemplateCopyV1Response = new OASEzsigntemplateCopyV1Response();
-          ezsigntemplateCopyV1Response.mPayload = OASEzsigntemplateCopyV1ResponseMPayl.getExample();
           ezsigntemplateCopyV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           ezsigntemplateCopyV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          ezsigntemplateCopyV1Response.mPayload = OASEzsigntemplateCopyV1ResponseMPayl.getExample();
         return ezsigntemplateCopyV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplateCopyV1Response) {           
             OASEzsigntemplateCopyV1Response ezsigntemplateCopyV1Response = (OASEzsigntemplateCopyV1Response) obj;
-            return this.mPayload == ezsigntemplateCopyV1Response.mPayload
-                && this.objDebugPayload == ezsigntemplateCopyV1Response.objDebugPayload
-                && this.objDebug == ezsigntemplateCopyV1Response.objDebug;
+            return this.objDebugPayload == ezsigntemplateCopyV1Response.objDebugPayload
+                && this.objDebug == ezsigntemplateCopyV1Response.objDebug
+                && this.mPayload == ezsigntemplateCopyV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

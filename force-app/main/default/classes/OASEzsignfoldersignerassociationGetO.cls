@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignfoldersignerassociationGetO
+ * Payload for GET /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  */
 public class OASEzsignfoldersignerassociationGetO {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignfoldersignerassociation
+     * @return objEzsignfoldersignerassociation
      */
-    public OASEzsignfoldersignerassociationGetO mPayload { get; set; }
+    public OASEzsignfoldersignerassociationResp objEzsignfoldersignerassociation { get; set; }
 
     public static OASEzsignfoldersignerassociationGetO getExample() {
-        OASEzsignfoldersignerassociationGetO ezsignfoldersignerassociationGetObjectV2ResponseAllOf = new OASEzsignfoldersignerassociationGetO();
-          ezsignfoldersignerassociationGetObjectV2ResponseAllOf.mPayload = OASEzsignfoldersignerassociationGetO.getExample();
-        return ezsignfoldersignerassociationGetObjectV2ResponseAllOf;
+        OASEzsignfoldersignerassociationGetO ezsignfoldersignerassociationGetObjectV2ResponseMPayload = new OASEzsignfoldersignerassociationGetO();
+          ezsignfoldersignerassociationGetObjectV2ResponseMPayload.objEzsignfoldersignerassociation = OASEzsignfoldersignerassociationResp.getExample();
+        return ezsignfoldersignerassociationGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldersignerassociationGetO) {           
-            OASEzsignfoldersignerassociationGetO ezsignfoldersignerassociationGetObjectV2ResponseAllOf = (OASEzsignfoldersignerassociationGetO) obj;
-            return this.mPayload == ezsignfoldersignerassociationGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignfoldersignerassociationGetO ezsignfoldersignerassociationGetObjectV2ResponseMPayload = (OASEzsignfoldersignerassociationGetO) obj;
+            return this.objEzsignfoldersignerassociation == ezsignfoldersignerassociationGetObjectV2ResponseMPayload.objEzsignfoldersignerassociation;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignfoldersignerassociation == null ? 0 : System.hashCode(objEzsignfoldersignerassociation));
         return hashCode;
     }
 }

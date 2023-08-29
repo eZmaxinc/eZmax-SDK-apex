@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignformfieldgroupCreateObjectV
+ * Payload for POST /1/object/ezsignformfieldgroup
  */
-public class OASEzsignformfieldgroupCreateObjectV {
+public class OASEzsignformfieldgroupCreateObjectV implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsignformfieldgroupID
      */
-    public OASEzsignformfieldgroupCreateObjectV mPayload { get; set; }
+    public List<Integer> aPkiEzsignformfieldgroupID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignformfieldgroupID' => 'aPkiEzsignformfieldgroupID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignformfieldgroupCreateObjectV() {
+        aPkiEzsignformfieldgroupID = new List<Integer>();
+    }
 
     public static OASEzsignformfieldgroupCreateObjectV getExample() {
-        OASEzsignformfieldgroupCreateObjectV ezsignformfieldgroupCreateObjectV1ResponseAllOf = new OASEzsignformfieldgroupCreateObjectV();
-          ezsignformfieldgroupCreateObjectV1ResponseAllOf.mPayload = OASEzsignformfieldgroupCreateObjectV.getExample();
-        return ezsignformfieldgroupCreateObjectV1ResponseAllOf;
+        OASEzsignformfieldgroupCreateObjectV ezsignformfieldgroupCreateObjectV1ResponseMPayload = new OASEzsignformfieldgroupCreateObjectV();
+          ezsignformfieldgroupCreateObjectV1ResponseMPayload.aPkiEzsignformfieldgroupID = new List<Integer>{Integer.getExample()};
+        return ezsignformfieldgroupCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignformfieldgroupCreateObjectV) {           
-            OASEzsignformfieldgroupCreateObjectV ezsignformfieldgroupCreateObjectV1ResponseAllOf = (OASEzsignformfieldgroupCreateObjectV) obj;
-            return this.mPayload == ezsignformfieldgroupCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsignformfieldgroupCreateObjectV ezsignformfieldgroupCreateObjectV1ResponseMPayload = (OASEzsignformfieldgroupCreateObjectV) obj;
+            return this.aPkiEzsignformfieldgroupID == ezsignformfieldgroupCreateObjectV1ResponseMPayload.aPkiEzsignformfieldgroupID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignformfieldgroupID == null ? 0 : System.hashCode(aPkiEzsignformfieldgroupID));
         return hashCode;
     }
 }

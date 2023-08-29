@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigntemplatepackageCreateObject
+ * Payload for POST /1/object/ezsigntemplatepackage
  */
-public class OASEzsigntemplatepackageCreateObject {
+public class OASEzsigntemplatepackageCreateObject implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsigntemplatepackageID
      */
-    public OASEzsigntemplatepackageCreateObject mPayload { get; set; }
+    public List<Integer> aPkiEzsigntemplatepackageID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsigntemplatepackageID' => 'aPkiEzsigntemplatepackageID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntemplatepackageCreateObject() {
+        aPkiEzsigntemplatepackageID = new List<Integer>();
+    }
 
     public static OASEzsigntemplatepackageCreateObject getExample() {
-        OASEzsigntemplatepackageCreateObject ezsigntemplatepackageCreateObjectV1ResponseAllOf = new OASEzsigntemplatepackageCreateObject();
-          ezsigntemplatepackageCreateObjectV1ResponseAllOf.mPayload = OASEzsigntemplatepackageCreateObject.getExample();
-        return ezsigntemplatepackageCreateObjectV1ResponseAllOf;
+        OASEzsigntemplatepackageCreateObject ezsigntemplatepackageCreateObjectV1ResponseMPayload = new OASEzsigntemplatepackageCreateObject();
+          ezsigntemplatepackageCreateObjectV1ResponseMPayload.aPkiEzsigntemplatepackageID = new List<Integer>{Integer.getExample()};
+        return ezsigntemplatepackageCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatepackageCreateObject) {           
-            OASEzsigntemplatepackageCreateObject ezsigntemplatepackageCreateObjectV1ResponseAllOf = (OASEzsigntemplatepackageCreateObject) obj;
-            return this.mPayload == ezsigntemplatepackageCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsigntemplatepackageCreateObject ezsigntemplatepackageCreateObjectV1ResponseMPayload = (OASEzsigntemplatepackageCreateObject) obj;
+            return this.aPkiEzsigntemplatepackageID == ezsigntemplatepackageCreateObjectV1ResponseMPayload.aPkiEzsigntemplatepackageID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsigntemplatepackageID == null ? 0 : System.hashCode(aPkiEzsigntemplatepackageID));
         return hashCode;
     }
 }

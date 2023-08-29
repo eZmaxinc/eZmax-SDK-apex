@@ -108,6 +108,41 @@ private class OASObjectUserApiTest {
     }
 
     /**
+     * Retrieve an existing User\&#39;s Apikeys
+     *
+     * 
+     */
+    @isTest
+    private static void userGetApikeysV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUserID' => ''
+        };
+
+        OASClient client;
+        OASObjectUserApi api;
+        OASUserGetApikeysV1Response response;
+        OASUserGetApikeysV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUserApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUserGetApikeysV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUserGetApikeysV1Response.getExample();
+        response = (OASUserGetApikeysV1Response) api.userGetApikeysV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Retrieve Users and IDs
      *
      * Get the list of User to be used in a dropdown or autocomplete control.
@@ -329,6 +364,42 @@ private class OASObjectUserApiTest {
         res.setBody(js);
         expectedResponse = OASUserGetSubnetsV1Response.getExample();
         response = (OASUserGetSubnetsV1Response) api.userGetSubnetsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Send password reset
+     *
+     * Send the password reset email
+     */
+    @isTest
+    private static void userSendPasswordResetV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUserID' => '',
+            'body' => 
+        };
+
+        OASClient client;
+        OASObjectUserApi api;
+        OASUserSendPasswordResetV1Response response;
+        OASUserSendPasswordResetV1Response expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUserApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUserSendPasswordResetV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUserSendPasswordResetV1Response.getExample();
+        response = (OASUserSendPasswordResetV1Response) api.userSendPasswordResetV1(params);
         System.assertEquals(expectedResponse, response);
     }
 }

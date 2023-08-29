@@ -11,7 +11,7 @@
  */
 
 /**
- * OASCustomEzsignformfielderrorRespons
+ * A Custom Ezsignformfield Object to contain an error list
  */
 public class OASCustomEzsignformfielderrorRespons implements OAS.MappedProperties {
     /**
@@ -39,17 +39,17 @@ public class OASCustomEzsignformfielderrorRespons implements OAS.MappedPropertie
     }
 
     public static OASCustomEzsignformfielderrorRespons getExample() {
-        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf = new OASCustomEzsignformfielderrorRespons();
-          customEzsignformfielderrorResponseAllOf.sEzsignformfieldLabel = 'Peanuts';
-          customEzsignformfielderrorResponseAllOf.aObjEzsignformfielderrortest = new List<OASCustomEzsignformfielderrortestRes>{OASCustomEzsignformfielderrortestRes.getExample()};
-        return customEzsignformfielderrorResponseAllOf;
+        OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse = new OASCustomEzsignformfielderrorRespons();
+          customEzsignformfielderrorResponse.sEzsignformfieldLabel = 'Peanuts';
+          customEzsignformfielderrorResponse.aObjEzsignformfielderrortest = new List<OASCustomEzsignformfielderrortestRes>{OASCustomEzsignformfielderrortestRes.getExample()};
+        return customEzsignformfielderrorResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCustomEzsignformfielderrorRespons) {           
-            OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponseAllOf = (OASCustomEzsignformfielderrorRespons) obj;
-            return this.sEzsignformfieldLabel == customEzsignformfielderrorResponseAllOf.sEzsignformfieldLabel
-                && this.aObjEzsignformfielderrortest == customEzsignformfielderrorResponseAllOf.aObjEzsignformfielderrortest;
+            OASCustomEzsignformfielderrorRespons customEzsignformfielderrorResponse = (OASCustomEzsignformfielderrorRespons) obj;
+            return this.sEzsignformfieldLabel == customEzsignformfielderrorResponse.sEzsignformfieldLabel
+                && this.aObjEzsignformfielderrortest == customEzsignformfielderrorResponse.aObjEzsignformfielderrortest;
         }
         return false;
     }

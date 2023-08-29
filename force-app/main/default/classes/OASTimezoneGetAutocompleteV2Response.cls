@@ -11,32 +11,44 @@
  */
 
 /**
- * OASTimezoneGetAutocompleteV2Response
+ * Payload for POST /2/object/timezone/getAutocomplete
  */
-public class OASTimezoneGetAutocompleteV2Response {
+public class OASTimezoneGetAutocompleteV2Response implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Timezone autocomplete element response.
+     * @return aObjTimezone
      */
-    public OASTimezoneGetAutocompleteV2Response mPayload { get; set; }
+    public List<OASTimezoneAutocompleteElementRespon> aObjTimezone { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objTimezone' => 'aObjTimezone'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASTimezoneGetAutocompleteV2Response() {
+        aObjTimezone = new List<OASTimezoneAutocompleteElementRespon>();
+    }
 
     public static OASTimezoneGetAutocompleteV2Response getExample() {
-        OASTimezoneGetAutocompleteV2Response timezoneGetAutocompleteV2ResponseAllOf = new OASTimezoneGetAutocompleteV2Response();
-          timezoneGetAutocompleteV2ResponseAllOf.mPayload = OASTimezoneGetAutocompleteV2Response.getExample();
-        return timezoneGetAutocompleteV2ResponseAllOf;
+        OASTimezoneGetAutocompleteV2Response timezoneGetAutocompleteV2ResponseMPayload = new OASTimezoneGetAutocompleteV2Response();
+          timezoneGetAutocompleteV2ResponseMPayload.aObjTimezone = new List<OASTimezoneAutocompleteElementRespon>{OASTimezoneAutocompleteElementRespon.getExample()};
+        return timezoneGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASTimezoneGetAutocompleteV2Response) {           
-            OASTimezoneGetAutocompleteV2Response timezoneGetAutocompleteV2ResponseAllOf = (OASTimezoneGetAutocompleteV2Response) obj;
-            return this.mPayload == timezoneGetAutocompleteV2ResponseAllOf.mPayload;
+            OASTimezoneGetAutocompleteV2Response timezoneGetAutocompleteV2ResponseMPayload = (OASTimezoneGetAutocompleteV2Response) obj;
+            return this.aObjTimezone == timezoneGetAutocompleteV2ResponseMPayload.aObjTimezone;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjTimezone == null ? 0 : System.hashCode(aObjTimezone));
         return hashCode;
     }
 }

@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignbulksenddocumentmappingGetO
+ * Payload for GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}
  */
 public class OASEzsignbulksenddocumentmappingGetO {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignbulksenddocumentmapping
+     * @return objEzsignbulksenddocumentmapping
      */
-    public OASEzsignbulksenddocumentmappingGetO mPayload { get; set; }
+    public OASEzsignbulksenddocumentmappingResp objEzsignbulksenddocumentmapping { get; set; }
 
     public static OASEzsignbulksenddocumentmappingGetO getExample() {
-        OASEzsignbulksenddocumentmappingGetO ezsignbulksenddocumentmappingGetObjectV2ResponseAllOf = new OASEzsignbulksenddocumentmappingGetO();
-          ezsignbulksenddocumentmappingGetObjectV2ResponseAllOf.mPayload = OASEzsignbulksenddocumentmappingGetO.getExample();
-        return ezsignbulksenddocumentmappingGetObjectV2ResponseAllOf;
+        OASEzsignbulksenddocumentmappingGetO ezsignbulksenddocumentmappingGetObjectV2ResponseMPayload = new OASEzsignbulksenddocumentmappingGetO();
+          ezsignbulksenddocumentmappingGetObjectV2ResponseMPayload.objEzsignbulksenddocumentmapping = OASEzsignbulksenddocumentmappingResp.getExample();
+        return ezsignbulksenddocumentmappingGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksenddocumentmappingGetO) {           
-            OASEzsignbulksenddocumentmappingGetO ezsignbulksenddocumentmappingGetObjectV2ResponseAllOf = (OASEzsignbulksenddocumentmappingGetO) obj;
-            return this.mPayload == ezsignbulksenddocumentmappingGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignbulksenddocumentmappingGetO ezsignbulksenddocumentmappingGetObjectV2ResponseMPayload = (OASEzsignbulksenddocumentmappingGetO) obj;
+            return this.objEzsignbulksenddocumentmapping == ezsignbulksenddocumentmappingGetObjectV2ResponseMPayload.objEzsignbulksenddocumentmapping;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignbulksenddocumentmapping == null ? 0 : System.hashCode(objEzsignbulksenddocumentmapping));
         return hashCode;
     }
 }

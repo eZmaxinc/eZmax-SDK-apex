@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignsignergroupGetObjectV2Respo
+ * Payload for GET /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}
  */
 public class OASEzsignsignergroupGetObjectV2Respo {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignsignergroup
+     * @return objEzsignsignergroup
      */
-    public OASEzsignsignergroupGetObjectV2Respo mPayload { get; set; }
+    public OASEzsignsignergroupResponseCompound objEzsignsignergroup { get; set; }
 
     public static OASEzsignsignergroupGetObjectV2Respo getExample() {
-        OASEzsignsignergroupGetObjectV2Respo ezsignsignergroupGetObjectV2ResponseAllOf = new OASEzsignsignergroupGetObjectV2Respo();
-          ezsignsignergroupGetObjectV2ResponseAllOf.mPayload = OASEzsignsignergroupGetObjectV2Respo.getExample();
-        return ezsignsignergroupGetObjectV2ResponseAllOf;
+        OASEzsignsignergroupGetObjectV2Respo ezsignsignergroupGetObjectV2ResponseMPayload = new OASEzsignsignergroupGetObjectV2Respo();
+          ezsignsignergroupGetObjectV2ResponseMPayload.objEzsignsignergroup = OASEzsignsignergroupResponseCompound.getExample();
+        return ezsignsignergroupGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignergroupGetObjectV2Respo) {           
-            OASEzsignsignergroupGetObjectV2Respo ezsignsignergroupGetObjectV2ResponseAllOf = (OASEzsignsignergroupGetObjectV2Respo) obj;
-            return this.mPayload == ezsignsignergroupGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignsignergroupGetObjectV2Respo ezsignsignergroupGetObjectV2ResponseMPayload = (OASEzsignsignergroupGetObjectV2Respo) obj;
+            return this.objEzsignsignergroup == ezsignsignergroupGetObjectV2ResponseMPayload.objEzsignsignergroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignsignergroup == null ? 0 : System.hashCode(objEzsignsignergroup));
         return hashCode;
     }
 }

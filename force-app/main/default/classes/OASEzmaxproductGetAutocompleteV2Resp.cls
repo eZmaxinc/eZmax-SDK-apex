@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzmaxproductGetAutocompleteV2Resp
+ * Payload for POST /2/object/ezmaxproduct/getAutocomplete
  */
-public class OASEzmaxproductGetAutocompleteV2Resp {
+public class OASEzmaxproductGetAutocompleteV2Resp implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Ezmaxproduct autocomplete element response.
+     * @return aObjEzmaxproduct
      */
-    public OASEzmaxproductGetAutocompleteV2Resp mPayload { get; set; }
+    public List<OASEzmaxproductAutocompleteElementRe> aObjEzmaxproduct { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzmaxproduct' => 'aObjEzmaxproduct'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzmaxproductGetAutocompleteV2Resp() {
+        aObjEzmaxproduct = new List<OASEzmaxproductAutocompleteElementRe>();
+    }
 
     public static OASEzmaxproductGetAutocompleteV2Resp getExample() {
-        OASEzmaxproductGetAutocompleteV2Resp ezmaxproductGetAutocompleteV2ResponseAllOf = new OASEzmaxproductGetAutocompleteV2Resp();
-          ezmaxproductGetAutocompleteV2ResponseAllOf.mPayload = OASEzmaxproductGetAutocompleteV2Resp.getExample();
-        return ezmaxproductGetAutocompleteV2ResponseAllOf;
+        OASEzmaxproductGetAutocompleteV2Resp ezmaxproductGetAutocompleteV2ResponseMPayload = new OASEzmaxproductGetAutocompleteV2Resp();
+          ezmaxproductGetAutocompleteV2ResponseMPayload.aObjEzmaxproduct = new List<OASEzmaxproductAutocompleteElementRe>{OASEzmaxproductAutocompleteElementRe.getExample()};
+        return ezmaxproductGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzmaxproductGetAutocompleteV2Resp) {           
-            OASEzmaxproductGetAutocompleteV2Resp ezmaxproductGetAutocompleteV2ResponseAllOf = (OASEzmaxproductGetAutocompleteV2Resp) obj;
-            return this.mPayload == ezmaxproductGetAutocompleteV2ResponseAllOf.mPayload;
+            OASEzmaxproductGetAutocompleteV2Resp ezmaxproductGetAutocompleteV2ResponseMPayload = (OASEzmaxproductGetAutocompleteV2Resp) obj;
+            return this.aObjEzmaxproduct == ezmaxproductGetAutocompleteV2ResponseMPayload.aObjEzmaxproduct;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzmaxproduct == null ? 0 : System.hashCode(aObjEzmaxproduct));
         return hashCode;
     }
 }

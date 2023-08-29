@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/paymentterm/getList
  */
-public class OASPaymenttermGetListV1Response implements OASPaymenttermGetListV1ResponseAllOf, OASCommonResponseGetList {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASPaymenttermGetListV1ResponseMPayl mPayload { get; set; }
-
+public class OASPaymenttermGetListV1Response implements OASCommonResponseGetList {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASPaymenttermGetListV1Response implements OASPaymenttermGetListV1R
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASPaymenttermGetListV1ResponseMPayl mPayload { get; set; }
+
     public static OASPaymenttermGetListV1Response getExample() {
         OASPaymenttermGetListV1Response paymenttermGetListV1Response = new OASPaymenttermGetListV1Response();
-          paymenttermGetListV1Response.mPayload = OASPaymenttermGetListV1ResponseMPayl.getExample();
           paymenttermGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayloadGetL.getExample();
           paymenttermGetListV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          paymenttermGetListV1Response.mPayload = OASPaymenttermGetListV1ResponseMPayl.getExample();
         return paymenttermGetListV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPaymenttermGetListV1Response) {           
             OASPaymenttermGetListV1Response paymenttermGetListV1Response = (OASPaymenttermGetListV1Response) obj;
-            return this.mPayload == paymenttermGetListV1Response.mPayload
-                && this.objDebugPayload == paymenttermGetListV1Response.objDebugPayload
-                && this.objDebug == paymenttermGetListV1Response.objDebug;
+            return this.objDebugPayload == paymenttermGetListV1Response.objDebugPayload
+                && this.objDebug == paymenttermGetListV1Response.objDebug
+                && this.mPayload == paymenttermGetListV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

@@ -11,32 +11,44 @@
  */
 
 /**
- * OASNotificationsectionGetNotificatio
+ * Payload for GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests
  */
-public class OASNotificationsectionGetNotificatio {
+public class OASNotificationsectionGetNotificatio implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjNotificationsubsection
+     * @return aObjNotificationsubsection
      */
-    public OASNotificationsectionGetNotificatio mPayload { get; set; }
+    public List<OASCustomNotificationsubsectiongetno> aObjNotificationsubsection { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objNotificationsubsection' => 'aObjNotificationsubsection'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASNotificationsectionGetNotificatio() {
+        aObjNotificationsubsection = new List<OASCustomNotificationsubsectiongetno>();
+    }
 
     public static OASNotificationsectionGetNotificatio getExample() {
-        OASNotificationsectionGetNotificatio notificationsectionGetNotificationtestsV1ResponseAllOf = new OASNotificationsectionGetNotificatio();
-          notificationsectionGetNotificationtestsV1ResponseAllOf.mPayload = OASNotificationsectionGetNotificatio.getExample();
-        return notificationsectionGetNotificationtestsV1ResponseAllOf;
+        OASNotificationsectionGetNotificatio notificationsectionGetNotificationtestsV1ResponseMPayload = new OASNotificationsectionGetNotificatio();
+          notificationsectionGetNotificationtestsV1ResponseMPayload.aObjNotificationsubsection = new List<OASCustomNotificationsubsectiongetno>{OASCustomNotificationsubsectiongetno.getExample()};
+        return notificationsectionGetNotificationtestsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASNotificationsectionGetNotificatio) {           
-            OASNotificationsectionGetNotificatio notificationsectionGetNotificationtestsV1ResponseAllOf = (OASNotificationsectionGetNotificatio) obj;
-            return this.mPayload == notificationsectionGetNotificationtestsV1ResponseAllOf.mPayload;
+            OASNotificationsectionGetNotificatio notificationsectionGetNotificationtestsV1ResponseMPayload = (OASNotificationsectionGetNotificatio) obj;
+            return this.aObjNotificationsubsection == notificationsectionGetNotificationtestsV1ResponseMPayload.aObjNotificationsubsection;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjNotificationsubsection == null ? 0 : System.hashCode(aObjNotificationsubsection));
         return hashCode;
     }
 }

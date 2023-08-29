@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/object/subnet
  */
-public class OASSubnetCreateObjectV1Response implements OASSubnetCreateObjectV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASSubnetCreateObjectV1ResponseMPayl mPayload { get; set; }
-
+public class OASSubnetCreateObjectV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASSubnetCreateObjectV1Response implements OASSubnetCreateObjectV1R
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASSubnetCreateObjectV1ResponseMPayl mPayload { get; set; }
+
     public static OASSubnetCreateObjectV1Response getExample() {
         OASSubnetCreateObjectV1Response subnetCreateObjectV1Response = new OASSubnetCreateObjectV1Response();
-          subnetCreateObjectV1Response.mPayload = OASSubnetCreateObjectV1ResponseMPayl.getExample();
           subnetCreateObjectV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           subnetCreateObjectV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          subnetCreateObjectV1Response.mPayload = OASSubnetCreateObjectV1ResponseMPayl.getExample();
         return subnetCreateObjectV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASSubnetCreateObjectV1Response) {           
             OASSubnetCreateObjectV1Response subnetCreateObjectV1Response = (OASSubnetCreateObjectV1Response) obj;
-            return this.mPayload == subnetCreateObjectV1Response.mPayload
-                && this.objDebugPayload == subnetCreateObjectV1Response.objDebugPayload
-                && this.objDebug == subnetCreateObjectV1Response.objDebug;
+            return this.objDebugPayload == subnetCreateObjectV1Response.objDebugPayload
+                && this.objDebug == subnetCreateObjectV1Response.objDebug
+                && this.mPayload == subnetCreateObjectV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

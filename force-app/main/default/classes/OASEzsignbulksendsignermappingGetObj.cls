@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignbulksendsignermappingGetObj
+ * Payload for GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}
  */
 public class OASEzsignbulksendsignermappingGetObj {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignbulksendsignermapping
+     * @return objEzsignbulksendsignermapping
      */
-    public OASEzsignbulksendsignermappingGetObj mPayload { get; set; }
+    public OASEzsignbulksendsignermappingRespon objEzsignbulksendsignermapping { get; set; }
 
     public static OASEzsignbulksendsignermappingGetObj getExample() {
-        OASEzsignbulksendsignermappingGetObj ezsignbulksendsignermappingGetObjectV2ResponseAllOf = new OASEzsignbulksendsignermappingGetObj();
-          ezsignbulksendsignermappingGetObjectV2ResponseAllOf.mPayload = OASEzsignbulksendsignermappingGetObj.getExample();
-        return ezsignbulksendsignermappingGetObjectV2ResponseAllOf;
+        OASEzsignbulksendsignermappingGetObj ezsignbulksendsignermappingGetObjectV2ResponseMPayload = new OASEzsignbulksendsignermappingGetObj();
+          ezsignbulksendsignermappingGetObjectV2ResponseMPayload.objEzsignbulksendsignermapping = OASEzsignbulksendsignermappingRespon.getExample();
+        return ezsignbulksendsignermappingGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendsignermappingGetObj) {           
-            OASEzsignbulksendsignermappingGetObj ezsignbulksendsignermappingGetObjectV2ResponseAllOf = (OASEzsignbulksendsignermappingGetObj) obj;
-            return this.mPayload == ezsignbulksendsignermappingGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignbulksendsignermappingGetObj ezsignbulksendsignermappingGetObjectV2ResponseMPayload = (OASEzsignbulksendsignermappingGetObj) obj;
+            return this.objEzsignbulksendsignermapping == ezsignbulksendsignermappingGetObjectV2ResponseMPayload.objEzsignbulksendsignermapping;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignbulksendsignermapping == null ? 0 : System.hashCode(objEzsignbulksendsignermapping));
         return hashCode;
     }
 }

@@ -11,32 +11,44 @@
  */
 
 /**
- * OASUsergroupEditUsergroupmemberships
+ * Response for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
  */
-public class OASUsergroupEditUsergroupmemberships {
+public class OASUsergroupEditUsergroupmemberships implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aPkiUsergroupmembershipID
+     * @return aPkiUsergroupmembershipID
      */
-    public OASUsergroupEditUsergroupmemberships mPayload { get; set; }
+    public List<Integer> aPkiUsergroupmembershipID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiUsergroupmembershipID' => 'aPkiUsergroupmembershipID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASUsergroupEditUsergroupmemberships() {
+        aPkiUsergroupmembershipID = new List<Integer>();
+    }
 
     public static OASUsergroupEditUsergroupmemberships getExample() {
-        OASUsergroupEditUsergroupmemberships usergroupEditUsergroupmembershipsV1ResponseAllOf = new OASUsergroupEditUsergroupmemberships();
-          usergroupEditUsergroupmembershipsV1ResponseAllOf.mPayload = OASUsergroupEditUsergroupmemberships.getExample();
-        return usergroupEditUsergroupmembershipsV1ResponseAllOf;
+        OASUsergroupEditUsergroupmemberships usergroupEditUsergroupmembershipsV1ResponseMPayload = new OASUsergroupEditUsergroupmemberships();
+          usergroupEditUsergroupmembershipsV1ResponseMPayload.aPkiUsergroupmembershipID = new List<Integer>{Integer.getExample()};
+        return usergroupEditUsergroupmembershipsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupEditUsergroupmemberships) {           
-            OASUsergroupEditUsergroupmemberships usergroupEditUsergroupmembershipsV1ResponseAllOf = (OASUsergroupEditUsergroupmemberships) obj;
-            return this.mPayload == usergroupEditUsergroupmembershipsV1ResponseAllOf.mPayload;
+            OASUsergroupEditUsergroupmemberships usergroupEditUsergroupmembershipsV1ResponseMPayload = (OASUsergroupEditUsergroupmemberships) obj;
+            return this.aPkiUsergroupmembershipID == usergroupEditUsergroupmembershipsV1ResponseMPayload.aPkiUsergroupmembershipID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiUsergroupmembershipID == null ? 0 : System.hashCode(aPkiUsergroupmembershipID));
         return hashCode;
     }
 }

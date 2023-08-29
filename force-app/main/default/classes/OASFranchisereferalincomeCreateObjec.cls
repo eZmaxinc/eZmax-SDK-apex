@@ -11,32 +11,44 @@
  */
 
 /**
- * OASFranchisereferalincomeCreateObjec
+ * Payload for POST /2/object/franchisereferalincome
  */
-public class OASFranchisereferalincomeCreateObjec {
+public class OASFranchisereferalincomeCreateObjec implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiFranchisereferalincomeID
      */
-    public OASFranchisereferalincomeCreateObjec mPayload { get; set; }
+    public List<Integer> aPkiFranchisereferalincomeID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiFranchisereferalincomeID' => 'aPkiFranchisereferalincomeID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASFranchisereferalincomeCreateObjec() {
+        aPkiFranchisereferalincomeID = new List<Integer>();
+    }
 
     public static OASFranchisereferalincomeCreateObjec getExample() {
-        OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV2ResponseAllOf = new OASFranchisereferalincomeCreateObjec();
-          franchisereferalincomeCreateObjectV2ResponseAllOf.mPayload = OASFranchisereferalincomeCreateObjec.getExample();
-        return franchisereferalincomeCreateObjectV2ResponseAllOf;
+        OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV2ResponseMPayload = new OASFranchisereferalincomeCreateObjec();
+          franchisereferalincomeCreateObjectV2ResponseMPayload.aPkiFranchisereferalincomeID = new List<Integer>{Integer.getExample()};
+        return franchisereferalincomeCreateObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASFranchisereferalincomeCreateObjec) {           
-            OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV2ResponseAllOf = (OASFranchisereferalincomeCreateObjec) obj;
-            return this.mPayload == franchisereferalincomeCreateObjectV2ResponseAllOf.mPayload;
+            OASFranchisereferalincomeCreateObjec franchisereferalincomeCreateObjectV2ResponseMPayload = (OASFranchisereferalincomeCreateObjec) obj;
+            return this.aPkiFranchisereferalincomeID == franchisereferalincomeCreateObjectV2ResponseMPayload.aPkiFranchisereferalincomeID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiFranchisereferalincomeID == null ? 0 : System.hashCode(aPkiFranchisereferalincomeID));
         return hashCode;
     }
 }

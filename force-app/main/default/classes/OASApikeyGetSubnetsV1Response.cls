@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/getSubnets
  */
-public class OASApikeyGetSubnetsV1Response implements OASApikeyGetSubnetsV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASApikeyGetSubnetsV1ResponseMPayloa mPayload { get; set; }
-
+public class OASApikeyGetSubnetsV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASApikeyGetSubnetsV1Response implements OASApikeyGetSubnetsV1Respo
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASApikeyGetSubnetsV1ResponseMPayloa mPayload { get; set; }
+
     public static OASApikeyGetSubnetsV1Response getExample() {
         OASApikeyGetSubnetsV1Response apikeyGetSubnetsV1Response = new OASApikeyGetSubnetsV1Response();
-          apikeyGetSubnetsV1Response.mPayload = OASApikeyGetSubnetsV1ResponseMPayloa.getExample();
           apikeyGetSubnetsV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           apikeyGetSubnetsV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          apikeyGetSubnetsV1Response.mPayload = OASApikeyGetSubnetsV1ResponseMPayloa.getExample();
         return apikeyGetSubnetsV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASApikeyGetSubnetsV1Response) {           
             OASApikeyGetSubnetsV1Response apikeyGetSubnetsV1Response = (OASApikeyGetSubnetsV1Response) obj;
-            return this.mPayload == apikeyGetSubnetsV1Response.mPayload
-                && this.objDebugPayload == apikeyGetSubnetsV1Response.objDebugPayload
-                && this.objDebug == apikeyGetSubnetsV1Response.objDebug;
+            return this.objDebugPayload == apikeyGetSubnetsV1Response.objDebugPayload
+                && this.objDebug == apikeyGetSubnetsV1Response.objDebug
+                && this.mPayload == apikeyGetSubnetsV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

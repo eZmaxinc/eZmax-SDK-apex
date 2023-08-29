@@ -11,41 +11,81 @@
  */
 
 /**
- * OASCustomEzsignfoldersignerassociati
+ * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
-public class OASCustomEzsignfoldersignerassociati {
+public class OASCustomEzsignfoldersignerassociati implements OAS.MappedProperties {
     /**
-     * Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step
-     * @return bEzsignfoldersignerassociationHasactionableelementsCurrent
+     * The unique ID of the Ezsignfoldersignerassociation
+     * minimum: 0
+     * @return fkiEzsignfoldersignerassociationID
      */
-    public Boolean bEzsignfoldersignerassociationHasactionableelementsCurrent { get; set; }
+    public Integer fkiEzsignfoldersignerassociationID { get; set; }
 
     /**
-     * Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
-     * @return bEzsignfoldersignerassociationHasactionableelementsFuture
+     * The last name of the Ezsignsigner
+     * @return sEzsignfoldersignerassociationstatusLastname
      */
-    public Boolean bEzsignfoldersignerassociationHasactionableelementsFuture { get; set; }
+    public String sEzsignfoldersignerassociationstatusLastname { get; set; }
+
+    /**
+     * The first name of the Ezsignsigner
+     * @return sEzsignfoldersignerassociationstatusFirstname
+     */
+    public String sEzsignfoldersignerassociationstatusFirstname { get; set; }
+
+    /**
+     * The description of the Ezsignsigner
+     * @return sEzsignfoldersignerassociationstatusDescriptionX
+     */
+    public String sEzsignfoldersignerassociationstatusDescriptionX { get; set; }
+
+    /**
+     * Get aObjEzsignsignaturestatus
+     * @return aObjEzsignsignaturestatus
+     */
+    public List<OASCustomEzsignsignaturestatusRespon> aObjEzsignsignaturestatus { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignsignaturestatus' => 'aObjEzsignsignaturestatus'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASCustomEzsignfoldersignerassociati() {
+        aObjEzsignsignaturestatus = new List<OASCustomEzsignsignaturestatusRespon>();
+    }
 
     public static OASCustomEzsignfoldersignerassociati getExample() {
-        OASCustomEzsignfoldersignerassociati customEzsignfoldersignerassociationActionableElementResponseAllOf = new OASCustomEzsignfoldersignerassociati();
-          customEzsignfoldersignerassociationActionableElementResponseAllOf.bEzsignfoldersignerassociationHasactionableelementsCurrent = true;
-          customEzsignfoldersignerassociationActionableElementResponseAllOf.bEzsignfoldersignerassociationHasactionableelementsFuture = true;
-        return customEzsignfoldersignerassociationActionableElementResponseAllOf;
+        OASCustomEzsignfoldersignerassociati customEzsignfoldersignerassociationstatusResponse = new OASCustomEzsignfoldersignerassociati();
+          customEzsignfoldersignerassociationstatusResponse.fkiEzsignfoldersignerassociationID = 20;
+          customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusLastname = 'Doe';
+          customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusFirstname = 'John';
+          customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusDescriptionX = 'John Doe';
+          customEzsignfoldersignerassociationstatusResponse.aObjEzsignsignaturestatus = new List<OASCustomEzsignsignaturestatusRespon>{OASCustomEzsignsignaturestatusRespon.getExample()};
+        return customEzsignfoldersignerassociationstatusResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCustomEzsignfoldersignerassociati) {           
-            OASCustomEzsignfoldersignerassociati customEzsignfoldersignerassociationActionableElementResponseAllOf = (OASCustomEzsignfoldersignerassociati) obj;
-            return this.bEzsignfoldersignerassociationHasactionableelementsCurrent == customEzsignfoldersignerassociationActionableElementResponseAllOf.bEzsignfoldersignerassociationHasactionableelementsCurrent
-                && this.bEzsignfoldersignerassociationHasactionableelementsFuture == customEzsignfoldersignerassociationActionableElementResponseAllOf.bEzsignfoldersignerassociationHasactionableelementsFuture;
+            OASCustomEzsignfoldersignerassociati customEzsignfoldersignerassociationstatusResponse = (OASCustomEzsignfoldersignerassociati) obj;
+            return this.fkiEzsignfoldersignerassociationID == customEzsignfoldersignerassociationstatusResponse.fkiEzsignfoldersignerassociationID
+                && this.sEzsignfoldersignerassociationstatusLastname == customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusLastname
+                && this.sEzsignfoldersignerassociationstatusFirstname == customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusFirstname
+                && this.sEzsignfoldersignerassociationstatusDescriptionX == customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusDescriptionX
+                && this.aObjEzsignsignaturestatus == customEzsignfoldersignerassociationstatusResponse.aObjEzsignsignaturestatus;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (bEzsignfoldersignerassociationHasactionableelementsCurrent == null ? 0 : System.hashCode(bEzsignfoldersignerassociationHasactionableelementsCurrent));
-        hashCode = (17 * hashCode) + (bEzsignfoldersignerassociationHasactionableelementsFuture == null ? 0 : System.hashCode(bEzsignfoldersignerassociationHasactionableelementsFuture));
+        hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationID));
+        hashCode = (17 * hashCode) + (sEzsignfoldersignerassociationstatusLastname == null ? 0 : System.hashCode(sEzsignfoldersignerassociationstatusLastname));
+        hashCode = (17 * hashCode) + (sEzsignfoldersignerassociationstatusFirstname == null ? 0 : System.hashCode(sEzsignfoldersignerassociationstatusFirstname));
+        hashCode = (17 * hashCode) + (sEzsignfoldersignerassociationstatusDescriptionX == null ? 0 : System.hashCode(sEzsignfoldersignerassociationstatusDescriptionX));
+        hashCode = (17 * hashCode) + (aObjEzsignsignaturestatus == null ? 0 : System.hashCode(aObjEzsignsignaturestatus));
         return hashCode;
     }
 }

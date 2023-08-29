@@ -11,9 +11,48 @@
  */
 
 /**
- * OASEzmaxinvoicingsummaryinternalResp
+ * A Ezmaxinvoicingsummaryinternal Object
  */
-public class OASEzmaxinvoicingsummaryinternalResp implements OAS.MappedProperties {
+public class OASEzmaxinvoicingsummaryinternalResp implements OASEzmaxinvoicingsummaryinternalResp, OAS.MappedProperties {
+    /**
+     * The unique ID of the Ezmaxinvoicingsummaryinternal
+     * minimum: 0
+     * @return pkiEzmaxinvoicingsummaryinternalID
+     */
+    public Integer pkiEzmaxinvoicingsummaryinternalID { get; set; }
+
+    /**
+     * Get objEzmaxinvoicingsummaryinternalDescription
+     * @return objEzmaxinvoicingsummaryinternalDescription
+     */
+    public OASMultilingualEzmaxinvoicingsummary objEzmaxinvoicingsummaryinternalDescription { get; set; }
+
+    /**
+     * The Ezmaxinvoicingsummaryinternal description in the language of the requester
+     * @return sEzmaxinvoicingsummaryinternalDescriptionX
+     */
+    public String sEzmaxinvoicingsummaryinternalDescriptionX { get; set; }
+
+    /**
+     * The unique ID of the Ezmaxinvoicing
+     * minimum: 0
+     * @return fkiEzmaxinvoicingID
+     */
+    public Integer fkiEzmaxinvoicingID { get; set; }
+
+    /**
+     * The unique ID of the Billingentityinternal.
+     * minimum: 0
+     * @return fkiBillingentityinternalID
+     */
+    public Integer fkiBillingentityinternalID { get; set; }
+
+    /**
+     * The description of the Billingentityinternal in the language of the requester
+     * @return sBillingentityinternalDescriptionX
+     */
+    public String sBillingentityinternalDescriptionX { get; set; }
+
     /**
      * 
      * @return aObjEzmaxinvoicingsummaryinternaldetail
@@ -33,21 +72,39 @@ public class OASEzmaxinvoicingsummaryinternalResp implements OAS.MappedPropertie
     }
 
     public static OASEzmaxinvoicingsummaryinternalResp getExample() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf = new OASEzmaxinvoicingsummaryinternalResp();
-          ezmaxinvoicingsummaryinternalResponseCompoundAllOf.aObjEzmaxinvoicingsummaryinternaldetail = new List<OASEzmaxinvoicingsummaryinternaldeta>{OASEzmaxinvoicingsummaryinternaldeta.getExample()};
-        return ezmaxinvoicingsummaryinternalResponseCompoundAllOf;
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound = new OASEzmaxinvoicingsummaryinternalResp();
+          ezmaxinvoicingsummaryinternalResponseCompound.pkiEzmaxinvoicingsummaryinternalID = 57;
+          ezmaxinvoicingsummaryinternalResponseCompound.objEzmaxinvoicingsummaryinternalDescription = OASMultilingualEzmaxinvoicingsummary.getExample();
+          ezmaxinvoicingsummaryinternalResponseCompound.sEzmaxinvoicingsummaryinternalDescriptionX = 'Défaut';
+          ezmaxinvoicingsummaryinternalResponseCompound.fkiEzmaxinvoicingID = 28;
+          ezmaxinvoicingsummaryinternalResponseCompound.fkiBillingentityinternalID = 1;
+          ezmaxinvoicingsummaryinternalResponseCompound.sBillingentityinternalDescriptionX = 'Default';
+          ezmaxinvoicingsummaryinternalResponseCompound.aObjEzmaxinvoicingsummaryinternaldetail = new List<OASEzmaxinvoicingsummaryinternaldeta>{OASEzmaxinvoicingsummaryinternaldeta.getExample()};
+        return ezmaxinvoicingsummaryinternalResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzmaxinvoicingsummaryinternalResp) {           
-            OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf = (OASEzmaxinvoicingsummaryinternalResp) obj;
-            return this.aObjEzmaxinvoicingsummaryinternaldetail == ezmaxinvoicingsummaryinternalResponseCompoundAllOf.aObjEzmaxinvoicingsummaryinternaldetail;
+            OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound = (OASEzmaxinvoicingsummaryinternalResp) obj;
+            return this.pkiEzmaxinvoicingsummaryinternalID == ezmaxinvoicingsummaryinternalResponseCompound.pkiEzmaxinvoicingsummaryinternalID
+                && this.objEzmaxinvoicingsummaryinternalDescription == ezmaxinvoicingsummaryinternalResponseCompound.objEzmaxinvoicingsummaryinternalDescription
+                && this.sEzmaxinvoicingsummaryinternalDescriptionX == ezmaxinvoicingsummaryinternalResponseCompound.sEzmaxinvoicingsummaryinternalDescriptionX
+                && this.fkiEzmaxinvoicingID == ezmaxinvoicingsummaryinternalResponseCompound.fkiEzmaxinvoicingID
+                && this.fkiBillingentityinternalID == ezmaxinvoicingsummaryinternalResponseCompound.fkiBillingentityinternalID
+                && this.sBillingentityinternalDescriptionX == ezmaxinvoicingsummaryinternalResponseCompound.sBillingentityinternalDescriptionX
+                && this.aObjEzmaxinvoicingsummaryinternaldetail == ezmaxinvoicingsummaryinternalResponseCompound.aObjEzmaxinvoicingsummaryinternaldetail;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzmaxinvoicingsummaryinternalID == null ? 0 : System.hashCode(pkiEzmaxinvoicingsummaryinternalID));
+        hashCode = (17 * hashCode) + (objEzmaxinvoicingsummaryinternalDescription == null ? 0 : System.hashCode(objEzmaxinvoicingsummaryinternalDescription));
+        hashCode = (17 * hashCode) + (sEzmaxinvoicingsummaryinternalDescriptionX == null ? 0 : System.hashCode(sEzmaxinvoicingsummaryinternalDescriptionX));
+        hashCode = (17 * hashCode) + (fkiEzmaxinvoicingID == null ? 0 : System.hashCode(fkiEzmaxinvoicingID));
+        hashCode = (17 * hashCode) + (fkiBillingentityinternalID == null ? 0 : System.hashCode(fkiBillingentityinternalID));
+        hashCode = (17 * hashCode) + (sBillingentityinternalDescriptionX == null ? 0 : System.hashCode(sBillingentityinternalDescriptionX));
         hashCode = (17 * hashCode) + (aObjEzmaxinvoicingsummaryinternaldetail == null ? 0 : System.hashCode(aObjEzmaxinvoicingsummaryinternaldetail));
         return hashCode;
     }

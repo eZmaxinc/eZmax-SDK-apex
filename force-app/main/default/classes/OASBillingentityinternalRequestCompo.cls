@@ -11,9 +11,22 @@
  */
 
 /**
- * OASBillingentityinternalRequestCompo
+ * A Billingentityinternal Object and children
  */
-public class OASBillingentityinternalRequestCompo implements OAS.MappedProperties {
+public class OASBillingentityinternalRequestCompo implements OASBillingentityinternalRequest, OAS.MappedProperties {
+    /**
+     * The unique ID of the Billingentityinternal.
+     * minimum: 0
+     * @return pkiBillingentityinternalID
+     */
+    public Integer pkiBillingentityinternalID { get; set; }
+
+    /**
+     * Get objBillingentityinternalDescription
+     * @return objBillingentityinternalDescription
+     */
+    public OASMultilingualBillingentityinternal objBillingentityinternalDescription { get; set; }
+
     /**
      * Get aObjBillingentityinternalproduct
      * @return aObjBillingentityinternalproduct
@@ -33,21 +46,27 @@ public class OASBillingentityinternalRequestCompo implements OAS.MappedPropertie
     }
 
     public static OASBillingentityinternalRequestCompo getExample() {
-        OASBillingentityinternalRequestCompo billingentityinternalRequestCompoundAllOf = new OASBillingentityinternalRequestCompo();
-          billingentityinternalRequestCompoundAllOf.aObjBillingentityinternalproduct = new List<OASBillingentityinternalproductReque>{OASBillingentityinternalproductReque.getExample()};
-        return billingentityinternalRequestCompoundAllOf;
+        OASBillingentityinternalRequestCompo billingentityinternalRequestCompound = new OASBillingentityinternalRequestCompo();
+          billingentityinternalRequestCompound.pkiBillingentityinternalID = 1;
+          billingentityinternalRequestCompound.objBillingentityinternalDescription = OASMultilingualBillingentityinternal.getExample();
+          billingentityinternalRequestCompound.aObjBillingentityinternalproduct = new List<OASBillingentityinternalproductReque>{OASBillingentityinternalproductReque.getExample()};
+        return billingentityinternalRequestCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASBillingentityinternalRequestCompo) {           
-            OASBillingentityinternalRequestCompo billingentityinternalRequestCompoundAllOf = (OASBillingentityinternalRequestCompo) obj;
-            return this.aObjBillingentityinternalproduct == billingentityinternalRequestCompoundAllOf.aObjBillingentityinternalproduct;
+            OASBillingentityinternalRequestCompo billingentityinternalRequestCompound = (OASBillingentityinternalRequestCompo) obj;
+            return this.pkiBillingentityinternalID == billingentityinternalRequestCompound.pkiBillingentityinternalID
+                && this.objBillingentityinternalDescription == billingentityinternalRequestCompound.objBillingentityinternalDescription
+                && this.aObjBillingentityinternalproduct == billingentityinternalRequestCompound.aObjBillingentityinternalproduct;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiBillingentityinternalID == null ? 0 : System.hashCode(pkiBillingentityinternalID));
+        hashCode = (17 * hashCode) + (objBillingentityinternalDescription == null ? 0 : System.hashCode(objBillingentityinternalDescription));
         hashCode = (17 * hashCode) + (aObjBillingentityinternalproduct == null ? 0 : System.hashCode(aObjBillingentityinternalproduct));
         return hashCode;
     }

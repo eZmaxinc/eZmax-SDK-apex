@@ -11,9 +11,21 @@
  */
 
 /**
- * OASEzsigntemplatedocumentEditObjectV
+ * Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
  */
-public class OASEzsigntemplatedocumentEditObjectV implements OAS.MappedProperties {
+public class OASEzsigntemplatedocumentEditObjectV implements OASCommonResponse, OAS.MappedProperties {
+    /**
+     * Get objDebugPayload
+     * @return objDebugPayload
+     */
+    public OASCommonResponseObjDebugPayload objDebugPayload { get; set; }
+
+    /**
+     * Get objDebug
+     * @return objDebug
+     */
+    public OASCommonResponseObjDebug objDebug { get; set; }
+
     /**
      * Get aObjWarning
      * @return aObjWarning
@@ -33,21 +45,27 @@ public class OASEzsigntemplatedocumentEditObjectV implements OAS.MappedPropertie
     }
 
     public static OASEzsigntemplatedocumentEditObjectV getExample() {
-        OASEzsigntemplatedocumentEditObjectV ezsigntemplatedocumentEditObjectV1ResponseAllOf = new OASEzsigntemplatedocumentEditObjectV();
-          ezsigntemplatedocumentEditObjectV1ResponseAllOf.aObjWarning = new List<OASCommonResponseWarning>{OASCommonResponseWarning.getExample()};
-        return ezsigntemplatedocumentEditObjectV1ResponseAllOf;
+        OASEzsigntemplatedocumentEditObjectV ezsigntemplatedocumentEditObjectV1Response = new OASEzsigntemplatedocumentEditObjectV();
+          ezsigntemplatedocumentEditObjectV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
+          ezsigntemplatedocumentEditObjectV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          ezsigntemplatedocumentEditObjectV1Response.aObjWarning = new List<OASCommonResponseWarning>{OASCommonResponseWarning.getExample()};
+        return ezsigntemplatedocumentEditObjectV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatedocumentEditObjectV) {           
-            OASEzsigntemplatedocumentEditObjectV ezsigntemplatedocumentEditObjectV1ResponseAllOf = (OASEzsigntemplatedocumentEditObjectV) obj;
-            return this.aObjWarning == ezsigntemplatedocumentEditObjectV1ResponseAllOf.aObjWarning;
+            OASEzsigntemplatedocumentEditObjectV ezsigntemplatedocumentEditObjectV1Response = (OASEzsigntemplatedocumentEditObjectV) obj;
+            return this.objDebugPayload == ezsigntemplatedocumentEditObjectV1Response.objDebugPayload
+                && this.objDebug == ezsigntemplatedocumentEditObjectV1Response.objDebug
+                && this.aObjWarning == ezsigntemplatedocumentEditObjectV1Response.aObjWarning;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
+        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
         hashCode = (17 * hashCode) + (aObjWarning == null ? 0 : System.hashCode(aObjWarning));
         return hashCode;
     }

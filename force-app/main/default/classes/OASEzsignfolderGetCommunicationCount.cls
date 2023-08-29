@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignfolderGetCommunicationCount
+ * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
  */
 public class OASEzsignfolderGetCommunicationCount {
     /**
-     * Get mPayload
-     * @return mPayload
+     * The count of Communication.
+     * @return iCommunicationCount
      */
-    public OASEzsignfolderGetCommunicationCount mPayload { get; set; }
+    public Integer iCommunicationCount { get; set; }
 
     public static OASEzsignfolderGetCommunicationCount getExample() {
-        OASEzsignfolderGetCommunicationCount ezsignfolderGetCommunicationCountV1ResponseAllOf = new OASEzsignfolderGetCommunicationCount();
-          ezsignfolderGetCommunicationCountV1ResponseAllOf.mPayload = OASEzsignfolderGetCommunicationCount.getExample();
-        return ezsignfolderGetCommunicationCountV1ResponseAllOf;
+        OASEzsignfolderGetCommunicationCount ezsignfolderGetCommunicationCountV1ResponseMPayload = new OASEzsignfolderGetCommunicationCount();
+          ezsignfolderGetCommunicationCountV1ResponseMPayload.iCommunicationCount = 8;
+        return ezsignfolderGetCommunicationCountV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderGetCommunicationCount) {           
-            OASEzsignfolderGetCommunicationCount ezsignfolderGetCommunicationCountV1ResponseAllOf = (OASEzsignfolderGetCommunicationCount) obj;
-            return this.mPayload == ezsignfolderGetCommunicationCountV1ResponseAllOf.mPayload;
+            OASEzsignfolderGetCommunicationCount ezsignfolderGetCommunicationCountV1ResponseMPayload = (OASEzsignfolderGetCommunicationCount) obj;
+            return this.iCommunicationCount == ezsignfolderGetCommunicationCountV1ResponseMPayload.iCommunicationCount;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (iCommunicationCount == null ? 0 : System.hashCode(iCommunicationCount));
         return hashCode;
     }
 }

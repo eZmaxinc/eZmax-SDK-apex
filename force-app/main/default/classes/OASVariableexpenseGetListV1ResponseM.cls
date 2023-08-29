@@ -11,9 +11,21 @@
  */
 
 /**
- * OASVariableexpenseGetListV1ResponseM
+ * Payload for GET /1/object/variableexpense/getList
  */
-public class OASVariableexpenseGetListV1ResponseM implements OAS.MappedProperties {
+public class OASVariableexpenseGetListV1ResponseM implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjVariableexpense
      * @return aObjVariableexpense
@@ -33,21 +45,27 @@ public class OASVariableexpenseGetListV1ResponseM implements OAS.MappedPropertie
     }
 
     public static OASVariableexpenseGetListV1ResponseM getExample() {
-        OASVariableexpenseGetListV1ResponseM variableexpenseGetListV1ResponseMPayloadAllOf = new OASVariableexpenseGetListV1ResponseM();
-          variableexpenseGetListV1ResponseMPayloadAllOf.aObjVariableexpense = new List<OASVariableexpenseListElement>{OASVariableexpenseListElement.getExample()};
-        return variableexpenseGetListV1ResponseMPayloadAllOf;
+        OASVariableexpenseGetListV1ResponseM variableexpenseGetListV1ResponseMPayload = new OASVariableexpenseGetListV1ResponseM();
+          variableexpenseGetListV1ResponseMPayload.iRowReturned = 100;
+          variableexpenseGetListV1ResponseMPayload.iRowFiltered = 533;
+          variableexpenseGetListV1ResponseMPayload.aObjVariableexpense = new List<OASVariableexpenseListElement>{OASVariableexpenseListElement.getExample()};
+        return variableexpenseGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASVariableexpenseGetListV1ResponseM) {           
-            OASVariableexpenseGetListV1ResponseM variableexpenseGetListV1ResponseMPayloadAllOf = (OASVariableexpenseGetListV1ResponseM) obj;
-            return this.aObjVariableexpense == variableexpenseGetListV1ResponseMPayloadAllOf.aObjVariableexpense;
+            OASVariableexpenseGetListV1ResponseM variableexpenseGetListV1ResponseMPayload = (OASVariableexpenseGetListV1ResponseM) obj;
+            return this.iRowReturned == variableexpenseGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == variableexpenseGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjVariableexpense == variableexpenseGetListV1ResponseMPayload.aObjVariableexpense;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjVariableexpense == null ? 0 : System.hashCode(aObjVariableexpense));
         return hashCode;
     }

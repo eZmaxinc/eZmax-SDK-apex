@@ -13,13 +13,7 @@
 /**
  * Response for GET /2/object/font/getAutocomplete
  */
-public class OASFontGetAutocompleteV2Response implements OASFontGetAutocompleteV2ResponseAllO, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASFontGetAutocompleteV2ResponseMPay mPayload { get; set; }
-
+public class OASFontGetAutocompleteV2Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASFontGetAutocompleteV2Response implements OASFontGetAutocompleteV
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASFontGetAutocompleteV2ResponseMPay mPayload { get; set; }
+
     public static OASFontGetAutocompleteV2Response getExample() {
         OASFontGetAutocompleteV2Response fontGetAutocompleteV2Response = new OASFontGetAutocompleteV2Response();
-          fontGetAutocompleteV2Response.mPayload = OASFontGetAutocompleteV2ResponseMPay.getExample();
           fontGetAutocompleteV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           fontGetAutocompleteV2Response.objDebug = OASCommonResponseObjDebug.getExample();
+          fontGetAutocompleteV2Response.mPayload = OASFontGetAutocompleteV2ResponseMPay.getExample();
         return fontGetAutocompleteV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASFontGetAutocompleteV2Response) {           
             OASFontGetAutocompleteV2Response fontGetAutocompleteV2Response = (OASFontGetAutocompleteV2Response) obj;
-            return this.mPayload == fontGetAutocompleteV2Response.mPayload
-                && this.objDebugPayload == fontGetAutocompleteV2Response.objDebugPayload
-                && this.objDebug == fontGetAutocompleteV2Response.objDebug;
+            return this.objDebugPayload == fontGetAutocompleteV2Response.objDebugPayload
+                && this.objDebug == fontGetAutocompleteV2Response.objDebug
+                && this.mPayload == fontGetAutocompleteV2Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

@@ -13,7 +13,7 @@
 /**
  * A Ezmaxinvoicing Object
  */
-public class OASEzmaxinvoicingResponseCompound implements OASEzmaxinvoicingResponse, OASEzmaxinvoicingResponseCompoundAll, OAS.MappedProperties {
+public class OASEzmaxinvoicingResponseCompound implements OASEzmaxinvoicingResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Ezmaxinvoicing
      * minimum: 0

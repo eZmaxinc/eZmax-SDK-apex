@@ -13,7 +13,7 @@
 /**
  * A Contact Object and children to create a complete structure
  */
-public class OASContactRequestCompound implements OASContactRequest, OASContactRequestCompoundAllOf {
+public class OASContactRequestCompound implements OASContactRequest {
     /**
      * The unique ID of the Contacttitle.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|Ms.|\n|2|Mr.|\n|4|(Blank)|\n|5|Me (For Notaries)|
      * minimum: 0

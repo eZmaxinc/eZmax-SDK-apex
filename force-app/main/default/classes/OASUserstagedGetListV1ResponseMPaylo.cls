@@ -11,9 +11,21 @@
  */
 
 /**
- * OASUserstagedGetListV1ResponseMPaylo
+ * Payload for GET /1/object/userstaged/getList
  */
-public class OASUserstagedGetListV1ResponseMPaylo implements OAS.MappedProperties {
+public class OASUserstagedGetListV1ResponseMPaylo implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjUserstaged
      * @return aObjUserstaged
@@ -33,21 +45,27 @@ public class OASUserstagedGetListV1ResponseMPaylo implements OAS.MappedPropertie
     }
 
     public static OASUserstagedGetListV1ResponseMPaylo getExample() {
-        OASUserstagedGetListV1ResponseMPaylo userstagedGetListV1ResponseMPayloadAllOf = new OASUserstagedGetListV1ResponseMPaylo();
-          userstagedGetListV1ResponseMPayloadAllOf.aObjUserstaged = new List<OASUserstagedListElement>{OASUserstagedListElement.getExample()};
-        return userstagedGetListV1ResponseMPayloadAllOf;
+        OASUserstagedGetListV1ResponseMPaylo userstagedGetListV1ResponseMPayload = new OASUserstagedGetListV1ResponseMPaylo();
+          userstagedGetListV1ResponseMPayload.iRowReturned = 100;
+          userstagedGetListV1ResponseMPayload.iRowFiltered = 533;
+          userstagedGetListV1ResponseMPayload.aObjUserstaged = new List<OASUserstagedListElement>{OASUserstagedListElement.getExample()};
+        return userstagedGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUserstagedGetListV1ResponseMPaylo) {           
-            OASUserstagedGetListV1ResponseMPaylo userstagedGetListV1ResponseMPayloadAllOf = (OASUserstagedGetListV1ResponseMPaylo) obj;
-            return this.aObjUserstaged == userstagedGetListV1ResponseMPayloadAllOf.aObjUserstaged;
+            OASUserstagedGetListV1ResponseMPaylo userstagedGetListV1ResponseMPayload = (OASUserstagedGetListV1ResponseMPaylo) obj;
+            return this.iRowReturned == userstagedGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == userstagedGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjUserstaged == userstagedGetListV1ResponseMPayload.aObjUserstaged;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjUserstaged == null ? 0 : System.hashCode(aObjUserstaged));
         return hashCode;
     }

@@ -13,7 +13,7 @@
 /**
  * An Ezsignbulksend Object and children to create a complete structure
  */
-public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendResponse, OASEzsignbulksendResponseCompoundAll, OAS.MappedProperties {
+public class OASEzsignbulksendResponseCompound implements OASEzsignbulksendResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignbulksend
      * minimum: 0

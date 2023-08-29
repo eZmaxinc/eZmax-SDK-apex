@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigndocumentGetFormDataV1Respon
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
  */
 public class OASEzsigndocumentGetFormDataV1Respon {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objFormDataDocument
+     * @return objFormDataDocument
      */
-    public OASEzsigndocumentGetFormDataV1Respon mPayload { get; set; }
+    public OASCustomFormDataDocumentResponse objFormDataDocument { get; set; }
 
     public static OASEzsigndocumentGetFormDataV1Respon getExample() {
-        OASEzsigndocumentGetFormDataV1Respon ezsigndocumentGetFormDataV1ResponseAllOf = new OASEzsigndocumentGetFormDataV1Respon();
-          ezsigndocumentGetFormDataV1ResponseAllOf.mPayload = OASEzsigndocumentGetFormDataV1Respon.getExample();
-        return ezsigndocumentGetFormDataV1ResponseAllOf;
+        OASEzsigndocumentGetFormDataV1Respon ezsigndocumentGetFormDataV1ResponseMPayload = new OASEzsigndocumentGetFormDataV1Respon();
+          ezsigndocumentGetFormDataV1ResponseMPayload.objFormDataDocument = OASCustomFormDataDocumentResponse.getExample();
+        return ezsigndocumentGetFormDataV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetFormDataV1Respon) {           
-            OASEzsigndocumentGetFormDataV1Respon ezsigndocumentGetFormDataV1ResponseAllOf = (OASEzsigndocumentGetFormDataV1Respon) obj;
-            return this.mPayload == ezsigndocumentGetFormDataV1ResponseAllOf.mPayload;
+            OASEzsigndocumentGetFormDataV1Respon ezsigndocumentGetFormDataV1ResponseMPayload = (OASEzsigndocumentGetFormDataV1Respon) obj;
+            return this.objFormDataDocument == ezsigndocumentGetFormDataV1ResponseMPayload.objFormDataDocument;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objFormDataDocument == null ? 0 : System.hashCode(objFormDataDocument));
         return hashCode;
     }
 }

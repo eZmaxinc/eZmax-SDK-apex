@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/object/signature
  */
-public class OASSignatureCreateObjectV1Response implements OASSignatureCreateObjectV1ResponseAl, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASSignatureCreateObjectV1ResponseMP mPayload { get; set; }
-
+public class OASSignatureCreateObjectV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASSignatureCreateObjectV1Response implements OASSignatureCreateObj
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASSignatureCreateObjectV1ResponseMP mPayload { get; set; }
+
     public static OASSignatureCreateObjectV1Response getExample() {
         OASSignatureCreateObjectV1Response signatureCreateObjectV1Response = new OASSignatureCreateObjectV1Response();
-          signatureCreateObjectV1Response.mPayload = OASSignatureCreateObjectV1ResponseMP.getExample();
           signatureCreateObjectV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           signatureCreateObjectV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          signatureCreateObjectV1Response.mPayload = OASSignatureCreateObjectV1ResponseMP.getExample();
         return signatureCreateObjectV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASSignatureCreateObjectV1Response) {           
             OASSignatureCreateObjectV1Response signatureCreateObjectV1Response = (OASSignatureCreateObjectV1Response) obj;
-            return this.mPayload == signatureCreateObjectV1Response.mPayload
-                && this.objDebugPayload == signatureCreateObjectV1Response.objDebugPayload
-                && this.objDebug == signatureCreateObjectV1Response.objDebug;
+            return this.objDebugPayload == signatureCreateObjectV1Response.objDebugPayload
+                && this.objDebug == signatureCreateObjectV1Response.objDebug
+                && this.mPayload == signatureCreateObjectV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

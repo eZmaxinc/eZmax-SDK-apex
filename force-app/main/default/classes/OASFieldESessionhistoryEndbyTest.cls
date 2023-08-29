@@ -15,7 +15,8 @@ private class OASFieldESessionhistoryEndbyTest {
             OASFieldESessionhistoryEndby.INACTIVE,
             OASFieldESessionhistoryEndby.INVALIDUSER,
             OASFieldESessionhistoryEndby.BADUSERTYPE,
-            OASFieldESessionhistoryEndby.BADIP
+            OASFieldESessionhistoryEndby.BADIP,
+            OASFieldESessionhistoryEndby.FORCEDLOGOFF
         };
         Set<OASFieldESessionhistoryEndby> actual  = new Set<OASFieldESessionhistoryEndby>(OASFieldESessionhistoryEndby.values());
         System.assertEquals(expected, actual);

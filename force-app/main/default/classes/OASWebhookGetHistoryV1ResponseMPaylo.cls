@@ -11,7 +11,7 @@
  */
 
 /**
- * OASWebhookGetHistoryV1ResponseMPaylo
+ * Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
  */
 public class OASWebhookGetHistoryV1ResponseMPaylo implements OAS.MappedProperties {
     /**
@@ -33,15 +33,15 @@ public class OASWebhookGetHistoryV1ResponseMPaylo implements OAS.MappedPropertie
     }
 
     public static OASWebhookGetHistoryV1ResponseMPaylo getExample() {
-        OASWebhookGetHistoryV1ResponseMPaylo webhookGetHistoryV1ResponseMPayloadAllOf = new OASWebhookGetHistoryV1ResponseMPaylo();
-          webhookGetHistoryV1ResponseMPayloadAllOf.aObjWebhooklog = new List<OASCustomWebhooklogResponse>{OASCustomWebhooklogResponse.getExample()};
-        return webhookGetHistoryV1ResponseMPayloadAllOf;
+        OASWebhookGetHistoryV1ResponseMPaylo webhookGetHistoryV1ResponseMPayload = new OASWebhookGetHistoryV1ResponseMPaylo();
+          webhookGetHistoryV1ResponseMPayload.aObjWebhooklog = new List<OASCustomWebhooklogResponse>{OASCustomWebhooklogResponse.getExample()};
+        return webhookGetHistoryV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookGetHistoryV1ResponseMPaylo) {           
-            OASWebhookGetHistoryV1ResponseMPaylo webhookGetHistoryV1ResponseMPayloadAllOf = (OASWebhookGetHistoryV1ResponseMPaylo) obj;
-            return this.aObjWebhooklog == webhookGetHistoryV1ResponseMPayloadAllOf.aObjWebhooklog;
+            OASWebhookGetHistoryV1ResponseMPaylo webhookGetHistoryV1ResponseMPayload = (OASWebhookGetHistoryV1ResponseMPaylo) obj;
+            return this.aObjWebhooklog == webhookGetHistoryV1ResponseMPayload.aObjWebhooklog;
         }
         return false;
     }

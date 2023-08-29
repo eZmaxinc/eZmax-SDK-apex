@@ -13,7 +13,7 @@
 /**
  * A Ezsignannotation Object
  */
-public class OASEzsignannotationResponseCompound implements OASEzsignannotationResponse, OASEzsignannotationResponseCompoundA {
+public class OASEzsignannotationResponseCompound implements OASEzsignannotationResponse {
     /**
      * The unique ID of the Ezsignannotation
      * @return pkiEzsignannotationID

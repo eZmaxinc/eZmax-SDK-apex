@@ -2,83 +2,89 @@
 private class OASEzmaxinvoicingsummaryinternalRespTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf2 = ezmaxinvoicingsummaryinternalResponseCompoundAllOf1;
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf3 = new OASEzmaxinvoicingsummaryinternalResp();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf4 = ezmaxinvoicingsummaryinternalResponseCompoundAllOf3;
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound2 = ezmaxinvoicingsummaryinternalResponseCompound1;
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound3 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound4 = ezmaxinvoicingsummaryinternalResponseCompound3;
 
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf2));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf2.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf4));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf4.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound1.equals(ezmaxinvoicingsummaryinternalResponseCompound2));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound2.equals(ezmaxinvoicingsummaryinternalResponseCompound1));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound1.equals(ezmaxinvoicingsummaryinternalResponseCompound1));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound3.equals(ezmaxinvoicingsummaryinternalResponseCompound4));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound4.equals(ezmaxinvoicingsummaryinternalResponseCompound3));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound3.equals(ezmaxinvoicingsummaryinternalResponseCompound3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf2 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf3 = new OASEzmaxinvoicingsummaryinternalResp();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf4 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound2 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound3 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound4 = new OASEzmaxinvoicingsummaryinternalResp();
 
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf2));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf2.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf4));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf4.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound1.equals(ezmaxinvoicingsummaryinternalResponseCompound2));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound2.equals(ezmaxinvoicingsummaryinternalResponseCompound1));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound3.equals(ezmaxinvoicingsummaryinternalResponseCompound4));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound4.equals(ezmaxinvoicingsummaryinternalResponseCompound3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf2 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound2 = new OASEzmaxinvoicingsummaryinternalResp();
 
-        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.equals('foo'));
-        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompoundAllOf2.equals('foo'));
+        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompound1.equals('foo'));
+        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompound2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf2 = new OASEzmaxinvoicingsummaryinternalResp();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf3;
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound2 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound3;
 
-        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3));
-        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompoundAllOf2.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3));
+        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompound1.equals(ezmaxinvoicingsummaryinternalResponseCompound3));
+        System.assertEquals(false, ezmaxinvoicingsummaryinternalResponseCompound2.equals(ezmaxinvoicingsummaryinternalResponseCompound3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf2 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound2 = new OASEzmaxinvoicingsummaryinternalResp();
 
-        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.hashCode(), ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.hashCode());
-        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf2.hashCode(), ezmaxinvoicingsummaryinternalResponseCompoundAllOf2.hashCode());
+        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompound1.hashCode(), ezmaxinvoicingsummaryinternalResponseCompound1.hashCode());
+        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompound2.hashCode(), ezmaxinvoicingsummaryinternalResponseCompound2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf2 = OASEzmaxinvoicingsummaryinternalResp.getExample();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf3 = new OASEzmaxinvoicingsummaryinternalResp();
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf4 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound1 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound2 = OASEzmaxinvoicingsummaryinternalResp.getExample();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound3 = new OASEzmaxinvoicingsummaryinternalResp();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound4 = new OASEzmaxinvoicingsummaryinternalResp();
 
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf2));
-        System.assert(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3.equals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf4));
-        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf1.hashCode(), ezmaxinvoicingsummaryinternalResponseCompoundAllOf2.hashCode());
-        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompoundAllOf3.hashCode(), ezmaxinvoicingsummaryinternalResponseCompoundAllOf4.hashCode());
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound1.equals(ezmaxinvoicingsummaryinternalResponseCompound2));
+        System.assert(ezmaxinvoicingsummaryinternalResponseCompound3.equals(ezmaxinvoicingsummaryinternalResponseCompound4));
+        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompound1.hashCode(), ezmaxinvoicingsummaryinternalResponseCompound2.hashCode());
+        System.assertEquals(ezmaxinvoicingsummaryinternalResponseCompound3.hashCode(), ezmaxinvoicingsummaryinternalResponseCompound4.hashCode());
     }
 
     @isTest
     private static void maintainRenamedProperties() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf = new OASEzmaxinvoicingsummaryinternalResp();
-        Map<String, String> x-property-mappings = ezmaxinvoicingsummaryinternalResponseCompoundAllOf.getx-property-mappings();
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound = new OASEzmaxinvoicingsummaryinternalResp();
+        Map<String, String> x-property-mappings = ezmaxinvoicingsummaryinternalResponseCompound.getx-property-mappings();
         System.assertEquals('aObjEzmaxinvoicingsummaryinternaldetail', x-property-mappings.get('a_objEzmaxinvoicingsummaryinternaldetail'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
-        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompoundAllOf = new OASEzmaxinvoicingsummaryinternalResp();
-        System.assertEquals(new List<OASEzmaxinvoicingsummaryinternaldeta>(), ezmaxinvoicingsummaryinternalResponseCompoundAllOf.aObjEzmaxinvoicingsummaryinternaldetail);
+        OASEzmaxinvoicingsummaryinternalResp ezmaxinvoicingsummaryinternalResponseCompound = new OASEzmaxinvoicingsummaryinternalResp();
+        System.assertEquals(new List<OASEzmaxinvoicingsummaryinternaldeta>(), ezmaxinvoicingsummaryinternalResponseCompound.aObjEzmaxinvoicingsummaryinternaldetail);
+        System.assertEquals(null, ezmaxinvoicingsummaryinternalResponseCompound.pkiEzmaxinvoicingsummaryinternalID);
+        System.assertEquals(null, ezmaxinvoicingsummaryinternalResponseCompound.objEzmaxinvoicingsummaryinternalDescription);
+        System.assertEquals(null, ezmaxinvoicingsummaryinternalResponseCompound.sEzmaxinvoicingsummaryinternalDescriptionX);
+        System.assertEquals(null, ezmaxinvoicingsummaryinternalResponseCompound.fkiEzmaxinvoicingID);
+        System.assertEquals(null, ezmaxinvoicingsummaryinternalResponseCompound.fkiBillingentityinternalID);
+        System.assertEquals(null, ezmaxinvoicingsummaryinternalResponseCompound.sBillingentityinternalDescriptionX);
     }
 }

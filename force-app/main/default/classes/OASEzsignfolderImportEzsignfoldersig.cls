@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignfolderImportEzsignfoldersig
+ * Payload for POST /1/object/ezsignfolder/{pkiEzsignfolder}/importEzsignfoldersignerassociations
  */
-public class OASEzsignfolderImportEzsignfoldersig {
+public class OASEzsignfolderImportEzsignfoldersig implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aPkiEzsignfoldersignerassociationID
+     * @return aPkiEzsignfoldersignerassociationID
      */
-    public OASEzsignfolderImportEzsignfoldersig mPayload { get; set; }
+    public List<Integer> aPkiEzsignfoldersignerassociationID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignfoldersignerassociationID' => 'aPkiEzsignfoldersignerassociationID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignfolderImportEzsignfoldersig() {
+        aPkiEzsignfoldersignerassociationID = new List<Integer>();
+    }
 
     public static OASEzsignfolderImportEzsignfoldersig getExample() {
-        OASEzsignfolderImportEzsignfoldersig ezsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf = new OASEzsignfolderImportEzsignfoldersig();
-          ezsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf.mPayload = OASEzsignfolderImportEzsignfoldersig.getExample();
-        return ezsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf;
+        OASEzsignfolderImportEzsignfoldersig ezsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload = new OASEzsignfolderImportEzsignfoldersig();
+          ezsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload.aPkiEzsignfoldersignerassociationID = new List<Integer>{Integer.getExample()};
+        return ezsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderImportEzsignfoldersig) {           
-            OASEzsignfolderImportEzsignfoldersig ezsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf = (OASEzsignfolderImportEzsignfoldersig) obj;
-            return this.mPayload == ezsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf.mPayload;
+            OASEzsignfolderImportEzsignfoldersig ezsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload = (OASEzsignfolderImportEzsignfoldersig) obj;
+            return this.aPkiEzsignfoldersignerassociationID == ezsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload.aPkiEzsignfoldersignerassociationID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(aPkiEzsignfoldersignerassociationID));
         return hashCode;
     }
 }

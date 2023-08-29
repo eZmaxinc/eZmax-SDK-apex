@@ -13,19 +13,7 @@
 /**
  * A custom Webhook object
  */
-public class OASCustomWebhookResponse implements OASCustomWebhookResponseAllOf, OASWebhookResponse {
-    /**
-     * The customer code assigned to your account
-     * @return pksCustomerCode
-     */
-    public String pksCustomerCode { get; set; }
-
-    /**
-     * Wheter the webhook received is a manual test or a real event
-     * @return bWebhookTest
-     */
-    public Boolean bWebhookTest { get; set; }
-
+public class OASCustomWebhookResponse implements OASWebhookResponse {
     /**
      * The unique ID of the Webhook
      * @return pkiWebhookID
@@ -93,10 +81,20 @@ public class OASCustomWebhookResponse implements OASCustomWebhookResponseAllOf, 
      */
     public Boolean bWebhookSkipsslvalidation { get; set; }
 
+    /**
+     * The customer code assigned to your account
+     * @return pksCustomerCode
+     */
+    public String pksCustomerCode { get; set; }
+
+    /**
+     * Wheter the webhook received is a manual test or a real event
+     * @return bWebhookTest
+     */
+    public Boolean bWebhookTest { get; set; }
+
     public static OASCustomWebhookResponse getExample() {
         OASCustomWebhookResponse customWebhookResponse = new OASCustomWebhookResponse();
-          customWebhookResponse.pksCustomerCode = 'demo';
-          customWebhookResponse.bWebhookTest = true;
           customWebhookResponse.pkiWebhookID = 77;
           customWebhookResponse.sWebhookDescription = 'Import into our system';
           customWebhookResponse.fkiEzsignfoldertypeID = 5;
@@ -108,15 +106,15 @@ public class OASCustomWebhookResponse implements OASCustomWebhookResponseAllOf, 
           customWebhookResponse.sWebhookEmailfailed = 'email@example.com';
           customWebhookResponse.bWebhookIsactive = true;
           customWebhookResponse.bWebhookSkipsslvalidation = false;
+          customWebhookResponse.pksCustomerCode = 'demo';
+          customWebhookResponse.bWebhookTest = true;
         return customWebhookResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCustomWebhookResponse) {           
             OASCustomWebhookResponse customWebhookResponse = (OASCustomWebhookResponse) obj;
-            return this.pksCustomerCode == customWebhookResponse.pksCustomerCode
-                && this.bWebhookTest == customWebhookResponse.bWebhookTest
-                && this.pkiWebhookID == customWebhookResponse.pkiWebhookID
+            return this.pkiWebhookID == customWebhookResponse.pkiWebhookID
                 && this.sWebhookDescription == customWebhookResponse.sWebhookDescription
                 && this.fkiEzsignfoldertypeID == customWebhookResponse.fkiEzsignfoldertypeID
                 && this.sEzsignfoldertypeNameX == customWebhookResponse.sEzsignfoldertypeNameX
@@ -126,15 +124,15 @@ public class OASCustomWebhookResponse implements OASCustomWebhookResponseAllOf, 
                 && this.sWebhookUrl == customWebhookResponse.sWebhookUrl
                 && this.sWebhookEmailfailed == customWebhookResponse.sWebhookEmailfailed
                 && this.bWebhookIsactive == customWebhookResponse.bWebhookIsactive
-                && this.bWebhookSkipsslvalidation == customWebhookResponse.bWebhookSkipsslvalidation;
+                && this.bWebhookSkipsslvalidation == customWebhookResponse.bWebhookSkipsslvalidation
+                && this.pksCustomerCode == customWebhookResponse.pksCustomerCode
+                && this.bWebhookTest == customWebhookResponse.bWebhookTest;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (pksCustomerCode == null ? 0 : System.hashCode(pksCustomerCode));
-        hashCode = (17 * hashCode) + (bWebhookTest == null ? 0 : System.hashCode(bWebhookTest));
         hashCode = (17 * hashCode) + (pkiWebhookID == null ? 0 : System.hashCode(pkiWebhookID));
         hashCode = (17 * hashCode) + (sWebhookDescription == null ? 0 : System.hashCode(sWebhookDescription));
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
@@ -146,6 +144,8 @@ public class OASCustomWebhookResponse implements OASCustomWebhookResponseAllOf, 
         hashCode = (17 * hashCode) + (sWebhookEmailfailed == null ? 0 : System.hashCode(sWebhookEmailfailed));
         hashCode = (17 * hashCode) + (bWebhookIsactive == null ? 0 : System.hashCode(bWebhookIsactive));
         hashCode = (17 * hashCode) + (bWebhookSkipsslvalidation == null ? 0 : System.hashCode(bWebhookSkipsslvalidation));
+        hashCode = (17 * hashCode) + (pksCustomerCode == null ? 0 : System.hashCode(pksCustomerCode));
+        hashCode = (17 * hashCode) + (bWebhookTest == null ? 0 : System.hashCode(bWebhookTest));
         return hashCode;
     }
 }

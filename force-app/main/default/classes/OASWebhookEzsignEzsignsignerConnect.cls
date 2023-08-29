@@ -13,19 +13,7 @@
 /**
  * This is the base Webhook object
  */
-public class OASWebhookEzsignEzsignsignerConnect implements OASWebhookEzsignEzsignsignerAcceptcl, OASCommonWebhook, OAS.MappedProperties {
-    /**
-     * Get objEzsignfolder
-     * @return objEzsignfolder
-     */
-    public OASEzsignfolderResponse objEzsignfolder { get; set; }
-
-    /**
-     * Get objEzsignfoldersignerassociation
-     * @return objEzsignfoldersignerassociation
-     */
-    public OASEzsignfoldersignerassociationResp objEzsignfoldersignerassociation { get; set; }
-
+public class OASWebhookEzsignEzsignsignerConnect implements OASCommonWebhook, OAS.MappedProperties {
     /**
      * Get objWebhook
      * @return objWebhook
@@ -37,6 +25,18 @@ public class OASWebhookEzsignEzsignsignerConnect implements OASWebhookEzsignEzsi
      * @return aObjAttempt
      */
     public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
+
+    /**
+     * Get objEzsignfolder
+     * @return objEzsignfolder
+     */
+    public OASEzsignfolderResponse objEzsignfolder { get; set; }
+
+    /**
+     * Get objEzsignfoldersignerassociation
+     * @return objEzsignfoldersignerassociation
+     */
+    public OASEzsignfoldersignerassociationResp objEzsignfoldersignerassociation { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objAttempt' => 'aObjAttempt'
@@ -52,30 +52,30 @@ public class OASWebhookEzsignEzsignsignerConnect implements OASWebhookEzsignEzsi
 
     public static OASWebhookEzsignEzsignsignerConnect getExample() {
         OASWebhookEzsignEzsignsignerConnect webhookEzsignEzsignsignerConnect = new OASWebhookEzsignEzsignsignerConnect();
-          webhookEzsignEzsignsignerConnect.objEzsignfolder = OASEzsignfolderResponse.getExample();
-          webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation = OASEzsignfoldersignerassociationResp.getExample();
           webhookEzsignEzsignsignerConnect.objWebhook = OASCustomWebhookResponse.getExample();
           webhookEzsignEzsignsignerConnect.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
+          webhookEzsignEzsignsignerConnect.objEzsignfolder = OASEzsignfolderResponse.getExample();
+          webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation = OASEzsignfoldersignerassociationResp.getExample();
         return webhookEzsignEzsignsignerConnect;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookEzsignEzsignsignerConnect) {           
             OASWebhookEzsignEzsignsignerConnect webhookEzsignEzsignsignerConnect = (OASWebhookEzsignEzsignsignerConnect) obj;
-            return this.objEzsignfolder == webhookEzsignEzsignsignerConnect.objEzsignfolder
-                && this.objEzsignfoldersignerassociation == webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation
-                && this.objWebhook == webhookEzsignEzsignsignerConnect.objWebhook
-                && this.aObjAttempt == webhookEzsignEzsignsignerConnect.aObjAttempt;
+            return this.objWebhook == webhookEzsignEzsignsignerConnect.objWebhook
+                && this.aObjAttempt == webhookEzsignEzsignsignerConnect.aObjAttempt
+                && this.objEzsignfolder == webhookEzsignEzsignsignerConnect.objEzsignfolder
+                && this.objEzsignfoldersignerassociation == webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objEzsignfolder == null ? 0 : System.hashCode(objEzsignfolder));
-        hashCode = (17 * hashCode) + (objEzsignfoldersignerassociation == null ? 0 : System.hashCode(objEzsignfoldersignerassociation));
         hashCode = (17 * hashCode) + (objWebhook == null ? 0 : System.hashCode(objWebhook));
         hashCode = (17 * hashCode) + (aObjAttempt == null ? 0 : System.hashCode(aObjAttempt));
+        hashCode = (17 * hashCode) + (objEzsignfolder == null ? 0 : System.hashCode(objEzsignfolder));
+        hashCode = (17 * hashCode) + (objEzsignfoldersignerassociation == null ? 0 : System.hashCode(objEzsignfoldersignerassociation));
         return hashCode;
     }
 }

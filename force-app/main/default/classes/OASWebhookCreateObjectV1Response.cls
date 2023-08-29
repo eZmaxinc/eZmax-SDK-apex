@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/object/webhook
  */
-public class OASWebhookCreateObjectV1Response implements OASWebhookCreateObjectV1ResponseAllO, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASWebhookCreateObjectV1ResponseMPay mPayload { get; set; }
-
+public class OASWebhookCreateObjectV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASWebhookCreateObjectV1Response implements OASWebhookCreateObjectV
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASWebhookCreateObjectV1ResponseMPay mPayload { get; set; }
+
     public static OASWebhookCreateObjectV1Response getExample() {
         OASWebhookCreateObjectV1Response webhookCreateObjectV1Response = new OASWebhookCreateObjectV1Response();
-          webhookCreateObjectV1Response.mPayload = OASWebhookCreateObjectV1ResponseMPay.getExample();
           webhookCreateObjectV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           webhookCreateObjectV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          webhookCreateObjectV1Response.mPayload = OASWebhookCreateObjectV1ResponseMPay.getExample();
         return webhookCreateObjectV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookCreateObjectV1Response) {           
             OASWebhookCreateObjectV1Response webhookCreateObjectV1Response = (OASWebhookCreateObjectV1Response) obj;
-            return this.mPayload == webhookCreateObjectV1Response.mPayload
-                && this.objDebugPayload == webhookCreateObjectV1Response.objDebugPayload
-                && this.objDebug == webhookCreateObjectV1Response.objDebug;
+            return this.objDebugPayload == webhookCreateObjectV1Response.objDebugPayload
+                && this.objDebug == webhookCreateObjectV1Response.objDebug
+                && this.mPayload == webhookCreateObjectV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

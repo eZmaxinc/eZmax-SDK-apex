@@ -11,7 +11,7 @@
  */
 
 /**
- * OASCustomEzmaxinvoicingEzsigndocumen
+ * An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinvoicing for an Ezsigndocument
  */
 public class OASCustomEzmaxinvoicingEzsigndocumen {
     /**
@@ -46,23 +46,23 @@ public class OASCustomEzmaxinvoicingEzsigndocumen {
     public Boolean bEzsignfolderAllowed { get; set; }
 
     public static OASCustomEzmaxinvoicingEzsigndocumen getExample() {
-        OASCustomEzmaxinvoicingEzsigndocumen customEzmaxinvoicingEzsigndocumentResponseAllOf = new OASCustomEzmaxinvoicingEzsigndocumen();
-          customEzmaxinvoicingEzsigndocumentResponseAllOf.fkiEzsignfolderID = 33;
-          customEzmaxinvoicingEzsigndocumentResponseAllOf.sName = '';
-          customEzmaxinvoicingEzsigndocumentResponseAllOf.sEzsignfolderDescription = 'Test eZsign Folder';
-          customEzmaxinvoicingEzsigndocumentResponseAllOf.sEzsigndocumentName = 'Contract #123';
-          customEzmaxinvoicingEzsigndocumentResponseAllOf.bEzsignfolderAllowed = true;
-        return customEzmaxinvoicingEzsigndocumentResponseAllOf;
+        OASCustomEzmaxinvoicingEzsigndocumen customEzmaxinvoicingEzsigndocumentResponse = new OASCustomEzmaxinvoicingEzsigndocumen();
+          customEzmaxinvoicingEzsigndocumentResponse.fkiEzsignfolderID = 33;
+          customEzmaxinvoicingEzsigndocumentResponse.sName = '';
+          customEzmaxinvoicingEzsigndocumentResponse.sEzsignfolderDescription = 'Test eZsign Folder';
+          customEzmaxinvoicingEzsigndocumentResponse.sEzsigndocumentName = 'Contract #123';
+          customEzmaxinvoicingEzsigndocumentResponse.bEzsignfolderAllowed = true;
+        return customEzmaxinvoicingEzsigndocumentResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCustomEzmaxinvoicingEzsigndocumen) {           
-            OASCustomEzmaxinvoicingEzsigndocumen customEzmaxinvoicingEzsigndocumentResponseAllOf = (OASCustomEzmaxinvoicingEzsigndocumen) obj;
-            return this.fkiEzsignfolderID == customEzmaxinvoicingEzsigndocumentResponseAllOf.fkiEzsignfolderID
-                && this.sName == customEzmaxinvoicingEzsigndocumentResponseAllOf.sName
-                && this.sEzsignfolderDescription == customEzmaxinvoicingEzsigndocumentResponseAllOf.sEzsignfolderDescription
-                && this.sEzsigndocumentName == customEzmaxinvoicingEzsigndocumentResponseAllOf.sEzsigndocumentName
-                && this.bEzsignfolderAllowed == customEzmaxinvoicingEzsigndocumentResponseAllOf.bEzsignfolderAllowed;
+            OASCustomEzmaxinvoicingEzsigndocumen customEzmaxinvoicingEzsigndocumentResponse = (OASCustomEzmaxinvoicingEzsigndocumen) obj;
+            return this.fkiEzsignfolderID == customEzmaxinvoicingEzsigndocumentResponse.fkiEzsignfolderID
+                && this.sName == customEzmaxinvoicingEzsigndocumentResponse.sName
+                && this.sEzsignfolderDescription == customEzmaxinvoicingEzsigndocumentResponse.sEzsignfolderDescription
+                && this.sEzsigndocumentName == customEzmaxinvoicingEzsigndocumentResponse.sEzsigndocumentName
+                && this.bEzsignfolderAllowed == customEzmaxinvoicingEzsigndocumentResponse.bEzsignfolderAllowed;
         }
         return false;
     }

@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignformfieldgroupGetObjectV2Re
+ * Payload for GET /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
  */
 public class OASEzsignformfieldgroupGetObjectV2Re {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignformfieldgroup
+     * @return objEzsignformfieldgroup
      */
-    public OASEzsignformfieldgroupGetObjectV2Re mPayload { get; set; }
+    public OASEzsignformfieldgroupResponseCompo objEzsignformfieldgroup { get; set; }
 
     public static OASEzsignformfieldgroupGetObjectV2Re getExample() {
-        OASEzsignformfieldgroupGetObjectV2Re ezsignformfieldgroupGetObjectV2ResponseAllOf = new OASEzsignformfieldgroupGetObjectV2Re();
-          ezsignformfieldgroupGetObjectV2ResponseAllOf.mPayload = OASEzsignformfieldgroupGetObjectV2Re.getExample();
-        return ezsignformfieldgroupGetObjectV2ResponseAllOf;
+        OASEzsignformfieldgroupGetObjectV2Re ezsignformfieldgroupGetObjectV2ResponseMPayload = new OASEzsignformfieldgroupGetObjectV2Re();
+          ezsignformfieldgroupGetObjectV2ResponseMPayload.objEzsignformfieldgroup = OASEzsignformfieldgroupResponseCompo.getExample();
+        return ezsignformfieldgroupGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignformfieldgroupGetObjectV2Re) {           
-            OASEzsignformfieldgroupGetObjectV2Re ezsignformfieldgroupGetObjectV2ResponseAllOf = (OASEzsignformfieldgroupGetObjectV2Re) obj;
-            return this.mPayload == ezsignformfieldgroupGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignformfieldgroupGetObjectV2Re ezsignformfieldgroupGetObjectV2ResponseMPayload = (OASEzsignformfieldgroupGetObjectV2Re) obj;
+            return this.objEzsignformfieldgroup == ezsignformfieldgroupGetObjectV2ResponseMPayload.objEzsignformfieldgroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignformfieldgroup == null ? 0 : System.hashCode(objEzsignformfieldgroup));
         return hashCode;
     }
 }

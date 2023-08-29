@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/object/cors
  */
-public class OASCorsCreateObjectV1Response implements OASCorsCreateObjectV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASCorsCreateObjectV1ResponseMPayloa mPayload { get; set; }
-
+public class OASCorsCreateObjectV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASCorsCreateObjectV1Response implements OASCorsCreateObjectV1Respo
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASCorsCreateObjectV1ResponseMPayloa mPayload { get; set; }
+
     public static OASCorsCreateObjectV1Response getExample() {
         OASCorsCreateObjectV1Response corsCreateObjectV1Response = new OASCorsCreateObjectV1Response();
-          corsCreateObjectV1Response.mPayload = OASCorsCreateObjectV1ResponseMPayloa.getExample();
           corsCreateObjectV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           corsCreateObjectV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          corsCreateObjectV1Response.mPayload = OASCorsCreateObjectV1ResponseMPayloa.getExample();
         return corsCreateObjectV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCorsCreateObjectV1Response) {           
             OASCorsCreateObjectV1Response corsCreateObjectV1Response = (OASCorsCreateObjectV1Response) obj;
-            return this.mPayload == corsCreateObjectV1Response.mPayload
-                && this.objDebugPayload == corsCreateObjectV1Response.objDebugPayload
-                && this.objDebug == corsCreateObjectV1Response.objDebug;
+            return this.objDebugPayload == corsCreateObjectV1Response.objDebugPayload
+                && this.objDebug == corsCreateObjectV1Response.objDebug
+                && this.mPayload == corsCreateObjectV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

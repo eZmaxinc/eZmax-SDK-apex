@@ -11,9 +11,21 @@
  */
 
 /**
- * OASCommonResponseErrorSTemporaryFile
+ * Generic Error Message
  */
-public class OASCommonResponseErrorSTemporaryFile {
+public class OASCommonResponseErrorSTemporaryFile implements OASCommonResponseError {
+    /**
+     * The message giving details about the error
+     * @return sErrorMessage
+     */
+    public String sErrorMessage { get; set; }
+
+    /**
+     * Get eErrorCode
+     * @return eErrorCode
+     */
+    public OASFieldEErrorCode eErrorCode { get; set; }
+
     /**
      * The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
      * @return sTemporaryFileUrl
@@ -21,21 +33,27 @@ public class OASCommonResponseErrorSTemporaryFile {
     public String sTemporaryFileUrl { get; set; }
 
     public static OASCommonResponseErrorSTemporaryFile getExample() {
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf = new OASCommonResponseErrorSTemporaryFile();
-          commonResponseErrorSTemporaryFileUrlAllOf.sTemporaryFileUrl = 'http://www.example.com/document.pdf';
-        return commonResponseErrorSTemporaryFileUrlAllOf;
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl = new OASCommonResponseErrorSTemporaryFile();
+          commonResponseErrorSTemporaryFileUrl.sErrorMessage = 'Invalid Signature Headers';
+          commonResponseErrorSTemporaryFileUrl.eErrorCode = OASFieldEErrorCode.getExample();
+          commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl = 'http://www.example.com/document.pdf';
+        return commonResponseErrorSTemporaryFileUrl;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCommonResponseErrorSTemporaryFile) {           
-            OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf = (OASCommonResponseErrorSTemporaryFile) obj;
-            return this.sTemporaryFileUrl == commonResponseErrorSTemporaryFileUrlAllOf.sTemporaryFileUrl;
+            OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl = (OASCommonResponseErrorSTemporaryFile) obj;
+            return this.sErrorMessage == commonResponseErrorSTemporaryFileUrl.sErrorMessage
+                && this.eErrorCode == commonResponseErrorSTemporaryFileUrl.eErrorCode
+                && this.sTemporaryFileUrl == commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (sErrorMessage == null ? 0 : System.hashCode(sErrorMessage));
+        hashCode = (17 * hashCode) + (eErrorCode == null ? 0 : System.hashCode(eErrorCode));
         hashCode = (17 * hashCode) + (sTemporaryFileUrl == null ? 0 : System.hashCode(sTemporaryFileUrl));
         return hashCode;
     }

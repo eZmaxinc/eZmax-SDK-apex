@@ -19,6 +19,8 @@ public enum OASFieldEEzsigntemplatesignatureType {
     HANDWRITTEN,
     INITIALS,
     NAME,
-    ATTACHMENTS
+    ATTACHMENTS,
+    FIELDTEXT,
+    FIELDTEXTAREA
 }
 

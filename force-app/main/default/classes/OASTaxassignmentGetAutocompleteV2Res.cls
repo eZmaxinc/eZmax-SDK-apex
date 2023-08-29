@@ -11,32 +11,44 @@
  */
 
 /**
- * OASTaxassignmentGetAutocompleteV2Res
+ * Payload for POST /2/object/taxassignment/getAutocomplete
  */
-public class OASTaxassignmentGetAutocompleteV2Res {
+public class OASTaxassignmentGetAutocompleteV2Res implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Taxassignment autocomplete element response.
+     * @return aObjTaxassignment
      */
-    public OASTaxassignmentGetAutocompleteV2Res mPayload { get; set; }
+    public List<OASTaxassignmentAutocompleteElementR> aObjTaxassignment { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objTaxassignment' => 'aObjTaxassignment'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASTaxassignmentGetAutocompleteV2Res() {
+        aObjTaxassignment = new List<OASTaxassignmentAutocompleteElementR>();
+    }
 
     public static OASTaxassignmentGetAutocompleteV2Res getExample() {
-        OASTaxassignmentGetAutocompleteV2Res taxassignmentGetAutocompleteV2ResponseAllOf = new OASTaxassignmentGetAutocompleteV2Res();
-          taxassignmentGetAutocompleteV2ResponseAllOf.mPayload = OASTaxassignmentGetAutocompleteV2Res.getExample();
-        return taxassignmentGetAutocompleteV2ResponseAllOf;
+        OASTaxassignmentGetAutocompleteV2Res taxassignmentGetAutocompleteV2ResponseMPayload = new OASTaxassignmentGetAutocompleteV2Res();
+          taxassignmentGetAutocompleteV2ResponseMPayload.aObjTaxassignment = new List<OASTaxassignmentAutocompleteElementR>{OASTaxassignmentAutocompleteElementR.getExample()};
+        return taxassignmentGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASTaxassignmentGetAutocompleteV2Res) {           
-            OASTaxassignmentGetAutocompleteV2Res taxassignmentGetAutocompleteV2ResponseAllOf = (OASTaxassignmentGetAutocompleteV2Res) obj;
-            return this.mPayload == taxassignmentGetAutocompleteV2ResponseAllOf.mPayload;
+            OASTaxassignmentGetAutocompleteV2Res taxassignmentGetAutocompleteV2ResponseMPayload = (OASTaxassignmentGetAutocompleteV2Res) obj;
+            return this.aObjTaxassignment == taxassignmentGetAutocompleteV2ResponseMPayload.aObjTaxassignment;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjTaxassignment == null ? 0 : System.hashCode(aObjTaxassignment));
         return hashCode;
     }
 }

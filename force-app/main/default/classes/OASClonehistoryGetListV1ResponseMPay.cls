@@ -11,9 +11,21 @@
  */
 
 /**
- * OASClonehistoryGetListV1ResponseMPay
+ * Payload for GET /1/object/clonehistory/getList
  */
-public class OASClonehistoryGetListV1ResponseMPay implements OAS.MappedProperties {
+public class OASClonehistoryGetListV1ResponseMPay implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjClonehistory
      * @return aObjClonehistory
@@ -33,21 +45,27 @@ public class OASClonehistoryGetListV1ResponseMPay implements OAS.MappedPropertie
     }
 
     public static OASClonehistoryGetListV1ResponseMPay getExample() {
-        OASClonehistoryGetListV1ResponseMPay clonehistoryGetListV1ResponseMPayloadAllOf = new OASClonehistoryGetListV1ResponseMPay();
-          clonehistoryGetListV1ResponseMPayloadAllOf.aObjClonehistory = new List<OASClonehistoryListElement>{OASClonehistoryListElement.getExample()};
-        return clonehistoryGetListV1ResponseMPayloadAllOf;
+        OASClonehistoryGetListV1ResponseMPay clonehistoryGetListV1ResponseMPayload = new OASClonehistoryGetListV1ResponseMPay();
+          clonehistoryGetListV1ResponseMPayload.iRowReturned = 100;
+          clonehistoryGetListV1ResponseMPayload.iRowFiltered = 533;
+          clonehistoryGetListV1ResponseMPayload.aObjClonehistory = new List<OASClonehistoryListElement>{OASClonehistoryListElement.getExample()};
+        return clonehistoryGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASClonehistoryGetListV1ResponseMPay) {           
-            OASClonehistoryGetListV1ResponseMPay clonehistoryGetListV1ResponseMPayloadAllOf = (OASClonehistoryGetListV1ResponseMPay) obj;
-            return this.aObjClonehistory == clonehistoryGetListV1ResponseMPayloadAllOf.aObjClonehistory;
+            OASClonehistoryGetListV1ResponseMPay clonehistoryGetListV1ResponseMPayload = (OASClonehistoryGetListV1ResponseMPay) obj;
+            return this.iRowReturned == clonehistoryGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == clonehistoryGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjClonehistory == clonehistoryGetListV1ResponseMPayload.aObjClonehistory;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjClonehistory == null ? 0 : System.hashCode(aObjClonehistory));
         return hashCode;
     }

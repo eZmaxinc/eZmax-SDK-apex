@@ -11,9 +11,21 @@
  */
 
 /**
- * OASEzsignbulksendGetListV1ResponseMP
+ * Payload for GET /1/object/ezsignbulksend/getList
  */
-public class OASEzsignbulksendGetListV1ResponseMP implements OAS.MappedProperties {
+public class OASEzsignbulksendGetListV1ResponseMP implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjEzsignbulksend
      * @return aObjEzsignbulksend
@@ -33,21 +45,27 @@ public class OASEzsignbulksendGetListV1ResponseMP implements OAS.MappedPropertie
     }
 
     public static OASEzsignbulksendGetListV1ResponseMP getExample() {
-        OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayloadAllOf = new OASEzsignbulksendGetListV1ResponseMP();
-          ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend = new List<OASEzsignbulksendListElement>{OASEzsignbulksendListElement.getExample()};
-        return ezsignbulksendGetListV1ResponseMPayloadAllOf;
+        OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayload = new OASEzsignbulksendGetListV1ResponseMP();
+          ezsignbulksendGetListV1ResponseMPayload.iRowReturned = 100;
+          ezsignbulksendGetListV1ResponseMPayload.iRowFiltered = 533;
+          ezsignbulksendGetListV1ResponseMPayload.aObjEzsignbulksend = new List<OASEzsignbulksendListElement>{OASEzsignbulksendListElement.getExample()};
+        return ezsignbulksendGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendGetListV1ResponseMP) {           
-            OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayloadAllOf = (OASEzsignbulksendGetListV1ResponseMP) obj;
-            return this.aObjEzsignbulksend == ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend;
+            OASEzsignbulksendGetListV1ResponseMP ezsignbulksendGetListV1ResponseMPayload = (OASEzsignbulksendGetListV1ResponseMP) obj;
+            return this.iRowReturned == ezsignbulksendGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == ezsignbulksendGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjEzsignbulksend == ezsignbulksendGetListV1ResponseMPayload.aObjEzsignbulksend;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjEzsignbulksend == null ? 0 : System.hashCode(aObjEzsignbulksend));
         return hashCode;
     }

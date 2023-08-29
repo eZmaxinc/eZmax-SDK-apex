@@ -11,9 +11,86 @@
  */
 
 /**
- * OASFranchisereferalincomeRequestComp
+ * A Franchisereferalincome Object and children to create a complete structure
  */
-public class OASFranchisereferalincomeRequestComp implements OAS.MappedProperties {
+public class OASFranchisereferalincomeRequestComp implements OASFranchisereferalincomeRequest, OAS.MappedProperties {
+    /**
+     * The unique ID of the Franchisereferalincome
+     * minimum: 0
+     * @return pkiFranchisereferalincomeID
+     */
+    public Integer pkiFranchisereferalincomeID { get; set; }
+
+    /**
+     * The unique ID of the Franchisebroker
+     * minimum: 0
+     * @return fkiFranchisebrokerID
+     */
+    public Integer fkiFranchisebrokerID { get; set; }
+
+    /**
+     * The unique ID of the Franchisereferalincomeprogram
+     * minimum: 0
+     * @return fkiFranchisereferalincomeprogramID
+     */
+    public Integer fkiFranchisereferalincomeprogramID { get; set; }
+
+    /**
+     * The unique ID of the Period
+     * minimum: 0
+     * @return fkiPeriodID
+     */
+    public Integer fkiPeriodID { get; set; }
+
+    /**
+     * The loan amount
+     * @return dFranchisereferalincomeLoan
+     */
+    public String dFranchisereferalincomeLoan { get; set; }
+
+    /**
+     * The amount that will be given to the franchise
+     * @return dFranchisereferalincomeFranchiseamount
+     */
+    public String dFranchisereferalincomeFranchiseamount { get; set; }
+
+    /**
+     * The amount that will be kept by the franchisor
+     * @return dFranchisereferalincomeFranchisoramount
+     */
+    public String dFranchisereferalincomeFranchisoramount { get; set; }
+
+    /**
+     * The amount that will be given to the agent
+     * @return dFranchisereferalincomeAgentamount
+     */
+    public String dFranchisereferalincomeAgentamount { get; set; }
+
+    /**
+     * The date the amounts were disbursed
+     * @return dtFranchisereferalincomeDisbursed
+     */
+    public String dtFranchisereferalincomeDisbursed { get; set; }
+
+    /**
+     * Comment about the transaction
+     * @return tFranchisereferalincomeComment
+     */
+    public String tFranchisereferalincomeComment { get; set; }
+
+    /**
+     * The unique ID of the Franchisereoffice
+     * minimum: 0
+     * @return fkiFranchiseofficeID
+     */
+    public Integer fkiFranchiseofficeID { get; set; }
+
+    /**
+     * 
+     * @return sFranchisereferalincomeRemoteid
+     */
+    public String sFranchisereferalincomeRemoteid { get; set; }
+
     /**
      * Get objAddress
      * @return objAddress
@@ -39,23 +116,59 @@ public class OASFranchisereferalincomeRequestComp implements OAS.MappedPropertie
     }
 
     public static OASFranchisereferalincomeRequestComp getExample() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf = new OASFranchisereferalincomeRequestComp();
-          franchisereferalincomeRequestCompoundAllOf.objAddress = OASAddressRequest.getExample();
-          franchisereferalincomeRequestCompoundAllOf.aObjContact = new List<OASContactRequestCompound>{OASContactRequestCompound.getExample()};
-        return franchisereferalincomeRequestCompoundAllOf;
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound = new OASFranchisereferalincomeRequestComp();
+          franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID = 35;
+          franchisereferalincomeRequestCompound.fkiFranchisebrokerID = 61;
+          franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID = 51;
+          franchisereferalincomeRequestCompound.fkiPeriodID = 21;
+          franchisereferalincomeRequestCompound.dFranchisereferalincomeLoan = '500275.62';
+          franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchiseamount = '275.00';
+          franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchisoramount = '385.00';
+          franchisereferalincomeRequestCompound.dFranchisereferalincomeAgentamount = '800.00';
+          franchisereferalincomeRequestCompound.dtFranchisereferalincomeDisbursed = '2020-12-31';
+          franchisereferalincomeRequestCompound.tFranchisereferalincomeComment = 'This is a comment';
+          franchisereferalincomeRequestCompound.fkiFranchiseofficeID = 50;
+          franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid = '';
+          franchisereferalincomeRequestCompound.objAddress = OASAddressRequest.getExample();
+          franchisereferalincomeRequestCompound.aObjContact = new List<OASContactRequestCompound>{OASContactRequestCompound.getExample()};
+        return franchisereferalincomeRequestCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASFranchisereferalincomeRequestComp) {           
-            OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf = (OASFranchisereferalincomeRequestComp) obj;
-            return this.objAddress == franchisereferalincomeRequestCompoundAllOf.objAddress
-                && this.aObjContact == franchisereferalincomeRequestCompoundAllOf.aObjContact;
+            OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound = (OASFranchisereferalincomeRequestComp) obj;
+            return this.pkiFranchisereferalincomeID == franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID
+                && this.fkiFranchisebrokerID == franchisereferalincomeRequestCompound.fkiFranchisebrokerID
+                && this.fkiFranchisereferalincomeprogramID == franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID
+                && this.fkiPeriodID == franchisereferalincomeRequestCompound.fkiPeriodID
+                && this.dFranchisereferalincomeLoan == franchisereferalincomeRequestCompound.dFranchisereferalincomeLoan
+                && this.dFranchisereferalincomeFranchiseamount == franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchiseamount
+                && this.dFranchisereferalincomeFranchisoramount == franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchisoramount
+                && this.dFranchisereferalincomeAgentamount == franchisereferalincomeRequestCompound.dFranchisereferalincomeAgentamount
+                && this.dtFranchisereferalincomeDisbursed == franchisereferalincomeRequestCompound.dtFranchisereferalincomeDisbursed
+                && this.tFranchisereferalincomeComment == franchisereferalincomeRequestCompound.tFranchisereferalincomeComment
+                && this.fkiFranchiseofficeID == franchisereferalincomeRequestCompound.fkiFranchiseofficeID
+                && this.sFranchisereferalincomeRemoteid == franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid
+                && this.objAddress == franchisereferalincomeRequestCompound.objAddress
+                && this.aObjContact == franchisereferalincomeRequestCompound.aObjContact;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiFranchisereferalincomeID == null ? 0 : System.hashCode(pkiFranchisereferalincomeID));
+        hashCode = (17 * hashCode) + (fkiFranchisebrokerID == null ? 0 : System.hashCode(fkiFranchisebrokerID));
+        hashCode = (17 * hashCode) + (fkiFranchisereferalincomeprogramID == null ? 0 : System.hashCode(fkiFranchisereferalincomeprogramID));
+        hashCode = (17 * hashCode) + (fkiPeriodID == null ? 0 : System.hashCode(fkiPeriodID));
+        hashCode = (17 * hashCode) + (dFranchisereferalincomeLoan == null ? 0 : System.hashCode(dFranchisereferalincomeLoan));
+        hashCode = (17 * hashCode) + (dFranchisereferalincomeFranchiseamount == null ? 0 : System.hashCode(dFranchisereferalincomeFranchiseamount));
+        hashCode = (17 * hashCode) + (dFranchisereferalincomeFranchisoramount == null ? 0 : System.hashCode(dFranchisereferalincomeFranchisoramount));
+        hashCode = (17 * hashCode) + (dFranchisereferalincomeAgentamount == null ? 0 : System.hashCode(dFranchisereferalincomeAgentamount));
+        hashCode = (17 * hashCode) + (dtFranchisereferalincomeDisbursed == null ? 0 : System.hashCode(dtFranchisereferalincomeDisbursed));
+        hashCode = (17 * hashCode) + (tFranchisereferalincomeComment == null ? 0 : System.hashCode(tFranchisereferalincomeComment));
+        hashCode = (17 * hashCode) + (fkiFranchiseofficeID == null ? 0 : System.hashCode(fkiFranchiseofficeID));
+        hashCode = (17 * hashCode) + (sFranchisereferalincomeRemoteid == null ? 0 : System.hashCode(sFranchisereferalincomeRemoteid));
         hashCode = (17 * hashCode) + (objAddress == null ? 0 : System.hashCode(objAddress));
         hashCode = (17 * hashCode) + (aObjContact == null ? 0 : System.hashCode(aObjContact));
         return hashCode;

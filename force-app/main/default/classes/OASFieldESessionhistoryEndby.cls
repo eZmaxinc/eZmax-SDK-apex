@@ -26,6 +26,7 @@ public enum OASFieldESessionhistoryEndby {
     INACTIVE,
     INVALIDUSER,
     BADUSERTYPE,
-    BADIP
+    BADIP,
+    FORCEDLOGOFF
 }
 

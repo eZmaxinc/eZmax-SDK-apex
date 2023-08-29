@@ -13,7 +13,7 @@
 /**
  * A Ezmaxinvoicinguser Object
  */
-public class OASEzmaxinvoicinguserResponseCompoun implements OASEzmaxinvoicinguserResponse, OASEzmaxinvoicingagentResponseCompou {
+public class OASEzmaxinvoicinguserResponseCompoun implements OASEzmaxinvoicinguserResponse {
     /**
      * The unique ID of the Ezmaxinvoicinguser
      * minimum: 0

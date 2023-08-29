@@ -11,32 +11,44 @@
  */
 
 /**
- * OASPaymenttermCreateObjectV1Response
+ * Payload for POST /1/object/paymentterm
  */
-public class OASPaymenttermCreateObjectV1Response {
+public class OASPaymenttermCreateObjectV1Response implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiPaymenttermID
      */
-    public OASPaymenttermCreateObjectV1Response mPayload { get; set; }
+    public List<Integer> aPkiPaymenttermID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiPaymenttermID' => 'aPkiPaymenttermID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASPaymenttermCreateObjectV1Response() {
+        aPkiPaymenttermID = new List<Integer>();
+    }
 
     public static OASPaymenttermCreateObjectV1Response getExample() {
-        OASPaymenttermCreateObjectV1Response paymenttermCreateObjectV1ResponseAllOf = new OASPaymenttermCreateObjectV1Response();
-          paymenttermCreateObjectV1ResponseAllOf.mPayload = OASPaymenttermCreateObjectV1Response.getExample();
-        return paymenttermCreateObjectV1ResponseAllOf;
+        OASPaymenttermCreateObjectV1Response paymenttermCreateObjectV1ResponseMPayload = new OASPaymenttermCreateObjectV1Response();
+          paymenttermCreateObjectV1ResponseMPayload.aPkiPaymenttermID = new List<Integer>{Integer.getExample()};
+        return paymenttermCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPaymenttermCreateObjectV1Response) {           
-            OASPaymenttermCreateObjectV1Response paymenttermCreateObjectV1ResponseAllOf = (OASPaymenttermCreateObjectV1Response) obj;
-            return this.mPayload == paymenttermCreateObjectV1ResponseAllOf.mPayload;
+            OASPaymenttermCreateObjectV1Response paymenttermCreateObjectV1ResponseMPayload = (OASPaymenttermCreateObjectV1Response) obj;
+            return this.aPkiPaymenttermID == paymenttermCreateObjectV1ResponseMPayload.aPkiPaymenttermID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiPaymenttermID == null ? 0 : System.hashCode(aPkiPaymenttermID));
         return hashCode;
     }
 }

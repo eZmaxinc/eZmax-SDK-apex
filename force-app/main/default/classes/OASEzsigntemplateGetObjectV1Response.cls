@@ -11,32 +11,139 @@
  */
 
 /**
- * OASEzsigntemplateGetObjectV1Response
+ * Payload for GET /1/object/ezsigntemplate/{pkiEzsigntemplateID}
  */
-public class OASEzsigntemplateGetObjectV1Response {
+public class OASEzsigntemplateGetObjectV1Response implements OASEzsigntemplateResponseCompound, OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * The unique ID of the Ezsigntemplate
+     * minimum: 0
+     * @return pkiEzsigntemplateID
      */
-    public OASEzsigntemplateGetObjectV1Response mPayload { get; set; }
+    public Integer pkiEzsigntemplateID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigntemplatedocument
+     * minimum: 0
+     * @return fkiEzsigntemplatedocumentID
+     */
+    public Integer fkiEzsigntemplatedocumentID { get; set; }
+
+    /**
+     * The unique ID of the Ezsignfoldertype.
+     * minimum: 0
+     * @return fkiEzsignfoldertypeID
+     */
+    public Integer fkiEzsignfoldertypeID { get; set; }
+
+    /**
+     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
+     * minimum: 1
+     * maximum: 2
+     * @return fkiLanguageID
+     */
+    public Integer fkiLanguageID { get; set; }
+
+    /**
+     * The Name of the Language in the language of the requester
+     * @return sLanguageNameX
+     */
+    public String sLanguageNameX { get; set; }
+
+    /**
+     * The description of the Ezsigntemplate
+     * @return sEzsigntemplateDescription
+     */
+    public String sEzsigntemplateDescription { get; set; }
+
+    /**
+     * Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)
+     * @return bEzsigntemplateAdminonly
+     */
+    public Boolean bEzsigntemplateAdminonly { get; set; }
+
+    /**
+     * The name of the Ezsignfoldertype in the language of the requester
+     * @return sEzsignfoldertypeNameX
+     */
+    public String sEzsignfoldertypeNameX { get; set; }
+
+    /**
+     * Get objAudit
+     * @return objAudit
+     */
+    public OASCommonAudit objAudit { get; set; }
+
+    /**
+     * Get objEzsigntemplatedocument
+     * @return objEzsigntemplatedocument
+     */
+    public OASEzsigntemplatedocumentResponse objEzsigntemplatedocument { get; set; }
+
+    /**
+     * Get aObjEzsigntemplatesigner
+     * @return aObjEzsigntemplatesigner
+     */
+    public List<OASEzsigntemplatesignerResponseCompo> aObjEzsigntemplatesigner { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsigntemplatesigner' => 'aObjEzsigntemplatesigner'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntemplateGetObjectV1Response() {
+        aObjEzsigntemplatesigner = new List<OASEzsigntemplatesignerResponseCompo>();
+    }
 
     public static OASEzsigntemplateGetObjectV1Response getExample() {
-        OASEzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1ResponseAllOf = new OASEzsigntemplateGetObjectV1Response();
-          ezsigntemplateGetObjectV1ResponseAllOf.mPayload = OASEzsigntemplateGetObjectV1Response.getExample();
-        return ezsigntemplateGetObjectV1ResponseAllOf;
+        OASEzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1ResponseMPayload = new OASEzsigntemplateGetObjectV1Response();
+          ezsigntemplateGetObjectV1ResponseMPayload.pkiEzsigntemplateID = 36;
+          ezsigntemplateGetObjectV1ResponseMPayload.fkiEzsigntemplatedocumentID = 133;
+          ezsigntemplateGetObjectV1ResponseMPayload.fkiEzsignfoldertypeID = 5;
+          ezsigntemplateGetObjectV1ResponseMPayload.fkiLanguageID = 2;
+          ezsigntemplateGetObjectV1ResponseMPayload.sLanguageNameX = 'English';
+          ezsigntemplateGetObjectV1ResponseMPayload.sEzsigntemplateDescription = 'Standard Contract';
+          ezsigntemplateGetObjectV1ResponseMPayload.bEzsigntemplateAdminonly = true;
+          ezsigntemplateGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX = 'Default';
+          ezsigntemplateGetObjectV1ResponseMPayload.objAudit = OASCommonAudit.getExample();
+          ezsigntemplateGetObjectV1ResponseMPayload.objEzsigntemplatedocument = OASEzsigntemplatedocumentResponse.getExample();
+          ezsigntemplateGetObjectV1ResponseMPayload.aObjEzsigntemplatesigner = new List<OASEzsigntemplatesignerResponseCompo>{OASEzsigntemplatesignerResponseCompo.getExample()};
+        return ezsigntemplateGetObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplateGetObjectV1Response) {           
-            OASEzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1ResponseAllOf = (OASEzsigntemplateGetObjectV1Response) obj;
-            return this.mPayload == ezsigntemplateGetObjectV1ResponseAllOf.mPayload;
+            OASEzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1ResponseMPayload = (OASEzsigntemplateGetObjectV1Response) obj;
+            return this.pkiEzsigntemplateID == ezsigntemplateGetObjectV1ResponseMPayload.pkiEzsigntemplateID
+                && this.fkiEzsigntemplatedocumentID == ezsigntemplateGetObjectV1ResponseMPayload.fkiEzsigntemplatedocumentID
+                && this.fkiEzsignfoldertypeID == ezsigntemplateGetObjectV1ResponseMPayload.fkiEzsignfoldertypeID
+                && this.fkiLanguageID == ezsigntemplateGetObjectV1ResponseMPayload.fkiLanguageID
+                && this.sLanguageNameX == ezsigntemplateGetObjectV1ResponseMPayload.sLanguageNameX
+                && this.sEzsigntemplateDescription == ezsigntemplateGetObjectV1ResponseMPayload.sEzsigntemplateDescription
+                && this.bEzsigntemplateAdminonly == ezsigntemplateGetObjectV1ResponseMPayload.bEzsigntemplateAdminonly
+                && this.sEzsignfoldertypeNameX == ezsigntemplateGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX
+                && this.objAudit == ezsigntemplateGetObjectV1ResponseMPayload.objAudit
+                && this.objEzsigntemplatedocument == ezsigntemplateGetObjectV1ResponseMPayload.objEzsigntemplatedocument
+                && this.aObjEzsigntemplatesigner == ezsigntemplateGetObjectV1ResponseMPayload.aObjEzsigntemplatesigner;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (pkiEzsigntemplateID == null ? 0 : System.hashCode(pkiEzsigntemplateID));
+        hashCode = (17 * hashCode) + (fkiEzsigntemplatedocumentID == null ? 0 : System.hashCode(fkiEzsigntemplatedocumentID));
+        hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
+        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
+        hashCode = (17 * hashCode) + (sLanguageNameX == null ? 0 : System.hashCode(sLanguageNameX));
+        hashCode = (17 * hashCode) + (sEzsigntemplateDescription == null ? 0 : System.hashCode(sEzsigntemplateDescription));
+        hashCode = (17 * hashCode) + (bEzsigntemplateAdminonly == null ? 0 : System.hashCode(bEzsigntemplateAdminonly));
+        hashCode = (17 * hashCode) + (sEzsignfoldertypeNameX == null ? 0 : System.hashCode(sEzsignfoldertypeNameX));
+        hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
+        hashCode = (17 * hashCode) + (objEzsigntemplatedocument == null ? 0 : System.hashCode(objEzsigntemplatedocument));
+        hashCode = (17 * hashCode) + (aObjEzsigntemplatesigner == null ? 0 : System.hashCode(aObjEzsigntemplatesigner));
         return hashCode;
     }
 }

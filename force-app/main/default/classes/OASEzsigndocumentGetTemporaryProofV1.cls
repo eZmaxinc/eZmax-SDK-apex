@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigndocumentGetTemporaryProofV1
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
  */
-public class OASEzsigndocumentGetTemporaryProofV1 {
+public class OASEzsigndocumentGetTemporaryProofV1 implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjEzsigndocumentlog
+     * @return aObjEzsigndocumentlog
      */
-    public OASEzsigndocumentGetTemporaryProofV1 mPayload { get; set; }
+    public List<OASEzsigndocumentlogResponseCompound> aObjEzsigndocumentlog { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsigndocumentlog' => 'aObjEzsigndocumentlog'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentGetTemporaryProofV1() {
+        aObjEzsigndocumentlog = new List<OASEzsigndocumentlogResponseCompound>();
+    }
 
     public static OASEzsigndocumentGetTemporaryProofV1 getExample() {
-        OASEzsigndocumentGetTemporaryProofV1 ezsigndocumentGetTemporaryProofV1ResponseAllOf = new OASEzsigndocumentGetTemporaryProofV1();
-          ezsigndocumentGetTemporaryProofV1ResponseAllOf.mPayload = OASEzsigndocumentGetTemporaryProofV1.getExample();
-        return ezsigndocumentGetTemporaryProofV1ResponseAllOf;
+        OASEzsigndocumentGetTemporaryProofV1 ezsigndocumentGetTemporaryProofV1ResponseMPayload = new OASEzsigndocumentGetTemporaryProofV1();
+          ezsigndocumentGetTemporaryProofV1ResponseMPayload.aObjEzsigndocumentlog = new List<OASEzsigndocumentlogResponseCompound>{OASEzsigndocumentlogResponseCompound.getExample()};
+        return ezsigndocumentGetTemporaryProofV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetTemporaryProofV1) {           
-            OASEzsigndocumentGetTemporaryProofV1 ezsigndocumentGetTemporaryProofV1ResponseAllOf = (OASEzsigndocumentGetTemporaryProofV1) obj;
-            return this.mPayload == ezsigndocumentGetTemporaryProofV1ResponseAllOf.mPayload;
+            OASEzsigndocumentGetTemporaryProofV1 ezsigndocumentGetTemporaryProofV1ResponseMPayload = (OASEzsigndocumentGetTemporaryProofV1) obj;
+            return this.aObjEzsigndocumentlog == ezsigndocumentGetTemporaryProofV1ResponseMPayload.aObjEzsigndocumentlog;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsigndocumentlog == null ? 0 : System.hashCode(aObjEzsigndocumentlog));
         return hashCode;
     }
 }

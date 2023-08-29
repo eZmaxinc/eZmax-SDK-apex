@@ -13,13 +13,7 @@
 /**
  * Response for GET /2/object/permission/{pkiPermissionID}
  */
-public class OASPermissionGetObjectV2Response implements OASPermissionGetObjectV2ResponseAllO, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASPermissionGetObjectV2ResponseMPay mPayload { get; set; }
-
+public class OASPermissionGetObjectV2Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASPermissionGetObjectV2Response implements OASPermissionGetObjectV
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASPermissionGetObjectV2ResponseMPay mPayload { get; set; }
+
     public static OASPermissionGetObjectV2Response getExample() {
         OASPermissionGetObjectV2Response permissionGetObjectV2Response = new OASPermissionGetObjectV2Response();
-          permissionGetObjectV2Response.mPayload = OASPermissionGetObjectV2ResponseMPay.getExample();
           permissionGetObjectV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           permissionGetObjectV2Response.objDebug = OASCommonResponseObjDebug.getExample();
+          permissionGetObjectV2Response.mPayload = OASPermissionGetObjectV2ResponseMPay.getExample();
         return permissionGetObjectV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPermissionGetObjectV2Response) {           
             OASPermissionGetObjectV2Response permissionGetObjectV2Response = (OASPermissionGetObjectV2Response) obj;
-            return this.mPayload == permissionGetObjectV2Response.mPayload
-                && this.objDebugPayload == permissionGetObjectV2Response.objDebugPayload
-                && this.objDebug == permissionGetObjectV2Response.objDebug;
+            return this.objDebugPayload == permissionGetObjectV2Response.objDebugPayload
+                && this.objDebug == permissionGetObjectV2Response.objDebug
+                && this.mPayload == permissionGetObjectV2Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/module/user/createEzsignuser
  */
-public class OASUserCreateEzsignuserV1Response implements OASUserCreateEzsignuserV1ResponseAll, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASUserCreateEzsignuserV1ResponseMPa mPayload { get; set; }
-
+public class OASUserCreateEzsignuserV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASUserCreateEzsignuserV1Response implements OASUserCreateEzsignuse
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASUserCreateEzsignuserV1ResponseMPa mPayload { get; set; }
+
     public static OASUserCreateEzsignuserV1Response getExample() {
         OASUserCreateEzsignuserV1Response userCreateEzsignuserV1Response = new OASUserCreateEzsignuserV1Response();
-          userCreateEzsignuserV1Response.mPayload = OASUserCreateEzsignuserV1ResponseMPa.getExample();
           userCreateEzsignuserV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           userCreateEzsignuserV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          userCreateEzsignuserV1Response.mPayload = OASUserCreateEzsignuserV1ResponseMPa.getExample();
         return userCreateEzsignuserV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUserCreateEzsignuserV1Response) {           
             OASUserCreateEzsignuserV1Response userCreateEzsignuserV1Response = (OASUserCreateEzsignuserV1Response) obj;
-            return this.mPayload == userCreateEzsignuserV1Response.mPayload
-                && this.objDebugPayload == userCreateEzsignuserV1Response.objDebugPayload
-                && this.objDebug == userCreateEzsignuserV1Response.objDebug;
+            return this.objDebugPayload == userCreateEzsignuserV1Response.objDebugPayload
+                && this.objDebug == userCreateEzsignuserV1Response.objDebug
+                && this.mPayload == userCreateEzsignuserV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

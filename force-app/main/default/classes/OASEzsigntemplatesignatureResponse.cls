@@ -64,6 +64,20 @@ public class OASEzsigntemplatesignatureResponse {
     public Integer iEzsigntemplatesignatureY { get; set; }
 
     /**
+     * The width of the Ezsigntemplatesignature.\n\nSize is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use "200" for the iEzsigntemplatesignatureWidth.
+     * minimum: 0
+     * @return iEzsigntemplatesignatureWidth
+     */
+    public Integer iEzsigntemplatesignatureWidth { get; set; }
+
+    /**
+     * The height of the Ezsigntemplatesignature.\n\nSize is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use "200" for the iEzsigntemplatesignatureHeight.
+     * minimum: 0
+     * @return iEzsigntemplatesignatureHeight
+     */
+    public Integer iEzsigntemplatesignatureHeight { get; set; }
+
+    /**
      * The step when the Ezsigntemplatesigner will be invited to sign
      * minimum: 1
      * @return iEzsigntemplatesignatureStep
@@ -118,6 +132,26 @@ public class OASEzsigntemplatesignatureResponse {
      */
     public Boolean bEzsigntemplatesignatureRequired { get; set; }
 
+    /**
+     * The maximum length for the value in the Ezsigntemplatesignature\n\nThis can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
+     * minimum: 0
+     * maximum: 65535
+     * @return iEzsigntemplatesignatureMaxlength
+     */
+    public Integer iEzsigntemplatesignatureMaxlength { get; set; }
+
+    /**
+     * A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.\n\nThis can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
+     * @return sEzsigntemplatesignatureRegexp
+     */
+    public String sEzsigntemplatesignatureRegexp { get; set; }
+
+    /**
+     * Get eEzsigntemplatesignatureTextvalidation
+     * @return eEzsigntemplatesignatureTextvalidation
+     */
+    public OASEnumTextvalidation eEzsigntemplatesignatureTextvalidation { get; set; }
+
     public static OASEzsigntemplatesignatureResponse getExample() {
         OASEzsigntemplatesignatureResponse ezsigntemplatesignatureResponse = new OASEzsigntemplatesignatureResponse();
           ezsigntemplatesignatureResponse.pkiEzsigntemplatesignatureID = 99;
@@ -127,6 +161,8 @@ public class OASEzsigntemplatesignatureResponse {
           ezsigntemplatesignatureResponse.iEzsigntemplatedocumentpagePagenumber = 1;
           ezsigntemplatesignatureResponse.iEzsigntemplatesignatureX = 200;
           ezsigntemplatesignatureResponse.iEzsigntemplatesignatureY = 300;
+          ezsigntemplatesignatureResponse.iEzsigntemplatesignatureWidth = 200;
+          ezsigntemplatesignatureResponse.iEzsigntemplatesignatureHeight = 200;
           ezsigntemplatesignatureResponse.iEzsigntemplatesignatureStep = 1;
           ezsigntemplatesignatureResponse.eEzsigntemplatesignatureType = OASFieldEEzsigntemplatesignatureType.getExample();
           ezsigntemplatesignatureResponse.tEzsigntemplatesignatureTooltip = 'Please sign here if you agree to the terms';
@@ -136,6 +172,9 @@ public class OASEzsigntemplatesignatureResponse {
           ezsigntemplatesignatureResponse.sEzsigntemplatesignatureAttachmentdescription = 'Attachment';
           ezsigntemplatesignatureResponse.eEzsigntemplatesignatureAttachmentnamesource = OASFieldEEzsigntemplatesignatureAtta.getExample();
           ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired = true;
+          ezsigntemplatesignatureResponse.iEzsigntemplatesignatureMaxlength = 75;
+          ezsigntemplatesignatureResponse.sEzsigntemplatesignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
+          ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation = OASEnumTextvalidation.getExample();
         return ezsigntemplatesignatureResponse;
     }
 
@@ -149,6 +188,8 @@ public class OASEzsigntemplatesignatureResponse {
                 && this.iEzsigntemplatedocumentpagePagenumber == ezsigntemplatesignatureResponse.iEzsigntemplatedocumentpagePagenumber
                 && this.iEzsigntemplatesignatureX == ezsigntemplatesignatureResponse.iEzsigntemplatesignatureX
                 && this.iEzsigntemplatesignatureY == ezsigntemplatesignatureResponse.iEzsigntemplatesignatureY
+                && this.iEzsigntemplatesignatureWidth == ezsigntemplatesignatureResponse.iEzsigntemplatesignatureWidth
+                && this.iEzsigntemplatesignatureHeight == ezsigntemplatesignatureResponse.iEzsigntemplatesignatureHeight
                 && this.iEzsigntemplatesignatureStep == ezsigntemplatesignatureResponse.iEzsigntemplatesignatureStep
                 && this.eEzsigntemplatesignatureType == ezsigntemplatesignatureResponse.eEzsigntemplatesignatureType
                 && this.tEzsigntemplatesignatureTooltip == ezsigntemplatesignatureResponse.tEzsigntemplatesignatureTooltip
@@ -157,7 +198,10 @@ public class OASEzsigntemplatesignatureResponse {
                 && this.iEzsigntemplatesignatureValidationstep == ezsigntemplatesignatureResponse.iEzsigntemplatesignatureValidationstep
                 && this.sEzsigntemplatesignatureAttachmentdescription == ezsigntemplatesignatureResponse.sEzsigntemplatesignatureAttachmentdescription
                 && this.eEzsigntemplatesignatureAttachmentnamesource == ezsigntemplatesignatureResponse.eEzsigntemplatesignatureAttachmentnamesource
-                && this.bEzsigntemplatesignatureRequired == ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired;
+                && this.bEzsigntemplatesignatureRequired == ezsigntemplatesignatureResponse.bEzsigntemplatesignatureRequired
+                && this.iEzsigntemplatesignatureMaxlength == ezsigntemplatesignatureResponse.iEzsigntemplatesignatureMaxlength
+                && this.sEzsigntemplatesignatureRegexp == ezsigntemplatesignatureResponse.sEzsigntemplatesignatureRegexp
+                && this.eEzsigntemplatesignatureTextvalidation == ezsigntemplatesignatureResponse.eEzsigntemplatesignatureTextvalidation;
         }
         return false;
     }
@@ -171,6 +215,8 @@ public class OASEzsigntemplatesignatureResponse {
         hashCode = (17 * hashCode) + (iEzsigntemplatedocumentpagePagenumber == null ? 0 : System.hashCode(iEzsigntemplatedocumentpagePagenumber));
         hashCode = (17 * hashCode) + (iEzsigntemplatesignatureX == null ? 0 : System.hashCode(iEzsigntemplatesignatureX));
         hashCode = (17 * hashCode) + (iEzsigntemplatesignatureY == null ? 0 : System.hashCode(iEzsigntemplatesignatureY));
+        hashCode = (17 * hashCode) + (iEzsigntemplatesignatureWidth == null ? 0 : System.hashCode(iEzsigntemplatesignatureWidth));
+        hashCode = (17 * hashCode) + (iEzsigntemplatesignatureHeight == null ? 0 : System.hashCode(iEzsigntemplatesignatureHeight));
         hashCode = (17 * hashCode) + (iEzsigntemplatesignatureStep == null ? 0 : System.hashCode(iEzsigntemplatesignatureStep));
         hashCode = (17 * hashCode) + (eEzsigntemplatesignatureType == null ? 0 : System.hashCode(eEzsigntemplatesignatureType));
         hashCode = (17 * hashCode) + (tEzsigntemplatesignatureTooltip == null ? 0 : System.hashCode(tEzsigntemplatesignatureTooltip));
@@ -180,6 +226,9 @@ public class OASEzsigntemplatesignatureResponse {
         hashCode = (17 * hashCode) + (sEzsigntemplatesignatureAttachmentdescription == null ? 0 : System.hashCode(sEzsigntemplatesignatureAttachmentdescription));
         hashCode = (17 * hashCode) + (eEzsigntemplatesignatureAttachmentnamesource == null ? 0 : System.hashCode(eEzsigntemplatesignatureAttachmentnamesource));
         hashCode = (17 * hashCode) + (bEzsigntemplatesignatureRequired == null ? 0 : System.hashCode(bEzsigntemplatesignatureRequired));
+        hashCode = (17 * hashCode) + (iEzsigntemplatesignatureMaxlength == null ? 0 : System.hashCode(iEzsigntemplatesignatureMaxlength));
+        hashCode = (17 * hashCode) + (sEzsigntemplatesignatureRegexp == null ? 0 : System.hashCode(sEzsigntemplatesignatureRegexp));
+        hashCode = (17 * hashCode) + (eEzsigntemplatesignatureTextvalidation == null ? 0 : System.hashCode(eEzsigntemplatesignatureTextvalidation));
         return hashCode;
     }
 }

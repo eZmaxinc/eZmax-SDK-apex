@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignfoldersignerassociationCrea
+ * Payload for POST /2/object/ezsignfoldersignerassociation
  */
-public class OASEzsignfoldersignerassociationCrea {
+public class OASEzsignfoldersignerassociationCrea implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsignfoldersignerassociationID
      */
-    public OASEzsignfoldersignerassociationCrea mPayload { get; set; }
+    public List<Integer> aPkiEzsignfoldersignerassociationID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignfoldersignerassociationID' => 'aPkiEzsignfoldersignerassociationID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignfoldersignerassociationCrea() {
+        aPkiEzsignfoldersignerassociationID = new List<Integer>();
+    }
 
     public static OASEzsignfoldersignerassociationCrea getExample() {
-        OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV2ResponseAllOf = new OASEzsignfoldersignerassociationCrea();
-          ezsignfoldersignerassociationCreateObjectV2ResponseAllOf.mPayload = OASEzsignfoldersignerassociationCrea.getExample();
-        return ezsignfoldersignerassociationCreateObjectV2ResponseAllOf;
+        OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV2ResponseMPayload = new OASEzsignfoldersignerassociationCrea();
+          ezsignfoldersignerassociationCreateObjectV2ResponseMPayload.aPkiEzsignfoldersignerassociationID = new List<Integer>{Integer.getExample()};
+        return ezsignfoldersignerassociationCreateObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldersignerassociationCrea) {           
-            OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV2ResponseAllOf = (OASEzsignfoldersignerassociationCrea) obj;
-            return this.mPayload == ezsignfoldersignerassociationCreateObjectV2ResponseAllOf.mPayload;
+            OASEzsignfoldersignerassociationCrea ezsignfoldersignerassociationCreateObjectV2ResponseMPayload = (OASEzsignfoldersignerassociationCrea) obj;
+            return this.aPkiEzsignfoldersignerassociationID == ezsignfoldersignerassociationCreateObjectV2ResponseMPayload.aPkiEzsignfoldersignerassociationID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(aPkiEzsignfoldersignerassociationID));
         return hashCode;
     }
 }

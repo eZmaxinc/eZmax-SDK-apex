@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignsignatureGetObjectV2Respons
+ * Payload for GET /2/object/ezsignsignature/{pkiEzsignsignatureID}
  */
 public class OASEzsignsignatureGetObjectV2Respons {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignsignature
+     * @return objEzsignsignature
      */
-    public OASEzsignsignatureGetObjectV2Respons mPayload { get; set; }
+    public OASEzsignsignatureResponseCompound objEzsignsignature { get; set; }
 
     public static OASEzsignsignatureGetObjectV2Respons getExample() {
-        OASEzsignsignatureGetObjectV2Respons ezsignsignatureGetObjectV2ResponseAllOf = new OASEzsignsignatureGetObjectV2Respons();
-          ezsignsignatureGetObjectV2ResponseAllOf.mPayload = OASEzsignsignatureGetObjectV2Respons.getExample();
-        return ezsignsignatureGetObjectV2ResponseAllOf;
+        OASEzsignsignatureGetObjectV2Respons ezsignsignatureGetObjectV2ResponseMPayload = new OASEzsignsignatureGetObjectV2Respons();
+          ezsignsignatureGetObjectV2ResponseMPayload.objEzsignsignature = OASEzsignsignatureResponseCompound.getExample();
+        return ezsignsignatureGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignatureGetObjectV2Respons) {           
-            OASEzsignsignatureGetObjectV2Respons ezsignsignatureGetObjectV2ResponseAllOf = (OASEzsignsignatureGetObjectV2Respons) obj;
-            return this.mPayload == ezsignsignatureGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignsignatureGetObjectV2Respons ezsignsignatureGetObjectV2ResponseMPayload = (OASEzsignsignatureGetObjectV2Respons) obj;
+            return this.objEzsignsignature == ezsignsignatureGetObjectV2ResponseMPayload.objEzsignsignature;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignsignature == null ? 0 : System.hashCode(objEzsignsignature));
         return hashCode;
     }
 }

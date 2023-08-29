@@ -11,9 +11,33 @@
  */
 
 /**
- * OASContactinformationsRequestCompoun
+ * A Contactinformations Object and children to create a complete structure
  */
-public class OASContactinformationsRequestCompoun implements OAS.MappedProperties {
+public class OASContactinformationsRequestCompoun implements OASContactinformationsRequest, OAS.MappedProperties {
+    /**
+     * The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.\n\nYou can leave the value to 0 if the array is empty.
+     * @return iAddressDefault
+     */
+    public Integer iAddressDefault { get; set; }
+
+    /**
+     * The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.\n\nYou can leave the value to 0 if the array is empty.
+     * @return iPhoneDefault
+     */
+    public Integer iPhoneDefault { get; set; }
+
+    /**
+     * The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.\n\nYou can leave the value to 0 if the array is empty.
+     * @return iEmailDefault
+     */
+    public Integer iEmailDefault { get; set; }
+
+    /**
+     * The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.\n\nYou can leave the value to 0 if the array is empty.
+     * @return iWebsiteDefault
+     */
+    public Integer iWebsiteDefault { get; set; }
+
     /**
      * Get aObjAddress
      * @return aObjAddress
@@ -90,27 +114,39 @@ public class OASContactinformationsRequestCompoun implements OAS.MappedPropertie
     }
 
     public static OASContactinformationsRequestCompoun getExample() {
-        OASContactinformationsRequestCompoun contactinformationsRequestCompoundAllOf = new OASContactinformationsRequestCompoun();
-          contactinformationsRequestCompoundAllOf.aObjAddress = new List<OASAddressRequestCompound>{OASAddressRequestCompound.getExample()};
-          contactinformationsRequestCompoundAllOf.aObjPhone = new List<OASPhoneRequestCompound>{OASPhoneRequestCompound.getExample()};
-          contactinformationsRequestCompoundAllOf.aObjEmail = new List<OASEmailRequestCompound>{OASEmailRequestCompound.getExample()};
-          contactinformationsRequestCompoundAllOf.aObjWebsite = new List<OASWebsiteRequestCompound>{OASWebsiteRequestCompound.getExample()};
-        return contactinformationsRequestCompoundAllOf;
+        OASContactinformationsRequestCompoun contactinformationsRequestCompound = new OASContactinformationsRequestCompoun();
+          contactinformationsRequestCompound.iAddressDefault = 0;
+          contactinformationsRequestCompound.iPhoneDefault = 0;
+          contactinformationsRequestCompound.iEmailDefault = 0;
+          contactinformationsRequestCompound.iWebsiteDefault = 0;
+          contactinformationsRequestCompound.aObjAddress = new List<OASAddressRequestCompound>{OASAddressRequestCompound.getExample()};
+          contactinformationsRequestCompound.aObjPhone = new List<OASPhoneRequestCompound>{OASPhoneRequestCompound.getExample()};
+          contactinformationsRequestCompound.aObjEmail = new List<OASEmailRequestCompound>{OASEmailRequestCompound.getExample()};
+          contactinformationsRequestCompound.aObjWebsite = new List<OASWebsiteRequestCompound>{OASWebsiteRequestCompound.getExample()};
+        return contactinformationsRequestCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASContactinformationsRequestCompoun) {           
-            OASContactinformationsRequestCompoun contactinformationsRequestCompoundAllOf = (OASContactinformationsRequestCompoun) obj;
-            return this.aObjAddress == contactinformationsRequestCompoundAllOf.aObjAddress
-                && this.aObjPhone == contactinformationsRequestCompoundAllOf.aObjPhone
-                && this.aObjEmail == contactinformationsRequestCompoundAllOf.aObjEmail
-                && this.aObjWebsite == contactinformationsRequestCompoundAllOf.aObjWebsite;
+            OASContactinformationsRequestCompoun contactinformationsRequestCompound = (OASContactinformationsRequestCompoun) obj;
+            return this.iAddressDefault == contactinformationsRequestCompound.iAddressDefault
+                && this.iPhoneDefault == contactinformationsRequestCompound.iPhoneDefault
+                && this.iEmailDefault == contactinformationsRequestCompound.iEmailDefault
+                && this.iWebsiteDefault == contactinformationsRequestCompound.iWebsiteDefault
+                && this.aObjAddress == contactinformationsRequestCompound.aObjAddress
+                && this.aObjPhone == contactinformationsRequestCompound.aObjPhone
+                && this.aObjEmail == contactinformationsRequestCompound.aObjEmail
+                && this.aObjWebsite == contactinformationsRequestCompound.aObjWebsite;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iAddressDefault == null ? 0 : System.hashCode(iAddressDefault));
+        hashCode = (17 * hashCode) + (iPhoneDefault == null ? 0 : System.hashCode(iPhoneDefault));
+        hashCode = (17 * hashCode) + (iEmailDefault == null ? 0 : System.hashCode(iEmailDefault));
+        hashCode = (17 * hashCode) + (iWebsiteDefault == null ? 0 : System.hashCode(iWebsiteDefault));
         hashCode = (17 * hashCode) + (aObjAddress == null ? 0 : System.hashCode(aObjAddress));
         hashCode = (17 * hashCode) + (aObjPhone == null ? 0 : System.hashCode(aObjPhone));
         hashCode = (17 * hashCode) + (aObjEmail == null ? 0 : System.hashCode(aObjEmail));

@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignsignergroupCreateObjectV1Re
+ * Payload for POST /1/object/ezsignsignergroup
  */
-public class OASEzsignsignergroupCreateObjectV1Re {
+public class OASEzsignsignergroupCreateObjectV1Re implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsignsignergroupID
      */
-    public OASEzsignsignergroupCreateObjectV1Re mPayload { get; set; }
+    public List<Integer> aPkiEzsignsignergroupID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignsignergroupID' => 'aPkiEzsignsignergroupID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignsignergroupCreateObjectV1Re() {
+        aPkiEzsignsignergroupID = new List<Integer>();
+    }
 
     public static OASEzsignsignergroupCreateObjectV1Re getExample() {
-        OASEzsignsignergroupCreateObjectV1Re ezsignsignergroupCreateObjectV1ResponseAllOf = new OASEzsignsignergroupCreateObjectV1Re();
-          ezsignsignergroupCreateObjectV1ResponseAllOf.mPayload = OASEzsignsignergroupCreateObjectV1Re.getExample();
-        return ezsignsignergroupCreateObjectV1ResponseAllOf;
+        OASEzsignsignergroupCreateObjectV1Re ezsignsignergroupCreateObjectV1ResponseMPayload = new OASEzsignsignergroupCreateObjectV1Re();
+          ezsignsignergroupCreateObjectV1ResponseMPayload.aPkiEzsignsignergroupID = new List<Integer>{Integer.getExample()};
+        return ezsignsignergroupCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignergroupCreateObjectV1Re) {           
-            OASEzsignsignergroupCreateObjectV1Re ezsignsignergroupCreateObjectV1ResponseAllOf = (OASEzsignsignergroupCreateObjectV1Re) obj;
-            return this.mPayload == ezsignsignergroupCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsignsignergroupCreateObjectV1Re ezsignsignergroupCreateObjectV1ResponseMPayload = (OASEzsignsignergroupCreateObjectV1Re) obj;
+            return this.aPkiEzsignsignergroupID == ezsignsignergroupCreateObjectV1ResponseMPayload.aPkiEzsignsignergroupID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignsignergroupID == null ? 0 : System.hashCode(aPkiEzsignsignergroupID));
         return hashCode;
     }
 }

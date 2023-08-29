@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignsignergroupmembershipGetObj
+ * Payload for GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}
  */
 public class OASEzsignsignergroupmembershipGetObj {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignsignergroupmembership
+     * @return objEzsignsignergroupmembership
      */
-    public OASEzsignsignergroupmembershipGetObj mPayload { get; set; }
+    public OASEzsignsignergroupmembershipRespon objEzsignsignergroupmembership { get; set; }
 
     public static OASEzsignsignergroupmembershipGetObj getExample() {
-        OASEzsignsignergroupmembershipGetObj ezsignsignergroupmembershipGetObjectV2ResponseAllOf = new OASEzsignsignergroupmembershipGetObj();
-          ezsignsignergroupmembershipGetObjectV2ResponseAllOf.mPayload = OASEzsignsignergroupmembershipGetObj.getExample();
-        return ezsignsignergroupmembershipGetObjectV2ResponseAllOf;
+        OASEzsignsignergroupmembershipGetObj ezsignsignergroupmembershipGetObjectV2ResponseMPayload = new OASEzsignsignergroupmembershipGetObj();
+          ezsignsignergroupmembershipGetObjectV2ResponseMPayload.objEzsignsignergroupmembership = OASEzsignsignergroupmembershipRespon.getExample();
+        return ezsignsignergroupmembershipGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignergroupmembershipGetObj) {           
-            OASEzsignsignergroupmembershipGetObj ezsignsignergroupmembershipGetObjectV2ResponseAllOf = (OASEzsignsignergroupmembershipGetObj) obj;
-            return this.mPayload == ezsignsignergroupmembershipGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignsignergroupmembershipGetObj ezsignsignergroupmembershipGetObjectV2ResponseMPayload = (OASEzsignsignergroupmembershipGetObj) obj;
+            return this.objEzsignsignergroupmembership == ezsignsignergroupmembershipGetObjectV2ResponseMPayload.objEzsignsignergroupmembership;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignsignergroupmembership == null ? 0 : System.hashCode(objEzsignsignergroupmembership));
         return hashCode;
     }
 }

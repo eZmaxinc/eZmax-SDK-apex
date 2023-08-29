@@ -106,6 +106,31 @@ public class OASObjectUserApi {
         );
     }
     /**
+     * Retrieve an existing User\&#39;s Apikeys
+     * 
+     * @param pkiUserID  (required)
+     * @return OASUserGetApikeysV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUserGetApikeysV1Response userGetApikeysV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUserID'), 'pkiUserID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUserGetApikeysV1Response) client.invoke(
+            'GET', '/1/object/user/{pkiUserID}/getApikeys', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiUserID' => (Integer) params.get('pkiUserID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'Authorization' },
+            OASUserGetApikeysV1Response.class
+        );
+    }
+    /**
      * Retrieve Users and IDs
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return (required)
@@ -273,6 +298,34 @@ public class OASObjectUserApi {
             new List<String>(),
             new List<String> { 'Authorization' },
             OASUserGetSubnetsV1Response.class
+        );
+    }
+    /**
+     * Send password reset
+     * Send the password reset email
+     * @param pkiUserID  (required)
+     * @param body  (required)
+     * @return OASUserSendPasswordResetV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public OASUserSendPasswordResetV1Response userSendPasswordResetV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiUserID'), 'pkiUserID');
+        client.assertNotNull(params.get('body'), 'body');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (OASUserSendPasswordResetV1Response) client.invoke(
+            'POST', '/1/object/user/{pkiUserID}/sendPasswordReset',
+            (Object) params.get('body'),
+            query, form,
+            new Map<String, Object>{
+                'pkiUserID' => (Integer) params.get('pkiUserID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Authorization' },
+            OASUserSendPasswordResetV1Response.class
         );
     }
 }

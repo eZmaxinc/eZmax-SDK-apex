@@ -11,32 +11,44 @@
  */
 
 /**
- * OASPaymenttermGetAutocompleteV2Respo
+ * Payload for POST /2/object/paymentterm/getAutocomplete
  */
-public class OASPaymenttermGetAutocompleteV2Respo {
+public class OASPaymenttermGetAutocompleteV2Respo implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Paymentterm autocomplete element response.
+     * @return aObjPaymentterm
      */
-    public OASPaymenttermGetAutocompleteV2Respo mPayload { get; set; }
+    public List<OASPaymenttermAutocompleteElementRes> aObjPaymentterm { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objPaymentterm' => 'aObjPaymentterm'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASPaymenttermGetAutocompleteV2Respo() {
+        aObjPaymentterm = new List<OASPaymenttermAutocompleteElementRes>();
+    }
 
     public static OASPaymenttermGetAutocompleteV2Respo getExample() {
-        OASPaymenttermGetAutocompleteV2Respo paymenttermGetAutocompleteV2ResponseAllOf = new OASPaymenttermGetAutocompleteV2Respo();
-          paymenttermGetAutocompleteV2ResponseAllOf.mPayload = OASPaymenttermGetAutocompleteV2Respo.getExample();
-        return paymenttermGetAutocompleteV2ResponseAllOf;
+        OASPaymenttermGetAutocompleteV2Respo paymenttermGetAutocompleteV2ResponseMPayload = new OASPaymenttermGetAutocompleteV2Respo();
+          paymenttermGetAutocompleteV2ResponseMPayload.aObjPaymentterm = new List<OASPaymenttermAutocompleteElementRes>{OASPaymenttermAutocompleteElementRes.getExample()};
+        return paymenttermGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPaymenttermGetAutocompleteV2Respo) {           
-            OASPaymenttermGetAutocompleteV2Respo paymenttermGetAutocompleteV2ResponseAllOf = (OASPaymenttermGetAutocompleteV2Respo) obj;
-            return this.mPayload == paymenttermGetAutocompleteV2ResponseAllOf.mPayload;
+            OASPaymenttermGetAutocompleteV2Respo paymenttermGetAutocompleteV2ResponseMPayload = (OASPaymenttermGetAutocompleteV2Respo) obj;
+            return this.aObjPaymentterm == paymenttermGetAutocompleteV2ResponseMPayload.aObjPaymentterm;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjPaymentterm == null ? 0 : System.hashCode(aObjPaymentterm));
         return hashCode;
     }
 }

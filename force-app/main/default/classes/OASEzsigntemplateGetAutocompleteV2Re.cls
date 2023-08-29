@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigntemplateGetAutocompleteV2Re
+ * Payload for POST /2/object/ezsigntemplate/getAutocomplete
  */
-public class OASEzsigntemplateGetAutocompleteV2Re {
+public class OASEzsigntemplateGetAutocompleteV2Re implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Ezsigntemplate autocomplete element response.
+     * @return aObjEzsigntemplate
      */
-    public OASEzsigntemplateGetAutocompleteV2Re mPayload { get; set; }
+    public List<OASEzsigntemplateAutocompleteElement> aObjEzsigntemplate { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsigntemplate' => 'aObjEzsigntemplate'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntemplateGetAutocompleteV2Re() {
+        aObjEzsigntemplate = new List<OASEzsigntemplateAutocompleteElement>();
+    }
 
     public static OASEzsigntemplateGetAutocompleteV2Re getExample() {
-        OASEzsigntemplateGetAutocompleteV2Re ezsigntemplateGetAutocompleteV2ResponseAllOf = new OASEzsigntemplateGetAutocompleteV2Re();
-          ezsigntemplateGetAutocompleteV2ResponseAllOf.mPayload = OASEzsigntemplateGetAutocompleteV2Re.getExample();
-        return ezsigntemplateGetAutocompleteV2ResponseAllOf;
+        OASEzsigntemplateGetAutocompleteV2Re ezsigntemplateGetAutocompleteV2ResponseMPayload = new OASEzsigntemplateGetAutocompleteV2Re();
+          ezsigntemplateGetAutocompleteV2ResponseMPayload.aObjEzsigntemplate = new List<OASEzsigntemplateAutocompleteElement>{OASEzsigntemplateAutocompleteElement.getExample()};
+        return ezsigntemplateGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplateGetAutocompleteV2Re) {           
-            OASEzsigntemplateGetAutocompleteV2Re ezsigntemplateGetAutocompleteV2ResponseAllOf = (OASEzsigntemplateGetAutocompleteV2Re) obj;
-            return this.mPayload == ezsigntemplateGetAutocompleteV2ResponseAllOf.mPayload;
+            OASEzsigntemplateGetAutocompleteV2Re ezsigntemplateGetAutocompleteV2ResponseMPayload = (OASEzsigntemplateGetAutocompleteV2Re) obj;
+            return this.aObjEzsigntemplate == ezsigntemplateGetAutocompleteV2ResponseMPayload.aObjEzsigntemplate;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsigntemplate == null ? 0 : System.hashCode(aObjEzsigntemplate));
         return hashCode;
     }
 }

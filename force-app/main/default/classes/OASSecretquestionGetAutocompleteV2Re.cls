@@ -11,32 +11,44 @@
  */
 
 /**
- * OASSecretquestionGetAutocompleteV2Re
+ * Payload for POST /2/object/secretquestion/getAutocomplete
  */
-public class OASSecretquestionGetAutocompleteV2Re {
+public class OASSecretquestionGetAutocompleteV2Re implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Secretquestion autocomplete element response.
+     * @return aObjSecretquestion
      */
-    public OASSecretquestionGetAutocompleteV2Re mPayload { get; set; }
+    public List<OASSecretquestionAutocompleteElement> aObjSecretquestion { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objSecretquestion' => 'aObjSecretquestion'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASSecretquestionGetAutocompleteV2Re() {
+        aObjSecretquestion = new List<OASSecretquestionAutocompleteElement>();
+    }
 
     public static OASSecretquestionGetAutocompleteV2Re getExample() {
-        OASSecretquestionGetAutocompleteV2Re secretquestionGetAutocompleteV2ResponseAllOf = new OASSecretquestionGetAutocompleteV2Re();
-          secretquestionGetAutocompleteV2ResponseAllOf.mPayload = OASSecretquestionGetAutocompleteV2Re.getExample();
-        return secretquestionGetAutocompleteV2ResponseAllOf;
+        OASSecretquestionGetAutocompleteV2Re secretquestionGetAutocompleteV2ResponseMPayload = new OASSecretquestionGetAutocompleteV2Re();
+          secretquestionGetAutocompleteV2ResponseMPayload.aObjSecretquestion = new List<OASSecretquestionAutocompleteElement>{OASSecretquestionAutocompleteElement.getExample()};
+        return secretquestionGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASSecretquestionGetAutocompleteV2Re) {           
-            OASSecretquestionGetAutocompleteV2Re secretquestionGetAutocompleteV2ResponseAllOf = (OASSecretquestionGetAutocompleteV2Re) obj;
-            return this.mPayload == secretquestionGetAutocompleteV2ResponseAllOf.mPayload;
+            OASSecretquestionGetAutocompleteV2Re secretquestionGetAutocompleteV2ResponseMPayload = (OASSecretquestionGetAutocompleteV2Re) obj;
+            return this.aObjSecretquestion == secretquestionGetAutocompleteV2ResponseMPayload.aObjSecretquestion;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjSecretquestion == null ? 0 : System.hashCode(aObjSecretquestion));
         return hashCode;
     }
 }

@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigntemplateformfieldgroupCreat
+ * Payload for POST /1/object/ezsigntemplateformfieldgroup
  */
-public class OASEzsigntemplateformfieldgroupCreat {
+public class OASEzsigntemplateformfieldgroupCreat implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiEzsigntemplateformfieldgroupID
      */
-    public OASEzsigntemplateformfieldgroupCreat mPayload { get; set; }
+    public List<Integer> aPkiEzsigntemplateformfieldgroupID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsigntemplateformfieldgroupID' => 'aPkiEzsigntemplateformfieldgroupID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntemplateformfieldgroupCreat() {
+        aPkiEzsigntemplateformfieldgroupID = new List<Integer>();
+    }
 
     public static OASEzsigntemplateformfieldgroupCreat getExample() {
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf = new OASEzsigntemplateformfieldgroupCreat();
-          ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf.mPayload = OASEzsigntemplateformfieldgroupCreat.getExample();
-        return ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf;
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload = new OASEzsigntemplateformfieldgroupCreat();
+          ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload.aPkiEzsigntemplateformfieldgroupID = new List<Integer>{Integer.getExample()};
+        return ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplateformfieldgroupCreat) {           
-            OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf = (OASEzsigntemplateformfieldgroupCreat) obj;
-            return this.mPayload == ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf.mPayload;
+            OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload = (OASEzsigntemplateformfieldgroupCreat) obj;
+            return this.aPkiEzsigntemplateformfieldgroupID == ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload.aPkiEzsigntemplateformfieldgroupID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsigntemplateformfieldgroupID == null ? 0 : System.hashCode(aPkiEzsigntemplateformfieldgroupID));
         return hashCode;
     }
 }

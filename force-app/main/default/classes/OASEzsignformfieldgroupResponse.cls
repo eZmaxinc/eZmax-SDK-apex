@@ -82,6 +82,7 @@ public class OASEzsignformfieldgroupResponse {
     /**
      * The maximum length for the value in the Ezsignformfieldgroup\n\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
      * minimum: 0
+     * maximum: 65535
      * @return iEzsignformfieldgroupMaxlength
      */
     public Integer iEzsignformfieldgroupMaxlength { get; set; }
@@ -91,6 +92,12 @@ public class OASEzsignformfieldgroupResponse {
      * @return bEzsignformfieldgroupEncrypted
      */
     public Boolean bEzsignformfieldgroupEncrypted { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupTextvalidation
+     * @return eEzsignformfieldgroupTextvalidation
+     */
+    public OASEnumTextvalidation eEzsignformfieldgroupTextvalidation { get; set; }
 
     /**
      * A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.\n\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
@@ -124,6 +131,7 @@ public class OASEzsignformfieldgroupResponse {
           ezsignformfieldgroupResponse.bEzsignformfieldgroupReadonly = true;
           ezsignformfieldgroupResponse.iEzsignformfieldgroupMaxlength = 75;
           ezsignformfieldgroupResponse.bEzsignformfieldgroupEncrypted = true;
+          ezsignformfieldgroupResponse.eEzsignformfieldgroupTextvalidation = OASEnumTextvalidation.getExample();
           ezsignformfieldgroupResponse.sEzsignformfieldgroupRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
           ezsignformfieldgroupResponse.tEzsignformfieldgroupTooltip = 'Please enter a valid email address';
           ezsignformfieldgroupResponse.eEzsignformfieldgroupTooltipposition = OASFieldEEzsignformfieldgroupTooltip.getExample();
@@ -145,6 +153,7 @@ public class OASEzsignformfieldgroupResponse {
                 && this.bEzsignformfieldgroupReadonly == ezsignformfieldgroupResponse.bEzsignformfieldgroupReadonly
                 && this.iEzsignformfieldgroupMaxlength == ezsignformfieldgroupResponse.iEzsignformfieldgroupMaxlength
                 && this.bEzsignformfieldgroupEncrypted == ezsignformfieldgroupResponse.bEzsignformfieldgroupEncrypted
+                && this.eEzsignformfieldgroupTextvalidation == ezsignformfieldgroupResponse.eEzsignformfieldgroupTextvalidation
                 && this.sEzsignformfieldgroupRegexp == ezsignformfieldgroupResponse.sEzsignformfieldgroupRegexp
                 && this.tEzsignformfieldgroupTooltip == ezsignformfieldgroupResponse.tEzsignformfieldgroupTooltip
                 && this.eEzsignformfieldgroupTooltipposition == ezsignformfieldgroupResponse.eEzsignformfieldgroupTooltipposition;
@@ -166,6 +175,7 @@ public class OASEzsignformfieldgroupResponse {
         hashCode = (17 * hashCode) + (bEzsignformfieldgroupReadonly == null ? 0 : System.hashCode(bEzsignformfieldgroupReadonly));
         hashCode = (17 * hashCode) + (iEzsignformfieldgroupMaxlength == null ? 0 : System.hashCode(iEzsignformfieldgroupMaxlength));
         hashCode = (17 * hashCode) + (bEzsignformfieldgroupEncrypted == null ? 0 : System.hashCode(bEzsignformfieldgroupEncrypted));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupTextvalidation == null ? 0 : System.hashCode(eEzsignformfieldgroupTextvalidation));
         hashCode = (17 * hashCode) + (sEzsignformfieldgroupRegexp == null ? 0 : System.hashCode(sEzsignformfieldgroupRegexp));
         hashCode = (17 * hashCode) + (tEzsignformfieldgroupTooltip == null ? 0 : System.hashCode(tEzsignformfieldgroupTooltip));
         hashCode = (17 * hashCode) + (eEzsignformfieldgroupTooltipposition == null ? 0 : System.hashCode(eEzsignformfieldgroupTooltipposition));

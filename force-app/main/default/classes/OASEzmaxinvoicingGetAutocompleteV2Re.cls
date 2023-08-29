@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzmaxinvoicingGetAutocompleteV2Re
+ * Payload for POST /2/object/ezmaxinvoicing/getAutocomplete
  */
-public class OASEzmaxinvoicingGetAutocompleteV2Re {
+public class OASEzmaxinvoicingGetAutocompleteV2Re implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Ezmaxinvoicing autocomplete element response.
+     * @return aObjEzmaxinvoicing
      */
-    public OASEzmaxinvoicingGetAutocompleteV2Re mPayload { get; set; }
+    public List<OASEzmaxinvoicingAutocompleteElement> aObjEzmaxinvoicing { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzmaxinvoicing' => 'aObjEzmaxinvoicing'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzmaxinvoicingGetAutocompleteV2Re() {
+        aObjEzmaxinvoicing = new List<OASEzmaxinvoicingAutocompleteElement>();
+    }
 
     public static OASEzmaxinvoicingGetAutocompleteV2Re getExample() {
-        OASEzmaxinvoicingGetAutocompleteV2Re ezmaxinvoicingGetAutocompleteV2ResponseAllOf = new OASEzmaxinvoicingGetAutocompleteV2Re();
-          ezmaxinvoicingGetAutocompleteV2ResponseAllOf.mPayload = OASEzmaxinvoicingGetAutocompleteV2Re.getExample();
-        return ezmaxinvoicingGetAutocompleteV2ResponseAllOf;
+        OASEzmaxinvoicingGetAutocompleteV2Re ezmaxinvoicingGetAutocompleteV2ResponseMPayload = new OASEzmaxinvoicingGetAutocompleteV2Re();
+          ezmaxinvoicingGetAutocompleteV2ResponseMPayload.aObjEzmaxinvoicing = new List<OASEzmaxinvoicingAutocompleteElement>{OASEzmaxinvoicingAutocompleteElement.getExample()};
+        return ezmaxinvoicingGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzmaxinvoicingGetAutocompleteV2Re) {           
-            OASEzmaxinvoicingGetAutocompleteV2Re ezmaxinvoicingGetAutocompleteV2ResponseAllOf = (OASEzmaxinvoicingGetAutocompleteV2Re) obj;
-            return this.mPayload == ezmaxinvoicingGetAutocompleteV2ResponseAllOf.mPayload;
+            OASEzmaxinvoicingGetAutocompleteV2Re ezmaxinvoicingGetAutocompleteV2ResponseMPayload = (OASEzmaxinvoicingGetAutocompleteV2Re) obj;
+            return this.aObjEzmaxinvoicing == ezmaxinvoicingGetAutocompleteV2ResponseMPayload.aObjEzmaxinvoicing;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzmaxinvoicing == null ? 0 : System.hashCode(aObjEzmaxinvoicing));
         return hashCode;
     }
 }

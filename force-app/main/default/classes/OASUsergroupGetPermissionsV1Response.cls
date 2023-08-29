@@ -11,32 +11,44 @@
  */
 
 /**
- * OASUsergroupGetPermissionsV1Response
+ * Response for GET /1/object/usergroup/{pkiUsergroupID}/getPermissions
  */
-public class OASUsergroupGetPermissionsV1Response {
+public class OASUsergroupGetPermissionsV1Response implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjModulegroup
+     * @return aObjModulegroup
      */
-    public OASUsergroupGetPermissionsV1Response mPayload { get; set; }
+    public List<OASModulegroupResponseCompound> aObjModulegroup { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objModulegroup' => 'aObjModulegroup'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASUsergroupGetPermissionsV1Response() {
+        aObjModulegroup = new List<OASModulegroupResponseCompound>();
+    }
 
     public static OASUsergroupGetPermissionsV1Response getExample() {
-        OASUsergroupGetPermissionsV1Response usergroupGetPermissionsV1ResponseAllOf = new OASUsergroupGetPermissionsV1Response();
-          usergroupGetPermissionsV1ResponseAllOf.mPayload = OASUsergroupGetPermissionsV1Response.getExample();
-        return usergroupGetPermissionsV1ResponseAllOf;
+        OASUsergroupGetPermissionsV1Response usergroupGetPermissionsV1ResponseMPayload = new OASUsergroupGetPermissionsV1Response();
+          usergroupGetPermissionsV1ResponseMPayload.aObjModulegroup = new List<OASModulegroupResponseCompound>{OASModulegroupResponseCompound.getExample()};
+        return usergroupGetPermissionsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupGetPermissionsV1Response) {           
-            OASUsergroupGetPermissionsV1Response usergroupGetPermissionsV1ResponseAllOf = (OASUsergroupGetPermissionsV1Response) obj;
-            return this.mPayload == usergroupGetPermissionsV1ResponseAllOf.mPayload;
+            OASUsergroupGetPermissionsV1Response usergroupGetPermissionsV1ResponseMPayload = (OASUsergroupGetPermissionsV1Response) obj;
+            return this.aObjModulegroup == usergroupGetPermissionsV1ResponseMPayload.aObjModulegroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjModulegroup == null ? 0 : System.hashCode(aObjModulegroup));
         return hashCode;
     }
 }

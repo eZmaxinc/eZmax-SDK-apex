@@ -11,9 +11,21 @@
  */
 
 /**
- * OASUsergroupGetListV1ResponseMPayloa
+ * Payload for GET /1/object/usergroup/getList
  */
-public class OASUsergroupGetListV1ResponseMPayloa implements OAS.MappedProperties {
+public class OASUsergroupGetListV1ResponseMPayloa implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjUsergroup
      * @return aObjUsergroup
@@ -33,21 +45,27 @@ public class OASUsergroupGetListV1ResponseMPayloa implements OAS.MappedPropertie
     }
 
     public static OASUsergroupGetListV1ResponseMPayloa getExample() {
-        OASUsergroupGetListV1ResponseMPayloa usergroupGetListV1ResponseMPayloadAllOf = new OASUsergroupGetListV1ResponseMPayloa();
-          usergroupGetListV1ResponseMPayloadAllOf.aObjUsergroup = new List<OASUsergroupListElement>{OASUsergroupListElement.getExample()};
-        return usergroupGetListV1ResponseMPayloadAllOf;
+        OASUsergroupGetListV1ResponseMPayloa usergroupGetListV1ResponseMPayload = new OASUsergroupGetListV1ResponseMPayloa();
+          usergroupGetListV1ResponseMPayload.iRowReturned = 100;
+          usergroupGetListV1ResponseMPayload.iRowFiltered = 533;
+          usergroupGetListV1ResponseMPayload.aObjUsergroup = new List<OASUsergroupListElement>{OASUsergroupListElement.getExample()};
+        return usergroupGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupGetListV1ResponseMPayloa) {           
-            OASUsergroupGetListV1ResponseMPayloa usergroupGetListV1ResponseMPayloadAllOf = (OASUsergroupGetListV1ResponseMPayloa) obj;
-            return this.aObjUsergroup == usergroupGetListV1ResponseMPayloadAllOf.aObjUsergroup;
+            OASUsergroupGetListV1ResponseMPayloa usergroupGetListV1ResponseMPayload = (OASUsergroupGetListV1ResponseMPayloa) obj;
+            return this.iRowReturned == usergroupGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == usergroupGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjUsergroup == usergroupGetListV1ResponseMPayload.aObjUsergroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjUsergroup == null ? 0 : System.hashCode(aObjUsergroup));
         return hashCode;
     }

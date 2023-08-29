@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigntemplateformfieldgroupGetOb
+ * Payload for GET /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
  */
 public class OASEzsigntemplateformfieldgroupGetOb {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsigntemplateformfieldgroup
+     * @return objEzsigntemplateformfieldgroup
      */
-    public OASEzsigntemplateformfieldgroupGetOb mPayload { get; set; }
+    public OASEzsigntemplateformfieldgroupRespo objEzsigntemplateformfieldgroup { get; set; }
 
     public static OASEzsigntemplateformfieldgroupGetOb getExample() {
-        OASEzsigntemplateformfieldgroupGetOb ezsigntemplateformfieldgroupGetObjectV2ResponseAllOf = new OASEzsigntemplateformfieldgroupGetOb();
-          ezsigntemplateformfieldgroupGetObjectV2ResponseAllOf.mPayload = OASEzsigntemplateformfieldgroupGetOb.getExample();
-        return ezsigntemplateformfieldgroupGetObjectV2ResponseAllOf;
+        OASEzsigntemplateformfieldgroupGetOb ezsigntemplateformfieldgroupGetObjectV2ResponseMPayload = new OASEzsigntemplateformfieldgroupGetOb();
+          ezsigntemplateformfieldgroupGetObjectV2ResponseMPayload.objEzsigntemplateformfieldgroup = OASEzsigntemplateformfieldgroupRespo.getExample();
+        return ezsigntemplateformfieldgroupGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplateformfieldgroupGetOb) {           
-            OASEzsigntemplateformfieldgroupGetOb ezsigntemplateformfieldgroupGetObjectV2ResponseAllOf = (OASEzsigntemplateformfieldgroupGetOb) obj;
-            return this.mPayload == ezsigntemplateformfieldgroupGetObjectV2ResponseAllOf.mPayload;
+            OASEzsigntemplateformfieldgroupGetOb ezsigntemplateformfieldgroupGetObjectV2ResponseMPayload = (OASEzsigntemplateformfieldgroupGetOb) obj;
+            return this.objEzsigntemplateformfieldgroup == ezsigntemplateformfieldgroupGetObjectV2ResponseMPayload.objEzsigntemplateformfieldgroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsigntemplateformfieldgroup == null ? 0 : System.hashCode(objEzsigntemplateformfieldgroup));
         return hashCode;
     }
 }

@@ -11,9 +11,21 @@
  */
 
 /**
- * OASWebhookEzsignEzsignsignerAcceptcl
+ * This is the base Webhook object
  */
-public class OASWebhookEzsignEzsignsignerAcceptcl {
+public class OASWebhookEzsignEzsignsignerAcceptcl implements OASCommonWebhook, OAS.MappedProperties {
+    /**
+     * Get objWebhook
+     * @return objWebhook
+     */
+    public OASCustomWebhookResponse objWebhook { get; set; }
+
+    /**
+     * An array containing details of previous attempts that were made to deliver the message.\nThe array is empty if it\'s the first attempt.
+     * @return aObjAttempt
+     */
+    public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
+
     /**
      * Get objEzsignfolder
      * @return objEzsignfolder
@@ -26,24 +38,42 @@ public class OASWebhookEzsignEzsignsignerAcceptcl {
      */
     public OASEzsignfoldersignerassociationResp objEzsignfoldersignerassociation { get; set; }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objAttempt' => 'aObjAttempt'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASWebhookEzsignEzsignsignerAcceptcl() {
+        aObjAttempt = new List<OASAttemptResponseCompound>();
+    }
+
     public static OASWebhookEzsignEzsignsignerAcceptcl getExample() {
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf = new OASWebhookEzsignEzsignsignerAcceptcl();
-          webhookEzsignEzsignsignerAcceptclauseAllOf.objEzsignfolder = OASEzsignfolderResponse.getExample();
-          webhookEzsignEzsignsignerAcceptclauseAllOf.objEzsignfoldersignerassociation = OASEzsignfoldersignerassociationResp.getExample();
-        return webhookEzsignEzsignsignerAcceptclauseAllOf;
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause = new OASWebhookEzsignEzsignsignerAcceptcl();
+          webhookEzsignEzsignsignerAcceptclause.objWebhook = OASCustomWebhookResponse.getExample();
+          webhookEzsignEzsignsignerAcceptclause.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
+          webhookEzsignEzsignsignerAcceptclause.objEzsignfolder = OASEzsignfolderResponse.getExample();
+          webhookEzsignEzsignsignerAcceptclause.objEzsignfoldersignerassociation = OASEzsignfoldersignerassociationResp.getExample();
+        return webhookEzsignEzsignsignerAcceptclause;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookEzsignEzsignsignerAcceptcl) {           
-            OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf = (OASWebhookEzsignEzsignsignerAcceptcl) obj;
-            return this.objEzsignfolder == webhookEzsignEzsignsignerAcceptclauseAllOf.objEzsignfolder
-                && this.objEzsignfoldersignerassociation == webhookEzsignEzsignsignerAcceptclauseAllOf.objEzsignfoldersignerassociation;
+            OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause = (OASWebhookEzsignEzsignsignerAcceptcl) obj;
+            return this.objWebhook == webhookEzsignEzsignsignerAcceptclause.objWebhook
+                && this.aObjAttempt == webhookEzsignEzsignsignerAcceptclause.aObjAttempt
+                && this.objEzsignfolder == webhookEzsignEzsignsignerAcceptclause.objEzsignfolder
+                && this.objEzsignfoldersignerassociation == webhookEzsignEzsignsignerAcceptclause.objEzsignfoldersignerassociation;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (objWebhook == null ? 0 : System.hashCode(objWebhook));
+        hashCode = (17 * hashCode) + (aObjAttempt == null ? 0 : System.hashCode(aObjAttempt));
         hashCode = (17 * hashCode) + (objEzsignfolder == null ? 0 : System.hashCode(objEzsignfolder));
         hashCode = (17 * hashCode) + (objEzsignfoldersignerassociation == null ? 0 : System.hashCode(objEzsignfoldersignerassociation));
         return hashCode;

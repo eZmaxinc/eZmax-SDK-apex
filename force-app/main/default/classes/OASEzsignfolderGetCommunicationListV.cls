@@ -11,7 +11,7 @@
  */
 
 /**
- * OASEzsignfolderGetCommunicationListV
+ * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList
  */
 public class OASEzsignfolderGetCommunicationListV implements OAS.MappedProperties {
     /**
@@ -33,15 +33,15 @@ public class OASEzsignfolderGetCommunicationListV implements OAS.MappedPropertie
     }
 
     public static OASEzsignfolderGetCommunicationListV getExample() {
-        OASEzsignfolderGetCommunicationListV ezsignfolderGetCommunicationListV1ResponseMPayloadAllOf = new OASEzsignfolderGetCommunicationListV();
-          ezsignfolderGetCommunicationListV1ResponseMPayloadAllOf.aObjCommunication = new List<OASCustomCommunicationListElementRes>{OASCustomCommunicationListElementRes.getExample()};
-        return ezsignfolderGetCommunicationListV1ResponseMPayloadAllOf;
+        OASEzsignfolderGetCommunicationListV ezsignfolderGetCommunicationListV1ResponseMPayload = new OASEzsignfolderGetCommunicationListV();
+          ezsignfolderGetCommunicationListV1ResponseMPayload.aObjCommunication = new List<OASCustomCommunicationListElementRes>{OASCustomCommunicationListElementRes.getExample()};
+        return ezsignfolderGetCommunicationListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderGetCommunicationListV) {           
-            OASEzsignfolderGetCommunicationListV ezsignfolderGetCommunicationListV1ResponseMPayloadAllOf = (OASEzsignfolderGetCommunicationListV) obj;
-            return this.aObjCommunication == ezsignfolderGetCommunicationListV1ResponseMPayloadAllOf.aObjCommunication;
+            OASEzsignfolderGetCommunicationListV ezsignfolderGetCommunicationListV1ResponseMPayload = (OASEzsignfolderGetCommunicationListV) obj;
+            return this.aObjCommunication == ezsignfolderGetCommunicationListV1ResponseMPayload.aObjCommunication;
         }
         return false;
     }

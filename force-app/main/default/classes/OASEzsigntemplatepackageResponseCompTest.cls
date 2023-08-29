@@ -2,85 +2,94 @@
 private class OASEzsigntemplatepackageResponseCompTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf1 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf2 = ezsigntemplatepackageResponseCompoundAllOf1;
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf3 = new OASEzsigntemplatepackageResponseComp();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf4 = ezsigntemplatepackageResponseCompoundAllOf3;
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound1 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound2 = ezsigntemplatepackageResponseCompound1;
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound3 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound4 = ezsigntemplatepackageResponseCompound3;
 
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf1.equals(ezsigntemplatepackageResponseCompoundAllOf2));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf2.equals(ezsigntemplatepackageResponseCompoundAllOf1));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf1.equals(ezsigntemplatepackageResponseCompoundAllOf1));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf3.equals(ezsigntemplatepackageResponseCompoundAllOf4));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf4.equals(ezsigntemplatepackageResponseCompoundAllOf3));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf3.equals(ezsigntemplatepackageResponseCompoundAllOf3));
+        System.assert(ezsigntemplatepackageResponseCompound1.equals(ezsigntemplatepackageResponseCompound2));
+        System.assert(ezsigntemplatepackageResponseCompound2.equals(ezsigntemplatepackageResponseCompound1));
+        System.assert(ezsigntemplatepackageResponseCompound1.equals(ezsigntemplatepackageResponseCompound1));
+        System.assert(ezsigntemplatepackageResponseCompound3.equals(ezsigntemplatepackageResponseCompound4));
+        System.assert(ezsigntemplatepackageResponseCompound4.equals(ezsigntemplatepackageResponseCompound3));
+        System.assert(ezsigntemplatepackageResponseCompound3.equals(ezsigntemplatepackageResponseCompound3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf1 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf2 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf3 = new OASEzsigntemplatepackageResponseComp();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf4 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound1 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound2 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound3 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound4 = new OASEzsigntemplatepackageResponseComp();
 
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf1.equals(ezsigntemplatepackageResponseCompoundAllOf2));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf2.equals(ezsigntemplatepackageResponseCompoundAllOf1));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf3.equals(ezsigntemplatepackageResponseCompoundAllOf4));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf4.equals(ezsigntemplatepackageResponseCompoundAllOf3));
+        System.assert(ezsigntemplatepackageResponseCompound1.equals(ezsigntemplatepackageResponseCompound2));
+        System.assert(ezsigntemplatepackageResponseCompound2.equals(ezsigntemplatepackageResponseCompound1));
+        System.assert(ezsigntemplatepackageResponseCompound3.equals(ezsigntemplatepackageResponseCompound4));
+        System.assert(ezsigntemplatepackageResponseCompound4.equals(ezsigntemplatepackageResponseCompound3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf1 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf2 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound1 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound2 = new OASEzsigntemplatepackageResponseComp();
 
-        System.assertEquals(false, ezsigntemplatepackageResponseCompoundAllOf1.equals('foo'));
-        System.assertEquals(false, ezsigntemplatepackageResponseCompoundAllOf2.equals('foo'));
+        System.assertEquals(false, ezsigntemplatepackageResponseCompound1.equals('foo'));
+        System.assertEquals(false, ezsigntemplatepackageResponseCompound2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf1 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf2 = new OASEzsigntemplatepackageResponseComp();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf3;
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound1 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound2 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound3;
 
-        System.assertEquals(false, ezsigntemplatepackageResponseCompoundAllOf1.equals(ezsigntemplatepackageResponseCompoundAllOf3));
-        System.assertEquals(false, ezsigntemplatepackageResponseCompoundAllOf2.equals(ezsigntemplatepackageResponseCompoundAllOf3));
+        System.assertEquals(false, ezsigntemplatepackageResponseCompound1.equals(ezsigntemplatepackageResponseCompound3));
+        System.assertEquals(false, ezsigntemplatepackageResponseCompound2.equals(ezsigntemplatepackageResponseCompound3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf1 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf2 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound1 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound2 = new OASEzsigntemplatepackageResponseComp();
 
-        System.assertEquals(ezsigntemplatepackageResponseCompoundAllOf1.hashCode(), ezsigntemplatepackageResponseCompoundAllOf1.hashCode());
-        System.assertEquals(ezsigntemplatepackageResponseCompoundAllOf2.hashCode(), ezsigntemplatepackageResponseCompoundAllOf2.hashCode());
+        System.assertEquals(ezsigntemplatepackageResponseCompound1.hashCode(), ezsigntemplatepackageResponseCompound1.hashCode());
+        System.assertEquals(ezsigntemplatepackageResponseCompound2.hashCode(), ezsigntemplatepackageResponseCompound2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf1 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf2 = OASEzsigntemplatepackageResponseComp.getExample();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf3 = new OASEzsigntemplatepackageResponseComp();
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf4 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound1 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound2 = OASEzsigntemplatepackageResponseComp.getExample();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound3 = new OASEzsigntemplatepackageResponseComp();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound4 = new OASEzsigntemplatepackageResponseComp();
 
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf1.equals(ezsigntemplatepackageResponseCompoundAllOf2));
-        System.assert(ezsigntemplatepackageResponseCompoundAllOf3.equals(ezsigntemplatepackageResponseCompoundAllOf4));
-        System.assertEquals(ezsigntemplatepackageResponseCompoundAllOf1.hashCode(), ezsigntemplatepackageResponseCompoundAllOf2.hashCode());
-        System.assertEquals(ezsigntemplatepackageResponseCompoundAllOf3.hashCode(), ezsigntemplatepackageResponseCompoundAllOf4.hashCode());
+        System.assert(ezsigntemplatepackageResponseCompound1.equals(ezsigntemplatepackageResponseCompound2));
+        System.assert(ezsigntemplatepackageResponseCompound3.equals(ezsigntemplatepackageResponseCompound4));
+        System.assertEquals(ezsigntemplatepackageResponseCompound1.hashCode(), ezsigntemplatepackageResponseCompound2.hashCode());
+        System.assertEquals(ezsigntemplatepackageResponseCompound3.hashCode(), ezsigntemplatepackageResponseCompound4.hashCode());
     }
 
     @isTest
     private static void maintainRenamedProperties() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf = new OASEzsigntemplatepackageResponseComp();
-        Map<String, String> x-property-mappings = ezsigntemplatepackageResponseCompoundAllOf.getx-property-mappings();
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound = new OASEzsigntemplatepackageResponseComp();
+        Map<String, String> x-property-mappings = ezsigntemplatepackageResponseCompound.getx-property-mappings();
         System.assertEquals('aObjEzsigntemplatepackagesigner', x-property-mappings.get('a_objEzsigntemplatepackagesigner'));
         System.assertEquals('aObjEzsigntemplatepackagemembership', x-property-mappings.get('a_objEzsigntemplatepackagemembership'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
-        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompoundAllOf = new OASEzsigntemplatepackageResponseComp();
-        System.assertEquals(new List<OASEzsigntemplatepackagesignerRespon>(), ezsigntemplatepackageResponseCompoundAllOf.aObjEzsigntemplatepackagesigner);
-        System.assertEquals(new List<OASEzsigntemplatepackagemembershipRe>(), ezsigntemplatepackageResponseCompoundAllOf.aObjEzsigntemplatepackagemembership);
+        OASEzsigntemplatepackageResponseComp ezsigntemplatepackageResponseCompound = new OASEzsigntemplatepackageResponseComp();
+        System.assertEquals(new List<OASEzsigntemplatepackagesignerRespon>(), ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagesigner);
+        System.assertEquals(new List<OASEzsigntemplatepackagemembershipRe>(), ezsigntemplatepackageResponseCompound.aObjEzsigntemplatepackagemembership);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.pkiEzsigntemplatepackageID);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.fkiEzsignfoldertypeID);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.fkiLanguageID);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.sLanguageNameX);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.sEzsigntemplatepackageDescription);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageAdminonly);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageNeedvalidation);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageIsactive);
+        System.assertEquals(null, ezsigntemplatepackageResponseCompound.sEzsignfoldertypeNameX);
     }
 }

@@ -11,9 +11,33 @@
  */
 
 /**
- * OASCommonResponseObjDebugPayloadGetL
+ * This is a debug object containing debugging information on the actual function
  */
-public class OASCommonResponseObjDebugPayloadGetL implements OAS.MappedProperties {
+public class OASCommonResponseObjDebugPayloadGetL implements OASCommonResponseObjDebugPayload, OAS.MappedProperties {
+    /**
+     * The minimum version of the function that can be called
+     * @return iVersionMin
+     */
+    public Integer iVersionMin { get; set; }
+
+    /**
+     * The maximum version of the function that can be called
+     * @return iVersionMax
+     */
+    public Integer iVersionMax { get; set; }
+
+    /**
+     * An array of permissions required to access this function.\n\nIf the value "0" is present in the array, anyone can call this function.\n\nYou must have one of the permission to access the function. You don\'t need to have all of them.
+     * @return aRequiredPermission
+     */
+    public List<Integer> aRequiredPermission { get; set; }
+
+    /**
+     * Wheter the current route is deprecated or not
+     * @return bVersionDeprecated
+     */
+    public Boolean bVersionDeprecated { get; set; }
+
     /**
      * Get aFilter
      * @return aFilter
@@ -27,6 +51,7 @@ public class OASCommonResponseObjDebugPayloadGetL implements OAS.MappedPropertie
     public Map<String, String> aOrderBy { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_RequiredPermission' => 'aRequiredPermission',
         'a_Filter' => 'aFilter',
         'a_OrderBy' => 'aOrderBy'
     };
@@ -36,6 +61,17 @@ public class OASCommonResponseObjDebugPayloadGetL implements OAS.MappedPropertie
     }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_RequiredPermission' => 'aRequiredPermission',
+        'a_Filter' => 'aFilter',
+        'a_OrderBy' => 'aOrderBy'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_RequiredPermission' => 'aRequiredPermission',
         'a_Filter' => 'aFilter',
         'a_OrderBy' => 'aOrderBy'
     };
@@ -45,27 +81,40 @@ public class OASCommonResponseObjDebugPayloadGetL implements OAS.MappedPropertie
     }
 
     public OASCommonResponseObjDebugPayloadGetL() {
+        aRequiredPermission = new List<Integer>();
         aOrderBy = new Map<String, String>();
     }
 
     public static OASCommonResponseObjDebugPayloadGetL getExample() {
-        OASCommonResponseObjDebugPayloadGetL commonResponseObjDebugPayloadGetListAllOf = new OASCommonResponseObjDebugPayloadGetL();
-          commonResponseObjDebugPayloadGetListAllOf.aFilter = OASCommonResponseFilter.getExample();
-          commonResponseObjDebugPayloadGetListAllOf.aOrderBy = new Map<String, String>{'key'=>''};
-        return commonResponseObjDebugPayloadGetListAllOf;
+        OASCommonResponseObjDebugPayloadGetL commonResponseObjDebugPayloadGetList = new OASCommonResponseObjDebugPayloadGetL();
+          commonResponseObjDebugPayloadGetList.iVersionMin = 1;
+          commonResponseObjDebugPayloadGetList.iVersionMax = 2;
+          commonResponseObjDebugPayloadGetList.aRequiredPermission = new List<Integer>{117};
+          commonResponseObjDebugPayloadGetList.bVersionDeprecated = false;
+          commonResponseObjDebugPayloadGetList.aFilter = OASCommonResponseFilter.getExample();
+          commonResponseObjDebugPayloadGetList.aOrderBy = new Map<String, String>{'key'=>''};
+        return commonResponseObjDebugPayloadGetList;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCommonResponseObjDebugPayloadGetL) {           
-            OASCommonResponseObjDebugPayloadGetL commonResponseObjDebugPayloadGetListAllOf = (OASCommonResponseObjDebugPayloadGetL) obj;
-            return this.aFilter == commonResponseObjDebugPayloadGetListAllOf.aFilter
-                && this.aOrderBy == commonResponseObjDebugPayloadGetListAllOf.aOrderBy;
+            OASCommonResponseObjDebugPayloadGetL commonResponseObjDebugPayloadGetList = (OASCommonResponseObjDebugPayloadGetL) obj;
+            return this.iVersionMin == commonResponseObjDebugPayloadGetList.iVersionMin
+                && this.iVersionMax == commonResponseObjDebugPayloadGetList.iVersionMax
+                && this.aRequiredPermission == commonResponseObjDebugPayloadGetList.aRequiredPermission
+                && this.bVersionDeprecated == commonResponseObjDebugPayloadGetList.bVersionDeprecated
+                && this.aFilter == commonResponseObjDebugPayloadGetList.aFilter
+                && this.aOrderBy == commonResponseObjDebugPayloadGetList.aOrderBy;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iVersionMin == null ? 0 : System.hashCode(iVersionMin));
+        hashCode = (17 * hashCode) + (iVersionMax == null ? 0 : System.hashCode(iVersionMax));
+        hashCode = (17 * hashCode) + (aRequiredPermission == null ? 0 : System.hashCode(aRequiredPermission));
+        hashCode = (17 * hashCode) + (bVersionDeprecated == null ? 0 : System.hashCode(bVersionDeprecated));
         hashCode = (17 * hashCode) + (aFilter == null ? 0 : System.hashCode(aFilter));
         hashCode = (17 * hashCode) + (aOrderBy == null ? 0 : System.hashCode(aOrderBy));
         return hashCode;

@@ -2,84 +2,105 @@
 private class OASEzsigntemplatesignatureRequestComTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf1 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf2 = ezsigntemplatesignatureRequestCompoundAllOf1;
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf3 = new OASEzsigntemplatesignatureRequestCom();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf4 = ezsigntemplatesignatureRequestCompoundAllOf3;
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound1 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound2 = ezsigntemplatesignatureRequestCompound1;
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound3 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound4 = ezsigntemplatesignatureRequestCompound3;
 
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf1.equals(ezsigntemplatesignatureRequestCompoundAllOf2));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf2.equals(ezsigntemplatesignatureRequestCompoundAllOf1));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf1.equals(ezsigntemplatesignatureRequestCompoundAllOf1));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf3.equals(ezsigntemplatesignatureRequestCompoundAllOf4));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf4.equals(ezsigntemplatesignatureRequestCompoundAllOf3));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf3.equals(ezsigntemplatesignatureRequestCompoundAllOf3));
+        System.assert(ezsigntemplatesignatureRequestCompound1.equals(ezsigntemplatesignatureRequestCompound2));
+        System.assert(ezsigntemplatesignatureRequestCompound2.equals(ezsigntemplatesignatureRequestCompound1));
+        System.assert(ezsigntemplatesignatureRequestCompound1.equals(ezsigntemplatesignatureRequestCompound1));
+        System.assert(ezsigntemplatesignatureRequestCompound3.equals(ezsigntemplatesignatureRequestCompound4));
+        System.assert(ezsigntemplatesignatureRequestCompound4.equals(ezsigntemplatesignatureRequestCompound3));
+        System.assert(ezsigntemplatesignatureRequestCompound3.equals(ezsigntemplatesignatureRequestCompound3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf1 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf2 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf3 = new OASEzsigntemplatesignatureRequestCom();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf4 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound1 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound2 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound3 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound4 = new OASEzsigntemplatesignatureRequestCom();
 
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf1.equals(ezsigntemplatesignatureRequestCompoundAllOf2));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf2.equals(ezsigntemplatesignatureRequestCompoundAllOf1));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf3.equals(ezsigntemplatesignatureRequestCompoundAllOf4));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf4.equals(ezsigntemplatesignatureRequestCompoundAllOf3));
+        System.assert(ezsigntemplatesignatureRequestCompound1.equals(ezsigntemplatesignatureRequestCompound2));
+        System.assert(ezsigntemplatesignatureRequestCompound2.equals(ezsigntemplatesignatureRequestCompound1));
+        System.assert(ezsigntemplatesignatureRequestCompound3.equals(ezsigntemplatesignatureRequestCompound4));
+        System.assert(ezsigntemplatesignatureRequestCompound4.equals(ezsigntemplatesignatureRequestCompound3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf1 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf2 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound1 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound2 = new OASEzsigntemplatesignatureRequestCom();
 
-        System.assertEquals(false, ezsigntemplatesignatureRequestCompoundAllOf1.equals('foo'));
-        System.assertEquals(false, ezsigntemplatesignatureRequestCompoundAllOf2.equals('foo'));
+        System.assertEquals(false, ezsigntemplatesignatureRequestCompound1.equals('foo'));
+        System.assertEquals(false, ezsigntemplatesignatureRequestCompound2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf1 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf2 = new OASEzsigntemplatesignatureRequestCom();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf3;
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound1 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound2 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound3;
 
-        System.assertEquals(false, ezsigntemplatesignatureRequestCompoundAllOf1.equals(ezsigntemplatesignatureRequestCompoundAllOf3));
-        System.assertEquals(false, ezsigntemplatesignatureRequestCompoundAllOf2.equals(ezsigntemplatesignatureRequestCompoundAllOf3));
+        System.assertEquals(false, ezsigntemplatesignatureRequestCompound1.equals(ezsigntemplatesignatureRequestCompound3));
+        System.assertEquals(false, ezsigntemplatesignatureRequestCompound2.equals(ezsigntemplatesignatureRequestCompound3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf1 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf2 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound1 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound2 = new OASEzsigntemplatesignatureRequestCom();
 
-        System.assertEquals(ezsigntemplatesignatureRequestCompoundAllOf1.hashCode(), ezsigntemplatesignatureRequestCompoundAllOf1.hashCode());
-        System.assertEquals(ezsigntemplatesignatureRequestCompoundAllOf2.hashCode(), ezsigntemplatesignatureRequestCompoundAllOf2.hashCode());
+        System.assertEquals(ezsigntemplatesignatureRequestCompound1.hashCode(), ezsigntemplatesignatureRequestCompound1.hashCode());
+        System.assertEquals(ezsigntemplatesignatureRequestCompound2.hashCode(), ezsigntemplatesignatureRequestCompound2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf1 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf2 = OASEzsigntemplatesignatureRequestCom.getExample();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf3 = new OASEzsigntemplatesignatureRequestCom();
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf4 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound1 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound2 = OASEzsigntemplatesignatureRequestCom.getExample();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound3 = new OASEzsigntemplatesignatureRequestCom();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound4 = new OASEzsigntemplatesignatureRequestCom();
 
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf1.equals(ezsigntemplatesignatureRequestCompoundAllOf2));
-        System.assert(ezsigntemplatesignatureRequestCompoundAllOf3.equals(ezsigntemplatesignatureRequestCompoundAllOf4));
-        System.assertEquals(ezsigntemplatesignatureRequestCompoundAllOf1.hashCode(), ezsigntemplatesignatureRequestCompoundAllOf2.hashCode());
-        System.assertEquals(ezsigntemplatesignatureRequestCompoundAllOf3.hashCode(), ezsigntemplatesignatureRequestCompoundAllOf4.hashCode());
+        System.assert(ezsigntemplatesignatureRequestCompound1.equals(ezsigntemplatesignatureRequestCompound2));
+        System.assert(ezsigntemplatesignatureRequestCompound3.equals(ezsigntemplatesignatureRequestCompound4));
+        System.assertEquals(ezsigntemplatesignatureRequestCompound1.hashCode(), ezsigntemplatesignatureRequestCompound2.hashCode());
+        System.assertEquals(ezsigntemplatesignatureRequestCompound3.hashCode(), ezsigntemplatesignatureRequestCompound4.hashCode());
     }
 
     @isTest
     private static void maintainRenamedProperties() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf = new OASEzsigntemplatesignatureRequestCom();
-        Map<String, String> x-property-mappings = ezsigntemplatesignatureRequestCompoundAllOf.getx-property-mappings();
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound = new OASEzsigntemplatesignatureRequestCom();
+        Map<String, String> x-property-mappings = ezsigntemplatesignatureRequestCompound.getx-property-mappings();
         System.assertEquals('aObjEzsigntemplatesignaturecustomdate', x-property-mappings.get('a_objEzsigntemplatesignaturecustomdate'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
-        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompoundAllOf = new OASEzsigntemplatesignatureRequestCom();
-        System.assertEquals(new List<OASEzsigntemplatesignaturecustomdate>(), ezsigntemplatesignatureRequestCompoundAllOf.aObjEzsigntemplatesignaturecustomdate);
-        System.assertEquals(null, ezsigntemplatesignatureRequestCompoundAllOf.bEzsigntemplatesignatureCustomdate);
+        OASEzsigntemplatesignatureRequestCom ezsigntemplatesignatureRequestCompound = new OASEzsigntemplatesignatureRequestCom();
+        System.assertEquals(new List<OASEzsigntemplatesignaturecustomdate>(), ezsigntemplatesignatureRequestCompound.aObjEzsigntemplatesignaturecustomdate);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.pkiEzsigntemplatesignatureID);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.fkiEzsigntemplatedocumentID);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.fkiEzsigntemplatesignerID);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.fkiEzsigntemplatesignerIDValidation);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatedocumentpagePagenumber);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureX);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureY);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureWidth);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureHeight);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureStep);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureType);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.tEzsigntemplatesignatureTooltip);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureTooltipposition);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureFont);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.bEzsigntemplatesignatureRequired);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureAttachmentnamesource);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.sEzsigntemplatesignatureAttachmentdescription);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureValidationstep);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureMaxlength);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.sEzsigntemplatesignatureRegexp);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureTextvalidation);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.bEzsigntemplatesignatureCustomdate);
     }
 }

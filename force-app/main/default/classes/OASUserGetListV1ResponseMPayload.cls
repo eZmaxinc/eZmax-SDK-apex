@@ -13,13 +13,7 @@
 /**
  * Payload for GET /1/object/user/getList
  */
-public class OASUserGetListV1ResponseMPayload implements OASUserGetListV1ResponseMPayloadAllO, OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
-    /**
-     * Get aObjUser
-     * @return aObjUser
-     */
-    public List<OASUserListElement> aObjUser { get; set; }
-
+public class OASUserGetListV1ResponseMPayload implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
     /**
      * The number of rows returned
      * @return iRowReturned
@@ -31,6 +25,12 @@ public class OASUserGetListV1ResponseMPayload implements OASUserGetListV1Respons
      * @return iRowFiltered
      */
     public Integer iRowFiltered { get; set; }
+
+    /**
+     * Get aObjUser
+     * @return aObjUser
+     */
+    public List<OASUserListElement> aObjUser { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objUser' => 'aObjUser'
@@ -46,27 +46,27 @@ public class OASUserGetListV1ResponseMPayload implements OASUserGetListV1Respons
 
     public static OASUserGetListV1ResponseMPayload getExample() {
         OASUserGetListV1ResponseMPayload userGetListV1ResponseMPayload = new OASUserGetListV1ResponseMPayload();
-          userGetListV1ResponseMPayload.aObjUser = new List<OASUserListElement>{OASUserListElement.getExample()};
           userGetListV1ResponseMPayload.iRowReturned = 100;
           userGetListV1ResponseMPayload.iRowFiltered = 533;
+          userGetListV1ResponseMPayload.aObjUser = new List<OASUserListElement>{OASUserListElement.getExample()};
         return userGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUserGetListV1ResponseMPayload) {           
             OASUserGetListV1ResponseMPayload userGetListV1ResponseMPayload = (OASUserGetListV1ResponseMPayload) obj;
-            return this.aObjUser == userGetListV1ResponseMPayload.aObjUser
-                && this.iRowReturned == userGetListV1ResponseMPayload.iRowReturned
-                && this.iRowFiltered == userGetListV1ResponseMPayload.iRowFiltered;
+            return this.iRowReturned == userGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == userGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjUser == userGetListV1ResponseMPayload.aObjUser;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aObjUser == null ? 0 : System.hashCode(aObjUser));
         hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
         hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
+        hashCode = (17 * hashCode) + (aObjUser == null ? 0 : System.hashCode(aObjUser));
         return hashCode;
     }
 }

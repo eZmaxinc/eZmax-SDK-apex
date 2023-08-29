@@ -11,32 +11,32 @@
  */
 
 /**
- * OASBillingentityinternalGetObjectV2R
+ * Payload for GET /2/object/billingentityinternal/{pkiBillingentityinternalID}
  */
 public class OASBillingentityinternalGetObjectV2R {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objBillingentityinternal
+     * @return objBillingentityinternal
      */
-    public OASBillingentityinternalGetObjectV2R mPayload { get; set; }
+    public OASBillingentityinternalResponseComp objBillingentityinternal { get; set; }
 
     public static OASBillingentityinternalGetObjectV2R getExample() {
-        OASBillingentityinternalGetObjectV2R billingentityinternalGetObjectV2ResponseAllOf = new OASBillingentityinternalGetObjectV2R();
-          billingentityinternalGetObjectV2ResponseAllOf.mPayload = OASBillingentityinternalGetObjectV2R.getExample();
-        return billingentityinternalGetObjectV2ResponseAllOf;
+        OASBillingentityinternalGetObjectV2R billingentityinternalGetObjectV2ResponseMPayload = new OASBillingentityinternalGetObjectV2R();
+          billingentityinternalGetObjectV2ResponseMPayload.objBillingentityinternal = OASBillingentityinternalResponseComp.getExample();
+        return billingentityinternalGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASBillingentityinternalGetObjectV2R) {           
-            OASBillingentityinternalGetObjectV2R billingentityinternalGetObjectV2ResponseAllOf = (OASBillingentityinternalGetObjectV2R) obj;
-            return this.mPayload == billingentityinternalGetObjectV2ResponseAllOf.mPayload;
+            OASBillingentityinternalGetObjectV2R billingentityinternalGetObjectV2ResponseMPayload = (OASBillingentityinternalGetObjectV2R) obj;
+            return this.objBillingentityinternal == billingentityinternalGetObjectV2ResponseMPayload.objBillingentityinternal;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objBillingentityinternal == null ? 0 : System.hashCode(objBillingentityinternal));
         return hashCode;
     }
 }

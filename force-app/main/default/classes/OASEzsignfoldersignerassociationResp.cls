@@ -11,50 +11,71 @@
  */
 
 /**
- * OASEzsignfoldersignerassociationResp
+ * A Ezsignfoldersignerassociation-&gt;User Object and children to create a complete structure
  */
 public class OASEzsignfoldersignerassociationResp {
     /**
-     * Get objEzsignsignergroup
-     * @return objEzsignsignergroup
+     * The unique ID of the User
+     * minimum: 0
+     * @return pkiUserID
      */
-    public OASEzsignsignergroupResponseCompound objEzsignsignergroup { get; set; }
+    public Integer pkiUserID { get; set; }
 
     /**
-     * Get objUser
-     * @return objUser
+     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
+     * minimum: 1
+     * maximum: 2
+     * @return fkiLanguageID
      */
-    public OASEzsignfoldersignerassociationResp objUser { get; set; }
+    public Integer fkiLanguageID { get; set; }
 
     /**
-     * Get objEzsignsigner
-     * @return objEzsignsigner
+     * The first name of the user
+     * @return sUserFirstname
      */
-    public OASEzsignsignerResponseCompound objEzsignsigner { get; set; }
+    public String sUserFirstname { get; set; }
+
+    /**
+     * The last name of the user
+     * @return sUserLastname
+     */
+    public String sUserLastname { get; set; }
+
+    /**
+     * The email address.
+     * @return sEmailAddress
+     */
+    public String sEmailAddress { get; set; }
 
     public static OASEzsignfoldersignerassociationResp getExample() {
-        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf = new OASEzsignfoldersignerassociationResp();
-          ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsignergroup = OASEzsignsignergroupResponseCompound.getExample();
-          ezsignfoldersignerassociationResponseCompoundAllOf.objUser = OASEzsignfoldersignerassociationResp.getExample();
-          ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsigner = OASEzsignsignerResponseCompound.getExample();
-        return ezsignfoldersignerassociationResponseCompoundAllOf;
+        OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser = new OASEzsignfoldersignerassociationResp();
+          ezsignfoldersignerassociationResponseCompoundUser.pkiUserID = 70;
+          ezsignfoldersignerassociationResponseCompoundUser.fkiLanguageID = 2;
+          ezsignfoldersignerassociationResponseCompoundUser.sUserFirstname = 'John';
+          ezsignfoldersignerassociationResponseCompoundUser.sUserLastname = 'Doe';
+          ezsignfoldersignerassociationResponseCompoundUser.sEmailAddress = 'email@example.com';
+        return ezsignfoldersignerassociationResponseCompoundUser;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldersignerassociationResp) {           
-            OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundAllOf = (OASEzsignfoldersignerassociationResp) obj;
-            return this.objEzsignsignergroup == ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsignergroup
-                && this.objUser == ezsignfoldersignerassociationResponseCompoundAllOf.objUser
-                && this.objEzsignsigner == ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsigner;
+            OASEzsignfoldersignerassociationResp ezsignfoldersignerassociationResponseCompoundUser = (OASEzsignfoldersignerassociationResp) obj;
+            return this.pkiUserID == ezsignfoldersignerassociationResponseCompoundUser.pkiUserID
+                && this.fkiLanguageID == ezsignfoldersignerassociationResponseCompoundUser.fkiLanguageID
+                && this.sUserFirstname == ezsignfoldersignerassociationResponseCompoundUser.sUserFirstname
+                && this.sUserLastname == ezsignfoldersignerassociationResponseCompoundUser.sUserLastname
+                && this.sEmailAddress == ezsignfoldersignerassociationResponseCompoundUser.sEmailAddress;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objEzsignsignergroup == null ? 0 : System.hashCode(objEzsignsignergroup));
-        hashCode = (17 * hashCode) + (objUser == null ? 0 : System.hashCode(objUser));
-        hashCode = (17 * hashCode) + (objEzsignsigner == null ? 0 : System.hashCode(objEzsignsigner));
+        hashCode = (17 * hashCode) + (pkiUserID == null ? 0 : System.hashCode(pkiUserID));
+        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
+        hashCode = (17 * hashCode) + (sUserFirstname == null ? 0 : System.hashCode(sUserFirstname));
+        hashCode = (17 * hashCode) + (sUserLastname == null ? 0 : System.hashCode(sUserLastname));
+        hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
         return hashCode;
     }
 }

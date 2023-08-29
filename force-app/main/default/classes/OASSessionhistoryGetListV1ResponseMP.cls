@@ -11,9 +11,21 @@
  */
 
 /**
- * OASSessionhistoryGetListV1ResponseMP
+ * Payload for GET /1/object/sessionhistory/getList
  */
-public class OASSessionhistoryGetListV1ResponseMP implements OAS.MappedProperties {
+public class OASSessionhistoryGetListV1ResponseMP implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjSessionhistory
      * @return aObjSessionhistory
@@ -33,21 +45,27 @@ public class OASSessionhistoryGetListV1ResponseMP implements OAS.MappedPropertie
     }
 
     public static OASSessionhistoryGetListV1ResponseMP getExample() {
-        OASSessionhistoryGetListV1ResponseMP sessionhistoryGetListV1ResponseMPayloadAllOf = new OASSessionhistoryGetListV1ResponseMP();
-          sessionhistoryGetListV1ResponseMPayloadAllOf.aObjSessionhistory = new List<OASSessionhistoryListElement>{OASSessionhistoryListElement.getExample()};
-        return sessionhistoryGetListV1ResponseMPayloadAllOf;
+        OASSessionhistoryGetListV1ResponseMP sessionhistoryGetListV1ResponseMPayload = new OASSessionhistoryGetListV1ResponseMP();
+          sessionhistoryGetListV1ResponseMPayload.iRowReturned = 100;
+          sessionhistoryGetListV1ResponseMPayload.iRowFiltered = 533;
+          sessionhistoryGetListV1ResponseMPayload.aObjSessionhistory = new List<OASSessionhistoryListElement>{OASSessionhistoryListElement.getExample()};
+        return sessionhistoryGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASSessionhistoryGetListV1ResponseMP) {           
-            OASSessionhistoryGetListV1ResponseMP sessionhistoryGetListV1ResponseMPayloadAllOf = (OASSessionhistoryGetListV1ResponseMP) obj;
-            return this.aObjSessionhistory == sessionhistoryGetListV1ResponseMPayloadAllOf.aObjSessionhistory;
+            OASSessionhistoryGetListV1ResponseMP sessionhistoryGetListV1ResponseMPayload = (OASSessionhistoryGetListV1ResponseMP) obj;
+            return this.iRowReturned == sessionhistoryGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == sessionhistoryGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjSessionhistory == sessionhistoryGetListV1ResponseMPayload.aObjSessionhistory;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjSessionhistory == null ? 0 : System.hashCode(aObjSessionhistory));
         return hashCode;
     }

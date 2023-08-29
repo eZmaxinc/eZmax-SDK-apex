@@ -13,7 +13,7 @@
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-public class OASActivesessionResponseCompound implements OASActivesessionResponse, OASActivesessionResponseCompoundAllO, OAS.MappedProperties {
+public class OASActivesessionResponseCompound implements OASActivesessionResponse, OAS.MappedProperties {
     /**
      * Get eActivesessionUsertype
      * @return eActivesessionUsertype

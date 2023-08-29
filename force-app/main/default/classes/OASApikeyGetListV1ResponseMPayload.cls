@@ -13,13 +13,7 @@
 /**
  * Payload for GET /1/object/apikey/getList
  */
-public class OASApikeyGetListV1ResponseMPayload implements OASApikeyGetListV1ResponseMPayloadAl, OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
-    /**
-     * Get aObjApikey
-     * @return aObjApikey
-     */
-    public List<OASApikeyListElement> aObjApikey { get; set; }
-
+public class OASApikeyGetListV1ResponseMPayload implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
     /**
      * The number of rows returned
      * @return iRowReturned
@@ -31,6 +25,12 @@ public class OASApikeyGetListV1ResponseMPayload implements OASApikeyGetListV1Res
      * @return iRowFiltered
      */
     public Integer iRowFiltered { get; set; }
+
+    /**
+     * Get aObjApikey
+     * @return aObjApikey
+     */
+    public List<OASApikeyListElement> aObjApikey { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objApikey' => 'aObjApikey'
@@ -46,27 +46,27 @@ public class OASApikeyGetListV1ResponseMPayload implements OASApikeyGetListV1Res
 
     public static OASApikeyGetListV1ResponseMPayload getExample() {
         OASApikeyGetListV1ResponseMPayload apikeyGetListV1ResponseMPayload = new OASApikeyGetListV1ResponseMPayload();
-          apikeyGetListV1ResponseMPayload.aObjApikey = new List<OASApikeyListElement>{OASApikeyListElement.getExample()};
           apikeyGetListV1ResponseMPayload.iRowReturned = 100;
           apikeyGetListV1ResponseMPayload.iRowFiltered = 533;
+          apikeyGetListV1ResponseMPayload.aObjApikey = new List<OASApikeyListElement>{OASApikeyListElement.getExample()};
         return apikeyGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASApikeyGetListV1ResponseMPayload) {           
             OASApikeyGetListV1ResponseMPayload apikeyGetListV1ResponseMPayload = (OASApikeyGetListV1ResponseMPayload) obj;
-            return this.aObjApikey == apikeyGetListV1ResponseMPayload.aObjApikey
-                && this.iRowReturned == apikeyGetListV1ResponseMPayload.iRowReturned
-                && this.iRowFiltered == apikeyGetListV1ResponseMPayload.iRowFiltered;
+            return this.iRowReturned == apikeyGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == apikeyGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjApikey == apikeyGetListV1ResponseMPayload.aObjApikey;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (aObjApikey == null ? 0 : System.hashCode(aObjApikey));
         hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
         hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
+        hashCode = (17 * hashCode) + (aObjApikey == null ? 0 : System.hashCode(aObjApikey));
         return hashCode;
     }
 }

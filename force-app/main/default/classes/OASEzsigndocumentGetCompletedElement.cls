@@ -11,32 +11,64 @@
  */
 
 /**
- * OASEzsigndocumentGetCompletedElement
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements
  */
-public class OASEzsigndocumentGetCompletedElement {
+public class OASEzsigndocumentGetCompletedElement implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjEzsignsignature
+     * @return aObjEzsignsignature
      */
-    public OASEzsigndocumentGetCompletedElement mPayload { get; set; }
+    public List<OASEzsignsignatureResponseCompound> aObjEzsignsignature { get; set; }
+
+    /**
+     * Get aObjEzsignformfieldgroup
+     * @return aObjEzsignformfieldgroup
+     */
+    public List<OASEzsignformfieldgroupResponseCompo> aObjEzsignformfieldgroup { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignsignature' => 'aObjEzsignsignature',
+        'a_objEzsignformfieldgroup' => 'aObjEzsignformfieldgroup'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignsignature' => 'aObjEzsignsignature',
+        'a_objEzsignformfieldgroup' => 'aObjEzsignformfieldgroup'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentGetCompletedElement() {
+        aObjEzsignsignature = new List<OASEzsignsignatureResponseCompound>();
+        aObjEzsignformfieldgroup = new List<OASEzsignformfieldgroupResponseCompo>();
+    }
 
     public static OASEzsigndocumentGetCompletedElement getExample() {
-        OASEzsigndocumentGetCompletedElement ezsigndocumentGetCompletedElementsV1ResponseAllOf = new OASEzsigndocumentGetCompletedElement();
-          ezsigndocumentGetCompletedElementsV1ResponseAllOf.mPayload = OASEzsigndocumentGetCompletedElement.getExample();
-        return ezsigndocumentGetCompletedElementsV1ResponseAllOf;
+        OASEzsigndocumentGetCompletedElement ezsigndocumentGetCompletedElementsV1ResponseMPayload = new OASEzsigndocumentGetCompletedElement();
+          ezsigndocumentGetCompletedElementsV1ResponseMPayload.aObjEzsignsignature = new List<OASEzsignsignatureResponseCompound>{OASEzsignsignatureResponseCompound.getExample()};
+          ezsigndocumentGetCompletedElementsV1ResponseMPayload.aObjEzsignformfieldgroup = new List<OASEzsignformfieldgroupResponseCompo>{OASEzsignformfieldgroupResponseCompo.getExample()};
+        return ezsigndocumentGetCompletedElementsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetCompletedElement) {           
-            OASEzsigndocumentGetCompletedElement ezsigndocumentGetCompletedElementsV1ResponseAllOf = (OASEzsigndocumentGetCompletedElement) obj;
-            return this.mPayload == ezsigndocumentGetCompletedElementsV1ResponseAllOf.mPayload;
+            OASEzsigndocumentGetCompletedElement ezsigndocumentGetCompletedElementsV1ResponseMPayload = (OASEzsigndocumentGetCompletedElement) obj;
+            return this.aObjEzsignsignature == ezsigndocumentGetCompletedElementsV1ResponseMPayload.aObjEzsignsignature
+                && this.aObjEzsignformfieldgroup == ezsigndocumentGetCompletedElementsV1ResponseMPayload.aObjEzsignformfieldgroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsignsignature == null ? 0 : System.hashCode(aObjEzsignsignature));
+        hashCode = (17 * hashCode) + (aObjEzsignformfieldgroup == null ? 0 : System.hashCode(aObjEzsignformfieldgroup));
         return hashCode;
     }
 }

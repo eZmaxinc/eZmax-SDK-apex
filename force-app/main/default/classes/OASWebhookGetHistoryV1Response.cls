@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/webhook/{pkiWebhookID}/getHistory
  */
-public class OASWebhookGetHistoryV1Response implements OASWebhookGetHistoryV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASWebhookGetHistoryV1ResponseMPaylo mPayload { get; set; }
-
+public class OASWebhookGetHistoryV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASWebhookGetHistoryV1Response implements OASWebhookGetHistoryV1Res
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASWebhookGetHistoryV1ResponseMPaylo mPayload { get; set; }
+
     public static OASWebhookGetHistoryV1Response getExample() {
         OASWebhookGetHistoryV1Response webhookGetHistoryV1Response = new OASWebhookGetHistoryV1Response();
-          webhookGetHistoryV1Response.mPayload = OASWebhookGetHistoryV1ResponseMPaylo.getExample();
           webhookGetHistoryV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           webhookGetHistoryV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          webhookGetHistoryV1Response.mPayload = OASWebhookGetHistoryV1ResponseMPaylo.getExample();
         return webhookGetHistoryV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookGetHistoryV1Response) {           
             OASWebhookGetHistoryV1Response webhookGetHistoryV1Response = (OASWebhookGetHistoryV1Response) obj;
-            return this.mPayload == webhookGetHistoryV1Response.mPayload
-                && this.objDebugPayload == webhookGetHistoryV1Response.objDebugPayload
-                && this.objDebug == webhookGetHistoryV1Response.objDebug;
+            return this.objDebugPayload == webhookGetHistoryV1Response.objDebugPayload
+                && this.objDebug == webhookGetHistoryV1Response.objDebug
+                && this.mPayload == webhookGetHistoryV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

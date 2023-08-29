@@ -11,9 +11,21 @@
  */
 
 /**
- * OASActivesessionGetListV1ResponseMPa
+ * Payload for GET /1/object/activesession/getList
  */
-public class OASActivesessionGetListV1ResponseMPa implements OAS.MappedProperties {
+public class OASActivesessionGetListV1ResponseMPa implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjActivesession
      * @return aObjActivesession
@@ -33,21 +45,27 @@ public class OASActivesessionGetListV1ResponseMPa implements OAS.MappedPropertie
     }
 
     public static OASActivesessionGetListV1ResponseMPa getExample() {
-        OASActivesessionGetListV1ResponseMPa activesessionGetListV1ResponseMPayloadAllOf = new OASActivesessionGetListV1ResponseMPa();
-          activesessionGetListV1ResponseMPayloadAllOf.aObjActivesession = new List<OASActivesessionListElement>{OASActivesessionListElement.getExample()};
-        return activesessionGetListV1ResponseMPayloadAllOf;
+        OASActivesessionGetListV1ResponseMPa activesessionGetListV1ResponseMPayload = new OASActivesessionGetListV1ResponseMPa();
+          activesessionGetListV1ResponseMPayload.iRowReturned = 100;
+          activesessionGetListV1ResponseMPayload.iRowFiltered = 533;
+          activesessionGetListV1ResponseMPayload.aObjActivesession = new List<OASActivesessionListElement>{OASActivesessionListElement.getExample()};
+        return activesessionGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASActivesessionGetListV1ResponseMPa) {           
-            OASActivesessionGetListV1ResponseMPa activesessionGetListV1ResponseMPayloadAllOf = (OASActivesessionGetListV1ResponseMPa) obj;
-            return this.aObjActivesession == activesessionGetListV1ResponseMPayloadAllOf.aObjActivesession;
+            OASActivesessionGetListV1ResponseMPa activesessionGetListV1ResponseMPayload = (OASActivesessionGetListV1ResponseMPa) obj;
+            return this.iRowReturned == activesessionGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == activesessionGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjActivesession == activesessionGetListV1ResponseMPayload.aObjActivesession;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjActivesession == null ? 0 : System.hashCode(aObjActivesession));
         return hashCode;
     }

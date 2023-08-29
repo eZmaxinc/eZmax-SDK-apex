@@ -11,32 +11,44 @@
  */
 
 /**
- * OASVariableexpenseGetAutocompleteV2R
+ * Payload for POST /2/object/variableexpense/getAutocomplete
  */
-public class OASVariableexpenseGetAutocompleteV2R {
+public class OASVariableexpenseGetAutocompleteV2R implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Variableexpense autocomplete element response.
+     * @return aObjVariableexpense
      */
-    public OASVariableexpenseGetAutocompleteV2R mPayload { get; set; }
+    public List<OASVariableexpenseAutocompleteElemen> aObjVariableexpense { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objVariableexpense' => 'aObjVariableexpense'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASVariableexpenseGetAutocompleteV2R() {
+        aObjVariableexpense = new List<OASVariableexpenseAutocompleteElemen>();
+    }
 
     public static OASVariableexpenseGetAutocompleteV2R getExample() {
-        OASVariableexpenseGetAutocompleteV2R variableexpenseGetAutocompleteV2ResponseAllOf = new OASVariableexpenseGetAutocompleteV2R();
-          variableexpenseGetAutocompleteV2ResponseAllOf.mPayload = OASVariableexpenseGetAutocompleteV2R.getExample();
-        return variableexpenseGetAutocompleteV2ResponseAllOf;
+        OASVariableexpenseGetAutocompleteV2R variableexpenseGetAutocompleteV2ResponseMPayload = new OASVariableexpenseGetAutocompleteV2R();
+          variableexpenseGetAutocompleteV2ResponseMPayload.aObjVariableexpense = new List<OASVariableexpenseAutocompleteElemen>{OASVariableexpenseAutocompleteElemen.getExample()};
+        return variableexpenseGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASVariableexpenseGetAutocompleteV2R) {           
-            OASVariableexpenseGetAutocompleteV2R variableexpenseGetAutocompleteV2ResponseAllOf = (OASVariableexpenseGetAutocompleteV2R) obj;
-            return this.mPayload == variableexpenseGetAutocompleteV2ResponseAllOf.mPayload;
+            OASVariableexpenseGetAutocompleteV2R variableexpenseGetAutocompleteV2ResponseMPayload = (OASVariableexpenseGetAutocompleteV2R) obj;
+            return this.aObjVariableexpense == variableexpenseGetAutocompleteV2ResponseMPayload.aObjVariableexpense;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjVariableexpense == null ? 0 : System.hashCode(aObjVariableexpense));
         return hashCode;
     }
 }

@@ -80,8 +80,8 @@ private class OASWebhookEzsignEzsignsignerConnectTest {
     private static void defaultValuesPopulated() {
         OASWebhookEzsignEzsignsignerConnect webhookEzsignEzsignsignerConnect = new OASWebhookEzsignEzsignsignerConnect();
         System.assertEquals(new List<OASAttemptResponseCompound>(), webhookEzsignEzsignsignerConnect.aObjAttempt);
+        System.assertEquals(null, webhookEzsignEzsignsignerConnect.objWebhook);
         System.assertEquals(null, webhookEzsignEzsignsignerConnect.objEzsignfolder);
         System.assertEquals(null, webhookEzsignEzsignsignerConnect.objEzsignfoldersignerassociation);
-        System.assertEquals(null, webhookEzsignEzsignsignerConnect.objWebhook);
     }
 }

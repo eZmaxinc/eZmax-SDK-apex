@@ -15,28 +15,28 @@
  */
 public class OASEzsignsignergroupEditObjectV1Requ {
     /**
-     * Get objBranding
-     * @return objBranding
+     * Get objEzsignsignergroup
+     * @return objEzsignsignergroup
      */
-    public OASEzsignsignergroupRequestCompound objBranding { get; set; }
+    public OASEzsignsignergroupRequestCompound objEzsignsignergroup { get; set; }
 
     public static OASEzsignsignergroupEditObjectV1Requ getExample() {
         OASEzsignsignergroupEditObjectV1Requ ezsignsignergroupEditObjectV1Request = new OASEzsignsignergroupEditObjectV1Requ();
-          ezsignsignergroupEditObjectV1Request.objBranding = OASEzsignsignergroupRequestCompound.getExample();
+          ezsignsignergroupEditObjectV1Request.objEzsignsignergroup = OASEzsignsignergroupRequestCompound.getExample();
         return ezsignsignergroupEditObjectV1Request;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignsignergroupEditObjectV1Requ) {           
             OASEzsignsignergroupEditObjectV1Requ ezsignsignergroupEditObjectV1Request = (OASEzsignsignergroupEditObjectV1Requ) obj;
-            return this.objBranding == ezsignsignergroupEditObjectV1Request.objBranding;
+            return this.objEzsignsignergroup == ezsignsignergroupEditObjectV1Request.objEzsignsignergroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objBranding == null ? 0 : System.hashCode(objBranding));
+        hashCode = (17 * hashCode) + (objEzsignsignergroup == null ? 0 : System.hashCode(objEzsignsignergroup));
         return hashCode;
     }
 }

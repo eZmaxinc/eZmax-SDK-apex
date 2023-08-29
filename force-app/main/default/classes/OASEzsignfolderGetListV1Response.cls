@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/ezsignfolder/getList
  */
-public class OASEzsignfolderGetListV1Response implements OASEzsignfolderGetListV1ResponseAllO, OASCommonResponseGetList {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASEzsignfolderGetListV1ResponseMPay mPayload { get; set; }
-
+public class OASEzsignfolderGetListV1Response implements OASCommonResponseGetList {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASEzsignfolderGetListV1Response implements OASEzsignfolderGetListV
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASEzsignfolderGetListV1ResponseMPay mPayload { get; set; }
+
     public static OASEzsignfolderGetListV1Response getExample() {
         OASEzsignfolderGetListV1Response ezsignfolderGetListV1Response = new OASEzsignfolderGetListV1Response();
-          ezsignfolderGetListV1Response.mPayload = OASEzsignfolderGetListV1ResponseMPay.getExample();
           ezsignfolderGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayloadGetL.getExample();
           ezsignfolderGetListV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          ezsignfolderGetListV1Response.mPayload = OASEzsignfolderGetListV1ResponseMPay.getExample();
         return ezsignfolderGetListV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderGetListV1Response) {           
             OASEzsignfolderGetListV1Response ezsignfolderGetListV1Response = (OASEzsignfolderGetListV1Response) obj;
-            return this.mPayload == ezsignfolderGetListV1Response.mPayload
-                && this.objDebugPayload == ezsignfolderGetListV1Response.objDebugPayload
-                && this.objDebug == ezsignfolderGetListV1Response.objDebug;
+            return this.objDebugPayload == ezsignfolderGetListV1Response.objDebugPayload
+                && this.objDebug == ezsignfolderGetListV1Response.objDebug
+                && this.mPayload == ezsignfolderGetListV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

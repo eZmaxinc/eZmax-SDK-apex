@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignbulksendtransmissionGetForm
+ * Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData
  */
-public class OASEzsignbulksendtransmissionGetForm {
+public class OASEzsignbulksendtransmissionGetForm implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjFormsDataFolder
+     * @return aObjFormsDataFolder
      */
-    public OASEzsignbulksendtransmissionGetForm mPayload { get; set; }
+    public List<OASCustomFormsDataFolderResponse> aObjFormsDataFolder { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objFormsDataFolder' => 'aObjFormsDataFolder'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignbulksendtransmissionGetForm() {
+        aObjFormsDataFolder = new List<OASCustomFormsDataFolderResponse>();
+    }
 
     public static OASEzsignbulksendtransmissionGetForm getExample() {
-        OASEzsignbulksendtransmissionGetForm ezsignbulksendtransmissionGetFormsDataV1ResponseAllOf = new OASEzsignbulksendtransmissionGetForm();
-          ezsignbulksendtransmissionGetFormsDataV1ResponseAllOf.mPayload = OASEzsignbulksendtransmissionGetForm.getExample();
-        return ezsignbulksendtransmissionGetFormsDataV1ResponseAllOf;
+        OASEzsignbulksendtransmissionGetForm ezsignbulksendtransmissionGetFormsDataV1ResponseMPayload = new OASEzsignbulksendtransmissionGetForm();
+          ezsignbulksendtransmissionGetFormsDataV1ResponseMPayload.aObjFormsDataFolder = new List<OASCustomFormsDataFolderResponse>{OASCustomFormsDataFolderResponse.getExample()};
+        return ezsignbulksendtransmissionGetFormsDataV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendtransmissionGetForm) {           
-            OASEzsignbulksendtransmissionGetForm ezsignbulksendtransmissionGetFormsDataV1ResponseAllOf = (OASEzsignbulksendtransmissionGetForm) obj;
-            return this.mPayload == ezsignbulksendtransmissionGetFormsDataV1ResponseAllOf.mPayload;
+            OASEzsignbulksendtransmissionGetForm ezsignbulksendtransmissionGetFormsDataV1ResponseMPayload = (OASEzsignbulksendtransmissionGetForm) obj;
+            return this.aObjFormsDataFolder == ezsignbulksendtransmissionGetFormsDataV1ResponseMPayload.aObjFormsDataFolder;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjFormsDataFolder == null ? 0 : System.hashCode(aObjFormsDataFolder));
         return hashCode;
     }
 }

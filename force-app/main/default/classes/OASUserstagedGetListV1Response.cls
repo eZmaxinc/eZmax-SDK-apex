@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/userstaged/getList
  */
-public class OASUserstagedGetListV1Response implements OASUserstagedGetListV1ResponseAllOf, OASCommonResponseGetList {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASUserstagedGetListV1ResponseMPaylo mPayload { get; set; }
-
+public class OASUserstagedGetListV1Response implements OASCommonResponseGetList {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASUserstagedGetListV1Response implements OASUserstagedGetListV1Res
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASUserstagedGetListV1ResponseMPaylo mPayload { get; set; }
+
     public static OASUserstagedGetListV1Response getExample() {
         OASUserstagedGetListV1Response userstagedGetListV1Response = new OASUserstagedGetListV1Response();
-          userstagedGetListV1Response.mPayload = OASUserstagedGetListV1ResponseMPaylo.getExample();
           userstagedGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayloadGetL.getExample();
           userstagedGetListV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          userstagedGetListV1Response.mPayload = OASUserstagedGetListV1ResponseMPaylo.getExample();
         return userstagedGetListV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUserstagedGetListV1Response) {           
             OASUserstagedGetListV1Response userstagedGetListV1Response = (OASUserstagedGetListV1Response) obj;
-            return this.mPayload == userstagedGetListV1Response.mPayload
-                && this.objDebugPayload == userstagedGetListV1Response.objDebugPayload
-                && this.objDebug == userstagedGetListV1Response.objDebug;
+            return this.objDebugPayload == userstagedGetListV1Response.objDebugPayload
+                && this.objDebug == userstagedGetListV1Response.objDebug
+                && this.mPayload == userstagedGetListV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

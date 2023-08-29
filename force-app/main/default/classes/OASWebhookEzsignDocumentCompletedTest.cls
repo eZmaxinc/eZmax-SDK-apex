@@ -80,7 +80,7 @@ private class OASWebhookEzsignDocumentCompletedTest {
     private static void defaultValuesPopulated() {
         OASWebhookEzsignDocumentCompleted webhookEzsignDocumentCompleted = new OASWebhookEzsignDocumentCompleted();
         System.assertEquals(new List<OASAttemptResponseCompound>(), webhookEzsignDocumentCompleted.aObjAttempt);
-        System.assertEquals(null, webhookEzsignDocumentCompleted.objEzsigndocument);
         System.assertEquals(null, webhookEzsignDocumentCompleted.objWebhook);
+        System.assertEquals(null, webhookEzsignDocumentCompleted.objEzsigndocument);
     }
 }

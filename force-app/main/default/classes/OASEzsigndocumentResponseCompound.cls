@@ -13,7 +13,7 @@
 /**
  * An Ezsigndocument Object and children to create a complete structure
  */
-public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentResponse, OASEzsigndocumentResponseCompoundAll, OAS.MappedProperties {
+public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsigndocument
      * minimum: 0
@@ -150,6 +150,12 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
     public String sEzsigndocumentExternalid { get; set; }
 
     /**
+     * Get eEzsigndocumentSteptype
+     * @return eEzsigndocumentSteptype
+     */
+    public OASComputedEEzsigndocumentSteptype eEzsigndocumentSteptype { get; set; }
+
+    /**
      * The total number of steps in the form filling phase
      * @return iEzsigndocumentStepformtotal
      */
@@ -214,6 +220,7 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
           ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures = true;
           ezsigndocumentResponseCompound.objAudit = OASCommonAudit.getExample();
           ezsigndocumentResponseCompound.sEzsigndocumentExternalid = '{"ID": 1234, "TAGS": ["tag1", "tag2", "tag3"]}';
+          ezsigndocumentResponseCompound.eEzsigndocumentSteptype = OASComputedEEzsigndocumentSteptype.getExample();
           ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal = 2;
           ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent = 1;
           ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal = 2;
@@ -246,6 +253,7 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
                 && this.bEzsigndocumentHassignedsignatures == ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures
                 && this.objAudit == ezsigndocumentResponseCompound.objAudit
                 && this.sEzsigndocumentExternalid == ezsigndocumentResponseCompound.sEzsigndocumentExternalid
+                && this.eEzsigndocumentSteptype == ezsigndocumentResponseCompound.eEzsigndocumentSteptype
                 && this.iEzsigndocumentStepformtotal == ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal
                 && this.iEzsigndocumentStepformcurrent == ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent
                 && this.iEzsigndocumentStepsignaturetotal == ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal
@@ -278,6 +286,7 @@ public class OASEzsigndocumentResponseCompound implements OASEzsigndocumentRespo
         hashCode = (17 * hashCode) + (bEzsigndocumentHassignedsignatures == null ? 0 : System.hashCode(bEzsigndocumentHassignedsignatures));
         hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         hashCode = (17 * hashCode) + (sEzsigndocumentExternalid == null ? 0 : System.hashCode(sEzsigndocumentExternalid));
+        hashCode = (17 * hashCode) + (eEzsigndocumentSteptype == null ? 0 : System.hashCode(eEzsigndocumentSteptype));
         hashCode = (17 * hashCode) + (iEzsigndocumentStepformtotal == null ? 0 : System.hashCode(iEzsigndocumentStepformtotal));
         hashCode = (17 * hashCode) + (iEzsigndocumentStepformcurrent == null ? 0 : System.hashCode(iEzsigndocumentStepformcurrent));
         hashCode = (17 * hashCode) + (iEzsigndocumentStepsignaturetotal == null ? 0 : System.hashCode(iEzsigndocumentStepsignaturetotal));

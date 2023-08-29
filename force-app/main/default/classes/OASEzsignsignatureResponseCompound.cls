@@ -13,7 +13,7 @@
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureResponse, OASEzsignsignatureResponseCompoundAl, OAS.MappedProperties {
+public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignsignature
      * minimum: 0
@@ -150,6 +150,14 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
     public String sEzsignsignatureDescription { get; set; }
 
     /**
+     * The maximum length for the value in the Ezsignsignature\n\nThis can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+     * minimum: 0
+     * maximum: 65535
+     * @return iEzsignsignatureMaxlength
+     */
+    public Integer iEzsignsignatureMaxlength { get; set; }
+
+    /**
      * Get eEzsignsignatureTextvalidation
      * @return eEzsignsignatureTextvalidation
      */
@@ -226,6 +234,7 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
           ezsignsignatureResponseCompound.dtEzsignsignatureDate = '2020-12-31 23:59:59';
           ezsignsignatureResponseCompound.iEzsignsignatureattachmentCount = 7;
           ezsignsignatureResponseCompound.sEzsignsignatureDescription = 'Montreal';
+          ezsignsignatureResponseCompound.iEzsignsignatureMaxlength = 75;
           ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation = OASEnumTextvalidation.getExample();
           ezsignsignatureResponseCompound.sEzsignsignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
           ezsignsignatureResponseCompound.objContactName = OASCustomContactNameResponse.getExample();
@@ -260,6 +269,7 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
                 && this.dtEzsignsignatureDate == ezsignsignatureResponseCompound.dtEzsignsignatureDate
                 && this.iEzsignsignatureattachmentCount == ezsignsignatureResponseCompound.iEzsignsignatureattachmentCount
                 && this.sEzsignsignatureDescription == ezsignsignatureResponseCompound.sEzsignsignatureDescription
+                && this.iEzsignsignatureMaxlength == ezsignsignatureResponseCompound.iEzsignsignatureMaxlength
                 && this.eEzsignsignatureTextvalidation == ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation
                 && this.sEzsignsignatureRegexp == ezsignsignatureResponseCompound.sEzsignsignatureRegexp
                 && this.objContactName == ezsignsignatureResponseCompound.objContactName
@@ -294,6 +304,7 @@ public class OASEzsignsignatureResponseCompound implements OASEzsignsignatureRes
         hashCode = (17 * hashCode) + (dtEzsignsignatureDate == null ? 0 : System.hashCode(dtEzsignsignatureDate));
         hashCode = (17 * hashCode) + (iEzsignsignatureattachmentCount == null ? 0 : System.hashCode(iEzsignsignatureattachmentCount));
         hashCode = (17 * hashCode) + (sEzsignsignatureDescription == null ? 0 : System.hashCode(sEzsignsignatureDescription));
+        hashCode = (17 * hashCode) + (iEzsignsignatureMaxlength == null ? 0 : System.hashCode(iEzsignsignatureMaxlength));
         hashCode = (17 * hashCode) + (eEzsignsignatureTextvalidation == null ? 0 : System.hashCode(eEzsignsignatureTextvalidation));
         hashCode = (17 * hashCode) + (sEzsignsignatureRegexp == null ? 0 : System.hashCode(sEzsignsignatureRegexp));
         hashCode = (17 * hashCode) + (objContactName == null ? 0 : System.hashCode(objContactName));

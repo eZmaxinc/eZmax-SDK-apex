@@ -11,32 +11,44 @@
  */
 
 /**
- * OASUsergroupmembershipCreateObjectV1
+ * Payload for POST /1/object/usergroupmembership
  */
-public class OASUsergroupmembershipCreateObjectV1 {
+public class OASUsergroupmembershipCreateObjectV1 implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of unique IDs representing the object that were requested to be created.\n\nThey are returned in the same order as the array containing the objects to be created that was sent in the request.
+     * @return aPkiUsergroupmembershipID
      */
-    public OASUsergroupmembershipCreateObjectV1 mPayload { get; set; }
+    public List<Integer> aPkiUsergroupmembershipID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiUsergroupmembershipID' => 'aPkiUsergroupmembershipID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASUsergroupmembershipCreateObjectV1() {
+        aPkiUsergroupmembershipID = new List<Integer>();
+    }
 
     public static OASUsergroupmembershipCreateObjectV1 getExample() {
-        OASUsergroupmembershipCreateObjectV1 usergroupmembershipCreateObjectV1ResponseAllOf = new OASUsergroupmembershipCreateObjectV1();
-          usergroupmembershipCreateObjectV1ResponseAllOf.mPayload = OASUsergroupmembershipCreateObjectV1.getExample();
-        return usergroupmembershipCreateObjectV1ResponseAllOf;
+        OASUsergroupmembershipCreateObjectV1 usergroupmembershipCreateObjectV1ResponseMPayload = new OASUsergroupmembershipCreateObjectV1();
+          usergroupmembershipCreateObjectV1ResponseMPayload.aPkiUsergroupmembershipID = new List<Integer>{Integer.getExample()};
+        return usergroupmembershipCreateObjectV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupmembershipCreateObjectV1) {           
-            OASUsergroupmembershipCreateObjectV1 usergroupmembershipCreateObjectV1ResponseAllOf = (OASUsergroupmembershipCreateObjectV1) obj;
-            return this.mPayload == usergroupmembershipCreateObjectV1ResponseAllOf.mPayload;
+            OASUsergroupmembershipCreateObjectV1 usergroupmembershipCreateObjectV1ResponseMPayload = (OASUsergroupmembershipCreateObjectV1) obj;
+            return this.aPkiUsergroupmembershipID == usergroupmembershipCreateObjectV1ResponseMPayload.aPkiUsergroupmembershipID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiUsergroupmembershipID == null ? 0 : System.hashCode(aPkiUsergroupmembershipID));
         return hashCode;
     }
 }

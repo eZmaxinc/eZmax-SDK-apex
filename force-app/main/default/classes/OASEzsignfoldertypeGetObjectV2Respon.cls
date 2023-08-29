@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignfoldertypeGetObjectV2Respon
+ * Payload for GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  */
 public class OASEzsignfoldertypeGetObjectV2Respon {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignfoldertype
+     * @return objEzsignfoldertype
      */
-    public OASEzsignfoldertypeGetObjectV2Respon mPayload { get; set; }
+    public OASEzsignfoldertypeResponseCompound objEzsignfoldertype { get; set; }
 
     public static OASEzsignfoldertypeGetObjectV2Respon getExample() {
-        OASEzsignfoldertypeGetObjectV2Respon ezsignfoldertypeGetObjectV2ResponseAllOf = new OASEzsignfoldertypeGetObjectV2Respon();
-          ezsignfoldertypeGetObjectV2ResponseAllOf.mPayload = OASEzsignfoldertypeGetObjectV2Respon.getExample();
-        return ezsignfoldertypeGetObjectV2ResponseAllOf;
+        OASEzsignfoldertypeGetObjectV2Respon ezsignfoldertypeGetObjectV2ResponseMPayload = new OASEzsignfoldertypeGetObjectV2Respon();
+          ezsignfoldertypeGetObjectV2ResponseMPayload.objEzsignfoldertype = OASEzsignfoldertypeResponseCompound.getExample();
+        return ezsignfoldertypeGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldertypeGetObjectV2Respon) {           
-            OASEzsignfoldertypeGetObjectV2Respon ezsignfoldertypeGetObjectV2ResponseAllOf = (OASEzsignfoldertypeGetObjectV2Respon) obj;
-            return this.mPayload == ezsignfoldertypeGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignfoldertypeGetObjectV2Respon ezsignfoldertypeGetObjectV2ResponseMPayload = (OASEzsignfoldertypeGetObjectV2Respon) obj;
+            return this.objEzsignfoldertype == ezsignfoldertypeGetObjectV2ResponseMPayload.objEzsignfoldertype;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignfoldertype == null ? 0 : System.hashCode(objEzsignfoldertype));
         return hashCode;
     }
 }

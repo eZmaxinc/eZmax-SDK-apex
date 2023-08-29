@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/clonehistory/getList
  */
-public class OASClonehistoryGetListV1Response implements OASClonehistoryGetListV1ResponseAllO, OASCommonResponseGetList {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASClonehistoryGetListV1ResponseMPay mPayload { get; set; }
-
+public class OASClonehistoryGetListV1Response implements OASCommonResponseGetList {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASClonehistoryGetListV1Response implements OASClonehistoryGetListV
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASClonehistoryGetListV1ResponseMPay mPayload { get; set; }
+
     public static OASClonehistoryGetListV1Response getExample() {
         OASClonehistoryGetListV1Response clonehistoryGetListV1Response = new OASClonehistoryGetListV1Response();
-          clonehistoryGetListV1Response.mPayload = OASClonehistoryGetListV1ResponseMPay.getExample();
           clonehistoryGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayloadGetL.getExample();
           clonehistoryGetListV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          clonehistoryGetListV1Response.mPayload = OASClonehistoryGetListV1ResponseMPay.getExample();
         return clonehistoryGetListV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASClonehistoryGetListV1Response) {           
             OASClonehistoryGetListV1Response clonehistoryGetListV1Response = (OASClonehistoryGetListV1Response) obj;
-            return this.mPayload == clonehistoryGetListV1Response.mPayload
-                && this.objDebugPayload == clonehistoryGetListV1Response.objDebugPayload
-                && this.objDebug == clonehistoryGetListV1Response.objDebug;
+            return this.objDebugPayload == clonehistoryGetListV1Response.objDebugPayload
+                && this.objDebug == clonehistoryGetListV1Response.objDebug
+                && this.mPayload == clonehistoryGetListV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

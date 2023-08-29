@@ -11,7 +11,7 @@
  */
 
 /**
- * OASCustomEzsignformfielderrortestRes
+ * A Custom Ezsignformfielderrortest Object to contain the detail of the test error
  */
 public class OASCustomEzsignformfielderrortestRes {
     /**
@@ -27,17 +27,17 @@ public class OASCustomEzsignformfielderrortestRes {
     public String sEzsignformfielderrortestDetail { get; set; }
 
     public static OASCustomEzsignformfielderrortestRes getExample() {
-        OASCustomEzsignformfielderrortestRes customEzsignformfielderrortestResponseAllOf = new OASCustomEzsignformfielderrortestRes();
-          customEzsignformfielderrortestResponseAllOf.sEzsignformfielderrortestName = '';
-          customEzsignformfielderrortestResponseAllOf.sEzsignformfielderrortestDetail = '';
-        return customEzsignformfielderrortestResponseAllOf;
+        OASCustomEzsignformfielderrortestRes customEzsignformfielderrortestResponse = new OASCustomEzsignformfielderrortestRes();
+          customEzsignformfielderrortestResponse.sEzsignformfielderrortestName = '';
+          customEzsignformfielderrortestResponse.sEzsignformfielderrortestDetail = '';
+        return customEzsignformfielderrortestResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCustomEzsignformfielderrortestRes) {           
-            OASCustomEzsignformfielderrortestRes customEzsignformfielderrortestResponseAllOf = (OASCustomEzsignformfielderrortestRes) obj;
-            return this.sEzsignformfielderrortestName == customEzsignformfielderrortestResponseAllOf.sEzsignformfielderrortestName
-                && this.sEzsignformfielderrortestDetail == customEzsignformfielderrortestResponseAllOf.sEzsignformfielderrortestDetail;
+            OASCustomEzsignformfielderrortestRes customEzsignformfielderrortestResponse = (OASCustomEzsignformfielderrortestRes) obj;
+            return this.sEzsignformfielderrortestName == customEzsignformfielderrortestResponse.sEzsignformfielderrortestName
+                && this.sEzsignformfielderrortestDetail == customEzsignformfielderrortestResponse.sEzsignformfielderrortestDetail;
         }
         return false;
     }

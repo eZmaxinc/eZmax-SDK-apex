@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsignfolderGetEzsigndocumentsV1R
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments
  */
-public class OASEzsignfolderGetEzsigndocumentsV1R {
+public class OASEzsignfolderGetEzsigndocumentsV1R implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjEzsigndocument
+     * @return aObjEzsigndocument
      */
-    public OASEzsignfolderGetEzsigndocumentsV1R mPayload { get; set; }
+    public List<OASEzsigndocumentResponseCompound> aObjEzsigndocument { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsigndocument' => 'aObjEzsigndocument'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsignfolderGetEzsigndocumentsV1R() {
+        aObjEzsigndocument = new List<OASEzsigndocumentResponseCompound>();
+    }
 
     public static OASEzsignfolderGetEzsigndocumentsV1R getExample() {
-        OASEzsignfolderGetEzsigndocumentsV1R ezsignfolderGetEzsigndocumentsV1ResponseAllOf = new OASEzsignfolderGetEzsigndocumentsV1R();
-          ezsignfolderGetEzsigndocumentsV1ResponseAllOf.mPayload = OASEzsignfolderGetEzsigndocumentsV1R.getExample();
-        return ezsignfolderGetEzsigndocumentsV1ResponseAllOf;
+        OASEzsignfolderGetEzsigndocumentsV1R ezsignfolderGetEzsigndocumentsV1ResponseMPayload = new OASEzsignfolderGetEzsigndocumentsV1R();
+          ezsignfolderGetEzsigndocumentsV1ResponseMPayload.aObjEzsigndocument = new List<OASEzsigndocumentResponseCompound>{OASEzsigndocumentResponseCompound.getExample()};
+        return ezsignfolderGetEzsigndocumentsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfolderGetEzsigndocumentsV1R) {           
-            OASEzsignfolderGetEzsigndocumentsV1R ezsignfolderGetEzsigndocumentsV1ResponseAllOf = (OASEzsignfolderGetEzsigndocumentsV1R) obj;
-            return this.mPayload == ezsignfolderGetEzsigndocumentsV1ResponseAllOf.mPayload;
+            OASEzsignfolderGetEzsigndocumentsV1R ezsignfolderGetEzsigndocumentsV1ResponseMPayload = (OASEzsignfolderGetEzsigndocumentsV1R) obj;
+            return this.aObjEzsigndocument == ezsignfolderGetEzsigndocumentsV1ResponseMPayload.aObjEzsigndocument;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsigndocument == null ? 0 : System.hashCode(aObjEzsigndocument));
         return hashCode;
     }
 }

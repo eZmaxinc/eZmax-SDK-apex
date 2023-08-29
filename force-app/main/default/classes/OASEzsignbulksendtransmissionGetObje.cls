@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignbulksendtransmissionGetObje
+ * Payload for GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}
  */
 public class OASEzsignbulksendtransmissionGetObje {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsignbulksendtransmission
+     * @return objEzsignbulksendtransmission
      */
-    public OASEzsignbulksendtransmissionGetObje mPayload { get; set; }
+    public OASEzsignbulksendtransmissionRespons objEzsignbulksendtransmission { get; set; }
 
     public static OASEzsignbulksendtransmissionGetObje getExample() {
-        OASEzsignbulksendtransmissionGetObje ezsignbulksendtransmissionGetObjectV2ResponseAllOf = new OASEzsignbulksendtransmissionGetObje();
-          ezsignbulksendtransmissionGetObjectV2ResponseAllOf.mPayload = OASEzsignbulksendtransmissionGetObje.getExample();
-        return ezsignbulksendtransmissionGetObjectV2ResponseAllOf;
+        OASEzsignbulksendtransmissionGetObje ezsignbulksendtransmissionGetObjectV2ResponseMPayload = new OASEzsignbulksendtransmissionGetObje();
+          ezsignbulksendtransmissionGetObjectV2ResponseMPayload.objEzsignbulksendtransmission = OASEzsignbulksendtransmissionRespons.getExample();
+        return ezsignbulksendtransmissionGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendtransmissionGetObje) {           
-            OASEzsignbulksendtransmissionGetObje ezsignbulksendtransmissionGetObjectV2ResponseAllOf = (OASEzsignbulksendtransmissionGetObje) obj;
-            return this.mPayload == ezsignbulksendtransmissionGetObjectV2ResponseAllOf.mPayload;
+            OASEzsignbulksendtransmissionGetObje ezsignbulksendtransmissionGetObjectV2ResponseMPayload = (OASEzsignbulksendtransmissionGetObje) obj;
+            return this.objEzsignbulksendtransmission == ezsignbulksendtransmissionGetObjectV2ResponseMPayload.objEzsignbulksendtransmission;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsignbulksendtransmission == null ? 0 : System.hashCode(objEzsignbulksendtransmission));
         return hashCode;
     }
 }

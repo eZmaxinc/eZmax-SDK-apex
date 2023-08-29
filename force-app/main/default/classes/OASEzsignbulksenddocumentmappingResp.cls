@@ -11,9 +11,44 @@
  */
 
 /**
- * OASEzsignbulksenddocumentmappingResp
+ * A Ezsignbulksenddocumentmapping Object
  */
-public class OASEzsignbulksenddocumentmappingResp {
+public class OASEzsignbulksenddocumentmappingResp implements OASEzsignbulksenddocumentmappingResp {
+    /**
+     * The unique ID of the Ezsignbulksenddocumentmapping.
+     * minimum: 0
+     * @return pkiEzsignbulksenddocumentmappingID
+     */
+    public Integer pkiEzsignbulksenddocumentmappingID { get; set; }
+
+    /**
+     * The unique ID of the Ezsignbulksend
+     * minimum: 0
+     * @return fkiEzsignbulksendID
+     */
+    public Integer fkiEzsignbulksendID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigntemplatepackage
+     * minimum: 0
+     * @return fkiEzsigntemplatepackageID
+     */
+    public Integer fkiEzsigntemplatepackageID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigntemplate
+     * minimum: 0
+     * @return fkiEzsigntemplateID
+     */
+    public Integer fkiEzsigntemplateID { get; set; }
+
+    /**
+     * The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.
+     * minimum: 0
+     * @return iEzsignbulksenddocumentmappingOrder
+     */
+    public Integer iEzsignbulksenddocumentmappingOrder { get; set; }
+
     /**
      * Get objEzsigntemplate
      * @return objEzsigntemplate
@@ -27,23 +62,38 @@ public class OASEzsignbulksenddocumentmappingResp {
     public OASEzsigntemplatepackageResponseComp objEzsigntemplatepackage { get; set; }
 
     public static OASEzsignbulksenddocumentmappingResp getExample() {
-        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf = new OASEzsignbulksenddocumentmappingResp();
-          ezsignbulksenddocumentmappingResponseCompoundAllOf.objEzsigntemplate = OASEzsigntemplateResponseCompound.getExample();
-          ezsignbulksenddocumentmappingResponseCompoundAllOf.objEzsigntemplatepackage = OASEzsigntemplatepackageResponseComp.getExample();
-        return ezsignbulksenddocumentmappingResponseCompoundAllOf;
+        OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound = new OASEzsignbulksenddocumentmappingResp();
+          ezsignbulksenddocumentmappingResponseCompound.pkiEzsignbulksenddocumentmappingID = 48;
+          ezsignbulksenddocumentmappingResponseCompound.fkiEzsignbulksendID = 8;
+          ezsignbulksenddocumentmappingResponseCompound.fkiEzsigntemplatepackageID = 99;
+          ezsignbulksenddocumentmappingResponseCompound.fkiEzsigntemplateID = 36;
+          ezsignbulksenddocumentmappingResponseCompound.iEzsignbulksenddocumentmappingOrder = 1;
+          ezsignbulksenddocumentmappingResponseCompound.objEzsigntemplate = OASEzsigntemplateResponseCompound.getExample();
+          ezsignbulksenddocumentmappingResponseCompound.objEzsigntemplatepackage = OASEzsigntemplatepackageResponseComp.getExample();
+        return ezsignbulksenddocumentmappingResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksenddocumentmappingResp) {           
-            OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompoundAllOf = (OASEzsignbulksenddocumentmappingResp) obj;
-            return this.objEzsigntemplate == ezsignbulksenddocumentmappingResponseCompoundAllOf.objEzsigntemplate
-                && this.objEzsigntemplatepackage == ezsignbulksenddocumentmappingResponseCompoundAllOf.objEzsigntemplatepackage;
+            OASEzsignbulksenddocumentmappingResp ezsignbulksenddocumentmappingResponseCompound = (OASEzsignbulksenddocumentmappingResp) obj;
+            return this.pkiEzsignbulksenddocumentmappingID == ezsignbulksenddocumentmappingResponseCompound.pkiEzsignbulksenddocumentmappingID
+                && this.fkiEzsignbulksendID == ezsignbulksenddocumentmappingResponseCompound.fkiEzsignbulksendID
+                && this.fkiEzsigntemplatepackageID == ezsignbulksenddocumentmappingResponseCompound.fkiEzsigntemplatepackageID
+                && this.fkiEzsigntemplateID == ezsignbulksenddocumentmappingResponseCompound.fkiEzsigntemplateID
+                && this.iEzsignbulksenddocumentmappingOrder == ezsignbulksenddocumentmappingResponseCompound.iEzsignbulksenddocumentmappingOrder
+                && this.objEzsigntemplate == ezsignbulksenddocumentmappingResponseCompound.objEzsigntemplate
+                && this.objEzsigntemplatepackage == ezsignbulksenddocumentmappingResponseCompound.objEzsigntemplatepackage;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignbulksenddocumentmappingID == null ? 0 : System.hashCode(pkiEzsignbulksenddocumentmappingID));
+        hashCode = (17 * hashCode) + (fkiEzsignbulksendID == null ? 0 : System.hashCode(fkiEzsignbulksendID));
+        hashCode = (17 * hashCode) + (fkiEzsigntemplatepackageID == null ? 0 : System.hashCode(fkiEzsigntemplatepackageID));
+        hashCode = (17 * hashCode) + (fkiEzsigntemplateID == null ? 0 : System.hashCode(fkiEzsigntemplateID));
+        hashCode = (17 * hashCode) + (iEzsignbulksenddocumentmappingOrder == null ? 0 : System.hashCode(iEzsignbulksenddocumentmappingOrder));
         hashCode = (17 * hashCode) + (objEzsigntemplate == null ? 0 : System.hashCode(objEzsigntemplate));
         hashCode = (17 * hashCode) + (objEzsigntemplatepackage == null ? 0 : System.hashCode(objEzsigntemplatepackage));
         return hashCode;

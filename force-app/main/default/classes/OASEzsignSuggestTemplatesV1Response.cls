@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/module/ezsign/suggestTemplates
  */
-public class OASEzsignSuggestTemplatesV1Response implements OASEzsignSuggestTemplatesV1ResponseA, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASEzsignSuggestTemplatesV1ResponseM mPayload { get; set; }
-
+public class OASEzsignSuggestTemplatesV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASEzsignSuggestTemplatesV1Response implements OASEzsignSuggestTemp
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASEzsignSuggestTemplatesV1ResponseM mPayload { get; set; }
+
     public static OASEzsignSuggestTemplatesV1Response getExample() {
         OASEzsignSuggestTemplatesV1Response ezsignSuggestTemplatesV1Response = new OASEzsignSuggestTemplatesV1Response();
-          ezsignSuggestTemplatesV1Response.mPayload = OASEzsignSuggestTemplatesV1ResponseM.getExample();
           ezsignSuggestTemplatesV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           ezsignSuggestTemplatesV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          ezsignSuggestTemplatesV1Response.mPayload = OASEzsignSuggestTemplatesV1ResponseM.getExample();
         return ezsignSuggestTemplatesV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignSuggestTemplatesV1Response) {           
             OASEzsignSuggestTemplatesV1Response ezsignSuggestTemplatesV1Response = (OASEzsignSuggestTemplatesV1Response) obj;
-            return this.mPayload == ezsignSuggestTemplatesV1Response.mPayload
-                && this.objDebugPayload == ezsignSuggestTemplatesV1Response.objDebugPayload
-                && this.objDebug == ezsignSuggestTemplatesV1Response.objDebug;
+            return this.objDebugPayload == ezsignSuggestTemplatesV1Response.objDebugPayload
+                && this.objDebug == ezsignSuggestTemplatesV1Response.objDebug
+                && this.mPayload == ezsignSuggestTemplatesV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

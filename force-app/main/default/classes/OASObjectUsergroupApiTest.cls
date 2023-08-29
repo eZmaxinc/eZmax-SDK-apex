@@ -108,6 +108,42 @@ private class OASObjectUsergroupApiTest {
     }
 
     /**
+     * Edit multiple Usergroupdelegations
+     *
+     * Edit multiple Usergroupdelegations
+     */
+    @isTest
+    private static void usergroupEditUsergroupdelegationsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUsergroupID' => '',
+            'oaSUsergroupEditUsergroupdelegations' => ''
+        };
+
+        OASClient client;
+        OASObjectUsergroupApi api;
+        OASUsergroupEditUsergroupdelegations response;
+        OASUsergroupEditUsergroupdelegations expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUsergroupApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUsergroupEditUsergroupdelegations.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUsergroupEditUsergroupdelegations.getExample();
+        response = (OASUsergroupEditUsergroupdelegations) api.usergroupEditUsergroupdelegationsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Edit multiple Usergroupmemberships
      *
      * Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
@@ -295,6 +331,41 @@ private class OASObjectUsergroupApiTest {
         res.setBody(js);
         expectedResponse = OASUsergroupGetPermissionsV1Response.getExample();
         response = (OASUsergroupGetPermissionsV1Response) api.usergroupGetPermissionsV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Retrieve an existing Usergroup\&#39;s Usergroupdelegations
+     *
+     * 
+     */
+    @isTest
+    private static void usergroupGetUsergroupdelegationsV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiUsergroupID' => ''
+        };
+
+        OASClient client;
+        OASObjectUsergroupApi api;
+        OASUsergroupGetUsergroupdelegationsV response;
+        OASUsergroupGetUsergroupdelegationsV expectedResponse;
+        String js = '';
+
+        client = new OASClient();
+        api = new OASObjectUsergroupApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(OASUsergroupGetUsergroupdelegationsV.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASUsergroupGetUsergroupdelegationsV.getExample();
+        response = (OASUsergroupGetUsergroupdelegationsV) api.usergroupGetUsergroupdelegationsV1(params);
         System.assertEquals(expectedResponse, response);
     }
 

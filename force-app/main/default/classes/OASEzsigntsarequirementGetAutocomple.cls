@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigntsarequirementGetAutocomple
+ * Payload for POST /2/object/ezsigntsarequirement/getAutocomplete
  */
-public class OASEzsigntsarequirementGetAutocomple {
+public class OASEzsigntsarequirementGetAutocomple implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Ezsigntsarequirement autocomplete element response.
+     * @return aObjEzsigntsarequirement
      */
-    public OASEzsigntsarequirementGetAutocomple mPayload { get; set; }
+    public List<OASEzsigntsarequirementAutocompleteE> aObjEzsigntsarequirement { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsigntsarequirement' => 'aObjEzsigntsarequirement'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntsarequirementGetAutocomple() {
+        aObjEzsigntsarequirement = new List<OASEzsigntsarequirementAutocompleteE>();
+    }
 
     public static OASEzsigntsarequirementGetAutocomple getExample() {
-        OASEzsigntsarequirementGetAutocomple ezsigntsarequirementGetAutocompleteV2ResponseAllOf = new OASEzsigntsarequirementGetAutocomple();
-          ezsigntsarequirementGetAutocompleteV2ResponseAllOf.mPayload = OASEzsigntsarequirementGetAutocomple.getExample();
-        return ezsigntsarequirementGetAutocompleteV2ResponseAllOf;
+        OASEzsigntsarequirementGetAutocomple ezsigntsarequirementGetAutocompleteV2ResponseMPayload = new OASEzsigntsarequirementGetAutocomple();
+          ezsigntsarequirementGetAutocompleteV2ResponseMPayload.aObjEzsigntsarequirement = new List<OASEzsigntsarequirementAutocompleteE>{OASEzsigntsarequirementAutocompleteE.getExample()};
+        return ezsigntsarequirementGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntsarequirementGetAutocomple) {           
-            OASEzsigntsarequirementGetAutocomple ezsigntsarequirementGetAutocompleteV2ResponseAllOf = (OASEzsigntsarequirementGetAutocomple) obj;
-            return this.mPayload == ezsigntsarequirementGetAutocompleteV2ResponseAllOf.mPayload;
+            OASEzsigntsarequirementGetAutocomple ezsigntsarequirementGetAutocompleteV2ResponseMPayload = (OASEzsigntsarequirementGetAutocomple) obj;
+            return this.aObjEzsigntsarequirement == ezsigntsarequirementGetAutocompleteV2ResponseMPayload.aObjEzsigntsarequirement;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsigntsarequirement == null ? 0 : System.hashCode(aObjEzsigntsarequirement));
         return hashCode;
     }
 }

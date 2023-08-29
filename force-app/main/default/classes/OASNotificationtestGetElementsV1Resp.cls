@@ -11,32 +11,83 @@
  */
 
 /**
- * OASNotificationtestGetElementsV1Resp
+ * Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
  */
-public class OASNotificationtestGetElementsV1Resp {
+public class OASNotificationtestGetElementsV1Resp implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * The unique ID of the Notificationtest
+     * minimum: 0
+     * @return pkiNotificationtestID
      */
-    public OASNotificationtestGetElementsV1Resp mPayload { get; set; }
+    public Integer pkiNotificationtestID { get; set; }
+
+    /**
+     * The function name of the Notificationtest
+     * @return sNotificationtestFunction
+     */
+    public String sNotificationtestFunction { get; set; }
+
+    /**
+     * Get aSVariableobjectProperty
+     * @return aSVariableobjectProperty
+     */
+    public List<String> aSVariableobjectProperty { get; set; }
+
+    /**
+     * Get aObjVariableobject
+     * @return aObjVariableobject
+     */
+    public List<Map> aObjVariableobject { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_sVariableobjectProperty' => 'aSVariableobjectProperty',
+        'a_objVariableobject' => 'aObjVariableobject'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_sVariableobjectProperty' => 'aSVariableobjectProperty',
+        'a_objVariableobject' => 'aObjVariableobject'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASNotificationtestGetElementsV1Resp() {
+        aSVariableobjectProperty = new List<String>();
+        aObjVariableobject = new List<Map>();
+    }
 
     public static OASNotificationtestGetElementsV1Resp getExample() {
-        OASNotificationtestGetElementsV1Resp notificationtestGetElementsV1ResponseAllOf = new OASNotificationtestGetElementsV1Resp();
-          notificationtestGetElementsV1ResponseAllOf.mPayload = OASNotificationtestGetElementsV1Resp.getExample();
-        return notificationtestGetElementsV1ResponseAllOf;
+        OASNotificationtestGetElementsV1Resp notificationtestGetElementsV1ResponseMPayload = new OASNotificationtestGetElementsV1Resp();
+          notificationtestGetElementsV1ResponseMPayload.pkiNotificationtestID = 14;
+          notificationtestGetElementsV1ResponseMPayload.sNotificationtestFunction = 'Default';
+          notificationtestGetElementsV1ResponseMPayload.aSVariableobjectProperty = new List<String>{String.getExample()};
+          notificationtestGetElementsV1ResponseMPayload.aObjVariableobject = new List<Map>{Map.getExample()};
+        return notificationtestGetElementsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASNotificationtestGetElementsV1Resp) {           
-            OASNotificationtestGetElementsV1Resp notificationtestGetElementsV1ResponseAllOf = (OASNotificationtestGetElementsV1Resp) obj;
-            return this.mPayload == notificationtestGetElementsV1ResponseAllOf.mPayload;
+            OASNotificationtestGetElementsV1Resp notificationtestGetElementsV1ResponseMPayload = (OASNotificationtestGetElementsV1Resp) obj;
+            return this.pkiNotificationtestID == notificationtestGetElementsV1ResponseMPayload.pkiNotificationtestID
+                && this.sNotificationtestFunction == notificationtestGetElementsV1ResponseMPayload.sNotificationtestFunction
+                && this.aSVariableobjectProperty == notificationtestGetElementsV1ResponseMPayload.aSVariableobjectProperty
+                && this.aObjVariableobject == notificationtestGetElementsV1ResponseMPayload.aObjVariableobject;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (pkiNotificationtestID == null ? 0 : System.hashCode(pkiNotificationtestID));
+        hashCode = (17 * hashCode) + (sNotificationtestFunction == null ? 0 : System.hashCode(sNotificationtestFunction));
+        hashCode = (17 * hashCode) + (aSVariableobjectProperty == null ? 0 : System.hashCode(aSVariableobjectProperty));
+        hashCode = (17 * hashCode) + (aObjVariableobject == null ? 0 : System.hashCode(aObjVariableobject));
         return hashCode;
     }
 }

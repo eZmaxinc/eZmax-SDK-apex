@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEmailtypeGetAutocompleteV2Respons
+ * Payload for POST /2/object/emailtype/getAutocomplete
  */
-public class OASEmailtypeGetAutocompleteV2Respons {
+public class OASEmailtypeGetAutocompleteV2Respons implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Emailtype autocomplete element response.
+     * @return aObjEmailtype
      */
-    public OASEmailtypeGetAutocompleteV2Respons mPayload { get; set; }
+    public List<OASEmailtypeAutocompleteElementRespo> aObjEmailtype { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEmailtype' => 'aObjEmailtype'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEmailtypeGetAutocompleteV2Respons() {
+        aObjEmailtype = new List<OASEmailtypeAutocompleteElementRespo>();
+    }
 
     public static OASEmailtypeGetAutocompleteV2Respons getExample() {
-        OASEmailtypeGetAutocompleteV2Respons emailtypeGetAutocompleteV2ResponseAllOf = new OASEmailtypeGetAutocompleteV2Respons();
-          emailtypeGetAutocompleteV2ResponseAllOf.mPayload = OASEmailtypeGetAutocompleteV2Respons.getExample();
-        return emailtypeGetAutocompleteV2ResponseAllOf;
+        OASEmailtypeGetAutocompleteV2Respons emailtypeGetAutocompleteV2ResponseMPayload = new OASEmailtypeGetAutocompleteV2Respons();
+          emailtypeGetAutocompleteV2ResponseMPayload.aObjEmailtype = new List<OASEmailtypeAutocompleteElementRespo>{OASEmailtypeAutocompleteElementRespo.getExample()};
+        return emailtypeGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEmailtypeGetAutocompleteV2Respons) {           
-            OASEmailtypeGetAutocompleteV2Respons emailtypeGetAutocompleteV2ResponseAllOf = (OASEmailtypeGetAutocompleteV2Respons) obj;
-            return this.mPayload == emailtypeGetAutocompleteV2ResponseAllOf.mPayload;
+            OASEmailtypeGetAutocompleteV2Respons emailtypeGetAutocompleteV2ResponseMPayload = (OASEmailtypeGetAutocompleteV2Respons) obj;
+            return this.aObjEmailtype == emailtypeGetAutocompleteV2ResponseMPayload.aObjEmailtype;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEmailtype == null ? 0 : System.hashCode(aObjEmailtype));
         return hashCode;
     }
 }

@@ -2,70 +2,70 @@
 private class OASCommonResponseErrorSTemporaryFileTest {
     @isTest
     private static void equalsSameInstance() {
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf1 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf2 = commonResponseErrorSTemporaryFileUrlAllOf1;
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf3 = new OASCommonResponseErrorSTemporaryFile();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf4 = commonResponseErrorSTemporaryFileUrlAllOf3;
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl1 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl2 = commonResponseErrorSTemporaryFileUrl1;
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl3 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl4 = commonResponseErrorSTemporaryFileUrl3;
 
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf1.equals(commonResponseErrorSTemporaryFileUrlAllOf2));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf2.equals(commonResponseErrorSTemporaryFileUrlAllOf1));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf1.equals(commonResponseErrorSTemporaryFileUrlAllOf1));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf3.equals(commonResponseErrorSTemporaryFileUrlAllOf4));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf4.equals(commonResponseErrorSTemporaryFileUrlAllOf3));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf3.equals(commonResponseErrorSTemporaryFileUrlAllOf3));
+        System.assert(commonResponseErrorSTemporaryFileUrl1.equals(commonResponseErrorSTemporaryFileUrl2));
+        System.assert(commonResponseErrorSTemporaryFileUrl2.equals(commonResponseErrorSTemporaryFileUrl1));
+        System.assert(commonResponseErrorSTemporaryFileUrl1.equals(commonResponseErrorSTemporaryFileUrl1));
+        System.assert(commonResponseErrorSTemporaryFileUrl3.equals(commonResponseErrorSTemporaryFileUrl4));
+        System.assert(commonResponseErrorSTemporaryFileUrl4.equals(commonResponseErrorSTemporaryFileUrl3));
+        System.assert(commonResponseErrorSTemporaryFileUrl3.equals(commonResponseErrorSTemporaryFileUrl3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf1 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf2 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf3 = new OASCommonResponseErrorSTemporaryFile();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf4 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl1 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl2 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl3 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl4 = new OASCommonResponseErrorSTemporaryFile();
 
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf1.equals(commonResponseErrorSTemporaryFileUrlAllOf2));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf2.equals(commonResponseErrorSTemporaryFileUrlAllOf1));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf3.equals(commonResponseErrorSTemporaryFileUrlAllOf4));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf4.equals(commonResponseErrorSTemporaryFileUrlAllOf3));
+        System.assert(commonResponseErrorSTemporaryFileUrl1.equals(commonResponseErrorSTemporaryFileUrl2));
+        System.assert(commonResponseErrorSTemporaryFileUrl2.equals(commonResponseErrorSTemporaryFileUrl1));
+        System.assert(commonResponseErrorSTemporaryFileUrl3.equals(commonResponseErrorSTemporaryFileUrl4));
+        System.assert(commonResponseErrorSTemporaryFileUrl4.equals(commonResponseErrorSTemporaryFileUrl3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf1 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf2 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl1 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl2 = new OASCommonResponseErrorSTemporaryFile();
 
-        System.assertEquals(false, commonResponseErrorSTemporaryFileUrlAllOf1.equals('foo'));
-        System.assertEquals(false, commonResponseErrorSTemporaryFileUrlAllOf2.equals('foo'));
+        System.assertEquals(false, commonResponseErrorSTemporaryFileUrl1.equals('foo'));
+        System.assertEquals(false, commonResponseErrorSTemporaryFileUrl2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf1 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf2 = new OASCommonResponseErrorSTemporaryFile();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf3;
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl1 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl2 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl3;
 
-        System.assertEquals(false, commonResponseErrorSTemporaryFileUrlAllOf1.equals(commonResponseErrorSTemporaryFileUrlAllOf3));
-        System.assertEquals(false, commonResponseErrorSTemporaryFileUrlAllOf2.equals(commonResponseErrorSTemporaryFileUrlAllOf3));
+        System.assertEquals(false, commonResponseErrorSTemporaryFileUrl1.equals(commonResponseErrorSTemporaryFileUrl3));
+        System.assertEquals(false, commonResponseErrorSTemporaryFileUrl2.equals(commonResponseErrorSTemporaryFileUrl3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf1 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf2 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl1 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl2 = new OASCommonResponseErrorSTemporaryFile();
 
-        System.assertEquals(commonResponseErrorSTemporaryFileUrlAllOf1.hashCode(), commonResponseErrorSTemporaryFileUrlAllOf1.hashCode());
-        System.assertEquals(commonResponseErrorSTemporaryFileUrlAllOf2.hashCode(), commonResponseErrorSTemporaryFileUrlAllOf2.hashCode());
+        System.assertEquals(commonResponseErrorSTemporaryFileUrl1.hashCode(), commonResponseErrorSTemporaryFileUrl1.hashCode());
+        System.assertEquals(commonResponseErrorSTemporaryFileUrl2.hashCode(), commonResponseErrorSTemporaryFileUrl2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf1 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf2 = OASCommonResponseErrorSTemporaryFile.getExample();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf3 = new OASCommonResponseErrorSTemporaryFile();
-        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrlAllOf4 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl1 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl2 = OASCommonResponseErrorSTemporaryFile.getExample();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl3 = new OASCommonResponseErrorSTemporaryFile();
+        OASCommonResponseErrorSTemporaryFile commonResponseErrorSTemporaryFileUrl4 = new OASCommonResponseErrorSTemporaryFile();
 
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf1.equals(commonResponseErrorSTemporaryFileUrlAllOf2));
-        System.assert(commonResponseErrorSTemporaryFileUrlAllOf3.equals(commonResponseErrorSTemporaryFileUrlAllOf4));
-        System.assertEquals(commonResponseErrorSTemporaryFileUrlAllOf1.hashCode(), commonResponseErrorSTemporaryFileUrlAllOf2.hashCode());
-        System.assertEquals(commonResponseErrorSTemporaryFileUrlAllOf3.hashCode(), commonResponseErrorSTemporaryFileUrlAllOf4.hashCode());
+        System.assert(commonResponseErrorSTemporaryFileUrl1.equals(commonResponseErrorSTemporaryFileUrl2));
+        System.assert(commonResponseErrorSTemporaryFileUrl3.equals(commonResponseErrorSTemporaryFileUrl4));
+        System.assertEquals(commonResponseErrorSTemporaryFileUrl1.hashCode(), commonResponseErrorSTemporaryFileUrl2.hashCode());
+        System.assertEquals(commonResponseErrorSTemporaryFileUrl3.hashCode(), commonResponseErrorSTemporaryFileUrl4.hashCode());
     }
 }

@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigndocumentGetDownloadUrlV1Res
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl
  */
 public class OASEzsigndocumentGetDownloadUrlV1Res {
     /**
-     * Get mPayload
-     * @return mPayload
+     * The Url to the requested document.\n\nUrl will expire after 5 minutes.
+     * @return sDownloadUrl
      */
-    public OASEzsigndocumentGetDownloadUrlV1Res mPayload { get; set; }
+    public String sDownloadUrl { get; set; }
 
     public static OASEzsigndocumentGetDownloadUrlV1Res getExample() {
-        OASEzsigndocumentGetDownloadUrlV1Res ezsigndocumentGetDownloadUrlV1ResponseAllOf = new OASEzsigndocumentGetDownloadUrlV1Res();
-          ezsigndocumentGetDownloadUrlV1ResponseAllOf.mPayload = OASEzsigndocumentGetDownloadUrlV1Res.getExample();
-        return ezsigndocumentGetDownloadUrlV1ResponseAllOf;
+        OASEzsigndocumentGetDownloadUrlV1Res ezsigndocumentGetDownloadUrlV1ResponseMPayload = new OASEzsigndocumentGetDownloadUrlV1Res();
+          ezsigndocumentGetDownloadUrlV1ResponseMPayload.sDownloadUrl = 'http://www.example.com/document.pdf';
+        return ezsigndocumentGetDownloadUrlV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetDownloadUrlV1Res) {           
-            OASEzsigndocumentGetDownloadUrlV1Res ezsigndocumentGetDownloadUrlV1ResponseAllOf = (OASEzsigndocumentGetDownloadUrlV1Res) obj;
-            return this.mPayload == ezsigndocumentGetDownloadUrlV1ResponseAllOf.mPayload;
+            OASEzsigndocumentGetDownloadUrlV1Res ezsigndocumentGetDownloadUrlV1ResponseMPayload = (OASEzsigndocumentGetDownloadUrlV1Res) obj;
+            return this.sDownloadUrl == ezsigndocumentGetDownloadUrlV1ResponseMPayload.sDownloadUrl;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (sDownloadUrl == null ? 0 : System.hashCode(sDownloadUrl));
         return hashCode;
     }
 }

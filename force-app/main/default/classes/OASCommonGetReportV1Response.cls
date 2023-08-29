@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/report/xxx/xxx and /1/module/report/getReportFromCache
  */
-public class OASCommonGetReportV1Response implements OASCommonGetReportV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASCommonGetReportV1ResponseMPayload mPayload { get; set; }
-
+public class OASCommonGetReportV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASCommonGetReportV1Response implements OASCommonGetReportV1Respons
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASCommonGetReportV1ResponseMPayload mPayload { get; set; }
+
     public static OASCommonGetReportV1Response getExample() {
         OASCommonGetReportV1Response commonGetReportV1Response = new OASCommonGetReportV1Response();
-          commonGetReportV1Response.mPayload = OASCommonGetReportV1ResponseMPayload.getExample();
           commonGetReportV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           commonGetReportV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          commonGetReportV1Response.mPayload = OASCommonGetReportV1ResponseMPayload.getExample();
         return commonGetReportV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCommonGetReportV1Response) {           
             OASCommonGetReportV1Response commonGetReportV1Response = (OASCommonGetReportV1Response) obj;
-            return this.mPayload == commonGetReportV1Response.mPayload
-                && this.objDebugPayload == commonGetReportV1Response.objDebugPayload
-                && this.objDebug == commonGetReportV1Response.objDebug;
+            return this.objDebugPayload == commonGetReportV1Response.objDebugPayload
+                && this.objDebug == commonGetReportV1Response.objDebug
+                && this.mPayload == commonGetReportV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

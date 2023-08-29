@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsigntemplateGetObjectV2Response
+ * Payload for GET /2/object/ezsigntemplate/{pkiEzsigntemplateID}
  */
 public class OASEzsigntemplateGetObjectV2Response {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objEzsigntemplate
+     * @return objEzsigntemplate
      */
-    public OASEzsigntemplateGetObjectV2Response mPayload { get; set; }
+    public OASEzsigntemplateResponseCompound objEzsigntemplate { get; set; }
 
     public static OASEzsigntemplateGetObjectV2Response getExample() {
-        OASEzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2ResponseAllOf = new OASEzsigntemplateGetObjectV2Response();
-          ezsigntemplateGetObjectV2ResponseAllOf.mPayload = OASEzsigntemplateGetObjectV2Response.getExample();
-        return ezsigntemplateGetObjectV2ResponseAllOf;
+        OASEzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2ResponseMPayload = new OASEzsigntemplateGetObjectV2Response();
+          ezsigntemplateGetObjectV2ResponseMPayload.objEzsigntemplate = OASEzsigntemplateResponseCompound.getExample();
+        return ezsigntemplateGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplateGetObjectV2Response) {           
-            OASEzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2ResponseAllOf = (OASEzsigntemplateGetObjectV2Response) obj;
-            return this.mPayload == ezsigntemplateGetObjectV2ResponseAllOf.mPayload;
+            OASEzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2ResponseMPayload = (OASEzsigntemplateGetObjectV2Response) obj;
+            return this.objEzsigntemplate == ezsigntemplateGetObjectV2ResponseMPayload.objEzsigntemplate;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objEzsigntemplate == null ? 0 : System.hashCode(objEzsigntemplate));
         return hashCode;
     }
 }

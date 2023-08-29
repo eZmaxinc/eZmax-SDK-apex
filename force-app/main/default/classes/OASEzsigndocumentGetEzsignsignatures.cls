@@ -11,32 +11,64 @@
  */
 
 /**
- * OASEzsigndocumentGetEzsignsignatures
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic
  */
-public class OASEzsigndocumentGetEzsignsignatures {
+public class OASEzsigndocumentGetEzsignsignatures implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * All eEzsignsignatureType contained in the response
+     * @return aEEzsignsignatureType
      */
-    public OASEzsigndocumentGetEzsignsignatures mPayload { get; set; }
+    public Set<OASFieldEEzsignsignatureType> aEEzsignsignatureType { get; set; }
+
+    /**
+     * Get aObjEzsignfolder
+     * @return aObjEzsignfolder
+     */
+    public List<OASCustomEzsignfolderEzsignsignature> aObjEzsignfolder { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_eEzsignsignatureType' => 'aEEzsignsignatureType',
+        'a_objEzsignfolder' => 'aObjEzsignfolder'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_eEzsignsignatureType' => 'aEEzsignsignatureType',
+        'a_objEzsignfolder' => 'aObjEzsignfolder'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentGetEzsignsignatures() {
+        aEEzsignsignatureType = new List<OASFieldEEzsignsignatureType>();
+        aObjEzsignfolder = new List<OASCustomEzsignfolderEzsignsignature>();
+    }
 
     public static OASEzsigndocumentGetEzsignsignatures getExample() {
-        OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf = new OASEzsigndocumentGetEzsignsignatures();
-          ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf.mPayload = OASEzsigndocumentGetEzsignsignatures.getExample();
-        return ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf;
+        OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload = new OASEzsigndocumentGetEzsignsignatures();
+          ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.aEEzsignsignatureType = new Set<OASFieldEEzsignsignatureType>{OASFieldEEzsignsignatureType.getExample()};
+          ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.aObjEzsignfolder = new List<OASCustomEzsignfolderEzsignsignature>{OASCustomEzsignfolderEzsignsignature.getExample()};
+        return ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetEzsignsignatures) {           
-            OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf = (OASEzsigndocumentGetEzsignsignatures) obj;
-            return this.mPayload == ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseAllOf.mPayload;
+            OASEzsigndocumentGetEzsignsignatures ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload = (OASEzsigndocumentGetEzsignsignatures) obj;
+            return this.aEEzsignsignatureType == ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.aEEzsignsignatureType
+                && this.aObjEzsignfolder == ezsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.aObjEzsignfolder;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aEEzsignsignatureType == null ? 0 : System.hashCode(aEEzsignsignatureType));
+        hashCode = (17 * hashCode) + (aObjEzsignfolder == null ? 0 : System.hashCode(aObjEzsignfolder));
         return hashCode;
     }
 }

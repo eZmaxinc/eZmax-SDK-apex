@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigndocumentGetEzsignannotation
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignannotations
  */
-public class OASEzsigndocumentGetEzsignannotation {
+public class OASEzsigndocumentGetEzsignannotation implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aObjEzsignannotation
+     * @return aObjEzsignannotation
      */
-    public OASEzsigndocumentGetEzsignannotation mPayload { get; set; }
+    public List<OASEzsignannotationResponseCompound> aObjEzsignannotation { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignannotation' => 'aObjEzsignannotation'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentGetEzsignannotation() {
+        aObjEzsignannotation = new List<OASEzsignannotationResponseCompound>();
+    }
 
     public static OASEzsigndocumentGetEzsignannotation getExample() {
-        OASEzsigndocumentGetEzsignannotation ezsigndocumentGetEzsignannotationsV1ResponseAllOf = new OASEzsigndocumentGetEzsignannotation();
-          ezsigndocumentGetEzsignannotationsV1ResponseAllOf.mPayload = OASEzsigndocumentGetEzsignannotation.getExample();
-        return ezsigndocumentGetEzsignannotationsV1ResponseAllOf;
+        OASEzsigndocumentGetEzsignannotation ezsigndocumentGetEzsignannotationsV1ResponseMPayload = new OASEzsigndocumentGetEzsignannotation();
+          ezsigndocumentGetEzsignannotationsV1ResponseMPayload.aObjEzsignannotation = new List<OASEzsignannotationResponseCompound>{OASEzsignannotationResponseCompound.getExample()};
+        return ezsigndocumentGetEzsignannotationsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentGetEzsignannotation) {           
-            OASEzsigndocumentGetEzsignannotation ezsigndocumentGetEzsignannotationsV1ResponseAllOf = (OASEzsigndocumentGetEzsignannotation) obj;
-            return this.mPayload == ezsigndocumentGetEzsignannotationsV1ResponseAllOf.mPayload;
+            OASEzsigndocumentGetEzsignannotation ezsigndocumentGetEzsignannotationsV1ResponseMPayload = (OASEzsigndocumentGetEzsignannotation) obj;
+            return this.aObjEzsignannotation == ezsigndocumentGetEzsignannotationsV1ResponseMPayload.aObjEzsignannotation;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjEzsignannotation == null ? 0 : System.hashCode(aObjEzsignannotation));
         return hashCode;
     }
 }

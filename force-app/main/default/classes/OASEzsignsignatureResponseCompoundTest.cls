@@ -101,6 +101,7 @@ private class OASEzsignsignatureResponseCompoundTest {
         System.assertEquals(null, ezsignsignatureResponseCompound.dtEzsignsignatureDate);
         System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureattachmentCount);
         System.assertEquals(null, ezsignsignatureResponseCompound.sEzsignsignatureDescription);
+        System.assertEquals(null, ezsignsignatureResponseCompound.iEzsignsignatureMaxlength);
         System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation);
         System.assertEquals(null, ezsignsignatureResponseCompound.sEzsignsignatureRegexp);
         System.assertEquals(null, ezsignsignatureResponseCompound.objContactName);

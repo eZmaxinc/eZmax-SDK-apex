@@ -82,6 +82,7 @@ public class OASEzsignformfieldgroupRequest {
     /**
      * The maximum length for the value in the Ezsignformfieldgroup\n\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
      * minimum: 0
+     * maximum: 65535
      * @return iEzsignformfieldgroupMaxlength
      */
     public Integer iEzsignformfieldgroupMaxlength { get; set; }

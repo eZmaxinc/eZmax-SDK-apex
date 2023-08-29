@@ -11,9 +11,21 @@
  */
 
 /**
- * OASBillingentityinternalGetListV1Res
+ * Payload for GET /1/object/billingentityinternal/getList
  */
-public class OASBillingentityinternalGetListV1Res implements OAS.MappedProperties {
+public class OASBillingentityinternalGetListV1Res implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjBillingentityinternal
      * @return aObjBillingentityinternal
@@ -33,21 +45,27 @@ public class OASBillingentityinternalGetListV1Res implements OAS.MappedPropertie
     }
 
     public static OASBillingentityinternalGetListV1Res getExample() {
-        OASBillingentityinternalGetListV1Res billingentityinternalGetListV1ResponseMPayloadAllOf = new OASBillingentityinternalGetListV1Res();
-          billingentityinternalGetListV1ResponseMPayloadAllOf.aObjBillingentityinternal = new List<OASBillingentityinternalListElement>{OASBillingentityinternalListElement.getExample()};
-        return billingentityinternalGetListV1ResponseMPayloadAllOf;
+        OASBillingentityinternalGetListV1Res billingentityinternalGetListV1ResponseMPayload = new OASBillingentityinternalGetListV1Res();
+          billingentityinternalGetListV1ResponseMPayload.iRowReturned = 100;
+          billingentityinternalGetListV1ResponseMPayload.iRowFiltered = 533;
+          billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal = new List<OASBillingentityinternalListElement>{OASBillingentityinternalListElement.getExample()};
+        return billingentityinternalGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASBillingentityinternalGetListV1Res) {           
-            OASBillingentityinternalGetListV1Res billingentityinternalGetListV1ResponseMPayloadAllOf = (OASBillingentityinternalGetListV1Res) obj;
-            return this.aObjBillingentityinternal == billingentityinternalGetListV1ResponseMPayloadAllOf.aObjBillingentityinternal;
+            OASBillingentityinternalGetListV1Res billingentityinternalGetListV1ResponseMPayload = (OASBillingentityinternalGetListV1Res) obj;
+            return this.iRowReturned == billingentityinternalGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == billingentityinternalGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjBillingentityinternal == billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjBillingentityinternal == null ? 0 : System.hashCode(aObjBillingentityinternal));
         return hashCode;
     }

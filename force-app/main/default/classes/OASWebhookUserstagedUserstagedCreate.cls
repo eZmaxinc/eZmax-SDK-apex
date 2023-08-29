@@ -11,31 +11,61 @@
  */
 
 /**
- * OASWebhookUserstagedUserstagedCreate
+ * This is the base Webhook object
  */
-public class OASWebhookUserstagedUserstagedCreate {
+public class OASWebhookUserstagedUserstagedCreate implements OASCommonWebhook, OAS.MappedProperties {
+    /**
+     * Get objWebhook
+     * @return objWebhook
+     */
+    public OASCustomWebhookResponse objWebhook { get; set; }
+
+    /**
+     * An array containing details of previous attempts that were made to deliver the message.\nThe array is empty if it\'s the first attempt.
+     * @return aObjAttempt
+     */
+    public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
+
     /**
      * Get objUserstaged
      * @return objUserstaged
      */
     public OASUserstagedResponseCompound objUserstaged { get; set; }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objAttempt' => 'aObjAttempt'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASWebhookUserstagedUserstagedCreate() {
+        aObjAttempt = new List<OASAttemptResponseCompound>();
+    }
+
     public static OASWebhookUserstagedUserstagedCreate getExample() {
-        OASWebhookUserstagedUserstagedCreate webhookUserstagedUserstagedCreatedAllOf = new OASWebhookUserstagedUserstagedCreate();
-          webhookUserstagedUserstagedCreatedAllOf.objUserstaged = OASUserstagedResponseCompound.getExample();
-        return webhookUserstagedUserstagedCreatedAllOf;
+        OASWebhookUserstagedUserstagedCreate webhookUserstagedUserstagedCreated = new OASWebhookUserstagedUserstagedCreate();
+          webhookUserstagedUserstagedCreated.objWebhook = OASCustomWebhookResponse.getExample();
+          webhookUserstagedUserstagedCreated.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
+          webhookUserstagedUserstagedCreated.objUserstaged = OASUserstagedResponseCompound.getExample();
+        return webhookUserstagedUserstagedCreated;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookUserstagedUserstagedCreate) {           
-            OASWebhookUserstagedUserstagedCreate webhookUserstagedUserstagedCreatedAllOf = (OASWebhookUserstagedUserstagedCreate) obj;
-            return this.objUserstaged == webhookUserstagedUserstagedCreatedAllOf.objUserstaged;
+            OASWebhookUserstagedUserstagedCreate webhookUserstagedUserstagedCreated = (OASWebhookUserstagedUserstagedCreate) obj;
+            return this.objWebhook == webhookUserstagedUserstagedCreated.objWebhook
+                && this.aObjAttempt == webhookUserstagedUserstagedCreated.aObjAttempt
+                && this.objUserstaged == webhookUserstagedUserstagedCreated.objUserstaged;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (objWebhook == null ? 0 : System.hashCode(objWebhook));
+        hashCode = (17 * hashCode) + (aObjAttempt == null ? 0 : System.hashCode(aObjAttempt));
         hashCode = (17 * hashCode) + (objUserstaged == null ? 0 : System.hashCode(objUserstaged));
         return hashCode;
     }

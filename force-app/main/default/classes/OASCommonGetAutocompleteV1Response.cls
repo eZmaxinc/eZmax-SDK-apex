@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/xxx/getAutocomplete
  */
-public class OASCommonGetAutocompleteV1Response implements OASCommonGetAutocompleteV1ResponseAl, OASCommonResponse {
-    /**
-     * Generic Autocomplete Response
-     * @return mPayload
-     */
-    public List<OASCustomAutocompleteElementResponse> mPayload { get; set; }
-
+public class OASCommonGetAutocompleteV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,33 +26,39 @@ public class OASCommonGetAutocompleteV1Response implements OASCommonGetAutocompl
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Generic Autocomplete Response
+     * @return mPayload
+     */
+    public List<OASCustomAutocompleteElementResponse> mPayload { get; set; }
+
     public OASCommonGetAutocompleteV1Response() {
         mPayload = new List<OASCustomAutocompleteElementResponse>();
     }
 
     public static OASCommonGetAutocompleteV1Response getExample() {
         OASCommonGetAutocompleteV1Response commonGetAutocompleteV1Response = new OASCommonGetAutocompleteV1Response();
-          commonGetAutocompleteV1Response.mPayload = new List<OASCustomAutocompleteElementResponse>{OASCustomAutocompleteElementResponse.getExample()};
           commonGetAutocompleteV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           commonGetAutocompleteV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          commonGetAutocompleteV1Response.mPayload = new List<OASCustomAutocompleteElementResponse>{OASCustomAutocompleteElementResponse.getExample()};
         return commonGetAutocompleteV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCommonGetAutocompleteV1Response) {           
             OASCommonGetAutocompleteV1Response commonGetAutocompleteV1Response = (OASCommonGetAutocompleteV1Response) obj;
-            return this.mPayload == commonGetAutocompleteV1Response.mPayload
-                && this.objDebugPayload == commonGetAutocompleteV1Response.objDebugPayload
-                && this.objDebug == commonGetAutocompleteV1Response.objDebug;
+            return this.objDebugPayload == commonGetAutocompleteV1Response.objDebugPayload
+                && this.objDebug == commonGetAutocompleteV1Response.objDebug
+                && this.mPayload == commonGetAutocompleteV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

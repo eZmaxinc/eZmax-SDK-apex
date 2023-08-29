@@ -11,32 +11,32 @@
  */
 
 /**
- * OASVersionhistoryGetObjectV2Response
+ * Payload for GET /2/object/versionhistory/{pkiVersionhistoryID}
  */
 public class OASVersionhistoryGetObjectV2Response {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objVersionhistory
+     * @return objVersionhistory
      */
-    public OASVersionhistoryGetObjectV2Response mPayload { get; set; }
+    public OASVersionhistoryResponseCompound objVersionhistory { get; set; }
 
     public static OASVersionhistoryGetObjectV2Response getExample() {
-        OASVersionhistoryGetObjectV2Response versionhistoryGetObjectV2ResponseAllOf = new OASVersionhistoryGetObjectV2Response();
-          versionhistoryGetObjectV2ResponseAllOf.mPayload = OASVersionhistoryGetObjectV2Response.getExample();
-        return versionhistoryGetObjectV2ResponseAllOf;
+        OASVersionhistoryGetObjectV2Response versionhistoryGetObjectV2ResponseMPayload = new OASVersionhistoryGetObjectV2Response();
+          versionhistoryGetObjectV2ResponseMPayload.objVersionhistory = OASVersionhistoryResponseCompound.getExample();
+        return versionhistoryGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASVersionhistoryGetObjectV2Response) {           
-            OASVersionhistoryGetObjectV2Response versionhistoryGetObjectV2ResponseAllOf = (OASVersionhistoryGetObjectV2Response) obj;
-            return this.mPayload == versionhistoryGetObjectV2ResponseAllOf.mPayload;
+            OASVersionhistoryGetObjectV2Response versionhistoryGetObjectV2ResponseMPayload = (OASVersionhistoryGetObjectV2Response) obj;
+            return this.objVersionhistory == versionhistoryGetObjectV2ResponseMPayload.objVersionhistory;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objVersionhistory == null ? 0 : System.hashCode(objVersionhistory));
         return hashCode;
     }
 }

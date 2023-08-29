@@ -13,7 +13,7 @@
 /**
  * A custom Webhooklog object
  */
-public class OASCustomWebhooklogResponse implements OASCustomWebhooklogResponseAllOf {
+public class OASCustomWebhooklogResponse {
     /**
      * The date and time at which the Webhooklog happened.
      * @return dtWebhooklogDate

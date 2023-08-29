@@ -11,32 +11,44 @@
  */
 
 /**
- * OASDepartmentGetAutocompleteV2Respon
+ * Payload for POST /2/object/department/getAutocomplete
  */
-public class OASDepartmentGetAutocompleteV2Respon {
+public class OASDepartmentGetAutocompleteV2Respon implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Department autocomplete element response.
+     * @return aObjDepartment
      */
-    public OASDepartmentGetAutocompleteV2Respon mPayload { get; set; }
+    public List<OASDepartmentAutocompleteElementResp> aObjDepartment { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objDepartment' => 'aObjDepartment'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASDepartmentGetAutocompleteV2Respon() {
+        aObjDepartment = new List<OASDepartmentAutocompleteElementResp>();
+    }
 
     public static OASDepartmentGetAutocompleteV2Respon getExample() {
-        OASDepartmentGetAutocompleteV2Respon departmentGetAutocompleteV2ResponseAllOf = new OASDepartmentGetAutocompleteV2Respon();
-          departmentGetAutocompleteV2ResponseAllOf.mPayload = OASDepartmentGetAutocompleteV2Respon.getExample();
-        return departmentGetAutocompleteV2ResponseAllOf;
+        OASDepartmentGetAutocompleteV2Respon departmentGetAutocompleteV2ResponseMPayload = new OASDepartmentGetAutocompleteV2Respon();
+          departmentGetAutocompleteV2ResponseMPayload.aObjDepartment = new List<OASDepartmentAutocompleteElementResp>{OASDepartmentAutocompleteElementResp.getExample()};
+        return departmentGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASDepartmentGetAutocompleteV2Respon) {           
-            OASDepartmentGetAutocompleteV2Respon departmentGetAutocompleteV2ResponseAllOf = (OASDepartmentGetAutocompleteV2Respon) obj;
-            return this.mPayload == departmentGetAutocompleteV2ResponseAllOf.mPayload;
+            OASDepartmentGetAutocompleteV2Respon departmentGetAutocompleteV2ResponseMPayload = (OASDepartmentGetAutocompleteV2Respon) obj;
+            return this.aObjDepartment == departmentGetAutocompleteV2ResponseMPayload.aObjDepartment;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjDepartment == null ? 0 : System.hashCode(aObjDepartment));
         return hashCode;
     }
 }

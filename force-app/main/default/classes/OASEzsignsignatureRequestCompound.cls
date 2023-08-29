@@ -13,7 +13,7 @@
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequest, OASEzsignsignatureRequestCompoundAll, OAS.MappedProperties {
+public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequest, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignsignature
      * minimum: 0
@@ -132,6 +132,14 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
     public Integer iEzsignsignatureValidationstep { get; set; }
 
     /**
+     * The maximum length for the value in the Ezsignsignature\n\nThis can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+     * minimum: 0
+     * maximum: 65535
+     * @return iEzsignsignatureMaxlength
+     */
+    public Integer iEzsignsignatureMaxlength { get; set; }
+
+    /**
      * Get eEzsignsignatureTextvalidation
      * @return eEzsignsignatureTextvalidation
      */
@@ -187,6 +195,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
           ezsignsignatureRequestCompound.eEzsignsignatureAttachmentnamesource = OASFieldEEzsignsignatureAttachmentna.getExample();
           ezsignsignatureRequestCompound.sEzsignsignatureAttachmentdescription = 'Attachment';
           ezsignsignatureRequestCompound.iEzsignsignatureValidationstep = 1;
+          ezsignsignatureRequestCompound.iEzsignsignatureMaxlength = 75;
           ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation = OASEnumTextvalidation.getExample();
           ezsignsignatureRequestCompound.sEzsignsignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
           ezsignsignatureRequestCompound.bEzsignsignatureCustomdate = true;
@@ -215,6 +224,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
                 && this.eEzsignsignatureAttachmentnamesource == ezsignsignatureRequestCompound.eEzsignsignatureAttachmentnamesource
                 && this.sEzsignsignatureAttachmentdescription == ezsignsignatureRequestCompound.sEzsignsignatureAttachmentdescription
                 && this.iEzsignsignatureValidationstep == ezsignsignatureRequestCompound.iEzsignsignatureValidationstep
+                && this.iEzsignsignatureMaxlength == ezsignsignatureRequestCompound.iEzsignsignatureMaxlength
                 && this.eEzsignsignatureTextvalidation == ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation
                 && this.sEzsignsignatureRegexp == ezsignsignatureRequestCompound.sEzsignsignatureRegexp
                 && this.bEzsignsignatureCustomdate == ezsignsignatureRequestCompound.bEzsignsignatureCustomdate
@@ -243,6 +253,7 @@ public class OASEzsignsignatureRequestCompound implements OASEzsignsignatureRequ
         hashCode = (17 * hashCode) + (eEzsignsignatureAttachmentnamesource == null ? 0 : System.hashCode(eEzsignsignatureAttachmentnamesource));
         hashCode = (17 * hashCode) + (sEzsignsignatureAttachmentdescription == null ? 0 : System.hashCode(sEzsignsignatureAttachmentdescription));
         hashCode = (17 * hashCode) + (iEzsignsignatureValidationstep == null ? 0 : System.hashCode(iEzsignsignatureValidationstep));
+        hashCode = (17 * hashCode) + (iEzsignsignatureMaxlength == null ? 0 : System.hashCode(iEzsignsignatureMaxlength));
         hashCode = (17 * hashCode) + (eEzsignsignatureTextvalidation == null ? 0 : System.hashCode(eEzsignsignatureTextvalidation));
         hashCode = (17 * hashCode) + (sEzsignsignatureRegexp == null ? 0 : System.hashCode(sEzsignsignatureRegexp));
         hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));

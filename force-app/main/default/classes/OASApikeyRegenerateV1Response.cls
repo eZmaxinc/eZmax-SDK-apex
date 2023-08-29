@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/regenerate
  */
-public class OASApikeyRegenerateV1Response implements OASApikeyRegenerateV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASApikeyRegenerateV1ResponseMPayloa mPayload { get; set; }
-
+public class OASApikeyRegenerateV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASApikeyRegenerateV1Response implements OASApikeyRegenerateV1Respo
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASApikeyRegenerateV1ResponseMPayloa mPayload { get; set; }
+
     public static OASApikeyRegenerateV1Response getExample() {
         OASApikeyRegenerateV1Response apikeyRegenerateV1Response = new OASApikeyRegenerateV1Response();
-          apikeyRegenerateV1Response.mPayload = OASApikeyRegenerateV1ResponseMPayloa.getExample();
           apikeyRegenerateV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           apikeyRegenerateV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          apikeyRegenerateV1Response.mPayload = OASApikeyRegenerateV1ResponseMPayloa.getExample();
         return apikeyRegenerateV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASApikeyRegenerateV1Response) {           
             OASApikeyRegenerateV1Response apikeyRegenerateV1Response = (OASApikeyRegenerateV1Response) obj;
-            return this.mPayload == apikeyRegenerateV1Response.mPayload
-                && this.objDebugPayload == apikeyRegenerateV1Response.objDebugPayload
-                && this.objDebug == apikeyRegenerateV1Response.objDebug;
+            return this.objDebugPayload == apikeyRegenerateV1Response.objDebugPayload
+                && this.objDebug == apikeyRegenerateV1Response.objDebug
+                && this.mPayload == apikeyRegenerateV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

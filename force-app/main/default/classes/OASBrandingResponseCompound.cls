@@ -13,7 +13,7 @@
 /**
  * A Branding Object
  */
-public class OASBrandingResponseCompound implements OASBrandingResponse, OASBrandingResponseCompoundAllOf {
+public class OASBrandingResponseCompound implements OASBrandingResponse {
     /**
      * The unique ID of the Branding
      * minimum: 0

@@ -11,32 +11,44 @@
  */
 
 /**
- * OASFranchiseofficeGetAutocompleteV2R
+ * Payload for POST /2/object/franchiseoffice/getAutocomplete
  */
-public class OASFranchiseofficeGetAutocompleteV2R {
+public class OASFranchiseofficeGetAutocompleteV2R implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Franchiseoffice autocomplete element response.
+     * @return aObjFranchiseoffice
      */
-    public OASFranchiseofficeGetAutocompleteV2R mPayload { get; set; }
+    public List<OASFranchiseofficeAutocompleteElemen> aObjFranchiseoffice { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objFranchiseoffice' => 'aObjFranchiseoffice'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASFranchiseofficeGetAutocompleteV2R() {
+        aObjFranchiseoffice = new List<OASFranchiseofficeAutocompleteElemen>();
+    }
 
     public static OASFranchiseofficeGetAutocompleteV2R getExample() {
-        OASFranchiseofficeGetAutocompleteV2R franchiseofficeGetAutocompleteV2ResponseAllOf = new OASFranchiseofficeGetAutocompleteV2R();
-          franchiseofficeGetAutocompleteV2ResponseAllOf.mPayload = OASFranchiseofficeGetAutocompleteV2R.getExample();
-        return franchiseofficeGetAutocompleteV2ResponseAllOf;
+        OASFranchiseofficeGetAutocompleteV2R franchiseofficeGetAutocompleteV2ResponseMPayload = new OASFranchiseofficeGetAutocompleteV2R();
+          franchiseofficeGetAutocompleteV2ResponseMPayload.aObjFranchiseoffice = new List<OASFranchiseofficeAutocompleteElemen>{OASFranchiseofficeAutocompleteElemen.getExample()};
+        return franchiseofficeGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASFranchiseofficeGetAutocompleteV2R) {           
-            OASFranchiseofficeGetAutocompleteV2R franchiseofficeGetAutocompleteV2ResponseAllOf = (OASFranchiseofficeGetAutocompleteV2R) obj;
-            return this.mPayload == franchiseofficeGetAutocompleteV2ResponseAllOf.mPayload;
+            OASFranchiseofficeGetAutocompleteV2R franchiseofficeGetAutocompleteV2ResponseMPayload = (OASFranchiseofficeGetAutocompleteV2R) obj;
+            return this.aObjFranchiseoffice == franchiseofficeGetAutocompleteV2ResponseMPayload.aObjFranchiseoffice;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjFranchiseoffice == null ? 0 : System.hashCode(aObjFranchiseoffice));
         return hashCode;
     }
 }

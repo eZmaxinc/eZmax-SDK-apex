@@ -11,9 +11,21 @@
  */
 
 /**
- * OASPaymenttermGetListV1ResponseMPayl
+ * Payload for GET /1/object/paymentterm/getList
  */
-public class OASPaymenttermGetListV1ResponseMPayl implements OAS.MappedProperties {
+public class OASPaymenttermGetListV1ResponseMPayl implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjPaymentterm
      * @return aObjPaymentterm
@@ -33,21 +45,27 @@ public class OASPaymenttermGetListV1ResponseMPayl implements OAS.MappedPropertie
     }
 
     public static OASPaymenttermGetListV1ResponseMPayl getExample() {
-        OASPaymenttermGetListV1ResponseMPayl paymenttermGetListV1ResponseMPayloadAllOf = new OASPaymenttermGetListV1ResponseMPayl();
-          paymenttermGetListV1ResponseMPayloadAllOf.aObjPaymentterm = new List<OASPaymenttermListElement>{OASPaymenttermListElement.getExample()};
-        return paymenttermGetListV1ResponseMPayloadAllOf;
+        OASPaymenttermGetListV1ResponseMPayl paymenttermGetListV1ResponseMPayload = new OASPaymenttermGetListV1ResponseMPayl();
+          paymenttermGetListV1ResponseMPayload.iRowReturned = 100;
+          paymenttermGetListV1ResponseMPayload.iRowFiltered = 533;
+          paymenttermGetListV1ResponseMPayload.aObjPaymentterm = new List<OASPaymenttermListElement>{OASPaymenttermListElement.getExample()};
+        return paymenttermGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPaymenttermGetListV1ResponseMPayl) {           
-            OASPaymenttermGetListV1ResponseMPayl paymenttermGetListV1ResponseMPayloadAllOf = (OASPaymenttermGetListV1ResponseMPayl) obj;
-            return this.aObjPaymentterm == paymenttermGetListV1ResponseMPayloadAllOf.aObjPaymentterm;
+            OASPaymenttermGetListV1ResponseMPayl paymenttermGetListV1ResponseMPayload = (OASPaymenttermGetListV1ResponseMPayl) obj;
+            return this.iRowReturned == paymenttermGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == paymenttermGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjPaymentterm == paymenttermGetListV1ResponseMPayload.aObjPaymentterm;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjPaymentterm == null ? 0 : System.hashCode(aObjPaymentterm));
         return hashCode;
     }

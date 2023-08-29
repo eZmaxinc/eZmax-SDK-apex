@@ -2,84 +2,96 @@
 private class OASFranchisereferalincomeRequestCompTest {
     @isTest
     private static void equalsSameInstance() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf1 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf2 = franchisereferalincomeRequestCompoundAllOf1;
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf3 = new OASFranchisereferalincomeRequestComp();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf4 = franchisereferalincomeRequestCompoundAllOf3;
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound1 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound2 = franchisereferalincomeRequestCompound1;
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound3 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound4 = franchisereferalincomeRequestCompound3;
 
-        System.assert(franchisereferalincomeRequestCompoundAllOf1.equals(franchisereferalincomeRequestCompoundAllOf2));
-        System.assert(franchisereferalincomeRequestCompoundAllOf2.equals(franchisereferalincomeRequestCompoundAllOf1));
-        System.assert(franchisereferalincomeRequestCompoundAllOf1.equals(franchisereferalincomeRequestCompoundAllOf1));
-        System.assert(franchisereferalincomeRequestCompoundAllOf3.equals(franchisereferalincomeRequestCompoundAllOf4));
-        System.assert(franchisereferalincomeRequestCompoundAllOf4.equals(franchisereferalincomeRequestCompoundAllOf3));
-        System.assert(franchisereferalincomeRequestCompoundAllOf3.equals(franchisereferalincomeRequestCompoundAllOf3));
+        System.assert(franchisereferalincomeRequestCompound1.equals(franchisereferalincomeRequestCompound2));
+        System.assert(franchisereferalincomeRequestCompound2.equals(franchisereferalincomeRequestCompound1));
+        System.assert(franchisereferalincomeRequestCompound1.equals(franchisereferalincomeRequestCompound1));
+        System.assert(franchisereferalincomeRequestCompound3.equals(franchisereferalincomeRequestCompound4));
+        System.assert(franchisereferalincomeRequestCompound4.equals(franchisereferalincomeRequestCompound3));
+        System.assert(franchisereferalincomeRequestCompound3.equals(franchisereferalincomeRequestCompound3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf1 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf2 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf3 = new OASFranchisereferalincomeRequestComp();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf4 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound1 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound2 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound3 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound4 = new OASFranchisereferalincomeRequestComp();
 
-        System.assert(franchisereferalincomeRequestCompoundAllOf1.equals(franchisereferalincomeRequestCompoundAllOf2));
-        System.assert(franchisereferalincomeRequestCompoundAllOf2.equals(franchisereferalincomeRequestCompoundAllOf1));
-        System.assert(franchisereferalincomeRequestCompoundAllOf3.equals(franchisereferalincomeRequestCompoundAllOf4));
-        System.assert(franchisereferalincomeRequestCompoundAllOf4.equals(franchisereferalincomeRequestCompoundAllOf3));
+        System.assert(franchisereferalincomeRequestCompound1.equals(franchisereferalincomeRequestCompound2));
+        System.assert(franchisereferalincomeRequestCompound2.equals(franchisereferalincomeRequestCompound1));
+        System.assert(franchisereferalincomeRequestCompound3.equals(franchisereferalincomeRequestCompound4));
+        System.assert(franchisereferalincomeRequestCompound4.equals(franchisereferalincomeRequestCompound3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf1 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf2 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound1 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound2 = new OASFranchisereferalincomeRequestComp();
 
-        System.assertEquals(false, franchisereferalincomeRequestCompoundAllOf1.equals('foo'));
-        System.assertEquals(false, franchisereferalincomeRequestCompoundAllOf2.equals('foo'));
+        System.assertEquals(false, franchisereferalincomeRequestCompound1.equals('foo'));
+        System.assertEquals(false, franchisereferalincomeRequestCompound2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf1 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf2 = new OASFranchisereferalincomeRequestComp();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf3;
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound1 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound2 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound3;
 
-        System.assertEquals(false, franchisereferalincomeRequestCompoundAllOf1.equals(franchisereferalincomeRequestCompoundAllOf3));
-        System.assertEquals(false, franchisereferalincomeRequestCompoundAllOf2.equals(franchisereferalincomeRequestCompoundAllOf3));
+        System.assertEquals(false, franchisereferalincomeRequestCompound1.equals(franchisereferalincomeRequestCompound3));
+        System.assertEquals(false, franchisereferalincomeRequestCompound2.equals(franchisereferalincomeRequestCompound3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf1 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf2 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound1 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound2 = new OASFranchisereferalincomeRequestComp();
 
-        System.assertEquals(franchisereferalincomeRequestCompoundAllOf1.hashCode(), franchisereferalincomeRequestCompoundAllOf1.hashCode());
-        System.assertEquals(franchisereferalincomeRequestCompoundAllOf2.hashCode(), franchisereferalincomeRequestCompoundAllOf2.hashCode());
+        System.assertEquals(franchisereferalincomeRequestCompound1.hashCode(), franchisereferalincomeRequestCompound1.hashCode());
+        System.assertEquals(franchisereferalincomeRequestCompound2.hashCode(), franchisereferalincomeRequestCompound2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf1 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf2 = OASFranchisereferalincomeRequestComp.getExample();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf3 = new OASFranchisereferalincomeRequestComp();
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf4 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound1 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound2 = OASFranchisereferalincomeRequestComp.getExample();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound3 = new OASFranchisereferalincomeRequestComp();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound4 = new OASFranchisereferalincomeRequestComp();
 
-        System.assert(franchisereferalincomeRequestCompoundAllOf1.equals(franchisereferalincomeRequestCompoundAllOf2));
-        System.assert(franchisereferalincomeRequestCompoundAllOf3.equals(franchisereferalincomeRequestCompoundAllOf4));
-        System.assertEquals(franchisereferalincomeRequestCompoundAllOf1.hashCode(), franchisereferalincomeRequestCompoundAllOf2.hashCode());
-        System.assertEquals(franchisereferalincomeRequestCompoundAllOf3.hashCode(), franchisereferalincomeRequestCompoundAllOf4.hashCode());
+        System.assert(franchisereferalincomeRequestCompound1.equals(franchisereferalincomeRequestCompound2));
+        System.assert(franchisereferalincomeRequestCompound3.equals(franchisereferalincomeRequestCompound4));
+        System.assertEquals(franchisereferalincomeRequestCompound1.hashCode(), franchisereferalincomeRequestCompound2.hashCode());
+        System.assertEquals(franchisereferalincomeRequestCompound3.hashCode(), franchisereferalincomeRequestCompound4.hashCode());
     }
 
     @isTest
     private static void maintainRenamedProperties() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf = new OASFranchisereferalincomeRequestComp();
-        Map<String, String> x-property-mappings = franchisereferalincomeRequestCompoundAllOf.getx-property-mappings();
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound = new OASFranchisereferalincomeRequestComp();
+        Map<String, String> x-property-mappings = franchisereferalincomeRequestCompound.getx-property-mappings();
         System.assertEquals('aObjContact', x-property-mappings.get('a_objContact'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
-        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompoundAllOf = new OASFranchisereferalincomeRequestComp();
-        System.assertEquals(new List<OASContactRequestCompound>(), franchisereferalincomeRequestCompoundAllOf.aObjContact);
-        System.assertEquals(null, franchisereferalincomeRequestCompoundAllOf.objAddress);
+        OASFranchisereferalincomeRequestComp franchisereferalincomeRequestCompound = new OASFranchisereferalincomeRequestComp();
+        System.assertEquals(new List<OASContactRequestCompound>(), franchisereferalincomeRequestCompound.aObjContact);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.fkiFranchisebrokerID);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.fkiPeriodID);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.dFranchisereferalincomeLoan);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchiseamount);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchisoramount);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.dFranchisereferalincomeAgentamount);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.dtFranchisereferalincomeDisbursed);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.tFranchisereferalincomeComment);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.fkiFranchiseofficeID);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid);
+        System.assertEquals(null, franchisereferalincomeRequestCompound.objAddress);
     }
 }

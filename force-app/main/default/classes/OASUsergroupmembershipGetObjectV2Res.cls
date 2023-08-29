@@ -11,32 +11,32 @@
  */
 
 /**
- * OASUsergroupmembershipGetObjectV2Res
+ * Payload for GET /2/object/usergroupmembership/{pkiUsergroupmembershipID}
  */
 public class OASUsergroupmembershipGetObjectV2Res {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objUsergroupmembership
+     * @return objUsergroupmembership
      */
-    public OASUsergroupmembershipGetObjectV2Res mPayload { get; set; }
+    public OASUsergroupmembershipResponseCompou objUsergroupmembership { get; set; }
 
     public static OASUsergroupmembershipGetObjectV2Res getExample() {
-        OASUsergroupmembershipGetObjectV2Res usergroupmembershipGetObjectV2ResponseAllOf = new OASUsergroupmembershipGetObjectV2Res();
-          usergroupmembershipGetObjectV2ResponseAllOf.mPayload = OASUsergroupmembershipGetObjectV2Res.getExample();
-        return usergroupmembershipGetObjectV2ResponseAllOf;
+        OASUsergroupmembershipGetObjectV2Res usergroupmembershipGetObjectV2ResponseMPayload = new OASUsergroupmembershipGetObjectV2Res();
+          usergroupmembershipGetObjectV2ResponseMPayload.objUsergroupmembership = OASUsergroupmembershipResponseCompou.getExample();
+        return usergroupmembershipGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupmembershipGetObjectV2Res) {           
-            OASUsergroupmembershipGetObjectV2Res usergroupmembershipGetObjectV2ResponseAllOf = (OASUsergroupmembershipGetObjectV2Res) obj;
-            return this.mPayload == usergroupmembershipGetObjectV2ResponseAllOf.mPayload;
+            OASUsergroupmembershipGetObjectV2Res usergroupmembershipGetObjectV2ResponseMPayload = (OASUsergroupmembershipGetObjectV2Res) obj;
+            return this.objUsergroupmembership == usergroupmembershipGetObjectV2ResponseMPayload.objUsergroupmembership;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objUsergroupmembership == null ? 0 : System.hashCode(objUsergroupmembership));
         return hashCode;
     }
 }

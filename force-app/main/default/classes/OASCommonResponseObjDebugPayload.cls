@@ -32,6 +32,12 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
      */
     public List<Integer> aRequiredPermission { get; set; }
 
+    /**
+     * Wheter the current route is deprecated or not
+     * @return bVersionDeprecated
+     */
+    public Boolean bVersionDeprecated { get; set; }
+
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_RequiredPermission' => 'aRequiredPermission'
     };
@@ -49,6 +55,7 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
           commonResponseObjDebugPayload.iVersionMin = 1;
           commonResponseObjDebugPayload.iVersionMax = 2;
           commonResponseObjDebugPayload.aRequiredPermission = new List<Integer>{117};
+          commonResponseObjDebugPayload.bVersionDeprecated = false;
         return commonResponseObjDebugPayload;
     }
 
@@ -57,7 +64,8 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
             OASCommonResponseObjDebugPayload commonResponseObjDebugPayload = (OASCommonResponseObjDebugPayload) obj;
             return this.iVersionMin == commonResponseObjDebugPayload.iVersionMin
                 && this.iVersionMax == commonResponseObjDebugPayload.iVersionMax
-                && this.aRequiredPermission == commonResponseObjDebugPayload.aRequiredPermission;
+                && this.aRequiredPermission == commonResponseObjDebugPayload.aRequiredPermission
+                && this.bVersionDeprecated == commonResponseObjDebugPayload.bVersionDeprecated;
         }
         return false;
     }
@@ -67,6 +75,7 @@ public class OASCommonResponseObjDebugPayload implements OAS.MappedProperties {
         hashCode = (17 * hashCode) + (iVersionMin == null ? 0 : System.hashCode(iVersionMin));
         hashCode = (17 * hashCode) + (iVersionMax == null ? 0 : System.hashCode(iVersionMax));
         hashCode = (17 * hashCode) + (aRequiredPermission == null ? 0 : System.hashCode(aRequiredPermission));
+        hashCode = (17 * hashCode) + (bVersionDeprecated == null ? 0 : System.hashCode(bVersionDeprecated));
         return hashCode;
     }
 }

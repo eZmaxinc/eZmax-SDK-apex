@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigndocumentEditEzsignsignature
+ * Payload for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
  */
-public class OASEzsigndocumentEditEzsignsignature {
+public class OASEzsigndocumentEditEzsignsignature implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aPkiEzsignsignatureID
+     * @return aPkiEzsignsignatureID
      */
-    public OASEzsigndocumentEditEzsignsignature mPayload { get; set; }
+    public List<Integer> aPkiEzsignsignatureID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsignsignatureID' => 'aPkiEzsignsignatureID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigndocumentEditEzsignsignature() {
+        aPkiEzsignsignatureID = new List<Integer>();
+    }
 
     public static OASEzsigndocumentEditEzsignsignature getExample() {
-        OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1ResponseAllOf = new OASEzsigndocumentEditEzsignsignature();
-          ezsigndocumentEditEzsignsignaturesV1ResponseAllOf.mPayload = OASEzsigndocumentEditEzsignsignature.getExample();
-        return ezsigndocumentEditEzsignsignaturesV1ResponseAllOf;
+        OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1ResponseMPayload = new OASEzsigndocumentEditEzsignsignature();
+          ezsigndocumentEditEzsignsignaturesV1ResponseMPayload.aPkiEzsignsignatureID = new List<Integer>{Integer.getExample()};
+        return ezsigndocumentEditEzsignsignaturesV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigndocumentEditEzsignsignature) {           
-            OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1ResponseAllOf = (OASEzsigndocumentEditEzsignsignature) obj;
-            return this.mPayload == ezsigndocumentEditEzsignsignaturesV1ResponseAllOf.mPayload;
+            OASEzsigndocumentEditEzsignsignature ezsigndocumentEditEzsignsignaturesV1ResponseMPayload = (OASEzsigndocumentEditEzsignsignature) obj;
+            return this.aPkiEzsignsignatureID == ezsigndocumentEditEzsignsignaturesV1ResponseMPayload.aPkiEzsignsignatureID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsignsignatureID == null ? 0 : System.hashCode(aPkiEzsignsignatureID));
         return hashCode;
     }
 }

@@ -11,9 +11,21 @@
  */
 
 /**
- * OASBrandingGetListV1ResponseMPayload
+ * Payload for GET /1/object/branding/getList
  */
-public class OASBrandingGetListV1ResponseMPayload implements OAS.MappedProperties {
+public class OASBrandingGetListV1ResponseMPayload implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * Get aObjBranding
      * @return aObjBranding
@@ -33,21 +45,27 @@ public class OASBrandingGetListV1ResponseMPayload implements OAS.MappedPropertie
     }
 
     public static OASBrandingGetListV1ResponseMPayload getExample() {
-        OASBrandingGetListV1ResponseMPayload brandingGetListV1ResponseMPayloadAllOf = new OASBrandingGetListV1ResponseMPayload();
-          brandingGetListV1ResponseMPayloadAllOf.aObjBranding = new List<OASBrandingListElement>{OASBrandingListElement.getExample()};
-        return brandingGetListV1ResponseMPayloadAllOf;
+        OASBrandingGetListV1ResponseMPayload brandingGetListV1ResponseMPayload = new OASBrandingGetListV1ResponseMPayload();
+          brandingGetListV1ResponseMPayload.iRowReturned = 100;
+          brandingGetListV1ResponseMPayload.iRowFiltered = 533;
+          brandingGetListV1ResponseMPayload.aObjBranding = new List<OASBrandingListElement>{OASBrandingListElement.getExample()};
+        return brandingGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASBrandingGetListV1ResponseMPayload) {           
-            OASBrandingGetListV1ResponseMPayload brandingGetListV1ResponseMPayloadAllOf = (OASBrandingGetListV1ResponseMPayload) obj;
-            return this.aObjBranding == brandingGetListV1ResponseMPayloadAllOf.aObjBranding;
+            OASBrandingGetListV1ResponseMPayload brandingGetListV1ResponseMPayload = (OASBrandingGetListV1ResponseMPayload) obj;
+            return this.iRowReturned == brandingGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == brandingGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjBranding == brandingGetListV1ResponseMPayload.aObjBranding;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjBranding == null ? 0 : System.hashCode(aObjBranding));
         return hashCode;
     }

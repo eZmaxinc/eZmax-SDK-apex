@@ -13,13 +13,7 @@
 /**
  * This is the base Webhook object
  */
-public class OASWebhookEzsignFolderCompleted implements OASWebhookEzsignFolderCompletedAllOf, OASCommonWebhook, OAS.MappedProperties {
-    /**
-     * Get objEzsignfolder
-     * @return objEzsignfolder
-     */
-    public OASEzsignfolderResponse objEzsignfolder { get; set; }
-
+public class OASWebhookEzsignFolderCompleted implements OASCommonWebhook, OAS.MappedProperties {
     /**
      * Get objWebhook
      * @return objWebhook
@@ -31,6 +25,12 @@ public class OASWebhookEzsignFolderCompleted implements OASWebhookEzsignFolderCo
      * @return aObjAttempt
      */
     public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
+
+    /**
+     * Get objEzsignfolder
+     * @return objEzsignfolder
+     */
+    public OASEzsignfolderResponse objEzsignfolder { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objAttempt' => 'aObjAttempt'
@@ -46,27 +46,27 @@ public class OASWebhookEzsignFolderCompleted implements OASWebhookEzsignFolderCo
 
     public static OASWebhookEzsignFolderCompleted getExample() {
         OASWebhookEzsignFolderCompleted webhookEzsignFolderCompleted = new OASWebhookEzsignFolderCompleted();
-          webhookEzsignFolderCompleted.objEzsignfolder = OASEzsignfolderResponse.getExample();
           webhookEzsignFolderCompleted.objWebhook = OASCustomWebhookResponse.getExample();
           webhookEzsignFolderCompleted.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
+          webhookEzsignFolderCompleted.objEzsignfolder = OASEzsignfolderResponse.getExample();
         return webhookEzsignFolderCompleted;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookEzsignFolderCompleted) {           
             OASWebhookEzsignFolderCompleted webhookEzsignFolderCompleted = (OASWebhookEzsignFolderCompleted) obj;
-            return this.objEzsignfolder == webhookEzsignFolderCompleted.objEzsignfolder
-                && this.objWebhook == webhookEzsignFolderCompleted.objWebhook
-                && this.aObjAttempt == webhookEzsignFolderCompleted.aObjAttempt;
+            return this.objWebhook == webhookEzsignFolderCompleted.objWebhook
+                && this.aObjAttempt == webhookEzsignFolderCompleted.aObjAttempt
+                && this.objEzsignfolder == webhookEzsignFolderCompleted.objEzsignfolder;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objEzsignfolder == null ? 0 : System.hashCode(objEzsignfolder));
         hashCode = (17 * hashCode) + (objWebhook == null ? 0 : System.hashCode(objWebhook));
         hashCode = (17 * hashCode) + (aObjAttempt == null ? 0 : System.hashCode(aObjAttempt));
+        hashCode = (17 * hashCode) + (objEzsignfolder == null ? 0 : System.hashCode(objEzsignfolder));
         return hashCode;
     }
 }

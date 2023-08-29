@@ -133,7 +133,7 @@ public class OASEzsigntemplatedocumentRequestComp implements OASEzsigntemplatedo
           ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentName = 'Standard Contract';
           ezsigntemplatedocumentRequestCompound.eEzsigntemplatedocumentSource = EEzsigntemplatedocumentSourceEnum.BASE64;
           ezsigntemplatedocumentRequestCompound.eEzsigntemplatedocumentFormat = EEzsigntemplatedocumentFormatEnum.PDF;
-          ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentBase64 = EncodingUtil.base64Decode('[B@2fc0cc3');
+          ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentBase64 = EncodingUtil.base64Decode('[B@25e2ab5a');
           ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentUrl = 'http://www.example.com/template.pdf';
           ezsigntemplatedocumentRequestCompound.bEzsigntemplatedocumentForcerepair = true;
           ezsigntemplatedocumentRequestCompound.eEzsigntemplatedocumentForm = EEzsigntemplatedocumentFormEnum.KEEP;

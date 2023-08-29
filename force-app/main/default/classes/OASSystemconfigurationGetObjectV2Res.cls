@@ -11,32 +11,32 @@
  */
 
 /**
- * OASSystemconfigurationGetObjectV2Res
+ * Payload for GET /2/object/systemconfiguration/{pkiSystemconfigurationID}
  */
 public class OASSystemconfigurationGetObjectV2Res {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objSystemconfiguration
+     * @return objSystemconfiguration
      */
-    public OASSystemconfigurationGetObjectV2Res mPayload { get; set; }
+    public OASSystemconfigurationResponseCompou objSystemconfiguration { get; set; }
 
     public static OASSystemconfigurationGetObjectV2Res getExample() {
-        OASSystemconfigurationGetObjectV2Res systemconfigurationGetObjectV2ResponseAllOf = new OASSystemconfigurationGetObjectV2Res();
-          systemconfigurationGetObjectV2ResponseAllOf.mPayload = OASSystemconfigurationGetObjectV2Res.getExample();
-        return systemconfigurationGetObjectV2ResponseAllOf;
+        OASSystemconfigurationGetObjectV2Res systemconfigurationGetObjectV2ResponseMPayload = new OASSystemconfigurationGetObjectV2Res();
+          systemconfigurationGetObjectV2ResponseMPayload.objSystemconfiguration = OASSystemconfigurationResponseCompou.getExample();
+        return systemconfigurationGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASSystemconfigurationGetObjectV2Res) {           
-            OASSystemconfigurationGetObjectV2Res systemconfigurationGetObjectV2ResponseAllOf = (OASSystemconfigurationGetObjectV2Res) obj;
-            return this.mPayload == systemconfigurationGetObjectV2ResponseAllOf.mPayload;
+            OASSystemconfigurationGetObjectV2Res systemconfigurationGetObjectV2ResponseMPayload = (OASSystemconfigurationGetObjectV2Res) obj;
+            return this.objSystemconfiguration == systemconfigurationGetObjectV2ResponseMPayload.objSystemconfiguration;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objSystemconfiguration == null ? 0 : System.hashCode(objSystemconfiguration));
         return hashCode;
     }
 }

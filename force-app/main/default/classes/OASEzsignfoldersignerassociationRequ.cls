@@ -11,32 +11,32 @@
  */
 
 /**
- * OASEzsignfoldersignerassociationRequ
+ * An Ezsignfoldersignerassociation Object
  */
 public class OASEzsignfoldersignerassociationRequ {
     /**
-     * Get objEzsignsigner
-     * @return objEzsignsigner
+     * A custom text message that will be added to the email sent.
+     * @return tEzsignfoldersignerassociationMessage
      */
-    public OASEzsignsignerRequestCompound objEzsignsigner { get; set; }
+    public String tEzsignfoldersignerassociationMessage { get; set; }
 
     public static OASEzsignfoldersignerassociationRequ getExample() {
-        OASEzsignfoldersignerassociationRequ ezsignfoldersignerassociationRequestCompoundAllOf = new OASEzsignfoldersignerassociationRequ();
-          ezsignfoldersignerassociationRequestCompoundAllOf.objEzsignsigner = OASEzsignsignerRequestCompound.getExample();
-        return ezsignfoldersignerassociationRequestCompoundAllOf;
+        OASEzsignfoldersignerassociationRequ ezsignfoldersignerassociationRequestPatch = new OASEzsignfoldersignerassociationRequ();
+          ezsignfoldersignerassociationRequestPatch.tEzsignfoldersignerassociationMessage = 'Hi John,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary';
+        return ezsignfoldersignerassociationRequestPatch;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldersignerassociationRequ) {           
-            OASEzsignfoldersignerassociationRequ ezsignfoldersignerassociationRequestCompoundAllOf = (OASEzsignfoldersignerassociationRequ) obj;
-            return this.objEzsignsigner == ezsignfoldersignerassociationRequestCompoundAllOf.objEzsignsigner;
+            OASEzsignfoldersignerassociationRequ ezsignfoldersignerassociationRequestPatch = (OASEzsignfoldersignerassociationRequ) obj;
+            return this.tEzsignfoldersignerassociationMessage == ezsignfoldersignerassociationRequestPatch.tEzsignfoldersignerassociationMessage;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objEzsignsigner == null ? 0 : System.hashCode(objEzsignsigner));
+        hashCode = (17 * hashCode) + (tEzsignfoldersignerassociationMessage == null ? 0 : System.hashCode(tEzsignfoldersignerassociationMessage));
         return hashCode;
     }
 }

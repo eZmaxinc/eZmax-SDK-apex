@@ -132,6 +132,14 @@ public class OASEzsignsignatureRequest {
     public Integer iEzsignsignatureValidationstep { get; set; }
 
     /**
+     * The maximum length for the value in the Ezsignsignature\n\nThis can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+     * minimum: 0
+     * maximum: 65535
+     * @return iEzsignsignatureMaxlength
+     */
+    public Integer iEzsignsignatureMaxlength { get; set; }
+
+    /**
      * Get eEzsignsignatureTextvalidation
      * @return eEzsignsignatureTextvalidation
      */
@@ -163,6 +171,7 @@ public class OASEzsignsignatureRequest {
           ezsignsignatureRequest.eEzsignsignatureAttachmentnamesource = OASFieldEEzsignsignatureAttachmentna.getExample();
           ezsignsignatureRequest.sEzsignsignatureAttachmentdescription = 'Attachment';
           ezsignsignatureRequest.iEzsignsignatureValidationstep = 1;
+          ezsignsignatureRequest.iEzsignsignatureMaxlength = 75;
           ezsignsignatureRequest.eEzsignsignatureTextvalidation = OASEnumTextvalidation.getExample();
           ezsignsignatureRequest.sEzsignsignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
         return ezsignsignatureRequest;
@@ -189,6 +198,7 @@ public class OASEzsignsignatureRequest {
                 && this.eEzsignsignatureAttachmentnamesource == ezsignsignatureRequest.eEzsignsignatureAttachmentnamesource
                 && this.sEzsignsignatureAttachmentdescription == ezsignsignatureRequest.sEzsignsignatureAttachmentdescription
                 && this.iEzsignsignatureValidationstep == ezsignsignatureRequest.iEzsignsignatureValidationstep
+                && this.iEzsignsignatureMaxlength == ezsignsignatureRequest.iEzsignsignatureMaxlength
                 && this.eEzsignsignatureTextvalidation == ezsignsignatureRequest.eEzsignsignatureTextvalidation
                 && this.sEzsignsignatureRegexp == ezsignsignatureRequest.sEzsignsignatureRegexp;
         }
@@ -215,6 +225,7 @@ public class OASEzsignsignatureRequest {
         hashCode = (17 * hashCode) + (eEzsignsignatureAttachmentnamesource == null ? 0 : System.hashCode(eEzsignsignatureAttachmentnamesource));
         hashCode = (17 * hashCode) + (sEzsignsignatureAttachmentdescription == null ? 0 : System.hashCode(sEzsignsignatureAttachmentdescription));
         hashCode = (17 * hashCode) + (iEzsignsignatureValidationstep == null ? 0 : System.hashCode(iEzsignsignatureValidationstep));
+        hashCode = (17 * hashCode) + (iEzsignsignatureMaxlength == null ? 0 : System.hashCode(iEzsignsignatureMaxlength));
         hashCode = (17 * hashCode) + (eEzsignsignatureTextvalidation == null ? 0 : System.hashCode(eEzsignsignatureTextvalidation));
         hashCode = (17 * hashCode) + (sEzsignsignatureRegexp == null ? 0 : System.hashCode(sEzsignsignatureRegexp));
         return hashCode;

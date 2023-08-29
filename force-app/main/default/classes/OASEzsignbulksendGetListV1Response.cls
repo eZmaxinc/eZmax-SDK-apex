@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/ezsignbulksend/getList
  */
-public class OASEzsignbulksendGetListV1Response implements OASEzsignbulksendGetListV1ResponseAl, OASCommonResponseGetList {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASEzsignbulksendGetListV1ResponseMP mPayload { get; set; }
-
+public class OASEzsignbulksendGetListV1Response implements OASCommonResponseGetList {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASEzsignbulksendGetListV1Response implements OASEzsignbulksendGetL
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASEzsignbulksendGetListV1ResponseMP mPayload { get; set; }
+
     public static OASEzsignbulksendGetListV1Response getExample() {
         OASEzsignbulksendGetListV1Response ezsignbulksendGetListV1Response = new OASEzsignbulksendGetListV1Response();
-          ezsignbulksendGetListV1Response.mPayload = OASEzsignbulksendGetListV1ResponseMP.getExample();
           ezsignbulksendGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayloadGetL.getExample();
           ezsignbulksendGetListV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          ezsignbulksendGetListV1Response.mPayload = OASEzsignbulksendGetListV1ResponseMP.getExample();
         return ezsignbulksendGetListV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendGetListV1Response) {           
             OASEzsignbulksendGetListV1Response ezsignbulksendGetListV1Response = (OASEzsignbulksendGetListV1Response) obj;
-            return this.mPayload == ezsignbulksendGetListV1Response.mPayload
-                && this.objDebugPayload == ezsignbulksendGetListV1Response.objDebugPayload
-                && this.objDebug == ezsignbulksendGetListV1Response.objDebug;
+            return this.objDebugPayload == ezsignbulksendGetListV1Response.objDebugPayload
+                && this.objDebug == ezsignbulksendGetListV1Response.objDebug
+                && this.mPayload == ezsignbulksendGetListV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

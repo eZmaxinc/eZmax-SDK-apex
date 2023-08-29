@@ -13,13 +13,7 @@
 /**
  * Response for GET /2/object/user/{pkiUserID}
  */
-public class OASUserGetObjectV2Response implements OASUserGetObjectV2ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASUserGetObjectV2ResponseMPayload mPayload { get; set; }
-
+public class OASUserGetObjectV2Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASUserGetObjectV2Response implements OASUserGetObjectV2ResponseAll
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASUserGetObjectV2ResponseMPayload mPayload { get; set; }
+
     public static OASUserGetObjectV2Response getExample() {
         OASUserGetObjectV2Response userGetObjectV2Response = new OASUserGetObjectV2Response();
-          userGetObjectV2Response.mPayload = OASUserGetObjectV2ResponseMPayload.getExample();
           userGetObjectV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           userGetObjectV2Response.objDebug = OASCommonResponseObjDebug.getExample();
+          userGetObjectV2Response.mPayload = OASUserGetObjectV2ResponseMPayload.getExample();
         return userGetObjectV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUserGetObjectV2Response) {           
             OASUserGetObjectV2Response userGetObjectV2Response = (OASUserGetObjectV2Response) obj;
-            return this.mPayload == userGetObjectV2Response.mPayload
-                && this.objDebugPayload == userGetObjectV2Response.objDebugPayload
-                && this.objDebug == userGetObjectV2Response.objDebug;
+            return this.objDebugPayload == userGetObjectV2Response.objDebugPayload
+                && this.objDebug == userGetObjectV2Response.objDebug
+                && this.mPayload == userGetObjectV2Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

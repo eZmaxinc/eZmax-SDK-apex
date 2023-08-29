@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/module/ezsign/suggestSigners
  */
-public class OASEzsignSuggestSignersV1Response implements OASEzsignSuggestSignersV1ResponseAll, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASEzsignSuggestSignersV1ResponseMPa mPayload { get; set; }
-
+public class OASEzsignSuggestSignersV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASEzsignSuggestSignersV1Response implements OASEzsignSuggestSigner
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASEzsignSuggestSignersV1ResponseMPa mPayload { get; set; }
+
     public static OASEzsignSuggestSignersV1Response getExample() {
         OASEzsignSuggestSignersV1Response ezsignSuggestSignersV1Response = new OASEzsignSuggestSignersV1Response();
-          ezsignSuggestSignersV1Response.mPayload = OASEzsignSuggestSignersV1ResponseMPa.getExample();
           ezsignSuggestSignersV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           ezsignSuggestSignersV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          ezsignSuggestSignersV1Response.mPayload = OASEzsignSuggestSignersV1ResponseMPa.getExample();
         return ezsignSuggestSignersV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignSuggestSignersV1Response) {           
             OASEzsignSuggestSignersV1Response ezsignSuggestSignersV1Response = (OASEzsignSuggestSignersV1Response) obj;
-            return this.mPayload == ezsignSuggestSignersV1Response.mPayload
-                && this.objDebugPayload == ezsignSuggestSignersV1Response.objDebugPayload
-                && this.objDebug == ezsignSuggestSignersV1Response.objDebug;
+            return this.objDebugPayload == ezsignSuggestSignersV1Response.objDebugPayload
+                && this.objDebug == ezsignSuggestSignersV1Response.objDebug
+                && this.mPayload == ezsignSuggestSignersV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

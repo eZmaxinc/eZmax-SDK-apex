@@ -13,13 +13,7 @@
 /**
  * Response for POST /1/object/permission
  */
-public class OASPermissionCreateObjectV1Response implements OASPermissionCreateObjectV1ResponseA, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASPermissionCreateObjectV1ResponseM mPayload { get; set; }
-
+public class OASPermissionCreateObjectV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASPermissionCreateObjectV1Response implements OASPermissionCreateO
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASPermissionCreateObjectV1ResponseM mPayload { get; set; }
+
     public static OASPermissionCreateObjectV1Response getExample() {
         OASPermissionCreateObjectV1Response permissionCreateObjectV1Response = new OASPermissionCreateObjectV1Response();
-          permissionCreateObjectV1Response.mPayload = OASPermissionCreateObjectV1ResponseM.getExample();
           permissionCreateObjectV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           permissionCreateObjectV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          permissionCreateObjectV1Response.mPayload = OASPermissionCreateObjectV1ResponseM.getExample();
         return permissionCreateObjectV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPermissionCreateObjectV1Response) {           
             OASPermissionCreateObjectV1Response permissionCreateObjectV1Response = (OASPermissionCreateObjectV1Response) obj;
-            return this.mPayload == permissionCreateObjectV1Response.mPayload
-                && this.objDebugPayload == permissionCreateObjectV1Response.objDebugPayload
-                && this.objDebug == permissionCreateObjectV1Response.objDebug;
+            return this.objDebugPayload == permissionCreateObjectV1Response.objDebugPayload
+                && this.objDebug == permissionCreateObjectV1Response.objDebug
+                && this.mPayload == permissionCreateObjectV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

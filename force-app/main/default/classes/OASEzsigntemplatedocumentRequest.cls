@@ -133,7 +133,7 @@ public class OASEzsigntemplatedocumentRequest {
           ezsigntemplatedocumentRequest.sEzsigntemplatedocumentName = 'Standard Contract';
           ezsigntemplatedocumentRequest.eEzsigntemplatedocumentSource = EEzsigntemplatedocumentSourceEnum.BASE64;
           ezsigntemplatedocumentRequest.eEzsigntemplatedocumentFormat = EEzsigntemplatedocumentFormatEnum.PDF;
-          ezsigntemplatedocumentRequest.sEzsigntemplatedocumentBase64 = EncodingUtil.base64Decode('[B@2fc0cc3');
+          ezsigntemplatedocumentRequest.sEzsigntemplatedocumentBase64 = EncodingUtil.base64Decode('[B@25e2ab5a');
           ezsigntemplatedocumentRequest.sEzsigntemplatedocumentUrl = 'http://www.example.com/template.pdf';
           ezsigntemplatedocumentRequest.bEzsigntemplatedocumentForcerepair = true;
           ezsigntemplatedocumentRequest.eEzsigntemplatedocumentForm = EEzsigntemplatedocumentFormEnum.KEEP;

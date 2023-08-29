@@ -80,7 +80,7 @@ private class OASWebhookUserUserCreatedTest {
     private static void defaultValuesPopulated() {
         OASWebhookUserUserCreated webhookUserUserCreated = new OASWebhookUserUserCreated();
         System.assertEquals(new List<OASAttemptResponseCompound>(), webhookUserUserCreated.aObjAttempt);
-        System.assertEquals(null, webhookUserUserCreated.objUser);
         System.assertEquals(null, webhookUserUserCreated.objWebhook);
+        System.assertEquals(null, webhookUserUserCreated.objUser);
     }
 }

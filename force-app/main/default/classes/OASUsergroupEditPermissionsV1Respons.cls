@@ -11,32 +11,44 @@
  */
 
 /**
- * OASUsergroupEditPermissionsV1Respons
+ * Payload for PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions
  */
-public class OASUsergroupEditPermissionsV1Respons {
+public class OASUsergroupEditPermissionsV1Respons implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aPkiPermissionID
+     * @return aPkiPermissionID
      */
-    public OASUsergroupEditPermissionsV1Respons mPayload { get; set; }
+    public List<Integer> aPkiPermissionID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiPermissionID' => 'aPkiPermissionID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASUsergroupEditPermissionsV1Respons() {
+        aPkiPermissionID = new List<Integer>();
+    }
 
     public static OASUsergroupEditPermissionsV1Respons getExample() {
-        OASUsergroupEditPermissionsV1Respons usergroupEditPermissionsV1ResponseAllOf = new OASUsergroupEditPermissionsV1Respons();
-          usergroupEditPermissionsV1ResponseAllOf.mPayload = OASUsergroupEditPermissionsV1Respons.getExample();
-        return usergroupEditPermissionsV1ResponseAllOf;
+        OASUsergroupEditPermissionsV1Respons usergroupEditPermissionsV1ResponseMPayload = new OASUsergroupEditPermissionsV1Respons();
+          usergroupEditPermissionsV1ResponseMPayload.aPkiPermissionID = new List<Integer>{Integer.getExample()};
+        return usergroupEditPermissionsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupEditPermissionsV1Respons) {           
-            OASUsergroupEditPermissionsV1Respons usergroupEditPermissionsV1ResponseAllOf = (OASUsergroupEditPermissionsV1Respons) obj;
-            return this.mPayload == usergroupEditPermissionsV1ResponseAllOf.mPayload;
+            OASUsergroupEditPermissionsV1Respons usergroupEditPermissionsV1ResponseMPayload = (OASUsergroupEditPermissionsV1Respons) obj;
+            return this.aPkiPermissionID == usergroupEditPermissionsV1ResponseMPayload.aPkiPermissionID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiPermissionID == null ? 0 : System.hashCode(aPkiPermissionID));
         return hashCode;
     }
 }

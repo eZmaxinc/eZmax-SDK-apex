@@ -11,32 +11,44 @@
  */
 
 /**
- * OASPhonetypeGetAutocompleteV2Respons
+ * Payload for POST /2/object/phonetype/getAutocomplete
  */
-public class OASPhonetypeGetAutocompleteV2Respons {
+public class OASPhonetypeGetAutocompleteV2Respons implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Phonetype autocomplete element response.
+     * @return aObjPhonetype
      */
-    public OASPhonetypeGetAutocompleteV2Respons mPayload { get; set; }
+    public List<OASPhonetypeAutocompleteElementRespo> aObjPhonetype { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objPhonetype' => 'aObjPhonetype'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASPhonetypeGetAutocompleteV2Respons() {
+        aObjPhonetype = new List<OASPhonetypeAutocompleteElementRespo>();
+    }
 
     public static OASPhonetypeGetAutocompleteV2Respons getExample() {
-        OASPhonetypeGetAutocompleteV2Respons phonetypeGetAutocompleteV2ResponseAllOf = new OASPhonetypeGetAutocompleteV2Respons();
-          phonetypeGetAutocompleteV2ResponseAllOf.mPayload = OASPhonetypeGetAutocompleteV2Respons.getExample();
-        return phonetypeGetAutocompleteV2ResponseAllOf;
+        OASPhonetypeGetAutocompleteV2Respons phonetypeGetAutocompleteV2ResponseMPayload = new OASPhonetypeGetAutocompleteV2Respons();
+          phonetypeGetAutocompleteV2ResponseMPayload.aObjPhonetype = new List<OASPhonetypeAutocompleteElementRespo>{OASPhonetypeAutocompleteElementRespo.getExample()};
+        return phonetypeGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPhonetypeGetAutocompleteV2Respons) {           
-            OASPhonetypeGetAutocompleteV2Respons phonetypeGetAutocompleteV2ResponseAllOf = (OASPhonetypeGetAutocompleteV2Respons) obj;
-            return this.mPayload == phonetypeGetAutocompleteV2ResponseAllOf.mPayload;
+            OASPhonetypeGetAutocompleteV2Respons phonetypeGetAutocompleteV2ResponseMPayload = (OASPhonetypeGetAutocompleteV2Respons) obj;
+            return this.aObjPhonetype == phonetypeGetAutocompleteV2ResponseMPayload.aObjPhonetype;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjPhonetype == null ? 0 : System.hashCode(aObjPhonetype));
         return hashCode;
     }
 }

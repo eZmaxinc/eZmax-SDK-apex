@@ -11,32 +11,44 @@
  */
 
 /**
- * OASEzsigntemplatepackageEditEzsignte
+ * Payload for PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners
  */
-public class OASEzsigntemplatepackageEditEzsignte {
+public class OASEzsigntemplatepackageEditEzsignte implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get aPkiEzsigntemplatepackagesignerID
+     * @return aPkiEzsigntemplatepackagesignerID
      */
-    public OASEzsigntemplatepackageEditEzsignte mPayload { get; set; }
+    public List<Integer> aPkiEzsigntemplatepackagesignerID { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_pkiEzsigntemplatepackagesignerID' => 'aPkiEzsigntemplatepackagesignerID'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASEzsigntemplatepackageEditEzsignte() {
+        aPkiEzsigntemplatepackagesignerID = new List<Integer>();
+    }
 
     public static OASEzsigntemplatepackageEditEzsignte getExample() {
-        OASEzsigntemplatepackageEditEzsignte ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseAllOf = new OASEzsigntemplatepackageEditEzsignte();
-          ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseAllOf.mPayload = OASEzsigntemplatepackageEditEzsignte.getExample();
-        return ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseAllOf;
+        OASEzsigntemplatepackageEditEzsignte ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload = new OASEzsigntemplatepackageEditEzsignte();
+          ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload.aPkiEzsigntemplatepackagesignerID = new List<Integer>{Integer.getExample()};
+        return ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatepackageEditEzsignte) {           
-            OASEzsigntemplatepackageEditEzsignte ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseAllOf = (OASEzsigntemplatepackageEditEzsignte) obj;
-            return this.mPayload == ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseAllOf.mPayload;
+            OASEzsigntemplatepackageEditEzsignte ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload = (OASEzsigntemplatepackageEditEzsignte) obj;
+            return this.aPkiEzsigntemplatepackagesignerID == ezsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload.aPkiEzsigntemplatepackagesignerID;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aPkiEzsigntemplatepackagesignerID == null ? 0 : System.hashCode(aPkiEzsigntemplatepackagesignerID));
         return hashCode;
     }
 }

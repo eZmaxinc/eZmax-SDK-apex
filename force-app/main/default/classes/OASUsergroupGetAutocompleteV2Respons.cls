@@ -11,32 +11,44 @@
  */
 
 /**
- * OASUsergroupGetAutocompleteV2Respons
+ * Payload for POST /2/object/usergroup/getAutocomplete
  */
-public class OASUsergroupGetAutocompleteV2Respons {
+public class OASUsergroupGetAutocompleteV2Respons implements OAS.MappedProperties {
     /**
-     * Get mPayload
-     * @return mPayload
+     * An array of Usergroup autocomplete element response.
+     * @return aObjUsergroup
      */
-    public OASUsergroupGetAutocompleteV2Respons mPayload { get; set; }
+    public List<OASUsergroupAutocompleteElementRespo> aObjUsergroup { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objUsergroup' => 'aObjUsergroup'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public OASUsergroupGetAutocompleteV2Respons() {
+        aObjUsergroup = new List<OASUsergroupAutocompleteElementRespo>();
+    }
 
     public static OASUsergroupGetAutocompleteV2Respons getExample() {
-        OASUsergroupGetAutocompleteV2Respons usergroupGetAutocompleteV2ResponseAllOf = new OASUsergroupGetAutocompleteV2Respons();
-          usergroupGetAutocompleteV2ResponseAllOf.mPayload = OASUsergroupGetAutocompleteV2Respons.getExample();
-        return usergroupGetAutocompleteV2ResponseAllOf;
+        OASUsergroupGetAutocompleteV2Respons usergroupGetAutocompleteV2ResponseMPayload = new OASUsergroupGetAutocompleteV2Respons();
+          usergroupGetAutocompleteV2ResponseMPayload.aObjUsergroup = new List<OASUsergroupAutocompleteElementRespo>{OASUsergroupAutocompleteElementRespo.getExample()};
+        return usergroupGetAutocompleteV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASUsergroupGetAutocompleteV2Respons) {           
-            OASUsergroupGetAutocompleteV2Respons usergroupGetAutocompleteV2ResponseAllOf = (OASUsergroupGetAutocompleteV2Respons) obj;
-            return this.mPayload == usergroupGetAutocompleteV2ResponseAllOf.mPayload;
+            OASUsergroupGetAutocompleteV2Respons usergroupGetAutocompleteV2ResponseMPayload = (OASUsergroupGetAutocompleteV2Respons) obj;
+            return this.aObjUsergroup == usergroupGetAutocompleteV2ResponseMPayload.aObjUsergroup;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (aObjUsergroup == null ? 0 : System.hashCode(aObjUsergroup));
         return hashCode;
     }
 }

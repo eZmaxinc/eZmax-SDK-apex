@@ -2,70 +2,83 @@
 private class OASEzsigntemplateformfieldgroupCreatTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2 = ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1;
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3 = new OASEzsigntemplateformfieldgroupCreat();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4 = ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3;
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2 = ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1;
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4 = ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3;
 
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3 = new OASEzsigntemplateformfieldgroupCreat();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4 = new OASEzsigntemplateformfieldgroupCreat();
 
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2 = new OASEzsigntemplateformfieldgroupCreat();
 
-        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.equals('foo'));
-        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2.equals('foo'));
+        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.equals('foo'));
+        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2 = new OASEzsigntemplateformfieldgroupCreat();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3;
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3;
 
-        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3));
-        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3));
+        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3));
+        System.assertEquals(false, ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2 = new OASEzsigntemplateformfieldgroupCreat();
 
-        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.hashCode());
-        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2.hashCode());
+        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.hashCode());
+        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2 = OASEzsigntemplateformfieldgroupCreat.getExample();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3 = new OASEzsigntemplateformfieldgroupCreat();
-        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2 = OASEzsigntemplateformfieldgroupCreat.getExample();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3 = new OASEzsigntemplateformfieldgroupCreat();
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4 = new OASEzsigntemplateformfieldgroupCreat();
 
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2));
-        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4));
-        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf1.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf2.hashCode());
-        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf3.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseAllOf4.hashCode());
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2));
+        System.assert(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3.equals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4));
+        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload1.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload2.hashCode());
+        System.assertEquals(ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload3.hashCode(), ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload4.hashCode());
+    }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload = new OASEzsigntemplateformfieldgroupCreat();
+        Map<String, String> x-property-mappings = ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload.getx-property-mappings();
+        System.assertEquals('aPkiEzsigntemplateformfieldgroupID', x-property-mappings.get('a_pkiEzsigntemplateformfieldgroupID'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASEzsigntemplateformfieldgroupCreat ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload = new OASEzsigntemplateformfieldgroupCreat();
+        System.assertEquals(new List<Integer>(), ezsigntemplateformfieldgroupCreateObjectV1ResponseMPayload.aPkiEzsigntemplateformfieldgroupID);
     }
 }

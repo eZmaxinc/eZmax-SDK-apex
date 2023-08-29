@@ -11,9 +11,21 @@
  */
 
 /**
- * OASEzsignfoldertypeGetListV1Response
+ * Payload for GET /1/object/ezsignfoldertype/getList
  */
-public class OASEzsignfoldertypeGetListV1Response implements OAS.MappedProperties {
+public class OASEzsignfoldertypeGetListV1Response implements OASCommonGetListV1ResponseMPayload, OAS.MappedProperties {
+    /**
+     * The number of rows returned
+     * @return iRowReturned
+     */
+    public Integer iRowReturned { get; set; }
+
+    /**
+     * The number of rows matching your filters (if any) or the total number of rows
+     * @return iRowFiltered
+     */
+    public Integer iRowFiltered { get; set; }
+
     /**
      * 
      * @return aObjEzsignfoldertype
@@ -33,21 +45,27 @@ public class OASEzsignfoldertypeGetListV1Response implements OAS.MappedPropertie
     }
 
     public static OASEzsignfoldertypeGetListV1Response getExample() {
-        OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseMPayloadAllOf = new OASEzsignfoldertypeGetListV1Response();
-          ezsignfoldertypeGetListV1ResponseMPayloadAllOf.aObjEzsignfoldertype = new List<OASEzsignfoldertypeListElement>{OASEzsignfoldertypeListElement.getExample()};
-        return ezsignfoldertypeGetListV1ResponseMPayloadAllOf;
+        OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseMPayload = new OASEzsignfoldertypeGetListV1Response();
+          ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned = 100;
+          ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered = 533;
+          ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype = new List<OASEzsignfoldertypeListElement>{OASEzsignfoldertypeListElement.getExample()};
+        return ezsignfoldertypeGetListV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignfoldertypeGetListV1Response) {           
-            OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseMPayloadAllOf = (OASEzsignfoldertypeGetListV1Response) obj;
-            return this.aObjEzsignfoldertype == ezsignfoldertypeGetListV1ResponseMPayloadAllOf.aObjEzsignfoldertype;
+            OASEzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1ResponseMPayload = (OASEzsignfoldertypeGetListV1Response) obj;
+            return this.iRowReturned == ezsignfoldertypeGetListV1ResponseMPayload.iRowReturned
+                && this.iRowFiltered == ezsignfoldertypeGetListV1ResponseMPayload.iRowFiltered
+                && this.aObjEzsignfoldertype == ezsignfoldertypeGetListV1ResponseMPayload.aObjEzsignfoldertype;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (iRowReturned == null ? 0 : System.hashCode(iRowReturned));
+        hashCode = (17 * hashCode) + (iRowFiltered == null ? 0 : System.hashCode(iRowFiltered));
         hashCode = (17 * hashCode) + (aObjEzsignfoldertype == null ? 0 : System.hashCode(aObjEzsignfoldertype));
         return hashCode;
     }

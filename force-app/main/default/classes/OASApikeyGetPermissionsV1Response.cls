@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/getPermissions
  */
-public class OASApikeyGetPermissionsV1Response implements OASApikeyGetPermissionsV1ResponseAll, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASApikeyGetPermissionsV1ResponseMPa mPayload { get; set; }
-
+public class OASApikeyGetPermissionsV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASApikeyGetPermissionsV1Response implements OASApikeyGetPermission
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASApikeyGetPermissionsV1ResponseMPa mPayload { get; set; }
+
     public static OASApikeyGetPermissionsV1Response getExample() {
         OASApikeyGetPermissionsV1Response apikeyGetPermissionsV1Response = new OASApikeyGetPermissionsV1Response();
-          apikeyGetPermissionsV1Response.mPayload = OASApikeyGetPermissionsV1ResponseMPa.getExample();
           apikeyGetPermissionsV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           apikeyGetPermissionsV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          apikeyGetPermissionsV1Response.mPayload = OASApikeyGetPermissionsV1ResponseMPa.getExample();
         return apikeyGetPermissionsV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASApikeyGetPermissionsV1Response) {           
             OASApikeyGetPermissionsV1Response apikeyGetPermissionsV1Response = (OASApikeyGetPermissionsV1Response) obj;
-            return this.mPayload == apikeyGetPermissionsV1Response.mPayload
-                && this.objDebugPayload == apikeyGetPermissionsV1Response.objDebugPayload
-                && this.objDebug == apikeyGetPermissionsV1Response.objDebug;
+            return this.objDebugPayload == apikeyGetPermissionsV1Response.objDebugPayload
+                && this.objDebug == apikeyGetPermissionsV1Response.objDebug
+                && this.mPayload == apikeyGetPermissionsV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

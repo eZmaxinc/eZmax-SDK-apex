@@ -11,9 +11,37 @@
  */
 
 /**
- * OASEzsigntemplatepackagemembershipRe
+ * A Ezsigntemplatepackagemembership Object
  */
-public class OASEzsigntemplatepackagemembershipRe implements OAS.MappedProperties {
+public class OASEzsigntemplatepackagemembershipRe implements OASEzsigntemplatepackagemembershipRe, OAS.MappedProperties {
+    /**
+     * The unique ID of the Ezsigntemplatepackagemembership
+     * minimum: 0
+     * @return pkiEzsigntemplatepackagemembershipID
+     */
+    public Integer pkiEzsigntemplatepackagemembershipID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigntemplatepackage
+     * minimum: 0
+     * @return fkiEzsigntemplatepackageID
+     */
+    public Integer fkiEzsigntemplatepackageID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigntemplate
+     * minimum: 0
+     * @return fkiEzsigntemplateID
+     */
+    public Integer fkiEzsigntemplateID { get; set; }
+
+    /**
+     * The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.
+     * minimum: 1
+     * @return iEzsigntemplatepackagemembershipOrder
+     */
+    public Integer iEzsigntemplatepackagemembershipOrder { get; set; }
+
     /**
      * Get objEzsigntemplate
      * @return objEzsigntemplate
@@ -39,23 +67,35 @@ public class OASEzsigntemplatepackagemembershipRe implements OAS.MappedPropertie
     }
 
     public static OASEzsigntemplatepackagemembershipRe getExample() {
-        OASEzsigntemplatepackagemembershipRe ezsigntemplatepackagemembershipResponseCompoundAllOf = new OASEzsigntemplatepackagemembershipRe();
-          ezsigntemplatepackagemembershipResponseCompoundAllOf.objEzsigntemplate = OASEzsigntemplateResponseCompound.getExample();
-          ezsigntemplatepackagemembershipResponseCompoundAllOf.aObjEzsigntemplatepackagesignermembership = new List<OASEzsigntemplatepackagesignermember>{OASEzsigntemplatepackagesignermember.getExample()};
-        return ezsigntemplatepackagemembershipResponseCompoundAllOf;
+        OASEzsigntemplatepackagemembershipRe ezsigntemplatepackagemembershipResponseCompound = new OASEzsigntemplatepackagemembershipRe();
+          ezsigntemplatepackagemembershipResponseCompound.pkiEzsigntemplatepackagemembershipID = 194;
+          ezsigntemplatepackagemembershipResponseCompound.fkiEzsigntemplatepackageID = 99;
+          ezsigntemplatepackagemembershipResponseCompound.fkiEzsigntemplateID = 36;
+          ezsigntemplatepackagemembershipResponseCompound.iEzsigntemplatepackagemembershipOrder = 1;
+          ezsigntemplatepackagemembershipResponseCompound.objEzsigntemplate = OASEzsigntemplateResponseCompound.getExample();
+          ezsigntemplatepackagemembershipResponseCompound.aObjEzsigntemplatepackagesignermembership = new List<OASEzsigntemplatepackagesignermember>{OASEzsigntemplatepackagesignermember.getExample()};
+        return ezsigntemplatepackagemembershipResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsigntemplatepackagemembershipRe) {           
-            OASEzsigntemplatepackagemembershipRe ezsigntemplatepackagemembershipResponseCompoundAllOf = (OASEzsigntemplatepackagemembershipRe) obj;
-            return this.objEzsigntemplate == ezsigntemplatepackagemembershipResponseCompoundAllOf.objEzsigntemplate
-                && this.aObjEzsigntemplatepackagesignermembership == ezsigntemplatepackagemembershipResponseCompoundAllOf.aObjEzsigntemplatepackagesignermembership;
+            OASEzsigntemplatepackagemembershipRe ezsigntemplatepackagemembershipResponseCompound = (OASEzsigntemplatepackagemembershipRe) obj;
+            return this.pkiEzsigntemplatepackagemembershipID == ezsigntemplatepackagemembershipResponseCompound.pkiEzsigntemplatepackagemembershipID
+                && this.fkiEzsigntemplatepackageID == ezsigntemplatepackagemembershipResponseCompound.fkiEzsigntemplatepackageID
+                && this.fkiEzsigntemplateID == ezsigntemplatepackagemembershipResponseCompound.fkiEzsigntemplateID
+                && this.iEzsigntemplatepackagemembershipOrder == ezsigntemplatepackagemembershipResponseCompound.iEzsigntemplatepackagemembershipOrder
+                && this.objEzsigntemplate == ezsigntemplatepackagemembershipResponseCompound.objEzsigntemplate
+                && this.aObjEzsigntemplatepackagesignermembership == ezsigntemplatepackagemembershipResponseCompound.aObjEzsigntemplatepackagesignermembership;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsigntemplatepackagemembershipID == null ? 0 : System.hashCode(pkiEzsigntemplatepackagemembershipID));
+        hashCode = (17 * hashCode) + (fkiEzsigntemplatepackageID == null ? 0 : System.hashCode(fkiEzsigntemplatepackageID));
+        hashCode = (17 * hashCode) + (fkiEzsigntemplateID == null ? 0 : System.hashCode(fkiEzsigntemplateID));
+        hashCode = (17 * hashCode) + (iEzsigntemplatepackagemembershipOrder == null ? 0 : System.hashCode(iEzsigntemplatepackagemembershipOrder));
         hashCode = (17 * hashCode) + (objEzsigntemplate == null ? 0 : System.hashCode(objEzsigntemplate));
         hashCode = (17 * hashCode) + (aObjEzsigntemplatepackagesignermembership == null ? 0 : System.hashCode(aObjEzsigntemplatepackagesignermembership));
         return hashCode;

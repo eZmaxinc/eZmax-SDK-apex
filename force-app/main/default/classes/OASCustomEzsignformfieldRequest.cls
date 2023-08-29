@@ -13,7 +13,7 @@
 /**
  * A Custom Ezsignformfield Object to fill an Ezsignform using submitForm
  */
-public class OASCustomEzsignformfieldRequest implements OASCustomEzsignformfieldRequestAllOf {
+public class OASCustomEzsignformfieldRequest {
     /**
      * The unique ID of the Ezsignformfield
      * minimum: 0

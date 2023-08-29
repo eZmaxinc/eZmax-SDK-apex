@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/modulegroup/getAll
  */
-public class OASModulegroupGetAllV1Response implements OASModulegroupGetAllV1ResponseAllOf, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASModulegroupGetAllV1ResponseMPaylo mPayload { get; set; }
-
+public class OASModulegroupGetAllV1Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASModulegroupGetAllV1Response implements OASModulegroupGetAllV1Res
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASModulegroupGetAllV1ResponseMPaylo mPayload { get; set; }
+
     public static OASModulegroupGetAllV1Response getExample() {
         OASModulegroupGetAllV1Response modulegroupGetAllV1Response = new OASModulegroupGetAllV1Response();
-          modulegroupGetAllV1Response.mPayload = OASModulegroupGetAllV1ResponseMPaylo.getExample();
           modulegroupGetAllV1Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           modulegroupGetAllV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          modulegroupGetAllV1Response.mPayload = OASModulegroupGetAllV1ResponseMPaylo.getExample();
         return modulegroupGetAllV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASModulegroupGetAllV1Response) {           
             OASModulegroupGetAllV1Response modulegroupGetAllV1Response = (OASModulegroupGetAllV1Response) obj;
-            return this.mPayload == modulegroupGetAllV1Response.mPayload
-                && this.objDebugPayload == modulegroupGetAllV1Response.objDebugPayload
-                && this.objDebug == modulegroupGetAllV1Response.objDebug;
+            return this.objDebugPayload == modulegroupGetAllV1Response.objDebugPayload
+                && this.objDebug == modulegroupGetAllV1Response.objDebug
+                && this.mPayload == modulegroupGetAllV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

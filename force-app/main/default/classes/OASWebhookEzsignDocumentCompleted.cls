@@ -13,13 +13,7 @@
 /**
  * This is the base Webhook object
  */
-public class OASWebhookEzsignDocumentCompleted implements OASWebhookEzsignDocumentCompletedAll, OASCommonWebhook, OAS.MappedProperties {
-    /**
-     * Get objEzsigndocument
-     * @return objEzsigndocument
-     */
-    public OASEzsigndocumentResponse objEzsigndocument { get; set; }
-
+public class OASWebhookEzsignDocumentCompleted implements OASCommonWebhook, OAS.MappedProperties {
     /**
      * Get objWebhook
      * @return objWebhook
@@ -31,6 +25,12 @@ public class OASWebhookEzsignDocumentCompleted implements OASWebhookEzsignDocume
      * @return aObjAttempt
      */
     public List<OASAttemptResponseCompound> aObjAttempt { get; set; }
+
+    /**
+     * Get objEzsigndocument
+     * @return objEzsigndocument
+     */
+    public OASEzsigndocumentResponse objEzsigndocument { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objAttempt' => 'aObjAttempt'
@@ -46,27 +46,27 @@ public class OASWebhookEzsignDocumentCompleted implements OASWebhookEzsignDocume
 
     public static OASWebhookEzsignDocumentCompleted getExample() {
         OASWebhookEzsignDocumentCompleted webhookEzsignDocumentCompleted = new OASWebhookEzsignDocumentCompleted();
-          webhookEzsignDocumentCompleted.objEzsigndocument = OASEzsigndocumentResponse.getExample();
           webhookEzsignDocumentCompleted.objWebhook = OASCustomWebhookResponse.getExample();
           webhookEzsignDocumentCompleted.aObjAttempt = new List<OASAttemptResponseCompound>{OASAttemptResponseCompound.getExample()};
+          webhookEzsignDocumentCompleted.objEzsigndocument = OASEzsigndocumentResponse.getExample();
         return webhookEzsignDocumentCompleted;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASWebhookEzsignDocumentCompleted) {           
             OASWebhookEzsignDocumentCompleted webhookEzsignDocumentCompleted = (OASWebhookEzsignDocumentCompleted) obj;
-            return this.objEzsigndocument == webhookEzsignDocumentCompleted.objEzsigndocument
-                && this.objWebhook == webhookEzsignDocumentCompleted.objWebhook
-                && this.aObjAttempt == webhookEzsignDocumentCompleted.aObjAttempt;
+            return this.objWebhook == webhookEzsignDocumentCompleted.objWebhook
+                && this.aObjAttempt == webhookEzsignDocumentCompleted.aObjAttempt
+                && this.objEzsigndocument == webhookEzsignDocumentCompleted.objEzsigndocument;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objEzsigndocument == null ? 0 : System.hashCode(objEzsigndocument));
         hashCode = (17 * hashCode) + (objWebhook == null ? 0 : System.hashCode(objWebhook));
         hashCode = (17 * hashCode) + (aObjAttempt == null ? 0 : System.hashCode(aObjAttempt));
+        hashCode = (17 * hashCode) + (objEzsigndocument == null ? 0 : System.hashCode(objEzsigndocument));
         return hashCode;
     }
 }

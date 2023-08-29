@@ -11,9 +11,41 @@
  */
 
 /**
- * OASCustomNotificationtestgetnotifica
+ * A Notificationtest Object in the context of getNotificationtests
  */
-public class OASCustomNotificationtestgetnotifica {
+public class OASCustomNotificationtestgetnotifica implements OASNotificationtestResponse {
+    /**
+     * The unique ID of the Notificationtest
+     * minimum: 0
+     * @return pkiNotificationtestID
+     */
+    public Integer pkiNotificationtestID { get; set; }
+
+    /**
+     * Get objNotificationtestName
+     * @return objNotificationtestName
+     */
+    public OASMultilingualNotificationtestName objNotificationtestName { get; set; }
+
+    /**
+     * The unique ID of the Notificationsubsection
+     * minimum: 0
+     * @return fkiNotificationsubsectionID
+     */
+    public Integer fkiNotificationsubsectionID { get; set; }
+
+    /**
+     * The function name of the Notificationtest
+     * @return sNotificationtestFunction
+     */
+    public String sNotificationtestFunction { get; set; }
+
+    /**
+     * The name of the Notificationtest in the language of the requester
+     * @return sNotificationtestNameX
+     */
+    public String sNotificationtestNameX { get; set; }
+
     /**
      * Get eNotificationpreferenceStatus
      * @return eNotificationpreferenceStatus
@@ -27,23 +59,38 @@ public class OASCustomNotificationtestgetnotifica {
     public Integer iNotificationtest { get; set; }
 
     public static OASCustomNotificationtestgetnotifica getExample() {
-        OASCustomNotificationtestgetnotifica customNotificationtestgetnotificationtestsResponseAllOf = new OASCustomNotificationtestgetnotifica();
-          customNotificationtestgetnotificationtestsResponseAllOf.eNotificationpreferenceStatus = OASFieldENotificationpreferenceStatu.getExample();
-          customNotificationtestgetnotificationtestsResponseAllOf.iNotificationtest = 27;
-        return customNotificationtestgetnotificationtestsResponseAllOf;
+        OASCustomNotificationtestgetnotifica customNotificationtestgetnotificationtestsResponse = new OASCustomNotificationtestgetnotifica();
+          customNotificationtestgetnotificationtestsResponse.pkiNotificationtestID = 14;
+          customNotificationtestgetnotificationtestsResponse.objNotificationtestName = OASMultilingualNotificationtestName.getExample();
+          customNotificationtestgetnotificationtestsResponse.fkiNotificationsubsectionID = 3;
+          customNotificationtestgetnotificationtestsResponse.sNotificationtestFunction = 'Default';
+          customNotificationtestgetnotificationtestsResponse.sNotificationtestNameX = 'Default';
+          customNotificationtestgetnotificationtestsResponse.eNotificationpreferenceStatus = OASFieldENotificationpreferenceStatu.getExample();
+          customNotificationtestgetnotificationtestsResponse.iNotificationtest = 27;
+        return customNotificationtestgetnotificationtestsResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASCustomNotificationtestgetnotifica) {           
-            OASCustomNotificationtestgetnotifica customNotificationtestgetnotificationtestsResponseAllOf = (OASCustomNotificationtestgetnotifica) obj;
-            return this.eNotificationpreferenceStatus == customNotificationtestgetnotificationtestsResponseAllOf.eNotificationpreferenceStatus
-                && this.iNotificationtest == customNotificationtestgetnotificationtestsResponseAllOf.iNotificationtest;
+            OASCustomNotificationtestgetnotifica customNotificationtestgetnotificationtestsResponse = (OASCustomNotificationtestgetnotifica) obj;
+            return this.pkiNotificationtestID == customNotificationtestgetnotificationtestsResponse.pkiNotificationtestID
+                && this.objNotificationtestName == customNotificationtestgetnotificationtestsResponse.objNotificationtestName
+                && this.fkiNotificationsubsectionID == customNotificationtestgetnotificationtestsResponse.fkiNotificationsubsectionID
+                && this.sNotificationtestFunction == customNotificationtestgetnotificationtestsResponse.sNotificationtestFunction
+                && this.sNotificationtestNameX == customNotificationtestgetnotificationtestsResponse.sNotificationtestNameX
+                && this.eNotificationpreferenceStatus == customNotificationtestgetnotificationtestsResponse.eNotificationpreferenceStatus
+                && this.iNotificationtest == customNotificationtestgetnotificationtestsResponse.iNotificationtest;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiNotificationtestID == null ? 0 : System.hashCode(pkiNotificationtestID));
+        hashCode = (17 * hashCode) + (objNotificationtestName == null ? 0 : System.hashCode(objNotificationtestName));
+        hashCode = (17 * hashCode) + (fkiNotificationsubsectionID == null ? 0 : System.hashCode(fkiNotificationsubsectionID));
+        hashCode = (17 * hashCode) + (sNotificationtestFunction == null ? 0 : System.hashCode(sNotificationtestFunction));
+        hashCode = (17 * hashCode) + (sNotificationtestNameX == null ? 0 : System.hashCode(sNotificationtestNameX));
         hashCode = (17 * hashCode) + (eNotificationpreferenceStatus == null ? 0 : System.hashCode(eNotificationpreferenceStatus));
         hashCode = (17 * hashCode) + (iNotificationtest == null ? 0 : System.hashCode(iNotificationtest));
         return hashCode;

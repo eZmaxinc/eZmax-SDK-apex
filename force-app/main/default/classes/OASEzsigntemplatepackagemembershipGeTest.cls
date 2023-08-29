@@ -2,70 +2,70 @@
 private class OASEzsigntemplatepackagemembershipGeTest {
     @isTest
     private static void equalsSameInstance() {
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2 = ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1;
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3 = new OASEzsigntemplatepackagemembershipGe();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4 = ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3;
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2 = ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1;
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4 = ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3;
 
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3 = new OASEzsigntemplatepackagemembershipGe();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4 = new OASEzsigntemplatepackagemembershipGe();
 
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2 = new OASEzsigntemplatepackagemembershipGe();
 
-        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.equals('foo'));
-        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2.equals('foo'));
+        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.equals('foo'));
+        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2 = new OASEzsigntemplatepackagemembershipGe();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3;
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3;
 
-        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3));
-        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3));
+        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3));
+        System.assertEquals(false, ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2 = new OASEzsigntemplatepackagemembershipGe();
 
-        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.hashCode());
-        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2.hashCode());
+        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.hashCode());
+        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2 = OASEzsigntemplatepackagemembershipGe.getExample();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3 = new OASEzsigntemplatepackagemembershipGe();
-        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2 = OASEzsigntemplatepackagemembershipGe.getExample();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3 = new OASEzsigntemplatepackagemembershipGe();
+        OASEzsigntemplatepackagemembershipGe ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4 = new OASEzsigntemplatepackagemembershipGe();
 
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2));
-        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4));
-        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf1.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf2.hashCode());
-        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf3.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseAllOf4.hashCode());
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2));
+        System.assert(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3.equals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4));
+        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload1.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload2.hashCode());
+        System.assertEquals(ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload3.hashCode(), ezsigntemplatepackagemembershipGetObjectV2ResponseMPayload4.hashCode());
     }
 }

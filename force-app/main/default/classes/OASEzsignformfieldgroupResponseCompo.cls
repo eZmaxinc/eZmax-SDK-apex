@@ -11,9 +11,112 @@
  */
 
 /**
- * OASEzsignformfieldgroupResponseCompo
+ * An Ezsignformfieldgroup Object and children to create a complete structure
  */
-public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedProperties {
+public class OASEzsignformfieldgroupResponseCompo implements OASEzsignformfieldgroupResponse, OAS.MappedProperties {
+    /**
+     * The unique ID of the Ezsignformfieldgroup
+     * minimum: 0
+     * @return pkiEzsignformfieldgroupID
+     */
+    public Integer pkiEzsignformfieldgroupID { get; set; }
+
+    /**
+     * The unique ID of the Ezsigndocument
+     * minimum: 0
+     * @return fkiEzsigndocumentID
+     */
+    public Integer fkiEzsigndocumentID { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupType
+     * @return eEzsignformfieldgroupType
+     */
+    public OASFieldEEzsignformfieldgroupType eEzsignformfieldgroupType { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupSignerrequirement
+     * @return eEzsignformfieldgroupSignerrequirement
+     */
+    public OASFieldEEzsignformfieldgroupSignerr eEzsignformfieldgroupSignerrequirement { get; set; }
+
+    /**
+     * The Label for the Ezsignformfieldgroup
+     * @return sEzsignformfieldgroupLabel
+     */
+    public String sEzsignformfieldgroupLabel { get; set; }
+
+    /**
+     * The step when the Ezsignsigner will be invited to fill the form fields
+     * minimum: 1
+     * @return iEzsignformfieldgroupStep
+     */
+    public Integer iEzsignformfieldgroupStep { get; set; }
+
+    /**
+     * The default value for the Ezsignformfieldgroup
+     * @return sEzsignformfieldgroupDefaultvalue
+     */
+    public String sEzsignformfieldgroupDefaultvalue { get; set; }
+
+    /**
+     * The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+     * minimum: 0
+     * @return iEzsignformfieldgroupFilledmin
+     */
+    public Integer iEzsignformfieldgroupFilledmin { get; set; }
+
+    /**
+     * The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
+     * minimum: 0
+     * @return iEzsignformfieldgroupFilledmax
+     */
+    public Integer iEzsignformfieldgroupFilledmax { get; set; }
+
+    /**
+     * Whether the Ezsignformfieldgroup is read only or not.
+     * @return bEzsignformfieldgroupReadonly
+     */
+    public Boolean bEzsignformfieldgroupReadonly { get; set; }
+
+    /**
+     * The maximum length for the value in the Ezsignformfieldgroup\n\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+     * minimum: 0
+     * maximum: 65535
+     * @return iEzsignformfieldgroupMaxlength
+     */
+    public Integer iEzsignformfieldgroupMaxlength { get; set; }
+
+    /**
+     * Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument.\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+     * @return bEzsignformfieldgroupEncrypted
+     */
+    public Boolean bEzsignformfieldgroupEncrypted { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupTextvalidation
+     * @return eEzsignformfieldgroupTextvalidation
+     */
+    public OASEnumTextvalidation eEzsignformfieldgroupTextvalidation { get; set; }
+
+    /**
+     * A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.\n\nThis can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
+     * @return sEzsignformfieldgroupRegexp
+     */
+    public String sEzsignformfieldgroupRegexp { get; set; }
+
+    /**
+     * A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
+     * @return tEzsignformfieldgroupTooltip
+     */
+    public String tEzsignformfieldgroupTooltip { get; set; }
+
+    /**
+     * Get eEzsignformfieldgroupTooltipposition
+     * @return eEzsignformfieldgroupTooltipposition
+     */
+    public OASFieldEEzsignformfieldgroupTooltip eEzsignformfieldgroupTooltipposition { get; set; }
+
     /**
      * Get aObjEzsignformfield
      * @return aObjEzsignformfield
@@ -69,25 +172,73 @@ public class OASEzsignformfieldgroupResponseCompo implements OAS.MappedPropertie
     }
 
     public static OASEzsignformfieldgroupResponseCompo getExample() {
-        OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = new OASEzsignformfieldgroupResponseCompo();
-          ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield = new List<OASEzsignformfieldResponseCompound>{OASEzsignformfieldResponseCompound.getExample()};
-          ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement = new List<OASCustomDropdownElementResponseComp>{OASCustomDropdownElementResponseComp.getExample()};
-          ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner = new List<OASEzsignformfieldgroupsignerRespons>{OASEzsignformfieldgroupsignerRespons.getExample()};
-        return ezsignformfieldgroupResponseCompoundAllOf;
+        OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompound = new OASEzsignformfieldgroupResponseCompo();
+          ezsignformfieldgroupResponseCompound.pkiEzsignformfieldgroupID = 26;
+          ezsignformfieldgroupResponseCompound.fkiEzsigndocumentID = 97;
+          ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupType = OASFieldEEzsignformfieldgroupType.getExample();
+          ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupSignerrequirement = OASFieldEEzsignformfieldgroupSignerr.getExample();
+          ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupLabel = 'Allergies';
+          ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupStep = 1;
+          ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupDefaultvalue = 'Foo';
+          ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupFilledmin = 1;
+          ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupFilledmax = 2;
+          ezsignformfieldgroupResponseCompound.bEzsignformfieldgroupReadonly = true;
+          ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupMaxlength = 75;
+          ezsignformfieldgroupResponseCompound.bEzsignformfieldgroupEncrypted = true;
+          ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupTextvalidation = OASEnumTextvalidation.getExample();
+          ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
+          ezsignformfieldgroupResponseCompound.tEzsignformfieldgroupTooltip = 'Please enter a valid email address';
+          ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupTooltipposition = OASFieldEEzsignformfieldgroupTooltip.getExample();
+          ezsignformfieldgroupResponseCompound.aObjEzsignformfield = new List<OASEzsignformfieldResponseCompound>{OASEzsignformfieldResponseCompound.getExample()};
+          ezsignformfieldgroupResponseCompound.aObjDropdownElement = new List<OASCustomDropdownElementResponseComp>{OASCustomDropdownElementResponseComp.getExample()};
+          ezsignformfieldgroupResponseCompound.aObjEzsignformfieldgroupsigner = new List<OASEzsignformfieldgroupsignerRespons>{OASEzsignformfieldgroupsignerRespons.getExample()};
+        return ezsignformfieldgroupResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignformfieldgroupResponseCompo) {           
-            OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompoundAllOf = (OASEzsignformfieldgroupResponseCompo) obj;
-            return this.aObjEzsignformfield == ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield
-                && this.aObjDropdownElement == ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement
-                && this.aObjEzsignformfieldgroupsigner == ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner;
+            OASEzsignformfieldgroupResponseCompo ezsignformfieldgroupResponseCompound = (OASEzsignformfieldgroupResponseCompo) obj;
+            return this.pkiEzsignformfieldgroupID == ezsignformfieldgroupResponseCompound.pkiEzsignformfieldgroupID
+                && this.fkiEzsigndocumentID == ezsignformfieldgroupResponseCompound.fkiEzsigndocumentID
+                && this.eEzsignformfieldgroupType == ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupType
+                && this.eEzsignformfieldgroupSignerrequirement == ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupSignerrequirement
+                && this.sEzsignformfieldgroupLabel == ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupLabel
+                && this.iEzsignformfieldgroupStep == ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupStep
+                && this.sEzsignformfieldgroupDefaultvalue == ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupDefaultvalue
+                && this.iEzsignformfieldgroupFilledmin == ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupFilledmin
+                && this.iEzsignformfieldgroupFilledmax == ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupFilledmax
+                && this.bEzsignformfieldgroupReadonly == ezsignformfieldgroupResponseCompound.bEzsignformfieldgroupReadonly
+                && this.iEzsignformfieldgroupMaxlength == ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupMaxlength
+                && this.bEzsignformfieldgroupEncrypted == ezsignformfieldgroupResponseCompound.bEzsignformfieldgroupEncrypted
+                && this.eEzsignformfieldgroupTextvalidation == ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupTextvalidation
+                && this.sEzsignformfieldgroupRegexp == ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupRegexp
+                && this.tEzsignformfieldgroupTooltip == ezsignformfieldgroupResponseCompound.tEzsignformfieldgroupTooltip
+                && this.eEzsignformfieldgroupTooltipposition == ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupTooltipposition
+                && this.aObjEzsignformfield == ezsignformfieldgroupResponseCompound.aObjEzsignformfield
+                && this.aObjDropdownElement == ezsignformfieldgroupResponseCompound.aObjDropdownElement
+                && this.aObjEzsignformfieldgroupsigner == ezsignformfieldgroupResponseCompound.aObjEzsignformfieldgroupsigner;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignformfieldgroupID == null ? 0 : System.hashCode(pkiEzsignformfieldgroupID));
+        hashCode = (17 * hashCode) + (fkiEzsigndocumentID == null ? 0 : System.hashCode(fkiEzsigndocumentID));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupType == null ? 0 : System.hashCode(eEzsignformfieldgroupType));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupSignerrequirement == null ? 0 : System.hashCode(eEzsignformfieldgroupSignerrequirement));
+        hashCode = (17 * hashCode) + (sEzsignformfieldgroupLabel == null ? 0 : System.hashCode(sEzsignformfieldgroupLabel));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupStep == null ? 0 : System.hashCode(iEzsignformfieldgroupStep));
+        hashCode = (17 * hashCode) + (sEzsignformfieldgroupDefaultvalue == null ? 0 : System.hashCode(sEzsignformfieldgroupDefaultvalue));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupFilledmin == null ? 0 : System.hashCode(iEzsignformfieldgroupFilledmin));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupFilledmax == null ? 0 : System.hashCode(iEzsignformfieldgroupFilledmax));
+        hashCode = (17 * hashCode) + (bEzsignformfieldgroupReadonly == null ? 0 : System.hashCode(bEzsignformfieldgroupReadonly));
+        hashCode = (17 * hashCode) + (iEzsignformfieldgroupMaxlength == null ? 0 : System.hashCode(iEzsignformfieldgroupMaxlength));
+        hashCode = (17 * hashCode) + (bEzsignformfieldgroupEncrypted == null ? 0 : System.hashCode(bEzsignformfieldgroupEncrypted));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupTextvalidation == null ? 0 : System.hashCode(eEzsignformfieldgroupTextvalidation));
+        hashCode = (17 * hashCode) + (sEzsignformfieldgroupRegexp == null ? 0 : System.hashCode(sEzsignformfieldgroupRegexp));
+        hashCode = (17 * hashCode) + (tEzsignformfieldgroupTooltip == null ? 0 : System.hashCode(tEzsignformfieldgroupTooltip));
+        hashCode = (17 * hashCode) + (eEzsignformfieldgroupTooltipposition == null ? 0 : System.hashCode(eEzsignformfieldgroupTooltipposition));
         hashCode = (17 * hashCode) + (aObjEzsignformfield == null ? 0 : System.hashCode(aObjEzsignformfield));
         hashCode = (17 * hashCode) + (aObjDropdownElement == null ? 0 : System.hashCode(aObjDropdownElement));
         hashCode = (17 * hashCode) + (aObjEzsignformfieldgroupsigner == null ? 0 : System.hashCode(aObjEzsignformfieldgroupsigner));

@@ -13,7 +13,7 @@
 /**
  * A Modulesection Object
  */
-public class OASModulesectionResponseCompound implements OASModulesectionResponse, OASModulesectionResponseCompoundAllO, OAS.MappedProperties {
+public class OASModulesectionResponseCompound implements OASModulesectionResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Modulesection
      * minimum: 0

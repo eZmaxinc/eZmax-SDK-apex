@@ -13,7 +13,7 @@
 /**
  * A Webhook Object
  */
-public class OASWebhookResponseCompound implements OASWebhookResponse, OASWebhookResponseCompoundAllOf {
+public class OASWebhookResponseCompound implements OASWebhookResponse {
     /**
      * The unique ID of the Webhook
      * @return pkiWebhookID

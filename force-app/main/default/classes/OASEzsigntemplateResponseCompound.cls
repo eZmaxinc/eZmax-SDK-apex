@@ -13,7 +13,7 @@
 /**
  * A Ezsigntemplate Object
  */
-public class OASEzsigntemplateResponseCompound implements OASEzsigntemplateResponse, OASEzsigntemplateResponseCompoundAll, OAS.MappedProperties {
+public class OASEzsigntemplateResponseCompound implements OASEzsigntemplateResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsigntemplate
      * minimum: 0

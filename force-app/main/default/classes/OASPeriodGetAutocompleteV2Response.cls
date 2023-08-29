@@ -13,13 +13,7 @@
 /**
  * Response for GET /2/object/period/getAutocomplete
  */
-public class OASPeriodGetAutocompleteV2Response implements OASPeriodGetAutocompleteV2ResponseAl, OASCommonResponse {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASPeriodGetAutocompleteV2ResponseMP mPayload { get; set; }
-
+public class OASPeriodGetAutocompleteV2Response implements OASCommonResponse {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASPeriodGetAutocompleteV2Response implements OASPeriodGetAutocompl
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASPeriodGetAutocompleteV2ResponseMP mPayload { get; set; }
+
     public static OASPeriodGetAutocompleteV2Response getExample() {
         OASPeriodGetAutocompleteV2Response periodGetAutocompleteV2Response = new OASPeriodGetAutocompleteV2Response();
-          periodGetAutocompleteV2Response.mPayload = OASPeriodGetAutocompleteV2ResponseMP.getExample();
           periodGetAutocompleteV2Response.objDebugPayload = OASCommonResponseObjDebugPayload.getExample();
           periodGetAutocompleteV2Response.objDebug = OASCommonResponseObjDebug.getExample();
+          periodGetAutocompleteV2Response.mPayload = OASPeriodGetAutocompleteV2ResponseMP.getExample();
         return periodGetAutocompleteV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASPeriodGetAutocompleteV2Response) {           
             OASPeriodGetAutocompleteV2Response periodGetAutocompleteV2Response = (OASPeriodGetAutocompleteV2Response) obj;
-            return this.mPayload == periodGetAutocompleteV2Response.mPayload
-                && this.objDebugPayload == periodGetAutocompleteV2Response.objDebugPayload
-                && this.objDebug == periodGetAutocompleteV2Response.objDebug;
+            return this.objDebugPayload == periodGetAutocompleteV2Response.objDebugPayload
+                && this.objDebug == periodGetAutocompleteV2Response.objDebug
+                && this.mPayload == periodGetAutocompleteV2Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

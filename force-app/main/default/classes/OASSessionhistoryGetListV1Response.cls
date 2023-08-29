@@ -13,13 +13,7 @@
 /**
  * Response for GET /1/object/sessionhistory/getList
  */
-public class OASSessionhistoryGetListV1Response implements OASSessionhistoryGetListV1ResponseAl, OASCommonResponseGetList {
-    /**
-     * Get mPayload
-     * @return mPayload
-     */
-    public OASSessionhistoryGetListV1ResponseMP mPayload { get; set; }
-
+public class OASSessionhistoryGetListV1Response implements OASCommonResponseGetList {
     /**
      * Get objDebugPayload
      * @return objDebugPayload
@@ -32,29 +26,35 @@ public class OASSessionhistoryGetListV1Response implements OASSessionhistoryGetL
      */
     public OASCommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get mPayload
+     * @return mPayload
+     */
+    public OASSessionhistoryGetListV1ResponseMP mPayload { get; set; }
+
     public static OASSessionhistoryGetListV1Response getExample() {
         OASSessionhistoryGetListV1Response sessionhistoryGetListV1Response = new OASSessionhistoryGetListV1Response();
-          sessionhistoryGetListV1Response.mPayload = OASSessionhistoryGetListV1ResponseMP.getExample();
           sessionhistoryGetListV1Response.objDebugPayload = OASCommonResponseObjDebugPayloadGetL.getExample();
           sessionhistoryGetListV1Response.objDebug = OASCommonResponseObjDebug.getExample();
+          sessionhistoryGetListV1Response.mPayload = OASSessionhistoryGetListV1ResponseMP.getExample();
         return sessionhistoryGetListV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASSessionhistoryGetListV1Response) {           
             OASSessionhistoryGetListV1Response sessionhistoryGetListV1Response = (OASSessionhistoryGetListV1Response) obj;
-            return this.mPayload == sessionhistoryGetListV1Response.mPayload
-                && this.objDebugPayload == sessionhistoryGetListV1Response.objDebugPayload
-                && this.objDebug == sessionhistoryGetListV1Response.objDebug;
+            return this.objDebugPayload == sessionhistoryGetListV1Response.objDebugPayload
+                && this.objDebug == sessionhistoryGetListV1Response.objDebug
+                && this.mPayload == sessionhistoryGetListV1Response.mPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
         return hashCode;
     }
 }

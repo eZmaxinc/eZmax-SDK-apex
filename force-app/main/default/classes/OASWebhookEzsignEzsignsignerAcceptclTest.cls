@@ -2,70 +2,86 @@
 private class OASWebhookEzsignEzsignsignerAcceptclTest {
     @isTest
     private static void equalsSameInstance() {
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf2 = webhookEzsignEzsignsignerAcceptclauseAllOf1;
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf3 = new OASWebhookEzsignEzsignsignerAcceptcl();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf4 = webhookEzsignEzsignsignerAcceptclauseAllOf3;
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause2 = webhookEzsignEzsignsignerAcceptclause1;
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause3 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause4 = webhookEzsignEzsignsignerAcceptclause3;
 
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf1.equals(webhookEzsignEzsignsignerAcceptclauseAllOf2));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf2.equals(webhookEzsignEzsignsignerAcceptclauseAllOf1));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf1.equals(webhookEzsignEzsignsignerAcceptclauseAllOf1));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf3.equals(webhookEzsignEzsignsignerAcceptclauseAllOf4));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf4.equals(webhookEzsignEzsignsignerAcceptclauseAllOf3));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf3.equals(webhookEzsignEzsignsignerAcceptclauseAllOf3));
+        System.assert(webhookEzsignEzsignsignerAcceptclause1.equals(webhookEzsignEzsignsignerAcceptclause2));
+        System.assert(webhookEzsignEzsignsignerAcceptclause2.equals(webhookEzsignEzsignsignerAcceptclause1));
+        System.assert(webhookEzsignEzsignsignerAcceptclause1.equals(webhookEzsignEzsignsignerAcceptclause1));
+        System.assert(webhookEzsignEzsignsignerAcceptclause3.equals(webhookEzsignEzsignsignerAcceptclause4));
+        System.assert(webhookEzsignEzsignsignerAcceptclause4.equals(webhookEzsignEzsignsignerAcceptclause3));
+        System.assert(webhookEzsignEzsignsignerAcceptclause3.equals(webhookEzsignEzsignsignerAcceptclause3));
     }
 
     @isTest
     private static void equalsIdenticalInstance() {
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf2 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf3 = new OASWebhookEzsignEzsignsignerAcceptcl();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf4 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause2 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause3 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause4 = new OASWebhookEzsignEzsignsignerAcceptcl();
 
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf1.equals(webhookEzsignEzsignsignerAcceptclauseAllOf2));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf2.equals(webhookEzsignEzsignsignerAcceptclauseAllOf1));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf3.equals(webhookEzsignEzsignsignerAcceptclauseAllOf4));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf4.equals(webhookEzsignEzsignsignerAcceptclauseAllOf3));
+        System.assert(webhookEzsignEzsignsignerAcceptclause1.equals(webhookEzsignEzsignsignerAcceptclause2));
+        System.assert(webhookEzsignEzsignsignerAcceptclause2.equals(webhookEzsignEzsignsignerAcceptclause1));
+        System.assert(webhookEzsignEzsignsignerAcceptclause3.equals(webhookEzsignEzsignsignerAcceptclause4));
+        System.assert(webhookEzsignEzsignsignerAcceptclause4.equals(webhookEzsignEzsignsignerAcceptclause3));
     }
 
     @isTest
     private static void notEqualsDifferentType() {
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf2 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause2 = new OASWebhookEzsignEzsignsignerAcceptcl();
 
-        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclauseAllOf1.equals('foo'));
-        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclauseAllOf2.equals('foo'));
+        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclause1.equals('foo'));
+        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclause2.equals('foo'));
     }
 
     @isTest
     private static void notEqualsNull() {
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf2 = new OASWebhookEzsignEzsignsignerAcceptcl();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf3;
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause2 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause3;
 
-        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclauseAllOf1.equals(webhookEzsignEzsignsignerAcceptclauseAllOf3));
-        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclauseAllOf2.equals(webhookEzsignEzsignsignerAcceptclauseAllOf3));
+        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclause1.equals(webhookEzsignEzsignsignerAcceptclause3));
+        System.assertEquals(false, webhookEzsignEzsignsignerAcceptclause2.equals(webhookEzsignEzsignsignerAcceptclause3));
     }
 
     @isTest
     private static void consistentHashCodeValue() {
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf2 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause2 = new OASWebhookEzsignEzsignsignerAcceptcl();
 
-        System.assertEquals(webhookEzsignEzsignsignerAcceptclauseAllOf1.hashCode(), webhookEzsignEzsignsignerAcceptclauseAllOf1.hashCode());
-        System.assertEquals(webhookEzsignEzsignsignerAcceptclauseAllOf2.hashCode(), webhookEzsignEzsignsignerAcceptclauseAllOf2.hashCode());
+        System.assertEquals(webhookEzsignEzsignsignerAcceptclause1.hashCode(), webhookEzsignEzsignsignerAcceptclause1.hashCode());
+        System.assertEquals(webhookEzsignEzsignsignerAcceptclause2.hashCode(), webhookEzsignEzsignsignerAcceptclause2.hashCode());
     }
 
     @isTest
     private static void equalInstancesHaveSameHashCode() {
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf2 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf3 = new OASWebhookEzsignEzsignsignerAcceptcl();
-        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclauseAllOf4 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause1 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause2 = OASWebhookEzsignEzsignsignerAcceptcl.getExample();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause3 = new OASWebhookEzsignEzsignsignerAcceptcl();
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause4 = new OASWebhookEzsignEzsignsignerAcceptcl();
 
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf1.equals(webhookEzsignEzsignsignerAcceptclauseAllOf2));
-        System.assert(webhookEzsignEzsignsignerAcceptclauseAllOf3.equals(webhookEzsignEzsignsignerAcceptclauseAllOf4));
-        System.assertEquals(webhookEzsignEzsignsignerAcceptclauseAllOf1.hashCode(), webhookEzsignEzsignsignerAcceptclauseAllOf2.hashCode());
-        System.assertEquals(webhookEzsignEzsignsignerAcceptclauseAllOf3.hashCode(), webhookEzsignEzsignsignerAcceptclauseAllOf4.hashCode());
+        System.assert(webhookEzsignEzsignsignerAcceptclause1.equals(webhookEzsignEzsignsignerAcceptclause2));
+        System.assert(webhookEzsignEzsignsignerAcceptclause3.equals(webhookEzsignEzsignsignerAcceptclause4));
+        System.assertEquals(webhookEzsignEzsignsignerAcceptclause1.hashCode(), webhookEzsignEzsignsignerAcceptclause2.hashCode());
+        System.assertEquals(webhookEzsignEzsignsignerAcceptclause3.hashCode(), webhookEzsignEzsignsignerAcceptclause4.hashCode());
+    }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause = new OASWebhookEzsignEzsignsignerAcceptcl();
+        Map<String, String> x-property-mappings = webhookEzsignEzsignsignerAcceptclause.getx-property-mappings();
+        System.assertEquals('aObjAttempt', x-property-mappings.get('a_objAttempt'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        OASWebhookEzsignEzsignsignerAcceptcl webhookEzsignEzsignsignerAcceptclause = new OASWebhookEzsignEzsignsignerAcceptcl();
+        System.assertEquals(new List<OASAttemptResponseCompound>(), webhookEzsignEzsignsignerAcceptclause.aObjAttempt);
+        System.assertEquals(null, webhookEzsignEzsignsignerAcceptclause.objWebhook);
+        System.assertEquals(null, webhookEzsignEzsignsignerAcceptclause.objEzsignfolder);
+        System.assertEquals(null, webhookEzsignEzsignsignerAcceptclause.objEzsignfoldersignerassociation);
     }
 }

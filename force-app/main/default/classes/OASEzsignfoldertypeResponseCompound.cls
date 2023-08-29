@@ -13,7 +13,7 @@
 /**
  * A Ezsignfoldertype Object
  */
-public class OASEzsignfoldertypeResponseCompound implements OASEzsignfoldertypeResponse, OASEzsignfoldertypeRequestCompoundAl, OAS.MappedProperties {
+public class OASEzsignfoldertypeResponseCompound implements OASEzsignfoldertypeResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignfoldertype.
      * minimum: 0

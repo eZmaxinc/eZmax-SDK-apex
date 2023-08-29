@@ -11,32 +11,32 @@
  */
 
 /**
- * OASVariableexpenseGetObjectV2Respons
+ * Payload for GET /2/object/variableexpense/{pkiVariableexpenseID}
  */
 public class OASVariableexpenseGetObjectV2Respons {
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objVariableexpense
+     * @return objVariableexpense
      */
-    public OASVariableexpenseGetObjectV2Respons mPayload { get; set; }
+    public OASVariableexpenseResponseCompound objVariableexpense { get; set; }
 
     public static OASVariableexpenseGetObjectV2Respons getExample() {
-        OASVariableexpenseGetObjectV2Respons variableexpenseGetObjectV2ResponseAllOf = new OASVariableexpenseGetObjectV2Respons();
-          variableexpenseGetObjectV2ResponseAllOf.mPayload = OASVariableexpenseGetObjectV2Respons.getExample();
-        return variableexpenseGetObjectV2ResponseAllOf;
+        OASVariableexpenseGetObjectV2Respons variableexpenseGetObjectV2ResponseMPayload = new OASVariableexpenseGetObjectV2Respons();
+          variableexpenseGetObjectV2ResponseMPayload.objVariableexpense = OASVariableexpenseResponseCompound.getExample();
+        return variableexpenseGetObjectV2ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASVariableexpenseGetObjectV2Respons) {           
-            OASVariableexpenseGetObjectV2Respons variableexpenseGetObjectV2ResponseAllOf = (OASVariableexpenseGetObjectV2Respons) obj;
-            return this.mPayload == variableexpenseGetObjectV2ResponseAllOf.mPayload;
+            OASVariableexpenseGetObjectV2Respons variableexpenseGetObjectV2ResponseMPayload = (OASVariableexpenseGetObjectV2Respons) obj;
+            return this.objVariableexpense == variableexpenseGetObjectV2ResponseMPayload.objVariableexpense;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objVariableexpense == null ? 0 : System.hashCode(objVariableexpense));
         return hashCode;
     }
 }

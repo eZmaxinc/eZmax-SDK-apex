@@ -13,7 +13,7 @@
 /**
  * A Communication Object
  */
-public class OASCommunicationResponseCompound implements OASCommunicationResponse, OASCommunicationResponseCompoundAllO, OAS.MappedProperties {
+public class OASCommunicationResponseCompound implements OASCommunicationResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Communication.
      * minimum: 0

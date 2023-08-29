@@ -11,9 +11,42 @@
  */
 
 /**
- * OASEzsignbulksendtransmissionRespons
+ * An Ezsignbulksendtransmission Object and children to create a complete structure
  */
-public class OASEzsignbulksendtransmissionRespons implements OAS.MappedProperties {
+public class OASEzsignbulksendtransmissionRespons implements OASEzsignbulksendtransmissionRespons, OAS.MappedProperties {
+    /**
+     * The unique ID of the Ezsignbulksendtransmission
+     * minimum: 0
+     * @return pkiEzsignbulksendtransmissionID
+     */
+    public Integer pkiEzsignbulksendtransmissionID { get; set; }
+
+    /**
+     * The unique ID of the Ezsignbulksend
+     * minimum: 0
+     * @return fkiEzsignbulksendID
+     */
+    public Integer fkiEzsignbulksendID { get; set; }
+
+    /**
+     * The description of the Ezsignbulksendtransmission
+     * @return sEzsignbulksendtransmissionDescription
+     */
+    public String sEzsignbulksendtransmissionDescription { get; set; }
+
+    /**
+     * The number of errors during the Ezsignbulksendtransmission
+     * minimum: 0
+     * @return iEzsignbulksendtransmissionErrors
+     */
+    public Integer iEzsignbulksendtransmissionErrors { get; set; }
+
+    /**
+     * Get objAudit
+     * @return objAudit
+     */
+    public OASCommonAudit objAudit { get; set; }
+
     /**
      * Get aObjEzsignfoldertransmission
      * @return aObjEzsignfoldertransmission
@@ -33,21 +66,36 @@ public class OASEzsignbulksendtransmissionRespons implements OAS.MappedPropertie
     }
 
     public static OASEzsignbulksendtransmissionRespons getExample() {
-        OASEzsignbulksendtransmissionRespons ezsignbulksendtransmissionResponseCompoundAllOf = new OASEzsignbulksendtransmissionRespons();
-          ezsignbulksendtransmissionResponseCompoundAllOf.aObjEzsignfoldertransmission = new List<OASCustomEzsignfoldertransmissionRes>{OASCustomEzsignfoldertransmissionRes.getExample()};
-        return ezsignbulksendtransmissionResponseCompoundAllOf;
+        OASEzsignbulksendtransmissionRespons ezsignbulksendtransmissionResponseCompound = new OASEzsignbulksendtransmissionRespons();
+          ezsignbulksendtransmissionResponseCompound.pkiEzsignbulksendtransmissionID = 21;
+          ezsignbulksendtransmissionResponseCompound.fkiEzsignbulksendID = 8;
+          ezsignbulksendtransmissionResponseCompound.sEzsignbulksendtransmissionDescription = 'Test eZsign Bulk Send Transmission #1';
+          ezsignbulksendtransmissionResponseCompound.iEzsignbulksendtransmissionErrors = 1;
+          ezsignbulksendtransmissionResponseCompound.objAudit = OASCommonAudit.getExample();
+          ezsignbulksendtransmissionResponseCompound.aObjEzsignfoldertransmission = new List<OASCustomEzsignfoldertransmissionRes>{OASCustomEzsignfoldertransmissionRes.getExample()};
+        return ezsignbulksendtransmissionResponseCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof OASEzsignbulksendtransmissionRespons) {           
-            OASEzsignbulksendtransmissionRespons ezsignbulksendtransmissionResponseCompoundAllOf = (OASEzsignbulksendtransmissionRespons) obj;
-            return this.aObjEzsignfoldertransmission == ezsignbulksendtransmissionResponseCompoundAllOf.aObjEzsignfoldertransmission;
+            OASEzsignbulksendtransmissionRespons ezsignbulksendtransmissionResponseCompound = (OASEzsignbulksendtransmissionRespons) obj;
+            return this.pkiEzsignbulksendtransmissionID == ezsignbulksendtransmissionResponseCompound.pkiEzsignbulksendtransmissionID
+                && this.fkiEzsignbulksendID == ezsignbulksendtransmissionResponseCompound.fkiEzsignbulksendID
+                && this.sEzsignbulksendtransmissionDescription == ezsignbulksendtransmissionResponseCompound.sEzsignbulksendtransmissionDescription
+                && this.iEzsignbulksendtransmissionErrors == ezsignbulksendtransmissionResponseCompound.iEzsignbulksendtransmissionErrors
+                && this.objAudit == ezsignbulksendtransmissionResponseCompound.objAudit
+                && this.aObjEzsignfoldertransmission == ezsignbulksendtransmissionResponseCompound.aObjEzsignfoldertransmission;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (pkiEzsignbulksendtransmissionID == null ? 0 : System.hashCode(pkiEzsignbulksendtransmissionID));
+        hashCode = (17 * hashCode) + (fkiEzsignbulksendID == null ? 0 : System.hashCode(fkiEzsignbulksendID));
+        hashCode = (17 * hashCode) + (sEzsignbulksendtransmissionDescription == null ? 0 : System.hashCode(sEzsignbulksendtransmissionDescription));
+        hashCode = (17 * hashCode) + (iEzsignbulksendtransmissionErrors == null ? 0 : System.hashCode(iEzsignbulksendtransmissionErrors));
+        hashCode = (17 * hashCode) + (objAudit == null ? 0 : System.hashCode(objAudit));
         hashCode = (17 * hashCode) + (aObjEzsignfoldertransmission == null ? 0 : System.hashCode(aObjEzsignfoldertransmission));
         return hashCode;
     }
