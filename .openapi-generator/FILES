@@ -597,6 +597,10 @@ force-app/main/default/classes/OASCustomEzsignfoldertransmissionSig.cls
 force-app/main/default/classes/OASCustomEzsignfoldertransmissionSig.cls-meta.xml
 force-app/main/default/classes/OASCustomEzsignfoldertransmissionSigTest.cls
 force-app/main/default/classes/OASCustomEzsignfoldertransmissionSigTest.cls-meta.xml
+force-app/main/default/classes/OASCustomEzsignfoldertypeResponse.cls
+force-app/main/default/classes/OASCustomEzsignfoldertypeResponse.cls-meta.xml
+force-app/main/default/classes/OASCustomEzsignfoldertypeResponseTest.cls
+force-app/main/default/classes/OASCustomEzsignfoldertypeResponseTest.cls-meta.xml
 force-app/main/default/classes/OASCustomEzsignformfieldRequest.cls
 force-app/main/default/classes/OASCustomEzsignformfieldRequest.cls-meta.xml
 force-app/main/default/classes/OASCustomEzsignformfieldRequestTest.cls

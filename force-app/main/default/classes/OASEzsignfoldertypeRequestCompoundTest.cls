@@ -97,6 +97,8 @@ private class OASEzsignfoldertypeRequestCompoundTest {
         System.assertEquals(null, ezsignfoldertypeRequestCompound.eEzsignfoldertypeDisposal);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.iEzsignfoldertypeDisposaldays);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.iEzsignfoldertypeDeadlinedays);
+        System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeDelegate);
+        System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeReassign);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendattatchmentsigner);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsignedtodocumentowner);
         System.assertEquals(null, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsignedtofolderowner);

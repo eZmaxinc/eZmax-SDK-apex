@@ -512,6 +512,7 @@ Class | Method | HTTP request | Description
  - [OASCustomEzsignfoldersignerassociati](OASCustomEzsignfoldersignerassociati.md)
  - [OASCustomEzsignfoldertransmissionRes](OASCustomEzsignfoldertransmissionRes.md)
  - [OASCustomEzsignfoldertransmissionSig](OASCustomEzsignfoldertransmissionSig.md)
+ - [OASCustomEzsignfoldertypeResponse](OASCustomEzsignfoldertypeResponse.md)
  - [OASCustomEzsignformfieldRequest](OASCustomEzsignformfieldRequest.md)
  - [OASCustomEzsignformfielderrorRespons](OASCustomEzsignformfielderrorRespons.md)
  - [OASCustomEzsignformfielderrortestRes](OASCustomEzsignformfielderrortestRes.md)

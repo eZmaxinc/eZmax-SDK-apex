@@ -105,6 +105,7 @@ private class OASEzsignsignatureResponseCompoundTest {
         System.assertEquals(null, ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation);
         System.assertEquals(null, ezsignsignatureResponseCompound.sEzsignsignatureRegexp);
         System.assertEquals(null, ezsignsignatureResponseCompound.objContactName);
+        System.assertEquals(null, ezsignsignatureResponseCompound.objContactNameDelegation);
         System.assertEquals(null, ezsignsignatureResponseCompound.objSignature);
         System.assertEquals(null, ezsignsignatureResponseCompound.bEzsignsignatureCustomdate);
         System.assertEquals(null, ezsignsignatureResponseCompound.objCreditcardtransaction);

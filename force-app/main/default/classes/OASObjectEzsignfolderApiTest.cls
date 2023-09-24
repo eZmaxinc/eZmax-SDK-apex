@@ -575,7 +575,7 @@ private class OASObjectEzsignfolderApiTest {
     /**
      * Retrieve Ezsignfolder list
      *
-     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed|\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:\n\n| Variable | Valid values |\n|---|---|\n| eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed|\n| eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |\n\nAdvanced filters that can be used in query parameter *sFilter*:\n\n| Variable |\n|---|\n| sContactFirstname |\n| sContactLastname |\n| sEzsigndocumentName |
      */
     @isTest
     private static void ezsignfolderGetListV1Test() {

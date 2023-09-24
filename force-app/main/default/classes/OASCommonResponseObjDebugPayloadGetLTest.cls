@@ -83,6 +83,8 @@ private class OASCommonResponseObjDebugPayloadGetLTest {
         OASCommonResponseObjDebugPayloadGetL commonResponseObjDebugPayloadGetList = new OASCommonResponseObjDebugPayloadGetL();
         System.assertEquals(new List<Integer>(), commonResponseObjDebugPayloadGetList.aRequiredPermission);
         System.assertEquals(new Map<String, String>(), commonResponseObjDebugPayloadGetList.aOrderBy);
+        System.assertEquals(10000, commonResponseObjDebugPayloadGetList.iRowMax);
+        System.assertEquals(0, commonResponseObjDebugPayloadGetList.iRowOffset);
         System.assertEquals(null, commonResponseObjDebugPayloadGetList.iVersionMin);
         System.assertEquals(null, commonResponseObjDebugPayloadGetList.iVersionMax);
         System.assertEquals(null, commonResponseObjDebugPayloadGetList.bVersionDeprecated);

@@ -74,6 +74,7 @@ private class OASCommonResponseFilterTest {
         OASCommonResponseFilter commonResponseFilter = new OASCommonResponseFilter();
         Map<String, String> x-property-mappings = commonResponseFilter.getx-property-mappings();
         System.assertEquals('aAutoType', x-property-mappings.get('a_AutoType'));
+        System.assertEquals('aAutoTypeHaving', x-property-mappings.get('a_AutoTypeHaving'));
         System.assertEquals('aEnum', x-property-mappings.get('a_Enum'));
     }
 
@@ -81,6 +82,7 @@ private class OASCommonResponseFilterTest {
     private static void defaultValuesPopulated() {
         OASCommonResponseFilter commonResponseFilter = new OASCommonResponseFilter();
         System.assertEquals(new Map<String, String>(), commonResponseFilter.aAutoType);
+        System.assertEquals(new Map<String, String>(), commonResponseFilter.aAutoTypeHaving);
         System.assertEquals(new Map<String, Map<String, String>>(), commonResponseFilter.aEnum);
     }
 }
