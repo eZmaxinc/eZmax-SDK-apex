@@ -1,0 +1,60 @@
+@isTest
+private class FieldEErrorCodeTest {
+    @isTest
+    private static void allowableValues() {
+        Set<FieldEErrorCode> expected = new Set<FieldEErrorCode>{
+            FieldEErrorCode.BADREQUEST,
+            FieldEErrorCode.BADREQUEST_CLOCKSKEW,
+            FieldEErrorCode.UNAUTHORIZED_BADAUTH,
+            FieldEErrorCode.UNAUTHORIZED_BADMFA,
+            FieldEErrorCode.UNAUTHORIZED_EXPIRED,
+            FieldEErrorCode.UNAUTHORIZED_REQUEST,
+            FieldEErrorCode.FORBIDDEN,
+            FieldEErrorCode.FORBIDDEN_CONFIGURATION,
+            FieldEErrorCode.FORBIDDEN_MODULE,
+            FieldEErrorCode.FORBIDDEN_NOACCESS,
+            FieldEErrorCode.FORBIDDEN_PERMISSION,
+            FieldEErrorCode.FORBIDDEN_SUBSCRIPTION,
+            FieldEErrorCode.FORBIDDEN_USERTYPE,
+            FieldEErrorCode.FORBIDDEN_USER_ORIGIN_EXTERNAL,
+            FieldEErrorCode.NOTFOUND,
+            FieldEErrorCode.NOTFOUND_OBJECT,
+            FieldEErrorCode.NOTFOUND_ROUTE,
+            FieldEErrorCode.METHODNOTALLOWED,
+            FieldEErrorCode.NOTACCEPTABLE_CONTENT,
+            FieldEErrorCode.NOTACCEPTABLE_LANGUAGE,
+            FieldEErrorCode.UNPROCESSABLEENTITY_ACTIVESESSION_ALREADY_CLONING,
+            FieldEErrorCode.UNPROCESSABLEENTITY_CANNOTDELETE,
+            FieldEErrorCode.UNPROCESSABLEENTITY_CANNOTMODIFY,
+            FieldEErrorCode.UNPROCESSABLEENTITY_CHANGEPASSWORD_INVALID_CURRENT,
+            FieldEErrorCode.UNPROCESSABLEENTITY_CHANGEPASSWORD_SAME,
+            FieldEErrorCode.UNPROCESSABLEENTITY_DATA_MISSING,
+            FieldEErrorCode.UNPROCESSABLEENTITY_DATA_UNIQUE,
+            FieldEErrorCode.UNPROCESSABLEENTITY_DATA_VALIDATION,
+            FieldEErrorCode.UNPROCESSABLEENTITY_DATA_OUTOFBOUND,
+            FieldEErrorCode.UNPROCESSABLEENTITY_DOWNLOAD_ERROR,
+            FieldEErrorCode.UNPROCESSABLEENTITY_EZSIGNFORM_VALIDATION,
+            FieldEErrorCode.UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED,
+            FieldEErrorCode.UNPROCESSABLEENTITY_NOTHINGTODO,
+            FieldEErrorCode.UNPROCESSABLEENTITY_NOTREADY,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_FORM,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_SIGNATURE,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_FORM_AND_SIGNATURE,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_INCOMPATIBLE,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_PASSWORD,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_WRONG_PASSWORD,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_REPAIRABLE,
+            FieldEErrorCode.UNPROCESSABLEENTITY_PDF_XFA,
+            FieldEErrorCode.UNPROCESSABLEENTITY_TEMPLATE_MISMATCH,
+            FieldEErrorCode.UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD,
+            FieldEErrorCode.UNPROCESSABLEENTITY_USER_STAGED,
+            FieldEErrorCode.TOOMANYREQUESTS,
+            FieldEErrorCode.TOOMANYREQUESTS_THIRDPARTY,
+            FieldEErrorCode.ERROR_INTERNAL,
+            FieldEErrorCode.ERROR_CONFIGURATION,
+            FieldEErrorCode.ERROR_NOTIMPLEMENTED
+        };
+        Set<FieldEErrorCode> actual  = new Set<FieldEErrorCode>(FieldEErrorCode.values());
+        System.assertEquals(expected, actual);
+    }
+}

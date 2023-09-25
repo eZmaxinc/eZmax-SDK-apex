@@ -1,0 +1,106 @@
+@isTest
+private class EzsignsignatureRequestCompoundTest {
+    @isTest
+    private static void equalsSameInstance() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound1 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound2 = ezsignsignatureRequestCompound1;
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound3 = new EzsignsignatureRequestCompound();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound4 = ezsignsignatureRequestCompound3;
+
+        System.assert(ezsignsignatureRequestCompound1.equals(ezsignsignatureRequestCompound2));
+        System.assert(ezsignsignatureRequestCompound2.equals(ezsignsignatureRequestCompound1));
+        System.assert(ezsignsignatureRequestCompound1.equals(ezsignsignatureRequestCompound1));
+        System.assert(ezsignsignatureRequestCompound3.equals(ezsignsignatureRequestCompound4));
+        System.assert(ezsignsignatureRequestCompound4.equals(ezsignsignatureRequestCompound3));
+        System.assert(ezsignsignatureRequestCompound3.equals(ezsignsignatureRequestCompound3));
+    }
+
+    @isTest
+    private static void equalsIdenticalInstance() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound1 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound2 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound3 = new EzsignsignatureRequestCompound();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound4 = new EzsignsignatureRequestCompound();
+
+        System.assert(ezsignsignatureRequestCompound1.equals(ezsignsignatureRequestCompound2));
+        System.assert(ezsignsignatureRequestCompound2.equals(ezsignsignatureRequestCompound1));
+        System.assert(ezsignsignatureRequestCompound3.equals(ezsignsignatureRequestCompound4));
+        System.assert(ezsignsignatureRequestCompound4.equals(ezsignsignatureRequestCompound3));
+    }
+
+    @isTest
+    private static void notEqualsDifferentType() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound1 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound2 = new EzsignsignatureRequestCompound();
+
+        System.assertEquals(false, ezsignsignatureRequestCompound1.equals('foo'));
+        System.assertEquals(false, ezsignsignatureRequestCompound2.equals('foo'));
+    }
+
+    @isTest
+    private static void notEqualsNull() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound1 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound2 = new EzsignsignatureRequestCompound();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound3;
+
+        System.assertEquals(false, ezsignsignatureRequestCompound1.equals(ezsignsignatureRequestCompound3));
+        System.assertEquals(false, ezsignsignatureRequestCompound2.equals(ezsignsignatureRequestCompound3));
+    }
+
+    @isTest
+    private static void consistentHashCodeValue() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound1 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound2 = new EzsignsignatureRequestCompound();
+
+        System.assertEquals(ezsignsignatureRequestCompound1.hashCode(), ezsignsignatureRequestCompound1.hashCode());
+        System.assertEquals(ezsignsignatureRequestCompound2.hashCode(), ezsignsignatureRequestCompound2.hashCode());
+    }
+
+    @isTest
+    private static void equalInstancesHaveSameHashCode() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound1 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound2 = EzsignsignatureRequestCompound.getExample();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound3 = new EzsignsignatureRequestCompound();
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound4 = new EzsignsignatureRequestCompound();
+
+        System.assert(ezsignsignatureRequestCompound1.equals(ezsignsignatureRequestCompound2));
+        System.assert(ezsignsignatureRequestCompound3.equals(ezsignsignatureRequestCompound4));
+        System.assertEquals(ezsignsignatureRequestCompound1.hashCode(), ezsignsignatureRequestCompound2.hashCode());
+        System.assertEquals(ezsignsignatureRequestCompound3.hashCode(), ezsignsignatureRequestCompound4.hashCode());
+    }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound = new EzsignsignatureRequestCompound();
+        Map<String, String> x-property-mappings = ezsignsignatureRequestCompound.getx-property-mappings();
+        System.assertEquals('aObjEzsignsignaturecustomdate', x-property-mappings.get('a_objEzsignsignaturecustomdate'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        EzsignsignatureRequestCompound ezsignsignatureRequestCompound = new EzsignsignatureRequestCompound();
+        System.assertEquals(new List<EzsignsignaturecustomdateRequestComp>(), ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate);
+        System.assertEquals(null, ezsignsignatureRequestCompound.pkiEzsignsignatureID);
+        System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignpagePagenumber);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureX);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureY);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureWidth);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureHeight);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureStep);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureType);
+        System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsigndocumentID);
+        System.assertEquals(null, ezsignsignatureRequestCompound.tEzsignsignatureTooltip);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureFont);
+        System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationIDValidation);
+        System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureRequired);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureAttachmentnamesource);
+        System.assertEquals(null, ezsignsignatureRequestCompound.sEzsignsignatureAttachmentdescription);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureValidationstep);
+        System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureMaxlength);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation);
+        System.assertEquals(null, ezsignsignatureRequestCompound.sEzsignsignatureRegexp);
+        System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
+    }
+}
