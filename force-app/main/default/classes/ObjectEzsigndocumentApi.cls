@@ -348,7 +348,7 @@ public class ObjectEzsigndocumentApi {
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID  (required)
-     * @param eDocumentType The type of document to retrieve.\n\n1. **Initial** Is the initial document before any signature were applied.\n2. **Signed** Is the final document once all signatures were applied.\n3. **Proofdocument** Is the evidence report.\n4. **Proof** Is the complete evidence archive including all of the above and more.\n (required)
+     * @param eDocumentType The type of document to retrieve.\n\n1. **Initial** Is the initial document before any signature were applied.\n2. **SignatureReady** Is the version containing the annotations/form to show the signer.\n3. **Signed** Is the final document once all signatures were applied.\n4. **Proofdocument** Is the evidence report.\n5. **Proof** Is the complete evidence archive including all of the above and more.\n (required)
      * @return EzsigndocumentGetDownloadUrlV1Respon
      * @throws OAS.ApiException if fails to make API call
      */

@@ -69,6 +69,12 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
     public Integer iEzsignformfieldHeight { get; set; }
 
     /**
+     * Whether the Ezsignformfield allows the use of the autocomplete of the browser.\n\nThis can only be set if eEzsignformfieldgroupType is **Text**
+     * @return bEzsignformfieldAutocomplete
+     */
+    public Boolean bEzsignformfieldAutocomplete { get; set; }
+
+    /**
      * Whether the Ezsignformfield is selected or not by default.\n\nThis can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
      * @return bEzsignformfieldSelected
      */
@@ -90,6 +96,7 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
           ezsignformfieldRequestCompound.iEzsignformfieldY = 300;
           ezsignformfieldRequestCompound.iEzsignformfieldWidth = 102;
           ezsignformfieldRequestCompound.iEzsignformfieldHeight = 22;
+          ezsignformfieldRequestCompound.bEzsignformfieldAutocomplete = true;
           ezsignformfieldRequestCompound.bEzsignformfieldSelected = true;
           ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue = 'Montreal';
         return ezsignformfieldRequestCompound;
@@ -106,6 +113,7 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
                 && this.iEzsignformfieldY == ezsignformfieldRequestCompound.iEzsignformfieldY
                 && this.iEzsignformfieldWidth == ezsignformfieldRequestCompound.iEzsignformfieldWidth
                 && this.iEzsignformfieldHeight == ezsignformfieldRequestCompound.iEzsignformfieldHeight
+                && this.bEzsignformfieldAutocomplete == ezsignformfieldRequestCompound.bEzsignformfieldAutocomplete
                 && this.bEzsignformfieldSelected == ezsignformfieldRequestCompound.bEzsignformfieldSelected
                 && this.sEzsignformfieldEnteredvalue == ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue;
         }
@@ -122,6 +130,7 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
         hashCode = (17 * hashCode) + (iEzsignformfieldY == null ? 0 : System.hashCode(iEzsignformfieldY));
         hashCode = (17 * hashCode) + (iEzsignformfieldWidth == null ? 0 : System.hashCode(iEzsignformfieldWidth));
         hashCode = (17 * hashCode) + (iEzsignformfieldHeight == null ? 0 : System.hashCode(iEzsignformfieldHeight));
+        hashCode = (17 * hashCode) + (bEzsignformfieldAutocomplete == null ? 0 : System.hashCode(bEzsignformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsignformfieldSelected == null ? 0 : System.hashCode(bEzsignformfieldSelected));
         hashCode = (17 * hashCode) + (sEzsignformfieldEnteredvalue == null ? 0 : System.hashCode(sEzsignformfieldEnteredvalue));
         return hashCode;

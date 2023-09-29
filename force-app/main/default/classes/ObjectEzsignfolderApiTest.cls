@@ -460,41 +460,6 @@ private class ObjectEzsignfolderApiTest {
     }
 
     /**
-     * Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
-     *
-     * 
-     */
-    @isTest
-    private static void ezsignfolderGetEzsignfoldersignerassociationsmineV1Test() {
-        HttpResponse res = new HttpResponse();
-        res.setStatusCode(200);
-        res.setStatus('OK');
-        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
-
-        Map<String, Object> params = new Map<String, Object>{
-            'pkiEzsignfolderID' => ''
-        };
-
-        Client client;
-        ObjectEzsignfolderApi api;
-        EzsignfolderGetEzsignfoldersignerass response;
-        EzsignfolderGetEzsignfoldersignerass expectedResponse;
-        String js = '';
-
-        client = new Client();
-        api = new ObjectEzsignfolderApi(client);
-        ((OAS.ApiKeyAuth)client.getAuthentication('Authorization')).setApiKey('foo-bar-api-key');
-
-
-        js = JSON.serialize(EzsignfolderGetEzsignfoldersignerass.getExample());
-        res.setHeader('Content-Type', 'application/json');
-        res.setBody(js);
-        expectedResponse = EzsignfolderGetEzsignfoldersignerass.getExample();
-        response = (EzsignfolderGetEzsignfoldersignerass) api.ezsignfolderGetEzsignfoldersignerassociationsmineV1(params);
-        System.assertEquals(expectedResponse, response);
-    }
-
-    /**
      * Retrieve an existing Ezsignfolder\&#39;s automatic Ezsignsignatures
      *
      * Return the Ezsignsignatures that can be signed by the current user at the current step in the process

@@ -69,6 +69,12 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
     public Integer iEzsignformfieldHeight { get; set; }
 
     /**
+     * Whether the Ezsignformfield allows the use of the autocomplete of the browser.\n\nThis can only be set if eEzsignformfieldgroupType is **Text**
+     * @return bEzsignformfieldAutocomplete
+     */
+    public Boolean bEzsignformfieldAutocomplete { get; set; }
+
+    /**
      * Whether the Ezsignformfield is selected or not by default.\n\nThis can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
      * @return bEzsignformfieldSelected
      */
@@ -90,6 +96,7 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
           ezsignformfieldResponseCompound.iEzsignformfieldY = 300;
           ezsignformfieldResponseCompound.iEzsignformfieldWidth = 102;
           ezsignformfieldResponseCompound.iEzsignformfieldHeight = 22;
+          ezsignformfieldResponseCompound.bEzsignformfieldAutocomplete = true;
           ezsignformfieldResponseCompound.bEzsignformfieldSelected = true;
           ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue = 'Montreal';
         return ezsignformfieldResponseCompound;
@@ -106,6 +113,7 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
                 && this.iEzsignformfieldY == ezsignformfieldResponseCompound.iEzsignformfieldY
                 && this.iEzsignformfieldWidth == ezsignformfieldResponseCompound.iEzsignformfieldWidth
                 && this.iEzsignformfieldHeight == ezsignformfieldResponseCompound.iEzsignformfieldHeight
+                && this.bEzsignformfieldAutocomplete == ezsignformfieldResponseCompound.bEzsignformfieldAutocomplete
                 && this.bEzsignformfieldSelected == ezsignformfieldResponseCompound.bEzsignformfieldSelected
                 && this.sEzsignformfieldEnteredvalue == ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue;
         }
@@ -122,6 +130,7 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
         hashCode = (17 * hashCode) + (iEzsignformfieldY == null ? 0 : System.hashCode(iEzsignformfieldY));
         hashCode = (17 * hashCode) + (iEzsignformfieldWidth == null ? 0 : System.hashCode(iEzsignformfieldWidth));
         hashCode = (17 * hashCode) + (iEzsignformfieldHeight == null ? 0 : System.hashCode(iEzsignformfieldHeight));
+        hashCode = (17 * hashCode) + (bEzsignformfieldAutocomplete == null ? 0 : System.hashCode(bEzsignformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsignformfieldSelected == null ? 0 : System.hashCode(bEzsignformfieldSelected));
         hashCode = (17 * hashCode) + (sEzsignformfieldEnteredvalue == null ? 0 : System.hashCode(sEzsignformfieldEnteredvalue));
         return hashCode;

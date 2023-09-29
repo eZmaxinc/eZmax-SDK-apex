@@ -69,6 +69,12 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
     public Integer iEzsigntemplateformfieldHeight { get; set; }
 
     /**
+     * Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.\n\nThis can only be set if eEzsigntemplateformfieldgroupType is **Text**
+     * @return bEzsigntemplateformfieldAutocomplete
+     */
+    public Boolean bEzsigntemplateformfieldAutocomplete { get; set; }
+
+    /**
      * Whether the Ezsigntemplateformfield is selected or not by default.\n\nThis can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
      * @return bEzsigntemplateformfieldSelected
      */
@@ -84,6 +90,7 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
           ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldY = 300;
           ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldWidth = 102;
           ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldHeight = 22;
+          ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldAutocomplete = true;
           ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldSelected = true;
         return ezsigntemplateformfieldRequestCompound;
     }
@@ -99,6 +106,7 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
                 && this.iEzsigntemplateformfieldY == ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldY
                 && this.iEzsigntemplateformfieldWidth == ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldWidth
                 && this.iEzsigntemplateformfieldHeight == ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldHeight
+                && this.bEzsigntemplateformfieldAutocomplete == ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldAutocomplete
                 && this.bEzsigntemplateformfieldSelected == ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldSelected;
         }
         return false;
@@ -114,6 +122,7 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldY == null ? 0 : System.hashCode(iEzsigntemplateformfieldY));
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldWidth == null ? 0 : System.hashCode(iEzsigntemplateformfieldWidth));
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldHeight == null ? 0 : System.hashCode(iEzsigntemplateformfieldHeight));
+        hashCode = (17 * hashCode) + (bEzsigntemplateformfieldAutocomplete == null ? 0 : System.hashCode(bEzsigntemplateformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsigntemplateformfieldSelected == null ? 0 : System.hashCode(bEzsigntemplateformfieldSelected));
         return hashCode;
     }

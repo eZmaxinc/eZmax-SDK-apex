@@ -11,43 +11,42 @@
  */
 
 /**
- * A custom Ezsignfoldersignerassociation Object
+ * A custom message Object in the context of an Ezsignfolder\&#39;s send function
  */
 public class CustomEzsignfoldersignerassociationm {
     /**
      * The unique ID of the Ezsignfoldersignerassociation
      * minimum: 0
-     * @return pkiEzsignfoldersignerassociationID
+     * @return fkiEzsignfoldersignerassociationID
      */
-    public Integer pkiEzsignfoldersignerassociationID { get; set; }
+    public Integer fkiEzsignfoldersignerassociationID { get; set; }
 
     /**
-     * The unique ID of the Ezsignfolder
-     * minimum: 0
-     * @return fkiEzsignfolderID
+     * A custom text message that will be added to the email sent.
+     * @return tEzsignfoldersignerassociationMessage
      */
-    public Integer fkiEzsignfolderID { get; set; }
+    public String tEzsignfoldersignerassociationMessage { get; set; }
 
     public static CustomEzsignfoldersignerassociationm getExample() {
-        CustomEzsignfoldersignerassociationm customEzsignfoldersignerassociationmineResponse = new CustomEzsignfoldersignerassociationm();
-          customEzsignfoldersignerassociationmineResponse.pkiEzsignfoldersignerassociationID = 20;
-          customEzsignfoldersignerassociationmineResponse.fkiEzsignfolderID = 33;
-        return customEzsignfoldersignerassociationmineResponse;
+        CustomEzsignfoldersignerassociationm customEzsignfoldersignerassociationmessageRequest = new CustomEzsignfoldersignerassociationm();
+          customEzsignfoldersignerassociationmessageRequest.fkiEzsignfoldersignerassociationID = 20;
+          customEzsignfoldersignerassociationmessageRequest.tEzsignfoldersignerassociationMessage = 'Hi John,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary';
+        return customEzsignfoldersignerassociationmessageRequest;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof CustomEzsignfoldersignerassociationm) {           
-            CustomEzsignfoldersignerassociationm customEzsignfoldersignerassociationmineResponse = (CustomEzsignfoldersignerassociationm) obj;
-            return this.pkiEzsignfoldersignerassociationID == customEzsignfoldersignerassociationmineResponse.pkiEzsignfoldersignerassociationID
-                && this.fkiEzsignfolderID == customEzsignfoldersignerassociationmineResponse.fkiEzsignfolderID;
+            CustomEzsignfoldersignerassociationm customEzsignfoldersignerassociationmessageRequest = (CustomEzsignfoldersignerassociationm) obj;
+            return this.fkiEzsignfoldersignerassociationID == customEzsignfoldersignerassociationmessageRequest.fkiEzsignfoldersignerassociationID
+                && this.tEzsignfoldersignerassociationMessage == customEzsignfoldersignerassociationmessageRequest.tEzsignfoldersignerassociationMessage;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (pkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(pkiEzsignfoldersignerassociationID));
-        hashCode = (17 * hashCode) + (fkiEzsignfolderID == null ? 0 : System.hashCode(fkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (fkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(fkiEzsignfoldersignerassociationID));
+        hashCode = (17 * hashCode) + (tEzsignfoldersignerassociationMessage == null ? 0 : System.hashCode(tEzsignfoldersignerassociationMessage));
         return hashCode;
     }
 }

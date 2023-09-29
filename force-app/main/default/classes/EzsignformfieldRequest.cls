@@ -69,6 +69,12 @@ public class EzsignformfieldRequest {
     public Integer iEzsignformfieldHeight { get; set; }
 
     /**
+     * Whether the Ezsignformfield allows the use of the autocomplete of the browser.\n\nThis can only be set if eEzsignformfieldgroupType is **Text**
+     * @return bEzsignformfieldAutocomplete
+     */
+    public Boolean bEzsignformfieldAutocomplete { get; set; }
+
+    /**
      * Whether the Ezsignformfield is selected or not by default.\n\nThis can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
      * @return bEzsignformfieldSelected
      */
@@ -90,6 +96,7 @@ public class EzsignformfieldRequest {
           ezsignformfieldRequest.iEzsignformfieldY = 300;
           ezsignformfieldRequest.iEzsignformfieldWidth = 102;
           ezsignformfieldRequest.iEzsignformfieldHeight = 22;
+          ezsignformfieldRequest.bEzsignformfieldAutocomplete = true;
           ezsignformfieldRequest.bEzsignformfieldSelected = true;
           ezsignformfieldRequest.sEzsignformfieldEnteredvalue = 'Montreal';
         return ezsignformfieldRequest;
@@ -106,6 +113,7 @@ public class EzsignformfieldRequest {
                 && this.iEzsignformfieldY == ezsignformfieldRequest.iEzsignformfieldY
                 && this.iEzsignformfieldWidth == ezsignformfieldRequest.iEzsignformfieldWidth
                 && this.iEzsignformfieldHeight == ezsignformfieldRequest.iEzsignformfieldHeight
+                && this.bEzsignformfieldAutocomplete == ezsignformfieldRequest.bEzsignformfieldAutocomplete
                 && this.bEzsignformfieldSelected == ezsignformfieldRequest.bEzsignformfieldSelected
                 && this.sEzsignformfieldEnteredvalue == ezsignformfieldRequest.sEzsignformfieldEnteredvalue;
         }
@@ -122,6 +130,7 @@ public class EzsignformfieldRequest {
         hashCode = (17 * hashCode) + (iEzsignformfieldY == null ? 0 : System.hashCode(iEzsignformfieldY));
         hashCode = (17 * hashCode) + (iEzsignformfieldWidth == null ? 0 : System.hashCode(iEzsignformfieldWidth));
         hashCode = (17 * hashCode) + (iEzsignformfieldHeight == null ? 0 : System.hashCode(iEzsignformfieldHeight));
+        hashCode = (17 * hashCode) + (bEzsignformfieldAutocomplete == null ? 0 : System.hashCode(bEzsignformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsignformfieldSelected == null ? 0 : System.hashCode(bEzsignformfieldSelected));
         hashCode = (17 * hashCode) + (sEzsignformfieldEnteredvalue == null ? 0 : System.hashCode(sEzsignformfieldEnteredvalue));
         return hashCode;

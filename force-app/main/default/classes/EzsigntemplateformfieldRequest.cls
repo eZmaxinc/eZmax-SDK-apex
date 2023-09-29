@@ -69,6 +69,12 @@ public class EzsigntemplateformfieldRequest {
     public Integer iEzsigntemplateformfieldHeight { get; set; }
 
     /**
+     * Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.\n\nThis can only be set if eEzsigntemplateformfieldgroupType is **Text**
+     * @return bEzsigntemplateformfieldAutocomplete
+     */
+    public Boolean bEzsigntemplateformfieldAutocomplete { get; set; }
+
+    /**
      * Whether the Ezsigntemplateformfield is selected or not by default.\n\nThis can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
      * @return bEzsigntemplateformfieldSelected
      */
@@ -84,6 +90,7 @@ public class EzsigntemplateformfieldRequest {
           ezsigntemplateformfieldRequest.iEzsigntemplateformfieldY = 300;
           ezsigntemplateformfieldRequest.iEzsigntemplateformfieldWidth = 102;
           ezsigntemplateformfieldRequest.iEzsigntemplateformfieldHeight = 22;
+          ezsigntemplateformfieldRequest.bEzsigntemplateformfieldAutocomplete = true;
           ezsigntemplateformfieldRequest.bEzsigntemplateformfieldSelected = true;
         return ezsigntemplateformfieldRequest;
     }
@@ -99,6 +106,7 @@ public class EzsigntemplateformfieldRequest {
                 && this.iEzsigntemplateformfieldY == ezsigntemplateformfieldRequest.iEzsigntemplateformfieldY
                 && this.iEzsigntemplateformfieldWidth == ezsigntemplateformfieldRequest.iEzsigntemplateformfieldWidth
                 && this.iEzsigntemplateformfieldHeight == ezsigntemplateformfieldRequest.iEzsigntemplateformfieldHeight
+                && this.bEzsigntemplateformfieldAutocomplete == ezsigntemplateformfieldRequest.bEzsigntemplateformfieldAutocomplete
                 && this.bEzsigntemplateformfieldSelected == ezsigntemplateformfieldRequest.bEzsigntemplateformfieldSelected;
         }
         return false;
@@ -114,6 +122,7 @@ public class EzsigntemplateformfieldRequest {
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldY == null ? 0 : System.hashCode(iEzsigntemplateformfieldY));
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldWidth == null ? 0 : System.hashCode(iEzsigntemplateformfieldWidth));
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldHeight == null ? 0 : System.hashCode(iEzsigntemplateformfieldHeight));
+        hashCode = (17 * hashCode) + (bEzsigntemplateformfieldAutocomplete == null ? 0 : System.hashCode(bEzsigntemplateformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsigntemplateformfieldSelected == null ? 0 : System.hashCode(bEzsigntemplateformfieldSelected));
         return hashCode;
     }

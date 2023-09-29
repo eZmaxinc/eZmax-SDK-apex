@@ -11,14 +11,14 @@
  */
 
 /**
- * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociationsmine
+ * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
  */
 public class EzsignfolderGetEzsignfoldersignerass implements OAS.MappedProperties {
     /**
      * Get aObjEzsignfoldersignerassociation
      * @return aObjEzsignfoldersignerassociation
      */
-    public List<CustomEzsignfoldersignerassociationm> aObjEzsignfoldersignerassociation { get; set; }
+    public List<CustomEzsignfoldersignerassociationA> aObjEzsignfoldersignerassociation { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignfoldersignerassociation' => 'aObjEzsignfoldersignerassociation'
@@ -29,19 +29,19 @@ public class EzsignfolderGetEzsignfoldersignerass implements OAS.MappedPropertie
     }
 
     public EzsignfolderGetEzsignfoldersignerass() {
-        aObjEzsignfoldersignerassociation = new List<CustomEzsignfoldersignerassociationm>();
+        aObjEzsignfoldersignerassociation = new List<CustomEzsignfoldersignerassociationA>();
     }
 
     public static EzsignfolderGetEzsignfoldersignerass getExample() {
-        EzsignfolderGetEzsignfoldersignerass ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload = new EzsignfolderGetEzsignfoldersignerass();
-          ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload.aObjEzsignfoldersignerassociation = new List<CustomEzsignfoldersignerassociationm>{CustomEzsignfoldersignerassociationm.getExample()};
-        return ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload;
+        EzsignfolderGetEzsignfoldersignerass ezsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload = new EzsignfolderGetEzsignfoldersignerass();
+          ezsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.aObjEzsignfoldersignerassociation = new List<CustomEzsignfoldersignerassociationA>{CustomEzsignfoldersignerassociationA.getExample()};
+        return ezsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignfolderGetEzsignfoldersignerass) {           
-            EzsignfolderGetEzsignfoldersignerass ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload = (EzsignfolderGetEzsignfoldersignerass) obj;
-            return this.aObjEzsignfoldersignerassociation == ezsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload.aObjEzsignfoldersignerassociation;
+            EzsignfolderGetEzsignfoldersignerass ezsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload = (EzsignfolderGetEzsignfoldersignerass) obj;
+            return this.aObjEzsignfoldersignerassociation == ezsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.aObjEzsignfoldersignerassociation;
         }
         return false;
     }
