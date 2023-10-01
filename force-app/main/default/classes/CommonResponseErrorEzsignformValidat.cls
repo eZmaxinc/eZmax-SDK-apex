@@ -11,7 +11,7 @@
  */
 
 /**
- * CommonResponseErrorEzsignformValidat
+ * Generic Error Message
  */
 public class CommonResponseErrorEzsignformValidat implements CommonResponseError, OAS.MappedProperties {
     /**
