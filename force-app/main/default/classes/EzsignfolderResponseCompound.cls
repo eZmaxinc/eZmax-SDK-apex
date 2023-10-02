@@ -160,7 +160,7 @@ public class EzsignfolderResponseCompound implements EzsignfolderResponse {
           ezsignfolderResponseCompound.fkiBillingentityinternalID = 1;
           ezsignfolderResponseCompound.sBillingentityinternalDescriptionX = 'Default';
           ezsignfolderResponseCompound.fkiEzsigntsarequirementID = 1;
-          ezsignfolderResponseCompound.sEzsigntsarequirementDescriptionX = 'Default';
+          ezsignfolderResponseCompound.sEzsigntsarequirementDescriptionX = 'No';
           ezsignfolderResponseCompound.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderResponseCompound.tEzsignfolderNote = 'This is a note';
           ezsignfolderResponseCompound.bEzsignfolderIsdisposable = false;

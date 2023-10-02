@@ -160,7 +160,7 @@ public class EzsignfolderGetObjectV1ResponseMPayl implements EzsignfolderRespons
           ezsignfolderGetObjectV1ResponseMPayload.fkiBillingentityinternalID = 1;
           ezsignfolderGetObjectV1ResponseMPayload.sBillingentityinternalDescriptionX = 'Default';
           ezsignfolderGetObjectV1ResponseMPayload.fkiEzsigntsarequirementID = 1;
-          ezsignfolderGetObjectV1ResponseMPayload.sEzsigntsarequirementDescriptionX = 'Default';
+          ezsignfolderGetObjectV1ResponseMPayload.sEzsigntsarequirementDescriptionX = 'No';
           ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderNote = 'This is a note';
           ezsignfolderGetObjectV1ResponseMPayload.bEzsignfolderIsdisposable = false;

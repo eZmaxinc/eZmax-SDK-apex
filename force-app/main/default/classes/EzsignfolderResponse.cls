@@ -160,7 +160,7 @@ public class EzsignfolderResponse {
           ezsignfolderResponse.fkiBillingentityinternalID = 1;
           ezsignfolderResponse.sBillingentityinternalDescriptionX = 'Default';
           ezsignfolderResponse.fkiEzsigntsarequirementID = 1;
-          ezsignfolderResponse.sEzsigntsarequirementDescriptionX = 'Default';
+          ezsignfolderResponse.sEzsigntsarequirementDescriptionX = 'No';
           ezsignfolderResponse.sEzsignfolderDescription = 'Test eZsign Folder';
           ezsignfolderResponse.tEzsignfolderNote = 'This is a note';
           ezsignfolderResponse.bEzsignfolderIsdisposable = false;

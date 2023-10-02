@@ -256,7 +256,7 @@ public class EzsignfoldertypeResponse {
           ezsignfoldertypeResponse.fkiEzsigntsarequirementID = 1;
           ezsignfoldertypeResponse.sBrandingDescriptionX = 'Company X';
           ezsignfoldertypeResponse.sBillingentityinternalDescriptionX = 'Default';
-          ezsignfoldertypeResponse.sEzsigntsarequirementDescriptionX = 'Default';
+          ezsignfoldertypeResponse.sEzsigntsarequirementDescriptionX = 'No';
           ezsignfoldertypeResponse.sEmailAddressSigned = 'email@example.com';
           ezsignfoldertypeResponse.sEmailAddressSummary = 'email@example.com';
           ezsignfoldertypeResponse.sUsergroupNameX = 'Administration';

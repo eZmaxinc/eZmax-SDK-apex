@@ -291,7 +291,7 @@ public class EzsignfoldertypeResponseCompound implements EzsignfoldertypeRespons
           ezsignfoldertypeResponseCompound.fkiEzsigntsarequirementID = 1;
           ezsignfoldertypeResponseCompound.sBrandingDescriptionX = 'Company X';
           ezsignfoldertypeResponseCompound.sBillingentityinternalDescriptionX = 'Default';
-          ezsignfoldertypeResponseCompound.sEzsigntsarequirementDescriptionX = 'Default';
+          ezsignfoldertypeResponseCompound.sEzsigntsarequirementDescriptionX = 'No';
           ezsignfoldertypeResponseCompound.sEmailAddressSigned = 'email@example.com';
           ezsignfoldertypeResponseCompound.sEmailAddressSummary = 'email@example.com';
           ezsignfoldertypeResponseCompound.sUsergroupNameX = 'Administration';

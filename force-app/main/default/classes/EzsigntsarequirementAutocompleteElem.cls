@@ -42,7 +42,7 @@ public class EzsigntsarequirementAutocompleteElem {
 
     public static EzsigntsarequirementAutocompleteElem getExample() {
         EzsigntsarequirementAutocompleteElem ezsigntsarequirementAutocompleteElementResponse = new EzsigntsarequirementAutocompleteElem();
-          ezsigntsarequirementAutocompleteElementResponse.sEzsigntsarequirementDescriptionX = 'Default';
+          ezsigntsarequirementAutocompleteElementResponse.sEzsigntsarequirementDescriptionX = 'No';
           ezsigntsarequirementAutocompleteElementResponse.pkiEzsigntsarequirementID = 1;
           ezsigntsarequirementAutocompleteElementResponse.bEzsigntsarequirementIsactive = true;
           ezsigntsarequirementAutocompleteElementResponse.bDisabled = true;
