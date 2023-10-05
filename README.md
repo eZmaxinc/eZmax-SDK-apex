@@ -271,6 +271,7 @@ Class | Method | HTTP request | Description
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](ObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
+*ObjectLanguageApi* | [**languageGetAutocompleteV2**](ObjectLanguageApi.md#languageGetAutocompleteV2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs
 *ObjectModulegroupApi* | [**modulegroupGetAllV1**](ObjectModulegroupApi.md#modulegroupGetAllV1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](ObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection\&#39;s Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](ObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest\&#39;s Elements
@@ -980,6 +981,9 @@ Class | Method | HTTP request | Description
  - [GlobalEzmaxclientVersionV1Response](GlobalEzmaxclientVersionV1Response.md)
  - [GlobalEzmaxcustomerGetConfigurationV](GlobalEzmaxcustomerGetConfigurationV.md)
  - [HeaderAcceptLanguage](HeaderAcceptLanguage.md)
+ - [LanguageAutocompleteElementResponse](LanguageAutocompleteElementResponse.md)
+ - [LanguageGetAutocompleteV2Response](LanguageGetAutocompleteV2Response.md)
+ - [LanguageGetAutocompleteV2ResponseMPa](LanguageGetAutocompleteV2ResponseMPa.md)
  - [ModuleResponse](ModuleResponse.md)
  - [ModuleResponseCompound](ModuleResponseCompound.md)
  - [ModulegroupGetAllV1Response](ModulegroupGetAllV1Response.md)
