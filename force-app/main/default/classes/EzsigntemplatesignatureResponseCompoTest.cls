@@ -74,12 +74,14 @@ private class EzsigntemplatesignatureResponseCompoTest {
         EzsigntemplatesignatureResponseCompo ezsigntemplatesignatureResponseCompound = new EzsigntemplatesignatureResponseCompo();
         Map<String, String> x-property-mappings = ezsigntemplatesignatureResponseCompound.getx-property-mappings();
         System.assertEquals('aObjEzsigntemplatesignaturecustomdate', x-property-mappings.get('a_objEzsigntemplatesignaturecustomdate'));
+        System.assertEquals('aObjEzsigntemplateelementdependency', x-property-mappings.get('a_objEzsigntemplateelementdependency'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         EzsigntemplatesignatureResponseCompo ezsigntemplatesignatureResponseCompound = new EzsigntemplatesignatureResponseCompo();
         System.assertEquals(new List<EzsigntemplatesignaturecustomdateRes>(), ezsigntemplatesignatureResponseCompound.aObjEzsigntemplatesignaturecustomdate);
+        System.assertEquals(new List<EzsigntemplateelementdependencyRespo>(), ezsigntemplatesignatureResponseCompound.aObjEzsigntemplateelementdependency);
         System.assertEquals(null, ezsigntemplatesignatureResponseCompound.pkiEzsigntemplatesignatureID);
         System.assertEquals(null, ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatedocumentID);
         System.assertEquals(null, ezsigntemplatesignatureResponseCompound.fkiEzsigntemplatesignerID);
@@ -101,6 +103,7 @@ private class EzsigntemplatesignatureResponseCompoTest {
         System.assertEquals(null, ezsigntemplatesignatureResponseCompound.iEzsigntemplatesignatureMaxlength);
         System.assertEquals(null, ezsigntemplatesignatureResponseCompound.sEzsigntemplatesignatureRegexp);
         System.assertEquals(null, ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignatureTextvalidation);
+        System.assertEquals(null, ezsigntemplatesignatureResponseCompound.eEzsigntemplatesignatureDependencyrequirement);
         System.assertEquals(null, ezsigntemplatesignatureResponseCompound.bEzsigntemplatesignatureCustomdate);
     }
 }

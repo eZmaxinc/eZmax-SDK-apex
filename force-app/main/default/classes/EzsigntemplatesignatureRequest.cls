@@ -152,6 +152,12 @@ public class EzsigntemplatesignatureRequest {
      */
     public EnumTextvalidation eEzsigntemplatesignatureTextvalidation { get; set; }
 
+    /**
+     * Get eEzsigntemplatesignatureDependencyrequirement
+     * @return eEzsigntemplatesignatureDependencyrequirement
+     */
+    public FieldEEzsigntemplatesignatureDepende eEzsigntemplatesignatureDependencyrequirement { get; set; }
+
     public static EzsigntemplatesignatureRequest getExample() {
         EzsigntemplatesignatureRequest ezsigntemplatesignatureRequest = new EzsigntemplatesignatureRequest();
           ezsigntemplatesignatureRequest.pkiEzsigntemplatesignatureID = 99;
@@ -175,6 +181,7 @@ public class EzsigntemplatesignatureRequest {
           ezsigntemplatesignatureRequest.iEzsigntemplatesignatureMaxlength = 75;
           ezsigntemplatesignatureRequest.sEzsigntemplatesignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
           ezsigntemplatesignatureRequest.eEzsigntemplatesignatureTextvalidation = EnumTextvalidation.getExample();
+          ezsigntemplatesignatureRequest.eEzsigntemplatesignatureDependencyrequirement = FieldEEzsigntemplatesignatureDepende.getExample();
         return ezsigntemplatesignatureRequest;
     }
 
@@ -201,7 +208,8 @@ public class EzsigntemplatesignatureRequest {
                 && this.iEzsigntemplatesignatureValidationstep == ezsigntemplatesignatureRequest.iEzsigntemplatesignatureValidationstep
                 && this.iEzsigntemplatesignatureMaxlength == ezsigntemplatesignatureRequest.iEzsigntemplatesignatureMaxlength
                 && this.sEzsigntemplatesignatureRegexp == ezsigntemplatesignatureRequest.sEzsigntemplatesignatureRegexp
-                && this.eEzsigntemplatesignatureTextvalidation == ezsigntemplatesignatureRequest.eEzsigntemplatesignatureTextvalidation;
+                && this.eEzsigntemplatesignatureTextvalidation == ezsigntemplatesignatureRequest.eEzsigntemplatesignatureTextvalidation
+                && this.eEzsigntemplatesignatureDependencyrequirement == ezsigntemplatesignatureRequest.eEzsigntemplatesignatureDependencyrequirement;
         }
         return false;
     }
@@ -229,6 +237,7 @@ public class EzsigntemplatesignatureRequest {
         hashCode = (17 * hashCode) + (iEzsigntemplatesignatureMaxlength == null ? 0 : System.hashCode(iEzsigntemplatesignatureMaxlength));
         hashCode = (17 * hashCode) + (sEzsigntemplatesignatureRegexp == null ? 0 : System.hashCode(sEzsigntemplatesignatureRegexp));
         hashCode = (17 * hashCode) + (eEzsigntemplatesignatureTextvalidation == null ? 0 : System.hashCode(eEzsigntemplatesignatureTextvalidation));
+        hashCode = (17 * hashCode) + (eEzsigntemplatesignatureDependencyrequirement == null ? 0 : System.hashCode(eEzsigntemplatesignatureDependencyrequirement));
         return hashCode;
     }
 }

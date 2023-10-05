@@ -13,7 +13,7 @@
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
+public class EzsignformfieldRequestCompound implements EzsignformfieldRequest, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignformfield
      * minimum: 0
@@ -86,6 +86,30 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
      */
     public String sEzsignformfieldEnteredvalue { get; set; }
 
+    /**
+     * Get eEzsignformfieldDependencyrequirement
+     * @return eEzsignformfieldDependencyrequirement
+     */
+    public FieldEEzsignformfieldDependencyrequi eEzsignformfieldDependencyrequirement { get; set; }
+
+    /**
+     * Get aObjEzsignelementdependency
+     * @return aObjEzsignelementdependency
+     */
+    public List<EzsignelementdependencyRequestCompou> aObjEzsignelementdependency { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignelementdependency' => 'aObjEzsignelementdependency'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public EzsignformfieldRequestCompound() {
+        aObjEzsignelementdependency = new List<EzsignelementdependencyRequestCompou>();
+    }
+
     public static EzsignformfieldRequestCompound getExample() {
         EzsignformfieldRequestCompound ezsignformfieldRequestCompound = new EzsignformfieldRequestCompound();
           ezsignformfieldRequestCompound.pkiEzsignformfieldID = 32;
@@ -99,6 +123,8 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
           ezsignformfieldRequestCompound.bEzsignformfieldAutocomplete = true;
           ezsignformfieldRequestCompound.bEzsignformfieldSelected = true;
           ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue = 'Montreal';
+          ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement = FieldEEzsignformfieldDependencyrequi.getExample();
+          ezsignformfieldRequestCompound.aObjEzsignelementdependency = new List<EzsignelementdependencyRequestCompou>{EzsignelementdependencyRequestCompou.getExample()};
         return ezsignformfieldRequestCompound;
     }
 
@@ -115,7 +141,9 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
                 && this.iEzsignformfieldHeight == ezsignformfieldRequestCompound.iEzsignformfieldHeight
                 && this.bEzsignformfieldAutocomplete == ezsignformfieldRequestCompound.bEzsignformfieldAutocomplete
                 && this.bEzsignformfieldSelected == ezsignformfieldRequestCompound.bEzsignformfieldSelected
-                && this.sEzsignformfieldEnteredvalue == ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue;
+                && this.sEzsignformfieldEnteredvalue == ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue
+                && this.eEzsignformfieldDependencyrequirement == ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement
+                && this.aObjEzsignelementdependency == ezsignformfieldRequestCompound.aObjEzsignelementdependency;
         }
         return false;
     }
@@ -133,6 +161,8 @@ public class EzsignformfieldRequestCompound implements EzsignformfieldRequest {
         hashCode = (17 * hashCode) + (bEzsignformfieldAutocomplete == null ? 0 : System.hashCode(bEzsignformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsignformfieldSelected == null ? 0 : System.hashCode(bEzsignformfieldSelected));
         hashCode = (17 * hashCode) + (sEzsignformfieldEnteredvalue == null ? 0 : System.hashCode(sEzsignformfieldEnteredvalue));
+        hashCode = (17 * hashCode) + (eEzsignformfieldDependencyrequirement == null ? 0 : System.hashCode(eEzsignformfieldDependencyrequirement));
+        hashCode = (17 * hashCode) + (aObjEzsignelementdependency == null ? 0 : System.hashCode(aObjEzsignelementdependency));
         return hashCode;
     }
 }

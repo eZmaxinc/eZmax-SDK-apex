@@ -151,6 +151,12 @@ public class EzsignsignatureRequest {
      */
     public String sEzsignsignatureRegexp { get; set; }
 
+    /**
+     * Get eEzsignsignatureDependencyrequirement
+     * @return eEzsignsignatureDependencyrequirement
+     */
+    public FieldEEzsignsignatureDependencyrequi eEzsignsignatureDependencyrequirement { get; set; }
+
     public static EzsignsignatureRequest getExample() {
         EzsignsignatureRequest ezsignsignatureRequest = new EzsignsignatureRequest();
           ezsignsignatureRequest.pkiEzsignsignatureID = 49;
@@ -174,6 +180,7 @@ public class EzsignsignatureRequest {
           ezsignsignatureRequest.iEzsignsignatureMaxlength = 75;
           ezsignsignatureRequest.eEzsignsignatureTextvalidation = EnumTextvalidation.getExample();
           ezsignsignatureRequest.sEzsignsignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
+          ezsignsignatureRequest.eEzsignsignatureDependencyrequirement = FieldEEzsignsignatureDependencyrequi.getExample();
         return ezsignsignatureRequest;
     }
 
@@ -200,7 +207,8 @@ public class EzsignsignatureRequest {
                 && this.iEzsignsignatureValidationstep == ezsignsignatureRequest.iEzsignsignatureValidationstep
                 && this.iEzsignsignatureMaxlength == ezsignsignatureRequest.iEzsignsignatureMaxlength
                 && this.eEzsignsignatureTextvalidation == ezsignsignatureRequest.eEzsignsignatureTextvalidation
-                && this.sEzsignsignatureRegexp == ezsignsignatureRequest.sEzsignsignatureRegexp;
+                && this.sEzsignsignatureRegexp == ezsignsignatureRequest.sEzsignsignatureRegexp
+                && this.eEzsignsignatureDependencyrequirement == ezsignsignatureRequest.eEzsignsignatureDependencyrequirement;
         }
         return false;
     }
@@ -228,6 +236,7 @@ public class EzsignsignatureRequest {
         hashCode = (17 * hashCode) + (iEzsignsignatureMaxlength == null ? 0 : System.hashCode(iEzsignsignatureMaxlength));
         hashCode = (17 * hashCode) + (eEzsignsignatureTextvalidation == null ? 0 : System.hashCode(eEzsignsignatureTextvalidation));
         hashCode = (17 * hashCode) + (sEzsignsignatureRegexp == null ? 0 : System.hashCode(sEzsignsignatureRegexp));
+        hashCode = (17 * hashCode) + (eEzsignsignatureDependencyrequirement == null ? 0 : System.hashCode(eEzsignsignatureDependencyrequirement));
         return hashCode;
     }
 }

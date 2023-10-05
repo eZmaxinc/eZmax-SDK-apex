@@ -13,7 +13,7 @@
 /**
  * An Ezsigntemplateformfield Object and children to create a complete structure
  */
-public class EzsigntemplateformfieldRequestCompou implements EzsigntemplateformfieldRequest {
+public class EzsigntemplateformfieldRequestCompou implements EzsigntemplateformfieldRequest, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsigntemplateformfield
      * minimum: 0
@@ -80,6 +80,30 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
      */
     public Boolean bEzsigntemplateformfieldSelected { get; set; }
 
+    /**
+     * Get eEzsigntemplateformfieldDependencyrequirement
+     * @return eEzsigntemplateformfieldDependencyrequirement
+     */
+    public FieldEEzsigntemplateformfieldDepende eEzsigntemplateformfieldDependencyrequirement { get; set; }
+
+    /**
+     * Get aObjEzsigntemplateelementdependency
+     * @return aObjEzsigntemplateelementdependency
+     */
+    public List<EzsigntemplateelementdependencyReque> aObjEzsigntemplateelementdependency { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsigntemplateelementdependency' => 'aObjEzsigntemplateelementdependency'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public EzsigntemplateformfieldRequestCompou() {
+        aObjEzsigntemplateelementdependency = new List<EzsigntemplateelementdependencyReque>();
+    }
+
     public static EzsigntemplateformfieldRequestCompou getExample() {
         EzsigntemplateformfieldRequestCompou ezsigntemplateformfieldRequestCompound = new EzsigntemplateformfieldRequestCompou();
           ezsigntemplateformfieldRequestCompound.pkiEzsigntemplateformfieldID = 71;
@@ -92,6 +116,8 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
           ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldHeight = 22;
           ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldAutocomplete = true;
           ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldSelected = true;
+          ezsigntemplateformfieldRequestCompound.eEzsigntemplateformfieldDependencyrequirement = FieldEEzsigntemplateformfieldDepende.getExample();
+          ezsigntemplateformfieldRequestCompound.aObjEzsigntemplateelementdependency = new List<EzsigntemplateelementdependencyReque>{EzsigntemplateelementdependencyReque.getExample()};
         return ezsigntemplateformfieldRequestCompound;
     }
 
@@ -107,7 +133,9 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
                 && this.iEzsigntemplateformfieldWidth == ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldWidth
                 && this.iEzsigntemplateformfieldHeight == ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldHeight
                 && this.bEzsigntemplateformfieldAutocomplete == ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldAutocomplete
-                && this.bEzsigntemplateformfieldSelected == ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldSelected;
+                && this.bEzsigntemplateformfieldSelected == ezsigntemplateformfieldRequestCompound.bEzsigntemplateformfieldSelected
+                && this.eEzsigntemplateformfieldDependencyrequirement == ezsigntemplateformfieldRequestCompound.eEzsigntemplateformfieldDependencyrequirement
+                && this.aObjEzsigntemplateelementdependency == ezsigntemplateformfieldRequestCompound.aObjEzsigntemplateelementdependency;
         }
         return false;
     }
@@ -124,6 +152,8 @@ public class EzsigntemplateformfieldRequestCompou implements Ezsigntemplateformf
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldHeight == null ? 0 : System.hashCode(iEzsigntemplateformfieldHeight));
         hashCode = (17 * hashCode) + (bEzsigntemplateformfieldAutocomplete == null ? 0 : System.hashCode(bEzsigntemplateformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsigntemplateformfieldSelected == null ? 0 : System.hashCode(bEzsigntemplateformfieldSelected));
+        hashCode = (17 * hashCode) + (eEzsigntemplateformfieldDependencyrequirement == null ? 0 : System.hashCode(eEzsigntemplateformfieldDependencyrequirement));
+        hashCode = (17 * hashCode) + (aObjEzsigntemplateelementdependency == null ? 0 : System.hashCode(aObjEzsigntemplateelementdependency));
         return hashCode;
     }
 }

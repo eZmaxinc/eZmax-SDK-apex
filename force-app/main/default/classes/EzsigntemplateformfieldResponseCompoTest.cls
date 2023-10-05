@@ -68,4 +68,28 @@ private class EzsigntemplateformfieldResponseCompoTest {
         System.assertEquals(ezsigntemplateformfieldResponseCompound1.hashCode(), ezsigntemplateformfieldResponseCompound2.hashCode());
         System.assertEquals(ezsigntemplateformfieldResponseCompound3.hashCode(), ezsigntemplateformfieldResponseCompound4.hashCode());
     }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        EzsigntemplateformfieldResponseCompo ezsigntemplateformfieldResponseCompound = new EzsigntemplateformfieldResponseCompo();
+        Map<String, String> x-property-mappings = ezsigntemplateformfieldResponseCompound.getx-property-mappings();
+        System.assertEquals('aObjEzsigntemplateelementdependency', x-property-mappings.get('a_objEzsigntemplateelementdependency'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        EzsigntemplateformfieldResponseCompo ezsigntemplateformfieldResponseCompound = new EzsigntemplateformfieldResponseCompo();
+        System.assertEquals(new List<EzsigntemplateelementdependencyRespo>(), ezsigntemplateformfieldResponseCompound.aObjEzsigntemplateelementdependency);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.pkiEzsigntemplateformfieldID);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.iEzsigntemplatedocumentpagePagenumber);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.sEzsigntemplateformfieldLabel);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.sEzsigntemplateformfieldValue);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldX);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldY);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldWidth);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldHeight);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldAutocomplete);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected);
+        System.assertEquals(null, ezsigntemplateformfieldResponseCompound.eEzsigntemplateformfieldDependencyrequirement);
+    }
 }

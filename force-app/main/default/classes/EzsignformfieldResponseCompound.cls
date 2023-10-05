@@ -13,7 +13,7 @@
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-public class EzsignformfieldResponseCompound implements EzsignformfieldResponse {
+public class EzsignformfieldResponseCompound implements EzsignformfieldResponse, OAS.MappedProperties {
     /**
      * The unique ID of the Ezsignformfield
      * minimum: 0
@@ -86,6 +86,30 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
      */
     public String sEzsignformfieldEnteredvalue { get; set; }
 
+    /**
+     * Get eEzsignformfieldDependencyrequirement
+     * @return eEzsignformfieldDependencyrequirement
+     */
+    public FieldEEzsignformfieldDependencyrequi eEzsignformfieldDependencyrequirement { get; set; }
+
+    /**
+     * Get aObjEzsignelementdependency
+     * @return aObjEzsignelementdependency
+     */
+    public List<EzsignelementdependencyResponseCompo> aObjEzsignelementdependency { get; set; }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignelementdependency' => 'aObjEzsignelementdependency'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public EzsignformfieldResponseCompound() {
+        aObjEzsignelementdependency = new List<EzsignelementdependencyResponseCompo>();
+    }
+
     public static EzsignformfieldResponseCompound getExample() {
         EzsignformfieldResponseCompound ezsignformfieldResponseCompound = new EzsignformfieldResponseCompound();
           ezsignformfieldResponseCompound.pkiEzsignformfieldID = 32;
@@ -99,6 +123,8 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
           ezsignformfieldResponseCompound.bEzsignformfieldAutocomplete = true;
           ezsignformfieldResponseCompound.bEzsignformfieldSelected = true;
           ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue = 'Montreal';
+          ezsignformfieldResponseCompound.eEzsignformfieldDependencyrequirement = FieldEEzsignformfieldDependencyrequi.getExample();
+          ezsignformfieldResponseCompound.aObjEzsignelementdependency = new List<EzsignelementdependencyResponseCompo>{EzsignelementdependencyResponseCompo.getExample()};
         return ezsignformfieldResponseCompound;
     }
 
@@ -115,7 +141,9 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
                 && this.iEzsignformfieldHeight == ezsignformfieldResponseCompound.iEzsignformfieldHeight
                 && this.bEzsignformfieldAutocomplete == ezsignformfieldResponseCompound.bEzsignformfieldAutocomplete
                 && this.bEzsignformfieldSelected == ezsignformfieldResponseCompound.bEzsignformfieldSelected
-                && this.sEzsignformfieldEnteredvalue == ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue;
+                && this.sEzsignformfieldEnteredvalue == ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue
+                && this.eEzsignformfieldDependencyrequirement == ezsignformfieldResponseCompound.eEzsignformfieldDependencyrequirement
+                && this.aObjEzsignelementdependency == ezsignformfieldResponseCompound.aObjEzsignelementdependency;
         }
         return false;
     }
@@ -133,6 +161,8 @@ public class EzsignformfieldResponseCompound implements EzsignformfieldResponse 
         hashCode = (17 * hashCode) + (bEzsignformfieldAutocomplete == null ? 0 : System.hashCode(bEzsignformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsignformfieldSelected == null ? 0 : System.hashCode(bEzsignformfieldSelected));
         hashCode = (17 * hashCode) + (sEzsignformfieldEnteredvalue == null ? 0 : System.hashCode(sEzsignformfieldEnteredvalue));
+        hashCode = (17 * hashCode) + (eEzsignformfieldDependencyrequirement == null ? 0 : System.hashCode(eEzsignformfieldDependencyrequirement));
+        hashCode = (17 * hashCode) + (aObjEzsignelementdependency == null ? 0 : System.hashCode(aObjEzsignelementdependency));
         return hashCode;
     }
 }

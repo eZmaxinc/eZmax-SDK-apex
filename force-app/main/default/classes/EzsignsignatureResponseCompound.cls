@@ -164,6 +164,12 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
     public EnumTextvalidation eEzsignsignatureTextvalidation { get; set; }
 
     /**
+     * Get eEzsignsignatureDependencyrequirement
+     * @return eEzsignsignatureDependencyrequirement
+     */
+    public FieldEEzsignsignatureDependencyrequi eEzsignsignatureDependencyrequirement { get; set; }
+
+    /**
      * A regular expression to indicate what values are acceptable for the Ezsignsignature.\n\nThis can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
      * @return sEzsignsignatureRegexp
      */
@@ -205,8 +211,24 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
      */
     public CustomCreditcardtransactionResponse objCreditcardtransaction { get; set; }
 
+    /**
+     * Get aObjEzsignelementdependency
+     * @return aObjEzsignelementdependency
+     */
+    public List<EzsignelementdependencyResponseCompo> aObjEzsignelementdependency { get; set; }
+
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate'
+        'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate',
+        'a_objEzsignelementdependency' => 'aObjEzsignelementdependency'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objEzsignsignaturecustomdate' => 'aObjEzsignsignaturecustomdate',
+        'a_objEzsignelementdependency' => 'aObjEzsignelementdependency'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -215,6 +237,7 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
 
     public EzsignsignatureResponseCompound() {
         aObjEzsignsignaturecustomdate = new List<EzsignsignaturecustomdateResponseCom>();
+        aObjEzsignelementdependency = new List<EzsignelementdependencyResponseCompo>();
     }
 
     public static EzsignsignatureResponseCompound getExample() {
@@ -242,6 +265,7 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
           ezsignsignatureResponseCompound.sEzsignsignatureDescription = 'Montreal';
           ezsignsignatureResponseCompound.iEzsignsignatureMaxlength = 75;
           ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation = EnumTextvalidation.getExample();
+          ezsignsignatureResponseCompound.eEzsignsignatureDependencyrequirement = FieldEEzsignsignatureDependencyrequi.getExample();
           ezsignsignatureResponseCompound.sEzsignsignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
           ezsignsignatureResponseCompound.objContactName = CustomContactNameResponse.getExample();
           ezsignsignatureResponseCompound.objContactNameDelegation = CustomContactNameResponse.getExample();
@@ -249,6 +273,7 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
           ezsignsignatureResponseCompound.bEzsignsignatureCustomdate = true;
           ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate = new List<EzsignsignaturecustomdateResponseCom>{EzsignsignaturecustomdateResponseCom.getExample()};
           ezsignsignatureResponseCompound.objCreditcardtransaction = CustomCreditcardtransactionResponse.getExample();
+          ezsignsignatureResponseCompound.aObjEzsignelementdependency = new List<EzsignelementdependencyResponseCompo>{EzsignelementdependencyResponseCompo.getExample()};
         return ezsignsignatureResponseCompound;
     }
 
@@ -278,13 +303,15 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
                 && this.sEzsignsignatureDescription == ezsignsignatureResponseCompound.sEzsignsignatureDescription
                 && this.iEzsignsignatureMaxlength == ezsignsignatureResponseCompound.iEzsignsignatureMaxlength
                 && this.eEzsignsignatureTextvalidation == ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation
+                && this.eEzsignsignatureDependencyrequirement == ezsignsignatureResponseCompound.eEzsignsignatureDependencyrequirement
                 && this.sEzsignsignatureRegexp == ezsignsignatureResponseCompound.sEzsignsignatureRegexp
                 && this.objContactName == ezsignsignatureResponseCompound.objContactName
                 && this.objContactNameDelegation == ezsignsignatureResponseCompound.objContactNameDelegation
                 && this.objSignature == ezsignsignatureResponseCompound.objSignature
                 && this.bEzsignsignatureCustomdate == ezsignsignatureResponseCompound.bEzsignsignatureCustomdate
                 && this.aObjEzsignsignaturecustomdate == ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate
-                && this.objCreditcardtransaction == ezsignsignatureResponseCompound.objCreditcardtransaction;
+                && this.objCreditcardtransaction == ezsignsignatureResponseCompound.objCreditcardtransaction
+                && this.aObjEzsignelementdependency == ezsignsignatureResponseCompound.aObjEzsignelementdependency;
         }
         return false;
     }
@@ -314,6 +341,7 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
         hashCode = (17 * hashCode) + (sEzsignsignatureDescription == null ? 0 : System.hashCode(sEzsignsignatureDescription));
         hashCode = (17 * hashCode) + (iEzsignsignatureMaxlength == null ? 0 : System.hashCode(iEzsignsignatureMaxlength));
         hashCode = (17 * hashCode) + (eEzsignsignatureTextvalidation == null ? 0 : System.hashCode(eEzsignsignatureTextvalidation));
+        hashCode = (17 * hashCode) + (eEzsignsignatureDependencyrequirement == null ? 0 : System.hashCode(eEzsignsignatureDependencyrequirement));
         hashCode = (17 * hashCode) + (sEzsignsignatureRegexp == null ? 0 : System.hashCode(sEzsignsignatureRegexp));
         hashCode = (17 * hashCode) + (objContactName == null ? 0 : System.hashCode(objContactName));
         hashCode = (17 * hashCode) + (objContactNameDelegation == null ? 0 : System.hashCode(objContactNameDelegation));
@@ -321,6 +349,7 @@ public class EzsignsignatureResponseCompound implements EzsignsignatureResponse,
         hashCode = (17 * hashCode) + (bEzsignsignatureCustomdate == null ? 0 : System.hashCode(bEzsignsignatureCustomdate));
         hashCode = (17 * hashCode) + (aObjEzsignsignaturecustomdate == null ? 0 : System.hashCode(aObjEzsignsignaturecustomdate));
         hashCode = (17 * hashCode) + (objCreditcardtransaction == null ? 0 : System.hashCode(objCreditcardtransaction));
+        hashCode = (17 * hashCode) + (aObjEzsignelementdependency == null ? 0 : System.hashCode(aObjEzsignelementdependency));
         return hashCode;
     }
 }

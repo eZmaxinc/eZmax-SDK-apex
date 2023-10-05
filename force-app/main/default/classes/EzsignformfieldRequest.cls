@@ -86,6 +86,12 @@ public class EzsignformfieldRequest {
      */
     public String sEzsignformfieldEnteredvalue { get; set; }
 
+    /**
+     * Get eEzsignformfieldDependencyrequirement
+     * @return eEzsignformfieldDependencyrequirement
+     */
+    public FieldEEzsignformfieldDependencyrequi eEzsignformfieldDependencyrequirement { get; set; }
+
     public static EzsignformfieldRequest getExample() {
         EzsignformfieldRequest ezsignformfieldRequest = new EzsignformfieldRequest();
           ezsignformfieldRequest.pkiEzsignformfieldID = 32;
@@ -99,6 +105,7 @@ public class EzsignformfieldRequest {
           ezsignformfieldRequest.bEzsignformfieldAutocomplete = true;
           ezsignformfieldRequest.bEzsignformfieldSelected = true;
           ezsignformfieldRequest.sEzsignformfieldEnteredvalue = 'Montreal';
+          ezsignformfieldRequest.eEzsignformfieldDependencyrequirement = FieldEEzsignformfieldDependencyrequi.getExample();
         return ezsignformfieldRequest;
     }
 
@@ -115,7 +122,8 @@ public class EzsignformfieldRequest {
                 && this.iEzsignformfieldHeight == ezsignformfieldRequest.iEzsignformfieldHeight
                 && this.bEzsignformfieldAutocomplete == ezsignformfieldRequest.bEzsignformfieldAutocomplete
                 && this.bEzsignformfieldSelected == ezsignformfieldRequest.bEzsignformfieldSelected
-                && this.sEzsignformfieldEnteredvalue == ezsignformfieldRequest.sEzsignformfieldEnteredvalue;
+                && this.sEzsignformfieldEnteredvalue == ezsignformfieldRequest.sEzsignformfieldEnteredvalue
+                && this.eEzsignformfieldDependencyrequirement == ezsignformfieldRequest.eEzsignformfieldDependencyrequirement;
         }
         return false;
     }
@@ -133,6 +141,7 @@ public class EzsignformfieldRequest {
         hashCode = (17 * hashCode) + (bEzsignformfieldAutocomplete == null ? 0 : System.hashCode(bEzsignformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsignformfieldSelected == null ? 0 : System.hashCode(bEzsignformfieldSelected));
         hashCode = (17 * hashCode) + (sEzsignformfieldEnteredvalue == null ? 0 : System.hashCode(sEzsignformfieldEnteredvalue));
+        hashCode = (17 * hashCode) + (eEzsignformfieldDependencyrequirement == null ? 0 : System.hashCode(eEzsignformfieldDependencyrequirement));
         return hashCode;
     }
 }

@@ -164,6 +164,12 @@ public class EzsignsignatureResponse {
     public EnumTextvalidation eEzsignsignatureTextvalidation { get; set; }
 
     /**
+     * Get eEzsignsignatureDependencyrequirement
+     * @return eEzsignsignatureDependencyrequirement
+     */
+    public FieldEEzsignsignatureDependencyrequi eEzsignsignatureDependencyrequirement { get; set; }
+
+    /**
      * A regular expression to indicate what values are acceptable for the Ezsignsignature.\n\nThis can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
      * @return sEzsignsignatureRegexp
      */
@@ -212,6 +218,7 @@ public class EzsignsignatureResponse {
           ezsignsignatureResponse.sEzsignsignatureDescription = 'Montreal';
           ezsignsignatureResponse.iEzsignsignatureMaxlength = 75;
           ezsignsignatureResponse.eEzsignsignatureTextvalidation = EnumTextvalidation.getExample();
+          ezsignsignatureResponse.eEzsignsignatureDependencyrequirement = FieldEEzsignsignatureDependencyrequi.getExample();
           ezsignsignatureResponse.sEzsignsignatureRegexp = '/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/';
           ezsignsignatureResponse.objContactName = CustomContactNameResponse.getExample();
           ezsignsignatureResponse.objContactNameDelegation = CustomContactNameResponse.getExample();
@@ -245,6 +252,7 @@ public class EzsignsignatureResponse {
                 && this.sEzsignsignatureDescription == ezsignsignatureResponse.sEzsignsignatureDescription
                 && this.iEzsignsignatureMaxlength == ezsignsignatureResponse.iEzsignsignatureMaxlength
                 && this.eEzsignsignatureTextvalidation == ezsignsignatureResponse.eEzsignsignatureTextvalidation
+                && this.eEzsignsignatureDependencyrequirement == ezsignsignatureResponse.eEzsignsignatureDependencyrequirement
                 && this.sEzsignsignatureRegexp == ezsignsignatureResponse.sEzsignsignatureRegexp
                 && this.objContactName == ezsignsignatureResponse.objContactName
                 && this.objContactNameDelegation == ezsignsignatureResponse.objContactNameDelegation
@@ -278,6 +286,7 @@ public class EzsignsignatureResponse {
         hashCode = (17 * hashCode) + (sEzsignsignatureDescription == null ? 0 : System.hashCode(sEzsignsignatureDescription));
         hashCode = (17 * hashCode) + (iEzsignsignatureMaxlength == null ? 0 : System.hashCode(iEzsignsignatureMaxlength));
         hashCode = (17 * hashCode) + (eEzsignsignatureTextvalidation == null ? 0 : System.hashCode(eEzsignsignatureTextvalidation));
+        hashCode = (17 * hashCode) + (eEzsignsignatureDependencyrequirement == null ? 0 : System.hashCode(eEzsignsignatureDependencyrequirement));
         hashCode = (17 * hashCode) + (sEzsignsignatureRegexp == null ? 0 : System.hashCode(sEzsignsignatureRegexp));
         hashCode = (17 * hashCode) + (objContactName == null ? 0 : System.hashCode(objContactName));
         hashCode = (17 * hashCode) + (objContactNameDelegation == null ? 0 : System.hashCode(objContactNameDelegation));

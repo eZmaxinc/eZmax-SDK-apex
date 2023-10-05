@@ -80,6 +80,12 @@ public class EzsigntemplateformfieldRequest {
      */
     public Boolean bEzsigntemplateformfieldSelected { get; set; }
 
+    /**
+     * Get eEzsigntemplateformfieldDependencyrequirement
+     * @return eEzsigntemplateformfieldDependencyrequirement
+     */
+    public FieldEEzsigntemplateformfieldDepende eEzsigntemplateformfieldDependencyrequirement { get; set; }
+
     public static EzsigntemplateformfieldRequest getExample() {
         EzsigntemplateformfieldRequest ezsigntemplateformfieldRequest = new EzsigntemplateformfieldRequest();
           ezsigntemplateformfieldRequest.pkiEzsigntemplateformfieldID = 71;
@@ -92,6 +98,7 @@ public class EzsigntemplateformfieldRequest {
           ezsigntemplateformfieldRequest.iEzsigntemplateformfieldHeight = 22;
           ezsigntemplateformfieldRequest.bEzsigntemplateformfieldAutocomplete = true;
           ezsigntemplateformfieldRequest.bEzsigntemplateformfieldSelected = true;
+          ezsigntemplateformfieldRequest.eEzsigntemplateformfieldDependencyrequirement = FieldEEzsigntemplateformfieldDepende.getExample();
         return ezsigntemplateformfieldRequest;
     }
 
@@ -107,7 +114,8 @@ public class EzsigntemplateformfieldRequest {
                 && this.iEzsigntemplateformfieldWidth == ezsigntemplateformfieldRequest.iEzsigntemplateformfieldWidth
                 && this.iEzsigntemplateformfieldHeight == ezsigntemplateformfieldRequest.iEzsigntemplateformfieldHeight
                 && this.bEzsigntemplateformfieldAutocomplete == ezsigntemplateformfieldRequest.bEzsigntemplateformfieldAutocomplete
-                && this.bEzsigntemplateformfieldSelected == ezsigntemplateformfieldRequest.bEzsigntemplateformfieldSelected;
+                && this.bEzsigntemplateformfieldSelected == ezsigntemplateformfieldRequest.bEzsigntemplateformfieldSelected
+                && this.eEzsigntemplateformfieldDependencyrequirement == ezsigntemplateformfieldRequest.eEzsigntemplateformfieldDependencyrequirement;
         }
         return false;
     }
@@ -124,6 +132,7 @@ public class EzsigntemplateformfieldRequest {
         hashCode = (17 * hashCode) + (iEzsigntemplateformfieldHeight == null ? 0 : System.hashCode(iEzsigntemplateformfieldHeight));
         hashCode = (17 * hashCode) + (bEzsigntemplateformfieldAutocomplete == null ? 0 : System.hashCode(bEzsigntemplateformfieldAutocomplete));
         hashCode = (17 * hashCode) + (bEzsigntemplateformfieldSelected == null ? 0 : System.hashCode(bEzsigntemplateformfieldSelected));
+        hashCode = (17 * hashCode) + (eEzsigntemplateformfieldDependencyrequirement == null ? 0 : System.hashCode(eEzsigntemplateformfieldDependencyrequirement));
         return hashCode;
     }
 }

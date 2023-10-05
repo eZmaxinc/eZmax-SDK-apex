@@ -74,12 +74,14 @@ private class EzsigntemplatesignatureRequestCompouTest {
         EzsigntemplatesignatureRequestCompou ezsigntemplatesignatureRequestCompound = new EzsigntemplatesignatureRequestCompou();
         Map<String, String> x-property-mappings = ezsigntemplatesignatureRequestCompound.getx-property-mappings();
         System.assertEquals('aObjEzsigntemplatesignaturecustomdate', x-property-mappings.get('a_objEzsigntemplatesignaturecustomdate'));
+        System.assertEquals('aObjEzsigntemplateelementdependency', x-property-mappings.get('a_objEzsigntemplateelementdependency'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         EzsigntemplatesignatureRequestCompou ezsigntemplatesignatureRequestCompound = new EzsigntemplatesignatureRequestCompou();
         System.assertEquals(new List<EzsigntemplatesignaturecustomdateReq>(), ezsigntemplatesignatureRequestCompound.aObjEzsigntemplatesignaturecustomdate);
+        System.assertEquals(new List<EzsigntemplateelementdependencyReque>(), ezsigntemplatesignatureRequestCompound.aObjEzsigntemplateelementdependency);
         System.assertEquals(null, ezsigntemplatesignatureRequestCompound.pkiEzsigntemplatesignatureID);
         System.assertEquals(null, ezsigntemplatesignatureRequestCompound.fkiEzsigntemplatedocumentID);
         System.assertEquals(null, ezsigntemplatesignatureRequestCompound.fkiEzsigntemplatesignerID);
@@ -101,6 +103,7 @@ private class EzsigntemplatesignatureRequestCompouTest {
         System.assertEquals(null, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureMaxlength);
         System.assertEquals(null, ezsigntemplatesignatureRequestCompound.sEzsigntemplatesignatureRegexp);
         System.assertEquals(null, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureTextvalidation);
+        System.assertEquals(null, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureDependencyrequirement);
         System.assertEquals(null, ezsigntemplatesignatureRequestCompound.bEzsigntemplatesignatureCustomdate);
     }
 }

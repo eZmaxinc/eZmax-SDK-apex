@@ -28,7 +28,8 @@ private class FieldEEzsigndocumentlogTypeTest {
             FieldEEzsigndocumentlogType.DECLINEDTOSIGN,
             FieldEEzsigndocumentlogType.DELAYEDSENDEMAIL,
             FieldEEzsigndocumentlogType.REGENERATEPAGE,
-            FieldEEzsigndocumentlogType.REGENERATEPAGEFORM
+            FieldEEzsigndocumentlogType.REGENERATEPAGEFORM,
+            FieldEEzsigndocumentlogType.REASSIGN
         };
         Set<FieldEEzsigndocumentlogType> actual  = new Set<FieldEEzsigndocumentlogType>(FieldEEzsigndocumentlogType.values());
         System.assertEquals(expected, actual);

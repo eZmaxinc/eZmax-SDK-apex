@@ -68,4 +68,29 @@ private class EzsignformfieldRequestCompoundTest {
         System.assertEquals(ezsignformfieldRequestCompound1.hashCode(), ezsignformfieldRequestCompound2.hashCode());
         System.assertEquals(ezsignformfieldRequestCompound3.hashCode(), ezsignformfieldRequestCompound4.hashCode());
     }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        EzsignformfieldRequestCompound ezsignformfieldRequestCompound = new EzsignformfieldRequestCompound();
+        Map<String, String> x-property-mappings = ezsignformfieldRequestCompound.getx-property-mappings();
+        System.assertEquals('aObjEzsignelementdependency', x-property-mappings.get('a_objEzsignelementdependency'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        EzsignformfieldRequestCompound ezsignformfieldRequestCompound = new EzsignformfieldRequestCompound();
+        System.assertEquals(new List<EzsignelementdependencyRequestCompou>(), ezsignformfieldRequestCompound.aObjEzsignelementdependency);
+        System.assertEquals(null, ezsignformfieldRequestCompound.pkiEzsignformfieldID);
+        System.assertEquals(null, ezsignformfieldRequestCompound.iEzsignpagePagenumber);
+        System.assertEquals(null, ezsignformfieldRequestCompound.sEzsignformfieldLabel);
+        System.assertEquals(null, ezsignformfieldRequestCompound.sEzsignformfieldValue);
+        System.assertEquals(null, ezsignformfieldRequestCompound.iEzsignformfieldX);
+        System.assertEquals(null, ezsignformfieldRequestCompound.iEzsignformfieldY);
+        System.assertEquals(null, ezsignformfieldRequestCompound.iEzsignformfieldWidth);
+        System.assertEquals(null, ezsignformfieldRequestCompound.iEzsignformfieldHeight);
+        System.assertEquals(null, ezsignformfieldRequestCompound.bEzsignformfieldAutocomplete);
+        System.assertEquals(null, ezsignformfieldRequestCompound.bEzsignformfieldSelected);
+        System.assertEquals(null, ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue);
+        System.assertEquals(null, ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement);
+    }
 }

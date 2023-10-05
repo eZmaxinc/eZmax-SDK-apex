@@ -74,12 +74,14 @@ private class EzsignsignatureRequestCompoundTest {
         EzsignsignatureRequestCompound ezsignsignatureRequestCompound = new EzsignsignatureRequestCompound();
         Map<String, String> x-property-mappings = ezsignsignatureRequestCompound.getx-property-mappings();
         System.assertEquals('aObjEzsignsignaturecustomdate', x-property-mappings.get('a_objEzsignsignaturecustomdate'));
+        System.assertEquals('aObjEzsignelementdependency', x-property-mappings.get('a_objEzsignelementdependency'));
     }
 
     @isTest
     private static void defaultValuesPopulated() {
         EzsignsignatureRequestCompound ezsignsignatureRequestCompound = new EzsignsignatureRequestCompound();
         System.assertEquals(new List<EzsignsignaturecustomdateRequestComp>(), ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate);
+        System.assertEquals(new List<EzsignelementdependencyRequestCompou>(), ezsignsignatureRequestCompound.aObjEzsignelementdependency);
         System.assertEquals(null, ezsignsignatureRequestCompound.pkiEzsignsignatureID);
         System.assertEquals(null, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID);
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignpagePagenumber);
@@ -101,6 +103,7 @@ private class EzsignsignatureRequestCompoundTest {
         System.assertEquals(null, ezsignsignatureRequestCompound.iEzsignsignatureMaxlength);
         System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureTextvalidation);
         System.assertEquals(null, ezsignsignatureRequestCompound.sEzsignsignatureRegexp);
+        System.assertEquals(null, ezsignsignatureRequestCompound.eEzsignsignatureDependencyrequirement);
         System.assertEquals(null, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate);
     }
 }
