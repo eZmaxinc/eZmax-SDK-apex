@@ -155,7 +155,7 @@ private class ObjectUserApiTest {
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'sSelector' => All,
+            'sSelector' => AgentBrokerEmployeeEzsignUserNormal,
             'eFilterActive' => All,
             'sQuery' => 'null',
             'acceptLanguage' => ''

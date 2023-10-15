@@ -13,7 +13,7 @@ private class ObjectEzsigntsarequirementApiTest {
         Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
 
         Map<String, Object> params = new Map<String, Object>{
-            'sSelector' => User,
+            'sSelector' => All,
             'fkiEzsignfoldertypeID' => '',
             'eFilterActive' => All,
             'sQuery' => 'null',

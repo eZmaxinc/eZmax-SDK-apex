@@ -8,6 +8,8 @@ private class FieldEEzsigndocumentlogTypeTest {
             FieldEEzsigndocumentlogType.SENDCODE,
             FieldEEzsigndocumentlogType.BADCODE,
             FieldEEzsigndocumentlogType.GOODCODE,
+            FieldEEzsigndocumentlogType.BADRESPONSE,
+            FieldEEzsigndocumentlogType.GOODRESPONSE,
             FieldEEzsigndocumentlogType.AUTHENTICATION,
             FieldEEzsigndocumentlogType.CREATEPAGE,
             FieldEEzsigndocumentlogType.DOWNLOAD,
@@ -27,6 +29,8 @@ private class FieldEEzsigndocumentlogTypeTest {
             FieldEEzsigndocumentlogType.SIGNATUREATTACHMENTDELETED,
             FieldEEzsigndocumentlogType.DECLINEDTOSIGN,
             FieldEEzsigndocumentlogType.DELAYEDSENDEMAIL,
+            FieldEEzsigndocumentlogType.ANNOTATIONADDED,
+            FieldEEzsigndocumentlogType.FLATTEN,
             FieldEEzsigndocumentlogType.REGENERATEPAGE,
             FieldEEzsigndocumentlogType.REGENERATEPAGEFORM,
             FieldEEzsigndocumentlogType.REASSIGN

@@ -2849,6 +2849,10 @@ force-app/main/default/classes/ObjectUsergroupmembershipApi.cls
 force-app/main/default/classes/ObjectUsergroupmembershipApi.cls-meta.xml
 force-app/main/default/classes/ObjectUsergroupmembershipApiTest.cls
 force-app/main/default/classes/ObjectUsergroupmembershipApiTest.cls-meta.xml
+force-app/main/default/classes/ObjectUserlogintypeApi.cls
+force-app/main/default/classes/ObjectUserlogintypeApi.cls-meta.xml
+force-app/main/default/classes/ObjectUserlogintypeApiTest.cls
+force-app/main/default/classes/ObjectUserlogintypeApiTest.cls-meta.xml
 force-app/main/default/classes/ObjectUserstagedApi.cls
 force-app/main/default/classes/ObjectUserstagedApi.cls-meta.xml
 force-app/main/default/classes/ObjectUserstagedApiTest.cls
@@ -3569,6 +3573,14 @@ force-app/main/default/classes/UsergroupmembershipResponseCompoundTest.cls
 force-app/main/default/classes/UsergroupmembershipResponseCompoundTest.cls-meta.xml
 force-app/main/default/classes/UsergroupmembershipResponseTest.cls
 force-app/main/default/classes/UsergroupmembershipResponseTest.cls-meta.xml
+force-app/main/default/classes/UserlogintypeAutocompleteElementResp.cls
+force-app/main/default/classes/UserlogintypeAutocompleteElementResp.cls-meta.xml
+force-app/main/default/classes/UserlogintypeAutocompleteElementRespTest.cls
+force-app/main/default/classes/UserlogintypeAutocompleteElementRespTest.cls-meta.xml
+force-app/main/default/classes/UserlogintypeGetAutocompleteV2Respon.cls
+force-app/main/default/classes/UserlogintypeGetAutocompleteV2Respon.cls-meta.xml
+force-app/main/default/classes/UserlogintypeGetAutocompleteV2ResponTest.cls
+force-app/main/default/classes/UserlogintypeGetAutocompleteV2ResponTest.cls-meta.xml
 force-app/main/default/classes/UserstagedCreateUserV1Response.cls
 force-app/main/default/classes/UserstagedCreateUserV1Response.cls-meta.xml
 force-app/main/default/classes/UserstagedCreateUserV1ResponseMPaylo.cls

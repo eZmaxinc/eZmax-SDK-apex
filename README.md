@@ -331,6 +331,7 @@ Class | Method | HTTP request | Description
 *ObjectUsergroupmembershipApi* | [**usergroupmembershipDeleteObjectV1**](ObjectUsergroupmembershipApi.md#usergroupmembershipDeleteObjectV1) | **DELETE** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Delete an existing Usergroupmembership
 *ObjectUsergroupmembershipApi* | [**usergroupmembershipEditObjectV1**](ObjectUsergroupmembershipApi.md#usergroupmembershipEditObjectV1) | **PUT** /1/object/usergroupmembership/{pkiUsergroupmembershipID} | Edit an existing Usergroupmembership
 *ObjectUsergroupmembershipApi* | [**usergroupmembershipGetObjectV2**](ObjectUsergroupmembershipApi.md#usergroupmembershipGetObjectV2) | **GET** /2/object/usergroupmembership/{pkiUsergroupmembershipID} | Retrieve an existing Usergroupmembership
+*ObjectUserlogintypeApi* | [**userlogintypeGetAutocompleteV2**](ObjectUserlogintypeApi.md#userlogintypeGetAutocompleteV2) | **GET** /2/object/userlogintype/getAutocomplete/{sSelector} | Retrieve Userlogintypes and IDs
 *ObjectUserstagedApi* | [**userstagedCreateUserV1**](ObjectUserstagedApi.md#userstagedCreateUserV1) | **POST** /1/object/userstaged/{pkiUserstagedID}/createUser | Create a User from a Userstaged and then map it
 *ObjectUserstagedApi* | [**userstagedDeleteObjectV1**](ObjectUserstagedApi.md#userstagedDeleteObjectV1) | **DELETE** /1/object/userstaged/{pkiUserstagedID} | Delete an existing Userstaged
 *ObjectUserstagedApi* | [**userstagedGetListV1**](ObjectUserstagedApi.md#userstagedGetListV1) | **GET** /1/object/userstaged/getList | Retrieve Userstaged list
@@ -1182,6 +1183,8 @@ Class | Method | HTTP request | Description
  - [UsergroupmembershipRequestCompound](UsergroupmembershipRequestCompound.md)
  - [UsergroupmembershipResponse](UsergroupmembershipResponse.md)
  - [UsergroupmembershipResponseCompound](UsergroupmembershipResponseCompound.md)
+ - [UserlogintypeAutocompleteElementResp](UserlogintypeAutocompleteElementResp.md)
+ - [UserlogintypeGetAutocompleteV2Respon](UserlogintypeGetAutocompleteV2Respon.md)
  - [UserstagedCreateUserV1Response](UserstagedCreateUserV1Response.md)
  - [UserstagedCreateUserV1ResponseMPaylo](UserstagedCreateUserV1ResponseMPaylo.md)
  - [UserstagedDeleteObjectV1Response](UserstagedDeleteObjectV1Response.md)
