@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,39 +13,39 @@
 /**
  * Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
  */
-public class EzsigndocumentApplyEzsigntemplateV2R implements CommonResponse {
-    /**
-     * Get objDebugPayload
-     * @return objDebugPayload
-     */
-    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
-
+public class EzsigndocumentApplyEzsigntemplateV2R {
     /**
      * Get objDebug
      * @return objDebug
      */
     public CommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get objDebugPayload
+     * @return objDebugPayload
+     */
+    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
+
     public static EzsigndocumentApplyEzsigntemplateV2R getExample() {
         EzsigndocumentApplyEzsigntemplateV2R ezsigndocumentApplyEzsigntemplateV2Response = new EzsigndocumentApplyEzsigntemplateV2R();
-          ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
           ezsigndocumentApplyEzsigntemplateV2Response.objDebug = CommonResponseObjDebug.getExample();
+          ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
         return ezsigndocumentApplyEzsigntemplateV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsigndocumentApplyEzsigntemplateV2R) {           
             EzsigndocumentApplyEzsigntemplateV2R ezsigndocumentApplyEzsigntemplateV2Response = (EzsigndocumentApplyEzsigntemplateV2R) obj;
-            return this.objDebugPayload == ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload
-                && this.objDebug == ezsigndocumentApplyEzsigntemplateV2Response.objDebug;
+            return this.objDebug == ezsigndocumentApplyEzsigntemplateV2Response.objDebug
+                && this.objDebugPayload == ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         return hashCode;
     }
 }

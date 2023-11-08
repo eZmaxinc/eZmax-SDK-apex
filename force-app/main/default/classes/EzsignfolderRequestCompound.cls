@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,13 +13,12 @@
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-public class EzsignfolderRequestCompound implements EzsignfolderRequest {
+public class EzsignfolderRequestCompound {
     /**
-     * The unique ID of the Ezsignfolder
-     * minimum: 0
-     * @return pkiEzsignfolderID
+     * Get eEzsignfolderSendreminderfrequency
+     * @return eEzsignfolderSendreminderfrequency
      */
-    public Integer pkiEzsignfolderID { get; set; }
+    public FieldEEzsignfolderSendreminderfreque eEzsignfolderSendreminderfrequency { get; set; }
 
     /**
      * The unique ID of the Ezsignfoldertype.
@@ -37,22 +36,17 @@ public class EzsignfolderRequestCompound implements EzsignfolderRequest {
     public Integer fkiEzsigntsarequirementID { get; set; }
 
     /**
+     * The unique ID of the Ezsignfolder
+     * minimum: 0
+     * @return pkiEzsignfolderID
+     */
+    public Integer pkiEzsignfolderID { get; set; }
+
+    /**
      * The description of the Ezsignfolder
      * @return sEzsignfolderDescription
      */
     public String sEzsignfolderDescription { get; set; }
-
-    /**
-     * Note about the Ezsignfolder
-     * @return tEzsignfolderNote
-     */
-    public String tEzsignfolderNote { get; set; }
-
-    /**
-     * Get eEzsignfolderSendreminderfrequency
-     * @return eEzsignfolderSendreminderfrequency
-     */
-    public FieldEEzsignfolderSendreminderfreque eEzsignfolderSendreminderfrequency { get; set; }
 
     /**
      * This field can be used to store an External ID from the client\'s system.\n\nAnything can be stored in this field, it will never be evaluated by the eZmax system and will be returned\nAS-IS.\n\nTo store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.\n
@@ -60,41 +54,47 @@ public class EzsignfolderRequestCompound implements EzsignfolderRequest {
      */
     public String sEzsignfolderExternalid { get; set; }
 
+    /**
+     * Note about the Ezsignfolder
+     * @return tEzsignfolderNote
+     */
+    public String tEzsignfolderNote { get; set; }
+
     public static EzsignfolderRequestCompound getExample() {
         EzsignfolderRequestCompound ezsignfolderRequestCompound = new EzsignfolderRequestCompound();
-          ezsignfolderRequestCompound.pkiEzsignfolderID = 33;
+          ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency = FieldEEzsignfolderSendreminderfreque.getExample();
           ezsignfolderRequestCompound.fkiEzsignfoldertypeID = 5;
           ezsignfolderRequestCompound.fkiEzsigntsarequirementID = 1;
+          ezsignfolderRequestCompound.pkiEzsignfolderID = 33;
           ezsignfolderRequestCompound.sEzsignfolderDescription = 'Test eZsign Folder';
-          ezsignfolderRequestCompound.tEzsignfolderNote = 'This is a note';
-          ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency = FieldEEzsignfolderSendreminderfreque.getExample();
           ezsignfolderRequestCompound.sEzsignfolderExternalid = '{"ID": 1234, "TAGS": ["tag1", "tag2", "tag3"]}';
+          ezsignfolderRequestCompound.tEzsignfolderNote = 'This is a note';
         return ezsignfolderRequestCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignfolderRequestCompound) {           
             EzsignfolderRequestCompound ezsignfolderRequestCompound = (EzsignfolderRequestCompound) obj;
-            return this.pkiEzsignfolderID == ezsignfolderRequestCompound.pkiEzsignfolderID
+            return this.eEzsignfolderSendreminderfrequency == ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency
                 && this.fkiEzsignfoldertypeID == ezsignfolderRequestCompound.fkiEzsignfoldertypeID
                 && this.fkiEzsigntsarequirementID == ezsignfolderRequestCompound.fkiEzsigntsarequirementID
+                && this.pkiEzsignfolderID == ezsignfolderRequestCompound.pkiEzsignfolderID
                 && this.sEzsignfolderDescription == ezsignfolderRequestCompound.sEzsignfolderDescription
-                && this.tEzsignfolderNote == ezsignfolderRequestCompound.tEzsignfolderNote
-                && this.eEzsignfolderSendreminderfrequency == ezsignfolderRequestCompound.eEzsignfolderSendreminderfrequency
-                && this.sEzsignfolderExternalid == ezsignfolderRequestCompound.sEzsignfolderExternalid;
+                && this.sEzsignfolderExternalid == ezsignfolderRequestCompound.sEzsignfolderExternalid
+                && this.tEzsignfolderNote == ezsignfolderRequestCompound.tEzsignfolderNote;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (pkiEzsignfolderID == null ? 0 : System.hashCode(pkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (eEzsignfolderSendreminderfrequency == null ? 0 : System.hashCode(eEzsignfolderSendreminderfrequency));
         hashCode = (17 * hashCode) + (fkiEzsignfoldertypeID == null ? 0 : System.hashCode(fkiEzsignfoldertypeID));
         hashCode = (17 * hashCode) + (fkiEzsigntsarequirementID == null ? 0 : System.hashCode(fkiEzsigntsarequirementID));
+        hashCode = (17 * hashCode) + (pkiEzsignfolderID == null ? 0 : System.hashCode(pkiEzsignfolderID));
         hashCode = (17 * hashCode) + (sEzsignfolderDescription == null ? 0 : System.hashCode(sEzsignfolderDescription));
-        hashCode = (17 * hashCode) + (tEzsignfolderNote == null ? 0 : System.hashCode(tEzsignfolderNote));
-        hashCode = (17 * hashCode) + (eEzsignfolderSendreminderfrequency == null ? 0 : System.hashCode(eEzsignfolderSendreminderfrequency));
         hashCode = (17 * hashCode) + (sEzsignfolderExternalid == null ? 0 : System.hashCode(sEzsignfolderExternalid));
+        hashCode = (17 * hashCode) + (tEzsignfolderNote == null ? 0 : System.hashCode(tEzsignfolderNote));
         return hashCode;
     }
 }

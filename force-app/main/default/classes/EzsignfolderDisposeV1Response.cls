@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,39 +13,39 @@
 /**
  * Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose
  */
-public class EzsignfolderDisposeV1Response implements CommonResponse {
-    /**
-     * Get objDebugPayload
-     * @return objDebugPayload
-     */
-    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
-
+public class EzsignfolderDisposeV1Response {
     /**
      * Get objDebug
      * @return objDebug
      */
     public CommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get objDebugPayload
+     * @return objDebugPayload
+     */
+    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
+
     public static EzsignfolderDisposeV1Response getExample() {
         EzsignfolderDisposeV1Response ezsignfolderDisposeV1Response = new EzsignfolderDisposeV1Response();
-          ezsignfolderDisposeV1Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
           ezsignfolderDisposeV1Response.objDebug = CommonResponseObjDebug.getExample();
+          ezsignfolderDisposeV1Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
         return ezsignfolderDisposeV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignfolderDisposeV1Response) {           
             EzsignfolderDisposeV1Response ezsignfolderDisposeV1Response = (EzsignfolderDisposeV1Response) obj;
-            return this.objDebugPayload == ezsignfolderDisposeV1Response.objDebugPayload
-                && this.objDebug == ezsignfolderDisposeV1Response.objDebug;
+            return this.objDebug == ezsignfolderDisposeV1Response.objDebug
+                && this.objDebugPayload == ezsignfolderDisposeV1Response.objDebugPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         return hashCode;
     }
 }

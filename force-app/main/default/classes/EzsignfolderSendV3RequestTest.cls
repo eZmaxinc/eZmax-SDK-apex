@@ -80,7 +80,7 @@ private class EzsignfolderSendV3RequestTest {
     private static void defaultValuesPopulated() {
         EzsignfolderSendV3Request ezsignfolderSendV3Request = new EzsignfolderSendV3Request();
         System.assertEquals(new List<Integer>(), ezsignfolderSendV3Request.aFkiEzsignfoldersignerassociationID);
-        System.assertEquals(null, ezsignfolderSendV3Request.tEzsignfolderMessage);
         System.assertEquals(null, ezsignfolderSendV3Request.dtEzsignfolderDelayedsenddate);
+        System.assertEquals(null, ezsignfolderSendV3Request.tEzsignfolderMessage);
     }
 }

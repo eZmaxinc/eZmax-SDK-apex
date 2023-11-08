@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,37 +15,37 @@
  */
 public class CommonResponseObjSQLQuery {
     /**
-     * The SQL Query
-     * @return sQuery
-     */
-    public String sQuery { get; set; }
-
-    /**
      * Execution time of the SQL Query in seconds
      * @return fDuration
      */
     public Double fDuration { get; set; }
 
+    /**
+     * The SQL Query
+     * @return sQuery
+     */
+    public String sQuery { get; set; }
+
     public static CommonResponseObjSQLQuery getExample() {
         CommonResponseObjSQLQuery commonResponseObjSQLQuery = new CommonResponseObjSQLQuery();
-          commonResponseObjSQLQuery.sQuery = '';
           commonResponseObjSQLQuery.fDuration = 1.3579;
+          commonResponseObjSQLQuery.sQuery = '';
         return commonResponseObjSQLQuery;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof CommonResponseObjSQLQuery) {           
             CommonResponseObjSQLQuery commonResponseObjSQLQuery = (CommonResponseObjSQLQuery) obj;
-            return this.sQuery == commonResponseObjSQLQuery.sQuery
-                && this.fDuration == commonResponseObjSQLQuery.fDuration;
+            return this.fDuration == commonResponseObjSQLQuery.fDuration
+                && this.sQuery == commonResponseObjSQLQuery.sQuery;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sQuery == null ? 0 : System.hashCode(sQuery));
         hashCode = (17 * hashCode) + (fDuration == null ? 0 : System.hashCode(fDuration));
+        hashCode = (17 * hashCode) + (sQuery == null ? 0 : System.hashCode(sQuery));
         return hashCode;
     }
 }

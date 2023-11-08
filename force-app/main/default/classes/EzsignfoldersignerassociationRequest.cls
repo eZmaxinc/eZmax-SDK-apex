@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -11,9 +11,50 @@
  */
 
 /**
- * An Ezsignfoldersignerassociation Object
+ * An Ezsignfoldersignerassociation Object and children to create a complete structure
  */
 public class EzsignfoldersignerassociationRequest {
+    /**
+     * If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain\'t required to sign the document.
+     * @return bEzsignfoldersignerassociationReceivecopy
+     */
+    public Boolean bEzsignfoldersignerassociationReceivecopy { get; set; }
+
+    /**
+     * The unique ID of the Ezsignfolder
+     * minimum: 0
+     * @return fkiEzsignfolderID
+     */
+    public Integer fkiEzsignfolderID { get; set; }
+
+    /**
+     * The unique ID of the Ezsignsignergroup
+     * minimum: 0
+     * maximum: 65535
+     * @return fkiEzsignsignergroupID
+     */
+    public Integer fkiEzsignsignergroupID { get; set; }
+
+    /**
+     * The unique ID of the User
+     * minimum: 0
+     * @return fkiUserID
+     */
+    public Integer fkiUserID { get; set; }
+
+    /**
+     * Get objEzsignsigner
+     * @return objEzsignsigner
+     */
+    public EzsignsignerRequestCompound objEzsignsigner { get; set; }
+
+    /**
+     * The unique ID of the Ezsignfoldersignerassociation
+     * minimum: 0
+     * @return pkiEzsignfoldersignerassociationID
+     */
+    public Integer pkiEzsignfoldersignerassociationID { get; set; }
+
     /**
      * A custom text message that will be added to the email sent.
      * @return tEzsignfoldersignerassociationMessage
@@ -21,21 +62,39 @@ public class EzsignfoldersignerassociationRequest {
     public String tEzsignfoldersignerassociationMessage { get; set; }
 
     public static EzsignfoldersignerassociationRequest getExample() {
-        EzsignfoldersignerassociationRequest ezsignfoldersignerassociationRequestPatch = new EzsignfoldersignerassociationRequest();
-          ezsignfoldersignerassociationRequestPatch.tEzsignfoldersignerassociationMessage = 'Hi John,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary';
-        return ezsignfoldersignerassociationRequestPatch;
+        EzsignfoldersignerassociationRequest ezsignfoldersignerassociationRequestCompound = new EzsignfoldersignerassociationRequest();
+          ezsignfoldersignerassociationRequestCompound.bEzsignfoldersignerassociationReceivecopy = true;
+          ezsignfoldersignerassociationRequestCompound.fkiEzsignfolderID = 33;
+          ezsignfoldersignerassociationRequestCompound.fkiEzsignsignergroupID = 27;
+          ezsignfoldersignerassociationRequestCompound.fkiUserID = 70;
+          ezsignfoldersignerassociationRequestCompound.objEzsignsigner = EzsignsignerRequestCompound.getExample();
+          ezsignfoldersignerassociationRequestCompound.pkiEzsignfoldersignerassociationID = 20;
+          ezsignfoldersignerassociationRequestCompound.tEzsignfoldersignerassociationMessage = 'Hi John,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary';
+        return ezsignfoldersignerassociationRequestCompound;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignfoldersignerassociationRequest) {           
-            EzsignfoldersignerassociationRequest ezsignfoldersignerassociationRequestPatch = (EzsignfoldersignerassociationRequest) obj;
-            return this.tEzsignfoldersignerassociationMessage == ezsignfoldersignerassociationRequestPatch.tEzsignfoldersignerassociationMessage;
+            EzsignfoldersignerassociationRequest ezsignfoldersignerassociationRequestCompound = (EzsignfoldersignerassociationRequest) obj;
+            return this.bEzsignfoldersignerassociationReceivecopy == ezsignfoldersignerassociationRequestCompound.bEzsignfoldersignerassociationReceivecopy
+                && this.fkiEzsignfolderID == ezsignfoldersignerassociationRequestCompound.fkiEzsignfolderID
+                && this.fkiEzsignsignergroupID == ezsignfoldersignerassociationRequestCompound.fkiEzsignsignergroupID
+                && this.fkiUserID == ezsignfoldersignerassociationRequestCompound.fkiUserID
+                && this.objEzsignsigner == ezsignfoldersignerassociationRequestCompound.objEzsignsigner
+                && this.pkiEzsignfoldersignerassociationID == ezsignfoldersignerassociationRequestCompound.pkiEzsignfoldersignerassociationID
+                && this.tEzsignfoldersignerassociationMessage == ezsignfoldersignerassociationRequestCompound.tEzsignfoldersignerassociationMessage;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (bEzsignfoldersignerassociationReceivecopy == null ? 0 : System.hashCode(bEzsignfoldersignerassociationReceivecopy));
+        hashCode = (17 * hashCode) + (fkiEzsignfolderID == null ? 0 : System.hashCode(fkiEzsignfolderID));
+        hashCode = (17 * hashCode) + (fkiEzsignsignergroupID == null ? 0 : System.hashCode(fkiEzsignsignergroupID));
+        hashCode = (17 * hashCode) + (fkiUserID == null ? 0 : System.hashCode(fkiUserID));
+        hashCode = (17 * hashCode) + (objEzsignsigner == null ? 0 : System.hashCode(objEzsignsigner));
+        hashCode = (17 * hashCode) + (pkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(pkiEzsignfoldersignerassociationID));
         hashCode = (17 * hashCode) + (tEzsignfoldersignerassociationMessage == null ? 0 : System.hashCode(tEzsignfoldersignerassociationMessage));
         return hashCode;
     }

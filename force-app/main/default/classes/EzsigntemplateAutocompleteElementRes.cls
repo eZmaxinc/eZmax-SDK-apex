@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,16 +15,16 @@
  */
 public class EzsigntemplateAutocompleteElementRes {
     /**
+     * Whether the Ezsigntemplate is active or not
+     * @return bEzsigntemplateIsactive
+     */
+    public Boolean bEzsigntemplateIsactive { get; set; }
+
+    /**
      * Get eEzsignfoldertypePrivacylevel
      * @return eEzsignfoldertypePrivacylevel
      */
     public FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel { get; set; }
-
-    /**
-     * The description of the Ezsigntemplate
-     * @return sEzsigntemplateDescription
-     */
-    public String sEzsigntemplateDescription { get; set; }
 
     /**
      * The unique ID of the Ezsigntemplate
@@ -34,37 +34,37 @@ public class EzsigntemplateAutocompleteElementRes {
     public Integer pkiEzsigntemplateID { get; set; }
 
     /**
-     * Whether the Ezsigntemplate is active or not
-     * @return bEzsigntemplateIsactive
+     * The description of the Ezsigntemplate
+     * @return sEzsigntemplateDescription
      */
-    public Boolean bEzsigntemplateIsactive { get; set; }
+    public String sEzsigntemplateDescription { get; set; }
 
     public static EzsigntemplateAutocompleteElementRes getExample() {
         EzsigntemplateAutocompleteElementRes ezsigntemplateAutocompleteElementResponse = new EzsigntemplateAutocompleteElementRes();
-          ezsigntemplateAutocompleteElementResponse.eEzsignfoldertypePrivacylevel = FieldEEzsignfoldertypePrivacylevel.getExample();
-          ezsigntemplateAutocompleteElementResponse.sEzsigntemplateDescription = 'Standard Contract';
-          ezsigntemplateAutocompleteElementResponse.pkiEzsigntemplateID = 36;
           ezsigntemplateAutocompleteElementResponse.bEzsigntemplateIsactive = true;
+          ezsigntemplateAutocompleteElementResponse.eEzsignfoldertypePrivacylevel = FieldEEzsignfoldertypePrivacylevel.getExample();
+          ezsigntemplateAutocompleteElementResponse.pkiEzsigntemplateID = 36;
+          ezsigntemplateAutocompleteElementResponse.sEzsigntemplateDescription = 'Standard Contract';
         return ezsigntemplateAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsigntemplateAutocompleteElementRes) {           
             EzsigntemplateAutocompleteElementRes ezsigntemplateAutocompleteElementResponse = (EzsigntemplateAutocompleteElementRes) obj;
-            return this.eEzsignfoldertypePrivacylevel == ezsigntemplateAutocompleteElementResponse.eEzsignfoldertypePrivacylevel
-                && this.sEzsigntemplateDescription == ezsigntemplateAutocompleteElementResponse.sEzsigntemplateDescription
+            return this.bEzsigntemplateIsactive == ezsigntemplateAutocompleteElementResponse.bEzsigntemplateIsactive
+                && this.eEzsignfoldertypePrivacylevel == ezsigntemplateAutocompleteElementResponse.eEzsignfoldertypePrivacylevel
                 && this.pkiEzsigntemplateID == ezsigntemplateAutocompleteElementResponse.pkiEzsigntemplateID
-                && this.bEzsigntemplateIsactive == ezsigntemplateAutocompleteElementResponse.bEzsigntemplateIsactive;
+                && this.sEzsigntemplateDescription == ezsigntemplateAutocompleteElementResponse.sEzsigntemplateDescription;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (eEzsignfoldertypePrivacylevel == null ? 0 : System.hashCode(eEzsignfoldertypePrivacylevel));
-        hashCode = (17 * hashCode) + (sEzsigntemplateDescription == null ? 0 : System.hashCode(sEzsigntemplateDescription));
-        hashCode = (17 * hashCode) + (pkiEzsigntemplateID == null ? 0 : System.hashCode(pkiEzsigntemplateID));
         hashCode = (17 * hashCode) + (bEzsigntemplateIsactive == null ? 0 : System.hashCode(bEzsigntemplateIsactive));
+        hashCode = (17 * hashCode) + (eEzsignfoldertypePrivacylevel == null ? 0 : System.hashCode(eEzsignfoldertypePrivacylevel));
+        hashCode = (17 * hashCode) + (pkiEzsigntemplateID == null ? 0 : System.hashCode(pkiEzsigntemplateID));
+        hashCode = (17 * hashCode) + (sEzsigntemplateDescription == null ? 0 : System.hashCode(sEzsigntemplateDescription));
         return hashCode;
     }
 }

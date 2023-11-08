@@ -80,7 +80,7 @@ private class CommonResponseErrorEzsignformValidatTest {
     private static void defaultValuesPopulated() {
         CommonResponseErrorEzsignformValidat commonResponseErrorEzsignformValidation = new CommonResponseErrorEzsignformValidat();
         System.assertEquals(new List<CustomEzsignformfielderrorResponse>(), commonResponseErrorEzsignformValidation.aObjEzsignformfielderror);
-        System.assertEquals(null, commonResponseErrorEzsignformValidation.sErrorMessage);
         System.assertEquals(null, commonResponseErrorEzsignformValidation.eErrorCode);
+        System.assertEquals(null, commonResponseErrorEzsignformValidation.sErrorMessage);
     }
 }

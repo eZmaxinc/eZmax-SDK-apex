@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,16 +15,16 @@
  */
 public class UserAutocompleteElementResponse {
     /**
+     * Whether the User is active or not
+     * @return bUserIsactive
+     */
+    public Boolean bUserIsactive { get; set; }
+
+    /**
      * Get eUserType
      * @return eUserType
      */
     public FieldEUserType eUserType { get; set; }
-
-    /**
-     * The description of the User in the language of the requester
-     * @return sUserName
-     */
-    public String sUserName { get; set; }
 
     /**
      * The unique ID of the User
@@ -34,37 +34,37 @@ public class UserAutocompleteElementResponse {
     public Integer pkiUserID { get; set; }
 
     /**
-     * Whether the User is active or not
-     * @return bUserIsactive
+     * The description of the User in the language of the requester
+     * @return sUserName
      */
-    public Boolean bUserIsactive { get; set; }
+    public String sUserName { get; set; }
 
     public static UserAutocompleteElementResponse getExample() {
         UserAutocompleteElementResponse userAutocompleteElementResponse = new UserAutocompleteElementResponse();
-          userAutocompleteElementResponse.eUserType = FieldEUserType.getExample();
-          userAutocompleteElementResponse.sUserName = 'Default';
-          userAutocompleteElementResponse.pkiUserID = 70;
           userAutocompleteElementResponse.bUserIsactive = true;
+          userAutocompleteElementResponse.eUserType = FieldEUserType.getExample();
+          userAutocompleteElementResponse.pkiUserID = 70;
+          userAutocompleteElementResponse.sUserName = 'Default';
         return userAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof UserAutocompleteElementResponse) {           
             UserAutocompleteElementResponse userAutocompleteElementResponse = (UserAutocompleteElementResponse) obj;
-            return this.eUserType == userAutocompleteElementResponse.eUserType
-                && this.sUserName == userAutocompleteElementResponse.sUserName
+            return this.bUserIsactive == userAutocompleteElementResponse.bUserIsactive
+                && this.eUserType == userAutocompleteElementResponse.eUserType
                 && this.pkiUserID == userAutocompleteElementResponse.pkiUserID
-                && this.bUserIsactive == userAutocompleteElementResponse.bUserIsactive;
+                && this.sUserName == userAutocompleteElementResponse.sUserName;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (eUserType == null ? 0 : System.hashCode(eUserType));
-        hashCode = (17 * hashCode) + (sUserName == null ? 0 : System.hashCode(sUserName));
-        hashCode = (17 * hashCode) + (pkiUserID == null ? 0 : System.hashCode(pkiUserID));
         hashCode = (17 * hashCode) + (bUserIsactive == null ? 0 : System.hashCode(bUserIsactive));
+        hashCode = (17 * hashCode) + (eUserType == null ? 0 : System.hashCode(eUserType));
+        hashCode = (17 * hashCode) + (pkiUserID == null ? 0 : System.hashCode(pkiUserID));
+        hashCode = (17 * hashCode) + (sUserName == null ? 0 : System.hashCode(sUserName));
         return hashCode;
     }
 }

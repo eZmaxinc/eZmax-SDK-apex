@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,10 +15,16 @@
  */
 public class EzsigntsarequirementAutocompleteElem {
     /**
-     * The description of the Ezsigntsarequirement in the language of the requester
-     * @return sEzsigntsarequirementDescriptionX
+     * Indicates if the element is disabled in the context
+     * @return bDisabled
      */
-    public String sEzsigntsarequirementDescriptionX { get; set; }
+    public Boolean bDisabled { get; set; }
+
+    /**
+     * Whether the Ezsigntsarequirement is active or not
+     * @return bEzsigntsarequirementIsactive
+     */
+    public Boolean bEzsigntsarequirementIsactive { get; set; }
 
     /**
      * The unique ID of the Ezsigntsarequirement.\n\nDetermine if a Time Stamping Authority should add a timestamp on each of the signature.\nValid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server\'s time.|\n|2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server\'s time. **Additional fee applies**|\n|3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
@@ -29,43 +35,37 @@ public class EzsigntsarequirementAutocompleteElem {
     public Integer pkiEzsigntsarequirementID { get; set; }
 
     /**
-     * Whether the Ezsigntsarequirement is active or not
-     * @return bEzsigntsarequirementIsactive
+     * The description of the Ezsigntsarequirement in the language of the requester
+     * @return sEzsigntsarequirementDescriptionX
      */
-    public Boolean bEzsigntsarequirementIsactive { get; set; }
-
-    /**
-     * Indicates if the element is disabled in the context
-     * @return bDisabled
-     */
-    public Boolean bDisabled { get; set; }
+    public String sEzsigntsarequirementDescriptionX { get; set; }
 
     public static EzsigntsarequirementAutocompleteElem getExample() {
         EzsigntsarequirementAutocompleteElem ezsigntsarequirementAutocompleteElementResponse = new EzsigntsarequirementAutocompleteElem();
-          ezsigntsarequirementAutocompleteElementResponse.sEzsigntsarequirementDescriptionX = 'No';
-          ezsigntsarequirementAutocompleteElementResponse.pkiEzsigntsarequirementID = 1;
-          ezsigntsarequirementAutocompleteElementResponse.bEzsigntsarequirementIsactive = true;
           ezsigntsarequirementAutocompleteElementResponse.bDisabled = true;
+          ezsigntsarequirementAutocompleteElementResponse.bEzsigntsarequirementIsactive = true;
+          ezsigntsarequirementAutocompleteElementResponse.pkiEzsigntsarequirementID = 1;
+          ezsigntsarequirementAutocompleteElementResponse.sEzsigntsarequirementDescriptionX = 'No';
         return ezsigntsarequirementAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsigntsarequirementAutocompleteElem) {           
             EzsigntsarequirementAutocompleteElem ezsigntsarequirementAutocompleteElementResponse = (EzsigntsarequirementAutocompleteElem) obj;
-            return this.sEzsigntsarequirementDescriptionX == ezsigntsarequirementAutocompleteElementResponse.sEzsigntsarequirementDescriptionX
-                && this.pkiEzsigntsarequirementID == ezsigntsarequirementAutocompleteElementResponse.pkiEzsigntsarequirementID
+            return this.bDisabled == ezsigntsarequirementAutocompleteElementResponse.bDisabled
                 && this.bEzsigntsarequirementIsactive == ezsigntsarequirementAutocompleteElementResponse.bEzsigntsarequirementIsactive
-                && this.bDisabled == ezsigntsarequirementAutocompleteElementResponse.bDisabled;
+                && this.pkiEzsigntsarequirementID == ezsigntsarequirementAutocompleteElementResponse.pkiEzsigntsarequirementID
+                && this.sEzsigntsarequirementDescriptionX == ezsigntsarequirementAutocompleteElementResponse.sEzsigntsarequirementDescriptionX;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sEzsigntsarequirementDescriptionX == null ? 0 : System.hashCode(sEzsigntsarequirementDescriptionX));
-        hashCode = (17 * hashCode) + (pkiEzsigntsarequirementID == null ? 0 : System.hashCode(pkiEzsigntsarequirementID));
-        hashCode = (17 * hashCode) + (bEzsigntsarequirementIsactive == null ? 0 : System.hashCode(bEzsigntsarequirementIsactive));
         hashCode = (17 * hashCode) + (bDisabled == null ? 0 : System.hashCode(bDisabled));
+        hashCode = (17 * hashCode) + (bEzsigntsarequirementIsactive == null ? 0 : System.hashCode(bEzsigntsarequirementIsactive));
+        hashCode = (17 * hashCode) + (pkiEzsigntsarequirementID == null ? 0 : System.hashCode(pkiEzsigntsarequirementID));
+        hashCode = (17 * hashCode) + (sEzsigntsarequirementDescriptionX == null ? 0 : System.hashCode(sEzsigntsarequirementDescriptionX));
         return hashCode;
     }
 }

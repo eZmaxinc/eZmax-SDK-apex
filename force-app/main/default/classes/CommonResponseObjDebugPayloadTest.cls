@@ -80,8 +80,8 @@ private class CommonResponseObjDebugPayloadTest {
     private static void defaultValuesPopulated() {
         CommonResponseObjDebugPayload commonResponseObjDebugPayload = new CommonResponseObjDebugPayload();
         System.assertEquals(new List<Integer>(), commonResponseObjDebugPayload.aRequiredPermission);
-        System.assertEquals(null, commonResponseObjDebugPayload.iVersionMin);
-        System.assertEquals(null, commonResponseObjDebugPayload.iVersionMax);
         System.assertEquals(null, commonResponseObjDebugPayload.bVersionDeprecated);
+        System.assertEquals(null, commonResponseObjDebugPayload.iVersionMax);
+        System.assertEquals(null, commonResponseObjDebugPayload.iVersionMin);
     }
 }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,10 +15,10 @@
  */
 public class TaxassignmentAutocompleteElementResp {
     /**
-     * The description of the Taxassignment  in the language of the requester
-     * @return sTaxassignmentDescriptionX
+     * Whether the Taxassignment is active or not
+     * @return bTaxassignmentIsactive
      */
-    public String sTaxassignmentDescriptionX { get; set; }
+    public Boolean bTaxassignmentIsactive { get; set; }
 
     /**
      * The unique ID of the Taxassignment.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|No tax|\n|2|GST|\n|3|HST (ON)|\n|4|HST (NB)|\n|5|HST (NS)|\n|6|HST (NL)|\n|7|HST (PE)|\n|8|GST + QST (QC)|\n|9|GST + QST (QC) Non-Recoverable|\n|10|GST + PST (BC)|\n|11|GST + PST (SK)|\n|12|GST + RST (MB)|\n|13|GST + PST (BC) Non-Recoverable|\n|14|GST + PST (SK) Non-Recoverable|\n|15|GST + RST (MB) Non-Recoverable|
@@ -29,34 +29,34 @@ public class TaxassignmentAutocompleteElementResp {
     public Integer pkiTaxassignmentID { get; set; }
 
     /**
-     * Whether the Taxassignment is active or not
-     * @return bTaxassignmentIsactive
+     * The description of the Taxassignment  in the language of the requester
+     * @return sTaxassignmentDescriptionX
      */
-    public Boolean bTaxassignmentIsactive { get; set; }
+    public String sTaxassignmentDescriptionX { get; set; }
 
     public static TaxassignmentAutocompleteElementResp getExample() {
         TaxassignmentAutocompleteElementResp taxassignmentAutocompleteElementResponse = new TaxassignmentAutocompleteElementResp();
-          taxassignmentAutocompleteElementResponse.sTaxassignmentDescriptionX = 'Default';
-          taxassignmentAutocompleteElementResponse.pkiTaxassignmentID = 1;
           taxassignmentAutocompleteElementResponse.bTaxassignmentIsactive = true;
+          taxassignmentAutocompleteElementResponse.pkiTaxassignmentID = 1;
+          taxassignmentAutocompleteElementResponse.sTaxassignmentDescriptionX = 'Default';
         return taxassignmentAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof TaxassignmentAutocompleteElementResp) {           
             TaxassignmentAutocompleteElementResp taxassignmentAutocompleteElementResponse = (TaxassignmentAutocompleteElementResp) obj;
-            return this.sTaxassignmentDescriptionX == taxassignmentAutocompleteElementResponse.sTaxassignmentDescriptionX
+            return this.bTaxassignmentIsactive == taxassignmentAutocompleteElementResponse.bTaxassignmentIsactive
                 && this.pkiTaxassignmentID == taxassignmentAutocompleteElementResponse.pkiTaxassignmentID
-                && this.bTaxassignmentIsactive == taxassignmentAutocompleteElementResponse.bTaxassignmentIsactive;
+                && this.sTaxassignmentDescriptionX == taxassignmentAutocompleteElementResponse.sTaxassignmentDescriptionX;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sTaxassignmentDescriptionX == null ? 0 : System.hashCode(sTaxassignmentDescriptionX));
-        hashCode = (17 * hashCode) + (pkiTaxassignmentID == null ? 0 : System.hashCode(pkiTaxassignmentID));
         hashCode = (17 * hashCode) + (bTaxassignmentIsactive == null ? 0 : System.hashCode(bTaxassignmentIsactive));
+        hashCode = (17 * hashCode) + (pkiTaxassignmentID == null ? 0 : System.hashCode(pkiTaxassignmentID));
+        hashCode = (17 * hashCode) + (sTaxassignmentDescriptionX == null ? 0 : System.hashCode(sTaxassignmentDescriptionX));
         return hashCode;
     }
 }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,12 +13,12 @@
 /**
  * Response for GET /1/object/activesession/getCurrent
  */
-public class ActivesessionGetCurrentV1Response implements CommonResponse {
+public class ActivesessionGetCurrentV1Response {
     /**
-     * Get objDebugPayload
-     * @return objDebugPayload
+     * Get mPayload
+     * @return mPayload
      */
-    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
+    public ActivesessionGetCurrentV1ResponseMPa mPayload { get; set; }
 
     /**
      * Get objDebug
@@ -27,34 +27,34 @@ public class ActivesessionGetCurrentV1Response implements CommonResponse {
     public CommonResponseObjDebug objDebug { get; set; }
 
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objDebugPayload
+     * @return objDebugPayload
      */
-    public ActivesessionGetCurrentV1ResponseMPa mPayload { get; set; }
+    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
 
     public static ActivesessionGetCurrentV1Response getExample() {
         ActivesessionGetCurrentV1Response activesessionGetCurrentV1Response = new ActivesessionGetCurrentV1Response();
-          activesessionGetCurrentV1Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
-          activesessionGetCurrentV1Response.objDebug = CommonResponseObjDebug.getExample();
           activesessionGetCurrentV1Response.mPayload = ActivesessionGetCurrentV1ResponseMPa.getExample();
+          activesessionGetCurrentV1Response.objDebug = CommonResponseObjDebug.getExample();
+          activesessionGetCurrentV1Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
         return activesessionGetCurrentV1Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof ActivesessionGetCurrentV1Response) {           
             ActivesessionGetCurrentV1Response activesessionGetCurrentV1Response = (ActivesessionGetCurrentV1Response) obj;
-            return this.objDebugPayload == activesessionGetCurrentV1Response.objDebugPayload
+            return this.mPayload == activesessionGetCurrentV1Response.mPayload
                 && this.objDebug == activesessionGetCurrentV1Response.objDebug
-                && this.mPayload == activesessionGetCurrentV1Response.mPayload;
+                && this.objDebugPayload == activesessionGetCurrentV1Response.objDebugPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
-        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
         hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         return hashCode;
     }
 }

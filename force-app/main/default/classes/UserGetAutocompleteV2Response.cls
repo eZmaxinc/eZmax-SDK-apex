@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,12 +13,12 @@
 /**
  * Response for GET /2/object/user/getAutocomplete
  */
-public class UserGetAutocompleteV2Response implements CommonResponse {
+public class UserGetAutocompleteV2Response {
     /**
-     * Get objDebugPayload
-     * @return objDebugPayload
+     * Get mPayload
+     * @return mPayload
      */
-    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
+    public UserGetAutocompleteV2ResponseMPayloa mPayload { get; set; }
 
     /**
      * Get objDebug
@@ -27,34 +27,34 @@ public class UserGetAutocompleteV2Response implements CommonResponse {
     public CommonResponseObjDebug objDebug { get; set; }
 
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objDebugPayload
+     * @return objDebugPayload
      */
-    public UserGetAutocompleteV2ResponseMPayloa mPayload { get; set; }
+    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
 
     public static UserGetAutocompleteV2Response getExample() {
         UserGetAutocompleteV2Response userGetAutocompleteV2Response = new UserGetAutocompleteV2Response();
-          userGetAutocompleteV2Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
-          userGetAutocompleteV2Response.objDebug = CommonResponseObjDebug.getExample();
           userGetAutocompleteV2Response.mPayload = UserGetAutocompleteV2ResponseMPayloa.getExample();
+          userGetAutocompleteV2Response.objDebug = CommonResponseObjDebug.getExample();
+          userGetAutocompleteV2Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
         return userGetAutocompleteV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof UserGetAutocompleteV2Response) {           
             UserGetAutocompleteV2Response userGetAutocompleteV2Response = (UserGetAutocompleteV2Response) obj;
-            return this.objDebugPayload == userGetAutocompleteV2Response.objDebugPayload
+            return this.mPayload == userGetAutocompleteV2Response.mPayload
                 && this.objDebug == userGetAutocompleteV2Response.objDebug
-                && this.mPayload == userGetAutocompleteV2Response.mPayload;
+                && this.objDebugPayload == userGetAutocompleteV2Response.objDebugPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
-        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
         hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         return hashCode;
     }
 }

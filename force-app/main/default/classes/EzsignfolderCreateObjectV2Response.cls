@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,12 +13,12 @@
 /**
  * Response for POST /2/object/ezsignfolder
  */
-public class EzsignfolderCreateObjectV2Response implements CommonResponse {
+public class EzsignfolderCreateObjectV2Response {
     /**
-     * Get objDebugPayload
-     * @return objDebugPayload
+     * Get mPayload
+     * @return mPayload
      */
-    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
+    public EzsignfolderCreateObjectV2ResponseMP mPayload { get; set; }
 
     /**
      * Get objDebug
@@ -27,34 +27,34 @@ public class EzsignfolderCreateObjectV2Response implements CommonResponse {
     public CommonResponseObjDebug objDebug { get; set; }
 
     /**
-     * Get mPayload
-     * @return mPayload
+     * Get objDebugPayload
+     * @return objDebugPayload
      */
-    public EzsignfolderCreateObjectV2ResponseMP mPayload { get; set; }
+    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
 
     public static EzsignfolderCreateObjectV2Response getExample() {
         EzsignfolderCreateObjectV2Response ezsignfolderCreateObjectV2Response = new EzsignfolderCreateObjectV2Response();
-          ezsignfolderCreateObjectV2Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
-          ezsignfolderCreateObjectV2Response.objDebug = CommonResponseObjDebug.getExample();
           ezsignfolderCreateObjectV2Response.mPayload = EzsignfolderCreateObjectV2ResponseMP.getExample();
+          ezsignfolderCreateObjectV2Response.objDebug = CommonResponseObjDebug.getExample();
+          ezsignfolderCreateObjectV2Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
         return ezsignfolderCreateObjectV2Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignfolderCreateObjectV2Response) {           
             EzsignfolderCreateObjectV2Response ezsignfolderCreateObjectV2Response = (EzsignfolderCreateObjectV2Response) obj;
-            return this.objDebugPayload == ezsignfolderCreateObjectV2Response.objDebugPayload
+            return this.mPayload == ezsignfolderCreateObjectV2Response.mPayload
                 && this.objDebug == ezsignfolderCreateObjectV2Response.objDebug
-                && this.mPayload == ezsignfolderCreateObjectV2Response.mPayload;
+                && this.objDebugPayload == ezsignfolderCreateObjectV2Response.objDebugPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
-        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
         hashCode = (17 * hashCode) + (mPayload == null ? 0 : System.hashCode(mPayload));
+        hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         return hashCode;
     }
 }

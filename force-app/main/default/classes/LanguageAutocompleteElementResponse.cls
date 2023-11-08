@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,6 +15,12 @@
  */
 public class LanguageAutocompleteElementResponse {
     /**
+     * Whether the Language is active or not
+     * @return bLanguageIsactive
+     */
+    public Boolean bLanguageIsactive { get; set; }
+
+    /**
      * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
      * minimum: 1
      * maximum: 2
@@ -28,35 +34,29 @@ public class LanguageAutocompleteElementResponse {
      */
     public String sLanguageNameX { get; set; }
 
-    /**
-     * Whether the Language is active or not
-     * @return bLanguageIsactive
-     */
-    public Boolean bLanguageIsactive { get; set; }
-
     public static LanguageAutocompleteElementResponse getExample() {
         LanguageAutocompleteElementResponse languageAutocompleteElementResponse = new LanguageAutocompleteElementResponse();
+          languageAutocompleteElementResponse.bLanguageIsactive = true;
           languageAutocompleteElementResponse.pkiLanguageID = 2;
           languageAutocompleteElementResponse.sLanguageNameX = 'English';
-          languageAutocompleteElementResponse.bLanguageIsactive = true;
         return languageAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof LanguageAutocompleteElementResponse) {           
             LanguageAutocompleteElementResponse languageAutocompleteElementResponse = (LanguageAutocompleteElementResponse) obj;
-            return this.pkiLanguageID == languageAutocompleteElementResponse.pkiLanguageID
-                && this.sLanguageNameX == languageAutocompleteElementResponse.sLanguageNameX
-                && this.bLanguageIsactive == languageAutocompleteElementResponse.bLanguageIsactive;
+            return this.bLanguageIsactive == languageAutocompleteElementResponse.bLanguageIsactive
+                && this.pkiLanguageID == languageAutocompleteElementResponse.pkiLanguageID
+                && this.sLanguageNameX == languageAutocompleteElementResponse.sLanguageNameX;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (bLanguageIsactive == null ? 0 : System.hashCode(bLanguageIsactive));
         hashCode = (17 * hashCode) + (pkiLanguageID == null ? 0 : System.hashCode(pkiLanguageID));
         hashCode = (17 * hashCode) + (sLanguageNameX == null ? 0 : System.hashCode(sLanguageNameX));
-        hashCode = (17 * hashCode) + (bLanguageIsactive == null ? 0 : System.hashCode(bLanguageIsactive));
         return hashCode;
     }
 }

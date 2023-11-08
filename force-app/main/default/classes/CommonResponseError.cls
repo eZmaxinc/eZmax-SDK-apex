@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,37 +15,37 @@
  */
 public class CommonResponseError {
     /**
-     * The message giving details about the error
-     * @return sErrorMessage
-     */
-    public String sErrorMessage { get; set; }
-
-    /**
      * Get eErrorCode
      * @return eErrorCode
      */
     public FieldEErrorCode eErrorCode { get; set; }
 
+    /**
+     * The message giving details about the error
+     * @return sErrorMessage
+     */
+    public String sErrorMessage { get; set; }
+
     public static CommonResponseError getExample() {
         CommonResponseError commonResponseError = new CommonResponseError();
-          commonResponseError.sErrorMessage = 'Invalid Signature Headers';
           commonResponseError.eErrorCode = FieldEErrorCode.getExample();
+          commonResponseError.sErrorMessage = 'Invalid Signature Headers';
         return commonResponseError;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof CommonResponseError) {           
             CommonResponseError commonResponseError = (CommonResponseError) obj;
-            return this.sErrorMessage == commonResponseError.sErrorMessage
-                && this.eErrorCode == commonResponseError.eErrorCode;
+            return this.eErrorCode == commonResponseError.eErrorCode
+                && this.sErrorMessage == commonResponseError.sErrorMessage;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sErrorMessage == null ? 0 : System.hashCode(sErrorMessage));
         hashCode = (17 * hashCode) + (eErrorCode == null ? 0 : System.hashCode(eErrorCode));
+        hashCode = (17 * hashCode) + (sErrorMessage == null ? 0 : System.hashCode(sErrorMessage));
         return hashCode;
     }
 }

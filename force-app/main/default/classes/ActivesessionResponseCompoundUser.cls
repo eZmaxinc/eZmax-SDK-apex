@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,11 +15,16 @@
  */
 public class ActivesessionResponseCompoundUser {
     /**
-     * The unique ID of the User
-     * minimum: 0
-     * @return pkiUserID
+     * Whether to use a dark mode interface
+     * @return bUserInterfacedark
      */
-    public Integer pkiUserID { get; set; }
+    public Boolean bUserInterfacedark { get; set; }
+
+    /**
+     * Get eUserEzsignsendreminderfrequency
+     * @return eUserEzsignsendreminderfrequency
+     */
+    public FieldEUserEzsignsendreminderfrequenc eUserEzsignsendreminderfrequency { get; set; }
 
     /**
      * The unique ID of the Timezone
@@ -29,10 +34,38 @@ public class ActivesessionResponseCompoundUser {
     public Integer fkiTimezoneID { get; set; }
 
     /**
+     * The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
+     * minimum: 0
+     * @return iUserInterfacecolor
+     */
+    public Integer iUserInterfacecolor { get; set; }
+
+    /**
+     * The number of rows to return by default in lists
+     * minimum: 5
+     * maximum: 500
+     * @return iUserListresult
+     */
+    public Integer iUserListresult { get; set; }
+
+    /**
+     * The unique ID of the User
+     * minimum: 0
+     * @return pkiUserID
+     */
+    public Integer pkiUserID { get; set; }
+
+    /**
      * The url of the picture used as avatar
      * @return sAvatarUrl
      */
     public String sAvatarUrl { get; set; }
+
+    /**
+     * The email address.
+     * @return sEmailAddress
+     */
+    public String sEmailAddress { get; set; }
 
     /**
      * The first name of the user
@@ -46,83 +79,50 @@ public class ActivesessionResponseCompoundUser {
      */
     public String sUserLastname { get; set; }
 
-    /**
-     * The email address.
-     * @return sEmailAddress
-     */
-    public String sEmailAddress { get; set; }
-
-    /**
-     * Get eUserEzsignsendreminderfrequency
-     * @return eUserEzsignsendreminderfrequency
-     */
-    public FieldEUserEzsignsendreminderfrequenc eUserEzsignsendreminderfrequency { get; set; }
-
-    /**
-     * The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
-     * minimum: 0
-     * @return iUserInterfacecolor
-     */
-    public Integer iUserInterfacecolor { get; set; }
-
-    /**
-     * Whether to use a dark mode interface
-     * @return bUserInterfacedark
-     */
-    public Boolean bUserInterfacedark { get; set; }
-
-    /**
-     * The number of rows to return by default in lists
-     * minimum: 5
-     * maximum: 500
-     * @return iUserListresult
-     */
-    public Integer iUserListresult { get; set; }
-
     public static ActivesessionResponseCompoundUser getExample() {
         ActivesessionResponseCompoundUser activesessionResponseCompoundUser = new ActivesessionResponseCompoundUser();
-          activesessionResponseCompoundUser.pkiUserID = 70;
+          activesessionResponseCompoundUser.bUserInterfacedark = false;
+          activesessionResponseCompoundUser.eUserEzsignsendreminderfrequency = FieldEUserEzsignsendreminderfrequenc.getExample();
           activesessionResponseCompoundUser.fkiTimezoneID = 247;
+          activesessionResponseCompoundUser.iUserInterfacecolor = 3752795;
+          activesessionResponseCompoundUser.iUserListresult = 25;
+          activesessionResponseCompoundUser.pkiUserID = 70;
           activesessionResponseCompoundUser.sAvatarUrl = 'http://www.website.com/avatar.jpg';
+          activesessionResponseCompoundUser.sEmailAddress = 'email@example.com';
           activesessionResponseCompoundUser.sUserFirstname = 'John';
           activesessionResponseCompoundUser.sUserLastname = 'Doe';
-          activesessionResponseCompoundUser.sEmailAddress = 'email@example.com';
-          activesessionResponseCompoundUser.eUserEzsignsendreminderfrequency = FieldEUserEzsignsendreminderfrequenc.getExample();
-          activesessionResponseCompoundUser.iUserInterfacecolor = 3752795;
-          activesessionResponseCompoundUser.bUserInterfacedark = false;
-          activesessionResponseCompoundUser.iUserListresult = 25;
         return activesessionResponseCompoundUser;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof ActivesessionResponseCompoundUser) {           
             ActivesessionResponseCompoundUser activesessionResponseCompoundUser = (ActivesessionResponseCompoundUser) obj;
-            return this.pkiUserID == activesessionResponseCompoundUser.pkiUserID
-                && this.fkiTimezoneID == activesessionResponseCompoundUser.fkiTimezoneID
-                && this.sAvatarUrl == activesessionResponseCompoundUser.sAvatarUrl
-                && this.sUserFirstname == activesessionResponseCompoundUser.sUserFirstname
-                && this.sUserLastname == activesessionResponseCompoundUser.sUserLastname
-                && this.sEmailAddress == activesessionResponseCompoundUser.sEmailAddress
+            return this.bUserInterfacedark == activesessionResponseCompoundUser.bUserInterfacedark
                 && this.eUserEzsignsendreminderfrequency == activesessionResponseCompoundUser.eUserEzsignsendreminderfrequency
+                && this.fkiTimezoneID == activesessionResponseCompoundUser.fkiTimezoneID
                 && this.iUserInterfacecolor == activesessionResponseCompoundUser.iUserInterfacecolor
-                && this.bUserInterfacedark == activesessionResponseCompoundUser.bUserInterfacedark
-                && this.iUserListresult == activesessionResponseCompoundUser.iUserListresult;
+                && this.iUserListresult == activesessionResponseCompoundUser.iUserListresult
+                && this.pkiUserID == activesessionResponseCompoundUser.pkiUserID
+                && this.sAvatarUrl == activesessionResponseCompoundUser.sAvatarUrl
+                && this.sEmailAddress == activesessionResponseCompoundUser.sEmailAddress
+                && this.sUserFirstname == activesessionResponseCompoundUser.sUserFirstname
+                && this.sUserLastname == activesessionResponseCompoundUser.sUserLastname;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (pkiUserID == null ? 0 : System.hashCode(pkiUserID));
+        hashCode = (17 * hashCode) + (bUserInterfacedark == null ? 0 : System.hashCode(bUserInterfacedark));
+        hashCode = (17 * hashCode) + (eUserEzsignsendreminderfrequency == null ? 0 : System.hashCode(eUserEzsignsendreminderfrequency));
         hashCode = (17 * hashCode) + (fkiTimezoneID == null ? 0 : System.hashCode(fkiTimezoneID));
+        hashCode = (17 * hashCode) + (iUserInterfacecolor == null ? 0 : System.hashCode(iUserInterfacecolor));
+        hashCode = (17 * hashCode) + (iUserListresult == null ? 0 : System.hashCode(iUserListresult));
+        hashCode = (17 * hashCode) + (pkiUserID == null ? 0 : System.hashCode(pkiUserID));
         hashCode = (17 * hashCode) + (sAvatarUrl == null ? 0 : System.hashCode(sAvatarUrl));
+        hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
         hashCode = (17 * hashCode) + (sUserFirstname == null ? 0 : System.hashCode(sUserFirstname));
         hashCode = (17 * hashCode) + (sUserLastname == null ? 0 : System.hashCode(sUserLastname));
-        hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
-        hashCode = (17 * hashCode) + (eUserEzsignsendreminderfrequency == null ? 0 : System.hashCode(eUserEzsignsendreminderfrequency));
-        hashCode = (17 * hashCode) + (iUserInterfacecolor == null ? 0 : System.hashCode(iUserInterfacecolor));
-        hashCode = (17 * hashCode) + (bUserInterfacedark == null ? 0 : System.hashCode(bUserInterfacedark));
-        hashCode = (17 * hashCode) + (iUserListresult == null ? 0 : System.hashCode(iUserListresult));
         return hashCode;
     }
 }

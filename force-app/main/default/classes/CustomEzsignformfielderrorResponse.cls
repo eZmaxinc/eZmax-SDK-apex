@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,16 +15,16 @@
  */
 public class CustomEzsignformfielderrorResponse implements OAS.MappedProperties {
     /**
-     * The Label for the Ezsignformfield
-     * @return sEzsignformfieldLabel
-     */
-    public String sEzsignformfieldLabel { get; set; }
-
-    /**
      * 
      * @return aObjEzsignformfielderrortest
      */
     public List<CustomEzsignformfielderrortestRespon> aObjEzsignformfielderrortest { get; set; }
+
+    /**
+     * The Label for the Ezsignformfield
+     * @return sEzsignformfieldLabel
+     */
+    public String sEzsignformfieldLabel { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignformfielderrortest' => 'aObjEzsignformfielderrortest'
@@ -40,24 +40,24 @@ public class CustomEzsignformfielderrorResponse implements OAS.MappedProperties 
 
     public static CustomEzsignformfielderrorResponse getExample() {
         CustomEzsignformfielderrorResponse customEzsignformfielderrorResponse = new CustomEzsignformfielderrorResponse();
-          customEzsignformfielderrorResponse.sEzsignformfieldLabel = 'Peanuts';
           customEzsignformfielderrorResponse.aObjEzsignformfielderrortest = new List<CustomEzsignformfielderrortestRespon>{CustomEzsignformfielderrortestRespon.getExample()};
+          customEzsignformfielderrorResponse.sEzsignformfieldLabel = 'Peanuts';
         return customEzsignformfielderrorResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof CustomEzsignformfielderrorResponse) {           
             CustomEzsignformfielderrorResponse customEzsignformfielderrorResponse = (CustomEzsignformfielderrorResponse) obj;
-            return this.sEzsignformfieldLabel == customEzsignformfielderrorResponse.sEzsignformfieldLabel
-                && this.aObjEzsignformfielderrortest == customEzsignformfielderrorResponse.aObjEzsignformfielderrortest;
+            return this.aObjEzsignformfielderrortest == customEzsignformfielderrorResponse.aObjEzsignformfielderrortest
+                && this.sEzsignformfieldLabel == customEzsignformfielderrorResponse.sEzsignformfieldLabel;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sEzsignformfieldLabel == null ? 0 : System.hashCode(sEzsignformfieldLabel));
         hashCode = (17 * hashCode) + (aObjEzsignformfielderrortest == null ? 0 : System.hashCode(aObjEzsignformfielderrortest));
+        hashCode = (17 * hashCode) + (sEzsignformfieldLabel == null ? 0 : System.hashCode(sEzsignformfieldLabel));
         return hashCode;
     }
 }

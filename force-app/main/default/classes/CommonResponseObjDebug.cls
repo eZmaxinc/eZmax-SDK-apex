@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,6 +15,24 @@
  */
 public class CommonResponseObjDebug implements OAS.MappedProperties {
     /**
+     * An array of the SQL Queries that were executed during the API request execution
+     * @return aObjSQLQuery
+     */
+    public List<CommonResponseObjSQLQuery> aObjSQLQuery { get; set; }
+
+    /**
+     * The number of SQL INSERT/UPDATE/DELETE queries that were sent to the database server during the API request execution
+     * @return iSQLQueries
+     */
+    public Integer iSQLQueries { get; set; }
+
+    /**
+     * The number of SQL SELECT queries that were sent to the database server during the API request execution
+     * @return iSQLSelects
+     */
+    public Integer iSQLSelects { get; set; }
+
+    /**
      * The peak memory allocated during the API request execution. Formatted as a human readable string
      * @return sMemoryUsage
      */
@@ -25,24 +43,6 @@ public class CommonResponseObjDebug implements OAS.MappedProperties {
      * @return sRunTime
      */
     public String sRunTime { get; set; }
-
-    /**
-     * The number of SQL SELECT queries that were sent to the database server during the API request execution
-     * @return iSQLSelects
-     */
-    public Integer iSQLSelects { get; set; }
-
-    /**
-     * The number of SQL INSERT/UPDATE/DELETE queries that were sent to the database server during the API request execution
-     * @return iSQLQueries
-     */
-    public Integer iSQLQueries { get; set; }
-
-    /**
-     * An array of the SQL Queries that were executed during the API request execution
-     * @return aObjSQLQuery
-     */
-    public List<CommonResponseObjSQLQuery> aObjSQLQuery { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objSQLQuery' => 'aObjSQLQuery'
@@ -58,33 +58,33 @@ public class CommonResponseObjDebug implements OAS.MappedProperties {
 
     public static CommonResponseObjDebug getExample() {
         CommonResponseObjDebug commonResponseObjDebug = new CommonResponseObjDebug();
+          commonResponseObjDebug.aObjSQLQuery = new List<CommonResponseObjSQLQuery>{CommonResponseObjSQLQuery.getExample()};
+          commonResponseObjDebug.iSQLQueries = 0;
+          commonResponseObjDebug.iSQLSelects = 0;
           commonResponseObjDebug.sMemoryUsage = '';
           commonResponseObjDebug.sRunTime = '';
-          commonResponseObjDebug.iSQLSelects = 0;
-          commonResponseObjDebug.iSQLQueries = 0;
-          commonResponseObjDebug.aObjSQLQuery = new List<CommonResponseObjSQLQuery>{CommonResponseObjSQLQuery.getExample()};
         return commonResponseObjDebug;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof CommonResponseObjDebug) {           
             CommonResponseObjDebug commonResponseObjDebug = (CommonResponseObjDebug) obj;
-            return this.sMemoryUsage == commonResponseObjDebug.sMemoryUsage
-                && this.sRunTime == commonResponseObjDebug.sRunTime
-                && this.iSQLSelects == commonResponseObjDebug.iSQLSelects
+            return this.aObjSQLQuery == commonResponseObjDebug.aObjSQLQuery
                 && this.iSQLQueries == commonResponseObjDebug.iSQLQueries
-                && this.aObjSQLQuery == commonResponseObjDebug.aObjSQLQuery;
+                && this.iSQLSelects == commonResponseObjDebug.iSQLSelects
+                && this.sMemoryUsage == commonResponseObjDebug.sMemoryUsage
+                && this.sRunTime == commonResponseObjDebug.sRunTime;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (aObjSQLQuery == null ? 0 : System.hashCode(aObjSQLQuery));
+        hashCode = (17 * hashCode) + (iSQLQueries == null ? 0 : System.hashCode(iSQLQueries));
+        hashCode = (17 * hashCode) + (iSQLSelects == null ? 0 : System.hashCode(iSQLSelects));
         hashCode = (17 * hashCode) + (sMemoryUsage == null ? 0 : System.hashCode(sMemoryUsage));
         hashCode = (17 * hashCode) + (sRunTime == null ? 0 : System.hashCode(sRunTime));
-        hashCode = (17 * hashCode) + (iSQLSelects == null ? 0 : System.hashCode(iSQLSelects));
-        hashCode = (17 * hashCode) + (iSQLQueries == null ? 0 : System.hashCode(iSQLQueries));
-        hashCode = (17 * hashCode) + (aObjSQLQuery == null ? 0 : System.hashCode(aObjSQLQuery));
         return hashCode;
     }
 }

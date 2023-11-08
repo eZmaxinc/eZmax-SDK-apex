@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,6 +15,12 @@
  */
 public class UserlogintypeAutocompleteElementResp {
     /**
+     * Whether the Userlogintype is active or not
+     * @return bUserlogintypeIsactive
+     */
+    public Boolean bUserlogintypeIsactive { get; set; }
+
+    /**
      * The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n|-|-|-|\n|1|**Email Only**|The Ezsignsigner will receive a secure link by email|\n|2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|\n|3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|\n|4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won\'t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|\n|5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
      * minimum: 0
      * @return pkiUserlogintypeID
@@ -27,35 +33,29 @@ public class UserlogintypeAutocompleteElementResp {
      */
     public String sUserlogintypeDescriptionX { get; set; }
 
-    /**
-     * Whether the Userlogintype is active or not
-     * @return bUserlogintypeIsactive
-     */
-    public Boolean bUserlogintypeIsactive { get; set; }
-
     public static UserlogintypeAutocompleteElementResp getExample() {
         UserlogintypeAutocompleteElementResp userlogintypeAutocompleteElementResponse = new UserlogintypeAutocompleteElementResp();
+          userlogintypeAutocompleteElementResponse.bUserlogintypeIsactive = true;
           userlogintypeAutocompleteElementResponse.pkiUserlogintypeID = 2;
           userlogintypeAutocompleteElementResponse.sUserlogintypeDescriptionX = 'Email and phone or SMS';
-          userlogintypeAutocompleteElementResponse.bUserlogintypeIsactive = true;
         return userlogintypeAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof UserlogintypeAutocompleteElementResp) {           
             UserlogintypeAutocompleteElementResp userlogintypeAutocompleteElementResponse = (UserlogintypeAutocompleteElementResp) obj;
-            return this.pkiUserlogintypeID == userlogintypeAutocompleteElementResponse.pkiUserlogintypeID
-                && this.sUserlogintypeDescriptionX == userlogintypeAutocompleteElementResponse.sUserlogintypeDescriptionX
-                && this.bUserlogintypeIsactive == userlogintypeAutocompleteElementResponse.bUserlogintypeIsactive;
+            return this.bUserlogintypeIsactive == userlogintypeAutocompleteElementResponse.bUserlogintypeIsactive
+                && this.pkiUserlogintypeID == userlogintypeAutocompleteElementResponse.pkiUserlogintypeID
+                && this.sUserlogintypeDescriptionX == userlogintypeAutocompleteElementResponse.sUserlogintypeDescriptionX;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (bUserlogintypeIsactive == null ? 0 : System.hashCode(bUserlogintypeIsactive));
         hashCode = (17 * hashCode) + (pkiUserlogintypeID == null ? 0 : System.hashCode(pkiUserlogintypeID));
         hashCode = (17 * hashCode) + (sUserlogintypeDescriptionX == null ? 0 : System.hashCode(sUserlogintypeDescriptionX));
-        hashCode = (17 * hashCode) + (bUserlogintypeIsactive == null ? 0 : System.hashCode(bUserlogintypeIsactive));
         return hashCode;
     }
 }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,18 +13,42 @@
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-public class ActivesessionGetCurrentV1ResponseMPa implements ActivesessionResponseCompound, OAS.MappedProperties {
+public class ActivesessionGetCurrentV1ResponseMPa implements OAS.MappedProperties {
     /**
-     * Get eActivesessionUsertype
-     * @return eActivesessionUsertype
+     * An Array of Registered modules.\n\nThese are the modules that are Licensed to be used by the User or the API Key.
+     * @return aEModuleInternalname
      */
-    public FieldEActivesessionUsertype eActivesessionUsertype { get; set; }
+    public List<String> aEModuleInternalname { get; set; }
+
+    /**
+     * An array of permissions granted to the user or api key
+     * @return aPkiPermissionID
+     */
+    public List<Integer> aPkiPermissionID { get; set; }
+
+    /**
+     * Whether the active session is in debug or not
+     * @return bActivesessionDebug
+     */
+    public Boolean bActivesessionDebug { get; set; }
+
+    /**
+     * Whether the active session is superadmin or not
+     * @return bActivesessionIssuperadmin
+     */
+    public Boolean bActivesessionIssuperadmin { get; set; }
 
     /**
      * Get eActivesessionOrigin
      * @return eActivesessionOrigin
      */
     public FieldEActivesessionOrigin eActivesessionOrigin { get; set; }
+
+    /**
+     * Get eActivesessionUsertype
+     * @return eActivesessionUsertype
+     */
+    public FieldEActivesessionUsertype eActivesessionUsertype { get; set; }
 
     /**
      * Get eActivesessionWeekdaystart
@@ -41,6 +65,45 @@ public class ActivesessionGetCurrentV1ResponseMPa implements ActivesessionRespon
     public Integer fkiLanguageID { get; set; }
 
     /**
+     * The unique ID of the Signature
+     * minimum: 0
+     * maximum: 16777215
+     * @return fkiSignatureID
+     */
+    public Integer fkiSignatureID { get; set; }
+
+    /**
+     * The unique ID of the Systemconfigurationtype
+     * minimum: 1
+     * @return fkiSystemconfigurationtypeID
+     */
+    public Integer fkiSystemconfigurationtypeID { get; set; }
+
+    /**
+     * Get objApikey
+     * @return objApikey
+     */
+    public ActivesessionResponseCompoundApikey objApikey { get; set; }
+
+    /**
+     * Get objUserCloned
+     * @return objUserCloned
+     */
+    public ActivesessionResponseCompoundUser objUserCloned { get; set; }
+
+    /**
+     * Get objUserReal
+     * @return objUserReal
+     */
+    public ActivesessionResponseCompoundUser objUserReal { get; set; }
+
+    /**
+     * The customer code assigned to your account
+     * @return pksCustomerCode
+     */
+    public String pksCustomerCode { get; set; }
+
+    /**
      * The Name of the Company in the language of the requester
      * @return sCompanyNameX
      */
@@ -52,72 +115,9 @@ public class ActivesessionGetCurrentV1ResponseMPa implements ActivesessionRespon
      */
     public String sDepartmentNameX { get; set; }
 
-    /**
-     * Whether the active session is in debug or not
-     * @return bActivesessionDebug
-     */
-    public Boolean bActivesessionDebug { get; set; }
-
-    /**
-     * Whether the active session is superadmin or not
-     * @return bActivesessionIssuperadmin
-     */
-    public Boolean bActivesessionIssuperadmin { get; set; }
-
-    /**
-     * The customer code assigned to your account
-     * @return pksCustomerCode
-     */
-    public String pksCustomerCode { get; set; }
-
-    /**
-     * The unique ID of the Systemconfigurationtype
-     * minimum: 1
-     * @return fkiSystemconfigurationtypeID
-     */
-    public Integer fkiSystemconfigurationtypeID { get; set; }
-
-    /**
-     * The unique ID of the Signature
-     * minimum: 0
-     * maximum: 16777215
-     * @return fkiSignatureID
-     */
-    public Integer fkiSignatureID { get; set; }
-
-    /**
-     * An array of permissions granted to the user or api key
-     * @return aPkiPermissionID
-     */
-    public List<Integer> aPkiPermissionID { get; set; }
-
-    /**
-     * Get objUserReal
-     * @return objUserReal
-     */
-    public ActivesessionResponseCompoundUser objUserReal { get; set; }
-
-    /**
-     * Get objUserCloned
-     * @return objUserCloned
-     */
-    public ActivesessionResponseCompoundUser objUserCloned { get; set; }
-
-    /**
-     * Get objApikey
-     * @return objApikey
-     */
-    public ActivesessionResponseCompoundApikey objApikey { get; set; }
-
-    /**
-     * An Array of Registered modules.\n\nThese are the modules that are Licensed to be used by the User or the API Key.
-     * @return aEModuleInternalname
-     */
-    public List<String> aEModuleInternalname { get; set; }
-
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_pkiPermissionID' => 'aPkiPermissionID',
-        'a_eModuleInternalname' => 'aEModuleInternalname'
+        'a_eModuleInternalname' => 'aEModuleInternalname',
+        'a_pkiPermissionID' => 'aPkiPermissionID'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -125,8 +125,8 @@ public class ActivesessionGetCurrentV1ResponseMPa implements ActivesessionRespon
     }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
-        'a_pkiPermissionID' => 'aPkiPermissionID',
-        'a_eModuleInternalname' => 'aEModuleInternalname'
+        'a_eModuleInternalname' => 'aEModuleInternalname',
+        'a_pkiPermissionID' => 'aPkiPermissionID'
     };
 
     public Map<String, String> getPropertyMappings() {
@@ -134,72 +134,72 @@ public class ActivesessionGetCurrentV1ResponseMPa implements ActivesessionRespon
     }
 
     public ActivesessionGetCurrentV1ResponseMPa() {
-        aPkiPermissionID = new List<Integer>();
         aEModuleInternalname = new List<String>();
+        aPkiPermissionID = new List<Integer>();
     }
 
     public static ActivesessionGetCurrentV1ResponseMPa getExample() {
         ActivesessionGetCurrentV1ResponseMPa activesessionGetCurrentV1ResponseMPayload = new ActivesessionGetCurrentV1ResponseMPa();
-          activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype = FieldEActivesessionUsertype.getExample();
-          activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin = FieldEActivesessionOrigin.getExample();
-          activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart = FieldEActivesessionWeekdaystart.getExample();
-          activesessionGetCurrentV1ResponseMPayload.fkiLanguageID = 2;
-          activesessionGetCurrentV1ResponseMPayload.sCompanyNameX = 'Acme inc.';
-          activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX = 'Head Office';
+          activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname = new List<String>{String.getExample()};
+          activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID = new List<Integer>{Integer.getExample()};
           activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug = false;
           activesessionGetCurrentV1ResponseMPayload.bActivesessionIssuperadmin = false;
-          activesessionGetCurrentV1ResponseMPayload.pksCustomerCode = 'demo';
-          activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID = 28;
+          activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin = FieldEActivesessionOrigin.getExample();
+          activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype = FieldEActivesessionUsertype.getExample();
+          activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart = FieldEActivesessionWeekdaystart.getExample();
+          activesessionGetCurrentV1ResponseMPayload.fkiLanguageID = 2;
           activesessionGetCurrentV1ResponseMPayload.fkiSignatureID = 12;
-          activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID = new List<Integer>{Integer.getExample()};
-          activesessionGetCurrentV1ResponseMPayload.objUserReal = ActivesessionResponseCompoundUser.getExample();
-          activesessionGetCurrentV1ResponseMPayload.objUserCloned = ActivesessionResponseCompoundUser.getExample();
+          activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID = 28;
           activesessionGetCurrentV1ResponseMPayload.objApikey = ActivesessionResponseCompoundApikey.getExample();
-          activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname = new List<String>{String.getExample()};
+          activesessionGetCurrentV1ResponseMPayload.objUserCloned = ActivesessionResponseCompoundUser.getExample();
+          activesessionGetCurrentV1ResponseMPayload.objUserReal = ActivesessionResponseCompoundUser.getExample();
+          activesessionGetCurrentV1ResponseMPayload.pksCustomerCode = 'demo';
+          activesessionGetCurrentV1ResponseMPayload.sCompanyNameX = 'Acme inc.';
+          activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX = 'Head Office';
         return activesessionGetCurrentV1ResponseMPayload;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof ActivesessionGetCurrentV1ResponseMPa) {           
             ActivesessionGetCurrentV1ResponseMPa activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPa) obj;
-            return this.eActivesessionUsertype == activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype
-                && this.eActivesessionOrigin == activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin
-                && this.eActivesessionWeekdaystart == activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart
-                && this.fkiLanguageID == activesessionGetCurrentV1ResponseMPayload.fkiLanguageID
-                && this.sCompanyNameX == activesessionGetCurrentV1ResponseMPayload.sCompanyNameX
-                && this.sDepartmentNameX == activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX
+            return this.aEModuleInternalname == activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname
+                && this.aPkiPermissionID == activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID
                 && this.bActivesessionDebug == activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug
                 && this.bActivesessionIssuperadmin == activesessionGetCurrentV1ResponseMPayload.bActivesessionIssuperadmin
-                && this.pksCustomerCode == activesessionGetCurrentV1ResponseMPayload.pksCustomerCode
-                && this.fkiSystemconfigurationtypeID == activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID
+                && this.eActivesessionOrigin == activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin
+                && this.eActivesessionUsertype == activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype
+                && this.eActivesessionWeekdaystart == activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart
+                && this.fkiLanguageID == activesessionGetCurrentV1ResponseMPayload.fkiLanguageID
                 && this.fkiSignatureID == activesessionGetCurrentV1ResponseMPayload.fkiSignatureID
-                && this.aPkiPermissionID == activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID
-                && this.objUserReal == activesessionGetCurrentV1ResponseMPayload.objUserReal
-                && this.objUserCloned == activesessionGetCurrentV1ResponseMPayload.objUserCloned
+                && this.fkiSystemconfigurationtypeID == activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID
                 && this.objApikey == activesessionGetCurrentV1ResponseMPayload.objApikey
-                && this.aEModuleInternalname == activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname;
+                && this.objUserCloned == activesessionGetCurrentV1ResponseMPayload.objUserCloned
+                && this.objUserReal == activesessionGetCurrentV1ResponseMPayload.objUserReal
+                && this.pksCustomerCode == activesessionGetCurrentV1ResponseMPayload.pksCustomerCode
+                && this.sCompanyNameX == activesessionGetCurrentV1ResponseMPayload.sCompanyNameX
+                && this.sDepartmentNameX == activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (eActivesessionUsertype == null ? 0 : System.hashCode(eActivesessionUsertype));
-        hashCode = (17 * hashCode) + (eActivesessionOrigin == null ? 0 : System.hashCode(eActivesessionOrigin));
-        hashCode = (17 * hashCode) + (eActivesessionWeekdaystart == null ? 0 : System.hashCode(eActivesessionWeekdaystart));
-        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
-        hashCode = (17 * hashCode) + (sCompanyNameX == null ? 0 : System.hashCode(sCompanyNameX));
-        hashCode = (17 * hashCode) + (sDepartmentNameX == null ? 0 : System.hashCode(sDepartmentNameX));
+        hashCode = (17 * hashCode) + (aEModuleInternalname == null ? 0 : System.hashCode(aEModuleInternalname));
+        hashCode = (17 * hashCode) + (aPkiPermissionID == null ? 0 : System.hashCode(aPkiPermissionID));
         hashCode = (17 * hashCode) + (bActivesessionDebug == null ? 0 : System.hashCode(bActivesessionDebug));
         hashCode = (17 * hashCode) + (bActivesessionIssuperadmin == null ? 0 : System.hashCode(bActivesessionIssuperadmin));
-        hashCode = (17 * hashCode) + (pksCustomerCode == null ? 0 : System.hashCode(pksCustomerCode));
-        hashCode = (17 * hashCode) + (fkiSystemconfigurationtypeID == null ? 0 : System.hashCode(fkiSystemconfigurationtypeID));
+        hashCode = (17 * hashCode) + (eActivesessionOrigin == null ? 0 : System.hashCode(eActivesessionOrigin));
+        hashCode = (17 * hashCode) + (eActivesessionUsertype == null ? 0 : System.hashCode(eActivesessionUsertype));
+        hashCode = (17 * hashCode) + (eActivesessionWeekdaystart == null ? 0 : System.hashCode(eActivesessionWeekdaystart));
+        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (fkiSignatureID == null ? 0 : System.hashCode(fkiSignatureID));
-        hashCode = (17 * hashCode) + (aPkiPermissionID == null ? 0 : System.hashCode(aPkiPermissionID));
-        hashCode = (17 * hashCode) + (objUserReal == null ? 0 : System.hashCode(objUserReal));
-        hashCode = (17 * hashCode) + (objUserCloned == null ? 0 : System.hashCode(objUserCloned));
+        hashCode = (17 * hashCode) + (fkiSystemconfigurationtypeID == null ? 0 : System.hashCode(fkiSystemconfigurationtypeID));
         hashCode = (17 * hashCode) + (objApikey == null ? 0 : System.hashCode(objApikey));
-        hashCode = (17 * hashCode) + (aEModuleInternalname == null ? 0 : System.hashCode(aEModuleInternalname));
+        hashCode = (17 * hashCode) + (objUserCloned == null ? 0 : System.hashCode(objUserCloned));
+        hashCode = (17 * hashCode) + (objUserReal == null ? 0 : System.hashCode(objUserReal));
+        hashCode = (17 * hashCode) + (pksCustomerCode == null ? 0 : System.hashCode(pksCustomerCode));
+        hashCode = (17 * hashCode) + (sCompanyNameX == null ? 0 : System.hashCode(sCompanyNameX));
+        hashCode = (17 * hashCode) + (sDepartmentNameX == null ? 0 : System.hashCode(sDepartmentNameX));
         return hashCode;
     }
 }

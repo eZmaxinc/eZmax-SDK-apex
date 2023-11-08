@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,16 +15,22 @@
  */
 public class EzsigntemplatepackageAutocompleteEle {
     /**
+     * Indicates if the element is disabled in the context
+     * @return bDisabled
+     */
+    public Boolean bDisabled { get; set; }
+
+    /**
+     * Whether the Ezsigntemplatepackage is active or not
+     * @return bEzsigntemplatepackageIsactive
+     */
+    public Boolean bEzsigntemplatepackageIsactive { get; set; }
+
+    /**
      * Get eEzsignfoldertypePrivacylevel
      * @return eEzsignfoldertypePrivacylevel
      */
     public FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel { get; set; }
-
-    /**
-     * The description of the Ezsigntemplatepackage
-     * @return sEzsigntemplatepackageDescription
-     */
-    public String sEzsigntemplatepackageDescription { get; set; }
 
     /**
      * The unique ID of the Ezsigntemplatepackage
@@ -34,46 +40,40 @@ public class EzsigntemplatepackageAutocompleteEle {
     public Integer pkiEzsigntemplatepackageID { get; set; }
 
     /**
-     * Whether the Ezsigntemplatepackage is active or not
-     * @return bEzsigntemplatepackageIsactive
+     * The description of the Ezsigntemplatepackage
+     * @return sEzsigntemplatepackageDescription
      */
-    public Boolean bEzsigntemplatepackageIsactive { get; set; }
-
-    /**
-     * Indicates if the element is disabled in the context
-     * @return bDisabled
-     */
-    public Boolean bDisabled { get; set; }
+    public String sEzsigntemplatepackageDescription { get; set; }
 
     public static EzsigntemplatepackageAutocompleteEle getExample() {
         EzsigntemplatepackageAutocompleteEle ezsigntemplatepackageAutocompleteElementResponse = new EzsigntemplatepackageAutocompleteEle();
-          ezsigntemplatepackageAutocompleteElementResponse.eEzsignfoldertypePrivacylevel = FieldEEzsignfoldertypePrivacylevel.getExample();
-          ezsigntemplatepackageAutocompleteElementResponse.sEzsigntemplatepackageDescription = 'Package for new clients';
-          ezsigntemplatepackageAutocompleteElementResponse.pkiEzsigntemplatepackageID = 99;
-          ezsigntemplatepackageAutocompleteElementResponse.bEzsigntemplatepackageIsactive = true;
           ezsigntemplatepackageAutocompleteElementResponse.bDisabled = true;
+          ezsigntemplatepackageAutocompleteElementResponse.bEzsigntemplatepackageIsactive = true;
+          ezsigntemplatepackageAutocompleteElementResponse.eEzsignfoldertypePrivacylevel = FieldEEzsignfoldertypePrivacylevel.getExample();
+          ezsigntemplatepackageAutocompleteElementResponse.pkiEzsigntemplatepackageID = 99;
+          ezsigntemplatepackageAutocompleteElementResponse.sEzsigntemplatepackageDescription = 'Package for new clients';
         return ezsigntemplatepackageAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsigntemplatepackageAutocompleteEle) {           
             EzsigntemplatepackageAutocompleteEle ezsigntemplatepackageAutocompleteElementResponse = (EzsigntemplatepackageAutocompleteEle) obj;
-            return this.eEzsignfoldertypePrivacylevel == ezsigntemplatepackageAutocompleteElementResponse.eEzsignfoldertypePrivacylevel
-                && this.sEzsigntemplatepackageDescription == ezsigntemplatepackageAutocompleteElementResponse.sEzsigntemplatepackageDescription
-                && this.pkiEzsigntemplatepackageID == ezsigntemplatepackageAutocompleteElementResponse.pkiEzsigntemplatepackageID
+            return this.bDisabled == ezsigntemplatepackageAutocompleteElementResponse.bDisabled
                 && this.bEzsigntemplatepackageIsactive == ezsigntemplatepackageAutocompleteElementResponse.bEzsigntemplatepackageIsactive
-                && this.bDisabled == ezsigntemplatepackageAutocompleteElementResponse.bDisabled;
+                && this.eEzsignfoldertypePrivacylevel == ezsigntemplatepackageAutocompleteElementResponse.eEzsignfoldertypePrivacylevel
+                && this.pkiEzsigntemplatepackageID == ezsigntemplatepackageAutocompleteElementResponse.pkiEzsigntemplatepackageID
+                && this.sEzsigntemplatepackageDescription == ezsigntemplatepackageAutocompleteElementResponse.sEzsigntemplatepackageDescription;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (eEzsignfoldertypePrivacylevel == null ? 0 : System.hashCode(eEzsignfoldertypePrivacylevel));
-        hashCode = (17 * hashCode) + (sEzsigntemplatepackageDescription == null ? 0 : System.hashCode(sEzsigntemplatepackageDescription));
-        hashCode = (17 * hashCode) + (pkiEzsigntemplatepackageID == null ? 0 : System.hashCode(pkiEzsigntemplatepackageID));
-        hashCode = (17 * hashCode) + (bEzsigntemplatepackageIsactive == null ? 0 : System.hashCode(bEzsigntemplatepackageIsactive));
         hashCode = (17 * hashCode) + (bDisabled == null ? 0 : System.hashCode(bDisabled));
+        hashCode = (17 * hashCode) + (bEzsigntemplatepackageIsactive == null ? 0 : System.hashCode(bEzsigntemplatepackageIsactive));
+        hashCode = (17 * hashCode) + (eEzsignfoldertypePrivacylevel == null ? 0 : System.hashCode(eEzsignfoldertypePrivacylevel));
+        hashCode = (17 * hashCode) + (pkiEzsigntemplatepackageID == null ? 0 : System.hashCode(pkiEzsigntemplatepackageID));
+        hashCode = (17 * hashCode) + (sEzsigntemplatepackageDescription == null ? 0 : System.hashCode(sEzsigntemplatepackageDescription));
         return hashCode;
     }
 }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,12 +13,12 @@
 /**
  * Generic Error Message
  */
-public class CommonResponseErrorEzsignformValidat implements CommonResponseError, OAS.MappedProperties {
+public class CommonResponseErrorEzsignformValidat implements OAS.MappedProperties {
     /**
-     * The message giving details about the error
-     * @return sErrorMessage
+     * 
+     * @return aObjEzsignformfielderror
      */
-    public String sErrorMessage { get; set; }
+    public List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror { get; set; }
 
     /**
      * Get eErrorCode
@@ -27,10 +27,10 @@ public class CommonResponseErrorEzsignformValidat implements CommonResponseError
     public FieldEErrorCode eErrorCode { get; set; }
 
     /**
-     * 
-     * @return aObjEzsignformfielderror
+     * The message giving details about the error
+     * @return sErrorMessage
      */
-    public List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror { get; set; }
+    public String sErrorMessage { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_objEzsignformfielderror' => 'aObjEzsignformfielderror'
@@ -46,27 +46,27 @@ public class CommonResponseErrorEzsignformValidat implements CommonResponseError
 
     public static CommonResponseErrorEzsignformValidat getExample() {
         CommonResponseErrorEzsignformValidat commonResponseErrorEzsignformValidation = new CommonResponseErrorEzsignformValidat();
-          commonResponseErrorEzsignformValidation.sErrorMessage = 'Invalid Signature Headers';
-          commonResponseErrorEzsignformValidation.eErrorCode = FieldEErrorCode.getExample();
           commonResponseErrorEzsignformValidation.aObjEzsignformfielderror = new List<CustomEzsignformfielderrorResponse>{CustomEzsignformfielderrorResponse.getExample()};
+          commonResponseErrorEzsignformValidation.eErrorCode = FieldEErrorCode.getExample();
+          commonResponseErrorEzsignformValidation.sErrorMessage = 'Invalid Signature Headers';
         return commonResponseErrorEzsignformValidation;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof CommonResponseErrorEzsignformValidat) {           
             CommonResponseErrorEzsignformValidat commonResponseErrorEzsignformValidation = (CommonResponseErrorEzsignformValidat) obj;
-            return this.sErrorMessage == commonResponseErrorEzsignformValidation.sErrorMessage
+            return this.aObjEzsignformfielderror == commonResponseErrorEzsignformValidation.aObjEzsignformfielderror
                 && this.eErrorCode == commonResponseErrorEzsignformValidation.eErrorCode
-                && this.aObjEzsignformfielderror == commonResponseErrorEzsignformValidation.aObjEzsignformfielderror;
+                && this.sErrorMessage == commonResponseErrorEzsignformValidation.sErrorMessage;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sErrorMessage == null ? 0 : System.hashCode(sErrorMessage));
-        hashCode = (17 * hashCode) + (eErrorCode == null ? 0 : System.hashCode(eErrorCode));
         hashCode = (17 * hashCode) + (aObjEzsignformfielderror == null ? 0 : System.hashCode(aObjEzsignformfielderror));
+        hashCode = (17 * hashCode) + (eErrorCode == null ? 0 : System.hashCode(eErrorCode));
+        hashCode = (17 * hashCode) + (sErrorMessage == null ? 0 : System.hashCode(sErrorMessage));
         return hashCode;
     }
 }

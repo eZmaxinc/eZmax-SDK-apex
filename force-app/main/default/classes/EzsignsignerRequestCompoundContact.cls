@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,6 +15,14 @@
  */
 public class EzsignsignerRequestCompoundContact {
     /**
+     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
+     * minimum: 1
+     * maximum: 2
+     * @return fkiLanguageID
+     */
+    public Integer fkiLanguageID { get; set; }
+
+    /**
      * The First name of the contact
      * @return sContactFirstname
      */
@@ -25,14 +33,6 @@ public class EzsignsignerRequestCompoundContact {
      * @return sContactLastname
      */
     public String sContactLastname { get; set; }
-
-    /**
-     * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
-     * minimum: 1
-     * maximum: 2
-     * @return fkiLanguageID
-     */
-    public Integer fkiLanguageID { get; set; }
 
     /**
      * The email address.
@@ -47,16 +47,16 @@ public class EzsignsignerRequestCompoundContact {
     public String sPhoneE164 { get; set; }
 
     /**
-     * The extension of the phone number.\n\nThe extension is the "123" section in this sample phone number: (514) 990-1516 x123.\n\nIt can also be used with international phone numbers
-     * @return sPhoneExtension
-     */
-    public String sPhoneExtension { get; set; }
-
-    /**
      * A phone number in E.164 Format
      * @return sPhoneE164Cell
      */
     public String sPhoneE164Cell { get; set; }
+
+    /**
+     * The extension of the phone number.\n\nThe extension is the "123" section in this sample phone number: (514) 990-1516 x123.\n\nIt can also be used with international phone numbers
+     * @return sPhoneExtension
+     */
+    public String sPhoneExtension { get; set; }
 
     /**
      * Get sPhoneNumber
@@ -72,13 +72,13 @@ public class EzsignsignerRequestCompoundContact {
 
     public static EzsignsignerRequestCompoundContact getExample() {
         EzsignsignerRequestCompoundContact ezsignsignerRequestCompoundContact = new EzsignsignerRequestCompoundContact();
+          ezsignsignerRequestCompoundContact.fkiLanguageID = 2;
           ezsignsignerRequestCompoundContact.sContactFirstname = 'John';
           ezsignsignerRequestCompoundContact.sContactLastname = 'Doe';
-          ezsignsignerRequestCompoundContact.fkiLanguageID = 2;
           ezsignsignerRequestCompoundContact.sEmailAddress = 'email@example.com';
           ezsignsignerRequestCompoundContact.sPhoneE164 = '+15149901516';
-          ezsignsignerRequestCompoundContact.sPhoneExtension = '123';
           ezsignsignerRequestCompoundContact.sPhoneE164Cell = '+15149901516';
+          ezsignsignerRequestCompoundContact.sPhoneExtension = '123';
           ezsignsignerRequestCompoundContact.sPhoneNumber = '';
           ezsignsignerRequestCompoundContact.sPhoneNumberCell = '';
         return ezsignsignerRequestCompoundContact;
@@ -87,13 +87,13 @@ public class EzsignsignerRequestCompoundContact {
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignsignerRequestCompoundContact) {           
             EzsignsignerRequestCompoundContact ezsignsignerRequestCompoundContact = (EzsignsignerRequestCompoundContact) obj;
-            return this.sContactFirstname == ezsignsignerRequestCompoundContact.sContactFirstname
+            return this.fkiLanguageID == ezsignsignerRequestCompoundContact.fkiLanguageID
+                && this.sContactFirstname == ezsignsignerRequestCompoundContact.sContactFirstname
                 && this.sContactLastname == ezsignsignerRequestCompoundContact.sContactLastname
-                && this.fkiLanguageID == ezsignsignerRequestCompoundContact.fkiLanguageID
                 && this.sEmailAddress == ezsignsignerRequestCompoundContact.sEmailAddress
                 && this.sPhoneE164 == ezsignsignerRequestCompoundContact.sPhoneE164
-                && this.sPhoneExtension == ezsignsignerRequestCompoundContact.sPhoneExtension
                 && this.sPhoneE164Cell == ezsignsignerRequestCompoundContact.sPhoneE164Cell
+                && this.sPhoneExtension == ezsignsignerRequestCompoundContact.sPhoneExtension
                 && this.sPhoneNumber == ezsignsignerRequestCompoundContact.sPhoneNumber
                 && this.sPhoneNumberCell == ezsignsignerRequestCompoundContact.sPhoneNumberCell;
         }
@@ -102,13 +102,13 @@ public class EzsignsignerRequestCompoundContact {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sContactFirstname == null ? 0 : System.hashCode(sContactFirstname));
         hashCode = (17 * hashCode) + (sContactLastname == null ? 0 : System.hashCode(sContactLastname));
-        hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (sEmailAddress == null ? 0 : System.hashCode(sEmailAddress));
         hashCode = (17 * hashCode) + (sPhoneE164 == null ? 0 : System.hashCode(sPhoneE164));
-        hashCode = (17 * hashCode) + (sPhoneExtension == null ? 0 : System.hashCode(sPhoneExtension));
         hashCode = (17 * hashCode) + (sPhoneE164Cell == null ? 0 : System.hashCode(sPhoneE164Cell));
+        hashCode = (17 * hashCode) + (sPhoneExtension == null ? 0 : System.hashCode(sPhoneExtension));
         hashCode = (17 * hashCode) + (sPhoneNumber == null ? 0 : System.hashCode(sPhoneNumber));
         hashCode = (17 * hashCode) + (sPhoneNumberCell == null ? 0 : System.hashCode(sPhoneNumberCell));
         return hashCode;

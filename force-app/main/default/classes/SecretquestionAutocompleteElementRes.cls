@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,47 +15,47 @@
  */
 public class SecretquestionAutocompleteElementRes {
     /**
-     * The text of the Secretquestion in the language of the requester
-     * @return sSecretquestionTextX
+     * Whether the Secretquestion is active or not
+     * @return bSecretquestionIsactive
      */
-    public String sSecretquestionTextX { get; set; }
+    public Boolean bSecretquestionIsactive { get; set; }
 
     /**
-     * The unique ID of the Secretquestion.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|The name of the hospital in which you were born|\n|2|The name of your grade school|\n|3|The last name of your favorite teacher|\n|4|Your favorite sports team|\n|5|Your favorite TV show|\n|6|Your favorite movie|\n|7|The name of the street on which you grew up|\n|8|The name of your first employer|\n|9|Your first car|\n|10|Your favorite food|\n|11|The name of your first pet|\n|12|Favorite musician/band|\n|13|What instrument you play|\n|14|Your father\'s middle name|\n|15|Your mother\'s maiden name|\n|16|Name of your eldest child|\n|17|Your spouse\'s middle name|\n|18|Favorite restaurant|\n|19|Childhood nickname|\n|20|Favorite vacation destination|\n|21|Your boat\'s name|\n|22|Date of Birth (YYYY-MM-DD)|
+     * The unique ID of the Secretquestion.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|The name of the hospital in which you were born|\n|2|The name of your grade school|\n|3|The last name of your favorite teacher|\n|4|Your favorite sports team|\n|5|Your favorite TV show|\n|6|Your favorite movie|\n|7|The name of the street on which you grew up|\n|8|The name of your first employer|\n|9|Your first car|\n|10|Your favorite food|\n|11|The name of your first pet|\n|12|Favorite musician/band|\n|13|What instrument you play|\n|14|Your father\'s middle name|\n|15|Your mother\'s maiden name|\n|16|Name of your eldest child|\n|17|Your spouse\'s middle name|\n|18|Favorite restaurant|\n|19|Childhood nickname|\n|20|Favorite vacation destination|\n|21|Your boat\'s name|\n|22|Date of Birth (YYYY-MM-DD)|\n|22|Secret Code|\n|22|Your reference code|
      * minimum: 0
      * @return pkiSecretquestionID
      */
     public Integer pkiSecretquestionID { get; set; }
 
     /**
-     * Whether the Secretquestion is active or not
-     * @return bSecretquestionIsactive
+     * The text of the Secretquestion in the language of the requester
+     * @return sSecretquestionTextX
      */
-    public Boolean bSecretquestionIsactive { get; set; }
+    public String sSecretquestionTextX { get; set; }
 
     public static SecretquestionAutocompleteElementRes getExample() {
         SecretquestionAutocompleteElementRes secretquestionAutocompleteElementResponse = new SecretquestionAutocompleteElementRes();
-          secretquestionAutocompleteElementResponse.sSecretquestionTextX = 'The name of the hospital in which you were born';
-          secretquestionAutocompleteElementResponse.pkiSecretquestionID = 7;
           secretquestionAutocompleteElementResponse.bSecretquestionIsactive = true;
+          secretquestionAutocompleteElementResponse.pkiSecretquestionID = 7;
+          secretquestionAutocompleteElementResponse.sSecretquestionTextX = 'The name of the hospital in which you were born';
         return secretquestionAutocompleteElementResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof SecretquestionAutocompleteElementRes) {           
             SecretquestionAutocompleteElementRes secretquestionAutocompleteElementResponse = (SecretquestionAutocompleteElementRes) obj;
-            return this.sSecretquestionTextX == secretquestionAutocompleteElementResponse.sSecretquestionTextX
+            return this.bSecretquestionIsactive == secretquestionAutocompleteElementResponse.bSecretquestionIsactive
                 && this.pkiSecretquestionID == secretquestionAutocompleteElementResponse.pkiSecretquestionID
-                && this.bSecretquestionIsactive == secretquestionAutocompleteElementResponse.bSecretquestionIsactive;
+                && this.sSecretquestionTextX == secretquestionAutocompleteElementResponse.sSecretquestionTextX;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sSecretquestionTextX == null ? 0 : System.hashCode(sSecretquestionTextX));
-        hashCode = (17 * hashCode) + (pkiSecretquestionID == null ? 0 : System.hashCode(pkiSecretquestionID));
         hashCode = (17 * hashCode) + (bSecretquestionIsactive == null ? 0 : System.hashCode(bSecretquestionIsactive));
+        hashCode = (17 * hashCode) + (pkiSecretquestionID == null ? 0 : System.hashCode(pkiSecretquestionID));
+        hashCode = (17 * hashCode) + (sSecretquestionTextX == null ? 0 : System.hashCode(sSecretquestionTextX));
         return hashCode;
     }
 }

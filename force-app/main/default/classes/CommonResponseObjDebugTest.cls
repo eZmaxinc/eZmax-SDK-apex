@@ -80,9 +80,9 @@ private class CommonResponseObjDebugTest {
     private static void defaultValuesPopulated() {
         CommonResponseObjDebug commonResponseObjDebug = new CommonResponseObjDebug();
         System.assertEquals(new List<CommonResponseObjSQLQuery>(), commonResponseObjDebug.aObjSQLQuery);
+        System.assertEquals(null, commonResponseObjDebug.iSQLQueries);
+        System.assertEquals(null, commonResponseObjDebug.iSQLSelects);
         System.assertEquals(null, commonResponseObjDebug.sMemoryUsage);
         System.assertEquals(null, commonResponseObjDebug.sRunTime);
-        System.assertEquals(null, commonResponseObjDebug.iSQLSelects);
-        System.assertEquals(null, commonResponseObjDebug.iSQLQueries);
     }
 }

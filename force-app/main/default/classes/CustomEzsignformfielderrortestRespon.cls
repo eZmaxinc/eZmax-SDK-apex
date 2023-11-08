@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,37 +15,37 @@
  */
 public class CustomEzsignformfielderrortestRespon {
     /**
-     * The name of the test
-     * @return sEzsignformfielderrortestName
-     */
-    public String sEzsignformfielderrortestName { get; set; }
-
-    /**
      * The detail why the test failed
      * @return sEzsignformfielderrortestDetail
      */
     public String sEzsignformfielderrortestDetail { get; set; }
 
+    /**
+     * The name of the test
+     * @return sEzsignformfielderrortestName
+     */
+    public String sEzsignformfielderrortestName { get; set; }
+
     public static CustomEzsignformfielderrortestRespon getExample() {
         CustomEzsignformfielderrortestRespon customEzsignformfielderrortestResponse = new CustomEzsignformfielderrortestRespon();
-          customEzsignformfielderrortestResponse.sEzsignformfielderrortestName = '';
           customEzsignformfielderrortestResponse.sEzsignformfielderrortestDetail = '';
+          customEzsignformfielderrortestResponse.sEzsignformfielderrortestName = '';
         return customEzsignformfielderrortestResponse;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof CustomEzsignformfielderrortestRespon) {           
             CustomEzsignformfielderrortestRespon customEzsignformfielderrortestResponse = (CustomEzsignformfielderrortestRespon) obj;
-            return this.sEzsignformfielderrortestName == customEzsignformfielderrortestResponse.sEzsignformfielderrortestName
-                && this.sEzsignformfielderrortestDetail == customEzsignformfielderrortestResponse.sEzsignformfielderrortestDetail;
+            return this.sEzsignformfielderrortestDetail == customEzsignformfielderrortestResponse.sEzsignformfielderrortestDetail
+                && this.sEzsignformfielderrortestName == customEzsignformfielderrortestResponse.sEzsignformfielderrortestName;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (sEzsignformfielderrortestName == null ? 0 : System.hashCode(sEzsignformfielderrortestName));
         hashCode = (17 * hashCode) + (sEzsignformfielderrortestDetail == null ? 0 : System.hashCode(sEzsignformfielderrortestDetail));
+        hashCode = (17 * hashCode) + (sEzsignformfielderrortestName == null ? 0 : System.hashCode(sEzsignformfielderrortestName));
         return hashCode;
     }
 }

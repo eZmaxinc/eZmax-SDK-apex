@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -13,39 +13,39 @@
 /**
  * Response for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-public class EzsignfolderSendV3Response implements CommonResponse {
-    /**
-     * Get objDebugPayload
-     * @return objDebugPayload
-     */
-    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
-
+public class EzsignfolderSendV3Response {
     /**
      * Get objDebug
      * @return objDebug
      */
     public CommonResponseObjDebug objDebug { get; set; }
 
+    /**
+     * Get objDebugPayload
+     * @return objDebugPayload
+     */
+    public CommonResponseObjDebugPayload objDebugPayload { get; set; }
+
     public static EzsignfolderSendV3Response getExample() {
         EzsignfolderSendV3Response ezsignfolderSendV3Response = new EzsignfolderSendV3Response();
-          ezsignfolderSendV3Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
           ezsignfolderSendV3Response.objDebug = CommonResponseObjDebug.getExample();
+          ezsignfolderSendV3Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
         return ezsignfolderSendV3Response;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignfolderSendV3Response) {           
             EzsignfolderSendV3Response ezsignfolderSendV3Response = (EzsignfolderSendV3Response) obj;
-            return this.objDebugPayload == ezsignfolderSendV3Response.objDebugPayload
-                && this.objDebug == ezsignfolderSendV3Response.objDebug;
+            return this.objDebug == ezsignfolderSendV3Response.objDebug
+                && this.objDebugPayload == ezsignfolderSendV3Response.objDebugPayload;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
+        hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         return hashCode;
     }
 }

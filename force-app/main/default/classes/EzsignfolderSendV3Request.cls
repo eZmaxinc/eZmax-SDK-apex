@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition (Full)
+ * eZmax API Definition (PowerAutomate)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.2.0
@@ -15,10 +15,10 @@
  */
 public class EzsignfolderSendV3Request implements OAS.MappedProperties {
     /**
-     * A custom text message that will be added to the email sent.
-     * @return tEzsignfolderMessage
+     * Get aFkiEzsignfoldersignerassociationID
+     * @return aFkiEzsignfoldersignerassociationID
      */
-    public String tEzsignfolderMessage { get; set; }
+    public List<Integer> aFkiEzsignfoldersignerassociationID { get; set; }
 
     /**
      * The date and time at which the Ezsignfolder will be sent in the future.
@@ -27,10 +27,10 @@ public class EzsignfolderSendV3Request implements OAS.MappedProperties {
     public String dtEzsignfolderDelayedsenddate { get; set; }
 
     /**
-     * Get aFkiEzsignfoldersignerassociationID
-     * @return aFkiEzsignfoldersignerassociationID
+     * A custom text message that will be added to the email sent.
+     * @return tEzsignfolderMessage
      */
-    public List<Integer> aFkiEzsignfoldersignerassociationID { get; set; }
+    public String tEzsignfolderMessage { get; set; }
 
     private static final Map<String, String> propertyMappings = new Map<String, String>{
         'a_fkiEzsignfoldersignerassociationID' => 'aFkiEzsignfoldersignerassociationID'
@@ -46,27 +46,27 @@ public class EzsignfolderSendV3Request implements OAS.MappedProperties {
 
     public static EzsignfolderSendV3Request getExample() {
         EzsignfolderSendV3Request ezsignfolderSendV3Request = new EzsignfolderSendV3Request();
-          ezsignfolderSendV3Request.tEzsignfolderMessage = 'Hi everyone,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary';
-          ezsignfolderSendV3Request.dtEzsignfolderDelayedsenddate = '2020-12-31T23:59:59.000Z';
           ezsignfolderSendV3Request.aFkiEzsignfoldersignerassociationID = new List<Integer>{Integer.getExample()};
+          ezsignfolderSendV3Request.dtEzsignfolderDelayedsenddate = '2020-12-31T23:59:59.000Z';
+          ezsignfolderSendV3Request.tEzsignfolderMessage = 'Hi everyone,\n\nThis is the document I need you to review.\n\nCould you sign it before Monday please.\n\nBest Regards.\n\nMary';
         return ezsignfolderSendV3Request;
     }
 
     public Boolean equals(Object obj) {
         if (obj instanceof EzsignfolderSendV3Request) {           
             EzsignfolderSendV3Request ezsignfolderSendV3Request = (EzsignfolderSendV3Request) obj;
-            return this.tEzsignfolderMessage == ezsignfolderSendV3Request.tEzsignfolderMessage
+            return this.aFkiEzsignfoldersignerassociationID == ezsignfolderSendV3Request.aFkiEzsignfoldersignerassociationID
                 && this.dtEzsignfolderDelayedsenddate == ezsignfolderSendV3Request.dtEzsignfolderDelayedsenddate
-                && this.aFkiEzsignfoldersignerassociationID == ezsignfolderSendV3Request.aFkiEzsignfoldersignerassociationID;
+                && this.tEzsignfolderMessage == ezsignfolderSendV3Request.tEzsignfolderMessage;
         }
         return false;
     }
 
     public Integer hashCode() {
         Integer hashCode = 43;
-        hashCode = (17 * hashCode) + (tEzsignfolderMessage == null ? 0 : System.hashCode(tEzsignfolderMessage));
-        hashCode = (17 * hashCode) + (dtEzsignfolderDelayedsenddate == null ? 0 : System.hashCode(dtEzsignfolderDelayedsenddate));
         hashCode = (17 * hashCode) + (aFkiEzsignfoldersignerassociationID == null ? 0 : System.hashCode(aFkiEzsignfoldersignerassociationID));
+        hashCode = (17 * hashCode) + (dtEzsignfolderDelayedsenddate == null ? 0 : System.hashCode(dtEzsignfolderDelayedsenddate));
+        hashCode = (17 * hashCode) + (tEzsignfolderMessage == null ? 0 : System.hashCode(tEzsignfolderMessage));
         return hashCode;
     }
 }
