@@ -29,6 +29,14 @@ private class DefaultApiTest {
         expectedResponse = ActivesessionGetCurrentV1Response.getExample();
         response = (ActivesessionGetCurrentV1Response) api.activesessionGetCurrentV1();
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(ActivesessionGetCurrentV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = ActivesessionGetCurrentV1Response.getExample();
+        response = (ActivesessionGetCurrentV1Response) api.activesessionGetCurrentV1();
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -57,6 +65,22 @@ private class DefaultApiTest {
         client = new Client();
         api = new DefaultApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('API Key')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(EzsigndocumentApplyEzsigntemplateV2R.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentApplyEzsigntemplateV2R.getExample();
+        response = (EzsigndocumentApplyEzsigntemplateV2R) api.ezsigndocumentApplyEzsigntemplateV2(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsigndocumentApplyEzsigntemplateV2R.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentApplyEzsigntemplateV2R.getExample();
+        response = (EzsigndocumentApplyEzsigntemplateV2R) api.ezsigndocumentApplyEzsigntemplateV2(params);
+        System.assertEquals(expectedResponse, response);
 
 
         js = JSON.serialize(EzsigndocumentApplyEzsigntemplateV2R.getExample());
@@ -100,6 +124,14 @@ private class DefaultApiTest {
         expectedResponse = EzsigndocumentCreateObjectV2Response.getExample();
         response = (EzsigndocumentCreateObjectV2Response) api.ezsigndocumentCreateObjectV2(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsigndocumentCreateObjectV2Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentCreateObjectV2Response.getExample();
+        response = (EzsigndocumentCreateObjectV2Response) api.ezsigndocumentCreateObjectV2(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -128,6 +160,22 @@ private class DefaultApiTest {
         client = new Client();
         api = new DefaultApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('API Key')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(EzsigndocumentGetDownloadUrlV1Respon.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentGetDownloadUrlV1Respon.getExample();
+        response = (EzsigndocumentGetDownloadUrlV1Respon) api.ezsigndocumentGetDownloadUrlV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsigndocumentGetDownloadUrlV1Respon.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentGetDownloadUrlV1Respon.getExample();
+        response = (EzsigndocumentGetDownloadUrlV1Respon) api.ezsigndocumentGetDownloadUrlV1(params);
+        System.assertEquals(expectedResponse, response);
 
 
         js = JSON.serialize(EzsigndocumentGetDownloadUrlV1Respon.getExample());
@@ -207,6 +255,22 @@ private class DefaultApiTest {
         expectedResponse = EzsignfolderDisposeV1Response.getExample();
         response = (EzsignfolderDisposeV1Response) api.ezsignfolderDisposeV1(params);
         System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsignfolderDisposeV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsignfolderDisposeV1Response.getExample();
+        response = (EzsignfolderDisposeV1Response) api.ezsignfolderDisposeV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsignfolderDisposeV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsignfolderDisposeV1Response.getExample();
+        response = (EzsignfolderDisposeV1Response) api.ezsignfolderDisposeV1(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
@@ -235,6 +299,22 @@ private class DefaultApiTest {
         client = new Client();
         api = new DefaultApi(client);
         ((OAS.ApiKeyAuth)client.getAuthentication('API Key')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(EzsignfolderSendV3Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsignfolderSendV3Response.getExample();
+        response = (EzsignfolderSendV3Response) api.ezsignfolderSendV3(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsignfolderSendV3Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsignfolderSendV3Response.getExample();
+        response = (EzsignfolderSendV3Response) api.ezsignfolderSendV3(params);
+        System.assertEquals(expectedResponse, response);
 
 
         js = JSON.serialize(EzsignfolderSendV3Response.getExample());
