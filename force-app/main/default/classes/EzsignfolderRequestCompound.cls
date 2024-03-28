@@ -23,6 +23,7 @@ public class EzsignfolderRequestCompound {
     /**
      * The unique ID of the Ezsignfoldertype.
      * minimum: 0
+     * maximum: 65535
      * @return fkiEzsignfoldertypeID
      */
     public Integer fkiEzsignfoldertypeID { get; set; }

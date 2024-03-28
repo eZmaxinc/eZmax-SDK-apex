@@ -13,7 +13,13 @@
 /**
  * Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
  */
-public class EzsigndocumentApplyEzsigntemplateV2R {
+public class EzsigndocumentApplyEzsigntemplateV2R implements OAS.MappedProperties {
+    /**
+     * Get aObjWarning
+     * @return aObjWarning
+     */
+    public List<CommonResponseWarning> aObjWarning { get; set; }
+
     /**
      * Get objDebug
      * @return objDebug
@@ -26,8 +32,21 @@ public class EzsigndocumentApplyEzsigntemplateV2R {
      */
     public CommonResponseObjDebugPayload objDebugPayload { get; set; }
 
+    private static final Map<String, String> propertyMappings = new Map<String, String>{
+        'a_objWarning' => 'aObjWarning'
+    };
+
+    public Map<String, String> getPropertyMappings() {
+        return propertyMappings;
+    }
+
+    public EzsigndocumentApplyEzsigntemplateV2R() {
+        aObjWarning = new List<CommonResponseWarning>();
+    }
+
     public static EzsigndocumentApplyEzsigntemplateV2R getExample() {
         EzsigndocumentApplyEzsigntemplateV2R ezsigndocumentApplyEzsigntemplateV2Response = new EzsigndocumentApplyEzsigntemplateV2R();
+          ezsigndocumentApplyEzsigntemplateV2Response.aObjWarning = new List<CommonResponseWarning>{CommonResponseWarning.getExample()};
           ezsigndocumentApplyEzsigntemplateV2Response.objDebug = CommonResponseObjDebug.getExample();
           ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload = CommonResponseObjDebugPayload.getExample();
         return ezsigndocumentApplyEzsigntemplateV2Response;
@@ -36,7 +55,8 @@ public class EzsigndocumentApplyEzsigntemplateV2R {
     public Boolean equals(Object obj) {
         if (obj instanceof EzsigndocumentApplyEzsigntemplateV2R) {           
             EzsigndocumentApplyEzsigntemplateV2R ezsigndocumentApplyEzsigntemplateV2Response = (EzsigndocumentApplyEzsigntemplateV2R) obj;
-            return this.objDebug == ezsigndocumentApplyEzsigntemplateV2Response.objDebug
+            return this.aObjWarning == ezsigndocumentApplyEzsigntemplateV2Response.aObjWarning
+                && this.objDebug == ezsigndocumentApplyEzsigntemplateV2Response.objDebug
                 && this.objDebugPayload == ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload;
         }
         return false;
@@ -44,6 +64,7 @@ public class EzsigndocumentApplyEzsigntemplateV2R {
 
     public Integer hashCode() {
         Integer hashCode = 43;
+        hashCode = (17 * hashCode) + (aObjWarning == null ? 0 : System.hashCode(aObjWarning));
         hashCode = (17 * hashCode) + (objDebug == null ? 0 : System.hashCode(objDebug));
         hashCode = (17 * hashCode) + (objDebugPayload == null ? 0 : System.hashCode(objDebugPayload));
         return hashCode;

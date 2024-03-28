@@ -68,4 +68,19 @@ private class EzsigndocumentApplyEzsigntemplateV2RTest {
         System.assertEquals(ezsigndocumentApplyEzsigntemplateV2Response1.hashCode(), ezsigndocumentApplyEzsigntemplateV2Response2.hashCode());
         System.assertEquals(ezsigndocumentApplyEzsigntemplateV2Response3.hashCode(), ezsigndocumentApplyEzsigntemplateV2Response4.hashCode());
     }
+
+    @isTest
+    private static void maintainRenamedProperties() {
+        EzsigndocumentApplyEzsigntemplateV2R ezsigndocumentApplyEzsigntemplateV2Response = new EzsigndocumentApplyEzsigntemplateV2R();
+        Map<String, String> x-property-mappings = ezsigndocumentApplyEzsigntemplateV2Response.getx-property-mappings();
+        System.assertEquals('aObjWarning', x-property-mappings.get('a_objWarning'));
+    }
+
+    @isTest
+    private static void defaultValuesPopulated() {
+        EzsigndocumentApplyEzsigntemplateV2R ezsigndocumentApplyEzsigntemplateV2Response = new EzsigndocumentApplyEzsigntemplateV2R();
+        System.assertEquals(new List<CommonResponseWarning>(), ezsigndocumentApplyEzsigntemplateV2Response.aObjWarning);
+        System.assertEquals(null, ezsigndocumentApplyEzsigntemplateV2Response.objDebug);
+        System.assertEquals(null, ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload);
+    }
 }

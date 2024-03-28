@@ -39,6 +39,18 @@ public class ActivesessionGetCurrentV1ResponseMPa implements OAS.MappedPropertie
     public Boolean bActivesessionIssuperadmin { get; set; }
 
     /**
+     * Whether if Ezsign is paid by the company or not
+     * @return bSystemconfigurationEzsignpaidbyoffice
+     */
+    public Boolean bSystemconfigurationEzsignpaidbyoffice { get; set; }
+
+    /**
+     * The eZsign prepaid expiration date
+     * @return dtUserEzsignprepaidexpiration
+     */
+    public String dtUserEzsignprepaidexpiration { get; set; }
+
+    /**
      * Get eActivesessionOrigin
      * @return eActivesessionOrigin
      */
@@ -55,6 +67,24 @@ public class ActivesessionGetCurrentV1ResponseMPa implements OAS.MappedPropertie
      * @return eActivesessionWeekdaystart
      */
     public FieldEActivesessionWeekdaystart eActivesessionWeekdaystart { get; set; }
+
+    /**
+     * Get eSystemconfigurationEzsignofficeplan
+     * @return eSystemconfigurationEzsignofficeplan
+     */
+    public FieldESystemconfigurationEzsignoffic eSystemconfigurationEzsignofficeplan { get; set; }
+
+    /**
+     * Get eUserEzsignaccess
+     * @return eUserEzsignaccess
+     */
+    public FieldEUserEzsignaccess eUserEzsignaccess { get; set; }
+
+    /**
+     * Get eUserEzsignprepaid
+     * @return eUserEzsignprepaid
+     */
+    public FieldEUserEzsignprepaid eUserEzsignprepaid { get; set; }
 
     /**
      * The unique ID of the Language.\n\nValid values:\n\n|Value|Description|\n|-|-|\n|1|French|\n|2|English|
@@ -144,9 +174,14 @@ public class ActivesessionGetCurrentV1ResponseMPa implements OAS.MappedPropertie
           activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID = new List<Integer>{Integer.getExample()};
           activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug = false;
           activesessionGetCurrentV1ResponseMPayload.bActivesessionIssuperadmin = false;
+          activesessionGetCurrentV1ResponseMPayload.bSystemconfigurationEzsignpaidbyoffice = true;
+          activesessionGetCurrentV1ResponseMPayload.dtUserEzsignprepaidexpiration = '2020-12-31';
           activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin = FieldEActivesessionOrigin.getExample();
           activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype = FieldEActivesessionUsertype.getExample();
           activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart = FieldEActivesessionWeekdaystart.getExample();
+          activesessionGetCurrentV1ResponseMPayload.eSystemconfigurationEzsignofficeplan = FieldESystemconfigurationEzsignoffic.getExample();
+          activesessionGetCurrentV1ResponseMPayload.eUserEzsignaccess = FieldEUserEzsignaccess.getExample();
+          activesessionGetCurrentV1ResponseMPayload.eUserEzsignprepaid = FieldEUserEzsignprepaid.getExample();
           activesessionGetCurrentV1ResponseMPayload.fkiLanguageID = 2;
           activesessionGetCurrentV1ResponseMPayload.fkiSignatureID = 12;
           activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID = 28;
@@ -166,9 +201,14 @@ public class ActivesessionGetCurrentV1ResponseMPa implements OAS.MappedPropertie
                 && this.aPkiPermissionID == activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID
                 && this.bActivesessionDebug == activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug
                 && this.bActivesessionIssuperadmin == activesessionGetCurrentV1ResponseMPayload.bActivesessionIssuperadmin
+                && this.bSystemconfigurationEzsignpaidbyoffice == activesessionGetCurrentV1ResponseMPayload.bSystemconfigurationEzsignpaidbyoffice
+                && this.dtUserEzsignprepaidexpiration == activesessionGetCurrentV1ResponseMPayload.dtUserEzsignprepaidexpiration
                 && this.eActivesessionOrigin == activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin
                 && this.eActivesessionUsertype == activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype
                 && this.eActivesessionWeekdaystart == activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart
+                && this.eSystemconfigurationEzsignofficeplan == activesessionGetCurrentV1ResponseMPayload.eSystemconfigurationEzsignofficeplan
+                && this.eUserEzsignaccess == activesessionGetCurrentV1ResponseMPayload.eUserEzsignaccess
+                && this.eUserEzsignprepaid == activesessionGetCurrentV1ResponseMPayload.eUserEzsignprepaid
                 && this.fkiLanguageID == activesessionGetCurrentV1ResponseMPayload.fkiLanguageID
                 && this.fkiSignatureID == activesessionGetCurrentV1ResponseMPayload.fkiSignatureID
                 && this.fkiSystemconfigurationtypeID == activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID
@@ -188,9 +228,14 @@ public class ActivesessionGetCurrentV1ResponseMPa implements OAS.MappedPropertie
         hashCode = (17 * hashCode) + (aPkiPermissionID == null ? 0 : System.hashCode(aPkiPermissionID));
         hashCode = (17 * hashCode) + (bActivesessionDebug == null ? 0 : System.hashCode(bActivesessionDebug));
         hashCode = (17 * hashCode) + (bActivesessionIssuperadmin == null ? 0 : System.hashCode(bActivesessionIssuperadmin));
+        hashCode = (17 * hashCode) + (bSystemconfigurationEzsignpaidbyoffice == null ? 0 : System.hashCode(bSystemconfigurationEzsignpaidbyoffice));
+        hashCode = (17 * hashCode) + (dtUserEzsignprepaidexpiration == null ? 0 : System.hashCode(dtUserEzsignprepaidexpiration));
         hashCode = (17 * hashCode) + (eActivesessionOrigin == null ? 0 : System.hashCode(eActivesessionOrigin));
         hashCode = (17 * hashCode) + (eActivesessionUsertype == null ? 0 : System.hashCode(eActivesessionUsertype));
         hashCode = (17 * hashCode) + (eActivesessionWeekdaystart == null ? 0 : System.hashCode(eActivesessionWeekdaystart));
+        hashCode = (17 * hashCode) + (eSystemconfigurationEzsignofficeplan == null ? 0 : System.hashCode(eSystemconfigurationEzsignofficeplan));
+        hashCode = (17 * hashCode) + (eUserEzsignaccess == null ? 0 : System.hashCode(eUserEzsignaccess));
+        hashCode = (17 * hashCode) + (eUserEzsignprepaid == null ? 0 : System.hashCode(eUserEzsignprepaid));
         hashCode = (17 * hashCode) + (fkiLanguageID == null ? 0 : System.hashCode(fkiLanguageID));
         hashCode = (17 * hashCode) + (fkiSignatureID == null ? 0 : System.hashCode(fkiSignatureID));
         hashCode = (17 * hashCode) + (fkiSystemconfigurationtypeID == null ? 0 : System.hashCode(fkiSystemconfigurationtypeID));

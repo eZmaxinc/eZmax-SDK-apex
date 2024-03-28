@@ -29,6 +29,7 @@ public class EzsignfoldertypeAutocompleteElementR {
     /**
      * The unique ID of the Ezsignfoldertype.
      * minimum: 0
+     * maximum: 65535
      * @return pkiEzsignfoldertypeID
      */
     public Integer pkiEzsignfoldertypeID { get; set; }

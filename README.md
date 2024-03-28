@@ -62,7 +62,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**activesessionGetCurrentV1**](DefaultApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
+*DefaultApi* | [**attachmentGetDownloadUrlV1**](DefaultApi.md#attachmentGetDownloadUrlV1) | **GET** /1/object/attachment/{pkiAttachmentID}/getDownloadUrl | Retrieve a URL to download attachments.
 *DefaultApi* | [**ezsigndocumentApplyEzsigntemplateV2**](DefaultApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument.
+*DefaultApi* | [**ezsigndocumentCreateEzsignelementsPositionedByWordV1**](DefaultApi.md#ezsigndocumentCreateEzsignelementsPositionedByWordV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups
 *DefaultApi* | [**ezsigndocumentCreateObjectV2**](DefaultApi.md#ezsigndocumentCreateObjectV2) | **POST** /2/object/ezsigndocument | Create a new Ezsigndocument
 *DefaultApi* | [**ezsigndocumentGetDownloadUrlV1**](DefaultApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 *DefaultApi* | [**ezsignfolderCreateObjectV2**](DefaultApi.md#ezsignfolderCreateObjectV2) | **POST** /2/object/ezsignfolder | Create a new Ezsignfolder
@@ -86,6 +88,8 @@ Class | Method | HTTP request | Description
  - [ActivesessionGetCurrentV1ResponseMPa](ActivesessionGetCurrentV1ResponseMPa.md)
  - [ActivesessionResponseCompoundApikey](ActivesessionResponseCompoundApikey.md)
  - [ActivesessionResponseCompoundUser](ActivesessionResponseCompoundUser.md)
+ - [AttachmentGetDownloadUrlV1Response](AttachmentGetDownloadUrlV1Response.md)
+ - [AttachmentGetDownloadUrlV1ResponseMP](AttachmentGetDownloadUrlV1ResponseMP.md)
  - [CommonResponseError](CommonResponseError.md)
  - [CommonResponseErrorEzsignformValidat](CommonResponseErrorEzsignformValidat.md)
  - [CommonResponseErrorSTemporaryFileUrl](CommonResponseErrorSTemporaryFileUrl.md)
@@ -94,9 +98,14 @@ Class | Method | HTTP request | Description
  - [CommonResponseObjDebugPayload](CommonResponseObjDebugPayload.md)
  - [CommonResponseObjSQLQuery](CommonResponseObjSQLQuery.md)
  - [CommonResponseRedirectSSecretquestio](CommonResponseRedirectSSecretquestio.md)
+ - [CommonResponseWarning](CommonResponseWarning.md)
+ - [CustomCreateEzsignelementsPositioned](CustomCreateEzsignelementsPositioned.md)
  - [CustomEzsignformfielderrorResponse](CustomEzsignformfielderrorResponse.md)
  - [CustomEzsignformfielderrortestRespon](CustomEzsignformfielderrortestRespon.md)
+ - [CustomEzsignformfieldgroupCreateEzsi](CustomEzsignformfieldgroupCreateEzsi.md)
+ - [CustomEzsignsignatureCreateEzsignele](CustomEzsignsignatureCreateEzsignele.md)
  - [EzsigndocumentApplyEzsigntemplateV2R](EzsigndocumentApplyEzsigntemplateV2R.md)
+ - [EzsigndocumentCreateEzsignelementsPo](EzsigndocumentCreateEzsignelementsPo.md)
  - [EzsigndocumentCreateObjectV2Request](EzsigndocumentCreateObjectV2Request.md)
  - [EzsigndocumentCreateObjectV2Response](EzsigndocumentCreateObjectV2Response.md)
  - [EzsigndocumentGetDownloadUrlV1Respon](EzsigndocumentGetDownloadUrlV1Respon.md)
@@ -126,6 +135,9 @@ Class | Method | HTTP request | Description
  - [FieldEErrorCode](FieldEErrorCode.md)
  - [FieldEEzsignfolderSendreminderfreque](FieldEEzsignfolderSendreminderfreque.md)
  - [FieldEEzsignfoldertypePrivacylevel](FieldEEzsignfoldertypePrivacylevel.md)
+ - [FieldESystemconfigurationEzsignoffic](FieldESystemconfigurationEzsignoffic.md)
+ - [FieldEUserEzsignaccess](FieldEUserEzsignaccess.md)
+ - [FieldEUserEzsignprepaid](FieldEUserEzsignprepaid.md)
  - [FieldEUserEzsignsendreminderfrequenc](FieldEUserEzsignsendreminderfrequenc.md)
  - [FieldEUserType](FieldEUserType.md)
  - [HeaderAcceptLanguage](HeaderAcceptLanguage.md)

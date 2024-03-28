@@ -40,6 +40,57 @@ private class DefaultApiTest {
     }
 
     /**
+     * Retrieve a URL to download attachments.
+     *
+     * This endpoint returns an URL to download the attachment.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+     */
+    @isTest
+    private static void attachmentGetDownloadUrlV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiAttachmentID' => ''
+        };
+
+        Client client;
+        DefaultApi api;
+        AttachmentGetDownloadUrlV1Response response;
+        AttachmentGetDownloadUrlV1Response expectedResponse;
+        String js = '';
+
+        client = new Client();
+        api = new DefaultApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('API Key')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(AttachmentGetDownloadUrlV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = AttachmentGetDownloadUrlV1Response.getExample();
+        response = (AttachmentGetDownloadUrlV1Response) api.attachmentGetDownloadUrlV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(AttachmentGetDownloadUrlV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = AttachmentGetDownloadUrlV1Response.getExample();
+        response = (AttachmentGetDownloadUrlV1Response) api.attachmentGetDownloadUrlV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(AttachmentGetDownloadUrlV1Response.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = AttachmentGetDownloadUrlV1Response.getExample();
+        response = (AttachmentGetDownloadUrlV1Response) api.attachmentGetDownloadUrlV1(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Apply an Ezsigntemplate to the Ezsigndocument.
      *
      * This endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
@@ -88,6 +139,58 @@ private class DefaultApiTest {
         res.setBody(js);
         expectedResponse = EzsigndocumentApplyEzsigntemplateV2R.getExample();
         response = (EzsigndocumentApplyEzsigntemplateV2R) api.ezsigndocumentApplyEzsigntemplateV2(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups
+     *
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     */
+    @isTest
+    private static void ezsigndocumentCreateEzsignelementsPositionedByWordV1Test() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'pkiEzsigndocumentID' => '',
+            'body' => ''
+        };
+
+        Client client;
+        DefaultApi api;
+        EzsigndocumentCreateEzsignelementsPo response;
+        EzsigndocumentCreateEzsignelementsPo expectedResponse;
+        String js = '';
+
+        client = new Client();
+        api = new DefaultApi(client);
+        ((OAS.ApiKeyAuth)client.getAuthentication('API Key')).setApiKey('foo-bar-api-key');
+
+
+        js = JSON.serialize(EzsigndocumentCreateEzsignelementsPo.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentCreateEzsignelementsPo.getExample();
+        response = (EzsigndocumentCreateEzsignelementsPo) api.ezsigndocumentCreateEzsignelementsPositionedByWordV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsigndocumentCreateEzsignelementsPo.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentCreateEzsignelementsPo.getExample();
+        response = (EzsigndocumentCreateEzsignelementsPo) api.ezsigndocumentCreateEzsignelementsPositionedByWordV1(params);
+        System.assertEquals(expectedResponse, response);
+
+
+        js = JSON.serialize(EzsigndocumentCreateEzsignelementsPo.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = EzsigndocumentCreateEzsignelementsPo.getExample();
+        response = (EzsigndocumentCreateEzsignelementsPo) api.ezsigndocumentCreateEzsignelementsPositionedByWordV1(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -679,6 +782,7 @@ private class DefaultApiTest {
 
         Map<String, Object> params = new Map<String, Object>{
             'sSelector' => All,
+            'fkiEzsignfoldertypeID' => '',
             'eFilterActive' => All,
             'sQuery' => 'null',
             'acceptLanguage' => *

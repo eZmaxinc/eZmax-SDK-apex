@@ -47,6 +47,31 @@ public class DefaultApi {
         );
     }
     /**
+     * Retrieve a URL to download attachments.
+     * This endpoint returns an URL to download the attachment.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+     * @param pkiAttachmentID The unique ID of the Attachment. (required)
+     * @return AttachmentGetDownloadUrlV1Response
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public AttachmentGetDownloadUrlV1Response attachmentGetDownloadUrlV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiAttachmentID'), 'pkiAttachmentID');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (AttachmentGetDownloadUrlV1Response) client.invoke(
+            'GET', '/1/object/attachment/{pkiAttachmentID}/getDownloadUrl', '',
+            query, form,
+            new Map<String, Object>{
+                'pkiAttachmentID' => (Integer) params.get('pkiAttachmentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>(),
+            new List<String> { 'API Key' },
+            AttachmentGetDownloadUrlV1Response.class
+        );
+    }
+    /**
      * Apply an Ezsigntemplate to the Ezsigndocument.
      * This endpoint applies a predefined template to the ezsign document.\nThis allows to automatically apply all the form and signature fields on a document in a single step.\n\nThe document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
@@ -72,6 +97,34 @@ public class DefaultApi {
             new List<String>{ 'application/json' },
             new List<String> { 'API Key' },
             EzsigndocumentApplyEzsigntemplateV2R.class
+        );
+    }
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
+     * @param body  (required)
+     * @return EzsigndocumentCreateEzsignelementsPo
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public EzsigndocumentCreateEzsignelementsPo ezsigndocumentCreateEzsignelementsPositionedByWordV1(Map<String, Object> params) {
+        client.assertNotNull(params.get('pkiEzsigndocumentID'), 'pkiEzsigndocumentID');
+        client.assertNotNull(params.get('body'), 'body');
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (EzsigndocumentCreateEzsignelementsPo) client.invoke(
+            'POST', '/1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord',
+            (EzsigndocumentCreateEzsignelementsPo) params.get('body'),
+            query, form,
+            new Map<String, Object>{
+                'pkiEzsigndocumentID' => (Integer) params.get('pkiEzsigndocumentID')
+            },
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'API Key' },
+            EzsigndocumentCreateEzsignelementsPo.class
         );
     }
     /**
@@ -102,7 +155,7 @@ public class DefaultApi {
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.\n\nThese links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID The unique ID of the Ezsigndocument (required)
-     * @param eDocumentType The type of document to retrieve.\n\n1. **Initial** Is the initial document before any signature were applied.\n2. **SignatureReady** Is the version containing the annotations/form to show the signer.\n3. **Signed** Is the final document once all signatures were applied.\n4. **Proofdocument** Is the evidence report.\n5. **Proof** Is the complete evidence archive including all of the above and more.\n (required)
+     * @param eDocumentType The type of document to retrieve.\n\n1. **Initial** Is the initial document before any signature were applied.\n2. **SignatureReady** Is the version containing the annotations/form to show the signer.\n3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;\n    Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder.\n4. **Proofdocument** Is the evidence report.\n5. **Proof** Is the complete evidence archive including all of the above and more.\n (required)
      * @return EzsigndocumentGetDownloadUrlV1Respon
      * @throws OAS.ApiException if fails to make API call
      */
@@ -516,6 +569,7 @@ public class DefaultApi {
      * Retrieve Userlogintypes and IDs
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return (required)
+     * @param fkiEzsignfoldertypeID The unique ID of the Ezsignfoldertype. (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage The language of the returned content.\n\n1. **\*** (or header not defined) Default language\n2. **en** English\n2. **fr** French\n\n (optional)
@@ -527,6 +581,7 @@ public class DefaultApi {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
+        query.addAll(client.makeParam('fkiEzsignfoldertypeID', (Integer) params.get('fkiEzsignfoldertypeID')));
         query.addAll(client.makeParam('eFilterActive', (String) params.get('eFilterActive')));
         query.addAll(client.makeParam('sQuery', (String) params.get('sQuery')));
 

@@ -84,9 +84,14 @@ private class ActivesessionGetCurrentV1ResponseMPaTest {
         System.assertEquals(new List<Integer>(), activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.bActivesessionIssuperadmin);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.bSystemconfigurationEzsignpaidbyoffice);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.dtUserEzsignprepaidexpiration);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eActivesessionOrigin);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eSystemconfigurationEzsignofficeplan);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eUserEzsignaccess);
+        System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.eUserEzsignprepaid);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.fkiLanguageID);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.fkiSignatureID);
         System.assertEquals(null, activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID);

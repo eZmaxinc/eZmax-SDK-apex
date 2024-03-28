@@ -27,15 +27,16 @@ public class EzsigndocumentRequestCompound {
     public String dtEzsigndocumentDuedate { get; set; }
 
     /**
-     * If the document contains an existing PDF form this property must be set.\r\n**Keep** leaves the form as-is in the document.\r\n**Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+     * If the document contains an existing PDF form this property must be set.\r\n**Keep** leaves the form as-is in the document.\r\n**Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**\r\n**Discard** removes the form from the document.
      */
     public enum EEzsigndocumentFormEnum {
         KEEP,
-        CONVERT
+        CONVERT,
+        DISCARD
     }
 
     /**
-     * If the document contains an existing PDF form this property must be set.\r\n**Keep** leaves the form as-is in the document.\r\n**Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+     * If the document contains an existing PDF form this property must be set.\r\n**Keep** leaves the form as-is in the document.\r\n**Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**\r\n**Discard** removes the form from the document.
      * @return eEzsigndocumentForm
      */
     public EEzsigndocumentFormEnum eEzsigndocumentForm { get; set; }
